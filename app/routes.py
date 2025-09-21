@@ -396,21 +396,22 @@ def manga_detail(manga_id):
 
     descriptions = MangaDescription.query.filter_by(MangaId=manga_id).all()
     manga_description = next((d.Description for d in descriptions if d.LangCode == 'en'),
-                           next((d.Description for d in descriptions if d.LangCode == 'vi'),
-                                next((d.Description for d in descriptions if d.LangCode == 'ja'),
-                                     next((d.Description for d in descriptions if d.LangCode), None))))
+                            next((d.Description for d in descriptions if d.LangCode == 'vi'),
+                                 next((d.Description for d in descriptions if d.LangCode == 'ja'),
+                                      next((d.Description for d in descriptions if d.LangCode), None))))
     description_long = len(manga_description or '') > 200 if manga_description else False
 
-    related_items = MangaRelated.query.filter_by(MangaId=manga_id).all()
-    authors = []
-    artists = []
-    for item in related_items:
-        creator = Creator.query.get(item.RelatedId)
-        if creator:
-            if item.Type == 'author':
-                authors.append(creator)
-            elif item.Type == 'artist':
-                artists.append(creator)
+    # Lấy cả authors và artists trong một truy vấn join duy nhất
+    related_creators = (
+        db.session.query(MangaRelated, Creator)
+        .join(Creator, MangaRelated.RelatedId == Creator.CreatorId)
+        .filter(MangaRelated.MangaId == manga_id)
+        .all()
+    )
+
+    authors = [creator for rel, creator in related_creators if rel.Type == 'author']
+    artists = [creator for rel, creator in related_creators if rel.Type == 'artist']
+
 
     tags = Tag.query.join(MangaTag).filter(MangaTag.MangaId == manga_id, Tag.GroupName.in_(['genre', 'theme', 'format'])).all()
     genres = [t for t in tags if t.GroupName == 'genre']
@@ -430,20 +431,21 @@ def manga_detail(manga_id):
     }
 
     return render_template('manga_detail.html',
-                          manga=manga,
-                          manga_cover_url=manga_cover_url,
-                          manga_stats=manga_stats,
-                          content_tags=content_tags,
-                          manga_description=manga_description,
-                          description_long=description_long,
-                          authors=authors,
-                          artists=artists,
-                          genres=genres,
-                          themes=themes,
-                          formats=formats,
-                          manga_links=manga_links,
-                          alt_titles=alt_titles,
-                          tab_contents=tab_contents)
+                            manga=manga,
+                            manga_cover_url=manga_cover_url,
+                            manga_stats=manga_stats,
+                            content_tags=content_tags,
+                            manga_description=manga_description,
+                            description_long=description_long,
+                            authors=authors,
+                            artists=artists,
+                            genres=genres,
+                            themes=themes,
+                            formats=formats,
+                            manga_links=manga_links,
+                            alt_titles=alt_titles,
+                            tab_contents=tab_contents)
+
 
 @manga.route('/<uuid:manga_id>/chapters')
 def chapters(manga_id):
@@ -498,14 +500,71 @@ def cover_image(cover_id):
     return send_file(BytesIO(cover.image_data), mimetype="image/jpeg")
 
 
-
-
 @manga.route('/<uuid:manga_id>/related')
 def related(manga_id):
     return render_template('related.html', manga_id=manga_id)
 
 
+# ======================
+# Creator routes
+# ======================
+@main.route("/creator/<uuid:creator_id>")
+def creator_detail(creator_id):
+    creator = Creator.query.get_or_404(creator_id)
 
+    # Truy vấn các manga của tác giả, join với MangaStatistics để lấy điểm số
+    mangas_query = (
+        db.session.query(Manga, MangaStatistics)
+        .join(MangaRelated, Manga.MangaId == MangaRelated.MangaId) # Join với MangaRelated.MangaId
+        .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
+        .filter(MangaRelated.RelatedId == creator_id) # Sửa lỗi ở đây
+        .order_by(desc(MangaStatistics.Follows)) # Mặc định sắp xếp theo lượt theo dõi
+        .all()
+    )
+
+    manga_data = []
+    for manga, stats in mangas_query:
+        cover_url = url_for('static', filename='assets/default_cover.png')
+        cover = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(desc(MangaCover.DownloadDate)).first()
+
+        if cover:
+            image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data}"
+        else:
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info['manga_id']
+                cover_id_str = cover_info['cover_id']
+                file_name_str = cover_info['file_name']
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+
+        manga_data.append({
+            'manga': manga,
+            'stats': stats,
+            'cover_url': cover_url
+        })
+        
+    return render_template(
+        'creator_detail.html',
+        creator=creator,
+        mangas=manga_data
+    )
 
 @main.route("/follow/<uuid:user_id>")
 def follow(user_id):

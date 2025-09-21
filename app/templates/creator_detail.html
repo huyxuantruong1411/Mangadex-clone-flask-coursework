@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ creator.Name }} | MangaDex Clone{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/creator_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="creator-detail-container">
+    <div class="creator-header">
+        <h1 class="creator-name">{{ creator.Name }}</h1>
+        <p class="creator-biography">
+            {{ creator.BiographyEn if creator.BiographyEn else 'No biography available.' }}
+        </p>
+    </div>
+
+    <hr class="separator">
+
+    <div class="manga-list-section">
+        <h2 class="section-title">Manga by {{ creator.Name }}</h2>
+        {% if mangas %}
+        <div class="manga-grid">
+            {% for manga_item in mangas %}
+            <a href="{{ url_for('manga.manga_detail', manga_id=manga_item.manga.MangaId) }}" class="manga-card">
+                <div class="manga-cover-container">
+                    <img src="{{ manga_item.cover_url }}" alt="Cover of {{ manga_item.manga.TitleEn }}"
+                        class="manga-cover">
+                </div>
+                <div class="manga-info-overlay">
+                    <h3 class="manga-title-overlay">{{ manga_item.manga.TitleEn }}</h3>
+                    <div class="manga-stats-overlay">
+                        <span class="rating">
+                            ⭐ {{ (manga_item.stats.AverageRating if manga_item.stats and manga_item.stats.AverageRating
+                            else (manga_item.stats.BayesianRating if manga_item.stats else 0))|round(1) }}
+                        </span>
+                        <span class="follows">
+                            ❤️ {{ manga_item.stats.Follows if manga_item.stats and manga_item.stats.Follows else 0 }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="no-manga-found">No manga found for this creator.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

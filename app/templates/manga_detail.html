@@ -89,16 +89,22 @@
             <h3>Authors</h3>
             <ul class="tag-list">
                 {% for author in authors %}
-                <li><a href="#" class="tag-link">{{ author.Name }}</a></li>
-                {% endfor %}
+                                {% if author %}
+                                <li><a href="{{ url_for('main.creator_detail', creator_id=author.CreatorId) }}"
+                        class="tag-link">{{ author.Name }}</a></li>
+                                {% endif %}
+                                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
             <h3>Artists</h3>
             <ul class="tag-list">
                 {% for artist in artists %}
-                <li><a href="#" class="tag-link">{{ artist.Name }}</a></li>
-                {% endfor %}
+                                {% if artist %}
+                                <li><a href="{{ url_for('main.creator_detail', creator_id=artist.CreatorId) }}"
+                        class="tag-link">{{ artist.Name }}</a></li>
+                                {% endif %}
+                                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">

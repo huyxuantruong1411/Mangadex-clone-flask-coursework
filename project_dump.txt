@@ -210,6 +210,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "b2fd683a41de415b51387821f8a1d1a86e19e9",
+                  "type": "file"
+                },
+                {
                   "name": "cf6ed0436658117f8838d5cefde25fb1347924",
                   "type": "file"
                 }
@@ -503,6 +507,10 @@
               "name": "58",
               "type": "directory",
               "children": [
+                {
+                  "name": "a57e44913d4498d94e8891ccb22647c921dede",
+                  "type": "file"
+                },
                 {
                   "name": "d67074738d155e750e980f195791cf4c85d9e4",
                   "type": "file"
@@ -810,6 +818,10 @@
                 {
                   "name": "79c6b96d22483b9ec1802e4c2af5358f58d521",
                   "type": "file"
+                },
+                {
+                  "name": "ad84bce5a6006e479b620282e084dcd7115243",
+                  "type": "file"
                 }
               ]
             },
@@ -950,6 +962,16 @@
               ]
             },
             {
+              "name": "c6",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2a493c7723a61e1f3141466ceb0cec02457868",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "c9",
               "type": "directory",
               "children": [
@@ -959,6 +981,16 @@
                 },
                 {
                   "name": "9788ad09028a3c12de1ddcd6909037df596f99",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ca",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4473e0c6d7bbf7198754c8b34b9a80408dd023",
                   "type": "file"
                 }
               ]
@@ -1098,6 +1130,16 @@
               ]
             },
             {
+              "name": "e6",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "e8",
               "type": "directory",
               "children": [
@@ -1232,6 +1274,10 @@
     },
     {
       "name": ".gitignore",
+      "type": "file"
+    },
+    {
+      "name": "README.md",
       "type": "file"
     },
     {
@@ -1609,6 +1655,10 @@
               "type": "file"
             },
             {
+              "name": "creator_detail.html",
+              "type": "file"
+            },
+            {
               "name": "home.html",
               "type": "file"
             },
@@ -1685,6 +1735,10 @@
           "type": "file"
         },
         {
+          "name": "debug.sql",
+          "type": "file"
+        },
+        {
           "name": "script.sql",
           "type": "file"
         }
@@ -1756,6 +1810,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 1b/
 │   │   │   └── d12a09923ae5c7015abd46e7ebc64e21db71e2
 │   │   ├── 1d/
+│   │   │   ├── b2fd683a41de415b51387821f8a1d1a86e19e9
 │   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
 │   │   ├── 1f/
 │   │   │   └── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
@@ -1817,6 +1872,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 54/
 │   │   │   └── b2d4a02927246f57027adf7d44d46ef35dc66c
 │   │   ├── 58/
+│   │   │   ├── a57e44913d4498d94e8891ccb22647c921dede
 │   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
 │   │   ├── 5a/
 │   │   │   └── 0c0d0dd4a42005830d88bb12e6b8617a37c44a
@@ -1879,7 +1935,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
 │   │   │   └── f77dfed98ed30efed8e094eadeb320dd1ff658
 │   │   ├── a4/
-│   │   │   └── 79c6b96d22483b9ec1802e4c2af5358f58d521
+│   │   │   ├── 79c6b96d22483b9ec1802e4c2af5358f58d521
+│   │   │   └── ad84bce5a6006e479b620282e084dcd7115243
 │   │   ├── a8/
 │   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
 │   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
@@ -1908,9 +1965,13 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 011fac6e47888d8e2209dcb60f02a915e0fbf0
 │   │   ├── c5/
 │   │   │   └── dcfecac7c8df924e32b4ea5fb949a2c02f4630
+│   │   ├── c6/
+│   │   │   └── 2a493c7723a61e1f3141466ceb0cec02457868
 │   │   ├── c9/
 │   │   │   ├── 1c21a15126c3a2f3555bbc554622a432c4ae9a
 │   │   │   └── 9788ad09028a3c12de1ddcd6909037df596f99
+│   │   ├── ca/
+│   │   │   └── 4473e0c6d7bbf7198754c8b34b9a80408dd023
 │   │   ├── cb/
 │   │   │   └── 50142dcea65a71997f0280cf195bb3a0c7d701
 │   │   ├── cc/
@@ -1938,6 +1999,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
+│   │   ├── e6/
+│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
 │   │   ├── e8/
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
@@ -1965,6 +2028,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       │       └── main
 │       └── tags/
 ├── .gitignore
+├── README.md
 ├── app/
 │   ├── __init__.py
 │   ├── auth.py
@@ -2056,6 +2120,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── base.html
 │       ├── chapters.html
 │       ├── comments.html
+│       ├── creator_detail.html
 │       ├── home.html
 │       ├── latest_updates.html
 │       ├── library.html
@@ -2074,6 +2139,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── data/
 │   ├── create-Covers.sql
 │   ├── create-MangaCover.sql
+│   ├── debug.sql
 │   └── script.sql
 ├── dump.py
 ├── project_dump.txt
@@ -2431,6 +2497,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "b2fd683a41de415b51387821f8a1d1a86e19e9",
+                  "type": "file"
+                },
+                {
                   "name": "cf6ed0436658117f8838d5cefde25fb1347924",
                   "type": "file"
                 }
@@ -2724,6 +2794,10 @@ if __name__ == "__main__":
               "name": "58",
               "type": "directory",
               "children": [
+                {
+                  "name": "a57e44913d4498d94e8891ccb22647c921dede",
+                  "type": "file"
+                },
                 {
                   "name": "d67074738d155e750e980f195791cf4c85d9e4",
                   "type": "file"
@@ -3031,6 +3105,10 @@ if __name__ == "__main__":
                 {
                   "name": "79c6b96d22483b9ec1802e4c2af5358f58d521",
                   "type": "file"
+                },
+                {
+                  "name": "ad84bce5a6006e479b620282e084dcd7115243",
+                  "type": "file"
                 }
               ]
             },
@@ -3171,6 +3249,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "c6",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2a493c7723a61e1f3141466ceb0cec02457868",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "c9",
               "type": "directory",
               "children": [
@@ -3180,6 +3268,16 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "9788ad09028a3c12de1ddcd6909037df596f99",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ca",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4473e0c6d7bbf7198754c8b34b9a80408dd023",
                   "type": "file"
                 }
               ]
@@ -3319,6 +3417,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "e6",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "e8",
               "type": "directory",
               "children": [
@@ -3453,6 +3561,10 @@ if __name__ == "__main__":
     },
     {
       "name": ".gitignore",
+      "type": "file"
+    },
+    {
+      "name": "README.md",
       "type": "file"
     },
     {
@@ -3830,6 +3942,10 @@ if __name__ == "__main__":
               "type": "file"
             },
             {
+              "name": "creator_detail.html",
+              "type": "file"
+            },
+            {
               "name": "home.html",
               "type": "file"
             },
@@ -3906,6 +4022,10 @@ if __name__ == "__main__":
           "type": "file"
         },
         {
+          "name": "debug.sql",
+          "type": "file"
+        },
+        {
           "name": "script.sql",
           "type": "file"
         }
@@ -3977,6 +4097,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 1b/
 │   │   │   └── d12a09923ae5c7015abd46e7ebc64e21db71e2
 │   │   ├── 1d/
+│   │   │   ├── b2fd683a41de415b51387821f8a1d1a86e19e9
 │   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
 │   │   ├── 1f/
 │   │   │   └── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
@@ -4038,6 +4159,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 54/
 │   │   │   └── b2d4a02927246f57027adf7d44d46ef35dc66c
 │   │   ├── 58/
+│   │   │   ├── a57e44913d4498d94e8891ccb22647c921dede
 │   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
 │   │   ├── 5a/
 │   │   │   └── 0c0d0dd4a42005830d88bb12e6b8617a37c44a
@@ -4100,7 +4222,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
 │   │   │   └── f77dfed98ed30efed8e094eadeb320dd1ff658
 │   │   ├── a4/
-│   │   │   └── 79c6b96d22483b9ec1802e4c2af5358f58d521
+│   │   │   ├── 79c6b96d22483b9ec1802e4c2af5358f58d521
+│   │   │   └── ad84bce5a6006e479b620282e084dcd7115243
 │   │   ├── a8/
 │   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
 │   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
@@ -4129,9 +4252,13 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 011fac6e47888d8e2209dcb60f02a915e0fbf0
 │   │   ├── c5/
 │   │   │   └── dcfecac7c8df924e32b4ea5fb949a2c02f4630
+│   │   ├── c6/
+│   │   │   └── 2a493c7723a61e1f3141466ceb0cec02457868
 │   │   ├── c9/
 │   │   │   ├── 1c21a15126c3a2f3555bbc554622a432c4ae9a
 │   │   │   └── 9788ad09028a3c12de1ddcd6909037df596f99
+│   │   ├── ca/
+│   │   │   └── 4473e0c6d7bbf7198754c8b34b9a80408dd023
 │   │   ├── cb/
 │   │   │   └── 50142dcea65a71997f0280cf195bb3a0c7d701
 │   │   ├── cc/
@@ -4159,6 +4286,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
+│   │   ├── e6/
+│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
 │   │   ├── e8/
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
@@ -4186,6 +4315,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       │       └── main
 │       └── tags/
 ├── .gitignore
+├── README.md
 ├── app/
 │   ├── __init__.py
 │   ├── auth.py
@@ -4277,6 +4407,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── base.html
 │       ├── chapters.html
 │       ├── comments.html
+│       ├── creator_detail.html
 │       ├── home.html
 │       ├── latest_updates.html
 │       ├── library.html
@@ -4295,11 +4426,14 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── data/
 │   ├── create-Covers.sql
 │   ├── create-MangaCover.sql
+│   ├── debug.sql
 │   └── script.sql
 ├── dump.py
 ├── project_dump.txt
 ├── requirements.txt
 └── run.py
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\README.md ---
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\requirements.txt ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
 
@@ -4314,7 +4448,7 @@ if __name__ == "__main__":
 === Folder: .git ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
-update-code
+update-Random
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
 [core]
@@ -5255,6 +5389,7 @@ exit 0
 c0c1487b19e6ef9c01f1d107d60088701418f99c 0000000000000000000000000000000000000000 Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
 c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475198 +0700	commit: update-code
+b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484720 +0700	commit: update-Random
 
 === Folder: .git\logs\refs ===
 
@@ -5264,6 +5399,7 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471165 +0700	commit (initial): Initial commit - Flask MangaDex Clone coursework
 c0c1487b19e6ef9c01f1d107d60088701418f99c c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
 c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475198 +0700	commit: update-code
+b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484720 +0700	commit: update-Random
 
 === Folder: .git\logs\refs\remotes ===
 
@@ -5272,6 +5408,7 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\refs\remotes\origin\main ---
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471204 +0700	update by push
 c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475206 +0700	update by push
+b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484731 +0700	update by push
 
 === Folder: .git\objects ===
 
@@ -5306,6 +5443,9 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte]
 
 === Folder: .git\objects\1d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1d\b2fd683a41de415b51387821f8a1d1a86e19e9 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1d\cf6ed0436658117f8838d5cefde25fb1347924 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
@@ -5464,6 +5604,9 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 === Folder: .git\objects\58 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\a57e44913d4498d94e8891ccb22647c921dede ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\d67074738d155e750e980f195791cf4c85d9e4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf6 in position 3: invalid start byte]
@@ -5626,6 +5769,9 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a4\79c6b96d22483b9ec1802e4c2af5358f58d521 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a4\ad84bce5a6006e479b620282e084dcd7115243 ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
+
 === Folder: .git\objects\a8 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a8\a4d25505df2b028b8b3c3ee323aee3f3ebb978 ---
@@ -5698,6 +5844,11 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c5\dcfecac7c8df924e32b4ea5fb949a2c02f4630 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
+=== Folder: .git\objects\c6 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c6\2a493c7723a61e1f3141466ceb0cec02457868 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
 === Folder: .git\objects\c9 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\1c21a15126c3a2f3555bbc554622a432c4ae9a ---
@@ -5705,6 +5856,11 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\9788ad09028a3c12de1ddcd6909037df596f99 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd8 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\ca ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ca\4473e0c6d7bbf7198754c8b34b9a80408dd023 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\cb ===
 
@@ -5774,6 +5930,11 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e3\db853f90de235d93108b50dc31bc0a69eafe87 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf5 in position 3: invalid start byte]
 
+=== Folder: .git\objects\e6 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
+
 === Folder: .git\objects\e8 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e8\ceadd48a3cb2733be35d9bec5652e2cff14916 ---
@@ -5827,14 +5988,14 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b254265
 === Folder: .git\refs\heads ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
-b6b5f6494257be5ea34f741332576277b2542653
+c62a493c7723a61e1f3141466ceb0cec02457868
 
 === Folder: .git\refs\remotes ===
 
 === Folder: .git\refs\remotes\origin ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
-b6b5f6494257be5ea34f741332576277b2542653
+c62a493c7723a61e1f3141466ceb0cec02457868
 
 === Folder: .git\refs\tags ===
 
@@ -6636,7 +6797,36 @@ def manga_detail(manga_id):
         return "Manga not found", 404
 
     cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
-    manga_cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
+
+    if not cover:
+        # Nếu chưa có ảnh, thực hiện tải xuống
+        cover_info = get_cover_info(str(manga.MangaId).lower())
+        if cover_info:
+            manga_id_str = cover_info['manga_id']
+            cover_id_str = cover_info['cover_id']
+            file_name_str = cover_info['file_name']
+            image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+            try:
+                response = requests.get(image_url, stream=True)
+                response.raise_for_status()
+                image_data = response.content
+                new_cover = MangaCover(
+                    MangaId=manga.MangaId,
+                    CoverId=uuid.UUID(cover_id_str),
+                    FileName=file_name_str,
+                    ImageData=image_data
+                )
+                db.session.add(new_cover)
+                db.session.commit()
+                image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                manga_cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+            except Exception as e:
+                print(f"Error downloading cover for {manga_id_str}: {e}")
+                manga_cover_url = url_for('static', filename='assets/default_cover.png')
+        else:
+            manga_cover_url = url_for('static', filename='assets/default_cover.png')
+    else:
+        manga_cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
 
     manga_stats = MangaStatistics.query.filter_by(MangaId=manga_id).first()
 
@@ -6644,21 +6834,22 @@ def manga_detail(manga_id):
 
     descriptions = MangaDescription.query.filter_by(MangaId=manga_id).all()
     manga_description = next((d.Description for d in descriptions if d.LangCode == 'en'),
-                           next((d.Description for d in descriptions if d.LangCode == 'vi'),
-                                next((d.Description for d in descriptions if d.LangCode == 'ja'),
-                                     next((d.Description for d in descriptions if d.LangCode), None))))
+                            next((d.Description for d in descriptions if d.LangCode == 'vi'),
+                                 next((d.Description for d in descriptions if d.LangCode == 'ja'),
+                                      next((d.Description for d in descriptions if d.LangCode), None))))
     description_long = len(manga_description or '') > 200 if manga_description else False
 
-    related_items = MangaRelated.query.filter_by(MangaId=manga_id).all()
-    authors = []
-    artists = []
-    for item in related_items:
-        creator = Creator.query.get(item.RelatedId)
-        if creator:
-            if item.Type == 'author':
-                authors.append(creator)
-            elif item.Type == 'artist':
-                artists.append(creator)
+    # Lấy cả authors và artists trong một truy vấn join duy nhất
+    related_creators = (
+        db.session.query(MangaRelated, Creator)
+        .join(Creator, MangaRelated.RelatedId == Creator.CreatorId)
+        .filter(MangaRelated.MangaId == manga_id)
+        .all()
+    )
+
+    authors = [creator for rel, creator in related_creators if rel.Type == 'author']
+    artists = [creator for rel, creator in related_creators if rel.Type == 'artist']
+
 
     tags = Tag.query.join(MangaTag).filter(MangaTag.MangaId == manga_id, Tag.GroupName.in_(['genre', 'theme', 'format'])).all()
     genres = [t for t in tags if t.GroupName == 'genre']
@@ -6678,20 +6869,21 @@ def manga_detail(manga_id):
     }
 
     return render_template('manga_detail.html',
-                          manga=manga,
-                          manga_cover_url=manga_cover_url,
-                          manga_stats=manga_stats,
-                          content_tags=content_tags,
-                          manga_description=manga_description,
-                          description_long=description_long,
-                          authors=authors,
-                          artists=artists,
-                          genres=genres,
-                          themes=themes,
-                          formats=formats,
-                          manga_links=manga_links,
-                          alt_titles=alt_titles,
-                          tab_contents=tab_contents)
+                            manga=manga,
+                            manga_cover_url=manga_cover_url,
+                            manga_stats=manga_stats,
+                            content_tags=content_tags,
+                            manga_description=manga_description,
+                            description_long=description_long,
+                            authors=authors,
+                            artists=artists,
+                            genres=genres,
+                            themes=themes,
+                            formats=formats,
+                            manga_links=manga_links,
+                            alt_titles=alt_titles,
+                            tab_contents=tab_contents)
+
 
 @manga.route('/<uuid:manga_id>/chapters')
 def chapters(manga_id):
@@ -6746,13 +6938,71 @@ def cover_image(cover_id):
     return send_file(BytesIO(cover.image_data), mimetype="image/jpeg")
 
 
-
-
 @manga.route('/<uuid:manga_id>/related')
 def related(manga_id):
     return render_template('related.html', manga_id=manga_id)
 
 
+# ======================
+# Creator routes
+# ======================
+@main.route("/creator/<uuid:creator_id>")
+def creator_detail(creator_id):
+    creator = Creator.query.get_or_404(creator_id)
+
+    # Truy vấn các manga của tác giả, join với MangaStatistics để lấy điểm số
+    mangas_query = (
+        db.session.query(Manga, MangaStatistics)
+        .join(MangaRelated, Manga.MangaId == MangaRelated.RelatedId)
+        .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
+        .filter(MangaRelated.MangaId == creator_id)
+        .order_by(desc(MangaStatistics.Follows)) # Mặc định sắp xếp theo lượt theo dõi
+        .all()
+    )
+
+    manga_data = []
+    for manga, stats in mangas_query:
+        cover_url = url_for('static', filename='assets/default_cover.png')
+        cover = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(desc(MangaCover.DownloadDate)).first()
+
+        if cover:
+            image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data}"
+        else:
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info['manga_id']
+                cover_id_str = cover_info['cover_id']
+                file_name_str = cover_info['file_name']
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+
+        manga_data.append({
+            'manga': manga,
+            'stats': stats,
+            'cover_url': cover_url
+        })
+        
+    return render_template(
+        'creator_detail.html',
+        creator=creator,
+        mangas=manga_data
+    )
 
 
 @main.route("/follow/<uuid:user_id>")
@@ -20985,6 +21235,68 @@ document.addEventListener('DOMContentLoaded', function () {
     <p class="text-center text-gray">No content available yet.</p>
 </div>
 {% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\creator_detail.html ---
+{% extends "base.html" %}
+
+{% block title %}{{ creator.Name }} | MangaDex Clone{% endblock %}
+
+{% block content %}
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{ url_for('static', filename='assets/default_avatar.png') }}" alt="{{ creator.Name }}"
+                class="img-fluid rounded-circle mb-3">
+            <h1 class="display-5 fw-bold">{{ creator.Name }}</h1>
+        </div>
+        <div class="col-md-9">
+            <h2 class="h5 text-muted">Biography</h2>
+            <div class="biography-content">
+                <p>{{ creator.BiographyEn if creator.BiographyEn else 'No biography available.' }}</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <h2 class="h4">Manga by {{ creator.Name }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% for data in mangas %}
+        {% set manga = data.manga %}
+        {% set stats = data.stats %}
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card h-100">
+                <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}">
+                    <img src="{{ data.cover_url }}" class="card-img-top" alt="{{ manga.TitleEn }}">
+                </a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">
+                        <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}"
+                            class="text-decoration-none text-dark">
+                            {{ manga.TitleEn }}
+                        </a>
+                    </h5>
+                    <div class="mt-auto">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">
+                                <i class="bi bi-star-fill"></i> {{ (stats.AverageRating if stats.AverageRating else
+                                (stats.BayesianRating if stats else 0))|round(1) }}
+                            </span>
+                            <small class="text-muted">
+                                <i class="bi bi-person-fill"></i> {{ stats.Follows if stats else 0 }}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\home.html ---
 {% extends "base.html" %}
 
@@ -21292,16 +21604,22 @@ document.addEventListener('DOMContentLoaded', function () {
             <h3>Authors</h3>
             <ul class="tag-list">
                 {% for author in authors %}
-                <li><a href="#" class="tag-link">{{ author.Name }}</a></li>
-                {% endfor %}
+                                {% if author %}
+                                <li><a href="{{ url_for('main.creator_detail', creator_id=author.CreatorId) }}"
+                        class="tag-link">{{ author.Name }}</a></li>
+                                {% endif %}
+                                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
             <h3>Artists</h3>
             <ul class="tag-list">
                 {% for artist in artists %}
-                <li><a href="#" class="tag-link">{{ artist.Name }}</a></li>
-                {% endfor %}
+                                {% if artist %}
+                                <li><a href="{{ url_for('main.creator_detail', creator_id=artist.CreatorId) }}"
+                        class="tag-link">{{ artist.Name }}</a></li>
+                                {% endif %}
+                                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
@@ -21615,5 +21933,117 @@ CREATE TABLE [dbo].[MangaCover](
     )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\data\debug.sql ---
+SELECT TOP (1000) [MangaId]
+      ,[Type]
+      ,[TitleEn]
+      ,[ChapterNumbersResetOnNewVolume]
+      ,[ContentRating]
+      ,[CreatedAt]
+      ,[UpdatedAt]
+      ,[IsLocked]
+      ,[LastChapter]
+      ,[LastVolume]
+      ,[LatestUploadedChapter]
+      ,[OriginalLanguage]
+      ,[PublicationDemographic]
+      ,[State]
+      ,[Status]
+      ,[Year]
+      ,[OfficialLinks]
+  FROM [MangaLibrary].[dbo].[Manga];
+
+
+SELECT 
+	Manga.MangaId,
+	Manga.ContentRating,
+	Tag.*
+  FROM [MangaLibrary].[dbo].[Manga]
+  join MangaLibrary.dbo.MangaTag on Manga.MangaId = MangaTag.MangaId
+  join MangaLibrary.dbo.Tag on Tag.TagId = MangaTag.TagId
+  where tag.GroupName = 'content'
+  order by MangaId
+
+  select 
+  Manga.MangaId,
+  MangaDescription.LangCode,
+  MangaDescription.[Description]
+  from [MangaLibrary].[dbo].[Manga]
+  join [MangaLibrary].[dbo].MangaDescription on Manga.MangaId = MangaDescription.MangaId
+  where MangaDescription.LangCode in ('en', 'vi', 'ja')
+
+
+  select
+	Manga.MangaId,
+	MangaStatistics.StatisticId,
+	MangaStatistics.Follows,
+	MangaStatistics.AverageRating,
+	MangaStatistics.BayesianRating
+  from [MangaLibrary].[dbo].Manga
+  join [MangaLibrary].[dbo].[MangaStatistics] on Manga.MangaId = MangaStatistics.MangaId
+  order by Manga.MangaId
+
+    select 
+  Manga.MangaId,
+  MangaRelated.RelatedId,
+  MangaRelated.[Type],
+  Creator.*
+  from [MangaLibrary].[dbo].[Manga]
+  join [MangaLibrary].[dbo].MangaRelated on Manga.MangaId = MangaRelated.MangaId
+  join [MangaLibrary].[dbo].Creator on MangaRelated.RelatedId = Creator.CreatorId
+  where MangaRelated.[Type] in ('artist', 'author')
+  order by Manga.MangaId
+
+  select
+	Manga.MangaId,
+	Manga.PublicationDemographic,
+	Tag.*
+  from [MangaLibrary].[dbo].[Manga]
+  join [MangaLibrary].[dbo].MangaTag on Manga.MangaId = MangaTag.MangaId
+  join [MangaLibrary].[dbo].Tag on MangaTag.TagId = Tag.TagId
+  where Tag.GroupName in ('genre', 'theme', 'format')
+  order by Manga.MangaId,tag.GroupName
+
+  select
+	Manga.MangaId,
+	MangaLink.[Provider],
+	MangaLink.[Url]
+  from [MangaLibrary].[dbo].[Manga]
+  join [MangaLibrary].[dbo].MangaLink on Manga.MangaId = MangaLink.MangaId
+
+    select
+	Manga.MangaId,
+	MangaAltTitle.LangCode,
+	MangaAltTitle.AltTitle
+	from [MangaLibrary].[dbo].[Manga]
+	join [MangaLibrary].[dbo].MangaAltTitle on Manga.MangaId = MangaAltTitle.MangaId
+
+	select distinct LangCode
+	from [MangaLibrary].[dbo].MangaAltTitle
+
+
+select
+	Manga.MangaId,
+	Manga.TitleEn,
+	MangaAltTitle.AltTitle,
+	MangaAltTitle.LangCode
+from [MangaLibrary].[dbo].[Manga]
+join [MangaLibrary].[dbo].MangaAltTitle on Manga.MangaId = MangaAltTitle.MangaId
+
+
+SELECT 
+Creator.CreatorId,
+Creator.[Name],
+Creator.BiographyEn,
+Manga.MangaId,
+Manga.TitleEn,
+MangaStatistics.AverageRating,
+MangaStatistics.BayesianRating,
+MangaStatistics.Follows
+  FROM [MangaLibrary].[dbo].Creator
+join  [MangaLibrary].[dbo].[CreatorRelationship] on Creator.CreatorId = CreatorRelationship.CreatorId
+  join [MangaLibrary].[dbo].Manga on CreatorRelationship.RelatedId = Manga.MangaId
+  join [MangaLibrary].[dbo].MangaStatistics on Manga.MangaId = MangaStatistics.MangaId
+  order by Creator.CreatorId
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\data\script.sql ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
