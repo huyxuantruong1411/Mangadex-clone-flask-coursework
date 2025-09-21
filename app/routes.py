@@ -566,6 +566,30 @@ def creator_detail(creator_id):
         mangas=manga_data
     )
 
+
+@main.route("/search_creators")
+def search_creators():
+    query = request.args.get('query', '')
+    if not query or len(query) < 2:
+        return jsonify([])
+
+    # Lấy 5 creator có tên khớp với truy vấn, không phân biệt chữ hoa/thường
+    creators = Creator.query.filter(
+        func.lower(Creator.Name).like(f'%{query.lower()}%')
+    ).limit(5).all()
+
+    creator_list = [{
+        'creator_id': creator.CreatorId,
+        'name': creator.Name
+    } for creator in creators]
+    
+    return jsonify(creator_list)
+
+
+
+# ======================
+# User routes
+# ======================
 @main.route("/follow/<uuid:user_id>")
 def follow(user_id):
     return f"Follow user {user_id}"

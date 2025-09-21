@@ -12864,6 +12864,10 @@ a {
   padding: 10px;
   color: #E0E0E0;
   min-width: 300px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 .search-result-item {
@@ -12921,4 +12925,51 @@ a {
   margin-right: 5px;
   background-color: #999999;
   /* fallback */
+}
+
+/* Styling for search result groups */
+.search-group-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  border-left: 3px solid #6c757d;
+}
+
+/* Specific styles for Creator search items */
+.search-result-item.creator-item {
+  padding: 8px 10px;
+}
+
+.search-result-item.creator-item .search-icon {
+  font-size: 20px;
+  color: #adb5bd;
+  margin-right: 10px;
+}
+
+.search-result-item.creator-item .search-result-title {
+  font-weight: normal;
+  color: #E0E0E0;
+}
+
+/* Bỏ gạch chân cho tất cả link trong search popup */
+.search-result-item {
+  text-decoration: none;
+}
+
+/* Đảm bảo tiêu đề cũng không bị gạch chân */
+.search-result-title {
+  text-decoration: none;
+}
+
+/* Giữ lại hiệu ứng gạch chân khi di chuột vào */
+.search-result-title:hover {
+  text-decoration: underline;
+}
+
+/* Đảm bảo các mục tìm kiếm creator cũng không bị gạch chân */
+.search-result-item.creator-item {
+  text-decoration: none;
 }
