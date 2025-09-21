@@ -4,6 +4,1105 @@
   "type": "directory",
   "children": [
     {
+      "name": ".git",
+      "type": "directory",
+      "children": [
+        {
+          "name": "COMMIT_EDITMSG",
+          "type": "file"
+        },
+        {
+          "name": "HEAD",
+          "type": "file"
+        },
+        {
+          "name": "config",
+          "type": "file"
+        },
+        {
+          "name": "description",
+          "type": "file"
+        },
+        {
+          "name": "hooks",
+          "type": "directory",
+          "children": [
+            {
+              "name": "applypatch-msg.sample",
+              "type": "file"
+            },
+            {
+              "name": "commit-msg.sample",
+              "type": "file"
+            },
+            {
+              "name": "fsmonitor-watchman.sample",
+              "type": "file"
+            },
+            {
+              "name": "post-update.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-applypatch.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-commit.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-merge-commit.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-push.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-rebase.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-receive.sample",
+              "type": "file"
+            },
+            {
+              "name": "prepare-commit-msg.sample",
+              "type": "file"
+            },
+            {
+              "name": "push-to-checkout.sample",
+              "type": "file"
+            },
+            {
+              "name": "sendemail-validate.sample",
+              "type": "file"
+            },
+            {
+              "name": "update.sample",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "type": "file"
+        },
+        {
+          "name": "info",
+          "type": "directory",
+          "children": [
+            {
+              "name": "exclude",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "logs",
+          "type": "directory",
+          "children": [
+            {
+              "name": "HEAD",
+              "type": "file"
+            },
+            {
+              "name": "refs",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "heads",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "main",
+                      "type": "file"
+                    }
+                  ]
+                },
+                {
+                  "name": "remotes",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "origin",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "main",
+                          "type": "file"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "objects",
+          "type": "directory",
+          "children": [
+            {
+              "name": "00",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6efb158bca8b24217e27787427f06b78fac469",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "03",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "32227e9f1218271277306120ddb4a6a1c60868",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "0a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "794551ad32ed40a938191708a3901b4e454212",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "0e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dba748ea81df245afc761b268ada9c5df213e1",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "16",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c2bffa4ab0b2eb562fd94d8adfb89714caede6",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "1d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "cf6ed0436658117f8838d5cefde25fb1347924",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "1f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "22",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2ec4612406c8b23f86abbc36757aa7f6268e73",
+                  "type": "file"
+                },
+                {
+                  "name": "c95b595184ffa73c7c4df4d82f7c04468dceea",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "25",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "99563729b87d3931c903a5c60cb15beaf8ec5f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "27",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0628795527266596193a26e4132b2ebb19df20",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "28",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b9a549dcd68879e202fbf79d5f2dc9221c8f07",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "29",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "fffdd9025baac2625072eb16ad2d66fc6b7394",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "2c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "53d7a8b6f35a475f1bec276184bfeced4da222",
+                  "type": "file"
+                },
+                {
+                  "name": "a9dbe87cb9ade523a9281bc1624734f7f34558",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "32",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6246f9cbb175ab48ee3d3dd8b705e4a310d0ba",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "33",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0f41740bf4bb31cfc5c947fd7587b3cec819d7",
+                  "type": "file"
+                },
+                {
+                  "name": "c0df5f31eacd27501545ebe50bfc4a7df7883e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "38",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "294ce219005561b20021bef890cf55a48564bb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "3a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "03d433a82a4c8276641502e508065071158866",
+                  "type": "file"
+                },
+                {
+                  "name": "f9cb6dab0f685a4781b6baeadd4923ea726a8a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "43",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0a88302eea286048f1c204defe654dd9a61632",
+                  "type": "file"
+                },
+                {
+                  "name": "c4e3371805831cd1f16b5a394ea6d0ba3dbe52",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "44",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6bfe36d102cb2b50b9a34c1621b384b7b9a7ec",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "45",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5448abda71ebb3372cea0db603f6419e293b80",
+                  "type": "file"
+                },
+                {
+                  "name": "6b4352594af44e22a279f69bbf4409c3d82114",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "47",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "42cf7e7d6af5c90f5300081d5c6db57cf33178",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "48",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "8dae9033c210859a235614f6a8636ab1a98041",
+                  "type": "file"
+                },
+                {
+                  "name": "a3d1a786146ed465055eda80b4224f36d2e301",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "4b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d049e7806894891e9f7b1da06689873da5e2fe",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "4d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "1b0a13d87b3d8a9d7ab2b4944500e4191d48d8",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "4e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "fdf016623ae0e529cfdf323a943e1238d37b80",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "51",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "526c7e2bd3614b8cbe0e331aa409e4c421f43b",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "52",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ba6c230a66a90191eb5003df2737b8b7c13ec9",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "53",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "95eedcf90ed73ed3ca03155487382f30526b67",
+                  "type": "file"
+                },
+                {
+                  "name": "d6d2c641bb4f22d0f90458e6dd5c59933f790c",
+                  "type": "file"
+                },
+                {
+                  "name": "eb3264b7f2319904b6a703140d06d1742ccb3a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "54",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b2d4a02927246f57027adf7d44d46ef35dc66c",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "58",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d67074738d155e750e980f195791cf4c85d9e4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "5a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0c0d0dd4a42005830d88bb12e6b8617a37c44a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "5b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3322eb91b073421855d1999288bdff36c060a9",
+                  "type": "file"
+                },
+                {
+                  "name": "e60eab89f12679223cb656b276d146792c6351",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "5f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "102306306d4a3c0548710ef073f4b8f888915e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "61",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "754b97c8aaf2bd4fc8e425ef292f71f1592315",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "68",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "85d30dff856aeed6ef1b3a53523c304a0cab93",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "69",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "664b3fc9916cb80fe6d79e845fb806c2882137",
+                  "type": "file"
+                },
+                {
+                  "name": "988e10bdbfda8cab2a451e109f9a7cc8f9fd41",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "70",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6b8401c9acf600ebf44d1c9e6792150d264868",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "71",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "69886ca6c7c84379540f38494541c5a1ff26a8",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "73",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5669242c8f421b82de2e75d10965e151d3687e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "74",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2c315adff5af1dbbd870d0b221f8b7a43ed8da",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "75",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "821913a5911adf83890a981e1d5e774d3e2d52",
+                  "type": "file"
+                },
+                {
+                  "name": "856a18575e0462a7095b22198238f796fa683f",
+                  "type": "file"
+                },
+                {
+                  "name": "b1339456c06cabac1b1c78a261279354886882",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "7d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a39be23fe19ba2eeae6cccb1b6b362f5db3bfb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "7e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6c032734f13825c8b2c7316f31141b5d99703b",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "85",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9052402597b4c30710f9aafe41a68852119848",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "86",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c69e1105d1aba6af0e036c9c4b43d3882aec5e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "8a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bcf36652db4f61c7597d80107f89b24ae8622e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "8f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4bf54820f8b7cb26c15ac02c79ac89cba30200",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "95",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "71e25710e826a99a593bdfdb962fc8d703d5bf",
+                  "type": "file"
+                },
+                {
+                  "name": "88a49aa3bf29474607d90920873aa23e88d20a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "97",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "37d2a4fcff13b42d065c1774b9bbb2f1945aca",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "9b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0b93ce20d21be74f86c9251a2c68ae5e644e96",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6b57666f52fef6cd448fb916ed157272dee73e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9744f83cf67da8616ce02e26bc1ee901ea8177",
+                  "type": "file"
+                },
+                {
+                  "name": "f77dfed98ed30efed8e094eadeb320dd1ff658",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a4",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "79c6b96d22483b9ec1802e4c2af5358f58d521",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a8",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a4d25505df2b028b8b3c3ee323aee3f3ebb978",
+                  "type": "file"
+                },
+                {
+                  "name": "cd58cbd7bd07cc87f5dda723e93d383736379e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ab",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "312aecebeebd9cf45a35fbbb335e4dfac03282",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0ebbae8efa1315b3825ddb41513e3f8f1e5eb4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3ab4e46e800968e006f5811348dc9122b46e1e",
+                  "type": "file"
+                },
+                {
+                  "name": "3bfe2e07b6eda24d56c184581193197156cd64",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "83183d721457d9fb56fc8209bf932e02306a19",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b7",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b9",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e",
+                  "type": "file"
+                },
+                {
+                  "name": "5822d30c60d75b9e5e1f42043381f04e684a92",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "bd",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "f3bed86e49863994b94a2e44d84dfb1b59e3e4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "c0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "129b336857115aec7d4d0525bfd291b628bae3",
+                  "type": "file"
+                },
+                {
+                  "name": "c1487b19e6ef9c01f1d107d60088701418f99c",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "c3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "011fac6e47888d8e2209dcb60f02a915e0fbf0",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "c9",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "1c21a15126c3a2f3555bbc554622a432c4ae9a",
+                  "type": "file"
+                },
+                {
+                  "name": "9788ad09028a3c12de1ddcd6909037df596f99",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "cb",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "50142dcea65a71997f0280cf195bb3a0c7d701",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "cc",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ceb2801153ca950613660ab9236bd7a86bfd9a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "26d95ed3d9477f152368ee2a169976cbfbc673",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d5",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ccc1fe847536ae42929a02c51dfaa238b53e8a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d6",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2f65d3bd680969ed2311ef1ccd755ebafc6384",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d7",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b278ba91bc60fba89a2544cd5485c311fe5261",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "da",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c822ef92196eea7a19b7695b94a3f91e318610",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "db",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "064b837db5e7443de95808d99204ce5184c9ca",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "e0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9d9a3457c06a6d48b0bbc7834c13a014b8d838",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "e3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "db853f90de235d93108b50dc31bc0a69eafe87",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "e8",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ceadd48a3cb2733be35d9bec5652e2cff14916",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ed",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "f0d6d2af7ee3607fdbb5e0613566de248cc01d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "f1",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "179033fa1b395422cce326d1a8f81d8217bd6a",
+                  "type": "file"
+                },
+                {
+                  "name": "b02855b88b65f9c87453089c1ddcd7904ebb8f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "f3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "1de63487ffe7dd9e287f58ccacb93a644aa8f4",
+                  "type": "file"
+                },
+                {
+                  "name": "29756fe33519c2881156542cb77f0e1207bdbe",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "f5",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4592fd73da13e94c07942b06b38e537057e1e6",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "fe",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "07a70f4d1070ccd31cd21f10dc0ae6d357dbcb",
+                  "type": "file"
+                },
+                {
+                  "name": "fb85b76c41cce4f3559ded4747e048b53756a5",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "info",
+              "type": "directory",
+              "children": []
+            },
+            {
+              "name": "pack",
+              "type": "directory",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "refs",
+          "type": "directory",
+          "children": [
+            {
+              "name": "heads",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "main",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "remotes",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "origin",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "main",
+                      "type": "file"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "tags",
+              "type": "directory",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".gitignore",
+      "type": "file"
+    },
+    {
       "name": "app",
       "type": "directory",
       "children": [
@@ -37,6 +1136,10 @@
                 },
                 {
                   "name": "auth_thmb.png",
+                  "type": "file"
+                },
+                {
+                  "name": "default_avatar.png",
                   "type": "file"
                 },
                 {
@@ -476,6 +1579,233 @@
 
 === Project Tree (ASCII) ===
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
+├── .git/
+│   ├── COMMIT_EDITMSG
+│   ├── HEAD
+│   ├── config
+│   ├── description
+│   ├── hooks/
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info/
+│   │   └── exclude
+│   ├── logs/
+│   │   ├── HEAD
+│   │   └── refs/
+│   │       ├── heads/
+│   │       │   └── main
+│   │       └── remotes/
+│   │           └── origin/
+│   │               └── main
+│   ├── objects/
+│   │   ├── 00/
+│   │   │   └── 6efb158bca8b24217e27787427f06b78fac469
+│   │   ├── 03/
+│   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
+│   │   ├── 0a/
+│   │   │   └── 794551ad32ed40a938191708a3901b4e454212
+│   │   ├── 0e/
+│   │   │   └── dba748ea81df245afc761b268ada9c5df213e1
+│   │   ├── 16/
+│   │   │   └── c2bffa4ab0b2eb562fd94d8adfb89714caede6
+│   │   ├── 1d/
+│   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
+│   │   ├── 1f/
+│   │   │   └── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
+│   │   ├── 22/
+│   │   │   ├── 2ec4612406c8b23f86abbc36757aa7f6268e73
+│   │   │   └── c95b595184ffa73c7c4df4d82f7c04468dceea
+│   │   ├── 25/
+│   │   │   └── 99563729b87d3931c903a5c60cb15beaf8ec5f
+│   │   ├── 27/
+│   │   │   └── 0628795527266596193a26e4132b2ebb19df20
+│   │   ├── 28/
+│   │   │   └── b9a549dcd68879e202fbf79d5f2dc9221c8f07
+│   │   ├── 29/
+│   │   │   └── fffdd9025baac2625072eb16ad2d66fc6b7394
+│   │   ├── 2c/
+│   │   │   ├── 53d7a8b6f35a475f1bec276184bfeced4da222
+│   │   │   └── a9dbe87cb9ade523a9281bc1624734f7f34558
+│   │   ├── 32/
+│   │   │   └── 6246f9cbb175ab48ee3d3dd8b705e4a310d0ba
+│   │   ├── 33/
+│   │   │   ├── 0f41740bf4bb31cfc5c947fd7587b3cec819d7
+│   │   │   └── c0df5f31eacd27501545ebe50bfc4a7df7883e
+│   │   ├── 38/
+│   │   │   └── 294ce219005561b20021bef890cf55a48564bb
+│   │   ├── 3a/
+│   │   │   ├── 03d433a82a4c8276641502e508065071158866
+│   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
+│   │   ├── 43/
+│   │   │   ├── 0a88302eea286048f1c204defe654dd9a61632
+│   │   │   └── c4e3371805831cd1f16b5a394ea6d0ba3dbe52
+│   │   ├── 44/
+│   │   │   └── 6bfe36d102cb2b50b9a34c1621b384b7b9a7ec
+│   │   ├── 45/
+│   │   │   ├── 5448abda71ebb3372cea0db603f6419e293b80
+│   │   │   └── 6b4352594af44e22a279f69bbf4409c3d82114
+│   │   ├── 47/
+│   │   │   └── 42cf7e7d6af5c90f5300081d5c6db57cf33178
+│   │   ├── 48/
+│   │   │   ├── 8dae9033c210859a235614f6a8636ab1a98041
+│   │   │   └── a3d1a786146ed465055eda80b4224f36d2e301
+│   │   ├── 4b/
+│   │   │   └── d049e7806894891e9f7b1da06689873da5e2fe
+│   │   ├── 4d/
+│   │   │   └── 1b0a13d87b3d8a9d7ab2b4944500e4191d48d8
+│   │   ├── 4e/
+│   │   │   └── fdf016623ae0e529cfdf323a943e1238d37b80
+│   │   ├── 51/
+│   │   │   └── 526c7e2bd3614b8cbe0e331aa409e4c421f43b
+│   │   ├── 52/
+│   │   │   └── ba6c230a66a90191eb5003df2737b8b7c13ec9
+│   │   ├── 53/
+│   │   │   ├── 95eedcf90ed73ed3ca03155487382f30526b67
+│   │   │   ├── d6d2c641bb4f22d0f90458e6dd5c59933f790c
+│   │   │   └── eb3264b7f2319904b6a703140d06d1742ccb3a
+│   │   ├── 54/
+│   │   │   └── b2d4a02927246f57027adf7d44d46ef35dc66c
+│   │   ├── 58/
+│   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
+│   │   ├── 5a/
+│   │   │   └── 0c0d0dd4a42005830d88bb12e6b8617a37c44a
+│   │   ├── 5b/
+│   │   │   ├── 3322eb91b073421855d1999288bdff36c060a9
+│   │   │   └── e60eab89f12679223cb656b276d146792c6351
+│   │   ├── 5f/
+│   │   │   └── 102306306d4a3c0548710ef073f4b8f888915e
+│   │   ├── 61/
+│   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
+│   │   ├── 68/
+│   │   │   └── 85d30dff856aeed6ef1b3a53523c304a0cab93
+│   │   ├── 69/
+│   │   │   ├── 664b3fc9916cb80fe6d79e845fb806c2882137
+│   │   │   └── 988e10bdbfda8cab2a451e109f9a7cc8f9fd41
+│   │   ├── 70/
+│   │   │   └── 6b8401c9acf600ebf44d1c9e6792150d264868
+│   │   ├── 71/
+│   │   │   └── 69886ca6c7c84379540f38494541c5a1ff26a8
+│   │   ├── 73/
+│   │   │   └── 5669242c8f421b82de2e75d10965e151d3687e
+│   │   ├── 74/
+│   │   │   └── 2c315adff5af1dbbd870d0b221f8b7a43ed8da
+│   │   ├── 75/
+│   │   │   ├── 821913a5911adf83890a981e1d5e774d3e2d52
+│   │   │   ├── 856a18575e0462a7095b22198238f796fa683f
+│   │   │   └── b1339456c06cabac1b1c78a261279354886882
+│   │   ├── 7d/
+│   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
+│   │   ├── 7e/
+│   │   │   └── 6c032734f13825c8b2c7316f31141b5d99703b
+│   │   ├── 85/
+│   │   │   └── 9052402597b4c30710f9aafe41a68852119848
+│   │   ├── 86/
+│   │   │   └── c69e1105d1aba6af0e036c9c4b43d3882aec5e
+│   │   ├── 8a/
+│   │   │   └── bcf36652db4f61c7597d80107f89b24ae8622e
+│   │   ├── 8f/
+│   │   │   └── 4bf54820f8b7cb26c15ac02c79ac89cba30200
+│   │   ├── 95/
+│   │   │   ├── 71e25710e826a99a593bdfdb962fc8d703d5bf
+│   │   │   └── 88a49aa3bf29474607d90920873aa23e88d20a
+│   │   ├── 97/
+│   │   │   └── 37d2a4fcff13b42d065c1774b9bbb2f1945aca
+│   │   ├── 9b/
+│   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
+│   │   ├── a0/
+│   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
+│   │   ├── a2/
+│   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
+│   │   │   └── f77dfed98ed30efed8e094eadeb320dd1ff658
+│   │   ├── a4/
+│   │   │   └── 79c6b96d22483b9ec1802e4c2af5358f58d521
+│   │   ├── a8/
+│   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
+│   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
+│   │   ├── ab/
+│   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
+│   │   ├── b0/
+│   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
+│   │   ├── b2/
+│   │   │   ├── 3ab4e46e800968e006f5811348dc9122b46e1e
+│   │   │   └── 3bfe2e07b6eda24d56c184581193197156cd64
+│   │   ├── b3/
+│   │   │   └── 83183d721457d9fb56fc8209bf932e02306a19
+│   │   ├── b7/
+│   │   │   └── 7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0
+│   │   ├── b9/
+│   │   │   ├── 35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e
+│   │   │   └── 5822d30c60d75b9e5e1f42043381f04e684a92
+│   │   ├── bd/
+│   │   │   └── f3bed86e49863994b94a2e44d84dfb1b59e3e4
+│   │   ├── c0/
+│   │   │   ├── 129b336857115aec7d4d0525bfd291b628bae3
+│   │   │   └── c1487b19e6ef9c01f1d107d60088701418f99c
+│   │   ├── c3/
+│   │   │   └── 011fac6e47888d8e2209dcb60f02a915e0fbf0
+│   │   ├── c9/
+│   │   │   ├── 1c21a15126c3a2f3555bbc554622a432c4ae9a
+│   │   │   └── 9788ad09028a3c12de1ddcd6909037df596f99
+│   │   ├── cb/
+│   │   │   └── 50142dcea65a71997f0280cf195bb3a0c7d701
+│   │   ├── cc/
+│   │   │   └── ceb2801153ca950613660ab9236bd7a86bfd9a
+│   │   ├── d2/
+│   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
+│   │   ├── d3/
+│   │   │   └── 26d95ed3d9477f152368ee2a169976cbfbc673
+│   │   ├── d5/
+│   │   │   └── ccc1fe847536ae42929a02c51dfaa238b53e8a
+│   │   ├── d6/
+│   │   │   └── 2f65d3bd680969ed2311ef1ccd755ebafc6384
+│   │   ├── d7/
+│   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
+│   │   ├── da/
+│   │   │   └── c822ef92196eea7a19b7695b94a3f91e318610
+│   │   ├── db/
+│   │   │   └── 064b837db5e7443de95808d99204ce5184c9ca
+│   │   ├── e0/
+│   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
+│   │   ├── e3/
+│   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
+│   │   ├── e8/
+│   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
+│   │   ├── ed/
+│   │   │   └── f0d6d2af7ee3607fdbb5e0613566de248cc01d
+│   │   ├── f1/
+│   │   │   ├── 179033fa1b395422cce326d1a8f81d8217bd6a
+│   │   │   └── b02855b88b65f9c87453089c1ddcd7904ebb8f
+│   │   ├── f3/
+│   │   │   ├── 1de63487ffe7dd9e287f58ccacb93a644aa8f4
+│   │   │   └── 29756fe33519c2881156542cb77f0e1207bdbe
+│   │   ├── f5/
+│   │   │   └── 4592fd73da13e94c07942b06b38e537057e1e6
+│   │   ├── fe/
+│   │   │   ├── 07a70f4d1070ccd31cd21f10dc0ae6d357dbcb
+│   │   │   └── fb85b76c41cce4f3559ded4747e048b53756a5
+│   │   ├── info/
+│   │   └── pack/
+│   └── refs/
+│       ├── heads/
+│       │   └── main
+│       ├── remotes/
+│       │   └── origin/
+│       │       └── main
+│       └── tags/
+├── .gitignore
 ├── app/
 │   ├── __init__.py
 │   ├── auth.py
@@ -485,6 +1815,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── assets/
 │   │   │   ├── MD-logo.png
 │   │   │   ├── auth_thmb.png
+│   │   │   ├── default_avatar.png
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── auth.css
@@ -592,6 +1923,28 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 
 
 === Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Flask cache
+instance/
+*.db
+*.sqlite3
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
 import urllib
@@ -713,6 +2066,1105 @@ if __name__ == "__main__":
   "type": "directory",
   "children": [
     {
+      "name": ".git",
+      "type": "directory",
+      "children": [
+        {
+          "name": "COMMIT_EDITMSG",
+          "type": "file"
+        },
+        {
+          "name": "HEAD",
+          "type": "file"
+        },
+        {
+          "name": "config",
+          "type": "file"
+        },
+        {
+          "name": "description",
+          "type": "file"
+        },
+        {
+          "name": "hooks",
+          "type": "directory",
+          "children": [
+            {
+              "name": "applypatch-msg.sample",
+              "type": "file"
+            },
+            {
+              "name": "commit-msg.sample",
+              "type": "file"
+            },
+            {
+              "name": "fsmonitor-watchman.sample",
+              "type": "file"
+            },
+            {
+              "name": "post-update.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-applypatch.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-commit.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-merge-commit.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-push.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-rebase.sample",
+              "type": "file"
+            },
+            {
+              "name": "pre-receive.sample",
+              "type": "file"
+            },
+            {
+              "name": "prepare-commit-msg.sample",
+              "type": "file"
+            },
+            {
+              "name": "push-to-checkout.sample",
+              "type": "file"
+            },
+            {
+              "name": "sendemail-validate.sample",
+              "type": "file"
+            },
+            {
+              "name": "update.sample",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "type": "file"
+        },
+        {
+          "name": "info",
+          "type": "directory",
+          "children": [
+            {
+              "name": "exclude",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "logs",
+          "type": "directory",
+          "children": [
+            {
+              "name": "HEAD",
+              "type": "file"
+            },
+            {
+              "name": "refs",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "heads",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "main",
+                      "type": "file"
+                    }
+                  ]
+                },
+                {
+                  "name": "remotes",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "origin",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "main",
+                          "type": "file"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "objects",
+          "type": "directory",
+          "children": [
+            {
+              "name": "00",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6efb158bca8b24217e27787427f06b78fac469",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "03",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "32227e9f1218271277306120ddb4a6a1c60868",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "0a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "794551ad32ed40a938191708a3901b4e454212",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "0e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dba748ea81df245afc761b268ada9c5df213e1",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "16",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c2bffa4ab0b2eb562fd94d8adfb89714caede6",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "1d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "cf6ed0436658117f8838d5cefde25fb1347924",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "1f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "22",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2ec4612406c8b23f86abbc36757aa7f6268e73",
+                  "type": "file"
+                },
+                {
+                  "name": "c95b595184ffa73c7c4df4d82f7c04468dceea",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "25",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "99563729b87d3931c903a5c60cb15beaf8ec5f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "27",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0628795527266596193a26e4132b2ebb19df20",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "28",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b9a549dcd68879e202fbf79d5f2dc9221c8f07",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "29",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "fffdd9025baac2625072eb16ad2d66fc6b7394",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "2c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "53d7a8b6f35a475f1bec276184bfeced4da222",
+                  "type": "file"
+                },
+                {
+                  "name": "a9dbe87cb9ade523a9281bc1624734f7f34558",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "32",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6246f9cbb175ab48ee3d3dd8b705e4a310d0ba",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "33",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0f41740bf4bb31cfc5c947fd7587b3cec819d7",
+                  "type": "file"
+                },
+                {
+                  "name": "c0df5f31eacd27501545ebe50bfc4a7df7883e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "38",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "294ce219005561b20021bef890cf55a48564bb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "3a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "03d433a82a4c8276641502e508065071158866",
+                  "type": "file"
+                },
+                {
+                  "name": "f9cb6dab0f685a4781b6baeadd4923ea726a8a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "43",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0a88302eea286048f1c204defe654dd9a61632",
+                  "type": "file"
+                },
+                {
+                  "name": "c4e3371805831cd1f16b5a394ea6d0ba3dbe52",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "44",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6bfe36d102cb2b50b9a34c1621b384b7b9a7ec",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "45",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5448abda71ebb3372cea0db603f6419e293b80",
+                  "type": "file"
+                },
+                {
+                  "name": "6b4352594af44e22a279f69bbf4409c3d82114",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "47",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "42cf7e7d6af5c90f5300081d5c6db57cf33178",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "48",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "8dae9033c210859a235614f6a8636ab1a98041",
+                  "type": "file"
+                },
+                {
+                  "name": "a3d1a786146ed465055eda80b4224f36d2e301",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "4b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d049e7806894891e9f7b1da06689873da5e2fe",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "4d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "1b0a13d87b3d8a9d7ab2b4944500e4191d48d8",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "4e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "fdf016623ae0e529cfdf323a943e1238d37b80",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "51",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "526c7e2bd3614b8cbe0e331aa409e4c421f43b",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "52",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ba6c230a66a90191eb5003df2737b8b7c13ec9",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "53",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "95eedcf90ed73ed3ca03155487382f30526b67",
+                  "type": "file"
+                },
+                {
+                  "name": "d6d2c641bb4f22d0f90458e6dd5c59933f790c",
+                  "type": "file"
+                },
+                {
+                  "name": "eb3264b7f2319904b6a703140d06d1742ccb3a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "54",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b2d4a02927246f57027adf7d44d46ef35dc66c",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "58",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d67074738d155e750e980f195791cf4c85d9e4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "5a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0c0d0dd4a42005830d88bb12e6b8617a37c44a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "5b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3322eb91b073421855d1999288bdff36c060a9",
+                  "type": "file"
+                },
+                {
+                  "name": "e60eab89f12679223cb656b276d146792c6351",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "5f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "102306306d4a3c0548710ef073f4b8f888915e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "61",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "754b97c8aaf2bd4fc8e425ef292f71f1592315",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "68",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "85d30dff856aeed6ef1b3a53523c304a0cab93",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "69",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "664b3fc9916cb80fe6d79e845fb806c2882137",
+                  "type": "file"
+                },
+                {
+                  "name": "988e10bdbfda8cab2a451e109f9a7cc8f9fd41",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "70",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6b8401c9acf600ebf44d1c9e6792150d264868",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "71",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "69886ca6c7c84379540f38494541c5a1ff26a8",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "73",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5669242c8f421b82de2e75d10965e151d3687e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "74",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2c315adff5af1dbbd870d0b221f8b7a43ed8da",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "75",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "821913a5911adf83890a981e1d5e774d3e2d52",
+                  "type": "file"
+                },
+                {
+                  "name": "856a18575e0462a7095b22198238f796fa683f",
+                  "type": "file"
+                },
+                {
+                  "name": "b1339456c06cabac1b1c78a261279354886882",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "7d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a39be23fe19ba2eeae6cccb1b6b362f5db3bfb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "7e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6c032734f13825c8b2c7316f31141b5d99703b",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "85",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9052402597b4c30710f9aafe41a68852119848",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "86",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c69e1105d1aba6af0e036c9c4b43d3882aec5e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "8a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bcf36652db4f61c7597d80107f89b24ae8622e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "8f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4bf54820f8b7cb26c15ac02c79ac89cba30200",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "95",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "71e25710e826a99a593bdfdb962fc8d703d5bf",
+                  "type": "file"
+                },
+                {
+                  "name": "88a49aa3bf29474607d90920873aa23e88d20a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "97",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "37d2a4fcff13b42d065c1774b9bbb2f1945aca",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "9b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0b93ce20d21be74f86c9251a2c68ae5e644e96",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "6b57666f52fef6cd448fb916ed157272dee73e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9744f83cf67da8616ce02e26bc1ee901ea8177",
+                  "type": "file"
+                },
+                {
+                  "name": "f77dfed98ed30efed8e094eadeb320dd1ff658",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a4",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "79c6b96d22483b9ec1802e4c2af5358f58d521",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "a8",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a4d25505df2b028b8b3c3ee323aee3f3ebb978",
+                  "type": "file"
+                },
+                {
+                  "name": "cd58cbd7bd07cc87f5dda723e93d383736379e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ab",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "312aecebeebd9cf45a35fbbb335e4dfac03282",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0ebbae8efa1315b3825ddb41513e3f8f1e5eb4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3ab4e46e800968e006f5811348dc9122b46e1e",
+                  "type": "file"
+                },
+                {
+                  "name": "3bfe2e07b6eda24d56c184581193197156cd64",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "83183d721457d9fb56fc8209bf932e02306a19",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b7",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "b9",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e",
+                  "type": "file"
+                },
+                {
+                  "name": "5822d30c60d75b9e5e1f42043381f04e684a92",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "bd",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "f3bed86e49863994b94a2e44d84dfb1b59e3e4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "c0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "129b336857115aec7d4d0525bfd291b628bae3",
+                  "type": "file"
+                },
+                {
+                  "name": "c1487b19e6ef9c01f1d107d60088701418f99c",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "c3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "011fac6e47888d8e2209dcb60f02a915e0fbf0",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "c9",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "1c21a15126c3a2f3555bbc554622a432c4ae9a",
+                  "type": "file"
+                },
+                {
+                  "name": "9788ad09028a3c12de1ddcd6909037df596f99",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "cb",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "50142dcea65a71997f0280cf195bb3a0c7d701",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "cc",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ceb2801153ca950613660ab9236bd7a86bfd9a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "26d95ed3d9477f152368ee2a169976cbfbc673",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d5",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ccc1fe847536ae42929a02c51dfaa238b53e8a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d6",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2f65d3bd680969ed2311ef1ccd755ebafc6384",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d7",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b278ba91bc60fba89a2544cd5485c311fe5261",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "da",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c822ef92196eea7a19b7695b94a3f91e318610",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "db",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "064b837db5e7443de95808d99204ce5184c9ca",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "e0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9d9a3457c06a6d48b0bbc7834c13a014b8d838",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "e3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "db853f90de235d93108b50dc31bc0a69eafe87",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "e8",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ceadd48a3cb2733be35d9bec5652e2cff14916",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ed",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "f0d6d2af7ee3607fdbb5e0613566de248cc01d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "f1",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "179033fa1b395422cce326d1a8f81d8217bd6a",
+                  "type": "file"
+                },
+                {
+                  "name": "b02855b88b65f9c87453089c1ddcd7904ebb8f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "f3",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "1de63487ffe7dd9e287f58ccacb93a644aa8f4",
+                  "type": "file"
+                },
+                {
+                  "name": "29756fe33519c2881156542cb77f0e1207bdbe",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "f5",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4592fd73da13e94c07942b06b38e537057e1e6",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "fe",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "07a70f4d1070ccd31cd21f10dc0ae6d357dbcb",
+                  "type": "file"
+                },
+                {
+                  "name": "fb85b76c41cce4f3559ded4747e048b53756a5",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "info",
+              "type": "directory",
+              "children": []
+            },
+            {
+              "name": "pack",
+              "type": "directory",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "refs",
+          "type": "directory",
+          "children": [
+            {
+              "name": "heads",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "main",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "remotes",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "origin",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "main",
+                      "type": "file"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "tags",
+              "type": "directory",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".gitignore",
+      "type": "file"
+    },
+    {
       "name": "app",
       "type": "directory",
       "children": [
@@ -746,6 +3198,10 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "auth_thmb.png",
+                  "type": "file"
+                },
+                {
+                  "name": "default_avatar.png",
                   "type": "file"
                 },
                 {
@@ -1185,6 +3641,233 @@ if __name__ == "__main__":
 
 === Project Tree (ASCII) ===
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
+├── .git/
+│   ├── COMMIT_EDITMSG
+│   ├── HEAD
+│   ├── config
+│   ├── description
+│   ├── hooks/
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info/
+│   │   └── exclude
+│   ├── logs/
+│   │   ├── HEAD
+│   │   └── refs/
+│   │       ├── heads/
+│   │       │   └── main
+│   │       └── remotes/
+│   │           └── origin/
+│   │               └── main
+│   ├── objects/
+│   │   ├── 00/
+│   │   │   └── 6efb158bca8b24217e27787427f06b78fac469
+│   │   ├── 03/
+│   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
+│   │   ├── 0a/
+│   │   │   └── 794551ad32ed40a938191708a3901b4e454212
+│   │   ├── 0e/
+│   │   │   └── dba748ea81df245afc761b268ada9c5df213e1
+│   │   ├── 16/
+│   │   │   └── c2bffa4ab0b2eb562fd94d8adfb89714caede6
+│   │   ├── 1d/
+│   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
+│   │   ├── 1f/
+│   │   │   └── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
+│   │   ├── 22/
+│   │   │   ├── 2ec4612406c8b23f86abbc36757aa7f6268e73
+│   │   │   └── c95b595184ffa73c7c4df4d82f7c04468dceea
+│   │   ├── 25/
+│   │   │   └── 99563729b87d3931c903a5c60cb15beaf8ec5f
+│   │   ├── 27/
+│   │   │   └── 0628795527266596193a26e4132b2ebb19df20
+│   │   ├── 28/
+│   │   │   └── b9a549dcd68879e202fbf79d5f2dc9221c8f07
+│   │   ├── 29/
+│   │   │   └── fffdd9025baac2625072eb16ad2d66fc6b7394
+│   │   ├── 2c/
+│   │   │   ├── 53d7a8b6f35a475f1bec276184bfeced4da222
+│   │   │   └── a9dbe87cb9ade523a9281bc1624734f7f34558
+│   │   ├── 32/
+│   │   │   └── 6246f9cbb175ab48ee3d3dd8b705e4a310d0ba
+│   │   ├── 33/
+│   │   │   ├── 0f41740bf4bb31cfc5c947fd7587b3cec819d7
+│   │   │   └── c0df5f31eacd27501545ebe50bfc4a7df7883e
+│   │   ├── 38/
+│   │   │   └── 294ce219005561b20021bef890cf55a48564bb
+│   │   ├── 3a/
+│   │   │   ├── 03d433a82a4c8276641502e508065071158866
+│   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
+│   │   ├── 43/
+│   │   │   ├── 0a88302eea286048f1c204defe654dd9a61632
+│   │   │   └── c4e3371805831cd1f16b5a394ea6d0ba3dbe52
+│   │   ├── 44/
+│   │   │   └── 6bfe36d102cb2b50b9a34c1621b384b7b9a7ec
+│   │   ├── 45/
+│   │   │   ├── 5448abda71ebb3372cea0db603f6419e293b80
+│   │   │   └── 6b4352594af44e22a279f69bbf4409c3d82114
+│   │   ├── 47/
+│   │   │   └── 42cf7e7d6af5c90f5300081d5c6db57cf33178
+│   │   ├── 48/
+│   │   │   ├── 8dae9033c210859a235614f6a8636ab1a98041
+│   │   │   └── a3d1a786146ed465055eda80b4224f36d2e301
+│   │   ├── 4b/
+│   │   │   └── d049e7806894891e9f7b1da06689873da5e2fe
+│   │   ├── 4d/
+│   │   │   └── 1b0a13d87b3d8a9d7ab2b4944500e4191d48d8
+│   │   ├── 4e/
+│   │   │   └── fdf016623ae0e529cfdf323a943e1238d37b80
+│   │   ├── 51/
+│   │   │   └── 526c7e2bd3614b8cbe0e331aa409e4c421f43b
+│   │   ├── 52/
+│   │   │   └── ba6c230a66a90191eb5003df2737b8b7c13ec9
+│   │   ├── 53/
+│   │   │   ├── 95eedcf90ed73ed3ca03155487382f30526b67
+│   │   │   ├── d6d2c641bb4f22d0f90458e6dd5c59933f790c
+│   │   │   └── eb3264b7f2319904b6a703140d06d1742ccb3a
+│   │   ├── 54/
+│   │   │   └── b2d4a02927246f57027adf7d44d46ef35dc66c
+│   │   ├── 58/
+│   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
+│   │   ├── 5a/
+│   │   │   └── 0c0d0dd4a42005830d88bb12e6b8617a37c44a
+│   │   ├── 5b/
+│   │   │   ├── 3322eb91b073421855d1999288bdff36c060a9
+│   │   │   └── e60eab89f12679223cb656b276d146792c6351
+│   │   ├── 5f/
+│   │   │   └── 102306306d4a3c0548710ef073f4b8f888915e
+│   │   ├── 61/
+│   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
+│   │   ├── 68/
+│   │   │   └── 85d30dff856aeed6ef1b3a53523c304a0cab93
+│   │   ├── 69/
+│   │   │   ├── 664b3fc9916cb80fe6d79e845fb806c2882137
+│   │   │   └── 988e10bdbfda8cab2a451e109f9a7cc8f9fd41
+│   │   ├── 70/
+│   │   │   └── 6b8401c9acf600ebf44d1c9e6792150d264868
+│   │   ├── 71/
+│   │   │   └── 69886ca6c7c84379540f38494541c5a1ff26a8
+│   │   ├── 73/
+│   │   │   └── 5669242c8f421b82de2e75d10965e151d3687e
+│   │   ├── 74/
+│   │   │   └── 2c315adff5af1dbbd870d0b221f8b7a43ed8da
+│   │   ├── 75/
+│   │   │   ├── 821913a5911adf83890a981e1d5e774d3e2d52
+│   │   │   ├── 856a18575e0462a7095b22198238f796fa683f
+│   │   │   └── b1339456c06cabac1b1c78a261279354886882
+│   │   ├── 7d/
+│   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
+│   │   ├── 7e/
+│   │   │   └── 6c032734f13825c8b2c7316f31141b5d99703b
+│   │   ├── 85/
+│   │   │   └── 9052402597b4c30710f9aafe41a68852119848
+│   │   ├── 86/
+│   │   │   └── c69e1105d1aba6af0e036c9c4b43d3882aec5e
+│   │   ├── 8a/
+│   │   │   └── bcf36652db4f61c7597d80107f89b24ae8622e
+│   │   ├── 8f/
+│   │   │   └── 4bf54820f8b7cb26c15ac02c79ac89cba30200
+│   │   ├── 95/
+│   │   │   ├── 71e25710e826a99a593bdfdb962fc8d703d5bf
+│   │   │   └── 88a49aa3bf29474607d90920873aa23e88d20a
+│   │   ├── 97/
+│   │   │   └── 37d2a4fcff13b42d065c1774b9bbb2f1945aca
+│   │   ├── 9b/
+│   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
+│   │   ├── a0/
+│   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
+│   │   ├── a2/
+│   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
+│   │   │   └── f77dfed98ed30efed8e094eadeb320dd1ff658
+│   │   ├── a4/
+│   │   │   └── 79c6b96d22483b9ec1802e4c2af5358f58d521
+│   │   ├── a8/
+│   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
+│   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
+│   │   ├── ab/
+│   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
+│   │   ├── b0/
+│   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
+│   │   ├── b2/
+│   │   │   ├── 3ab4e46e800968e006f5811348dc9122b46e1e
+│   │   │   └── 3bfe2e07b6eda24d56c184581193197156cd64
+│   │   ├── b3/
+│   │   │   └── 83183d721457d9fb56fc8209bf932e02306a19
+│   │   ├── b7/
+│   │   │   └── 7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0
+│   │   ├── b9/
+│   │   │   ├── 35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e
+│   │   │   └── 5822d30c60d75b9e5e1f42043381f04e684a92
+│   │   ├── bd/
+│   │   │   └── f3bed86e49863994b94a2e44d84dfb1b59e3e4
+│   │   ├── c0/
+│   │   │   ├── 129b336857115aec7d4d0525bfd291b628bae3
+│   │   │   └── c1487b19e6ef9c01f1d107d60088701418f99c
+│   │   ├── c3/
+│   │   │   └── 011fac6e47888d8e2209dcb60f02a915e0fbf0
+│   │   ├── c9/
+│   │   │   ├── 1c21a15126c3a2f3555bbc554622a432c4ae9a
+│   │   │   └── 9788ad09028a3c12de1ddcd6909037df596f99
+│   │   ├── cb/
+│   │   │   └── 50142dcea65a71997f0280cf195bb3a0c7d701
+│   │   ├── cc/
+│   │   │   └── ceb2801153ca950613660ab9236bd7a86bfd9a
+│   │   ├── d2/
+│   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
+│   │   ├── d3/
+│   │   │   └── 26d95ed3d9477f152368ee2a169976cbfbc673
+│   │   ├── d5/
+│   │   │   └── ccc1fe847536ae42929a02c51dfaa238b53e8a
+│   │   ├── d6/
+│   │   │   └── 2f65d3bd680969ed2311ef1ccd755ebafc6384
+│   │   ├── d7/
+│   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
+│   │   ├── da/
+│   │   │   └── c822ef92196eea7a19b7695b94a3f91e318610
+│   │   ├── db/
+│   │   │   └── 064b837db5e7443de95808d99204ce5184c9ca
+│   │   ├── e0/
+│   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
+│   │   ├── e3/
+│   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
+│   │   ├── e8/
+│   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
+│   │   ├── ed/
+│   │   │   └── f0d6d2af7ee3607fdbb5e0613566de248cc01d
+│   │   ├── f1/
+│   │   │   ├── 179033fa1b395422cce326d1a8f81d8217bd6a
+│   │   │   └── b02855b88b65f9c87453089c1ddcd7904ebb8f
+│   │   ├── f3/
+│   │   │   ├── 1de63487ffe7dd9e287f58ccacb93a644aa8f4
+│   │   │   └── 29756fe33519c2881156542cb77f0e1207bdbe
+│   │   ├── f5/
+│   │   │   └── 4592fd73da13e94c07942b06b38e537057e1e6
+│   │   ├── fe/
+│   │   │   ├── 07a70f4d1070ccd31cd21f10dc0ae6d357dbcb
+│   │   │   └── fb85b76c41cce4f3559ded4747e048b53756a5
+│   │   ├── info/
+│   │   └── pack/
+│   └── refs/
+│       ├── heads/
+│       │   └── main
+│       ├── remotes/
+│       │   └── origin/
+│       │       └── main
+│       └── tags/
+├── .gitignore
 ├── app/
 │   ├── __init__.py
 │   ├── auth.py
@@ -1194,6 +3877,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── assets/
 │   │   │   ├── MD-logo.png
 │   │   │   ├── auth_thmb.png
+│   │   │   ├── default_avatar.png
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── auth.css
@@ -1298,123 +3982,6 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── project_dump.txt
 ├── requirements.txt
 └── run.py
-
-
-=== Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
-import urllib
-
-class Config:
-    SECRET_KEY = "secret_key_demo"
-
-    DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = r"localhost\SQLEXPRESS"
-    DATABASE = "MangaLibrary"
-    connection_string = (
-        f"DRIVER={{{DRIVER}}};"
-        f"SERVER={SERVER};"
-        f"DATABASE={DATABASE};"
-        f"Trusted_Connection=yes;"
-    )
-
-    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\dump.py ---
-import os
-import json
-
-OUTPUT_FILE = "project_dump.txt"
-
-def should_ignore_dir(dirname: str) -> bool:
-    """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__"))
-
-def build_tree_dict(root_dir: str) -> dict:
-    """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
-    tree = {"name": os.path.basename(root_dir), "type": "directory", "children": []}
-
-    if should_ignore_dir(os.path.basename(root_dir)):
-        return tree
-
-    try:
-        with os.scandir(root_dir) as it:
-            for entry in sorted(it, key=lambda e: e.name):
-                if entry.is_dir():
-                    if should_ignore_dir(entry.name):
-                        continue
-                    tree["children"].append(build_tree_dict(entry.path))
-                elif entry.is_file():
-                    tree["children"].append({"name": entry.name, "type": "file"})
-    except PermissionError:
-        pass
-    return tree
-
-def build_tree_ascii(root_dir: str, prefix: str = "") -> str:
-    """Tạo cây thư mục dạng text giống `tree` (chỉ bỏ qua venv)."""
-    entries = []
-    try:
-        with os.scandir(root_dir) as it:
-            for entry in sorted(it, key=lambda e: e.name):
-                if entry.is_dir():
-                    if should_ignore_dir(entry.name):
-                        continue
-                    entries.append(entry)
-                elif entry.is_file():
-                    entries.append(entry)
-    except PermissionError:
-        return ""
-
-    lines = []
-    for i, entry in enumerate(entries):
-        connector = "└── " if i == len(entries) - 1 else "├── "
-        if entry.is_dir():
-            lines.append(prefix + connector + entry.name + "/")
-            extension = "    " if i == len(entries) - 1 else "│   "
-            lines.extend(build_tree_ascii(entry.path, prefix + extension).splitlines())
-        else:
-            lines.append(prefix + connector + entry.name)
-    return "\n".join(lines)
-
-def dump_project(root_dir: str, output_file: str):
-    with open(output_file, "w", encoding="utf-8") as out:
-        # Xuất cây thư mục dạng JSON
-        tree_dict = build_tree_dict(root_dir)
-        out.write("=== Project Tree (JSON) ===\n")
-        out.write(json.dumps(tree_dict, indent=2, ensure_ascii=False))
-        out.write("\n\n")
-
-        # Xuất cây thư mục dạng ASCII
-        out.write("=== Project Tree (ASCII) ===\n")
-        out.write(root_dir + "/\n")
-        out.write(build_tree_ascii(root_dir))
-        out.write("\n\n")
-
-        # Xuất nội dung tất cả file
-        for dirpath, dirnames, filenames in os.walk(root_dir):
-            # Lọc thư mục
-            dirnames[:] = [d for d in dirnames if not should_ignore_dir(d)]
-
-            rel_path = os.path.relpath(dirpath, root_dir)
-            if rel_path == ".":
-                rel_path = ""
-            out.write(f"\n=== Folder: {rel_path or root_dir} ===\n")
-
-            for filename in filenames:
-                file_path = os.path.join(dirpath, filename)
-                out.write(f"\n--- File: {file_path} ---\n")
-                try:
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        out.write(f.read())
-                except Exception as e:
-                    out.write(f"[Lỗi đọc file: {e}]\n")
-
-if __name__ == "__main__":
-    current_dir = os.getcwd()
-    dump_project(current_dir, OUTPUT_FILE)
-    print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
-
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\requirements.txt ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
 
@@ -1425,6 +3992,1461 @@ app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+=== Folder: .git ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
+Initial commit - Flask MangaDex Clone coursework
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\description ---
+Unnamed repository; edit this file 'description' to name the repository.
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\HEAD ---
+ref: refs/heads/main
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\index ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 13: invalid continuation byte]
+
+=== Folder: .git\hooks ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\applypatch-msg.sample ---
+#!/bin/sh
+#
+# An example hook script to check the commit log message taken by
+# applypatch from an e-mail message.
+#
+# The hook should exit with non-zero status after issuing an
+# appropriate message if it wants to stop the commit.  The hook is
+# allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "applypatch-msg".
+
+. git-sh-setup
+commitmsg="$(git rev-parse --git-path hooks/commit-msg)"
+test -x "$commitmsg" && exec "$commitmsg" ${1+"$@"}
+:
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\commit-msg.sample ---
+#!/bin/sh
+#
+# An example hook script to check the commit log message.
+# Called by "git commit" with one argument, the name of the file
+# that has the commit message.  The hook should exit with non-zero
+# status after issuing an appropriate message if it wants to stop the
+# commit.  The hook is allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "commit-msg".
+
+# Uncomment the below to add a Signed-off-by line to the message.
+# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+# hook is more suited to it.
+#
+# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+
+# This example catches duplicate Signed-off-by lines.
+
+test "" = "$(grep '^Signed-off-by: ' "$1" |
+	 sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
+	echo >&2 Duplicate Signed-off-by lines.
+	exit 1
+}
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\fsmonitor-watchman.sample ---
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use IPC::Open2;
+
+# An example hook script to integrate Watchman
+# (https://facebook.github.io/watchman/) with git to speed up detecting
+# new and modified files.
+#
+# The hook is passed a version (currently 2) and last update token
+# formatted as a string and outputs to stdout a new update token and
+# all files that have been modified since the update token. Paths must
+# be relative to the root of the working tree and separated by a single NUL.
+#
+# To enable this hook, rename this file to "query-watchman" and set
+# 'git config core.fsmonitor .git/hooks/query-watchman'
+#
+my ($version, $last_update_token) = @ARGV;
+
+# Uncomment for debugging
+# print STDERR "$0 $version $last_update_token\n";
+
+# Check the hook interface version
+if ($version ne 2) {
+	die "Unsupported query-fsmonitor hook version '$version'.\n" .
+	    "Falling back to scanning...\n";
+}
+
+my $git_work_tree = get_working_dir();
+
+my $retry = 1;
+
+my $json_pkg;
+eval {
+	require JSON::XS;
+	$json_pkg = "JSON::XS";
+	1;
+} or do {
+	require JSON::PP;
+	$json_pkg = "JSON::PP";
+};
+
+launch_watchman();
+
+sub launch_watchman {
+	my $o = watchman_query();
+	if (is_work_tree_watched($o)) {
+		output_result($o->{clock}, @{$o->{files}});
+	}
+}
+
+sub output_result {
+	my ($clockid, @files) = @_;
+
+	# Uncomment for debugging watchman output
+	# open (my $fh, ">", ".git/watchman-output.out");
+	# binmode $fh, ":utf8";
+	# print $fh "$clockid\n@files\n";
+	# close $fh;
+
+	binmode STDOUT, ":utf8";
+	print $clockid;
+	print "\0";
+	local $, = "\0";
+	print @files;
+}
+
+sub watchman_clock {
+	my $response = qx/watchman clock "$git_work_tree"/;
+	die "Failed to get clock id on '$git_work_tree'.\n" .
+		"Falling back to scanning...\n" if $? != 0;
+
+	return $json_pkg->new->utf8->decode($response);
+}
+
+sub watchman_query {
+	my $pid = open2(\*CHLD_OUT, \*CHLD_IN, 'watchman -j --no-pretty')
+	or die "open2() failed: $!\n" .
+	"Falling back to scanning...\n";
+
+	# In the query expression below we're asking for names of files that
+	# changed since $last_update_token but not from the .git folder.
+	#
+	# To accomplish this, we're using the "since" generator to use the
+	# recency index to select candidate nodes and "fields" to limit the
+	# output to file names only. Then we're using the "expression" term to
+	# further constrain the results.
+	my $last_update_line = "";
+	if (substr($last_update_token, 0, 1) eq "c") {
+		$last_update_token = "\"$last_update_token\"";
+		$last_update_line = qq[\n"since": $last_update_token,];
+	}
+	my $query = <<"	END";
+		["query", "$git_work_tree", {$last_update_line
+			"fields": ["name"],
+			"expression": ["not", ["dirname", ".git"]]
+		}]
+	END
+
+	# Uncomment for debugging the watchman query
+	# open (my $fh, ">", ".git/watchman-query.json");
+	# print $fh $query;
+	# close $fh;
+
+	print CHLD_IN $query;
+	close CHLD_IN;
+	my $response = do {local $/; <CHLD_OUT>};
+
+	# Uncomment for debugging the watch response
+	# open ($fh, ">", ".git/watchman-response.json");
+	# print $fh $response;
+	# close $fh;
+
+	die "Watchman: command returned no output.\n" .
+	"Falling back to scanning...\n" if $response eq "";
+	die "Watchman: command returned invalid output: $response\n" .
+	"Falling back to scanning...\n" unless $response =~ /^\{/;
+
+	return $json_pkg->new->utf8->decode($response);
+}
+
+sub is_work_tree_watched {
+	my ($output) = @_;
+	my $error = $output->{error};
+	if ($retry > 0 and $error and $error =~ m/unable to resolve root .* directory (.*) is not watched/) {
+		$retry--;
+		my $response = qx/watchman watch "$git_work_tree"/;
+		die "Failed to make watchman watch '$git_work_tree'.\n" .
+		    "Falling back to scanning...\n" if $? != 0;
+		$output = $json_pkg->new->utf8->decode($response);
+		$error = $output->{error};
+		die "Watchman: $error.\n" .
+		"Falling back to scanning...\n" if $error;
+
+		# Uncomment for debugging watchman output
+		# open (my $fh, ">", ".git/watchman-output.out");
+		# close $fh;
+
+		# Watchman will always return all files on the first query so
+		# return the fast "everything is dirty" flag to git and do the
+		# Watchman query just to get it over with now so we won't pay
+		# the cost in git to look up each individual file.
+		my $o = watchman_clock();
+		$error = $output->{error};
+
+		die "Watchman: $error.\n" .
+		"Falling back to scanning...\n" if $error;
+
+		output_result($o->{clock}, ("/"));
+		$last_update_token = $o->{clock};
+
+		eval { launch_watchman() };
+		return 0;
+	}
+
+	die "Watchman: $error.\n" .
+	"Falling back to scanning...\n" if $error;
+
+	return 1;
+}
+
+sub get_working_dir {
+	my $working_dir;
+	if ($^O =~ 'msys' || $^O =~ 'cygwin') {
+		$working_dir = Win32::GetCwd();
+		$working_dir =~ tr/\\/\//;
+	} else {
+		require Cwd;
+		$working_dir = Cwd::cwd();
+	}
+
+	return $working_dir;
+}
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\post-update.sample ---
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+exec git update-server-info
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-applypatch.sample ---
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed
+# by applypatch from an e-mail message.
+#
+# The hook should exit with non-zero status after issuing an
+# appropriate message if it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-applypatch".
+
+. git-sh-setup
+precommit="$(git rev-parse --git-path hooks/pre-commit)"
+test -x "$precommit" && exec "$precommit" ${1+"$@"}
+:
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-commit.sample ---
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=$(git hash-object -t tree /dev/null)
+fi
+
+# If you want to allow non-ASCII filenames set this variable to true.
+allownonascii=$(git config --type=bool hooks.allownonascii)
+
+# Redirect output to stderr.
+exec 1>&2
+
+# Cross platform projects tend to avoid non-ASCII filenames; prevent
+# them from being added to the repository. We exploit the fact that the
+# printable range starts at the space character and ends with tilde.
+if [ "$allownonascii" != "true" ] &&
+	# Note that the use of brackets around a tr range is ok here, (it's
+	# even required, for portability to Solaris 10's /usr/bin/tr), since
+	# the square bracket bytes happen to fall in the designated range.
+	test $(git diff-index --cached --name-only --diff-filter=A -z $against |
+	  LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
+then
+	cat <<\EOF
+Error: Attempt to add a non-ASCII file name.
+
+This can cause problems if you want to work with people on other platforms.
+
+To be portable it is advisable to rename the file.
+
+If you know what you are doing you can disable this check using:
+
+  git config hooks.allownonascii true
+EOF
+	exit 1
+fi
+
+# If there are whitespace errors, print the offending file names and fail.
+exec git diff-index --check --cached $against --
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-merge-commit.sample ---
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git merge" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message to
+# stderr if it wants to stop the merge commit.
+#
+# To enable this hook, rename this file to "pre-merge-commit".
+
+. git-sh-setup
+test -x "$GIT_DIR/hooks/pre-commit" &&
+        exec "$GIT_DIR/hooks/pre-commit"
+:
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-push.sample ---
+#!/bin/sh
+
+# An example hook script to verify what is about to be pushed.  Called by "git
+# push" after it has checked the remote status, but before anything has been
+# pushed.  If this script exits with a non-zero status nothing will be pushed.
+#
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+#
+# Information about the commits which are being pushed is supplied as lines to
+# the standard input in the form:
+#
+#   <local ref> <local oid> <remote ref> <remote oid>
+#
+# This sample shows how to prevent push of commits where the log message starts
+# with "WIP" (work in progress).
+
+remote="$1"
+url="$2"
+
+zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
+
+while read local_ref local_oid remote_ref remote_oid
+do
+	if test "$local_oid" = "$zero"
+	then
+		# Handle delete
+		:
+	else
+		if test "$remote_oid" = "$zero"
+		then
+			# New branch, examine all commits
+			range="$local_oid"
+		else
+			# Update to existing branch, examine new commits
+			range="$remote_oid..$local_oid"
+		fi
+
+		# Check for WIP commit
+		commit=$(git rev-list -n 1 --grep '^WIP' "$range")
+		if test -n "$commit"
+		then
+			echo >&2 "Found WIP commit in $local_ref, not pushing"
+			exit 1
+		fi
+	fi
+done
+
+exit 0
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-rebase.sample ---
+#!/bin/sh
+#
+# Copyright (c) 2006, 2008 Junio C Hamano
+#
+# The "pre-rebase" hook is run just before "git rebase" starts doing
+# its job, and can prevent the command from running by exiting with
+# non-zero status.
+#
+# The hook is called with the following parameters:
+#
+# $1 -- the upstream the series was forked from.
+# $2 -- the branch being rebased (or empty when rebasing the current branch).
+#
+# This sample shows how to prevent topic branches that are already
+# merged to 'next' branch from getting rebased, because allowing it
+# would result in rebasing already published history.
+
+publish=next
+basebranch="$1"
+if test "$#" = 2
+then
+	topic="refs/heads/$2"
+else
+	topic=`git symbolic-ref HEAD` ||
+	exit 0 ;# we do not interrupt rebasing detached HEAD
+fi
+
+case "$topic" in
+refs/heads/??/*)
+	;;
+*)
+	exit 0 ;# we do not interrupt others.
+	;;
+esac
+
+# Now we are dealing with a topic branch being rebased
+# on top of master.  Is it OK to rebase it?
+
+# Does the topic really exist?
+git show-ref -q "$topic" || {
+	echo >&2 "No such branch $topic"
+	exit 1
+}
+
+# Is topic fully merged to master?
+not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
+if test -z "$not_in_master"
+then
+	echo >&2 "$topic is fully merged to master; better remove it."
+	exit 1 ;# we could allow it, but there is no point.
+fi
+
+# Is topic ever merged to next?  If so you should not be rebasing it.
+only_next_1=`git rev-list ^master "^$topic" ${publish} | sort`
+only_next_2=`git rev-list ^master           ${publish} | sort`
+if test "$only_next_1" = "$only_next_2"
+then
+	not_in_topic=`git rev-list "^$topic" master`
+	if test -z "$not_in_topic"
+	then
+		echo >&2 "$topic is already up to date with master"
+		exit 1 ;# we could allow it, but there is no point.
+	else
+		exit 0
+	fi
+else
+	not_in_next=`git rev-list --pretty=oneline ^${publish} "$topic"`
+	/usr/bin/perl -e '
+		my $topic = $ARGV[0];
+		my $msg = "* $topic has commits already merged to public branch:\n";
+		my (%not_in_next) = map {
+			/^([0-9a-f]+) /;
+			($1 => 1);
+		} split(/\n/, $ARGV[1]);
+		for my $elem (map {
+				/^([0-9a-f]+) (.*)$/;
+				[$1 => $2];
+			} split(/\n/, $ARGV[2])) {
+			if (!exists $not_in_next{$elem->[0]}) {
+				if ($msg) {
+					print STDERR $msg;
+					undef $msg;
+				}
+				print STDERR " $elem->[1]\n";
+			}
+		}
+	' "$topic" "$not_in_next" "$not_in_master"
+	exit 1
+fi
+
+<<\DOC_END
+
+This sample hook safeguards topic branches that have been
+published from being rewound.
+
+The workflow assumed here is:
+
+ * Once a topic branch forks from "master", "master" is never
+   merged into it again (either directly or indirectly).
+
+ * Once a topic branch is fully cooked and merged into "master",
+   it is deleted.  If you need to build on top of it to correct
+   earlier mistakes, a new topic branch is created by forking at
+   the tip of the "master".  This is not strictly necessary, but
+   it makes it easier to keep your history simple.
+
+ * Whenever you need to test or publish your changes to topic
+   branches, merge them into "next" branch.
+
+The script, being an example, hardcodes the publish branch name
+to be "next", but it is trivial to make it configurable via
+$GIT_DIR/config mechanism.
+
+With this workflow, you would want to know:
+
+(1) ... if a topic branch has ever been merged to "next".  Young
+    topic branches can have stupid mistakes you would rather
+    clean up before publishing, and things that have not been
+    merged into other branches can be easily rebased without
+    affecting other people.  But once it is published, you would
+    not want to rewind it.
+
+(2) ... if a topic branch has been fully merged to "master".
+    Then you can delete it.  More importantly, you should not
+    build on top of it -- other people may already want to
+    change things related to the topic as patches against your
+    "master", so if you need further changes, it is better to
+    fork the topic (perhaps with the same name) afresh from the
+    tip of "master".
+
+Let's look at this example:
+
+		   o---o---o---o---o---o---o---o---o---o "next"
+		  /       /           /           /
+		 /   a---a---b A     /           /
+		/   /               /           /
+	       /   /   c---c---c---c B         /
+	      /   /   /             \         /
+	     /   /   /   b---b C     \       /
+	    /   /   /   /             \     /
+    ---o---o---o---o---o---o---o---o---o---o---o "master"
+
+
+A, B and C are topic branches.
+
+ * A has one fix since it was merged up to "next".
+
+ * B has finished.  It has been fully merged up to "master" and "next",
+   and is ready to be deleted.
+
+ * C has not merged to "next" at all.
+
+We would want to allow C to be rebased, refuse A, and encourage
+B to be deleted.
+
+To compute (1):
+
+	git rev-list ^master ^topic next
+	git rev-list ^master        next
+
+	if these match, topic has not merged in next at all.
+
+To compute (2):
+
+	git rev-list master..topic
+
+	if this is empty, it is fully merged to "master".
+
+DOC_END
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-receive.sample ---
+#!/bin/sh
+#
+# An example hook script to make use of push options.
+# The example simply echoes all push options that start with 'echoback='
+# and rejects all pushes when the "reject" push option is used.
+#
+# To enable this hook, rename this file to "pre-receive".
+
+if test -n "$GIT_PUSH_OPTION_COUNT"
+then
+	i=0
+	while test "$i" -lt "$GIT_PUSH_OPTION_COUNT"
+	do
+		eval "value=\$GIT_PUSH_OPTION_$i"
+		case "$value" in
+		echoback=*)
+			echo "echo from the pre-receive-hook: ${value#*=}" >&2
+			;;
+		reject)
+			exit 1
+		esac
+		i=$((i + 1))
+	done
+fi
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\prepare-commit-msg.sample ---
+#!/bin/sh
+#
+# An example hook script to prepare the commit log message.
+# Called by "git commit" with the name of the file that has the
+# commit message, followed by the description of the commit
+# message's source.  The hook's purpose is to edit the commit
+# message file.  If the hook fails with a non-zero status,
+# the commit is aborted.
+#
+# To enable this hook, rename this file to "prepare-commit-msg".
+
+# This hook includes three examples. The first one removes the
+# "# Please enter the commit message..." help message.
+#
+# The second includes the output of "git diff --name-status -r"
+# into the message, just before the "git status" output.  It is
+# commented because it doesn't cope with --amend or with squashed
+# commits.
+#
+# The third example adds a Signed-off-by line to the message, that can
+# still be edited.  This is rarely a good idea.
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+
+# case "$COMMIT_SOURCE,$SHA1" in
+#  ,|template,)
+#    /usr/bin/perl -i.bak -pe '
+#       print "\n" . `git diff --cached --name-status -r`
+# 	 if /^#/ && $first++ == 0' "$COMMIT_MSG_FILE" ;;
+#  *) ;;
+# esac
+
+# SOB=$(git var GIT_COMMITTER_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
+# if test -z "$COMMIT_SOURCE"
+# then
+#   /usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+# fi
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\push-to-checkout.sample ---
+#!/bin/sh
+
+# An example hook script to update a checked-out tree on a git push.
+#
+# This hook is invoked by git-receive-pack(1) when it reacts to git
+# push and updates reference(s) in its repository, and when the push
+# tries to update the branch that is currently checked out and the
+# receive.denyCurrentBranch configuration variable is set to
+# updateInstead.
+#
+# By default, such a push is refused if the working tree and the index
+# of the remote repository has any difference from the currently
+# checked out commit; when both the working tree and the index match
+# the current commit, they are updated to match the newly pushed tip
+# of the branch. This hook is to be used to override the default
+# behaviour; however the code below reimplements the default behaviour
+# as a starting point for convenient modification.
+#
+# The hook receives the commit with which the tip of the current
+# branch is going to be updated:
+commit=$1
+
+# It can exit with a non-zero status to refuse the push (when it does
+# so, it must not modify the index or the working tree).
+die () {
+	echo >&2 "$*"
+	exit 1
+}
+
+# Or it can make any necessary changes to the working tree and to the
+# index to bring them to the desired state when the tip of the current
+# branch is updated to the new commit, and exit with a zero status.
+#
+# For example, the hook can simply run git read-tree -u -m HEAD "$1"
+# in order to emulate git fetch that is run in the reverse direction
+# with git push, as the two-tree form of git read-tree -u -m is
+# essentially the same as git switch or git checkout that switches
+# branches while keeping the local changes in the working tree that do
+# not interfere with the difference between the branches.
+
+# The below is a more-or-less exact translation to shell of the C code
+# for the default behaviour for git's push-to-checkout hook defined in
+# the push_to_deploy() function in builtin/receive-pack.c.
+#
+# Note that the hook will be executed from the repository directory,
+# not from the working tree, so if you want to perform operations on
+# the working tree, you will have to adapt your code accordingly, e.g.
+# by adding "cd .." or using relative paths.
+
+if ! git update-index -q --ignore-submodules --refresh
+then
+	die "Up-to-date check failed"
+fi
+
+if ! git diff-files --quiet --ignore-submodules --
+then
+	die "Working directory has unstaged changes"
+fi
+
+# This is a rough translation of:
+#
+#   head_has_history() ? "HEAD" : EMPTY_TREE_SHA1_HEX
+if git cat-file -e HEAD 2>/dev/null
+then
+	head=HEAD
+else
+	head=$(git hash-object -t tree --stdin </dev/null)
+fi
+
+if ! git diff-index --quiet --cached --ignore-submodules $head --
+then
+	die "Working directory has staged changes"
+fi
+
+if ! git read-tree -u -m "$commit"
+then
+	die "Could not update working tree to new HEAD"
+fi
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\sendemail-validate.sample ---
+#!/bin/sh
+
+# An example hook script to validate a patch (and/or patch series) before
+# sending it via email.
+#
+# The hook should exit with non-zero status after issuing an appropriate
+# message if it wants to prevent the email(s) from being sent.
+#
+# To enable this hook, rename this file to "sendemail-validate".
+#
+# By default, it will only check that the patch(es) can be applied on top of
+# the default upstream branch without conflicts in a secondary worktree. After
+# validation (successful or not) of the last patch of a series, the worktree
+# will be deleted.
+#
+# The following config variables can be set to change the default remote and
+# remote ref that are used to apply the patches against:
+#
+#   sendemail.validateRemote (default: origin)
+#   sendemail.validateRemoteRef (default: HEAD)
+#
+# Replace the TODO placeholders with appropriate checks according to your
+# needs.
+
+validate_cover_letter () {
+	file="$1"
+	# TODO: Replace with appropriate checks (e.g. spell checking).
+	true
+}
+
+validate_patch () {
+	file="$1"
+	# Ensure that the patch applies without conflicts.
+	git am -3 "$file" || return
+	# TODO: Replace with appropriate checks for this patch
+	# (e.g. checkpatch.pl).
+	true
+}
+
+validate_series () {
+	# TODO: Replace with appropriate checks for the whole series
+	# (e.g. quick build, coding style checks, etc.).
+	true
+}
+
+# main -------------------------------------------------------------------------
+
+if test "$GIT_SENDEMAIL_FILE_COUNTER" = 1
+then
+	remote=$(git config --default origin --get sendemail.validateRemote) &&
+	ref=$(git config --default HEAD --get sendemail.validateRemoteRef) &&
+	worktree=$(mktemp --tmpdir -d sendemail-validate.XXXXXXX) &&
+	git worktree add -fd --checkout "$worktree" "refs/remotes/$remote/$ref" &&
+	git config --replace-all sendemail.validateWorktree "$worktree"
+else
+	worktree=$(git config --get sendemail.validateWorktree)
+fi || {
+	echo "sendemail-validate: error: failed to prepare worktree" >&2
+	exit 1
+}
+
+unset GIT_DIR GIT_WORK_TREE
+cd "$worktree" &&
+
+if grep -q "^diff --git " "$1"
+then
+	validate_patch "$1"
+else
+	validate_cover_letter "$1"
+fi &&
+
+if test "$GIT_SENDEMAIL_FILE_COUNTER" = "$GIT_SENDEMAIL_FILE_TOTAL"
+then
+	git config --unset-all sendemail.validateWorktree &&
+	trap 'git worktree remove -ff "$worktree"' EXIT &&
+	validate_series
+fi
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\update.sample ---
+#!/bin/sh
+#
+# An example hook script to block unannotated tags from entering.
+# Called by "git receive-pack" with arguments: refname sha1-old sha1-new
+#
+# To enable this hook, rename this file to "update".
+#
+# Config
+# ------
+# hooks.allowunannotated
+#   This boolean sets whether unannotated tags will be allowed into the
+#   repository.  By default they won't be.
+# hooks.allowdeletetag
+#   This boolean sets whether deleting tags will be allowed in the
+#   repository.  By default they won't be.
+# hooks.allowmodifytag
+#   This boolean sets whether a tag may be modified after creation. By default
+#   it won't be.
+# hooks.allowdeletebranch
+#   This boolean sets whether deleting branches will be allowed in the
+#   repository.  By default they won't be.
+# hooks.denycreatebranch
+#   This boolean sets whether remotely creating branches will be denied
+#   in the repository.  By default this is allowed.
+#
+
+# --- Command line
+refname="$1"
+oldrev="$2"
+newrev="$3"
+
+# --- Safety check
+if [ -z "$GIT_DIR" ]; then
+	echo "Don't run this script from the command line." >&2
+	echo " (if you want, you could supply GIT_DIR then run" >&2
+	echo "  $0 <ref> <oldrev> <newrev>)" >&2
+	exit 1
+fi
+
+if [ -z "$refname" -o -z "$oldrev" -o -z "$newrev" ]; then
+	echo "usage: $0 <ref> <oldrev> <newrev>" >&2
+	exit 1
+fi
+
+# --- Config
+allowunannotated=$(git config --type=bool hooks.allowunannotated)
+allowdeletebranch=$(git config --type=bool hooks.allowdeletebranch)
+denycreatebranch=$(git config --type=bool hooks.denycreatebranch)
+allowdeletetag=$(git config --type=bool hooks.allowdeletetag)
+allowmodifytag=$(git config --type=bool hooks.allowmodifytag)
+
+# check for no description
+projectdesc=$(sed -e '1q' "$GIT_DIR/description")
+case "$projectdesc" in
+"Unnamed repository"* | "")
+	echo "*** Project description file hasn't been set" >&2
+	exit 1
+	;;
+esac
+
+# --- Check types
+# if $newrev is 0000...0000, it's a commit to delete a ref.
+zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
+if [ "$newrev" = "$zero" ]; then
+	newrev_type=delete
+else
+	newrev_type=$(git cat-file -t $newrev)
+fi
+
+case "$refname","$newrev_type" in
+	refs/tags/*,commit)
+		# un-annotated tag
+		short_refname=${refname##refs/tags/}
+		if [ "$allowunannotated" != "true" ]; then
+			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+			echo "*** Use 'git tag [ -a | -s ]' for tags you want to propagate." >&2
+			exit 1
+		fi
+		;;
+	refs/tags/*,delete)
+		# delete tag
+		if [ "$allowdeletetag" != "true" ]; then
+			echo "*** Deleting a tag is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/tags/*,tag)
+		# annotated tag
+		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+		then
+			echo "*** Tag '$refname' already exists." >&2
+			echo "*** Modifying a tag is not allowed in this repository." >&2
+			exit 1
+		fi
+		;;
+	refs/heads/*,commit)
+		# branch
+		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
+			echo "*** Creating a branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/heads/*,delete)
+		# delete branch
+		if [ "$allowdeletebranch" != "true" ]; then
+			echo "*** Deleting a branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/remotes/*,commit)
+		# tracking branch
+		;;
+	refs/remotes/*,delete)
+		# delete tracking branch
+		if [ "$allowdeletebranch" != "true" ]; then
+			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	*)
+		# Anything else (is there anything else?)
+		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
+		exit 1
+		;;
+esac
+
+# --- Finished
+exit 0
+
+=== Folder: .git\info ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\info\exclude ---
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+
+=== Folder: .git\logs ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\HEAD ---
+0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471165 +0700	commit (initial): Initial commit - Flask MangaDex Clone coursework
+c0c1487b19e6ef9c01f1d107d60088701418f99c 0000000000000000000000000000000000000000 Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
+
+=== Folder: .git\logs\refs ===
+
+=== Folder: .git\logs\refs\heads ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\refs\heads\main ---
+0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471165 +0700	commit (initial): Initial commit - Flask MangaDex Clone coursework
+c0c1487b19e6ef9c01f1d107d60088701418f99c c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
+
+=== Folder: .git\logs\refs\remotes ===
+
+=== Folder: .git\logs\refs\remotes\origin ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\refs\remotes\origin\main ---
+0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471204 +0700	update by push
+
+=== Folder: .git\objects ===
+
+=== Folder: .git\objects\00 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\00\6efb158bca8b24217e27787427f06b78fac469 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+=== Folder: .git\objects\03 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\03\32227e9f1218271277306120ddb4a6a1c60868 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\0a ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\794551ad32ed40a938191708a3901b4e454212 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
+
+=== Folder: .git\objects\0e ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0e\dba748ea81df245afc761b268ada9c5df213e1 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc8 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\16 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\16\c2bffa4ab0b2eb562fd94d8adfb89714caede6 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\1d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1d\cf6ed0436658117f8838d5cefde25fb1347924 ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
+
+=== Folder: .git\objects\1f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1f\9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte]
+
+=== Folder: .git\objects\22 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\22\2ec4612406c8b23f86abbc36757aa7f6268e73 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe5 in position 2: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\22\c95b595184ffa73c7c4df4d82f7c04468dceea ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\25 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\25\99563729b87d3931c903a5c60cb15beaf8ec5f ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x82 in position 3: invalid start byte]
+
+=== Folder: .git\objects\27 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\27\0628795527266596193a26e4132b2ebb19df20 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+=== Folder: .git\objects\28 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\28\b9a549dcd68879e202fbf79d5f2dc9221c8f07 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf0 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\29 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\29\fffdd9025baac2625072eb16ad2d66fc6b7394 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\2c ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2c\53d7a8b6f35a475f1bec276184bfeced4da222 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb7 in position 8: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2c\a9dbe87cb9ade523a9281bc1624734f7f34558 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+=== Folder: .git\objects\32 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\32\6246f9cbb175ab48ee3d3dd8b705e4a310d0ba ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 3: invalid start byte]
+
+=== Folder: .git\objects\33 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\33\0f41740bf4bb31cfc5c947fd7587b3cec819d7 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\33\c0df5f31eacd27501545ebe50bfc4a7df7883e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb3 in position 3: invalid start byte]
+
+=== Folder: .git\objects\38 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\38\294ce219005561b20021bef890cf55a48564bb ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd1 in position 4: invalid continuation byte]
+
+=== Folder: .git\objects\3a ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3a\03d433a82a4c8276641502e508065071158866 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xae in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3a\f9cb6dab0f685a4781b6baeadd4923ea726a8a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte]
+
+=== Folder: .git\objects\43 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\43\0a88302eea286048f1c204defe654dd9a61632 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8c in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\43\c4e3371805831cd1f16b5a394ea6d0ba3dbe52 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x83 in position 6: invalid start byte]
+
+=== Folder: .git\objects\44 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\44\6bfe36d102cb2b50b9a34c1621b384b7b9a7ec ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xcf in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\45 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\45\5448abda71ebb3372cea0db603f6419e293b80 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xef in position 5: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\45\6b4352594af44e22a279f69bbf4409c3d82114 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\47 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\47\42cf7e7d6af5c90f5300081d5c6db57cf33178 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe7 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\48 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\48\8dae9033c210859a235614f6a8636ab1a98041 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xcb in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\48\a3d1a786146ed465055eda80b4224f36d2e301 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte]
+
+=== Folder: .git\objects\4b ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4b\d049e7806894891e9f7b1da06689873da5e2fe ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+=== Folder: .git\objects\4d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4d\1b0a13d87b3d8a9d7ab2b4944500e4191d48d8 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf8 in position 3: invalid start byte]
+
+=== Folder: .git\objects\4e ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4e\fdf016623ae0e529cfdf323a943e1238d37b80 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe4 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\51 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\51\526c7e2bd3614b8cbe0e331aa409e4c421f43b ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
+
+=== Folder: .git\objects\52 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\52\ba6c230a66a90191eb5003df2737b8b7c13ec9 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9a in position 3: invalid start byte]
+
+=== Folder: .git\objects\53 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\53\95eedcf90ed73ed3ca03155487382f30526b67 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\53\d6d2c641bb4f22d0f90458e6dd5c59933f790c ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xef in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\53\eb3264b7f2319904b6a703140d06d1742ccb3a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
+
+=== Folder: .git\objects\54 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\54\b2d4a02927246f57027adf7d44d46ef35dc66c ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
+
+=== Folder: .git\objects\58 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\d67074738d155e750e980f195791cf4c85d9e4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf6 in position 3: invalid start byte]
+
+=== Folder: .git\objects\5a ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5a\0c0d0dd4a42005830d88bb12e6b8617a37c44a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe8 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\5b ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5b\3322eb91b073421855d1999288bdff36c060a9 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xfc in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5b\e60eab89f12679223cb656b276d146792c6351 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\5f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5f\102306306d4a3c0548710ef073f4b8f888915e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb8 in position 3: invalid start byte]
+
+=== Folder: .git\objects\61 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\61\754b97c8aaf2bd4fc8e425ef292f71f1592315 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\68 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\68\85d30dff856aeed6ef1b3a53523c304a0cab93 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+=== Folder: .git\objects\69 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\69\664b3fc9916cb80fe6d79e845fb806c2882137 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\69\988e10bdbfda8cab2a451e109f9a7cc8f9fd41 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
+
+=== Folder: .git\objects\70 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\70\6b8401c9acf600ebf44d1c9e6792150d264868 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 24: invalid continuation byte]
+
+=== Folder: .git\objects\71 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\71\69886ca6c7c84379540f38494541c5a1ff26a8 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf3 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\73 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\73\5669242c8f421b82de2e75d10965e151d3687e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\74 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\74\2c315adff5af1dbbd870d0b221f8b7a43ed8da ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xbf in position 3: invalid start byte]
+
+=== Folder: .git\objects\75 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\75\821913a5911adf83890a981e1d5e774d3e2d52 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa8 in position 5: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\75\856a18575e0462a7095b22198238f796fa683f ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\75\b1339456c06cabac1b1c78a261279354886882 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\7d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7d\a39be23fe19ba2eeae6cccb1b6b362f5db3bfb ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+=== Folder: .git\objects\7e ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7e\6c032734f13825c8b2c7316f31141b5d99703b ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xab in position 3: invalid start byte]
+
+=== Folder: .git\objects\85 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\85\9052402597b4c30710f9aafe41a68852119848 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte]
+
+=== Folder: .git\objects\86 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\86\c69e1105d1aba6af0e036c9c4b43d3882aec5e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd4 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\8a ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\8a\bcf36652db4f61c7597d80107f89b24ae8622e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+=== Folder: .git\objects\8f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\8f\4bf54820f8b7cb26c15ac02c79ac89cba30200 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa8 in position 5: invalid start byte]
+
+=== Folder: .git\objects\95 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\95\71e25710e826a99a593bdfdb962fc8d703d5bf ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x99 in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\95\88a49aa3bf29474607d90920873aa23e88d20a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 6: invalid continuation byte]
+
+=== Folder: .git\objects\97 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\97\37d2a4fcff13b42d065c1774b9bbb2f1945aca ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 3: invalid start byte]
+
+=== Folder: .git\objects\9b ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9b\0b93ce20d21be74f86c9251a2c68ae5e644e96 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd7 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\a0 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a0\6b57666f52fef6cd448fb916ed157272dee73e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
+
+=== Folder: .git\objects\a2 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a2\9744f83cf67da8616ce02e26bc1ee901ea8177 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a2\f77dfed98ed30efed8e094eadeb320dd1ff658 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xcf in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\a4 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a4\79c6b96d22483b9ec1802e4c2af5358f58d521 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
+=== Folder: .git\objects\a8 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a8\a4d25505df2b028b8b3c3ee323aee3f3ebb978 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a8\cd58cbd7bd07cc87f5dda723e93d383736379e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa0 in position 5: invalid start byte]
+
+=== Folder: .git\objects\ab ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ab\312aecebeebd9cf45a35fbbb335e4dfac03282 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xbc in position 3: invalid start byte]
+
+=== Folder: .git\objects\b0 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b0\0ebbae8efa1315b3825ddb41513e3f8f1e5eb4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
+
+=== Folder: .git\objects\b2 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b2\3ab4e46e800968e006f5811348dc9122b46e1e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf0 in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b2\3bfe2e07b6eda24d56c184581193197156cd64 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xfd in position 5: invalid start byte]
+
+=== Folder: .git\objects\b3 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b3\83183d721457d9fb56fc8209bf932e02306a19 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe9 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\b7 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b7\7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf4 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\b9 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b9\35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x87 in position 5: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b9\5822d30c60d75b9e5e1f42043381f04e684a92 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte]
+
+=== Folder: .git\objects\bd ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\bd\f3bed86e49863994b94a2e44d84dfb1b59e3e4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\c0 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c0\129b336857115aec7d4d0525bfd291b628bae3 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c0\c1487b19e6ef9c01f1d107d60088701418f99c ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+=== Folder: .git\objects\c3 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c3\011fac6e47888d8e2209dcb60f02a915e0fbf0 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf1 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\c9 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\1c21a15126c3a2f3555bbc554622a432c4ae9a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 23: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\9788ad09028a3c12de1ddcd6909037df596f99 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd8 in position 5: invalid continuation byte]
+
+=== Folder: .git\objects\cb ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cb\50142dcea65a71997f0280cf195bb3a0c7d701 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd3 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\cc ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cc\ceb2801153ca950613660ab9236bd7a86bfd9a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\d2 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d2\eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xfb in position 3: invalid start byte]
+
+=== Folder: .git\objects\d3 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d3\26d95ed3d9477f152368ee2a169976cbfbc673 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
+
+=== Folder: .git\objects\d5 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d5\ccc1fe847536ae42929a02c51dfaa238b53e8a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xac in position 3: invalid start byte]
+
+=== Folder: .git\objects\d6 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d6\2f65d3bd680969ed2311ef1ccd755ebafc6384 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa9 in position 3: invalid start byte]
+
+=== Folder: .git\objects\d7 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d7\b278ba91bc60fba89a2544cd5485c311fe5261 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x92 in position 3: invalid start byte]
+
+=== Folder: .git\objects\da ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\da\c822ef92196eea7a19b7695b94a3f91e318610 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
+
+=== Folder: .git\objects\db ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\db\064b837db5e7443de95808d99204ce5184c9ca ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xac in position 5: invalid start byte]
+
+=== Folder: .git\objects\e0 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e0\9d9a3457c06a6d48b0bbc7834c13a014b8d838 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\e3 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e3\db853f90de235d93108b50dc31bc0a69eafe87 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf5 in position 3: invalid start byte]
+
+=== Folder: .git\objects\e8 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e8\ceadd48a3cb2733be35d9bec5652e2cff14916 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8b in position 5: invalid start byte]
+
+=== Folder: .git\objects\ed ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ed\f0d6d2af7ee3607fdbb5e0613566de248cc01d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
+=== Folder: .git\objects\f1 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f1\179033fa1b395422cce326d1a8f81d8217bd6a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x87 in position 5: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f1\b02855b88b65f9c87453089c1ddcd7904ebb8f ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8a in position 5: invalid start byte]
+
+=== Folder: .git\objects\f3 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f3\1de63487ffe7dd9e287f58ccacb93a644aa8f4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xeb in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f3\29756fe33519c2881156542cb77f0e1207bdbe ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xbc in position 5: invalid start byte]
+
+=== Folder: .git\objects\f5 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f5\4592fd73da13e94c07942b06b38e537057e1e6 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xaf in position 5: invalid start byte]
+
+=== Folder: .git\objects\fe ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fe\07a70f4d1070ccd31cd21f10dc0ae6d357dbcb ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fe\fb85b76c41cce4f3559ded4747e048b53756a5 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe2 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\info ===
+
+=== Folder: .git\objects\pack ===
+
+=== Folder: .git\refs ===
+
+=== Folder: .git\refs\heads ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
+c0c1487b19e6ef9c01f1d107d60088701418f99c
+
+=== Folder: .git\refs\remotes ===
+
+=== Folder: .git\refs\remotes\origin ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
+c0c1487b19e6ef9c01f1d107d60088701418f99c
+
+=== Folder: .git\refs\tags ===
 
 === Folder: app ===
 
@@ -1866,11 +5888,12 @@ class Cover(db.Model):
 import base64
 from io import BytesIO
 import shutil
-from flask import Blueprint, abort, render_template, request, send_file, url_for
+from flask import Blueprint, abort, jsonify, render_template, request, send_file, url_for
 from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
+from sqlalchemy import desc, or_
 from .models import Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Tag
 from . import db
 import os
@@ -2060,6 +6083,44 @@ def home():
 
     return render_template('home.html', mangas=manga_data, pagination=pagination, is_authenticated=current_user.is_authenticated)
 
+@main.route('/search', methods=['GET'])
+def search():
+    title = request.args.get('title', '').strip()
+    if not title:
+        return jsonify([])
+
+    # Query: Join Manga, MangaAltTitle (outer), MangaStatistics, filter or_ ilike, group_by MangaId, order Follows desc, limit 5
+    mangas = db.session.query(Manga).outerjoin(MangaAltTitle, Manga.MangaId == MangaAltTitle.MangaId)\
+        .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)\
+        .filter(or_(Manga.TitleEn.ilike(f"%{title}%"), MangaAltTitle.AltTitle.ilike(f"%{title}%")))\
+        .group_by(Manga.MangaId)\
+        .order_by(desc(MangaStatistics.Follows))\
+        .limit(5).all()
+
+    results = []
+    for m in mangas:
+        # Cover tương tự home
+        cover = MangaCover.query.filter_by(MangaId=m.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+        cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
+
+        # Rating: Average nếu có, fallback Bayesian, fallback 0
+        stats = MangaStatistics.query.filter_by(MangaId=m.MangaId).first()
+        rating = stats.AverageRating if stats and stats.AverageRating else stats.BayesianRating if stats else 0
+        follows = stats.Follows if stats else 0
+
+        results.append({
+            'id': str(m.MangaId),
+            'title': m.TitleEn,
+            'cover_url': cover_url,
+            'rating': round(rating, 1),
+            'follows': follows,
+            'status': m.Status or 'Unknown'
+        })
+
+    return jsonify(results)
+
+
+
 def get_cover_info(manga_id):
     """Lấy thông tin cover từ API Mangadex, bao gồm cover_id."""
     api_url = "https://api.mangadex.org/cover"
@@ -2183,7 +6244,7 @@ def manga_detail(manga_id):
     tab_contents = {
         'chapters': url_for('manga.chapters', manga_id=manga.MangaId),
         'comments': url_for('manga.comments', manga_id=manga.MangaId),
-        'art': url_for('manga.art', manga_id=manga.MangaId),
+        'art': url_for('manga.manga_art', manga_id=manga.MangaId),
         'related': url_for('manga.related', manga_id=manga.MangaId)
     }
 
@@ -2313,6 +6374,9 @@ def load_user(user_id):
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\auth_thmb.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 4: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_avatar.png ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\favicon.ico ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
@@ -2741,6 +6805,31 @@ def load_user(user_id):
         margin-top: 20px;
         position: static;
     }
+}
+
+/* Card trong Art tab */
+.cover-card {
+    background-color: #1a1a1a;
+    /* nền đồng bộ với container */
+    color: #cccccc;
+    /* chữ xám nhạt, dễ đọc */
+    border: 1px solid #333333;
+    /* viền nhẹ giống tab-content */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cover-card .card-body {
+    background-color: #1a1a1a;
+    /* nền dưới ảnh cũng tối */
+    padding: 10px;
+}
+
+.cover-card .card-body p {
+    margin: 0 0 5px;
+    color: #cccccc;
+    /* chữ xám nhạt như description */
+    font-size: 0.9rem;
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\styles.css ---
 @charset "UTF-8";
@@ -15597,6 +19686,67 @@ a {
   background-position: center;
   height: 200px;
 }
+
+
+/* Search popup */
+#search-popup {
+  background-color: #2C2C2C;
+  border: 1px solid #3A3A3A;
+  border-radius: 10px;
+  padding: 10px;
+  color: #E0E0E0;
+  min-width: 300px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #3A3A3A;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-cover {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-result-info {
+  flex: 1;
+}
+
+.search-result-title {
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.search-result-stats {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.search-result-status {
+  display: flex;
+  align-items: center;
+  color: #cccccc;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #999999;
+  /* fallback */
+}
 === Folder: app\static\flags ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\af.png ---
@@ -16119,6 +20269,92 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+// Debounce function
+function debounce(func, delay) {
+    let timer;
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(func, delay);
+    };
+}
+
+// Search box event
+document.addEventListener('DOMContentLoaded', function () {
+    const searchBox = document.getElementById('searchBox');
+    const searchPopup = document.getElementById('search-popup');
+
+    if (searchBox && searchPopup) {
+        searchBox.addEventListener('input', debounce(function () {
+            const title = searchBox.value.trim();
+            if (title.length < 2) {
+                searchPopup.style.display = 'none';
+                return;
+            }
+
+            fetch(`/search?title=${encodeURIComponent(title)}`)
+                .then(resp => resp.json())
+                .then(results => {
+                    if (results.length === 0) {
+                        searchPopup.innerHTML = '<p class="text-center text-muted">No results found.</p>';
+                    } else {
+                        let html = '';
+                        results.forEach(r => {
+                            html += `
+                  <div class="search-result-item">
+                    <img src="${r.cover_url}" alt="${r.title}" class="search-result-cover">
+                    <div class="search-result-info">
+                      <a href="/manga/${r.id}" class="search-result-title">${r.title}</a>
+                      <div class="search-result-stats">
+                        ⭐ ${r.rating} | ❤️ ${r.follows}
+                      </div>
+                      <div class="search-result-status">
+                        <span class="status-dot" data-status="${r.status}"></span> ${r.status}
+                      </div>
+                    </div>
+                  </div>
+                `;
+                        });
+                        searchPopup.innerHTML = html;
+
+                        // Set status dot colors
+                        document.querySelectorAll('.status-dot').forEach(dot => {
+                            let status = dot.getAttribute('data-status').toLowerCase();
+                            switch (status) {
+                                case "ongoing":
+                                    dot.style.backgroundColor = "#00cc00";
+                                    break;
+                                case "canceled":
+                                    dot.style.backgroundColor = "#ff0000";
+                                    break;
+                                case "hiatus":
+                                    dot.style.backgroundColor = "#cc9900";
+                                    break;
+                                case "completed":
+                                    dot.style.backgroundColor = "#0099ff";
+                                    break;
+                                default:
+                                    dot.style.backgroundColor = "#999999";
+                            }
+                        });
+                    }
+                    searchPopup.style.display = 'block';
+                })
+                .catch(err => {
+                    console.error(err);
+                    searchPopup.style.display = 'none';
+                });
+        }, 1500));  // 1.5s debounce
+
+        // Hide popup when click outside
+        document.addEventListener('click', function (e) {
+            if (!searchBox.contains(e.target) && !searchPopup.contains(e.target)) {
+                searchPopup.style.display = 'none';
+            }
+        });
+    }
+});
 === Folder: app\templates ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
@@ -16222,9 +20458,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
 
                             <!-- Search bar -->
+                            <!-- Search bar -->
                             <li class="nav-item">
                                 <input type="text" id="searchBox" class="form-control search-collapsible"
                                     placeholder="Search manga...">
+                                <div id="search-popup" class="user-popup"
+                                    style="display: none; top: 40px; left: 0; width: 400px; z-index: 1000;"></div>
                             </li>
 
                             <!-- User icon popup -->
@@ -16500,7 +20739,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="row">
         {% for cover in covers %}
         <div class="col-md-3 col-sm-4 col-6 mb-4">
-            <div class="card h-100">
+            <div class="card h-100 cover-card">
                 <img src="{{ url_for('manga.cover_image', cover_id=cover.cover_id) }}" class="card-img-top"
                     alt="Cover {{ cover.volume }}">
                 <div class="card-body p-2">
@@ -16570,7 +20809,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="#chapters" class="tab active" data-tab="chapters">Chapters</a>
             <a href="#comments" class="tab" data-tab="comments">Comments</a>
             <a href="#art" class="tab" data-tab="art"
-                data-url="{{ url_for('manga.art', manga_id=manga.MangaId) }}">Art</a>
+                data-url="{{ url_for('manga.manga_art', manga_id=manga.MangaId) }}">Art</a>
             <a href="#related" class="tab" data-tab="related">Related</a>
         </div>
         <div class="tab-content">
@@ -16686,7 +20925,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="profile-header d-flex align-items-end p-4">
             <!-- Avatar -->
             <img src="{{ user.Avatar or url_for('static', filename='assets/default_avatar.png') }}"
-                alt="Avatar of {{ user.Username }}" class="profile-avatar me-3">
+                alt="Avatar of {{ user.Username }}" class="profile-avatar me-3 img-fluid"
+                style="width: 100px; height: 100px; object-fit: cover;">
 
             <!-- Username + Role -->
             <div>

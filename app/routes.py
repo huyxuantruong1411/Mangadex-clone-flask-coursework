@@ -1,11 +1,12 @@
 import base64
 from io import BytesIO
 import shutil
-from flask import Blueprint, abort, render_template, request, send_file, url_for
+from flask import Blueprint, abort, jsonify, render_template, request, send_file, url_for
 from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
+from sqlalchemy import desc, or_
 from .models import Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Tag
 from . import db
 import os
@@ -194,6 +195,78 @@ def home():
         })
 
     return render_template('home.html', mangas=manga_data, pagination=pagination, is_authenticated=current_user.is_authenticated)
+
+
+@main.route('/search', methods=['GET'])
+def search():
+    title = request.args.get('title', '').strip()
+    if not title:
+        return jsonify([])
+
+    # Step 1: Create a subquery to find unique Manga IDs matching the title
+    matching_manga_ids_subquery = db.session.query(Manga.MangaId)\
+        .outerjoin(MangaAltTitle, Manga.MangaId == MangaAltTitle.MangaId)\
+        .filter(or_(Manga.TitleEn.ilike(f"%{title}%"), MangaAltTitle.AltTitle.ilike(f"%{title}%")))\
+        .group_by(Manga.MangaId)\
+        .subquery()
+
+    # Step 2: Query for the full Manga objects using the IDs from the subquery
+    mangas = db.session.query(Manga)\
+        .join(matching_manga_ids_subquery, Manga.MangaId == matching_manga_ids_subquery.c.MangaId)\
+        .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)\
+        .order_by(desc(MangaStatistics.Follows))\
+        .limit(5).all()
+
+    results = []
+    for m in mangas:
+        # --- BẮT ĐẦU THAY ĐỔI TẠI ĐÂY ---
+        # Logic lấy ảnh bìa, nếu không có thì tải về
+        cover = MangaCover.query.filter_by(MangaId=m.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+        if cover:
+            image_data_b64 = base64.b64encode(cover.ImageData).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+        else:
+            cover_info = get_cover_info(str(m.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info['manga_id']
+                cover_id_str = cover_info['cover_id']
+                file_name_str = cover_info['file_name']
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=m.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+                    cover_url = url_for('static', filename='assets/default_cover.png')
+            else:
+                cover_url = url_for('static', filename='assets/default_cover.png')
+        # --- KẾT THÚC THAY ĐỔI ---
+
+        stats = MangaStatistics.query.filter_by(MangaId=m.MangaId).first()
+        rating = stats.AverageRating if stats and stats.AverageRating else stats.BayesianRating if stats else 0
+        follows = stats.Follows if stats else 0
+
+        results.append({
+            'id': str(m.MangaId),
+            'title': m.TitleEn,
+            'cover_url': cover_url,
+            'rating': round(rating, 1),
+            'follows': follows,
+            'status': m.Status or 'Unknown'
+        })
+
+    return jsonify(results)
 
 def get_cover_info(manga_id):
     """Lấy thông tin cover từ API Mangadex, bao gồm cover_id."""

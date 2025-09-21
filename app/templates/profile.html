@@ -9,7 +9,8 @@
         <div class="profile-header d-flex align-items-end p-4">
             <!-- Avatar -->
             <img src="{{ user.Avatar or url_for('static', filename='assets/default_avatar.png') }}"
-                alt="Avatar of {{ user.Username }}" class="profile-avatar me-3">
+                alt="Avatar of {{ user.Username }}" class="profile-avatar me-3 img-fluid"
+                style="width: 100px; height: 100px; object-fit: cover;">
 
             <!-- Username + Role -->
             <div>
