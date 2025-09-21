@@ -1,0 +1,276 @@
+.manga-detail-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 115%;
+    /* Tăng font-size toàn bộ lên 15% */
+}
+
+.manga-main {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.manga-detail-header {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.manga-cover-thumbnail {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 172.5px;
+    /* Tăng 15% từ 150px */
+    height: 253px;
+    /* Tăng 15% từ 220px */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.manga-cover-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manga-info {
+    position: absolute;
+    top: 20px;
+    left: 210px;
+    /* Điều chỉnh left để phù hợp với ảnh lớn hơn (172.5px + padding) */
+    color: #ffffff;
+    padding: 10px;
+}
+
+.manga-title {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 36.8px;
+    /* Tăng 15% từ 32px */
+    margin-bottom: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.manga-actions .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.manga-actions .btn-primary {
+    background-color: #ff6600;
+}
+
+.manga-actions .btn-primary:hover {
+    background-color: #ff8533;
+}
+
+.manga-actions .btn-secondary {
+    background-color: #333333;
+}
+
+.manga-actions .btn-secondary:hover {
+    background-color: #4d4d4d;
+}
+
+.manga-meta,
+.manga-stats {
+    margin: 10px 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18.4px;
+    /* Tăng 15% từ 16px */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.tag-badge {
+    display: inline-block;
+    background: #444;
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 5px;
+    border-radius: 12px;
+    font-size: 13.8px;
+    /* Tăng 15% từ 12px */
+}
+
+.status-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #999999;
+    /* fallback xám */
+}
+
+.manga-description {
+    margin: 20px 0;
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 4px;
+    color: #cccccc;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    /* Tăng 15% từ 14px */
+    line-height: 1.5;
+}
+
+.manga-tabs {
+    display: flex;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tab.active {
+    border-bottom: 2px solid #ff6600;
+    color: #ff6600;
+}
+
+.tab-content .tab-pane {
+    display: none;
+    padding: 20px;
+    background: #1a1a1a;
+    border: 1px solid #333333;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}
+
+.tab-content .text-center {
+    font-size: 16.1px;
+    /* Tăng 15% từ 14px (giả sử text-gray mặc định 14px) */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.manga-sidebar {
+    flex: 1;
+    background: #2a2a2a;
+    border-left: 1px solid #333333;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    font-size: 100%;
+    /* Tăng font-size sidebar lên 25% */
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-section h3 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    /* Tăng 25% từ 16px */
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tag-list,
+.track-list,
+.alt-title-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tag-link,
+.track-link {
+    text-decoration: none;
+    color: #ff6600;
+    transition: color 0.3s ease;
+}
+
+.tag-link:hover,
+.track-link:hover {
+    color: #ff8533;
+}
+
+.flag-icon {
+    width: 18.4px;
+    /* Tăng 15% từ 16px */
+    height: 18.4px;
+    /* Tăng 15% từ 16px */
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .manga-detail-container {
+        flex-direction: column;
+    }
+
+    .manga-sidebar {
+        width: 100%;
+        margin-top: 20px;
+        position: static;
+    }
+}
+
+/* Card trong Art tab */
+.cover-card {
+    background-color: #1a1a1a;
+    /* nền đồng bộ với container */
+    color: #cccccc;
+    /* chữ xám nhạt, dễ đọc */
+    border: 1px solid #333333;
+    /* viền nhẹ giống tab-content */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cover-card .card-body {
+    background-color: #1a1a1a;
+    /* nền dưới ảnh cũng tối */
+    padding: 10px;
+}
+
+.cover-card .card-body p {
+    margin: 0 0 5px;
+    color: #cccccc;
+    /* chữ xám nhạt như description */
+    font-size: 0.9rem;
+}

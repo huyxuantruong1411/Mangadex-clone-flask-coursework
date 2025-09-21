@@ -1,0 +1,167 @@
+/* Background */
+.auth-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Background image */
+.login-bg {
+    background-image: url("../assets/auth_thmb.png");
+}
+
+/* Wrapper */
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.auth-logo {
+    margin-bottom: 20px;
+}
+
+.auth-logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-logo img {
+    height: 40px;
+}
+
+.auth-logo span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Card */
+.auth-card {
+    background: rgba(42, 42, 42, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.required-note {
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.pf-c-form-control {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}
+
+.pf-c-form-control:focus {
+    outline: 2px solid #ff6600;
+}
+
+/* Buttons */
+.pf-c-button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-orange {
+    background: #ff6600;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    background: #ff8533;
+}
+
+/* Links */
+.link-orange {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.link-orange:hover {
+    text-decoration: underline;
+}
+
+.link-gray {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-extra {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-register {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.required {
+    color: #ff6600;
+}
+
+/* Small text */
+.small-text {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+/* Register form larger */
+.register-card {
+    max-width: 520px;
+    /* tăng 30% so với 400px */
+    padding: 40px;
+    /* tăng 15% so với 30px */
+}

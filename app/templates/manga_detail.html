@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}{{ manga.TitleEn }} | MangaDex Clone{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="manga-detail-container">
+    <div class="manga-main">
+        <!-- Header Section -->
+        <div class="manga-detail-header" data-cover-url="{{ manga_cover_url }}">
+            <div class="manga-cover-thumbnail">
+                <img src="{{ manga_cover_url }}" alt="Cover of {{ manga.TitleEn }}" class="cover-img">
+            </div>
+            <div class="manga-info">
+                <h1 class="manga-title">{{ manga.TitleEn }}</h1>
+                <div class="manga-actions">
+                    <a href="#" class="btn btn-primary">Add To Library</a>
+                    <a href="#" class="btn btn-secondary">Start Reading</a>
+                </div>
+                <div class="manga-meta">
+                    <span class="content-rating">{{ manga.ContentRating if manga.ContentRating else 'N/A' }}</span>
+                    {% for tag in content_tags %}
+                    <span class="tag-badge">{{ tag.NameEn }}</span>
+                    {% endfor %}
+                </div>
+                <div class="manga-meta">
+                    <span class="status-dot" data-status="{{ manga.Status | default('Unknown') }}"></span>
+                    <span class="publication">
+                        Publication: {{ manga.Year if manga.Year else 'N/A' }}, {{ manga.Status if manga.Status else
+                        'N/A' }}
+                    </span>
+                </div>
+                <div class="manga-stats">
+                    <span class="stat-rating">
+                        ⭐ {{ (manga_stats.AverageRating if manga_stats and manga_stats.AverageRating else
+                        (manga_stats.BayesianRating if manga_stats else 0))|round(1) }}
+                    </span>
+                    <span class="stat-follows">
+                        ❤️ {{ manga_stats.Follows if manga_stats and manga_stats.Follows else 0 }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="manga-description">
+            {{ manga_description|safe if manga_description else 'No description available' }}
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="manga-tabs">
+            <a href="#chapters" class="tab active" data-tab="chapters">Chapters</a>
+            <a href="#comments" class="tab" data-tab="comments">Comments</a>
+            <a href="#art" class="tab" data-tab="art"
+                data-url="{{ url_for('manga.manga_art', manga_id=manga.MangaId) }}">Art</a>
+            <a href="#related" class="tab" data-tab="related">Related</a>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="chapters">
+                {% if chapters %}
+                <h2>Chapters</h2>
+                <ul>
+                    {% for chapter in chapters %}
+                    <li>{{ chapter.Title }} - {{ chapter.ChapterNumber }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="text-center text-gray">This feature is under development...</p>
+                {% endif %}
+            </div>
+            <div class="tab-pane" id="comments">
+                <p class="text-center text-gray">This feature is under development...</p>
+            </div>
+            <div class="tab-pane" id="art">
+                <p class="text-center text-gray">This feature is under development...</p>
+            </div>
+            <div class="tab-pane" id="related">
+                <p class="text-center text-gray">This feature is under development...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="manga-sidebar">
+        <div class="sidebar-section">
+            <h3>Authors</h3>
+            <ul class="tag-list">
+                {% for author in authors %}
+                <li><a href="#" class="tag-link">{{ author.Name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Artists</h3>
+            <ul class="tag-list">
+                {% for artist in artists %}
+                <li><a href="#" class="tag-link">{{ artist.Name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Genres</h3>
+            <ul class="tag-list">
+                {% for tag in genres %}
+                <li><a href="#" class="tag-link">{{ tag.NameEn }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Themes</h3>
+            <ul class="tag-list">
+                {% for tag in themes %}
+                <li><a href="#" class="tag-link">{{ tag.NameEn }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Demographic</h3>
+            <ul class="tag-list">
+                <li><a href="#" class="tag-link">{{ manga.PublicationDemographic if manga.PublicationDemographic else
+                        'N/A' }}</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Format</h3>
+            <ul class="tag-list">
+                {% for tag in formats %}
+                <li><a href="#" class="tag-link">{{ tag.NameEn }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Track</h3>
+            <ul class="track-list">
+                {% for link in manga_links %}
+                <li><a href="{{ link.Url }}" class="track-link" target="_blank">{{ link.ProviderFullName }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Alternative Titles</h3>
+            <ul class="alt-title-list">
+                {% for alt_title in alt_titles %}
+                <li>
+                    <img src="{{ url_for('static', filename='flags/' + alt_title.LangCode + '.png') }}"
+                        alt="{{ alt_title.LangCode }} flag" class="flag-icon">
+                    <span>{{ alt_title.AltTitle }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Profile | MangaDex Clone{% endblock %}
+
+{% block content %}
+<div class="profile-page py-5">
+    <!-- Banner -->
+    <div class="profile-banner">
+        <div class="profile-header d-flex align-items-end p-4">
+            <!-- Avatar -->
+            <img src="{{ user.Avatar or url_for('static', filename='assets/default_avatar.png') }}"
+                alt="Avatar of {{ user.Username }}" class="profile-avatar me-3">
+
+            <!-- Username + Role -->
+            <div>
+                <h2 class="text-white fw-bold">{{ user.Username }}</h2>
+                <span class="badge bg-secondary">{{ user.Role }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="profile-actions d-flex gap-3 mt-4 px-4">
+        <a href="{{ url_for('main.follow', user_id=user.UserId) }}" class="btn btn-signin">Follow</a>
+        <a href="{{ url_for('main.message', user_id=user.UserId) }}" class="btn btn-secondary">Message</a>
+        <a href="{{ url_for('main.report', user_id=user.UserId) }}" class="btn btn-dark">Report</a>
+    </div>
+
+    <!-- Info Section -->
+    <div class="profile-info mt-4 px-4">
+        <div class="info-item d-flex justify-content-between py-2">
+            <span class="text-muted">User ID</span>
+            <span class="text-white">{{ user.UserId }}</span>
+        </div>
+        <div class="info-item d-flex justify-content-between py-2">
+            <span class="text-muted">Email</span>
+            <span class="text-white">{{ user.Email }}</span>
+        </div>
+        <div class="info-item d-flex justify-content-between py-2">
+            <span class="text-muted">Created At</span>
+            <span class="text-white">{{ user.CreatedAt.strftime("%B %d, %Y") if user.CreatedAt else "N/A" }}</span>
+        </div>
+        <div class="info-item d-flex justify-content-between py-2">
+            <span class="text-muted">Status</span>
+            <span class="text-white">
+                {% if user.IsLocked %}
+                <span class="text-danger">Locked</span>
+                {% else %}
+                <span class="text-success">Active</span>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</div>
+{% endblock %}

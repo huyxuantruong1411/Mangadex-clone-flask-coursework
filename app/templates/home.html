@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Home | MangaDex Clone{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4" data-auth="{{ is_authenticated | tojson | safe }}">
+    <h1 class="text-white mb-4">Hot Manga Recently Updated</h1>
+
+    {% if mangas %}
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th class="text-center fs-5" style="font-size: 1.3em;" width="10%">Rank</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;">Title</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;">Score</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;">Your Score</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;" width="10%">List Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in mangas %}
+            {% set manga = data.manga %}
+            {% set stats = data.stats %}
+            {% set index = loop.index0 %}
+            <tr>
+                <td class="text-center fs-3 fw-bold" style="font-size: 1.5em;">{{ (pagination.page - 1) * 10 + index + 1
+                    }}</td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img src="{{ data.cover_url }}" alt="Cover of {{ manga.TitleEn }}" class="me-3"
+                            style="width: 130px; height: auto; border-radius: 4px;">
+                        <div>
+                            <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}"
+                                class="text-white fw-bold" style="font-size: 1.5em; text-decoration: none;">{{
+                                manga.TitleEn }}</a>
+                            <div class="mt-3 text-muted small">
+                                <span class="me-2 fs-5 fw-bold text-info">{{ manga.ContentRating }}</span>
+                                <span class="me-2 fs-5 fw-bold text-info">{{ manga.PublicationDemographic }}</span>
+                                <span class="me-2 fs-5 fw-bold text-info">{{ manga.Status }}</span>
+                                <span class="fs-5 fw-bold text-info">{{ manga.Year }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) }}</td>
+                <td class="text-center fs-5 text-light">N/A</td>
+                <td class="text-center">
+                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
+                        List</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if pagination.has_prev %}
+            <li class="page-item"><a class="page-link text-white bg-dark"
+                    href="{{ url_for('main.home', page=pagination.prev_num) }}">Previous</a></li>
+            {% endif %}
+            {% for p in pagination.iter_pages() %}
+            {% if p %}
+            <li class="page-item {{ 'active' if p == pagination.page else '' }}"><a class="page-link text-white bg-dark"
+                    href="{{ url_for('main.home', page=p) }}">{{ p }}</a></li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link bg-dark">...</span></li>
+            {% endif %}
+            {% endfor %}
+            {% if pagination.has_next %}
+            <li class="page-item"><a class="page-link text-white bg-dark"
+                    href="{{ url_for('main.home', page=pagination.next_num) }}">Next</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% else %}
+    <p class="text-white">No hot manga in the last 4 months.</p>
+    {% endif %}
+</div>
+
+<!-- Modal cho Add to List -->
+<div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="modalLabel"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Nội dung dynamic từ JS -->
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lấy giá trị isAuthenticated từ data attribute
+    window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
+</script>
+{% endblock %}

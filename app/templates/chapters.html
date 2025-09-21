@@ -1,0 +1,9 @@
+<!-- app/templates/chapters.html -->
+<div class="tab-pane active" id="chapters">
+    <h2>Chapters</h2>
+    <ul>
+        {% for chapter in chapters %}
+        <li>{{ chapter.Title }} - {{ chapter.ChapterNumber }}</li>
+        {% endfor %}
+    </ul>
+</div>

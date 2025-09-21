@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="login-pf">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login | MangaDex Clone</title>
+    <link rel="icon" href="{{ url_for('static', filename='assets/MD-logo.png') }}">
+    <link href="{{ url_for('static', filename='css/auth.css') }}" rel="stylesheet">
+</head>
+
+<body class="auth-body login-bg">
+    <div class="auth-wrapper">
+        <!-- Logo -->
+        <div class="auth-logo">
+            <a href="{{ url_for('main.home') }}">
+                <img src="{{ url_for('static', filename='assets/MD-logo.png') }}" alt="MangaDex Logo">
+                <span>MangaDex</span>
+            </a>
+        </div>
+
+        <!-- Card -->
+        <div class="auth-card">
+            <h1 class="auth-title">Sign in to your account</h1>
+            <form method="post" action="{{ url_for('auth.login') }}">
+                <div class="form-group">
+                    <label for="username">Username or email</label>
+                    <input type="text" id="username" name="username" class="pf-c-form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="pf-c-form-control" required>
+                </div>
+
+                <div class="form-options">
+                    <label><input type="checkbox" name="remember"> Remember me</label>
+                    <a href="#" class="link-orange">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="pf-c-button pf-m-primary btn-orange">Sign In</button>
+
+                <div class="form-extra">
+                    <a href="#" class="link-gray">Try Another Way</a>
+                </div>
+
+                <div class="form-register">
+                    <span>New user? <a href="{{ url_for('auth.register') }}" class="link-orange">Register</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

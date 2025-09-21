@@ -1,0 +1,30 @@
+<!-- manga_art.html -->
+<div>
+    <!-- Locale filter -->
+    <form method="get" class="mb-3">
+        <label><strong>Locale:</strong></label><br>
+        {% for loc in all_locales %}
+        <label class="me-3">
+            <input type="checkbox" name="locale" value="{{ loc }}" {% if loc in selected_locales %}checked{% endif %}>
+            {{ loc }}
+        </label>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+    </form>
+
+    <!-- Gallery -->
+    <div class="row">
+        {% for cover in covers %}
+        <div class="col-md-3 col-sm-4 col-6 mb-4">
+            <div class="card h-100 cover-card">
+                <img src="{{ url_for('manga.cover_image', cover_id=cover.cover_id) }}" class="card-img-top"
+                    alt="Cover {{ cover.volume }}">
+                <div class="card-body p-2">
+                    <p class="mb-1"><strong>Volume:</strong> {{ cover.volume or '-' }}</p>
+                    <p class="mb-1"><strong>Locale:</strong> {{ cover.locale or '-' }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
