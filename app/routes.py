@@ -1,12 +1,12 @@
 import base64
 from io import BytesIO
 import shutil
-from flask import Blueprint, abort, jsonify, render_template, request, send_file, url_for
+from flask import Blueprint, abort, jsonify, redirect, render_template, request, send_file, url_for
 from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
-from sqlalchemy import desc, or_
+from sqlalchemy import desc, func, or_
 from .models import Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Tag
 from . import db
 import os
@@ -312,8 +312,13 @@ def latest_updates():
 
 @main.route("/random")
 def random():
-    return render_template("random.html", title="Random")
-
+    random_manga = db.session.query(Manga).order_by(func.newid()).first()
+    if random_manga:
+        return redirect(url_for('manga.manga_detail', manga_id=random_manga.MangaId))
+    else:
+        return render_template("random.html", title="Random")  # Fallback nếu không có manga nào
+    
+    
 @main.route("/updates")
 def updates():
     if not current_user.is_authenticated:
@@ -354,7 +359,36 @@ def manga_detail(manga_id):
         return "Manga not found", 404
 
     cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
-    manga_cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
+
+    if not cover:
+        # Nếu chưa có ảnh, thực hiện tải xuống
+        cover_info = get_cover_info(str(manga.MangaId).lower())
+        if cover_info:
+            manga_id_str = cover_info['manga_id']
+            cover_id_str = cover_info['cover_id']
+            file_name_str = cover_info['file_name']
+            image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+            try:
+                response = requests.get(image_url, stream=True)
+                response.raise_for_status()
+                image_data = response.content
+                new_cover = MangaCover(
+                    MangaId=manga.MangaId,
+                    CoverId=uuid.UUID(cover_id_str),
+                    FileName=file_name_str,
+                    ImageData=image_data
+                )
+                db.session.add(new_cover)
+                db.session.commit()
+                image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                manga_cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+            except Exception as e:
+                print(f"Error downloading cover for {manga_id_str}: {e}")
+                manga_cover_url = url_for('static', filename='assets/default_cover.png')
+        else:
+            manga_cover_url = url_for('static', filename='assets/default_cover.png')
+    else:
+        manga_cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
 
     manga_stats = MangaStatistics.query.filter_by(MangaId=manga_id).first()
 
