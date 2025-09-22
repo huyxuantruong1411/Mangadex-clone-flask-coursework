@@ -100,17 +100,19 @@ class Chapter(db.Model):
 # COMMENT
 # ------------------------
 class Comment(db.Model):
-    __tablename__ = "Comment"
-    __table_args__ = {"schema": "dbo"}
-
-    CommentId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
-    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
-    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
-    ChapterId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Chapter.ChapterId"))
-    Content = Column(Text)
-    CreatedAt = Column(DateTime)
-    UpdatedAt = Column(DateTime)
-    IsDeleted = Column(Boolean)
+    __tablename__ = 'Comment'
+    __table_args__ = {'schema': 'dbo'}
+    CommentId = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    UserId = db.Column(db.String(36), db.ForeignKey('dbo.User.UserId'), nullable=False)
+    MangaId = db.Column(db.String(36), db.ForeignKey('dbo.Manga.MangaId'), nullable=False)
+    ChapterId = db.Column(db.String(36), db.ForeignKey('dbo.Chapter.ChapterId'), nullable=True)
+    Content = db.Column(db.Text, nullable=False)
+    CreatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    UpdatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    IsDeleted = db.Column(db.Boolean, default=False)
+    IsSpoiler = db.Column(db.Boolean, default=False)
+    LikeCount = db.Column(db.Integer, default=0)
+    DislikeCount = db.Column(db.Integer, default=0)
 
     user = relationship("User", back_populates="comments")
     manga = relationship("Manga", back_populates="comments")

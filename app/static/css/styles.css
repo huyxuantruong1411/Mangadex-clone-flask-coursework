@@ -12973,3 +12973,8 @@ a {
 .search-result-item.creator-item {
   text-decoration: none;
 }
+
+/* Add to existing style.css */
+.alert-container .alert {
+  margin-bottom: 10px;
+}

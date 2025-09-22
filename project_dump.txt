@@ -12,7 +12,15 @@
           "type": "file"
         },
         {
+          "name": "FETCH_HEAD",
+          "type": "file"
+        },
+        {
           "name": "HEAD",
+          "type": "file"
+        },
+        {
+          "name": "ORIG_HEAD",
           "type": "file"
         },
         {
@@ -172,6 +180,10 @@
                 {
                   "name": "794551ad32ed40a938191708a3901b4e454212",
                   "type": "file"
+                },
+                {
+                  "name": "926f20c4a39d5445a68c1c60177c2670790f0a",
+                  "type": "file"
                 }
               ]
             },
@@ -181,6 +193,16 @@
               "children": [
                 {
                   "name": "dba748ea81df245afc761b268ada9c5df213e1",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "0f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "e131e8751648daf1540111ff635cc7c61bc532",
                   "type": "file"
                 }
               ]
@@ -312,6 +334,16 @@
               ]
             },
             {
+              "name": "2f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a864d6aa5f97b88e052837df36519f388834f1",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "32",
               "type": "directory",
               "children": [
@@ -398,6 +430,16 @@
               ]
             },
             {
+              "name": "46",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "195815b22f22371260135b5d2cb0343e0ca323",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "47",
               "type": "directory",
               "children": [
@@ -469,6 +511,10 @@
               "name": "52",
               "type": "directory",
               "children": [
+                {
+                  "name": "9fc34b3681146b62483db5cabe6274a076909e",
+                  "type": "file"
+                },
                 {
                   "name": "ba6c230a66a90191eb5003df2737b8b7c13ec9",
                   "type": "file"
@@ -572,6 +618,16 @@
               ]
             },
             {
+              "name": "63",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4790c51b52b6895a12f057cae631f4106940d4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "65",
               "type": "directory",
               "children": [
@@ -606,11 +662,49 @@
               ]
             },
             {
+              "name": "6a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "552a576ff2e1d4d6f708863028b6980b41da3d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "6b",
               "type": "directory",
               "children": [
                 {
+                  "name": "c4c8e61dff099a4e1b9995381e1aa98e0f972a",
+                  "type": "file"
+                },
+                {
                   "name": "d25c15d4d1a9afc6f0d2c5c602425edd8c8bec",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "6c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0913c47b99c2050de6a41cfcaa2e7bedd4d49a",
+                  "type": "file"
+                },
+                {
+                  "name": "e317a2d8caa81a5fdaed750bf1d6bdbd487756",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "6e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "8972dcb65808eebd76243798532da8530b2e17",
                   "type": "file"
                 }
               ]
@@ -754,6 +848,26 @@
               ]
             },
             {
+              "name": "92",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ccd51812368f5e5efb533a62e1ff033bf69374",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "94",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2244c0607f50856efbca088d09e360e378b575",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "95",
               "type": "directory",
               "children": [
@@ -773,6 +887,16 @@
               "children": [
                 {
                   "name": "37d2a4fcff13b42d065c1774b9bbb2f1945aca",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "98",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dcba4c873f548c4bb8d9f4ccf620f251c0d773",
                   "type": "file"
                 }
               ]
@@ -922,6 +1046,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "a7ddcfc1aa77909c6dec916c2298176f528169",
+                  "type": "file"
+                },
+                {
                   "name": "f3bed86e49863994b94a2e44d84dfb1b59e3e4",
                   "type": "file"
                 }
@@ -1024,7 +1152,29 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "5255241a586abafbdbf21215f3f8d970ae7431",
+                  "type": "file"
+                },
+                {
                   "name": "76336bd0487ea69c48d9f8b317faa7a295627e",
+                  "type": "file"
+                },
+                {
+                  "name": "e70c6def7cb093fb320c2e961828e7cc8af7ac",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ce",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b9257d14a13e2400ee7ca3ddf89eb5228291c7",
+                  "type": "file"
+                },
+                {
+                  "name": "ebca742807efd540d805322a924257258fe186",
                   "type": "file"
                 }
               ]
@@ -1120,6 +1270,16 @@
               ]
             },
             {
+              "name": "e2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a0384999a4a0a1afdc34b5844c1165544a12f0",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "e3",
               "type": "directory",
               "children": [
@@ -1130,11 +1290,25 @@
               ]
             },
             {
+              "name": "e5",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dfbda607cbd9b3ca40a7d134980f946b0eb323",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "e6",
               "type": "directory",
               "children": [
                 {
                   "name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "type": "file"
+                },
+                {
+                  "name": "ab1036a6f0c89e623c51f2775ac955907fc960",
                   "type": "file"
                 }
               ]
@@ -1332,6 +1506,14 @@
               "children": [
                 {
                   "name": "auth.css",
+                  "type": "file"
+                },
+                {
+                  "name": "comments.css",
+                  "type": "file"
+                },
+                {
+                  "name": "creator_detail.css",
                   "type": "file"
                 },
                 {
@@ -1619,6 +1801,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "comments.js",
+                  "type": "file"
+                },
+                {
                   "name": "manga_detail.js",
                   "type": "file"
                 },
@@ -1723,28 +1909,6 @@
       "type": "file"
     },
     {
-      "name": "data",
-      "type": "directory",
-      "children": [
-        {
-          "name": "create-Covers.sql",
-          "type": "file"
-        },
-        {
-          "name": "create-MangaCover.sql",
-          "type": "file"
-        },
-        {
-          "name": "debug.sql",
-          "type": "file"
-        },
-        {
-          "name": "script.sql",
-          "type": "file"
-        }
-      ]
-    },
-    {
       "name": "dump.py",
       "type": "file"
     },
@@ -1767,7 +1931,9 @@
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── .git/
 │   ├── COMMIT_EDITMSG
+│   ├── FETCH_HEAD
 │   ├── HEAD
+│   ├── ORIG_HEAD
 │   ├── config
 │   ├── description
 │   ├── hooks/
@@ -1802,9 +1968,12 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 03/
 │   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
 │   │   ├── 0a/
-│   │   │   └── 794551ad32ed40a938191708a3901b4e454212
+│   │   │   ├── 794551ad32ed40a938191708a3901b4e454212
+│   │   │   └── 926f20c4a39d5445a68c1c60177c2670790f0a
 │   │   ├── 0e/
 │   │   │   └── dba748ea81df245afc761b268ada9c5df213e1
+│   │   ├── 0f/
+│   │   │   └── e131e8751648daf1540111ff635cc7c61bc532
 │   │   ├── 16/
 │   │   │   └── c2bffa4ab0b2eb562fd94d8adfb89714caede6
 │   │   ├── 1b/
@@ -1831,6 +2000,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 2c/
 │   │   │   ├── 53d7a8b6f35a475f1bec276184bfeced4da222
 │   │   │   └── a9dbe87cb9ade523a9281bc1624734f7f34558
+│   │   ├── 2f/
+│   │   │   └── a864d6aa5f97b88e052837df36519f388834f1
 │   │   ├── 32/
 │   │   │   └── 6246f9cbb175ab48ee3d3dd8b705e4a310d0ba
 │   │   ├── 33/
@@ -1849,6 +2020,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 45/
 │   │   │   ├── 5448abda71ebb3372cea0db603f6419e293b80
 │   │   │   └── 6b4352594af44e22a279f69bbf4409c3d82114
+│   │   ├── 46/
+│   │   │   └── 195815b22f22371260135b5d2cb0343e0ca323
 │   │   ├── 47/
 │   │   │   └── 42cf7e7d6af5c90f5300081d5c6db57cf33178
 │   │   ├── 48/
@@ -1864,6 +2037,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 51/
 │   │   │   └── 526c7e2bd3614b8cbe0e331aa409e4c421f43b
 │   │   ├── 52/
+│   │   │   ├── 9fc34b3681146b62483db5cabe6274a076909e
 │   │   │   └── ba6c230a66a90191eb5003df2737b8b7c13ec9
 │   │   ├── 53/
 │   │   │   ├── 95eedcf90ed73ed3ca03155487382f30526b67
@@ -1885,6 +2059,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 102306306d4a3c0548710ef073f4b8f888915e
 │   │   ├── 61/
 │   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
+│   │   ├── 63/
+│   │   │   └── 4790c51b52b6895a12f057cae631f4106940d4
 │   │   ├── 65/
 │   │   │   └── 4adb9f9d6c8633be08d544914c30fff7ec4171
 │   │   ├── 68/
@@ -1892,8 +2068,16 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 69/
 │   │   │   ├── 664b3fc9916cb80fe6d79e845fb806c2882137
 │   │   │   └── 988e10bdbfda8cab2a451e109f9a7cc8f9fd41
+│   │   ├── 6a/
+│   │   │   └── 552a576ff2e1d4d6f708863028b6980b41da3d
 │   │   ├── 6b/
+│   │   │   ├── c4c8e61dff099a4e1b9995381e1aa98e0f972a
 │   │   │   └── d25c15d4d1a9afc6f0d2c5c602425edd8c8bec
+│   │   ├── 6c/
+│   │   │   ├── 0913c47b99c2050de6a41cfcaa2e7bedd4d49a
+│   │   │   └── e317a2d8caa81a5fdaed750bf1d6bdbd487756
+│   │   ├── 6e/
+│   │   │   └── 8972dcb65808eebd76243798532da8530b2e17
 │   │   ├── 70/
 │   │   │   └── 6b8401c9acf600ebf44d1c9e6792150d264868
 │   │   ├── 71/
@@ -1922,11 +2106,17 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── bcf36652db4f61c7597d80107f89b24ae8622e
 │   │   ├── 8f/
 │   │   │   └── 4bf54820f8b7cb26c15ac02c79ac89cba30200
+│   │   ├── 92/
+│   │   │   └── ccd51812368f5e5efb533a62e1ff033bf69374
+│   │   ├── 94/
+│   │   │   └── 2244c0607f50856efbca088d09e360e378b575
 │   │   ├── 95/
 │   │   │   ├── 71e25710e826a99a593bdfdb962fc8d703d5bf
 │   │   │   └── 88a49aa3bf29474607d90920873aa23e88d20a
 │   │   ├── 97/
 │   │   │   └── 37d2a4fcff13b42d065c1774b9bbb2f1945aca
+│   │   ├── 98/
+│   │   │   └── dcba4c873f548c4bb8d9f4ccf620f251c0d773
 │   │   ├── 9b/
 │   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
 │   │   ├── a0/
@@ -1957,6 +2147,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e
 │   │   │   └── 5822d30c60d75b9e5e1f42043381f04e684a92
 │   │   ├── bd/
+│   │   │   ├── a7ddcfc1aa77909c6dec916c2298176f528169
 │   │   │   └── f3bed86e49863994b94a2e44d84dfb1b59e3e4
 │   │   ├── c0/
 │   │   │   ├── 129b336857115aec7d4d0525bfd291b628bae3
@@ -1978,7 +2169,12 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 4ed5ee7efba785a1b6133fec4f2d5f22ee2f0c
 │   │   │   └── ceb2801153ca950613660ab9236bd7a86bfd9a
 │   │   ├── cd/
-│   │   │   └── 76336bd0487ea69c48d9f8b317faa7a295627e
+│   │   │   ├── 5255241a586abafbdbf21215f3f8d970ae7431
+│   │   │   ├── 76336bd0487ea69c48d9f8b317faa7a295627e
+│   │   │   └── e70c6def7cb093fb320c2e961828e7cc8af7ac
+│   │   ├── ce/
+│   │   │   ├── b9257d14a13e2400ee7ca3ddf89eb5228291c7
+│   │   │   └── ebca742807efd540d805322a924257258fe186
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
@@ -1997,10 +2193,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 019f7156d7ca8f4a712fd836e42cb8c3982197
 │   │   ├── e0/
 │   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
+│   │   ├── e2/
+│   │   │   └── a0384999a4a0a1afdc34b5844c1165544a12f0
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
+│   │   ├── e5/
+│   │   │   └── dfbda607cbd9b3ca40a7d134980f946b0eb323
 │   │   ├── e6/
-│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   │   └── ab1036a6f0c89e623c51f2775ac955907fc960
 │   │   ├── e8/
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
@@ -2042,6 +2243,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── auth.css
+│   │   │   ├── comments.css
+│   │   │   ├── creator_detail.css
 │   │   │   ├── manga_detail.css
 │   │   │   └── styles.css
 │   │   ├── flags/
@@ -2112,6 +2315,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── zh-ro.png
 │   │   │   └── zh.png
 │   │   └── js/
+│   │       ├── comments.js
 │   │       ├── manga_detail.js
 │   │       └── scripts.js
 │   └── templates/
@@ -2136,11 +2340,6 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── require_login.html
 │       └── updates.html
 ├── config.py
-├── data/
-│   ├── create-Covers.sql
-│   ├── create-MangaCover.sql
-│   ├── debug.sql
-│   └── script.sql
 ├── dump.py
 ├── project_dump.txt
 ├── requirements.txt
@@ -2198,7 +2397,7 @@ OUTPUT_FILE = "project_dump.txt"
 
 def should_ignore_dir(dirname: str) -> bool:
     """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__"))
+    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data"))
 
 def build_tree_dict(root_dir: str) -> dict:
     """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
@@ -2299,7 +2498,15 @@ if __name__ == "__main__":
           "type": "file"
         },
         {
+          "name": "FETCH_HEAD",
+          "type": "file"
+        },
+        {
           "name": "HEAD",
+          "type": "file"
+        },
+        {
+          "name": "ORIG_HEAD",
           "type": "file"
         },
         {
@@ -2459,6 +2666,10 @@ if __name__ == "__main__":
                 {
                   "name": "794551ad32ed40a938191708a3901b4e454212",
                   "type": "file"
+                },
+                {
+                  "name": "926f20c4a39d5445a68c1c60177c2670790f0a",
+                  "type": "file"
                 }
               ]
             },
@@ -2468,6 +2679,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "dba748ea81df245afc761b268ada9c5df213e1",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "0f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "e131e8751648daf1540111ff635cc7c61bc532",
                   "type": "file"
                 }
               ]
@@ -2599,6 +2820,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "2f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a864d6aa5f97b88e052837df36519f388834f1",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "32",
               "type": "directory",
               "children": [
@@ -2685,6 +2916,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "46",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "195815b22f22371260135b5d2cb0343e0ca323",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "47",
               "type": "directory",
               "children": [
@@ -2756,6 +2997,10 @@ if __name__ == "__main__":
               "name": "52",
               "type": "directory",
               "children": [
+                {
+                  "name": "9fc34b3681146b62483db5cabe6274a076909e",
+                  "type": "file"
+                },
                 {
                   "name": "ba6c230a66a90191eb5003df2737b8b7c13ec9",
                   "type": "file"
@@ -2859,6 +3104,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "63",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "4790c51b52b6895a12f057cae631f4106940d4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "65",
               "type": "directory",
               "children": [
@@ -2893,11 +3148,49 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "6a",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "552a576ff2e1d4d6f708863028b6980b41da3d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "6b",
               "type": "directory",
               "children": [
                 {
+                  "name": "c4c8e61dff099a4e1b9995381e1aa98e0f972a",
+                  "type": "file"
+                },
+                {
                   "name": "d25c15d4d1a9afc6f0d2c5c602425edd8c8bec",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "6c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0913c47b99c2050de6a41cfcaa2e7bedd4d49a",
+                  "type": "file"
+                },
+                {
+                  "name": "e317a2d8caa81a5fdaed750bf1d6bdbd487756",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "6e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "8972dcb65808eebd76243798532da8530b2e17",
                   "type": "file"
                 }
               ]
@@ -3041,6 +3334,26 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "92",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ccd51812368f5e5efb533a62e1ff033bf69374",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "94",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2244c0607f50856efbca088d09e360e378b575",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "95",
               "type": "directory",
               "children": [
@@ -3060,6 +3373,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "37d2a4fcff13b42d065c1774b9bbb2f1945aca",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "98",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dcba4c873f548c4bb8d9f4ccf620f251c0d773",
                   "type": "file"
                 }
               ]
@@ -3209,6 +3532,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "a7ddcfc1aa77909c6dec916c2298176f528169",
+                  "type": "file"
+                },
+                {
                   "name": "f3bed86e49863994b94a2e44d84dfb1b59e3e4",
                   "type": "file"
                 }
@@ -3311,7 +3638,29 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "5255241a586abafbdbf21215f3f8d970ae7431",
+                  "type": "file"
+                },
+                {
                   "name": "76336bd0487ea69c48d9f8b317faa7a295627e",
+                  "type": "file"
+                },
+                {
+                  "name": "e70c6def7cb093fb320c2e961828e7cc8af7ac",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ce",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b9257d14a13e2400ee7ca3ddf89eb5228291c7",
+                  "type": "file"
+                },
+                {
+                  "name": "ebca742807efd540d805322a924257258fe186",
                   "type": "file"
                 }
               ]
@@ -3407,6 +3756,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "e2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a0384999a4a0a1afdc34b5844c1165544a12f0",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "e3",
               "type": "directory",
               "children": [
@@ -3417,11 +3776,25 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "e5",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dfbda607cbd9b3ca40a7d134980f946b0eb323",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "e6",
               "type": "directory",
               "children": [
                 {
                   "name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "type": "file"
+                },
+                {
+                  "name": "ab1036a6f0c89e623c51f2775ac955907fc960",
                   "type": "file"
                 }
               ]
@@ -3619,6 +3992,14 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "auth.css",
+                  "type": "file"
+                },
+                {
+                  "name": "comments.css",
+                  "type": "file"
+                },
+                {
+                  "name": "creator_detail.css",
                   "type": "file"
                 },
                 {
@@ -3906,6 +4287,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "comments.js",
+                  "type": "file"
+                },
+                {
                   "name": "manga_detail.js",
                   "type": "file"
                 },
@@ -4010,28 +4395,6 @@ if __name__ == "__main__":
       "type": "file"
     },
     {
-      "name": "data",
-      "type": "directory",
-      "children": [
-        {
-          "name": "create-Covers.sql",
-          "type": "file"
-        },
-        {
-          "name": "create-MangaCover.sql",
-          "type": "file"
-        },
-        {
-          "name": "debug.sql",
-          "type": "file"
-        },
-        {
-          "name": "script.sql",
-          "type": "file"
-        }
-      ]
-    },
-    {
       "name": "dump.py",
       "type": "file"
     },
@@ -4054,7 +4417,9 @@ if __name__ == "__main__":
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── .git/
 │   ├── COMMIT_EDITMSG
+│   ├── FETCH_HEAD
 │   ├── HEAD
+│   ├── ORIG_HEAD
 │   ├── config
 │   ├── description
 │   ├── hooks/
@@ -4089,9 +4454,12 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 03/
 │   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
 │   │   ├── 0a/
-│   │   │   └── 794551ad32ed40a938191708a3901b4e454212
+│   │   │   ├── 794551ad32ed40a938191708a3901b4e454212
+│   │   │   └── 926f20c4a39d5445a68c1c60177c2670790f0a
 │   │   ├── 0e/
 │   │   │   └── dba748ea81df245afc761b268ada9c5df213e1
+│   │   ├── 0f/
+│   │   │   └── e131e8751648daf1540111ff635cc7c61bc532
 │   │   ├── 16/
 │   │   │   └── c2bffa4ab0b2eb562fd94d8adfb89714caede6
 │   │   ├── 1b/
@@ -4118,6 +4486,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 2c/
 │   │   │   ├── 53d7a8b6f35a475f1bec276184bfeced4da222
 │   │   │   └── a9dbe87cb9ade523a9281bc1624734f7f34558
+│   │   ├── 2f/
+│   │   │   └── a864d6aa5f97b88e052837df36519f388834f1
 │   │   ├── 32/
 │   │   │   └── 6246f9cbb175ab48ee3d3dd8b705e4a310d0ba
 │   │   ├── 33/
@@ -4136,6 +4506,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 45/
 │   │   │   ├── 5448abda71ebb3372cea0db603f6419e293b80
 │   │   │   └── 6b4352594af44e22a279f69bbf4409c3d82114
+│   │   ├── 46/
+│   │   │   └── 195815b22f22371260135b5d2cb0343e0ca323
 │   │   ├── 47/
 │   │   │   └── 42cf7e7d6af5c90f5300081d5c6db57cf33178
 │   │   ├── 48/
@@ -4151,6 +4523,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 51/
 │   │   │   └── 526c7e2bd3614b8cbe0e331aa409e4c421f43b
 │   │   ├── 52/
+│   │   │   ├── 9fc34b3681146b62483db5cabe6274a076909e
 │   │   │   └── ba6c230a66a90191eb5003df2737b8b7c13ec9
 │   │   ├── 53/
 │   │   │   ├── 95eedcf90ed73ed3ca03155487382f30526b67
@@ -4172,6 +4545,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 102306306d4a3c0548710ef073f4b8f888915e
 │   │   ├── 61/
 │   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
+│   │   ├── 63/
+│   │   │   └── 4790c51b52b6895a12f057cae631f4106940d4
 │   │   ├── 65/
 │   │   │   └── 4adb9f9d6c8633be08d544914c30fff7ec4171
 │   │   ├── 68/
@@ -4179,8 +4554,16 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 69/
 │   │   │   ├── 664b3fc9916cb80fe6d79e845fb806c2882137
 │   │   │   └── 988e10bdbfda8cab2a451e109f9a7cc8f9fd41
+│   │   ├── 6a/
+│   │   │   └── 552a576ff2e1d4d6f708863028b6980b41da3d
 │   │   ├── 6b/
+│   │   │   ├── c4c8e61dff099a4e1b9995381e1aa98e0f972a
 │   │   │   └── d25c15d4d1a9afc6f0d2c5c602425edd8c8bec
+│   │   ├── 6c/
+│   │   │   ├── 0913c47b99c2050de6a41cfcaa2e7bedd4d49a
+│   │   │   └── e317a2d8caa81a5fdaed750bf1d6bdbd487756
+│   │   ├── 6e/
+│   │   │   └── 8972dcb65808eebd76243798532da8530b2e17
 │   │   ├── 70/
 │   │   │   └── 6b8401c9acf600ebf44d1c9e6792150d264868
 │   │   ├── 71/
@@ -4209,11 +4592,17 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── bcf36652db4f61c7597d80107f89b24ae8622e
 │   │   ├── 8f/
 │   │   │   └── 4bf54820f8b7cb26c15ac02c79ac89cba30200
+│   │   ├── 92/
+│   │   │   └── ccd51812368f5e5efb533a62e1ff033bf69374
+│   │   ├── 94/
+│   │   │   └── 2244c0607f50856efbca088d09e360e378b575
 │   │   ├── 95/
 │   │   │   ├── 71e25710e826a99a593bdfdb962fc8d703d5bf
 │   │   │   └── 88a49aa3bf29474607d90920873aa23e88d20a
 │   │   ├── 97/
 │   │   │   └── 37d2a4fcff13b42d065c1774b9bbb2f1945aca
+│   │   ├── 98/
+│   │   │   └── dcba4c873f548c4bb8d9f4ccf620f251c0d773
 │   │   ├── 9b/
 │   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
 │   │   ├── a0/
@@ -4244,6 +4633,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e
 │   │   │   └── 5822d30c60d75b9e5e1f42043381f04e684a92
 │   │   ├── bd/
+│   │   │   ├── a7ddcfc1aa77909c6dec916c2298176f528169
 │   │   │   └── f3bed86e49863994b94a2e44d84dfb1b59e3e4
 │   │   ├── c0/
 │   │   │   ├── 129b336857115aec7d4d0525bfd291b628bae3
@@ -4265,7 +4655,12 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 4ed5ee7efba785a1b6133fec4f2d5f22ee2f0c
 │   │   │   └── ceb2801153ca950613660ab9236bd7a86bfd9a
 │   │   ├── cd/
-│   │   │   └── 76336bd0487ea69c48d9f8b317faa7a295627e
+│   │   │   ├── 5255241a586abafbdbf21215f3f8d970ae7431
+│   │   │   ├── 76336bd0487ea69c48d9f8b317faa7a295627e
+│   │   │   └── e70c6def7cb093fb320c2e961828e7cc8af7ac
+│   │   ├── ce/
+│   │   │   ├── b9257d14a13e2400ee7ca3ddf89eb5228291c7
+│   │   │   └── ebca742807efd540d805322a924257258fe186
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
@@ -4284,10 +4679,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 019f7156d7ca8f4a712fd836e42cb8c3982197
 │   │   ├── e0/
 │   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
+│   │   ├── e2/
+│   │   │   └── a0384999a4a0a1afdc34b5844c1165544a12f0
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
+│   │   ├── e5/
+│   │   │   └── dfbda607cbd9b3ca40a7d134980f946b0eb323
 │   │   ├── e6/
-│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   │   └── ab1036a6f0c89e623c51f2775ac955907fc960
 │   │   ├── e8/
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
@@ -4329,6 +4729,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── auth.css
+│   │   │   ├── comments.css
+│   │   │   ├── creator_detail.css
 │   │   │   ├── manga_detail.css
 │   │   │   └── styles.css
 │   │   ├── flags/
@@ -4399,6 +4801,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── zh-ro.png
 │   │   │   └── zh.png
 │   │   └── js/
+│   │       ├── comments.js
 │   │       ├── manga_detail.js
 │   │       └── scripts.js
 │   └── templates/
@@ -4423,11 +4826,6 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── require_login.html
 │       └── updates.html
 ├── config.py
-├── data/
-│   ├── create-Covers.sql
-│   ├── create-MangaCover.sql
-│   ├── debug.sql
-│   └── script.sql
 ├── dump.py
 ├── project_dump.txt
 ├── requirements.txt
@@ -4448,7 +4846,7 @@ if __name__ == "__main__":
 === Folder: .git ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
-update-Random
+search_popup_fix
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
 [core]
@@ -4468,11 +4866,17 @@ update-Random
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\description ---
 Unnamed repository; edit this file 'description' to name the repository.
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\FETCH_HEAD ---
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a		https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\HEAD ---
 ref: refs/heads/main
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\index ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 13: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\ORIG_HEAD ---
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a
 
 === Folder: .git\hooks ===
 
@@ -5390,6 +5794,8 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c 000000000000000000000000000000000000000
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
 c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475198 +0700	commit: update-code
 b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484720 +0700	commit: update-Random
+c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf69374 Huy1411 <huy14112002@gmail.com> 1758487201 +0700	commit: update_creators_basic
+92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489115 +0700	commit: search_popup_fix
 
 === Folder: .git\logs\refs ===
 
@@ -5400,6 +5806,8 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 c0c1487b19e6ef9c01f1d107d60088701418f99c c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
 c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475198 +0700	commit: update-code
 b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484720 +0700	commit: update-Random
+c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf69374 Huy1411 <huy14112002@gmail.com> 1758487201 +0700	commit: update_creators_basic
+92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489115 +0700	commit: search_popup_fix
 
 === Folder: .git\logs\refs\remotes ===
 
@@ -5409,6 +5817,8 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471204 +0700	update by push
 c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475206 +0700	update by push
 b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484731 +0700	update by push
+c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf69374 Huy1411 <huy14112002@gmail.com> 1758487215 +0700	update by push
+92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489122 +0700	update by push
 
 === Folder: .git\objects ===
 
@@ -5427,10 +5837,18 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\794551ad32ed40a938191708a3901b4e454212 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\926f20c4a39d5445a68c1c60177c2670790f0a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
+
 === Folder: .git\objects\0e ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0e\dba748ea81df245afc761b268ada9c5df213e1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc8 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\0f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0f\e131e8751648daf1540111ff635cc7c61bc532 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\16 ===
 
@@ -5499,6 +5917,11 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2c\a9dbe87cb9ade523a9281bc1624734f7f34558 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
+=== Folder: .git\objects\2f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2f\a864d6aa5f97b88e052837df36519f388834f1 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
 === Folder: .git\objects\32 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\32\6246f9cbb175ab48ee3d3dd8b705e4a310d0ba ---
@@ -5546,6 +5969,11 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\45\6b4352594af44e22a279f69bbf4409c3d82114 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 3: invalid continuation byte]
 
+=== Folder: .git\objects\46 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\46\195815b22f22371260135b5d2cb0343e0ca323 ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
+
 === Folder: .git\objects\47 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\47\42cf7e7d6af5c90f5300081d5c6db57cf33178 ---
@@ -5583,6 +6011,9 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
 
 === Folder: .git\objects\52 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\52\9fc34b3681146b62483db5cabe6274a076909e ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\52\ba6c230a66a90191eb5003df2737b8b7c13ec9 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9a in position 3: invalid start byte]
@@ -5639,6 +6070,11 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\61\754b97c8aaf2bd4fc8e425ef292f71f1592315 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
+=== Folder: .git\objects\63 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\63\4790c51b52b6895a12f057cae631f4106940d4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb3 in position 9: invalid start byte]
+
 === Folder: .git\objects\65 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\65\4adb9f9d6c8633be08d544914c30fff7ec4171 ---
@@ -5657,10 +6093,31 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\69\988e10bdbfda8cab2a451e109f9a7cc8f9fd41 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
 
+=== Folder: .git\objects\6a ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6a\552a576ff2e1d4d6f708863028b6980b41da3d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
 === Folder: .git\objects\6b ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6b\c4c8e61dff099a4e1b9995381e1aa98e0f972a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6b\d25c15d4d1a9afc6f0d2c5c602425edd8c8bec ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
+
+=== Folder: .git\objects\6c ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6c\0913c47b99c2050de6a41cfcaa2e7bedd4d49a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6c\e317a2d8caa81a5fdaed750bf1d6bdbd487756 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
+=== Folder: .git\objects\6e ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6e\8972dcb65808eebd76243798532da8530b2e17 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\70 ===
 
@@ -5733,6 +6190,16 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\8f\4bf54820f8b7cb26c15ac02c79ac89cba30200 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa8 in position 5: invalid start byte]
 
+=== Folder: .git\objects\92 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\92\ccd51812368f5e5efb533a62e1ff033bf69374 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+=== Folder: .git\objects\94 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\94\2244c0607f50856efbca088d09e360e378b575 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
 === Folder: .git\objects\95 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\95\71e25710e826a99a593bdfdb962fc8d703d5bf ---
@@ -5745,6 +6212,11 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\97\37d2a4fcff13b42d065c1774b9bbb2f1945aca ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 3: invalid start byte]
+
+=== Folder: .git\objects\98 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\98\dcba4c873f548c4bb8d9f4ccf620f251c0d773 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc9 in position 21: invalid continuation byte]
 
 === Folder: .git\objects\9b ===
 
@@ -5823,6 +6295,9 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 
 === Folder: .git\objects\bd ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\bd\a7ddcfc1aa77909c6dec916c2298176f528169 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\bd\f3bed86e49863994b94a2e44d84dfb1b59e3e4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
@@ -5877,8 +6352,22 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 
 === Folder: .git\objects\cd ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\5255241a586abafbdbf21215f3f8d970ae7431 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\76336bd0487ea69c48d9f8b317faa7a295627e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\e70c6def7cb093fb320c2e961828e7cc8af7ac ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
+=== Folder: .git\objects\ce ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ce\b9257d14a13e2400ee7ca3ddf89eb5228291c7 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ce\ebca742807efd540d805322a924257258fe186 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\d2 ===
 
@@ -5925,15 +6414,28 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e0\9d9a3457c06a6d48b0bbc7834c13a014b8d838 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
 
+=== Folder: .git\objects\e2 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e2\a0384999a4a0a1afdc34b5844c1165544a12f0 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
+
 === Folder: .git\objects\e3 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e3\db853f90de235d93108b50dc31bc0a69eafe87 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf5 in position 3: invalid start byte]
 
+=== Folder: .git\objects\e5 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e5\dfbda607cbd9b3ca40a7d134980f946b0eb323 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc9 in position 21: invalid continuation byte]
+
 === Folder: .git\objects\e6 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e6\ab1036a6f0c89e623c51f2775ac955907fc960 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
 
 === Folder: .git\objects\e8 ===
 
@@ -5988,14 +6490,14 @@ b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec0245786
 === Folder: .git\refs\heads ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
-c62a493c7723a61e1f3141466ceb0cec02457868
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a
 
 === Folder: .git\refs\remotes ===
 
 === Folder: .git\refs\remotes\origin ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
-c62a493c7723a61e1f3141466ceb0cec02457868
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a
 
 === Folder: .git\refs\tags ===
 
@@ -6178,17 +6680,19 @@ class Chapter(db.Model):
 # COMMENT
 # ------------------------
 class Comment(db.Model):
-    __tablename__ = "Comment"
-    __table_args__ = {"schema": "dbo"}
-
-    CommentId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
-    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
-    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
-    ChapterId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Chapter.ChapterId"))
-    Content = Column(Text)
-    CreatedAt = Column(DateTime)
-    UpdatedAt = Column(DateTime)
-    IsDeleted = Column(Boolean)
+    __tablename__ = 'Comment'
+    __table_args__ = {'schema': 'dbo'}
+    CommentId = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    UserId = db.Column(db.String(36), db.ForeignKey('dbo.User.UserId'), nullable=False)
+    MangaId = db.Column(db.String(36), db.ForeignKey('dbo.Manga.MangaId'), nullable=False)
+    ChapterId = db.Column(db.String(36), db.ForeignKey('dbo.Chapter.ChapterId'), nullable=True)
+    Content = db.Column(db.Text, nullable=False)
+    CreatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    UpdatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    IsDeleted = db.Column(db.Boolean, default=False)
+    IsSpoiler = db.Column(db.Boolean, default=False)
+    LikeCount = db.Column(db.Integer, default=0)
+    DislikeCount = db.Column(db.Integer, default=0)
 
     user = relationship("User", back_populates="comments")
     manga = relationship("Manga", back_populates="comments")
@@ -6439,13 +6943,13 @@ class Cover(db.Model):
 import base64
 from io import BytesIO
 import shutil
-from flask import Blueprint, abort, jsonify, redirect, render_template, request, send_file, url_for
+from flask import Blueprint, abort, flash, jsonify, redirect, render_template, request, send_file, url_for
 from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
 from sqlalchemy import desc, func, or_
-from .models import Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Tag
+from .models import Chapter, Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Tag, Comment
 from . import db
 import os
 import uuid
@@ -6796,35 +7300,12 @@ def manga_detail(manga_id):
     if not manga:
         return "Manga not found", 404
 
+    # --- cover logic (as in your original file) ---
     cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
 
     if not cover:
-        # Nếu chưa có ảnh, thực hiện tải xuống
-        cover_info = get_cover_info(str(manga.MangaId).lower())
-        if cover_info:
-            manga_id_str = cover_info['manga_id']
-            cover_id_str = cover_info['cover_id']
-            file_name_str = cover_info['file_name']
-            image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
-            try:
-                response = requests.get(image_url, stream=True)
-                response.raise_for_status()
-                image_data = response.content
-                new_cover = MangaCover(
-                    MangaId=manga.MangaId,
-                    CoverId=uuid.UUID(cover_id_str),
-                    FileName=file_name_str,
-                    ImageData=image_data
-                )
-                db.session.add(new_cover)
-                db.session.commit()
-                image_data_b64 = base64.b64encode(image_data).decode('utf-8')
-                manga_cover_url = f"data:image/jpeg;base64,{image_data_b64}"
-            except Exception as e:
-                print(f"Error downloading cover for {manga_id_str}: {e}")
-                manga_cover_url = url_for('static', filename='assets/default_cover.png')
-        else:
-            manga_cover_url = url_for('static', filename='assets/default_cover.png')
+        # keep fallback logic from your project (use default cover)
+        manga_cover_url = url_for('static', filename='assets/default_cover.png')
     else:
         manga_cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
 
@@ -6839,27 +7320,45 @@ def manga_detail(manga_id):
                                       next((d.Description for d in descriptions if d.LangCode), None))))
     description_long = len(manga_description or '') > 200 if manga_description else False
 
-    # Lấy cả authors và artists trong một truy vấn join duy nhất
+    # creators
     related_creators = (
         db.session.query(MangaRelated, Creator)
         .join(Creator, MangaRelated.RelatedId == Creator.CreatorId)
         .filter(MangaRelated.MangaId == manga_id)
         .all()
     )
-
     authors = [creator for rel, creator in related_creators if rel.Type == 'author']
     artists = [creator for rel, creator in related_creators if rel.Type == 'artist']
-
 
     tags = Tag.query.join(MangaTag).filter(MangaTag.MangaId == manga_id, Tag.GroupName.in_(['genre', 'theme', 'format'])).all()
     genres = [t for t in tags if t.GroupName == 'genre']
     themes = [t for t in tags if t.GroupName == 'theme']
     formats = [t for t in tags if t.GroupName == 'format']
 
-    # ✅ dùng hàm mới
-    manga_links = resolve_manga_links(manga_id)
+    # resolve manga_links logic exists in your file; keep calling that if defined
+    try:
+        manga_links = resolve_manga_links(manga_id)
+    except Exception:
+        manga_links = []
 
     alt_titles = MangaAltTitle.query.filter_by(MangaId=manga_id).all()
+
+    # --- COMMENTS: get current sort & page from querystring ---
+    sort = request.args.get('sort', 'newest')
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+
+    comments_query = Comment.query.filter_by(MangaId=str(manga_id), IsDeleted=False)
+
+    if sort == 'oldest':
+        comments_query = comments_query.order_by(Comment.CreatedAt.asc())
+    elif sort == 'most_liked':
+        comments_query = comments_query.order_by(Comment.LikeCount.desc(), Comment.CreatedAt.desc())
+    else:  # newest
+        comments_query = comments_query.order_by(Comment.CreatedAt.desc())
+
+    comments_pagination = comments_query.paginate(page=page, per_page=per_page, error_out=False)
+    comments = comments_pagination.items
 
     tab_contents = {
         'chapters': url_for('manga.chapters', manga_id=manga.MangaId),
@@ -6869,29 +7368,518 @@ def manga_detail(manga_id):
     }
 
     return render_template('manga_detail.html',
-                            manga=manga,
-                            manga_cover_url=manga_cover_url,
-                            manga_stats=manga_stats,
-                            content_tags=content_tags,
-                            manga_description=manga_description,
-                            description_long=description_long,
-                            authors=authors,
-                            artists=artists,
-                            genres=genres,
-                            themes=themes,
-                            formats=formats,
-                            manga_links=manga_links,
-                            alt_titles=alt_titles,
-                            tab_contents=tab_contents)
+                           manga=manga,
+                           manga_cover_url=manga_cover_url,
+                           manga_stats=manga_stats,
+                           content_tags=content_tags,
+                           manga_description=manga_description,
+                           description_long=description_long,
+                           authors=authors,
+                           artists=artists,
+                           genres=genres,
+                           themes=themes,
+                           formats=formats,
+                           manga_links=manga_links,
+                           alt_titles=alt_titles,
+                           tab_contents=tab_contents,
+                           comments=comments,
+                           comments_pagination=comments_pagination,
+                           comments_sort=sort,
+                           is_authenticated=current_user.is_authenticated)
 
+
+import base64
+from io import BytesIO
+import shutil
+from flask import Blueprint, abort, jsonify, redirect, render_template, request, send_file, url_for, flash
+from flask_login import current_user, login_required
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+import requests
+from sqlalchemy import desc, func, or_
+from .models import (
+    Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink,
+    MangaRelated, MangaStatistics, MangaTag, Tag, Comment, Report
+)
+from . import db
+import os
+import uuid
+
+main = Blueprint('main', __name__)
+manga = Blueprint('manga', __name__)
+
+# ======================
+# Helper
+# ======================
+
+BASE_URL = "https://api.mangadex.org"
+
+def now():
+    return datetime.utcnow()
+
+# Helper: fetch cover từ MangaDex nếu DB chưa có
+def fetch_and_store_covers(manga_id):
+    limit, offset = 100, 0
+    while True:
+        params = {"manga[]": manga_id, "limit": limit, "offset": offset}
+        resp = requests.get(f"{BASE_URL}/cover", params=params)
+        resp.raise_for_status()
+        data = resp.json()
+
+        if not data.get("data"):
+            break
+
+        for item in data["data"]:
+            cid = item["id"]
+            attrs = item.get("attributes", {})
+            filename = attrs.get("fileName")
+            url = f"https://uploads.mangadex.org/covers/{manga_id}/{filename}"
+
+            if not Cover.query.get(cid):
+                image_data = None
+                try:
+                    img_resp = requests.get(url)
+                    if img_resp.status_code == 200:
+                        image_data = img_resp.content
+                except:
+                    pass
+
+                cover = Cover(
+                    cover_id=cid,
+                    manga_id=manga_id,
+                    type=item.get("type"),
+                    description=attrs.get("description"),
+                    volume=attrs.get("volume"),
+                    fileName=filename,
+                    locale=attrs.get("locale"),
+                    createdAt=attrs.get("createdAt"),
+                    updatedAt=attrs.get("updatedAt"),
+                    version=attrs.get("version"),
+                    rel_user_id=None,
+                    url=url,
+                    image_data=image_data
+                )
+                db.session.add(cover)
+
+        db.session.commit()
+
+        offset += limit
+        if offset >= data["total"]:
+            break
+
+# ======================
+# Provider mapping
+# ======================
+PROVIDER_MAP = {
+    "al": ("AniList", "https://anilist.co/manga/{}"),
+    "ap": ("Anime-Planet", "https://www.anime-planet.com/manga/{}"),
+    "bw": ("BookWalker", "https://www.bookwalker.jp{}"),
+    "kt": ("Kitsu", "https://kitsu.io/manga/{}"),
+    "mu": ("MangaUpdates", "https://www.mangaupdates.com/series.html?id={}"),
+    "amz": ("Amazon JP", "https://www.amazon.co.jp/dp/{}"),
+    "cdj": ("CDJapan", "https://www.cdjapan.co.jp/product/{}"),
+    "ebj": ("eBookJapan", "https://ebookjapan.yahoo.co.jp/books/{}"),
+    "mal": ("MyAnimeList", "https://myanimelist.net/manga/{}"),
+    "dj": ("DLsite", "https://www.dlsite.com/maniax/work/=/product_id/{}.html"),
+    "nu": ("Renta!", "https://www.ebookrenta.com/renta/sc/frm/item/{}"),
+}
+
+def resolve_manga_links(manga_id):
+    links = MangaLink.query.filter_by(MangaId=manga_id).all()
+    resolved_links = []
+
+    for link in links:
+        provider = link.Provider
+        url_value = link.Url
+        provider_full, url_pattern = PROVIDER_MAP.get(provider, (provider.upper(), None))
+
+        if not url_value:
+            continue
+        if url_value.startswith("http://") or url_value.startswith("https://"):
+            final_url = url_value
+        elif url_pattern:
+            final_url = url_pattern.format(url_value)
+        else:
+            final_url = url_value
+
+        resolved_links.append({
+            "Provider": provider,
+            "ProviderFullName": provider_full,
+            "Url": final_url
+        })
+    return resolved_links
+
+
+# ======================
+# Comment helpers
+# ======================
+def serialize_comment(c):
+    user = c.user
+    username = user.Username if user else "Unknown"
+    avatar = user.Avatar if user and user.Avatar else None
+    return {
+        "CommentId": c.CommentId,
+        "UserId": c.UserId,
+        "Username": username,
+        "Avatar": avatar,
+        "Content": c.Content,
+        "IsSpoiler": bool(c.IsSpoiler),
+        "LikeCount": int(c.LikeCount or 0),
+        "DislikeCount": int(c.DislikeCount or 0),
+        "CreatedAt": c.CreatedAt.isoformat() if c.CreatedAt else None,
+        "UpdatedAt": c.UpdatedAt.isoformat() if c.UpdatedAt else None,
+        "IsDeleted": bool(c.IsDeleted)
+    }
+
+# ======================
+# Main routes
+# ======================
+
+@main.route('/')
+@main.route('/home')
+def home():
+    current_date = datetime(2025, 9, 21, 2, 50)
+    four_months_ago = current_date - relativedelta(months=4)
+
+    page = request.args.get('page', 1, type=int)
+    query = (
+        db.session.query(Manga)
+        .join(MangaStatistics)
+        .filter(
+            Manga.UpdatedAt >= four_months_ago,
+            Manga.TitleEn.isnot(None),
+            Manga.ContentRating.isnot(None),
+            Manga.PublicationDemographic.isnot(None),
+            Manga.Status.isnot(None),
+            Manga.Year.isnot(None),
+            MangaStatistics.Follows.isnot(None),
+            MangaStatistics.AverageRating.isnot(None)
+        )
+        .order_by(MangaStatistics.Follows.desc())
+        .paginate(page=page, per_page=10, error_out=False)
+    )
+
+    mangas = query.items
+    pagination = query
+
+    manga_data = []
+    for manga in mangas:
+        stats = manga.stats[0] if manga.stats else None
+        if not stats:
+            continue
+
+        cover = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+        if cover:
+            image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data}"
+        else:
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id = cover_info['manga_id']
+                cover_id = cover_info['cover_id']
+                file_name = cover_info['file_name']
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id}/{file_name}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=cover_id,
+                        FileName=file_name,
+                        ImageData=image_data
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data = base64.b64encode(image_data).decode('utf-8')
+                    cover_url = f"data:image/jpeg;base64,{image_data}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id}: {e}")
+                    cover_url = url_for('static', filename='assets/default_cover.png')
+            else:
+                cover_url = url_for('static', filename='assets/default_cover.png')
+
+        manga_data.append({
+            'manga': manga,
+            'stats': stats,
+            'cover_url': cover_url
+        })
+
+    return render_template('home.html', mangas=manga_data, pagination=pagination, is_authenticated=current_user.is_authenticated)
+
+
+# ======================
+# Manga + Comment routes
+# ======================
+
+# ======================
+# Manga + Comment routes
+# ======================
+
+@manga.route('/<uuid:manga_id>')
+def manga_detail(manga_id):
+    manga = Manga.query.get(manga_id)
+    if not manga:
+        return "Manga not found", 404
+    cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
+    manga_cover_url = (
+        f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}"
+        if cover else url_for('static', filename='assets/default_cover.png')
+    )
+    manga_stats = MangaStatistics.query.filter_by(MangaId=manga_id).first()
+    content_tags = Tag.query.join(MangaTag).filter(MangaTag.MangaId == manga_id, Tag.GroupName == 'content').all()
+    descriptions = MangaDescription.query.filter_by(MangaId=manga_id).all()
+    manga_description = next(
+        (d.Description for d in descriptions if d.LangCode == 'en'),
+        next(
+            (d.Description for d in descriptions if d.LangCode == 'vi'),
+            next(
+                (d.Description for d in descriptions if d.LangCode == 'ja'),
+                next((d.Description for d in descriptions if d.LangCode), None)
+            )
+        )
+    )
+    description_long = len(manga_description or '') > 200 if manga_description else False
+    related_creators = (
+        db.session.query(MangaRelated, Creator)
+        .join(Creator, MangaRelated.RelatedId == Creator.CreatorId)
+        .filter(MangaRelated.MangaId == manga_id)
+        .all()
+    )
+    authors = [creator for rel, creator in related_creators if rel.Type == 'author']
+    artists = [creator for rel, creator in related_creators if rel.Type == 'artist']
+    tags = Tag.query.join(MangaTag).filter(MangaTag.MangaId == manga_id, Tag.GroupName.in_(['genre', 'theme', 'format'])).all()
+    genres = [t for t in tags if t.GroupName == 'genre']
+    themes = [t for t in tags if t.GroupName == 'theme']
+    formats = [t for t in tags if t.GroupName == 'format']
+    manga_links = resolve_manga_links(manga_id)
+    alt_titles = MangaAltTitle.query.filter_by(MangaId=manga_id).all()
+    chapters = Chapter.query.filter_by(MangaId=manga_id).order_by(Chapter.ChapterNumber.desc()).all()
+    sort = request.args.get('sort', 'newest')
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+    comments_query = Comment.query.filter_by(MangaId=str(manga_id), IsDeleted=False)
+    if sort == 'oldest':
+        comments_query = comments_query.order_by(Comment.CreatedAt.asc())
+    elif sort == 'most_liked':
+        comments_query = comments_query.order_by(Comment.LikeCount.desc(), Comment.CreatedAt.desc())
+    else:
+        comments_query = comments_query.order_by(Comment.CreatedAt.desc())
+    comments_pagination = comments_query.paginate(page=page, per_page=per_page, error_out=False)
+    comments = comments_pagination.items
+    return render_template(
+        'manga_detail.html',
+        manga=manga,
+        manga_cover_url=manga_cover_url,
+        manga_stats=manga_stats,
+        content_tags=content_tags,
+        manga_description=manga_description,
+        description_long=description_long,
+        authors=authors,
+        artists=artists,
+        genres=genres,
+        themes=themes,
+        formats=formats,
+        manga_links=manga_links,
+        alt_titles=alt_titles,
+        chapters=chapters,
+        comments=comments,
+        comments_pagination=comments_pagination,
+        comments_sort=sort,
+        is_authenticated=current_user.is_authenticated
+    )
 
 @manga.route('/<uuid:manga_id>/chapters')
 def chapters(manga_id):
-    return render_template('chapters.html', manga_id=manga_id)
+    manga = Manga.query.get(manga_id)
+    if not manga:
+        return "Manga not found", 404
+    chapters = Chapter.query.filter_by(MangaId=manga_id).order_by(Chapter.ChapterNumber.desc()).all()
+    return render_template('chapters.html', manga_id=manga_id, chapters=chapters)
 
 @manga.route('/<uuid:manga_id>/comments')
 def comments(manga_id):
-    return render_template('comments.html', manga_id=manga_id)
+    manga = Manga.query.get(manga_id)
+    if not manga:
+        return "Manga not found", 404
+    sort = request.args.get('sort', 'newest')
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+    comments_query = Comment.query.filter_by(MangaId=str(manga_id), IsDeleted=False)
+    if sort == 'oldest':
+        comments_query = comments_query.order_by(Comment.CreatedAt.asc())
+    elif sort == 'most_liked':
+        comments_query = comments_query.order_by(Comment.LikeCount.desc(), Comment.CreatedAt.desc())
+    else:
+        comments_query = comments_query.order_by(Comment.CreatedAt.desc())
+    comments_pagination = comments_query.paginate(page=page, per_page=per_page, error_out=False)
+    comments = comments_pagination.items
+    return render_template(
+        'comments.html',
+        manga=manga,
+        comments=comments,
+        comments_pagination=comments_pagination,
+        comments_sort=sort,
+        is_authenticated=current_user.is_authenticated
+    )
+
+
+# ======================
+# Comment APIs (full CRUD + reaction + report)
+# ======================
+
+@manga.route('/<uuid:manga_id>/comments', methods=['POST'])
+@login_required
+def add_comment(manga_id):
+    content = request.form.get("content", "").strip()
+    if not content:
+        flash("Content must not be empty.", "error")
+        return redirect(url_for('manga.manga_detail', manga_id=manga_id))
+    if len(content) < 5:
+        flash("Comment is too short (min 5 characters).", "error")
+        return redirect(url_for('manga.manga_detail', manga_id=manga_id))
+    is_spoiler_raw = request.form.get("is_spoiler", "false")
+    is_spoiler = str(is_spoiler_raw).lower() in ["1", "true", "on", "yes"]
+    chapter_id = request.form.get("chapter_id")
+    m = Manga.query.get(manga_id)
+    if not m:
+        flash("Manga not found.", "error")
+        return redirect(url_for('main.home'))
+    new_comment = Comment(
+        CommentId=str(uuid.uuid4()),
+        UserId=str(current_user.get_id()),
+        MangaId=str(manga_id),
+        ChapterId=chapter_id if chapter_id else None,
+        Content=content,
+        CreatedAt=now(),
+        UpdatedAt=now(),
+        IsDeleted=False,
+        IsSpoiler=is_spoiler,
+        LikeCount=0,
+        DislikeCount=0,
+    )
+    db.session.add(new_comment)
+    try:
+        db.session.commit()
+        flash("Comment posted successfully.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash("Error posting comment.", "error")
+        print(f"Error committing comment: {e}")
+    return redirect(url_for('manga.manga_detail', manga_id=manga_id))
+
+@manga.route("/comment/<uuid:comment_id>/like", methods=["POST"])
+@login_required
+def like_comment(comment_id):
+    c = Comment.query.get(comment_id)
+    if not c or c.IsDeleted:
+        return jsonify({"success": False, "message": "Comment not found."}), 404
+    c.LikeCount = (c.LikeCount or 0) + 1
+    db.session.add(c)
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error liking comment {comment_id}: {e}")
+        return jsonify({"success": False, "message": "Error liking comment."}), 500
+    return jsonify({"success": True, "like_count": c.LikeCount, "dislike_count": c.DislikeCount})
+
+@manga.route("/comment/<uuid:comment_id>/dislike", methods=["POST"])
+@login_required
+def dislike_comment(comment_id):
+    c = Comment.query.get(comment_id)
+    if not c or c.IsDeleted:
+        return jsonify({"success": False, "message": "Comment not found."}), 404
+    c.DislikeCount = (c.DislikeCount or 0) + 1
+    db.session.add(c)
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error disliking comment {comment_id}: {e}")
+        return jsonify({"success": False, "message": "Error disliking comment."}), 500
+    return jsonify({"success": True, "like_count": c.LikeCount, "dislike_count": c.DislikeCount})
+
+@manga.route("/comment/<uuid:comment_id>/edit", methods=["POST"])
+@login_required
+def edit_comment(comment_id):
+    c = Comment.query.get(comment_id)
+    if not c or c.IsDeleted:
+        flash("Comment not found.", "error")
+        return redirect(url_for('main.home'))
+    if str(c.UserId) != str(current_user.get_id()):
+        flash("You can only edit your own comments.", "error")
+        return redirect(url_for('main.home'))
+    content = request.form.get("content", "").strip()
+    if not content:
+        flash("Content must not be empty.", "error")
+        return redirect(url_for('manga.manga_detail', manga_id=c.MangaId))
+    if len(content) < 5:
+        flash("Comment is too short (min 5 characters).", "error")
+        return redirect(url_for('manga.manga_detail', manga_id=c.MangaId))
+    is_spoiler_raw = request.form.get("is_spoiler", "false")
+    is_spoiler = str(is_spoiler_raw).lower() in ["1", "true", "on", "yes"]
+    c.Content = content
+    c.IsSpoiler = is_spoiler
+    c.UpdatedAt = now()
+    try:
+        db.session.commit()
+        flash("Comment updated successfully.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash("Error updating comment.", "error")
+        print(f"Error editing comment {comment_id}: {e}")
+    return redirect(url_for('manga.manga_detail', manga_id=c.MangaId))
+
+@manga.route("/comment/<uuid:comment_id>/delete", methods=["POST"])
+@login_required
+def delete_comment(comment_id):
+    c = Comment.query.get(comment_id)
+    if not c or c.IsDeleted:
+        flash("Comment not found.", "error")
+        return redirect(url_for('main.home'))
+    if str(c.UserId) != str(current_user.get_id()):
+        flash("You can only delete your own comments.", "error")
+        return redirect(url_for('main.home'))
+    c.IsDeleted = True
+    c.UpdatedAt = now()
+    try:
+        db.session.commit()
+        flash("Comment deleted successfully.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash("Error deleting comment.", "error")
+        print(f"Error deleting comment {comment_id}: {e}")
+    return redirect(url_for('manga.manga_detail', manga_id=c.MangaId))
+
+@manga.route("/comment/<uuid:comment_id>/report", methods=["POST"])
+@login_required
+def report_comment(comment_id):
+    c = Comment.query.get(comment_id)
+    if not c or c.IsDeleted:
+        flash("Comment not found.", "error")
+        return redirect(url_for('main.home'))
+    reason = request.form.get("reason", "").strip()
+    if not reason:
+        flash("Please provide a reason for the report.", "error")
+        return redirect(url_for('manga.manga_detail', manga_id=c.MangaId))
+    report = Report(
+        ReportId=str(uuid.uuid4()),
+        UserId=str(current_user.get_id()),
+        CommentId=comment_id,
+        Reason=reason,
+        CreatedAt=now()
+    )
+    db.session.add(report)
+    try:
+        db.session.commit()
+        flash("Comment reported successfully.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash("Error reporting comment.", "error")
+        print(f"Error reporting comment {comment_id}: {e}")
+    return redirect(url_for('manga.manga_detail', manga_id=c.MangaId))
+
 
 @manga.route("/manga/<manga_id>/art", methods=["GET"])
 def manga_art(manga_id):
@@ -6953,9 +7941,9 @@ def creator_detail(creator_id):
     # Truy vấn các manga của tác giả, join với MangaStatistics để lấy điểm số
     mangas_query = (
         db.session.query(Manga, MangaStatistics)
-        .join(MangaRelated, Manga.MangaId == MangaRelated.RelatedId)
+        .join(MangaRelated, Manga.MangaId == MangaRelated.MangaId) # Join với MangaRelated.MangaId
         .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
-        .filter(MangaRelated.MangaId == creator_id)
+        .filter(MangaRelated.RelatedId == creator_id) # Sửa lỗi ở đây
         .order_by(desc(MangaStatistics.Follows)) # Mặc định sắp xếp theo lượt theo dõi
         .all()
     )
@@ -7005,6 +7993,29 @@ def creator_detail(creator_id):
     )
 
 
+@main.route("/search_creators")
+def search_creators():
+    query = request.args.get('query', '')
+    if not query or len(query) < 2:
+        return jsonify([])
+
+    # Lấy 5 creator có tên khớp với truy vấn, không phân biệt chữ hoa/thường
+    creators = Creator.query.filter(
+        func.lower(Creator.Name).like(f'%{query.lower()}%')
+    ).limit(5).all()
+
+    creator_list = [{
+        'creator_id': creator.CreatorId,
+        'name': creator.Name
+    } for creator in creators]
+    
+    return jsonify(creator_list)
+
+
+
+# ======================
+# User routes
+# ======================
 @main.route("/follow/<uuid:user_id>")
 def follow(user_id):
     return f"Follow user {user_id}"
@@ -7016,12 +8027,12 @@ def message(user_id):
 @main.route("/report/<uuid:user_id>")
 def report(user_id):
     return f"Report user {user_id}"
-
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\__init__.py ---
 # app/__init__.py
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+
 
 db = SQLAlchemy()
 login_manager = LoginManager()
@@ -7036,17 +8047,20 @@ def create_app():
 
     from .auth import auth as auth_blueprint
     from .routes import main as main_blueprint, manga as manga_blueprint
+
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
-    app.register_blueprint(manga_blueprint, url_prefix='/manga')  # Thêm url_prefix để nhóm các route manga
+    app.register_blueprint(manga_blueprint, url_prefix='/manga')
 
     return app
 
+# user loader
 from .models import User
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
+
 === Folder: app\static ===
 
 === Folder: app\static\assets ===
@@ -7232,6 +8246,201 @@ def load_user(user_id):
     /* tăng 30% so với 400px */
     padding: 40px;
     /* tăng 15% so với 30px */
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\comments.css ---
+/* Comment section styles */
+.comment-form {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.comment {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-username {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.comment-content.spoiler {
+    filter: blur(3px);
+    cursor: pointer;
+}
+
+.comment-content.spoiler:hover,
+.comment-content.spoiler.active {
+    filter: none;
+}
+
+.comment-actions button {
+    margin-right: 10px;
+}
+
+.alert-container {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+@media (max-width: 576px) {
+    .comment-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .comment-actions button {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\creator_detail.css ---
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.creator-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.creator-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.creator-name {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.creator-biography {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.separator {
+    border-color: #444;
+    margin: 40px 0;
+}
+
+.manga-list-section {
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.manga-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.manga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.manga-cover-container {
+    width: 100%;
+    padding-top: 150%;
+    /* Tỉ lệ 2:3 */
+    position: relative;
+}
+
+.manga-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manga-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.manga-card:hover .manga-info-overlay {
+    transform: translateY(0);
+}
+
+.manga-title-overlay {
+    font-size: 0.9rem;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    text-align: center;
+}
+
+.manga-stats-overlay {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.no-manga-found {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .manga-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .manga-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .creator-name {
+        font-size: 2rem;
+    }
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
 .manga-detail-container {
@@ -20377,6 +21586,10 @@ a {
   padding: 10px;
   color: #E0E0E0;
   min-width: 300px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 .search-result-item {
@@ -20434,6 +21647,58 @@ a {
   margin-right: 5px;
   background-color: #999999;
   /* fallback */
+}
+
+/* Styling for search result groups */
+.search-group-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  border-left: 3px solid #6c757d;
+}
+
+/* Specific styles for Creator search items */
+.search-result-item.creator-item {
+  padding: 8px 10px;
+}
+
+.search-result-item.creator-item .search-icon {
+  font-size: 20px;
+  color: #adb5bd;
+  margin-right: 10px;
+}
+
+.search-result-item.creator-item .search-result-title {
+  font-weight: normal;
+  color: #E0E0E0;
+}
+
+/* Bỏ gạch chân cho tất cả link trong search popup */
+.search-result-item {
+  text-decoration: none;
+}
+
+/* Đảm bảo tiêu đề cũng không bị gạch chân */
+.search-result-title {
+  text-decoration: none;
+}
+
+/* Giữ lại hiệu ứng gạch chân khi di chuột vào */
+.search-result-title:hover {
+  text-decoration: underline;
+}
+
+/* Đảm bảo các mục tìm kiếm creator cũng không bị gạch chân */
+.search-result-item.creator-item {
+  text-decoration: none;
+}
+
+/* Add to existing style.css */
+.alert-container .alert {
+  margin-bottom: 10px;
 }
 === Folder: app\static\flags ===
 
@@ -20774,6 +22039,196 @@ for lang, country in lang_to_country.items():
 
 === Folder: app\static\js ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\comments.js ---
+// static/js/comments.js
+document.addEventListener("DOMContentLoaded", function () {
+    // ===== Add new comment (AJAX) =====
+    const commentForm = document.getElementById("comment-form");
+    if (commentForm) {
+        commentForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const formData = new FormData(commentForm);
+
+            try {
+                const response = await fetch(commentForm.action, {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    const c = result.comment;
+                    const list = document.getElementById("comments-list");
+
+                    // build new comment HTML
+                    const div = document.createElement("div");
+                    div.classList.add("comment", "card", "mb-2");
+                    div.setAttribute("data-comment-id", c.CommentId);
+
+                    div.innerHTML = `
+                        <div class="card-body d-flex">
+                            <div class="me-3">
+                                <img src="${c.Avatar || '/static/assets/default_avatar.png'}"
+                                     class="comment-avatar rounded-circle"
+                                     width="48" height="48">
+                            </div>
+                            <div class="flex-fill">
+                                <div class="d-flex align-items-start">
+                                    <div>
+                                        <a href="/profile" class="fw-bold">${c.Username}</a>
+                                        <div class="text-muted small">Just now</div>
+                                    </div>
+                                    <div class="ms-auto comment-actions">
+                                        <button class="btn btn-sm btn-outline-success comment-like"
+                                                data-comment-id="${c.CommentId}">
+                                            👍 <span>0</span>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger comment-dislike"
+                                                data-comment-id="${c.CommentId}">
+                                            👎 <span>0</span>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-secondary comment-edit"
+                                                data-comment-id="${c.CommentId}">Edit</button>
+                                        <button class="btn btn-sm btn-outline-dark comment-delete"
+                                                data-comment-id="${c.CommentId}">Delete</button>
+                                        <button class="btn btn-sm btn-outline-warning comment-report"
+                                                data-comment-id="${c.CommentId}">Report</button>
+                                    </div>
+                                </div>
+                                <div class="comment-content mt-2 ${c.IsSpoiler ? 'spoiler' : ''}">
+                                    ${c.Content.replace(/\n/g, "<br>")}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    // prepend vào list
+                    if (list) {
+                        list.prepend(div);
+                    }
+
+                    // reset form
+                    commentForm.reset();
+                } else {
+                    alert("Failed to post comment");
+                }
+            } catch (err) {
+                console.error("Error adding comment:", err);
+                alert("Error adding comment");
+            }
+        });
+    }
+
+    // ===== Sort comments =====
+    const sortSelect = document.getElementById("sort-select");
+    if (sortSelect) {
+        sortSelect.addEventListener("change", function () {
+            const url = new URL(window.location.href);
+            url.searchParams.set("sort", this.value);
+            window.location.href = url.toString();
+        });
+    }
+
+    // ===== Like / Dislike =====
+    document.body.addEventListener("click", async function (e) {
+        if (e.target.closest(".comment-like")) {
+            const btn = e.target.closest(".comment-like");
+            const cid = btn.dataset.commentId;
+            try {
+                const res = await fetch(`/comment/${cid}/like`, { method: "POST" });
+                const data = await res.json();
+                if (data.success) {
+                    btn.querySelector("span").innerText = data.like_count;
+                }
+            } catch (err) {
+                console.error("Error liking comment:", err);
+            }
+        }
+
+        if (e.target.closest(".comment-dislike")) {
+            const btn = e.target.closest(".comment-dislike");
+            const cid = btn.dataset.commentId;
+            try {
+                const res = await fetch(`/comment/${cid}/dislike`, { method: "POST" });
+                const data = await res.json();
+                if (data.success) {
+                    btn.querySelector("span").innerText = data.dislike_count;
+                }
+            } catch (err) {
+                console.error("Error disliking comment:", err);
+            }
+        }
+    });
+
+    // ===== Edit comment =====
+    document.body.addEventListener("click", async function (e) {
+        if (e.target.closest(".comment-edit")) {
+            const btn = e.target.closest(".comment-edit");
+            const cid = btn.dataset.commentId;
+            const contentDiv = btn.closest(".comment").querySelector(".comment-content");
+            const oldContent = contentDiv.innerText.trim();
+
+            const newContent = prompt("Edit your comment:", oldContent);
+            if (newContent && newContent.length >= 5) {
+                try {
+                    const res = await fetch(`/comment/${cid}`, {
+                        method: "PUT",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ content: newContent })
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                        contentDiv.innerHTML = data.content.replace(/\n/g, "<br>");
+                    }
+                } catch (err) {
+                    console.error("Error editing comment:", err);
+                }
+            }
+        }
+    });
+
+    // ===== Delete comment =====
+    document.body.addEventListener("click", async function (e) {
+        if (e.target.closest(".comment-delete")) {
+            const btn = e.target.closest(".comment-delete");
+            const cid = btn.dataset.commentId;
+            if (!confirm("Delete this comment?")) return;
+            try {
+                const res = await fetch(`/comment/${cid}`, { method: "DELETE" });
+                const data = await res.json();
+                if (data.success) {
+                    btn.closest(".comment").remove();
+                }
+            } catch (err) {
+                console.error("Error deleting comment:", err);
+            }
+        }
+    });
+
+    // ===== Report comment =====
+    document.body.addEventListener("click", async function (e) {
+        if (e.target.closest(".comment-report")) {
+            const btn = e.target.closest(".comment-report");
+            const cid = btn.dataset.commentId;
+            const reason = prompt("Enter reason for report:");
+            if (!reason) return;
+            try {
+                const res = await fetch(`/comment/${cid}/report`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ reason: reason })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert("Report submitted");
+                }
+            } catch (err) {
+                console.error("Error reporting comment:", err);
+            }
+        }
+    });
+});
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
 document.addEventListener('DOMContentLoaded', function () {
     // Header background
@@ -20968,79 +22423,113 @@ function debounce(func, delay) {
     };
 }
 
-// Search box event
+// Search box event (updated to include Creator search)
 document.addEventListener('DOMContentLoaded', function () {
     const searchBox = document.getElementById('searchBox');
     const searchPopup = document.getElementById('search-popup');
 
-    if (searchBox && searchPopup) {
+    // Thêm logic để đóng popup khi nhấn phím ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            searchPopup.style.display = 'none';
+        }
+    });
 
-        const performSearch = () => {
-            const title = searchBox.value.trim();
-            if (title.length < 2) {
+    if (searchBox && searchPopup) {
+        const performSearch = async () => {
+            const query = searchBox.value.trim();
+
+            if (query.length < 2) {
                 searchPopup.style.display = 'none';
                 return;
             }
 
-            // CẬP NHẬT: Luôn đặt chiều rộng của pop-up bằng chiều rộng của search box
+            // Đặt chiều rộng của pop-up bằng chiều rộng của search box
             const searchBoxWidth = searchBox.getBoundingClientRect().width;
             searchPopup.style.width = `${searchBoxWidth}px`;
 
-            fetch(`/search?title=${encodeURIComponent(title)}`)
-                .then(resp => resp.json())
-                .then(results => {
-                    if (results.length === 0) {
-                        searchPopup.innerHTML = '<p class="text-center text-muted">No results found.</p>';
-                    } else {
-                        let html = '';
-                        results.forEach(r => {
-                            html += `
-                                <div class="search-result-item">
-                                    <img src="${r.cover_url}" alt="${r.title}" class="search-result-cover">
-                                    <div class="search-result-info">
-                                        <a href="/manga/${r.id}" class="search-result-title">${r.title}</a>
-                                        <div class="search-result-stats">
-                                            ⭐ ${r.rating} | ❤️ ${r.follows}
-                                        </div>
-                                        <div class="search-result-status">
-                                            <span class="status-dot" data-status="${r.status.toLowerCase()}"></span> ${r.status}
-                                        </div>
+            try {
+                // Gửi 2 yêu cầu API song song với Promise.all
+                const [mangaResponse, creatorsResponse] = await Promise.all([
+                    // SỬA LỖI TẠI ĐÂY: Sử dụng đúng endpoint `/search`
+                    fetch(`/search?title=${encodeURIComponent(query)}`),
+                    fetch(`/search_creators?query=${encodeURIComponent(query)}`)
+                ]);
+
+                if (!mangaResponse.ok || !creatorsResponse.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const mangaResults = await mangaResponse.json();
+                const creatorsResults = await creatorsResponse.json();
+
+                let htmlContent = '';
+
+                // === Phần hiển thị kết quả Manga ===
+                if (mangaResults.length > 0) {
+                    htmlContent += '<div class="search-group-title">Manga</div>';
+                    mangaResults.forEach(r => {
+                        htmlContent += `
+                            <a href="/manga/${r.id}" class="search-result-item">
+                                <img src="${r.cover_url}" alt="${r.title}" class="search-result-cover">
+                                <div class="search-result-info">
+                                    <span class="search-result-title">${r.title}</span>
+                                    <div class="search-result-stats">
+                                        ⭐ ${r.rating} | ❤️ ${r.follows}
+                                    </div>
+                                    <div class="search-result-status">
+                                        <span class="status-dot" data-status="${r.status.toLowerCase()}"></span> ${r.status}
                                     </div>
                                 </div>
-                            `;
-                        });
-                        searchPopup.innerHTML = html;
+                            </a>
+                        `;
+                    });
+                }
 
-                        // Set status dot colors
-                        document.querySelectorAll('.status-dot').forEach(dot => {
-                            let status = dot.getAttribute('data-status').toLowerCase();
-                            switch (status) {
-                                case "ongoing": dot.style.backgroundColor = "#00cc00"; break;
-                                case "canceled": dot.style.backgroundColor = "#ff0000"; break;
-                                case "hiatus": dot.style.backgroundColor = "#cc9900"; break;
-                                case "completed": dot.style.backgroundColor = "#0099ff"; break;
-                                default: dot.style.backgroundColor = "#999999";
-                            }
-                        });
-                    }
+                // === Phần hiển thị kết quả Creator ===
+                if (creatorsResults.length > 0) {
+                    htmlContent += '<div class="search-group-title">Creators</div>';
+                    creatorsResults.forEach(creator => {
+                        htmlContent += `
+                            <a href="/creator/${creator.creator_id}" class="search-result-item creator-item">
+                                <i class="bi bi-person-circle search-icon"></i>
+                                <span class="search-result-title">${creator.name}</span>
+                            </a>
+                        `;
+                    });
+                }
+
+                // Hiển thị kết quả hoặc thông báo không tìm thấy
+                if (htmlContent) {
+                    searchPopup.innerHTML = htmlContent;
                     searchPopup.style.display = 'block';
-                })
-                .catch(err => {
-                    console.error(err);
-                    searchPopup.style.display = 'none';
-                });
+
+                    // Set status dot colors cho manga
+                    document.querySelectorAll('.status-dot').forEach(dot => {
+                        let status = dot.getAttribute('data-status').toLowerCase();
+                        switch (status) {
+                            case "ongoing": dot.style.backgroundColor = "#00cc00"; break;
+                            case "canceled": dot.style.backgroundColor = "#ff0000"; break;
+                            case "hiatus": dot.style.backgroundColor = "#cc9900"; break;
+                            case "completed": dot.style.backgroundColor = "#0099ff"; break;
+                            default: dot.style.backgroundColor = "#999999";
+                        }
+                    });
+
+                } else {
+                    searchPopup.innerHTML = '<div class="no-results">Không có kết quả nào.</div>';
+                    searchPopup.style.display = 'block';
+                }
+
+            } catch (error) {
+                console.error('Search failed:', error);
+                searchPopup.style.display = 'none';
+            }
         };
 
-        // CẬP NHẬT: Thêm các event listener để quản lý trạng thái .expanded
-        searchBox.addEventListener('input', debounce(performSearch, 500)); // Giảm debounce xuống 0.5s
+        // Gắn lại event listener cho searchBox, sử dụng debounce
+        searchBox.addEventListener('input', debounce(performSearch, 500));
 
-        searchBox.addEventListener('focus', function () {
-            searchBox.classList.add('expanded');
-            // Nếu có text sẵn thì hiện lại kết quả
-            if (searchBox.value.trim().length >= 2) {
-                performSearch();
-            }
-        });
 
         searchBox.addEventListener('blur', function () {
             // Chỉ thu nhỏ lại nếu không có chữ bên trong
@@ -21049,12 +22538,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Hide popup when click outside
         document.addEventListener('click', function (e) {
             if (!searchBox.contains(e.target) && !searchPopup.contains(e.target)) {
                 searchPopup.style.display = 'none';
             }
         });
+
     }
 });
 === Folder: app\templates ===
@@ -21228,72 +22717,198 @@ document.addEventListener('DOMContentLoaded', function () {
     </ul>
 </div>
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\comments.html ---
-{% extends "manga_detail.html" %}
+{# app/templates/comments.html #}
+{# Partial to render comments section. #}
 
-{% block tab_content %}
-<div class="tab-pane" id="comments">
-    <p class="text-center text-gray">No content available yet.</p>
-</div>
-{% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\creator_detail.html ---
-{% extends "base.html" %}
+{% set mid = manga.MangaId if manga is defined else (manga_id if manga_id is defined else None) %}
 
-{% block title %}{{ creator.Name }} | MangaDex Clone{% endblock %}
+<div class="comments-section container-fluid py-3">
 
-{% block content %}
-<div class="container-fluid my-4">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="{{ url_for('static', filename='assets/default_avatar.png') }}" alt="{{ creator.Name }}"
-                class="img-fluid rounded-circle mb-3">
-            <h1 class="display-5 fw-bold">{{ creator.Name }}</h1>
-        </div>
-        <div class="col-md-9">
-            <h2 class="h5 text-muted">Biography</h2>
-            <div class="biography-content">
-                <p>{{ creator.BiographyEn if creator.BiographyEn else 'No biography available.' }}</p>
+    <!-- Comment form -->
+    <div class="comment-form mb-3">
+        {% if is_authenticated %}
+        <form id="comment-form" method="post" action="{{ url_for('manga.add_comment', manga_id=mid) }}">
+            <div class="d-flex">
+                <div class="me-2">
+                    <img src="{{ current_user.Avatar if current_user and current_user.Avatar else url_for('static', filename='assets/default_avatar.png') }}"
+                        class="comment-avatar" alt="avatar" width="48" height="48">
+                </div>
+                <div class="flex-fill">
+                    <textarea name="content" id="comment-content-input" class="form-control mb-2" rows="4"
+                        placeholder="Write your comment..." required></textarea>
+                    <div class="d-flex align-items-center">
+                        <label class="me-3">
+                            <input type="checkbox" name="is_spoiler" id="is-spoiler">
+                            Mark as spoiler
+                        </label>
+                        <button type="submit" class="btn btn-primary btn-sm ms-auto" id="btn-submit-comment">
+                            Post Comment
+                        </button>
+                    </div>
+                    <small class="text-muted">Minimum 5 characters.</small>
+                </div>
             </div>
+        </form>
+        {% else %}
+        <div class="text-center py-3">
+            <p>You must <a href="{{ url_for('auth.login') }}">Sign in</a> to post a comment.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Sort / Search -->
+    <div class="d-flex mb-3 align-items-center">
+        <div>
+            <select id="sort-select" class="form-select form-select-sm">
+                <option value="newest" {% if comments_sort=='newest' %}selected{% endif %}>Newest</option>
+                <option value="oldest" {% if comments_sort=='oldest' %}selected{% endif %}>Oldest</option>
+                <option value="most_liked" {% if comments_sort=='most_liked' %}selected{% endif %}>Most liked</option>
+            </select>
+        </div>
+        <div class="ms-3 flex-grow-1">
+            <input type="text" id="search-comments" class="form-control form-control-sm"
+                placeholder="Search comments...">
         </div>
     </div>
 
-    <hr class="my-5">
-
-    <div class="row mb-3">
-        <div class="col-12">
-            <h2 class="h4">Manga by {{ creator.Name }}</h2>
-        </div>
-    </div>
-    <div class="row">
-        {% for data in mangas %}
-        {% set manga = data.manga %}
-        {% set stats = data.stats %}
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}">
-                    <img src="{{ data.cover_url }}" class="card-img-top" alt="{{ manga.TitleEn }}">
-                </a>
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">
-                        <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}"
-                            class="text-decoration-none text-dark">
-                            {{ manga.TitleEn }}
-                        </a>
-                    </h5>
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-primary">
-                                <i class="bi bi-star-fill"></i> {{ (stats.AverageRating if stats.AverageRating else
-                                (stats.BayesianRating if stats else 0))|round(1) }}
-                            </span>
-                            <small class="text-muted">
-                                <i class="bi bi-person-fill"></i> {{ stats.Follows if stats else 0 }}
-                            </small>
+    <!-- Comments list -->
+    <div id="comments-list">
+        {% if comments %}
+        {% for c in comments %}
+        <div class="comment card mb-2" data-comment-id="{{ c.CommentId }}">
+            <div class="card-body d-flex">
+                <div class="me-3">
+                    {% if c.user and c.user.Avatar %}
+                    <img src="{{ c.user.Avatar }}" class="comment-avatar rounded-circle" width="48" height="48">
+                    {% else %}
+                    <img src="{{ url_for('static', filename='assets/default_avatar.png') }}"
+                        class="comment-avatar rounded-circle" width="48" height="48">
+                    {% endif %}
+                </div>
+                <div class="flex-fill">
+                    <div class="d-flex align-items-start">
+                        <div>
+                            <a href="{{ url_for('main.profile') if c.user is none else url_for('main.profile') }}"
+                                class="fw-bold">{{ c.user.Username if c.user else 'Unknown' }}</a>
+                            <div class="text-muted small">
+                                {{ c.CreatedAt.strftime('%Y-%m-%d %H:%M') if c.CreatedAt else '' }}
+                            </div>
                         </div>
+                        <div class="ms-auto comment-actions">
+                            <button class="btn btn-sm btn-outline-success comment-like"
+                                data-comment-id="{{ c.CommentId }}">
+                                👍 <span>{{ c.LikeCount or 0 }}</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger comment-dislike"
+                                data-comment-id="{{ c.CommentId }}">
+                                👎 <span>{{ c.DislikeCount or 0 }}</span>
+                            </button>
+
+                            {% if is_authenticated and (current_user.get_id() == (c.UserId|string)) %}
+                            <button class="btn btn-sm btn-outline-secondary comment-edit"
+                                data-comment-id="{{ c.CommentId }}">Edit</button>
+                            <button class="btn btn-sm btn-outline-dark comment-delete"
+                                data-comment-id="{{ c.CommentId }}">Delete</button>
+                            {% endif %}
+
+                            <button class="btn btn-sm btn-outline-warning comment-report"
+                                data-comment-id="{{ c.CommentId }}">Report</button>
+                        </div>
+                    </div>
+
+                    <div class="comment-content mt-2 {% if c.IsSpoiler %}spoiler{% endif %}">
+                        {{ c.Content | e | replace('\n', '<br>') | safe }}
                     </div>
                 </div>
             </div>
         </div>
         {% endfor %}
+        {% else %}
+        <p class="text-center text-muted">No comments yet. Be the first to comment!</p>
+        {% endif %}
+    </div>
+
+    <!-- Pagination -->
+    {% if comments_pagination and comments_pagination.pages > 1 %}
+    <nav aria-label="Comments pagination" class="mt-3">
+        <ul class="pagination pagination-sm">
+            {% if comments_pagination.has_prev %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="{{ url_for('manga.manga_detail', manga_id=mid, page=comments_pagination.prev_num, sort=comments_sort) }}">
+                    &laquo; Prev
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link">&laquo; Prev</span></li>
+            {% endif %}
+
+            <li class="page-item disabled">
+                <span class="page-link">Page {{ comments_pagination.page }} / {{ comments_pagination.pages }}</span>
+            </li>
+
+            {% if comments_pagination.has_next %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="{{ url_for('manga.manga_detail', manga_id=mid, page=comments_pagination.next_num, sort=comments_sort) }}">
+                    Next &raquo;
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link">Next &raquo;</span></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\creator_detail.html ---
+{% extends "base.html" %}
+
+{% block title %}{{ creator.Name }} | MangaDex Clone{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/creator_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="creator-detail-container">
+    <div class="creator-header">
+        <h1 class="creator-name">{{ creator.Name }}</h1>
+        <p class="creator-biography">
+            {{ creator.BiographyEn if creator.BiographyEn else 'No biography available.' }}
+        </p>
+    </div>
+
+    <hr class="separator">
+
+    <div class="manga-list-section">
+        <h2 class="section-title">Manga by {{ creator.Name }}</h2>
+        {% if mangas %}
+        <div class="manga-grid">
+            {% for manga_item in mangas %}
+            <a href="{{ url_for('manga.manga_detail', manga_id=manga_item.manga.MangaId) }}" class="manga-card">
+                <div class="manga-cover-container">
+                    <img src="{{ manga_item.cover_url }}" alt="Cover of {{ manga_item.manga.TitleEn }}"
+                        class="manga-cover">
+                </div>
+                <div class="manga-info-overlay">
+                    <h3 class="manga-title-overlay">{{ manga_item.manga.TitleEn }}</h3>
+                    <div class="manga-stats-overlay">
+                        <span class="rating">
+                            ⭐ {{ (manga_item.stats.AverageRating if manga_item.stats and manga_item.stats.AverageRating
+                            else (manga_item.stats.BayesianRating if manga_item.stats else 0))|round(1) }}
+                        </span>
+                        <span class="follows">
+                            ❤️ {{ manga_item.stats.Follows if manga_item.stats and manga_item.stats.Follows else 0 }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="no-manga-found">No manga found for this creator.</p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
@@ -21513,12 +23128,14 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\manga_detail.html ---
+{# app/templates/manga_detail.html #}
 {% extends "base.html" %}
 
 {% block title %}{{ manga.TitleEn }} | MangaDex Clone{% endblock %}
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -21573,6 +23190,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data-url="{{ url_for('manga.manga_art', manga_id=manga.MangaId) }}">Art</a>
             <a href="#related" class="tab" data-tab="related">Related</a>
         </div>
+
         <div class="tab-content">
             <div class="tab-pane active" id="chapters">
                 {% if chapters %}
@@ -21583,43 +23201,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     {% endfor %}
                 </ul>
                 {% else %}
-                <p class="text-center text-gray">This feature is under development...</p>
+                <p class="text-center text-gray">This feature is under development.</p>
                 {% endif %}
             </div>
+
             <div class="tab-pane" id="comments">
-                <p class="text-center text-gray">This feature is under development...</p>
+                {# Inline include: comments partial expects variables passed from manga_detail route:
+                comments, comments_pagination, comments_sort, is_authenticated #}
+                {% include 'comments.html' %}
             </div>
+
             <div class="tab-pane" id="art">
-                <p class="text-center text-gray">This feature is under development...</p>
+                <p class="text-center text-gray">This feature is under development.</p>
             </div>
+
             <div class="tab-pane" id="related">
-                <p class="text-center text-gray">This feature is under development...</p>
+                <p class="text-center text-gray">This feature is under development.</p>
             </div>
         </div>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar (unchanged) -->
     <div class="manga-sidebar">
         <div class="sidebar-section">
             <h3>Authors</h3>
             <ul class="tag-list">
                 {% for author in authors %}
-                                {% if author %}
-                                <li><a href="{{ url_for('main.creator_detail', creator_id=author.CreatorId) }}"
-                        class="tag-link">{{ author.Name }}</a></li>
-                                {% endif %}
-                                {% endfor %}
+                {% if author %}
+                <li><a href="{{ url_for('main.creator_detail', creator_id=author.CreatorId) }}" class="tag-link">{{
+                        author.Name }}</a></li>
+                {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
             <h3>Artists</h3>
             <ul class="tag-list">
                 {% for artist in artists %}
-                                {% if artist %}
-                                <li><a href="{{ url_for('main.creator_detail', creator_id=artist.CreatorId) }}"
-                        class="tag-link">{{ artist.Name }}</a></li>
-                                {% endif %}
-                                {% endfor %}
+                {% if artist %}
+                <li><a href="{{ url_for('main.creator_detail', creator_id=artist.CreatorId) }}" class="tag-link">{{
+                        artist.Name }}</a></li>
+                {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
@@ -21678,6 +23301,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile.html ---
@@ -21883,167 +23507,3 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>No content available yet.</p>
 </div>
 {% endblock %}
-=== Folder: data ===
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\data\create-Covers.sql ---
-USE MangaLibrary;
-GO
-
-IF OBJECT_ID('dbo.Covers', 'U') IS NOT NULL
-    DROP TABLE dbo.Covers;
-GO
-
-CREATE TABLE dbo.Covers (
-    cover_id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
-    manga_id UNIQUEIDENTIFIER NOT NULL,
-    type NVARCHAR(50) NULL,
-    description NVARCHAR(MAX) NULL,
-    volume NVARCHAR(50) NULL,
-    fileName NVARCHAR(255) NULL,
-    locale NVARCHAR(10) NULL,
-    createdAt DATETIMEOFFSET NULL,
-    updatedAt DATETIMEOFFSET NULL,
-    version INT NULL,
-    rel_user_id UNIQUEIDENTIFIER NULL,
-    url NVARCHAR(500) NULL,
-    image_data VARBINARY(MAX) NULL
-);
-GO
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\data\create-MangaCover.sql ---
-USE [MangaLibrary]
-GO
-
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[MangaCover](
-    [MangaId] [UNIQUEIDENTIFIER] NOT NULL,
-    [CoverId] [UNIQUEIDENTIFIER] NOT NULL,
-    [FileName] [NVARCHAR](255) NOT NULL,
-    [DownloadDate] [DATETIME2](7) NOT NULL DEFAULT GETDATE(),
-    [ImageData] [VARBINARY](MAX) NOT NULL,
-    CONSTRAINT [PK_MangaCover] PRIMARY KEY CLUSTERED 
-    (
-        [MangaId] ASC,
-        [CoverId] ASC,
-        [FileName] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\data\debug.sql ---
-SELECT TOP (1000) [MangaId]
-      ,[Type]
-      ,[TitleEn]
-      ,[ChapterNumbersResetOnNewVolume]
-      ,[ContentRating]
-      ,[CreatedAt]
-      ,[UpdatedAt]
-      ,[IsLocked]
-      ,[LastChapter]
-      ,[LastVolume]
-      ,[LatestUploadedChapter]
-      ,[OriginalLanguage]
-      ,[PublicationDemographic]
-      ,[State]
-      ,[Status]
-      ,[Year]
-      ,[OfficialLinks]
-  FROM [MangaLibrary].[dbo].[Manga];
-
-
-SELECT 
-	Manga.MangaId,
-	Manga.ContentRating,
-	Tag.*
-  FROM [MangaLibrary].[dbo].[Manga]
-  join MangaLibrary.dbo.MangaTag on Manga.MangaId = MangaTag.MangaId
-  join MangaLibrary.dbo.Tag on Tag.TagId = MangaTag.TagId
-  where tag.GroupName = 'content'
-  order by MangaId
-
-  select 
-  Manga.MangaId,
-  MangaDescription.LangCode,
-  MangaDescription.[Description]
-  from [MangaLibrary].[dbo].[Manga]
-  join [MangaLibrary].[dbo].MangaDescription on Manga.MangaId = MangaDescription.MangaId
-  where MangaDescription.LangCode in ('en', 'vi', 'ja')
-
-
-  select
-	Manga.MangaId,
-	MangaStatistics.StatisticId,
-	MangaStatistics.Follows,
-	MangaStatistics.AverageRating,
-	MangaStatistics.BayesianRating
-  from [MangaLibrary].[dbo].Manga
-  join [MangaLibrary].[dbo].[MangaStatistics] on Manga.MangaId = MangaStatistics.MangaId
-  order by Manga.MangaId
-
-    select 
-  Manga.MangaId,
-  MangaRelated.RelatedId,
-  MangaRelated.[Type],
-  Creator.*
-  from [MangaLibrary].[dbo].[Manga]
-  join [MangaLibrary].[dbo].MangaRelated on Manga.MangaId = MangaRelated.MangaId
-  join [MangaLibrary].[dbo].Creator on MangaRelated.RelatedId = Creator.CreatorId
-  where MangaRelated.[Type] in ('artist', 'author')
-  order by Manga.MangaId
-
-  select
-	Manga.MangaId,
-	Manga.PublicationDemographic,
-	Tag.*
-  from [MangaLibrary].[dbo].[Manga]
-  join [MangaLibrary].[dbo].MangaTag on Manga.MangaId = MangaTag.MangaId
-  join [MangaLibrary].[dbo].Tag on MangaTag.TagId = Tag.TagId
-  where Tag.GroupName in ('genre', 'theme', 'format')
-  order by Manga.MangaId,tag.GroupName
-
-  select
-	Manga.MangaId,
-	MangaLink.[Provider],
-	MangaLink.[Url]
-  from [MangaLibrary].[dbo].[Manga]
-  join [MangaLibrary].[dbo].MangaLink on Manga.MangaId = MangaLink.MangaId
-
-    select
-	Manga.MangaId,
-	MangaAltTitle.LangCode,
-	MangaAltTitle.AltTitle
-	from [MangaLibrary].[dbo].[Manga]
-	join [MangaLibrary].[dbo].MangaAltTitle on Manga.MangaId = MangaAltTitle.MangaId
-
-	select distinct LangCode
-	from [MangaLibrary].[dbo].MangaAltTitle
-
-
-select
-	Manga.MangaId,
-	Manga.TitleEn,
-	MangaAltTitle.AltTitle,
-	MangaAltTitle.LangCode
-from [MangaLibrary].[dbo].[Manga]
-join [MangaLibrary].[dbo].MangaAltTitle on Manga.MangaId = MangaAltTitle.MangaId
-
-
-SELECT 
-Creator.CreatorId,
-Creator.[Name],
-Creator.BiographyEn,
-Manga.MangaId,
-Manga.TitleEn,
-MangaStatistics.AverageRating,
-MangaStatistics.BayesianRating,
-MangaStatistics.Follows
-  FROM [MangaLibrary].[dbo].Creator
-join  [MangaLibrary].[dbo].[CreatorRelationship] on Creator.CreatorId = CreatorRelationship.CreatorId
-  join [MangaLibrary].[dbo].Manga on CreatorRelationship.RelatedId = Manga.MangaId
-  join [MangaLibrary].[dbo].MangaStatistics on Manga.MangaId = MangaStatistics.MangaId
-  order by Creator.CreatorId
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\data\script.sql ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]

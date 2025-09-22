@@ -1,9 +1,11 @@
+{# app/templates/manga_detail.html #}
 {% extends "base.html" %}
 
 {% block title %}{{ manga.TitleEn }} | MangaDex Clone{% endblock %}
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -58,6 +60,7 @@
                 data-url="{{ url_for('manga.manga_art', manga_id=manga.MangaId) }}">Art</a>
             <a href="#related" class="tab" data-tab="related">Related</a>
         </div>
+
         <div class="tab-content">
             <div class="tab-pane active" id="chapters">
                 {% if chapters %}
@@ -68,43 +71,48 @@
                     {% endfor %}
                 </ul>
                 {% else %}
-                <p class="text-center text-gray">This feature is under development...</p>
+                <p class="text-center text-gray">This feature is under development.</p>
                 {% endif %}
             </div>
+
             <div class="tab-pane" id="comments">
-                <p class="text-center text-gray">This feature is under development...</p>
+                {# Inline include: comments partial expects variables passed from manga_detail route:
+                comments, comments_pagination, comments_sort, is_authenticated #}
+                {% include 'comments.html' %}
             </div>
+
             <div class="tab-pane" id="art">
-                <p class="text-center text-gray">This feature is under development...</p>
+                <p class="text-center text-gray">This feature is under development.</p>
             </div>
+
             <div class="tab-pane" id="related">
-                <p class="text-center text-gray">This feature is under development...</p>
+                <p class="text-center text-gray">This feature is under development.</p>
             </div>
         </div>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar (unchanged) -->
     <div class="manga-sidebar">
         <div class="sidebar-section">
             <h3>Authors</h3>
             <ul class="tag-list">
                 {% for author in authors %}
-                                {% if author %}
-                                <li><a href="{{ url_for('main.creator_detail', creator_id=author.CreatorId) }}"
-                        class="tag-link">{{ author.Name }}</a></li>
-                                {% endif %}
-                                {% endfor %}
+                {% if author %}
+                <li><a href="{{ url_for('main.creator_detail', creator_id=author.CreatorId) }}" class="tag-link">{{
+                        author.Name }}</a></li>
+                {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
             <h3>Artists</h3>
             <ul class="tag-list">
                 {% for artist in artists %}
-                                {% if artist %}
-                                <li><a href="{{ url_for('main.creator_detail', creator_id=artist.CreatorId) }}"
-                        class="tag-link">{{ artist.Name }}</a></li>
-                                {% endif %}
-                                {% endfor %}
+                {% if artist %}
+                <li><a href="{{ url_for('main.creator_detail', creator_id=artist.CreatorId) }}" class="tag-link">{{
+                        artist.Name }}</a></li>
+                {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div class="sidebar-section">
@@ -163,5 +171,6 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
 {% endblock %}

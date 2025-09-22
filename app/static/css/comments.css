@@ -1,0 +1,53 @@
+/* Comment section styles */
+.comment-form {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.comment {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-username {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.comment-content.spoiler {
+    filter: blur(3px);
+    cursor: pointer;
+}
+
+.comment-content.spoiler:hover,
+.comment-content.spoiler.active {
+    filter: none;
+}
+
+.comment-actions button {
+    margin-right: 10px;
+}
+
+.alert-container {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+@media (max-width: 576px) {
+    .comment-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .comment-actions button {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}

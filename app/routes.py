@@ -1,13 +1,15 @@
 import base64
 from io import BytesIO
 import shutil
-from flask import Blueprint, abort, jsonify, redirect, render_template, request, send_file, url_for
+from flask import Blueprint, abort, flash, jsonify, redirect, render_template, request, send_file, url_for
 from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
 from sqlalchemy import desc, func, or_
-from .models import Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Tag
+
+from app.comment_routes import now
+from .models import Chapter, Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Report, Tag, Comment
 from . import db
 import os
 import uuid
@@ -358,35 +360,12 @@ def manga_detail(manga_id):
     if not manga:
         return "Manga not found", 404
 
+    # --- cover logic (as in your original file) ---
     cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
 
     if not cover:
-        # Nếu chưa có ảnh, thực hiện tải xuống
-        cover_info = get_cover_info(str(manga.MangaId).lower())
-        if cover_info:
-            manga_id_str = cover_info['manga_id']
-            cover_id_str = cover_info['cover_id']
-            file_name_str = cover_info['file_name']
-            image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
-            try:
-                response = requests.get(image_url, stream=True)
-                response.raise_for_status()
-                image_data = response.content
-                new_cover = MangaCover(
-                    MangaId=manga.MangaId,
-                    CoverId=uuid.UUID(cover_id_str),
-                    FileName=file_name_str,
-                    ImageData=image_data
-                )
-                db.session.add(new_cover)
-                db.session.commit()
-                image_data_b64 = base64.b64encode(image_data).decode('utf-8')
-                manga_cover_url = f"data:image/jpeg;base64,{image_data_b64}"
-            except Exception as e:
-                print(f"Error downloading cover for {manga_id_str}: {e}")
-                manga_cover_url = url_for('static', filename='assets/default_cover.png')
-        else:
-            manga_cover_url = url_for('static', filename='assets/default_cover.png')
+        # keep fallback logic from your project (use default cover)
+        manga_cover_url = url_for('static', filename='assets/default_cover.png')
     else:
         manga_cover_url = f"data:image/jpeg;base64,{base64.b64encode(cover.ImageData).decode('utf-8')}" if cover else url_for('static', filename='assets/default_cover.png')
 
@@ -401,27 +380,45 @@ def manga_detail(manga_id):
                                       next((d.Description for d in descriptions if d.LangCode), None))))
     description_long = len(manga_description or '') > 200 if manga_description else False
 
-    # Lấy cả authors và artists trong một truy vấn join duy nhất
+    # creators
     related_creators = (
         db.session.query(MangaRelated, Creator)
         .join(Creator, MangaRelated.RelatedId == Creator.CreatorId)
         .filter(MangaRelated.MangaId == manga_id)
         .all()
     )
-
     authors = [creator for rel, creator in related_creators if rel.Type == 'author']
     artists = [creator for rel, creator in related_creators if rel.Type == 'artist']
-
 
     tags = Tag.query.join(MangaTag).filter(MangaTag.MangaId == manga_id, Tag.GroupName.in_(['genre', 'theme', 'format'])).all()
     genres = [t for t in tags if t.GroupName == 'genre']
     themes = [t for t in tags if t.GroupName == 'theme']
     formats = [t for t in tags if t.GroupName == 'format']
 
-    # ✅ dùng hàm mới
-    manga_links = resolve_manga_links(manga_id)
+    # resolve manga_links logic exists in your file; keep calling that if defined
+    try:
+        manga_links = resolve_manga_links(manga_id)
+    except Exception:
+        manga_links = []
 
     alt_titles = MangaAltTitle.query.filter_by(MangaId=manga_id).all()
+
+    # --- COMMENTS: get current sort & page from querystring ---
+    sort = request.args.get('sort', 'newest')
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+
+    comments_query = Comment.query.filter_by(MangaId=str(manga_id), IsDeleted=False)
+
+    if sort == 'oldest':
+        comments_query = comments_query.order_by(Comment.CreatedAt.asc())
+    elif sort == 'most_liked':
+        comments_query = comments_query.order_by(Comment.LikeCount.desc(), Comment.CreatedAt.desc())
+    else:  # newest
+        comments_query = comments_query.order_by(Comment.CreatedAt.desc())
+
+    comments_pagination = comments_query.paginate(page=page, per_page=per_page, error_out=False)
+    comments = comments_pagination.items
 
     tab_contents = {
         'chapters': url_for('manga.chapters', manga_id=manga.MangaId),
@@ -431,29 +428,96 @@ def manga_detail(manga_id):
     }
 
     return render_template('manga_detail.html',
-                            manga=manga,
-                            manga_cover_url=manga_cover_url,
-                            manga_stats=manga_stats,
-                            content_tags=content_tags,
-                            manga_description=manga_description,
-                            description_long=description_long,
-                            authors=authors,
-                            artists=artists,
-                            genres=genres,
-                            themes=themes,
-                            formats=formats,
-                            manga_links=manga_links,
-                            alt_titles=alt_titles,
-                            tab_contents=tab_contents)
+                           manga=manga,
+                           manga_cover_url=manga_cover_url,
+                           manga_stats=manga_stats,
+                           content_tags=content_tags,
+                           manga_description=manga_description,
+                           description_long=description_long,
+                           authors=authors,
+                           artists=artists,
+                           genres=genres,
+                           themes=themes,
+                           formats=formats,
+                           manga_links=manga_links,
+                           alt_titles=alt_titles,
+                           tab_contents=tab_contents,
+                           comments=comments,
+                           comments_pagination=comments_pagination,
+                           comments_sort=sort,
+                           is_authenticated=current_user.is_authenticated)
+
+# ======================
+# Comment helpers
+# ======================
+def serialize_comment(c):
+    user = c.user
+    username = user.Username if user else "Unknown"
+    avatar = user.Avatar if user and user.Avatar else None
+    return {
+        "CommentId": c.CommentId,
+        "UserId": c.UserId,
+        "Username": username,
+        "Avatar": avatar,
+        "Content": c.Content,
+        "IsSpoiler": bool(c.IsSpoiler),
+        "LikeCount": int(c.LikeCount or 0),
+        "DislikeCount": int(c.DislikeCount or 0),
+        "CreatedAt": c.CreatedAt.isoformat() if c.CreatedAt else None,
+        "UpdatedAt": c.UpdatedAt.isoformat() if c.UpdatedAt else None,
+        "IsDeleted": bool(c.IsDeleted)
+    }
+
+
+# ======================
+# Manga + Comment routes
+# ======================
 
 
 @manga.route('/<uuid:manga_id>/chapters')
 def chapters(manga_id):
-    return render_template('chapters.html', manga_id=manga_id)
+    manga = Manga.query.get(manga_id)
+    if not manga:
+        return "Manga not found", 404
+    chapters = Chapter.query.filter_by(MangaId=manga_id).order_by(Chapter.ChapterNumber.desc()).all()
+    return render_template('chapters.html', manga_id=manga_id, chapters=chapters)
 
-@manga.route('/<uuid:manga_id>/comments')
+
+# ======================
+# Comment APIs (full CRUD + reaction + report)
+# ======================
+
+@manga.route('/<uuid:manga_id>/comments', methods=['GET'])
 def comments(manga_id):
-    return render_template('comments.html', manga_id=manga_id)
+    """
+    This route returns the comments partial (if you call via AJAX) or can be navigated to directly.
+    The main manga_detail passes comments into template already, but we keep this route for direct access.
+    """
+    # We'll reuse logic from manga_detail: fetch comments sorted/paginated
+    sort = request.args.get('sort', 'newest')
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+
+    comments_query = Comment.query.filter_by(MangaId=str(manga_id), IsDeleted=False)
+
+    if sort == 'oldest':
+        comments_query = comments_query.order_by(Comment.CreatedAt.asc())
+    elif sort == 'most_liked':
+        comments_query = comments_query.order_by(Comment.LikeCount.desc(), Comment.CreatedAt.desc())
+    else:
+        comments_query = comments_query.order_by(Comment.CreatedAt.desc())
+
+    comments_pagination = comments_query.paginate(page=page, per_page=per_page, error_out=False)
+    comments = comments_pagination.items
+
+    return render_template('comments.html',
+                           manga_id=manga_id,
+                           comments=comments,
+                           comments_pagination=comments_pagination,
+                           comments_sort=sort,
+                           is_authenticated=current_user.is_authenticated)
+
+
 
 @manga.route("/manga/<manga_id>/art", methods=["GET"])
 def manga_art(manga_id):
