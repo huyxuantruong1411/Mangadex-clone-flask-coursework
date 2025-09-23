@@ -165,8 +165,18 @@ class List(db.Model):
     Description = Column(Text)
     IsPublic = Column(Boolean)
 
+    Slug = Column(String(20))
+    Visibility = Column(String(20))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    FollowerCount = Column(Integer, default=0)
+    ItemCount = Column(Integer, default=0)
+    # relationships
+
     user = relationship("User", back_populates="lists")
     mangas = relationship("ListManga", back_populates="list")
+    followers = relationship("ListFollower", back_populates="list")
 
 
 class ListManga(db.Model):
@@ -176,10 +186,21 @@ class ListManga(db.Model):
     ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
     MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
     AddedAt = Column(DateTime)
+    Position = Column(Integer, default=0)
 
     list = relationship("List", back_populates="mangas")
     manga = relationship("Manga")
 
+class ListFollower(db.Model):
+    __tablename__ = "ListFollower"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"), primary_key=True)
+    FollowedAt = Column(DateTime, default=datetime.utcnow)
+
+    list = relationship("List", back_populates="followers")
+    user = relationship("User")
 
 # ------------------------
 # MANGA RELATED TABLES

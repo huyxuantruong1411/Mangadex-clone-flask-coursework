@@ -3,8 +3,66 @@
 {% block title %}Library | MangaDex Clone{% endblock %}
 
 {% block content %}
-<div class="text-center py-5 text-white">
-    <h1>Your Library</h1>
-    <p>No content available yet.</p>
+<div class="container py-4 text-white">
+    <h1 class="mb-4">Your Library</h1>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="libraryTabs" role="tablist">
+        <li class="nav-item">
+            <button class="nav-link active" id="my-lists-tab" data-bs-toggle="tab" data-bs-target="#my-lists"
+                type="button" role="tab">My MDLists</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="followed-lists-tab" data-bs-toggle="tab" data-bs-target="#followed-lists"
+                type="button" role="tab">Followed MDLists</button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-3" id="libraryTabsContent">
+        <div class="tab-pane fade show active" id="my-lists" role="tabpanel">
+            <button class="btn btn-primary mb-3" id="newListBtn">+ New MDList</button>
+            <div id="myListsContainer" class="row g-3"></div>
+        </div>
+        <div class="tab-pane fade" id="followed-lists" role="tabpanel">
+            <div id="followedListsContainer" class="row g-3"></div>
+        </div>
+    </div>
 </div>
+
+<!-- Modal create new list -->
+<div class="modal fade" id="newListModal" tabindex="-1" aria-labelledby="newListLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newListLabel">Create New MDList</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="newListForm">
+                    <div class="mb-3">
+                        <label for="listName" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="listName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="listDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="listDescription"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="listVisibility" class="form-label">Visibility</label>
+                        <select class="form-select" id="listVisibility">
+                            <option value="public">Public</option>
+                            <option value="unlisted">Unlisted</option>
+                            <option value="private" selected>Private</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/library.js') }}"></script>
 {% endblock %}

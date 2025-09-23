@@ -17,6 +17,9 @@ def create_app():
     from .auth import auth as auth_blueprint
     from .routes import main as main_blueprint, manga as manga_blueprint
     from .comment_routes import comment_bp as comment_blueprint  # new
+    from app.list_routes import list_bp
+    
+    app.register_blueprint(list_bp, url_prefix="/api")
 
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)

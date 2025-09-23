@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ list.Name }} | MDList{% endblock %}
+
+{% block content %}
+<div class="container py-4 text-white">
+    <h1>{{ list.Name }}</h1>
+    <p>{{ list.Description }}</p>
+    <p>Owner: {{ list.owner.Username if list.owner else "Unknown" }}</p>
+    <p>{{ list.ItemCount }} items • {{ list.FollowerCount }} followers</p>
+
+    <div class="row g-3">
+        {% for li, m in items %}
+        <div class="col-md-3">
+            <div class="card h-100">
+                <img src="{{ url_for('main.cover_image', cover_id=m.CoverId) }}" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="card-title">{{ m.TitleEn }}</h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
