@@ -1,0 +1,117 @@
+/* Dark theme modal for Add To List */
+#addToListModal .modal-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    /* toàn bộ modal text trắng xám sáng */
+    border-radius: 0.75rem;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+#addToListModal .modal-header {
+    border-bottom: 1px solid #333;
+    background-color: #252525;
+    color: #f0f0f0;
+}
+
+#addToListModal .modal-title {
+    font-weight: 600;
+}
+
+#addToListModal .modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#addToListModal .modal-footer {
+    border-top: 1px solid #333;
+    background-color: #252525;
+}
+
+#addToListModal .list-group-item {
+    background-color: transparent;
+    color: #f0f0f0;
+    /* tên list sáng rõ */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #333;
+}
+
+#addToListModal .list-group-item:hover {
+    background-color: #2a2a2a;
+    cursor: pointer;
+}
+
+#addToListModal .form-check-label {
+    color: #f0f0f0;
+    /* chỉnh label (tên list) đồng bộ với text sáng */
+}
+
+#addToListModal .form-check-input {
+    accent-color: #ff914d;
+    /* cam nổi bật */
+}
+
+#addToListModal .btn-primary {
+    background-color: #ff914d;
+    border-color: #ff914d;
+    font-weight: 600;
+}
+
+#addToListModal .btn-primary:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+#addToListModal .btn-secondary {
+    background-color: #444;
+    border-color: #444;
+}
+
+#addToListModal .btn-secondary:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+/* Force brighter, larger list name text in AddToList modal */
+#addToListModal .form-check-label {
+    color: #f0f0f0 !important;
+    /* ép màu sáng */
+    font-size: 1rem !important;
+    /* tăng size chữ */
+    font-weight: 500;
+    /* đậm vừa để dễ đọc */
+}
+
+/* Tên list (Test1, Test2) */
+#addToListModal .fw-semibold {
+    color: #f0f0f0 !important;
+    /* trắng xám sáng */
+    font-size: 1rem !important;
+    /* chữ to hơn */
+    font-weight: 600;
+    /* đậm rõ */
+}
+
+/* Mô tả list (Ha Ha Hu Hu, For test only) */
+#addToListModal .flex-grow-1 .small.text-muted {
+    color: #cccccc !important;
+    /* xám sáng thay vì xám chìm */
+    font-size: 0.9rem;
+}
+
+/* Số lượng items (3 items, 2 items) */
+#addToListModal .text-end.small.text-muted {
+    color: #aaaaaa !important;
+    /* sáng hơn để dễ đọc */
+    font-size: 0.85rem;
+}
+
+/* Hover effect cho nguyên khối item */
+#addToListModal .d-flex.align-items-center:hover {
+    background-color: #2a2a2a;
+    /* nền tối nhấn nhẹ */
+}

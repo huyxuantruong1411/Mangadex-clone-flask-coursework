@@ -2,24 +2,108 @@
 
 {% block title %}{{ list.Name }} | MDList{% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class="container py-4 text-white">
-    <h1>{{ list.Name }}</h1>
-    <p>{{ list.Description }}</p>
-    <p>Owner: {{ list.owner.Username if list.owner else "Unknown" }}</p>
-    <p>{{ list.ItemCount }} items • {{ list.FollowerCount }} followers</p>
+    <div class="d-flex justify-content-between align-items-start mb-3">
+        <div>
+            <h1 class="mb-1">{{ list.Name }}</h1>
+            <div class="text-muted mb-2">{{ list.Description }}</div>
+            <div class="small text-muted">
+                Owner: {{ list.owner.Username if list.owner else "Unknown" }}
+                &nbsp;•&nbsp; {{ list.ItemCount }} items &nbsp;•&nbsp; {{ list.FollowerCount }} followers
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            {% if current_user.is_authenticated and list.UserId == current_user.UserId %}
+            <button class="btn btn-primary" id="addMangaBtn">+ Add Manga</button>
+            <button class="btn btn-outline-danger" id="bulkDeleteBtn" disabled>Delete Selected</button>
+            {% endif %}
+            <div>
+                <select id="sortSelect" class="form-select form-select-sm">
+                    <option value="recent" selected>Recently added</option>
+                    <option value="title">Title (A–Z)</option>
+                    <option value="added">Added (new→old)</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
-    <div class="row g-3">
-        {% for li, m in items %}
+    <!-- Grid of manga -->
+    <div class="row g-3" id="listItemsContainer">
+        {% for item in items %}
         <div class="col-md-3">
             <div class="card h-100">
-                <img src="{{ url_for('main.cover_image', cover_id=m.CoverId) }}" class="card-img-top">
+                <img src="{{ item.cover_url }}" class="card-img-top" alt="Cover">
                 <div class="card-body">
-                    <h6 class="card-title">{{ m.TitleEn }}</h6>
+                    <h6 class="card-title">{{ item.manga.TitleEn }}</h6>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
+
 </div>
+
+<!-- Modal: Add manga via search -->
+<div class="modal fade" id="addMangaModal" tabindex="-1" aria-labelledby="addMangaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addMangaLabel">Add manga to "{{ list.Name }}"</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <input id="addMangaSearch" class="form-control" placeholder="Search manga by title..."
+                        autocomplete="off">
+                </div>
+                <div id="addMangaResults" class="row g-3"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="addMangaConfirmBtn" class="btn btn-primary">Add selected</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Confirm Delete -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p id="confirmDeleteText">Are you sure?</p>
+                <div class="text-end">
+                    <button id="confirmDeleteYes" class="btn btn-danger">Delete</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script id="list-context" type="application/json">
+    {{ {
+        "listId": list.ListId,
+        "isOwner": current_user.is_authenticated and list.UserId == current_user.UserId
+    } | tojson }}
+</script>
+
+<script>
+    window._LIST_CONTEXT = JSON.parse(
+        document.getElementById("list-context").textContent
+    );
+</script>
+
+<script src="{{ url_for('static', filename='js/list_public.js') }}"></script>
 {% endblock %}

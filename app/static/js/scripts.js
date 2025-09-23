@@ -56,13 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalBody = document.getElementById('modal-body');
 
     document.querySelectorAll('.add-to-list').forEach(button => {
-        button.addEventListener('click', function () {
-            const mangaId = this.dataset.mangaId;
+        button.addEventListener('click', function (ev) {
+            const mangaId = this.dataset.mangaId || this.getAttribute('data-manga-id');
 
-            if (window.isAuthenticated) {
-                modalTitle.textContent = 'Add to List';
-                modalBody.innerHTML = '<p>Coming soon... (Empty for now)</p>';
-            } else {
+            if (!window.isAuthenticated) {
                 modalTitle.textContent = 'Require Login';
                 modalBody.innerHTML = `
                     <p class="fs-5 mb-4">You need to sign in to access this feature.</p>
@@ -71,11 +68,27 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a href="/register" class="btn btn-register fw-bold px-4">Register</a>
                     </div>
                 `;
+                modal.show();
+                return;
             }
+
+            // If a new implementation exists, prefer it:
+            if (typeof window.openAddToListModal === 'function') {
+                // prevent the old modal from showing
+                ev.preventDefault();
+                // call the new modal handler (this will show #addToListModal)
+                window.openAddToListModal(mangaId);
+                return;
+            }
+
+            // Fallback: show the old placeholder modal (backwards-compatible)
+            modalTitle.textContent = 'Add to List';
+            modalBody.innerHTML = '<p>Coming soon. (Empty for now)</p>';
             modal.show();
         });
     });
 });
+
 
 
 // Debounce function (giữ nguyên)

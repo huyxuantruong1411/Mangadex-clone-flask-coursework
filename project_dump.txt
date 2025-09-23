@@ -216,6 +216,16 @@
               ]
             },
             {
+              "name": "0d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "f4a926b5abb59c34dd1c937f4ebd1af5f2b07d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "0e",
               "type": "directory",
               "children": [
@@ -341,6 +351,16 @@
                 },
                 {
                   "name": "99563729b87d3931c903a5c60cb15beaf8ec5f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "26",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bb3e2da6057f10c3478722f71b000b214f4955",
                   "type": "file"
                 }
               ]
@@ -574,6 +594,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "4eafc89b19ede3f97e72fbe433c013c1b1281d",
+                  "type": "file"
+                },
+                {
                   "name": "d049e7806894891e9f7b1da06689873da5e2fe",
                   "type": "file"
                 },
@@ -698,6 +722,10 @@
                 {
                   "name": "e60eab89f12679223cb656b276d146792c6351",
                   "type": "file"
+                },
+                {
+                  "name": "ec8249980ba3d8e6726e3861f6e29356be43db",
+                  "type": "file"
                 }
               ]
             },
@@ -740,6 +768,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "10907b9d722cacde5efae2af8dbb9b5d2c6e18",
+                  "type": "file"
+                },
+                {
                   "name": "754b97c8aaf2bd4fc8e425ef292f71f1592315",
                   "type": "file"
                 }
@@ -771,6 +803,10 @@
               "children": [
                 {
                   "name": "4adb9f9d6c8633be08d544914c30fff7ec4171",
+                  "type": "file"
+                },
+                {
+                  "name": "ddd184b9d0d3caaf2ef259244a88c904b3a795",
                   "type": "file"
                 }
               ]
@@ -949,6 +985,16 @@
                 },
                 {
                   "name": "db8fca4c5ff6d4530790b22af870c9be3eefe8",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "7b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "7d818314e311b6c2fb3403a472595d3fb6aa06",
                   "type": "file"
                 }
               ]
@@ -1558,6 +1604,10 @@
                 {
                   "name": "c822ef92196eea7a19b7695b94a3f91e318610",
                   "type": "file"
+                },
+                {
+                  "name": "f03c764769b9770ca671aec808819a3d8f054c",
+                  "type": "file"
                 }
               ]
             },
@@ -1658,6 +1708,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "d8746897f7eaf3d7fff61f818ba60690198046",
+                  "type": "file"
+                },
+                {
                   "name": "f0cf5810974d60757f73be589b0351a1b93b7b",
                   "type": "file"
                 }
@@ -1726,6 +1780,16 @@
               ]
             },
             {
+              "name": "f4",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "e905febe60092bd713b3ee3c0233caa4fb22b2",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "f5",
               "type": "directory",
               "children": [
@@ -1739,6 +1803,10 @@
               "name": "f9",
               "type": "directory",
               "children": [
+                {
+                  "name": "26a792ee917e4438c024e49df26bc1e199388d",
+                  "type": "file"
+                },
                 {
                   "name": "b1fa9239732b005c159599bd21391e21417f98",
                   "type": "file"
@@ -1877,6 +1945,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "default_cover.png",
+                  "type": "file"
+                },
+                {
                   "name": "favicon.ico",
                   "type": "file"
                 }
@@ -1886,6 +1958,10 @@
               "name": "css",
               "type": "directory",
               "children": [
+                {
+                  "name": "add_to_list.css",
+                  "type": "file"
+                },
                 {
                   "name": "auth.css",
                   "type": "file"
@@ -1900,6 +1976,10 @@
                 },
                 {
                   "name": "library.css",
+                  "type": "file"
+                },
+                {
+                  "name": "list.css",
                   "type": "file"
                 },
                 {
@@ -2187,11 +2267,19 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "add_to_list.js",
+                  "type": "file"
+                },
+                {
                   "name": "comments.js",
                   "type": "file"
                 },
                 {
                   "name": "library.js",
+                  "type": "file"
+                },
+                {
+                  "name": "list_public.js",
                   "type": "file"
                 },
                 {
@@ -2378,6 +2466,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── adc46acd963a5b80788e8ad10a27dba2c4645d
 │   │   ├── 0b/
 │   │   │   └── 9ec896bcb583ee708af129771cc5eb24f5e271
+│   │   ├── 0d/
+│   │   │   └── f4a926b5abb59c34dd1c937f4ebd1af5f2b07d
 │   │   ├── 0e/
 │   │   │   └── dba748ea81df245afc761b268ada9c5df213e1
 │   │   ├── 0f/
@@ -2405,6 +2495,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 25/
 │   │   │   ├── 1c0e50878d4aae48741939f0fc044afa99acd4
 │   │   │   └── 99563729b87d3931c903a5c60cb15beaf8ec5f
+│   │   ├── 26/
+│   │   │   └── bb3e2da6057f10c3478722f71b000b214f4955
 │   │   ├── 27/
 │   │   │   ├── 0628795527266596193a26e4132b2ebb19df20
 │   │   │   ├── a6c3af30019991e8f5d412300c7a7533388973
@@ -2453,6 +2545,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 8dae9033c210859a235614f6a8636ab1a98041
 │   │   │   └── a3d1a786146ed465055eda80b4224f36d2e301
 │   │   ├── 4b/
+│   │   │   ├── 4eafc89b19ede3f97e72fbe433c013c1b1281d
 │   │   │   ├── d049e7806894891e9f7b1da06689873da5e2fe
 │   │   │   └── fbca3e4bc55659bb6cd25cf30fcbdfa2f5c1fa
 │   │   ├── 4d/
@@ -2479,7 +2572,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 0c0d0dd4a42005830d88bb12e6b8617a37c44a
 │   │   ├── 5b/
 │   │   │   ├── 3322eb91b073421855d1999288bdff36c060a9
-│   │   │   └── e60eab89f12679223cb656b276d146792c6351
+│   │   │   ├── e60eab89f12679223cb656b276d146792c6351
+│   │   │   └── ec8249980ba3d8e6726e3861f6e29356be43db
 │   │   ├── 5c/
 │   │   │   └── 384ecaa99129459ebd036d30f4568a50a0a5ab
 │   │   ├── 5d/
@@ -2488,13 +2582,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 102306306d4a3c0548710ef073f4b8f888915e
 │   │   │   └── 66e669e438f2cc735d17f21dd8a9411c53072b
 │   │   ├── 61/
+│   │   │   ├── 10907b9d722cacde5efae2af8dbb9b5d2c6e18
 │   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
 │   │   ├── 62/
 │   │   │   └── 3c02137ea495fc54535d9a2699c09d920be90d
 │   │   ├── 63/
 │   │   │   └── 4790c51b52b6895a12f057cae631f4106940d4
 │   │   ├── 65/
-│   │   │   └── 4adb9f9d6c8633be08d544914c30fff7ec4171
+│   │   │   ├── 4adb9f9d6c8633be08d544914c30fff7ec4171
+│   │   │   └── ddd184b9d0d3caaf2ef259244a88c904b3a795
 │   │   ├── 68/
 │   │   │   └── 85d30dff856aeed6ef1b3a53523c304a0cab93
 │   │   ├── 69/
@@ -2532,6 +2628,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 78/
 │   │   │   ├── 4ca363d1b634cfc85c3b442836976bff7623a2
 │   │   │   └── db8fca4c5ff6d4530790b22af870c9be3eefe8
+│   │   ├── 7b/
+│   │   │   └── 7d818314e311b6c2fb3403a472595d3fb6aa06
 │   │   ├── 7d/
 │   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
 │   │   ├── 7e/
@@ -2657,7 +2755,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── d7/
 │   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
 │   │   ├── da/
-│   │   │   └── c822ef92196eea7a19b7695b94a3f91e318610
+│   │   │   ├── c822ef92196eea7a19b7695b94a3f91e318610
+│   │   │   └── f03c764769b9770ca671aec808819a3d8f054c
 │   │   ├── db/
 │   │   │   └── 064b837db5e7443de95808d99204ce5184c9ca
 │   │   ├── de/
@@ -2678,6 +2777,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── e8/
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
+│   │   │   ├── d8746897f7eaf3d7fff61f818ba60690198046
 │   │   │   └── f0cf5810974d60757f73be589b0351a1b93b7b
 │   │   ├── eb/
 │   │   │   └── 2eab9b71a6b9c24505e07415b31c9bac06da30
@@ -2692,9 +2792,12 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 1763f4eca14bdafc3e1114310f846516d241ce
 │   │   │   ├── 1de63487ffe7dd9e287f58ccacb93a644aa8f4
 │   │   │   └── 29756fe33519c2881156542cb77f0e1207bdbe
+│   │   ├── f4/
+│   │   │   └── e905febe60092bd713b3ee3c0233caa4fb22b2
 │   │   ├── f5/
 │   │   │   └── 4592fd73da13e94c07942b06b38e537057e1e6
 │   │   ├── f9/
+│   │   │   ├── 26a792ee917e4438c024e49df26bc1e199388d
 │   │   │   └── b1fa9239732b005c159599bd21391e21417f98
 │   │   ├── fa/
 │   │   │   └── 2fd633624471308c794c31eac5daaccf1f93b5
@@ -2724,12 +2827,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── MD-logo.png
 │   │   │   ├── auth_thmb.png
 │   │   │   ├── default_avatar.png
+│   │   │   ├── default_cover.png
 │   │   │   └── favicon.ico
 │   │   ├── css/
+│   │   │   ├── add_to_list.css
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
 │   │   │   ├── creator_detail.css
 │   │   │   ├── library.css
+│   │   │   ├── list.css
 │   │   │   ├── manga_detail.css
 │   │   │   └── styles.css
 │   │   ├── flags/
@@ -2800,8 +2906,10 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── zh-ro.png
 │   │   │   └── zh.png
 │   │   └── js/
+│   │       ├── add_to_list.js
 │   │       ├── comments.js
 │   │       ├── library.js
+│   │       ├── list_public.js
 │   │       ├── manga_detail.js
 │   │       └── scripts.js
 │   └── templates/
@@ -3192,6 +3300,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "0d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "f4a926b5abb59c34dd1c937f4ebd1af5f2b07d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "0e",
               "type": "directory",
               "children": [
@@ -3317,6 +3435,16 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "99563729b87d3931c903a5c60cb15beaf8ec5f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "26",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bb3e2da6057f10c3478722f71b000b214f4955",
                   "type": "file"
                 }
               ]
@@ -3550,6 +3678,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "4eafc89b19ede3f97e72fbe433c013c1b1281d",
+                  "type": "file"
+                },
+                {
                   "name": "d049e7806894891e9f7b1da06689873da5e2fe",
                   "type": "file"
                 },
@@ -3674,6 +3806,10 @@ if __name__ == "__main__":
                 {
                   "name": "e60eab89f12679223cb656b276d146792c6351",
                   "type": "file"
+                },
+                {
+                  "name": "ec8249980ba3d8e6726e3861f6e29356be43db",
+                  "type": "file"
                 }
               ]
             },
@@ -3716,6 +3852,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "10907b9d722cacde5efae2af8dbb9b5d2c6e18",
+                  "type": "file"
+                },
+                {
                   "name": "754b97c8aaf2bd4fc8e425ef292f71f1592315",
                   "type": "file"
                 }
@@ -3747,6 +3887,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "4adb9f9d6c8633be08d544914c30fff7ec4171",
+                  "type": "file"
+                },
+                {
+                  "name": "ddd184b9d0d3caaf2ef259244a88c904b3a795",
                   "type": "file"
                 }
               ]
@@ -3925,6 +4069,16 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "db8fca4c5ff6d4530790b22af870c9be3eefe8",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "7b",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "7d818314e311b6c2fb3403a472595d3fb6aa06",
                   "type": "file"
                 }
               ]
@@ -4534,6 +4688,10 @@ if __name__ == "__main__":
                 {
                   "name": "c822ef92196eea7a19b7695b94a3f91e318610",
                   "type": "file"
+                },
+                {
+                  "name": "f03c764769b9770ca671aec808819a3d8f054c",
+                  "type": "file"
                 }
               ]
             },
@@ -4634,6 +4792,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "d8746897f7eaf3d7fff61f818ba60690198046",
+                  "type": "file"
+                },
+                {
                   "name": "f0cf5810974d60757f73be589b0351a1b93b7b",
                   "type": "file"
                 }
@@ -4702,6 +4864,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "f4",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "e905febe60092bd713b3ee3c0233caa4fb22b2",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "f5",
               "type": "directory",
               "children": [
@@ -4715,6 +4887,10 @@ if __name__ == "__main__":
               "name": "f9",
               "type": "directory",
               "children": [
+                {
+                  "name": "26a792ee917e4438c024e49df26bc1e199388d",
+                  "type": "file"
+                },
                 {
                   "name": "b1fa9239732b005c159599bd21391e21417f98",
                   "type": "file"
@@ -4853,6 +5029,10 @@ if __name__ == "__main__":
                   "type": "file"
                 },
                 {
+                  "name": "default_cover.png",
+                  "type": "file"
+                },
+                {
                   "name": "favicon.ico",
                   "type": "file"
                 }
@@ -4862,6 +5042,10 @@ if __name__ == "__main__":
               "name": "css",
               "type": "directory",
               "children": [
+                {
+                  "name": "add_to_list.css",
+                  "type": "file"
+                },
                 {
                   "name": "auth.css",
                   "type": "file"
@@ -4876,6 +5060,10 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "library.css",
+                  "type": "file"
+                },
+                {
+                  "name": "list.css",
                   "type": "file"
                 },
                 {
@@ -5163,11 +5351,19 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "add_to_list.js",
+                  "type": "file"
+                },
+                {
                   "name": "comments.js",
                   "type": "file"
                 },
                 {
                   "name": "library.js",
+                  "type": "file"
+                },
+                {
+                  "name": "list_public.js",
                   "type": "file"
                 },
                 {
@@ -5354,6 +5550,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── adc46acd963a5b80788e8ad10a27dba2c4645d
 │   │   ├── 0b/
 │   │   │   └── 9ec896bcb583ee708af129771cc5eb24f5e271
+│   │   ├── 0d/
+│   │   │   └── f4a926b5abb59c34dd1c937f4ebd1af5f2b07d
 │   │   ├── 0e/
 │   │   │   └── dba748ea81df245afc761b268ada9c5df213e1
 │   │   ├── 0f/
@@ -5381,6 +5579,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 25/
 │   │   │   ├── 1c0e50878d4aae48741939f0fc044afa99acd4
 │   │   │   └── 99563729b87d3931c903a5c60cb15beaf8ec5f
+│   │   ├── 26/
+│   │   │   └── bb3e2da6057f10c3478722f71b000b214f4955
 │   │   ├── 27/
 │   │   │   ├── 0628795527266596193a26e4132b2ebb19df20
 │   │   │   ├── a6c3af30019991e8f5d412300c7a7533388973
@@ -5429,6 +5629,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 8dae9033c210859a235614f6a8636ab1a98041
 │   │   │   └── a3d1a786146ed465055eda80b4224f36d2e301
 │   │   ├── 4b/
+│   │   │   ├── 4eafc89b19ede3f97e72fbe433c013c1b1281d
 │   │   │   ├── d049e7806894891e9f7b1da06689873da5e2fe
 │   │   │   └── fbca3e4bc55659bb6cd25cf30fcbdfa2f5c1fa
 │   │   ├── 4d/
@@ -5455,7 +5656,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 0c0d0dd4a42005830d88bb12e6b8617a37c44a
 │   │   ├── 5b/
 │   │   │   ├── 3322eb91b073421855d1999288bdff36c060a9
-│   │   │   └── e60eab89f12679223cb656b276d146792c6351
+│   │   │   ├── e60eab89f12679223cb656b276d146792c6351
+│   │   │   └── ec8249980ba3d8e6726e3861f6e29356be43db
 │   │   ├── 5c/
 │   │   │   └── 384ecaa99129459ebd036d30f4568a50a0a5ab
 │   │   ├── 5d/
@@ -5464,13 +5666,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 102306306d4a3c0548710ef073f4b8f888915e
 │   │   │   └── 66e669e438f2cc735d17f21dd8a9411c53072b
 │   │   ├── 61/
+│   │   │   ├── 10907b9d722cacde5efae2af8dbb9b5d2c6e18
 │   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
 │   │   ├── 62/
 │   │   │   └── 3c02137ea495fc54535d9a2699c09d920be90d
 │   │   ├── 63/
 │   │   │   └── 4790c51b52b6895a12f057cae631f4106940d4
 │   │   ├── 65/
-│   │   │   └── 4adb9f9d6c8633be08d544914c30fff7ec4171
+│   │   │   ├── 4adb9f9d6c8633be08d544914c30fff7ec4171
+│   │   │   └── ddd184b9d0d3caaf2ef259244a88c904b3a795
 │   │   ├── 68/
 │   │   │   └── 85d30dff856aeed6ef1b3a53523c304a0cab93
 │   │   ├── 69/
@@ -5508,6 +5712,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 78/
 │   │   │   ├── 4ca363d1b634cfc85c3b442836976bff7623a2
 │   │   │   └── db8fca4c5ff6d4530790b22af870c9be3eefe8
+│   │   ├── 7b/
+│   │   │   └── 7d818314e311b6c2fb3403a472595d3fb6aa06
 │   │   ├── 7d/
 │   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
 │   │   ├── 7e/
@@ -5633,7 +5839,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── d7/
 │   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
 │   │   ├── da/
-│   │   │   └── c822ef92196eea7a19b7695b94a3f91e318610
+│   │   │   ├── c822ef92196eea7a19b7695b94a3f91e318610
+│   │   │   └── f03c764769b9770ca671aec808819a3d8f054c
 │   │   ├── db/
 │   │   │   └── 064b837db5e7443de95808d99204ce5184c9ca
 │   │   ├── de/
@@ -5654,6 +5861,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── e8/
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
+│   │   │   ├── d8746897f7eaf3d7fff61f818ba60690198046
 │   │   │   └── f0cf5810974d60757f73be589b0351a1b93b7b
 │   │   ├── eb/
 │   │   │   └── 2eab9b71a6b9c24505e07415b31c9bac06da30
@@ -5668,9 +5876,12 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 1763f4eca14bdafc3e1114310f846516d241ce
 │   │   │   ├── 1de63487ffe7dd9e287f58ccacb93a644aa8f4
 │   │   │   └── 29756fe33519c2881156542cb77f0e1207bdbe
+│   │   ├── f4/
+│   │   │   └── e905febe60092bd713b3ee3c0233caa4fb22b2
 │   │   ├── f5/
 │   │   │   └── 4592fd73da13e94c07942b06b38e537057e1e6
 │   │   ├── f9/
+│   │   │   ├── 26a792ee917e4438c024e49df26bc1e199388d
 │   │   │   └── b1fa9239732b005c159599bd21391e21417f98
 │   │   ├── fa/
 │   │   │   └── 2fd633624471308c794c31eac5daaccf1f93b5
@@ -5700,12 +5911,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── MD-logo.png
 │   │   │   ├── auth_thmb.png
 │   │   │   ├── default_avatar.png
+│   │   │   ├── default_cover.png
 │   │   │   └── favicon.ico
 │   │   ├── css/
+│   │   │   ├── add_to_list.css
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
 │   │   │   ├── creator_detail.css
 │   │   │   ├── library.css
+│   │   │   ├── list.css
 │   │   │   ├── manga_detail.css
 │   │   │   └── styles.css
 │   │   ├── flags/
@@ -5776,8 +5990,10 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── zh-ro.png
 │   │   │   └── zh.png
 │   │   └── js/
+│   │       ├── add_to_list.js
 │   │       ├── comments.js
 │   │       ├── library.js
+│   │       ├── list_public.js
 │   │       ├── manga_detail.js
 │   │       └── scripts.js
 │   └── templates/
@@ -5845,7 +6061,7 @@ except Exception as e:
 === Folder: .git ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
-Update List Basic
+List-CRUD-Basic
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
 [core]
@@ -5872,7 +6088,7 @@ e5da7db4b7c644c5960e726d3244a63f72b63b45		https://github.com/huyxuantruong1411/M
 ref: refs/heads/main
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\index ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 13: invalid continuation byte]
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 11: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\ORIG_HEAD ---
 4532251c88870e8ce76bfd365c3ccf3e7f101780
@@ -6798,6 +7014,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561164 +0700	commit: add-comment-get
 4532251c88870e8ce76bfd365c3ccf3e7f101780 e5da7db4b7c644c5960e726d3244a63f72b63b45 Huy1411 <huy14112002@gmail.com> 1758631345 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
 e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
+6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646184 +0700	commit: List-CRUD-Basic
 
 === Folder: .git\logs\refs ===
 
@@ -6813,6 +7030,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561164 +0700	commit: add-comment-get
 4532251c88870e8ce76bfd365c3ccf3e7f101780 e5da7db4b7c644c5960e726d3244a63f72b63b45 Huy1411 <huy14112002@gmail.com> 1758631345 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
 e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
+6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646184 +0700	commit: List-CRUD-Basic
 
 === Folder: .git\logs\refs\remotes ===
 
@@ -6826,6 +7044,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489122 +0700	update by push
 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561173 +0700	update by push
 4532251c88870e8ce76bfd365c3ccf3e7f101780 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642846 +0700	update by push
+6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646191 +0700	update by push
 
 === Folder: .git\objects ===
 
@@ -6862,6 +7081,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0b\9ec896bcb583ee708af129771cc5eb24f5e271 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\0d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0d\f4a926b5abb59c34dd1c937f4ebd1af5f2b07d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\0e ===
 
@@ -6932,6 +7156,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\25\99563729b87d3931c903a5c60cb15beaf8ec5f ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x82 in position 3: invalid start byte]
+
+=== Folder: .git\objects\26 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\26\bb3e2da6057f10c3478722f71b000b214f4955 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc9 in position 21: invalid continuation byte]
 
 === Folder: .git\objects\27 ===
 
@@ -7058,6 +7287,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\4b ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4b\4eafc89b19ede3f97e72fbe433c013c1b1281d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 9: invalid start byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4b\d049e7806894891e9f7b1da06689873da5e2fe ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
@@ -7130,6 +7362,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5b\e60eab89f12679223cb656b276d146792c6351 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5b\ec8249980ba3d8e6726e3861f6e29356be43db ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
+
 === Folder: .git\objects\5c ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5c\384ecaa99129459ebd036d30f4568a50a0a5ab ---
@@ -7150,6 +7385,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\61 ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\61\10907b9d722cacde5efae2af8dbb9b5d2c6e18 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\61\754b97c8aaf2bd4fc8e425ef292f71f1592315 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
@@ -7167,6 +7405,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\65\4adb9f9d6c8633be08d544914c30fff7ec4171 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\65\ddd184b9d0d3caaf2ef259244a88c904b3a795 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\68 ===
 
@@ -7263,6 +7504,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\78\db8fca4c5ff6d4530790b22af870c9be3eefe8 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\7b ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7b\7d818314e311b6c2fb3403a472595d3fb6aa06 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\7d ===
 
@@ -7590,6 +7836,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\da\c822ef92196eea7a19b7695b94a3f91e318610 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\da\f03c764769b9770ca671aec808819a3d8f054c ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
 === Folder: .git\objects\db ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\db\064b837db5e7443de95808d99204ce5184c9ca ---
@@ -7641,6 +7890,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\e9 ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e9\d8746897f7eaf3d7fff61f818ba60690198046 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e9\f0cf5810974d60757f73be589b0351a1b93b7b ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
@@ -7678,12 +7930,20 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f3\29756fe33519c2881156542cb77f0e1207bdbe ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbc in position 5: invalid start byte]
 
+=== Folder: .git\objects\f4 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f4\e905febe60092bd713b3ee3c0233caa4fb22b2 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
 === Folder: .git\objects\f5 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f5\4592fd73da13e94c07942b06b38e537057e1e6 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xaf in position 5: invalid start byte]
 
 === Folder: .git\objects\f9 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f9\26a792ee917e4438c024e49df26bc1e199388d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f9\b1fa9239732b005c159599bd21391e21417f98 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte]
@@ -7710,14 +7970,14 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 === Folder: .git\refs\heads ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
-6d03f43314d32aef36fc87bae239689e7cbf6fe4
+7b7d818314e311b6c2fb3403a472595d3fb6aa06
 
 === Folder: .git\refs\remotes ===
 
 === Folder: .git\refs\remotes\origin ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
-6d03f43314d32aef36fc87bae239689e7cbf6fe4
+7b7d818314e311b6c2fb3403a472595d3fb6aa06
 
 === Folder: .git\refs\tags ===
 
@@ -7985,47 +8245,86 @@ def report_comment(comment_id):
     return jsonify({"success": True, "message": "Report submitted."})
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\list_routes.py ---
-from flask import Blueprint, request, jsonify, render_template, abort
+# mini-demo/app/list_routes.py
+from flask import Blueprint, request, jsonify, render_template, abort, current_app
 from flask_login import login_required, current_user
 from app import db
-from app.models import List, ListManga, ListFollower, Manga
+from app.models import List, ListManga, ListFollower, Manga, User
 from datetime import datetime
 import uuid
 
+# For SQL functions
+from sqlalchemy import or_, func
+
 list_bp = Blueprint("lists", __name__)
 
-# ==== JSON API ====
+# -------------------------
+# Helper serializers
+# -------------------------
+def serialize_list_basic(l, include_contains=False, manga_id=None):
+    data = {
+        "id": str(l.ListId),
+        "name": l.Name,
+        "slug": l.Slug,
+        "description": l.Description,
+        "visibility": l.Visibility,
+        "item_count": l.ItemCount or 0,
+        "follower_count": l.FollowerCount or 0,
+        "updated_at": l.UpdatedAt.isoformat() if l.UpdatedAt else None,
+    }
+    if include_contains and manga_id:
+        contains = (
+            db.session.query(ListManga)
+            .filter_by(ListId=l.ListId, MangaId=manga_id)
+            .first()
+            is not None
+        )
+        data["contains"] = bool(contains)
+    return data
 
+# -------------------------
+# GET /api/lists
+# Returns: my_lists and followed_lists
+# Accepts optional query param manga_id to mark `contains` for my_lists
+# -------------------------
 @list_bp.route("/lists", methods=["GET"])
 @login_required
 def get_lists():
-    """Return user's own lists and followed lists"""
-    my_lists = List.query.filter_by(UserId=current_user.UserId).all()
-    followed = (
+    manga_id = request.args.get("manga_id", None)
+    # basic lists owned by user
+    my_lists_q = List.query.filter_by(UserId=current_user.UserId).order_by(List.UpdatedAt.desc())
+    my_lists = my_lists_q.all()
+
+    # lists the user follows (not necessarily owned)
+    followed_q = (
         db.session.query(List)
         .join(ListFollower, ListFollower.ListId == List.ListId)
         .filter(ListFollower.UserId == current_user.UserId)
-        .all()
+        .order_by(List.UpdatedAt.desc())
     )
+    followed = followed_q.all()
 
-    def serialize(l):
-        return {
-            "id": str(l.ListId),
-            "name": l.Name,
-            "slug": l.Slug,
-            "description": l.Description,
-            "visibility": l.Visibility,
-            "item_count": l.ItemCount or 0,
-            "follower_count": l.FollowerCount or 0,
-            "updated_at": l.UpdatedAt.isoformat() if l.UpdatedAt else None,
-        }
+    include_contains = False
+    parsed_manga_id = None
+    if manga_id:
+        # try to parse/validate UUID / existence. If invalid UUID, treat as not provided.
+        try:
+            parsed_manga_id = uuid.UUID(manga_id)
+            include_contains = True
+        except Exception:
+            include_contains = False
+            parsed_manga_id = None
 
-    return jsonify(
-        {"my_lists": [serialize(l) for l in my_lists],
-         "followed_lists": [serialize(l) for l in followed]}
-    )
+    my_lists_serialized = [serialize_list_basic(l, include_contains, parsed_manga_id) for l in my_lists]
+    followed_serialized = [serialize_list_basic(l, False, None) for l in followed]
+
+    return jsonify({"my_lists": my_lists_serialized, "followed_lists": followed_serialized})
 
 
+# -------------------------
+# POST /api/lists
+# Create new list
+# -------------------------
 @list_bp.route("/lists", methods=["POST"])
 @login_required
 def create_list():
@@ -8037,13 +8336,17 @@ def create_list():
     if not name:
         return jsonify({"error": "Name is required"}), 400
 
+    # generate simple slug (ensure uniqueness in your data migration or handle collisions)
+    slug_base = name.strip().lower().replace(" ", "-")
+    slug = f"{slug_base}-{str(uuid.uuid4())[:8]}"
+
     new_list = List(
         ListId=uuid.uuid4(),
         UserId=current_user.UserId,
         Name=name,
         Description=desc,
         Visibility=visibility,
-        Slug=name.lower().replace(" ", "-") + "-" + str(uuid.uuid4())[:8],
+        Slug=slug,
         CreatedAt=datetime.utcnow(),
         UpdatedAt=datetime.utcnow(),
         FollowerCount=0,
@@ -8054,41 +8357,50 @@ def create_list():
     return jsonify({"id": str(new_list.ListId), "slug": new_list.Slug}), 201
 
 
+# -------------------------
+# GET /api/lists/<list_id>
+# Return metadata + items (for owner or public view) - JSON
+# -------------------------
 @list_bp.route("/lists/<uuid:list_id>", methods=["GET"])
 def get_list(list_id):
     l = List.query.get_or_404(list_id)
-    # check visibility
-    if l.Visibility == "private" and (
-        not current_user.is_authenticated or l.UserId != current_user.UserId
-    ):
+    # check visibility: if private and not owner -> 403
+    if l.Visibility == "private" and (not current_user.is_authenticated or l.UserId != current_user.UserId):
         abort(403)
 
     items = (
         db.session.query(ListManga, Manga)
         .join(Manga, ListManga.MangaId == Manga.MangaId)
         .filter(ListManga.ListId == l.ListId)
+        .order_by(ListManga.Position.asc(), ListManga.AddedAt.asc())
         .all()
     )
 
-    return jsonify(
-        {
-            "id": str(l.ListId),
-            "name": l.Name,
-            "description": l.Description,
-            "owner_id": str(l.UserId),
-            "items": [
-                {
-                    "manga_id": str(m.MangaId),
-                    "title": m.TitleEn,
-                    "note": li.Note if hasattr(li, "Note") else None,
-                    "position": li.Position,
-                }
-                for li, m in items
-            ],
-        }
-    )
+    items_serialized = []
+    for li, m in items:
+        items_serialized.append({
+            "manga_id": str(m.MangaId),
+            "title": getattr(m, "TitleEn", "") or "",
+            "note": getattr(li, "Note", None) if hasattr(li, "Note") else None,
+            "position": getattr(li, "Position", None),
+            "cover_id": getattr(m, "CoverId", None),
+        })
+
+    return jsonify({
+        "id": str(l.ListId),
+        "name": l.Name,
+        "description": l.Description,
+        "owner_id": str(l.UserId),
+        "visibility": l.Visibility,
+        "items": items_serialized,
+        "item_count": l.ItemCount or 0,
+    })
 
 
+# -------------------------
+# PUT/PATCH /api/lists/<list_id>
+# Update metadata (owner only)
+# -------------------------
 @list_bp.route("/lists/<uuid:list_id>", methods=["PUT", "PATCH"])
 @login_required
 def update_list(list_id):
@@ -8105,9 +8417,13 @@ def update_list(list_id):
         l.Visibility = data["visibility"]
     l.UpdatedAt = datetime.utcnow()
     db.session.commit()
-    return jsonify({"success": True})
+    return jsonify({"success": True}), 200
 
 
+# -------------------------
+# DELETE /api/lists/<list_id>
+# Delete list (owner only)
+# -------------------------
 @list_bp.route("/lists/<uuid:list_id>", methods=["DELETE"])
 @login_required
 def delete_list(list_id):
@@ -8119,21 +8435,33 @@ def delete_list(list_id):
     return "", 204
 
 
+# -------------------------
+# POST /api/lists/<list_id>/items
+# Add a manga to a list (owner only)
+# -------------------------
 @list_bp.route("/lists/<uuid:list_id>/items", methods=["POST"])
 @login_required
 def add_item(list_id):
     l = List.query.get_or_404(list_id)
+    # Only owner can add items (per your current design)
     if l.UserId != current_user.UserId:
         abort(403)
 
     data = request.get_json() or {}
-    manga_id = data.get("manga_id")
+    manga_id = data.get("manga_id") or data.get("MangaId")
     if not manga_id:
         return jsonify({"error": "manga_id required"}), 400
 
+    # Check existing
     existing = ListManga.query.filter_by(ListId=l.ListId, MangaId=manga_id).first()
     if existing:
-        return jsonify({"message": "already exists"}), 200
+        # idempotent
+        return jsonify({"message": "already exists", "item_count": l.ItemCount or 0}), 200
+
+    # Validate manga exists in Manga table
+    manga_obj = Manga.query.filter_by(MangaId=manga_id).first()
+    if manga_obj is None:
+        return jsonify({"error": "manga not found"}), 404
 
     li = ListManga(
         ListId=l.ListId,
@@ -8143,10 +8471,15 @@ def add_item(list_id):
     )
     db.session.add(li)
     l.ItemCount = (l.ItemCount or 0) + 1
+    l.UpdatedAt = datetime.utcnow()
     db.session.commit()
-    return jsonify({"success": True}), 201
+    return jsonify({"success": True, "item_count": l.ItemCount}), 201
 
 
+# -------------------------
+# DELETE /api/lists/<list_id>/items/<manga_id>
+# Remove a manga from a list (owner only)
+# -------------------------
 @list_bp.route("/lists/<uuid:list_id>/items/<uuid:manga_id>", methods=["DELETE"])
 @login_required
 def remove_item(list_id, manga_id):
@@ -8154,29 +8487,34 @@ def remove_item(list_id, manga_id):
     if l.UserId != current_user.UserId:
         abort(403)
 
-    li = ListManga.query.filter_by(ListId=list_id, MangaId=manga_id).first()
+    li = ListManga.query.filter_by(ListId=l.ListId, MangaId=manga_id).first()
     if not li:
-        return "", 204
+        # already gone — treat as success for idempotency
+        return jsonify({"message": "not found", "item_count": l.ItemCount or 0}), 200
+
     db.session.delete(li)
     l.ItemCount = max(0, (l.ItemCount or 0) - 1)
+    l.UpdatedAt = datetime.utcnow()
     db.session.commit()
-    return "", 204
+    return jsonify({"success": True, "item_count": l.ItemCount}), 200
 
 
+# -------------------------
+# Follow / Unfollow
+# -------------------------
 @list_bp.route("/lists/<uuid:list_id>/follow", methods=["POST"])
 @login_required
 def follow_list(list_id):
     l = List.query.get_or_404(list_id)
     if l.Visibility == "private":
         abort(403)
-    exists = ListFollower.query.filter_by(
-        ListId=l.ListId, UserId=current_user.UserId
-    ).first()
+    exists = ListFollower.query.filter_by(ListId=l.ListId, UserId=current_user.UserId).first()
     if exists:
         return jsonify({"message": "already following"}), 200
     f = ListFollower(ListId=l.ListId, UserId=current_user.UserId)
     db.session.add(f)
     l.FollowerCount = (l.FollowerCount or 0) + 1
+    l.UpdatedAt = datetime.utcnow()
     db.session.commit()
     return jsonify({"success": True}), 201
 
@@ -8190,12 +8528,14 @@ def unfollow_list(list_id):
         return "", 204
     db.session.delete(f)
     l.FollowerCount = max(0, (l.FollowerCount or 0) - 1)
+    l.UpdatedAt = datetime.utcnow()
     db.session.commit()
     return "", 204
 
 
-# ==== Public view ====
-
+# -------------------------
+# Public view (server rendered)
+# -------------------------
 @list_bp.route("/public/<slug>")
 def public_view(slug):
     l = List.query.filter_by(Slug=slug).first_or_404()
@@ -8205,9 +8545,139 @@ def public_view(slug):
         db.session.query(ListManga, Manga)
         .join(Manga, ListManga.MangaId == Manga.MangaId)
         .filter(ListManga.ListId == l.ListId)
+        .order_by(ListManga.Position.asc(), ListManga.AddedAt.asc())
         .all()
     )
-    return render_template("list_public.html", list=l, items=items)
+    # fetch owner (safe)
+    owner = None
+    try:
+        owner = User.query.filter_by(UserId=l.UserId).first()
+    except Exception:
+        owner = None
+
+    # pass simple list metadata (some templates expect attributes)
+    list_meta = l
+    list_meta.owner = owner
+    return render_template("list_public.html", list=list_meta, items=items)
+
+
+# -----------------------------------------------------------------
+# GET items for a list (JSON) with optional sort
+# -----------------------------------------------------------------
+@list_bp.route("/lists/<uuid:list_id>/items", methods=["GET"])
+def get_list_items(list_id):
+    """
+    Returns JSON list of items for a list.
+    Query params:
+      - sort: 'recent' (default), 'title', 'added'
+    """
+    l = List.query.get_or_404(list_id)
+
+    # visibility check: if private and not owner -> 403
+    if l.Visibility == "private" and (not current_user.is_authenticated or l.UserId != current_user.UserId):
+        abort(403)
+
+    sort = request.args.get("sort", "recent")
+    q = db.session.query(ListManga, Manga).join(Manga, ListManga.MangaId == Manga.MangaId).filter(ListManga.ListId == l.ListId)
+
+    if sort == "title":
+        # use TitleEn only (your model has TitleEn), coalesce to empty string to avoid NULL issues
+        q = q.order_by(func.lower(func.coalesce(Manga.TitleEn, "")).asc())
+    elif sort == "added":
+        q = q.order_by(ListManga.AddedAt.desc())
+    else:
+        # recent (default): by AddedAt desc
+        q = q.order_by(ListManga.AddedAt.desc())
+
+    items = q.all()
+    items_serialized = []
+    for li, m in items:
+        items_serialized.append({
+            "manga_id": str(m.MangaId),
+            "title": getattr(m, "TitleEn", "") or "",
+            "cover_id": getattr(m, "CoverId", None),
+            "added_at": li.AddedAt.isoformat() if hasattr(li, "AddedAt") and li.AddedAt else None,
+        })
+
+    owner = None
+    try:
+        owner = User.query.filter_by(UserId=l.UserId).first()
+    except Exception:
+        owner = None
+
+    return jsonify({
+        "list": {
+            "id": str(l.ListId),
+            "name": l.Name,
+            "description": l.Description,
+            "visibility": l.Visibility,
+            "item_count": l.ItemCount or 0,
+            "follower_count": l.FollowerCount or 0,
+            "owner": {"id": str(owner.UserId), "username": owner.Username} if owner else None
+        },
+        "items": items_serialized
+    })
+
+
+# Bulk delete items from a list (owner only)
+@list_bp.route("/lists/<uuid:list_id>/items", methods=["DELETE"])
+@login_required
+def bulk_delete_items(list_id):
+    """
+    Accept JSON body: {"manga_ids": ["uuid1", "uuid2", ...]}
+    Only owner can delete items from their list.
+    """
+    l = List.query.get_or_404(list_id)
+    if l.UserId != current_user.UserId:
+        abort(403)
+
+    data = request.get_json() or {}
+    manga_ids = data.get("manga_ids", [])
+    if not isinstance(manga_ids, list) or len(manga_ids) == 0:
+        return jsonify({"error": "manga_ids required (non-empty array)"}), 400
+
+    removed = 0
+    for mid in manga_ids:
+        li = ListManga.query.filter_by(ListId=l.ListId, MangaId=mid).first()
+        if li:
+            db.session.delete(li)
+            removed += 1
+
+    l.ItemCount = max(0, (l.ItemCount or 0) - removed)
+    l.UpdatedAt = datetime.utcnow()
+    db.session.commit()
+    return jsonify({"success": True, "removed": removed, "item_count": l.ItemCount}), 200
+
+
+# Simple search endpoint for manga titles (used in Add Manga modal)
+@list_bp.route("/search/manga", methods=["GET"])
+@login_required
+def search_manga():
+    """
+    Query params: q (string), limit (int)
+    Returns JSON: list of {manga_id, title, cover_id}
+    """
+    q = request.args.get("q", "").strip()
+    limit = int(request.args.get("limit", 12))
+    if not q:
+        return jsonify({"results": []})
+
+    # basic case-insensitive LIKE search on TitleEn only (your model uses TitleEn)
+    like = f"%{q}%"
+    results = (
+        db.session.query(Manga)
+        .filter(Manga.TitleEn.ilike(like))
+        .limit(limit)
+        .all()
+    )
+    out = []
+    for m in results:
+        out.append({
+            "manga_id": str(m.MangaId),
+            "title": getattr(m, "TitleEn", "") or "",
+            "cover_id": getattr(m, "CoverId", None)
+        })
+    return jsonify({"results": out})
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\models.py ---
 from datetime import datetime
@@ -9403,9 +9873,8 @@ def create_app():
     from .routes import main as main_blueprint, manga as manga_blueprint
     from .comment_routes import comment_bp as comment_blueprint  # new
     from app.list_routes import list_bp
-    
-    app.register_blueprint(list_bp, url_prefix="/api")
 
+    app.register_blueprint(list_bp, url_prefix="/api")
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
     app.register_blueprint(manga_blueprint, url_prefix='/manga')
@@ -9430,6 +9899,9 @@ def load_user(user_id):
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_avatar.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_cover.png ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\favicon.ico ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
@@ -9438,6 +9910,124 @@ def load_user(user_id):
 
 === Folder: app\static\css ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\add_to_list.css ---
+/* Dark theme modal for Add To List */
+#addToListModal .modal-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    /* toàn bộ modal text trắng xám sáng */
+    border-radius: 0.75rem;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+#addToListModal .modal-header {
+    border-bottom: 1px solid #333;
+    background-color: #252525;
+    color: #f0f0f0;
+}
+
+#addToListModal .modal-title {
+    font-weight: 600;
+}
+
+#addToListModal .modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#addToListModal .modal-footer {
+    border-top: 1px solid #333;
+    background-color: #252525;
+}
+
+#addToListModal .list-group-item {
+    background-color: transparent;
+    color: #f0f0f0;
+    /* tên list sáng rõ */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #333;
+}
+
+#addToListModal .list-group-item:hover {
+    background-color: #2a2a2a;
+    cursor: pointer;
+}
+
+#addToListModal .form-check-label {
+    color: #f0f0f0;
+    /* chỉnh label (tên list) đồng bộ với text sáng */
+}
+
+#addToListModal .form-check-input {
+    accent-color: #ff914d;
+    /* cam nổi bật */
+}
+
+#addToListModal .btn-primary {
+    background-color: #ff914d;
+    border-color: #ff914d;
+    font-weight: 600;
+}
+
+#addToListModal .btn-primary:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+#addToListModal .btn-secondary {
+    background-color: #444;
+    border-color: #444;
+}
+
+#addToListModal .btn-secondary:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+/* Force brighter, larger list name text in AddToList modal */
+#addToListModal .form-check-label {
+    color: #f0f0f0 !important;
+    /* ép màu sáng */
+    font-size: 1rem !important;
+    /* tăng size chữ */
+    font-weight: 500;
+    /* đậm vừa để dễ đọc */
+}
+
+/* Tên list (Test1, Test2) */
+#addToListModal .fw-semibold {
+    color: #f0f0f0 !important;
+    /* trắng xám sáng */
+    font-size: 1rem !important;
+    /* chữ to hơn */
+    font-weight: 600;
+    /* đậm rõ */
+}
+
+/* Mô tả list (Ha Ha Hu Hu, For test only) */
+#addToListModal .flex-grow-1 .small.text-muted {
+    color: #cccccc !important;
+    /* xám sáng thay vì xám chìm */
+    font-size: 0.9rem;
+}
+
+/* Số lượng items (3 items, 2 items) */
+#addToListModal .text-end.small.text-muted {
+    color: #aaaaaa !important;
+    /* sáng hơn để dễ đọc */
+    font-size: 0.85rem;
+}
+
+/* Hover effect cho nguyên khối item */
+#addToListModal .d-flex.align-items-center:hover {
+    background-color: #2a2a2a;
+    /* nền tối nhấn nhẹ */
+}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\auth.css ---
 /* Background */
 .auth-body {
@@ -9943,6 +10533,92 @@ body {
 
 #deleteListModal .btn-danger {
     width: 100%;
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\list.css ---
+/* list.css — dark theme for list detail page */
+
+.container.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Card grid */
+.manga-card {
+    background-color: #1f1f1f;
+    border: 1px solid #2b2b2b;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.manga-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Cover image */
+.manga-card .cover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background: #eee;
+}
+
+/* Card body */
+.manga-card .card-body {
+    padding: 0.75rem;
+    flex-grow: 1;
+}
+
+.manga-card .card-title {
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Footer with actions */
+.manga-card .card-footer {
+    padding: 0.5rem 0.75rem;
+    border-top: 1px solid #2b2b2b;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Buttons */
+.btn-outline-light {
+    color: #ddd;
+    border-color: #444;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+/* Bulk select checkbox position */
+.select-checkbox {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 3;
+}
+
+/* Card container to allow relative pos for checkbox */
+.card-pos {
+    position: relative;
+}
+
+/* Small responsive tweaks */
+@media (min-width: 992px) {
+    .manga-card .cover {
+        height: 180px;
+    }
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
 .manga-detail-container {
@@ -23541,6 +24217,249 @@ for lang, country in lang_to_country.items():
 
 === Folder: app\static\js ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\add_to_list.js ---
+// mini-demo/app/static/js/add_to_list.js
+(function () {
+    // Utility: small alert helper (use existing flash/toast if you have one)
+    function toast(msg) {
+        try {
+            // if bootstrap toast exists in your project, you can implement nicer toast
+            alert(msg);
+        } catch (e) {
+            console.log(msg);
+        }
+    }
+
+    // Elements
+    const modalEl = document.getElementById("addToListModal");
+    if (!modalEl) return; // modal not present
+    const bsModal = new bootstrap.Modal(modalEl);
+    const bodyEl = document.getElementById("addToListBody");
+    const confirmBtn = document.getElementById("addToListConfirmBtn");
+    const createBtn = document.getElementById("createListFromModalBtn");
+    const loadingElHtml = `<div class="text-center py-3">Loading lists…</div>`;
+
+    // State per open
+    let state = {
+        mangaId: null,
+        lists: [], // array of {id, name, contains, item_count, description}
+        originalContains: {}, // map id -> bool
+        checkedMap: {}, // id -> bool (current UI selection)
+    };
+
+    // Helper to fetch lists (with contains)
+    async function fetchListsForManga(mangaId) {
+        const resp = await fetch(`/api/lists?manga_id=${encodeURIComponent(mangaId)}`, {
+            credentials: "same-origin",
+        });
+        if (!resp.ok) throw new Error("Failed to load lists");
+        return resp.json();
+    }
+
+    // Build rows markup
+    function buildListRows(lists) {
+        if (!lists || lists.length === 0) {
+            return `<div class="text-center text-muted py-3">You don't have any lists yet. Create one to start adding mangas.</div>`;
+        }
+        const rows = lists.map(l => {
+            const checked = l.contains ? "checked" : "";
+            return `
+          <div class="d-flex align-items-center py-2 border-bottom">
+            <div class="form-check me-3">
+              <input class="form-check-input add-list-checkbox" data-list-id="${l.id}" type="checkbox" ${checked} id="add_list_cb_${l.id}">
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold">${escapeHtml(l.name)}</div>
+              <div class="small text-muted">${escapeHtml(l.description || '')}</div>
+            </div>
+            <div class="text-end small text-muted ms-3">
+              ${l.item_count} items
+            </div>
+          </div>
+        `;
+        });
+        return rows.join("\n");
+    }
+
+    // escape small function
+    function escapeHtml(s) {
+        if (!s) return "";
+        return s.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+    }
+
+    // Open modal entry: call this when user clicks .add-to-list button
+    async function openAddToListModal(mangaId) {
+        state.mangaId = mangaId;
+        bodyEl.innerHTML = loadingElHtml;
+        confirmBtn.disabled = true;
+        try {
+            const data = await fetchListsForManga(mangaId);
+            // use only my_lists for modifications
+            const lists = data.my_lists || [];
+            state.lists = lists;
+            state.originalContains = {};
+            state.checkedMap = {};
+            lists.forEach(l => {
+                state.originalContains[l.id] = !!l.contains;
+                state.checkedMap[l.id] = !!l.contains;
+            });
+            bodyEl.innerHTML = buildListRows(lists);
+
+            // attach events to checkboxes
+            bodyEl.querySelectorAll(".add-list-checkbox").forEach(cb => {
+                cb.addEventListener("change", (ev) => {
+                    const id = cb.dataset.listId;
+                    state.checkedMap[id] = cb.checked;
+                    // enable confirm only if there is any change
+                    confirmBtn.disabled = !hasStateChanged();
+                });
+            });
+
+            confirmBtn.disabled = !hasStateChanged();
+            bsModal.show();
+        } catch (err) {
+            console.error(err);
+            bodyEl.innerHTML = `<div class="text-danger text-center py-3">Failed to load lists. Try again later.</div>`;
+            confirmBtn.disabled = true;
+            bsModal.show();
+        }
+    }
+
+    // Determine if any check changed
+    function hasStateChanged() {
+        for (const id in state.checkedMap) {
+            if (state.checkedMap[id] !== !!state.originalContains[id]) return true;
+        }
+        return false;
+    }
+
+    // Build arrays to add/remove
+    function computeDiffs() {
+        const toAdd = [];
+        const toRemove = [];
+        for (const id in state.checkedMap) {
+            const now = !!state.checkedMap[id];
+            const before = !!state.originalContains[id];
+            if (now && !before) toAdd.push(id);
+            if (!now && before) toRemove.push(id);
+        }
+        return { toAdd, toRemove };
+    }
+
+    // Confirm handler: call POST/DELETE per list
+    async function confirmHandler() {
+        confirmBtn.disabled = true;
+        confirmBtn.innerHTML = 'Working...';
+
+        const { toAdd, toRemove } = computeDiffs();
+        const promises = [];
+
+        toAdd.forEach(listId => {
+            const p = fetch(`/api/lists/${listId}/items`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "same-origin",
+                body: JSON.stringify({ "manga_id": state.mangaId }),
+            }).then(r => r.json().then(j => ({ ok: r.ok, status: r.status, body: j })));
+            promises.push(p);
+        });
+
+        toRemove.forEach(listId => {
+            const p = fetch(`/api/lists/${listId}/items/${encodeURIComponent(state.mangaId)}`, {
+                method: "DELETE",
+                credentials: "same-origin",
+            }).then(async r => {
+                // try parse json body if any
+                let body = null;
+                try { body = await r.json(); } catch (e) { body = null; }
+                return { ok: r.ok, status: r.status, body };
+            });
+            promises.push(p);
+        });
+
+        const results = await Promise.allSettled(promises);
+        // summarize
+        let added = 0, removed = 0, failed = 0;
+        results.forEach((res, idx) => {
+            if (res.status !== "fulfilled") {
+                failed++;
+                return;
+            }
+            const val = res.value;
+            if (!val.ok && val.status >= 400) {
+                failed++;
+                return;
+            }
+            // decide whether it was add or remove by index mapping is tricky — use toAdd/toRemove lengths
+            // easier: count success by matching val.body.message or status codes
+            // but since we don't have mapping here, use simple heuristic:
+            // if status 201 or body.success true -> treat as add; if status 200 with message 'not found' -> remove success
+            if (val.status === 201 || (val.body && val.body.success)) added++;
+            else if (val.status === 200 || val.status === 204) {
+                // could be add (200 on already exists) or delete success; attempt to infer from body.message
+                if (val.body && val.body.message && val.body.message === "already exists") {
+                    // already existed -> treat as add (no increment)
+                    // no change to counters
+                } else {
+                    // treat as remove or generic success
+                    removed++;
+                }
+            } else {
+                // fallback count as success
+                added++;
+            }
+        });
+
+        // finalization: reload lists in place if any succeeded to update counts (simple approach)
+        if (added > 0 || removed > 0) {
+            // optionally refresh UI: emit a custom event or reload parts
+            // we will simply reload the page fragment by calling library loader if exists
+            if (typeof window.reloadLibraryLists === "function") {
+                window.reloadLibraryLists();
+            }
+        }
+
+        // show summary
+        toast(`Done — added: ${added}, removed: ${removed}, failed: ${failed}`);
+        confirmBtn.innerHTML = 'Confirm';
+        bsModal.hide();
+    }
+
+    // Wire confirm / create btn
+    confirmBtn.addEventListener("click", confirmHandler);
+    createBtn && createBtn.addEventListener("click", (e) => {
+        // open new list modal if exists in DOM
+        const newListModalEl = document.getElementById("newListModal");
+        if (newListModalEl) {
+            const newListBs = new bootstrap.Modal(newListModalEl);
+            newListBs.show();
+            // keep add-modal open logic: you may want to close addToList modal or leave open
+        } else {
+            // redirect to library page create flow if you prefer
+            window.location.href = "/library";
+        }
+    });
+
+    // Attach click handler to all .add-to-list buttons (delegation)
+    document.addEventListener("click", function (e) {
+        const target = e.target.closest(".add-to-list");
+        if (!target) return;
+        e.preventDefault();
+        const mangaId = target.dataset.mangaId || target.getAttribute("data-manga-id");
+        if (!mangaId) {
+            console.warn("add-to-list clicked but manga id missing");
+            return;
+        }
+        // if user not authenticated, the button link likely points to login; let default happen
+        // else open modal
+        openAddToListModal(mangaId);
+    });
+
+    // expose small function for external callers (optional)
+    window.openAddToListModal = openAddToListModal;
+
+})();
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\comments.js ---
 // app/static/js/comments.js
 $(document).ready(function () {
@@ -23871,9 +24790,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.querySelectorAll(".view-btn").forEach(btn => {
             btn.addEventListener("click", () => {
-                window.location.href = `/public/${btn.dataset.slug}`;
+                window.location.href = `/api/public/${btn.dataset.slug}`;
             });
         });
+
     }
 
     // ==== Create List ====
@@ -23940,6 +24860,270 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loadLists();
 });
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\list_public.js ---
+// list_public.js — handles list detail page behaviour
+(() => {
+    const ctx = window._LIST_CONTEXT || {};
+    if (!ctx.listId) return;
+
+    const listId = ctx.listId;
+    const isOwner = ctx.isOwner === true || ctx.isOwner === 'true' || ctx.isOwner === "True";
+
+    const container = document.getElementById('listItemsContainer');
+    const sortSelect = document.getElementById('sortSelect');
+    const addMangaBtn = document.getElementById('addMangaBtn');
+    const addMangaModalEl = document.getElementById('addMangaModal');
+    const addMangaModal = addMangaModalEl ? new bootstrap.Modal(addMangaModalEl) : null;
+    const addMangaResults = document.getElementById('addMangaResults');
+    const addMangaSearch = document.getElementById('addMangaSearch');
+    const addMangaConfirmBtn = document.getElementById('addMangaConfirmBtn');
+    const bulkDeleteBtn = document.getElementById('bulkDeleteBtn');
+    const confirmDeleteModal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+    let confirmDeleteTarget = null; // { type: 'single'|'bulk', ids: [...] }
+
+    let itemsCache = []; // loaded items
+    let selectedForAdd = {}; // in search modal
+    let selectedForDelete = new Set(); // selected checkboxes on page
+
+    // --- load items from API ---
+    async function loadItems() {
+        const sort = sortSelect ? sortSelect.value : 'recent';
+        const resp = await fetch(`/api/lists/${listId}/items?sort=${encodeURIComponent(sort)}`);
+        if (!resp.ok) {
+            console.error('Failed to load list items');
+            container.innerHTML = '<div class="text-muted p-4">Failed to load items.</div>';
+            return;
+        }
+        const data = await resp.json();
+        itemsCache = data.items || [];
+        renderItems();
+        updateBulkState();
+    }
+
+    function renderItems() {
+        container.innerHTML = '';
+        if (!itemsCache || itemsCache.length === 0) {
+            container.innerHTML = '<div class="text-muted p-4">No items in this list yet.</div>';
+            return;
+        }
+        itemsCache.forEach(it => {
+            const col = document.createElement('div');
+            col.className = 'col-md-3';
+            col.innerHTML = `
+          <div class="card h-100 manga-card card-pos" data-manga-id="${it.manga_id}">
+            <input type="checkbox" class="form-check-input select-checkbox" data-manga-id="${it.manga_id}">
+            <img src="${coverUrl(it.cover_id)}" class="cover card-img-top" alt="${escapeHtml(it.title)}" onerror="this.src='/static/assets/default_cover.png'">
+            <div class="card-body">
+              <h6 class="card-title">${escapeHtml(it.title)}</h6>
+            </div>
+            <div class="card-footer">
+              <div class="small text-muted">${formatDate(it.added_at)}</div>
+              <div>
+                <button class="btn btn-sm btn-outline-light add-to-list-btn">Add to list</button>
+                ${isOwner ? `<button class="btn btn-sm btn-danger remove-from-list-btn">Remove</button>` : ``}
+              </div>
+            </div>
+          </div>
+        `;
+            container.appendChild(col);
+        });
+
+        // attach handlers
+        container.querySelectorAll('.add-to-list-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const m = e.target.closest('.manga-card').dataset.mangaId;
+                // reuse global add-to-list modal if available
+                if (typeof window.openAddToListModal === 'function') {
+                    window.openAddToListModal(m);
+                } else {
+                    alert('Add to list not available');
+                }
+            });
+        });
+
+        container.querySelectorAll('.remove-from-list-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = e.target.closest('.manga-card');
+                const mid = card.dataset.mangaId;
+                confirmDeleteTarget = { type: 'single', ids: [mid], element: card };
+                document.getElementById('confirmDeleteText').textContent = 'Remove this manga from the list?';
+                confirmDeleteModal.show();
+            });
+        });
+
+        // checkbox selection
+        container.querySelectorAll('.select-checkbox').forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const id = e.target.dataset.mangaId;
+                if (e.target.checked) selectedForDelete.add(id); else selectedForDelete.delete(id);
+                updateBulkState();
+            });
+        });
+    }
+
+    function updateBulkState() {
+        if (!bulkDeleteBtn) return;
+        bulkDeleteBtn.disabled = selectedForDelete.size === 0;
+    }
+
+    // --- helpers ---
+    function coverUrl(coverId) {
+        if (!coverId) return '/static/assets/default_cover.png';
+        // cover route is under blueprint 'manga'
+        return `/manga/cover/${coverId}/image`;
+    }
+
+    function escapeHtml(s) {
+        if (!s) return '';
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function formatDate(iso) {
+        if (!iso) return '';
+        try { const d = new Date(iso); return d.toLocaleDateString(); } catch (e) { return ''; }
+    }
+
+    // --- sort handler ---
+    if (sortSelect) {
+        sortSelect.addEventListener('change', () => loadItems());
+    }
+
+    // --- Add Manga modal (search) ---
+    if (addMangaBtn && addMangaModal) {
+        addMangaBtn.addEventListener('click', () => {
+            selectedForAdd = {};
+            addMangaResults.innerHTML = '<div class="text-muted p-3">Type to search...</div>';
+            addMangaSearch.value = '';
+            addMangaModal.show();
+        });
+
+        // debounce search
+        let timer = null;
+        addMangaSearch && addMangaSearch.addEventListener('input', (e) => {
+            clearTimeout(timer);
+            const q = e.target.value.trim();
+            if (!q) { addMangaResults.innerHTML = '<div class="text-muted p-3">Type to search...</div>'; return; }
+            timer = setTimeout(() => searchManga(q), 300);
+        });
+
+        async function searchManga(q) {
+            addMangaResults.innerHTML = '<div class="text-center p-3 text-muted">Searching…</div>';
+            const resp = await fetch(`/api/search/manga?q=${encodeURIComponent(q)}&limit=24`);
+            if (!resp.ok) { addMangaResults.innerHTML = '<div class="text-danger p-3">Search failed.</div>'; return; }
+            const data = await resp.json();
+            const results = data.results || [];
+            if (results.length === 0) { addMangaResults.innerHTML = '<div class="text-muted p-3">No results.</div>'; return; }
+
+            addMangaResults.innerHTML = '';
+            results.forEach(r => {
+                const col = document.createElement('div');
+                col.className = 'col-md-4';
+                col.innerHTML = `
+            <div class="card h-100 manga-card" data-manga-id="${r.manga_id}">
+              <input type="checkbox" class="form-check-input select-search-checkbox" data-manga-id="${r.manga_id}">
+              <img src="${coverUrl(r.cover_id)}" class="cover card-img-top" alt="${escapeHtml(r.title)}" onerror="this.src='/static/assets/default_cover.png'">
+              <div class="card-body">
+                <h6 class="card-title">${escapeHtml(r.title)}</h6>
+              </div>
+            </div>
+          `;
+                addMangaResults.appendChild(col);
+            });
+
+            // attach checkbox handlers
+            addMangaResults.querySelectorAll('.select-search-checkbox').forEach(cb => {
+                cb.addEventListener('change', (e) => {
+                    const id = e.target.dataset.mangaId;
+                    if (e.target.checked) selectedForAdd[id] = true; else delete selectedForAdd[id];
+                });
+            });
+        }
+
+        addMangaConfirmBtn.addEventListener('click', async () => {
+            const ids = Object.keys(selectedForAdd);
+            if (!ids || ids.length === 0) { alert('Select at least one manga'); return; }
+            addMangaConfirmBtn.disabled = true;
+            try {
+                const promises = ids.map(id => fetch(`/api/lists/${listId}/items`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ manga_id: id })
+                }));
+                const results = await Promise.all(promises);
+                // simple success handling
+                const successCount = results.filter(r => r.ok).length;
+                alert(`Added ${successCount} / ${ids.length}`);
+                addMangaModal.hide();
+                loadItems();
+            } catch (e) {
+                alert('Failed to add');
+            } finally {
+                addMangaConfirmBtn.disabled = false;
+            }
+        });
+    }
+
+    // --- bulk delete ---
+    if (bulkDeleteBtn) {
+        bulkDeleteBtn.addEventListener('click', () => {
+            if (selectedForDelete.size === 0) return;
+            confirmDeleteTarget = { type: 'bulk', ids: Array.from(selectedForDelete) };
+            document.getElementById('confirmDeleteText').textContent = `Delete ${selectedForDelete.size} selected items?`;
+            confirmDeleteModal.show();
+        });
+    }
+
+    // confirm delete yes
+    document.getElementById('confirmDeleteYes').addEventListener('click', async () => {
+        if (!confirmDeleteTarget) return;
+        const ids = confirmDeleteTarget.ids || [];
+        if (confirmDeleteTarget.type === 'single') {
+            // call single delete endpoint
+            try {
+                const listIdLocal = listId;
+                const mid = ids[0];
+                const resp = await fetch(`/api/lists/${listIdLocal}/items/${encodeURIComponent(mid)}`, { method: 'DELETE' });
+                if (resp.ok) {
+                    // remove element from DOM
+                    if (confirmDeleteTarget.element) confirmDeleteTarget.element.remove();
+                    // refresh items
+                    await loadItems();
+                } else {
+                    alert('Delete failed');
+                }
+            } catch (e) { alert('Delete failed'); }
+        } else {
+            // bulk delete via DELETE with body
+            try {
+                const resp = await fetch(`/api/lists/${listId}/items`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ manga_ids: ids })
+                });
+                if (resp.ok) {
+                    const j = await resp.json();
+                    alert(`Removed ${j.removed} items`);
+                    selectedForDelete.clear();
+                    updateBulkState();
+                    loadItems();
+                } else {
+                    alert('Delete failed');
+                }
+            } catch (e) {
+                alert('Delete failed');
+            }
+        }
+        confirmDeleteModal.hide();
+        confirmDeleteTarget = null;
+    });
+
+    // single remove from item card can also reuse confirm modal flow. Already wired.
+
+    // initial load
+    loadItems();
+
+})();
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
 document.addEventListener('DOMContentLoaded', function () {
@@ -24104,13 +25288,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalBody = document.getElementById('modal-body');
 
     document.querySelectorAll('.add-to-list').forEach(button => {
-        button.addEventListener('click', function () {
-            const mangaId = this.dataset.mangaId;
+        button.addEventListener('click', function (ev) {
+            const mangaId = this.dataset.mangaId || this.getAttribute('data-manga-id');
 
-            if (window.isAuthenticated) {
-                modalTitle.textContent = 'Add to List';
-                modalBody.innerHTML = '<p>Coming soon... (Empty for now)</p>';
-            } else {
+            if (!window.isAuthenticated) {
                 modalTitle.textContent = 'Require Login';
                 modalBody.innerHTML = `
                     <p class="fs-5 mb-4">You need to sign in to access this feature.</p>
@@ -24119,11 +25300,27 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a href="/register" class="btn btn-register fw-bold px-4">Register</a>
                     </div>
                 `;
+                modal.show();
+                return;
             }
+
+            // If a new implementation exists, prefer it:
+            if (typeof window.openAddToListModal === 'function') {
+                // prevent the old modal from showing
+                ev.preventDefault();
+                // call the new modal handler (this will show #addToListModal)
+                window.openAddToListModal(mangaId);
+                return;
+            }
+
+            // Fallback: show the old placeholder modal (backwards-compatible)
+            modalTitle.textContent = 'Add to List';
+            modalBody.innerHTML = '<p>Coming soon. (Empty for now)</p>';
             modal.show();
         });
     });
 });
+
 
 
 // Debounce function (giữ nguyên)
@@ -24297,6 +25494,8 @@ document.addEventListener('DOMContentLoaded', function () {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Core theme CSS -->
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
+
     {% block styles %}{% endblock %}
 </head>
 
@@ -24400,11 +25599,37 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
     </div>
+    <!-- Add/Remove to/from Lists modal -->
+    <div class="modal fade" id="addToListModal" tabindex="-1" aria-labelledby="addToListLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-md">
+            <div class="modal-content text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addToListLabel">Add to your MDLists</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="addToListBody">
+                    <!-- content injected by JS -->
+                    <div class="text-center py-3" id="addToListLoading">Loading lists…</div>
+                </div>
+                <div class="modal-footer">
+                    <div class="me-auto">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                            id="createListFromModalBtn">Create new list</button>
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="addToListCancelBtn"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="addToListConfirmBtn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/add_to_list.js') }}"></script>
     {% block scripts %}{% endblock %}
 
 
@@ -24834,6 +26059,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/library.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
+
 {% endblock %}
 
 {% block content %}
@@ -24955,26 +26182,100 @@ document.addEventListener('DOMContentLoaded', function () {
 
 {% block title %}{{ list.Name }} | MDList{% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class="container py-4 text-white">
-    <h1>{{ list.Name }}</h1>
-    <p>{{ list.Description }}</p>
-    <p>Owner: {{ list.owner.Username if list.owner else "Unknown" }}</p>
-    <p>{{ list.ItemCount }} items • {{ list.FollowerCount }} followers</p>
+    <div class="d-flex justify-content-between align-items-start mb-3">
+        <div>
+            <h1 class="mb-1">{{ list.Name }}</h1>
+            <div class="text-muted mb-2">{{ list.Description }}</div>
+            <div class="small text-muted">
+                Owner: {{ list.owner.Username if list.owner else "Unknown" }}
+                &nbsp;•&nbsp; {{ list.ItemCount }} items &nbsp;•&nbsp; {{ list.FollowerCount }} followers
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            {% if current_user.is_authenticated and list.UserId == current_user.UserId %}
+            <button class="btn btn-primary" id="addMangaBtn">+ Add Manga</button>
+            <button class="btn btn-outline-danger" id="bulkDeleteBtn" disabled>Delete Selected</button>
+            {% endif %}
+            <div>
+                <select id="sortSelect" class="form-select form-select-sm">
+                    <option value="recent" selected>Recently added</option>
+                    <option value="title">Title (A–Z)</option>
+                    <option value="added">Added (new→old)</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
-    <div class="row g-3">
-        {% for li, m in items %}
-        <div class="col-md-3">
-            <div class="card h-100">
-                <img src="{{ url_for('main.cover_image', cover_id=m.CoverId) }}" class="card-img-top">
-                <div class="card-body">
-                    <h6 class="card-title">{{ m.TitleEn }}</h6>
+    <!-- Grid of manga -->
+    <div class="row g-3" id="listItemsContainer">
+        <!-- JS will populate cards here -->
+    </div>
+</div>
+
+<!-- Modal: Add manga via search -->
+<div class="modal fade" id="addMangaModal" tabindex="-1" aria-labelledby="addMangaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addMangaLabel">Add manga to "{{ list.Name }}"</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <input id="addMangaSearch" class="form-control" placeholder="Search manga by title..."
+                        autocomplete="off">
+                </div>
+                <div id="addMangaResults" class="row g-3"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="addMangaConfirmBtn" class="btn btn-primary">Add selected</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Confirm Delete -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p id="confirmDeleteText">Are you sure?</p>
+                <div class="text-end">
+                    <button id="confirmDeleteYes" class="btn btn-danger">Delete</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script id="list-context" type="application/json">
+    {{ {
+        "listId": str(list.ListId),
+        "isOwner": current_user.is_authenticated and list.UserId == current_user.UserId
+    } | tojson }}
+</script>
+
+<script>
+    window._LIST_CONTEXT = JSON.parse(
+        document.getElementById("list-context").textContent
+    );
+</script>
+
+<script src="{{ url_for('static', filename='js/list_public.js') }}"></script>
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\login.html ---
 <!DOCTYPE html>
@@ -25072,6 +26373,8 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
+
 {% endblock %}
 
 {% block content %}
@@ -25085,7 +26388,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="manga-info">
                 <h1 class="manga-title">{{ manga.TitleEn }}</h1>
                 <div class="manga-actions">
-                    <a href="#" class="btn btn-primary">Add To Library</a>
+                    <a href="#" class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">
+                        Add To Library
+                    </a>
+
                     <a href="#" class="btn btn-secondary">Start Reading</a>
                 </div>
                 <div class="manga-meta">
@@ -25239,6 +26545,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
+<script src="{{ url_for('static', filename='js/add_to_list.js') }}"></script>
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile.html ---
 {% extends "base.html" %}

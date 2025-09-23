@@ -6,6 +6,8 @@
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
+
 {% endblock %}
 
 {% block content %}
@@ -19,7 +21,10 @@
             <div class="manga-info">
                 <h1 class="manga-title">{{ manga.TitleEn }}</h1>
                 <div class="manga-actions">
-                    <a href="#" class="btn btn-primary">Add To Library</a>
+                    <a href="#" class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">
+                        Add To Library
+                    </a>
+
                     <a href="#" class="btn btn-secondary">Start Reading</a>
                 </div>
                 <div class="manga-meta">
@@ -173,4 +178,5 @@
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
+<script src="{{ url_for('static', filename='js/add_to_list.js') }}"></script>
 {% endblock %}

@@ -9,10 +9,12 @@ import requests
 from sqlalchemy import desc, func, or_
 
 from app.comment_routes import now
-from .models import Chapter, Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
+from .models import Chapter, Cover, Creator, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
 from . import db
 import os
 import uuid
+
+from app.models import ListManga
 
 main = Blueprint('main', __name__)
 manga = Blueprint('manga', __name__)
@@ -443,11 +445,82 @@ def random():
         return render_template("random.html", title="Random")  # Fallback nếu không có manga nào
     
     
+
 @main.route("/updates")
 def updates():
     if not current_user.is_authenticated:
         return render_template("require_login.html", title="Updates")
-    return render_template("updates.html", title="Updates")
+
+    page = request.args.get("page", 1, type=int)
+    per_page = 10
+
+    # Chỉ lấy Manga có trong các list của user hiện tại
+    manga_query = (
+        db.session.query(Manga, MangaCover.ImageData, MangaStatistics.AverageRating, MangaStatistics.Follows)
+        .join(ListManga, ListManga.MangaId == Manga.MangaId)
+        .join(List, List.ListId == ListManga.ListId)
+        .outerjoin(MangaCover, Manga.MangaId == MangaCover.MangaId)
+        .outerjoin(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
+        .filter(List.UserId == current_user.UserId)
+        .order_by(Manga.UpdatedAt.desc())
+    )
+
+    pagination = manga_query.paginate(page=page, per_page=per_page, error_out=False)
+    mangas = []
+
+    for item in pagination.items:
+        manga, image_data, avg_rating, follows = item
+        cover_url = url_for("static", filename="assets/default_cover.png")
+
+        if image_data:
+            image_data_b64 = base64.b64encode(image_data).decode("utf-8")
+            cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+        else:
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info["manga_id"]
+                cover_id_str = cover_info["cover_id"]
+                file_name_str = cover_info["file_name"]
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data,
+                        DownloadDate=datetime.utcnow(),
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode("utf-8")
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+
+        your_score = None
+        if current_user.is_authenticated:
+            rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            your_score = rating.Score if rating else None
+
+        mangas.append(
+            {
+                "manga": manga,
+                "cover_url": cover_url,
+                "stats": {"AverageRating": avg_rating, "Follows": follows},
+                "your_score": your_score,
+            }
+        )
+
+    return render_template(
+        "updates.html",
+        mangas=mangas,
+        pagination=pagination,
+        is_authenticated=current_user.is_authenticated,
+    )
+
 
 
 @main.route("/library")

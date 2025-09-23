@@ -88,9 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.querySelectorAll(".view-btn").forEach(btn => {
             btn.addEventListener("click", () => {
-                window.location.href = `/public/${btn.dataset.slug}`;
+                window.location.href = `/api/public/${btn.dataset.slug}`;
             });
         });
+
     }
 
     // ==== Create List ====
