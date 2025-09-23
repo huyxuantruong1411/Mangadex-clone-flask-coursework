@@ -256,6 +256,16 @@
               ]
             },
             {
+              "name": "17",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "99c9e1b22553a0cca9413bd091d3462c941956",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "1b",
               "type": "directory",
               "children": [
@@ -283,6 +293,10 @@
               "name": "1f",
               "type": "directory",
               "children": [
+                {
+                  "name": "983e4e89ef6c384589d4d56c4ab89b818c991a",
+                  "type": "file"
+                },
                 {
                   "name": "9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd",
                   "type": "file"
@@ -321,6 +335,10 @@
               "name": "25",
               "type": "directory",
               "children": [
+                {
+                  "name": "1c0e50878d4aae48741939f0fc044afa99acd4",
+                  "type": "file"
+                },
                 {
                   "name": "99563729b87d3931c903a5c60cb15beaf8ec5f",
                   "type": "file"
@@ -442,6 +460,26 @@
               ]
             },
             {
+              "name": "3c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "df5449e6b7dc424acc9f668bb98c74bbddea7a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "41",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5b0f31f025d65f4104cd0d30fc1c55fc4122cf",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "42",
               "type": "directory",
               "children": [
@@ -509,6 +547,10 @@
               "children": [
                 {
                   "name": "42cf7e7d6af5c90f5300081d5c6db57cf33178",
+                  "type": "file"
+                },
+                {
+                  "name": "b42e3e7b5e46be130e422a325623c4d4e5d2d9",
                   "type": "file"
                 }
               ]
@@ -614,6 +656,10 @@
                 {
                   "name": "b2d4a02927246f57027adf7d44d46ef35dc66c",
                   "type": "file"
+                },
+                {
+                  "name": "f69c7c43815b3fc3585f18bdccd0d3d8fbcafc",
+                  "type": "file"
                 }
               ]
             },
@@ -682,6 +728,10 @@
                 {
                   "name": "102306306d4a3c0548710ef073f4b8f888915e",
                   "type": "file"
+                },
+                {
+                  "name": "66e669e438f2cc735d17f21dd8a9411c53072b",
+                  "type": "file"
                 }
               ]
             },
@@ -691,6 +741,16 @@
               "children": [
                 {
                   "name": "754b97c8aaf2bd4fc8e425ef292f71f1592315",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "62",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3c02137ea495fc54535d9a2699c09d920be90d",
                   "type": "file"
                 }
               ]
@@ -778,11 +838,31 @@
               ]
             },
             {
+              "name": "6d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "03f43314d32aef36fc87bae239689e7cbf6fe4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "6e",
               "type": "directory",
               "children": [
                 {
                   "name": "8972dcb65808eebd76243798532da8530b2e17",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "6f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c6e12e56952a58aec2c3cf46e2a8d9635e0e38",
                   "type": "file"
                 }
               ]
@@ -864,6 +944,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "4ca363d1b634cfc85c3b442836976bff7623a2",
+                  "type": "file"
+                },
+                {
                   "name": "db8fca4c5ff6d4530790b22af870c9be3eefe8",
                   "type": "file"
                 }
@@ -929,6 +1013,10 @@
               "children": [
                 {
                   "name": "411192b2379a16e98dbd29c6dfeb62c7ab2aa6",
+                  "type": "file"
+                },
+                {
+                  "name": "6611d9a79669190df1a100f53de86d49a7b14e",
                   "type": "file"
                 }
               ]
@@ -1018,6 +1106,16 @@
               ]
             },
             {
+              "name": "9c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "e232df0f831bbe037fbf601ac68f64b06ce234",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "9e",
               "type": "directory",
               "children": [
@@ -1031,6 +1129,10 @@
               "name": "a0",
               "type": "directory",
               "children": [
+                {
+                  "name": "0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b",
+                  "type": "file"
+                },
                 {
                   "name": "6b57666f52fef6cd448fb916ed157272dee73e",
                   "type": "file"
@@ -1090,11 +1192,31 @@
               ]
             },
             {
+              "name": "a9",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "54a8dab709295435dbbae2a9604a7bb63b8efb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "ab",
               "type": "directory",
               "children": [
                 {
                   "name": "312aecebeebd9cf45a35fbbb335e4dfac03282",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "af",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0dcb86596c7c06003de37a245156322ccf48ad",
                   "type": "file"
                 }
               ]
@@ -1206,6 +1328,16 @@
               ]
             },
             {
+              "name": "c1",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "996bb5cceea413b041b4c86548f12ab83b593d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "c3",
               "type": "directory",
               "children": [
@@ -1230,6 +1362,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "b29b7fb3871de7f00a83406ec5f4266960ce32",
+                  "type": "file"
+                },
+                {
                   "name": "dcfecac7c8df924e32b4ea5fb949a2c02f4630",
                   "type": "file"
                 }
@@ -1241,6 +1377,10 @@
               "children": [
                 {
                   "name": "2a493c7723a61e1f3141466ceb0cec02457868",
+                  "type": "file"
+                },
+                {
+                  "name": "e696076b3a2304f4c7e69032abf7d85584af80",
                   "type": "file"
                 }
               ]
@@ -1308,6 +1448,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "258db9b51f818750d11dfa2c35eb8e6c8eeb4b",
+                  "type": "file"
+                },
+                {
                   "name": "5255241a586abafbdbf21215f3f8d970ae7431",
                   "type": "file"
                 },
@@ -1339,6 +1483,20 @@
                 },
                 {
                   "name": "f52fa61bcd65129e4fdd036db7484c590ce6c2",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "cf",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0cf9f225346c9cdbe0158e3601215a611e8bbe",
+                  "type": "file"
+                },
+                {
+                  "name": "a766a699a75d48d40b8a845a71c3d0d8ec8a9e",
                   "type": "file"
                 }
               ]
@@ -1457,6 +1615,14 @@
               "name": "e5",
               "type": "directory",
               "children": [
+                {
+                  "name": "a4aa34f755570941bc7c039959ed79db2727af",
+                  "type": "file"
+                },
+                {
+                  "name": "da7db4b7c644c5960e726d3244a63f72b63b45",
+                  "type": "file"
+                },
                 {
                   "name": "dfbda607cbd9b3ca40a7d134980f946b0eb323",
                   "type": "file"
@@ -1679,6 +1845,10 @@
           "type": "file"
         },
         {
+          "name": "list_routes.py",
+          "type": "file"
+        },
+        {
           "name": "models.py",
           "type": "file"
         },
@@ -1726,6 +1896,10 @@
                 },
                 {
                   "name": "creator_detail.css",
+                  "type": "file"
+                },
+                {
+                  "name": "library.css",
                   "type": "file"
                 },
                 {
@@ -2017,6 +2191,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "library.js",
+                  "type": "file"
+                },
+                {
                   "name": "manga_detail.js",
                   "type": "file"
                 },
@@ -2066,6 +2244,10 @@
             },
             {
               "name": "library.html",
+              "type": "file"
+            },
+            {
+              "name": "list_public.html",
               "type": "file"
             },
             {
@@ -2148,7 +2330,7 @@
 }
 
 === Project Tree (ASCII) ===
-D:\DACSN\coursework\Demo\mini-demo/
+D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── .git/
 │   ├── COMMIT_EDITMSG
 │   ├── FETCH_HEAD
@@ -2204,12 +2386,15 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 333c2c071f42ddd4169492d7f279bc51fdfb9d
 │   │   ├── 16/
 │   │   │   └── c2bffa4ab0b2eb562fd94d8adfb89714caede6
+│   │   ├── 17/
+│   │   │   └── 99c9e1b22553a0cca9413bd091d3462c941956
 │   │   ├── 1b/
 │   │   │   └── d12a09923ae5c7015abd46e7ebc64e21db71e2
 │   │   ├── 1d/
 │   │   │   ├── b2fd683a41de415b51387821f8a1d1a86e19e9
 │   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
 │   │   ├── 1f/
+│   │   │   ├── 983e4e89ef6c384589d4d56c4ab89b818c991a
 │   │   │   ├── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
 │   │   │   └── e85afac9c133c5d93ec78216ccd3e8129c1015
 │   │   ├── 22/
@@ -2218,6 +2403,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 23/
 │   │   │   └── f84c23c51e66c0f25063b47a435d0d01240a50
 │   │   ├── 25/
+│   │   │   ├── 1c0e50878d4aae48741939f0fc044afa99acd4
 │   │   │   └── 99563729b87d3931c903a5c60cb15beaf8ec5f
 │   │   ├── 27/
 │   │   │   ├── 0628795527266596193a26e4132b2ebb19df20
@@ -2243,6 +2429,10 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 3a/
 │   │   │   ├── 03d433a82a4c8276641502e508065071158866
 │   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
+│   │   ├── 3c/
+│   │   │   └── df5449e6b7dc424acc9f668bb98c74bbddea7a
+│   │   ├── 41/
+│   │   │   └── 5b0f31f025d65f4104cd0d30fc1c55fc4122cf
 │   │   ├── 42/
 │   │   │   └── 96e626febc0ab2617d22b56618ece39d53f232
 │   │   ├── 43/
@@ -2257,7 +2447,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 46/
 │   │   │   └── 195815b22f22371260135b5d2cb0343e0ca323
 │   │   ├── 47/
-│   │   │   └── 42cf7e7d6af5c90f5300081d5c6db57cf33178
+│   │   │   ├── 42cf7e7d6af5c90f5300081d5c6db57cf33178
+│   │   │   └── b42e3e7b5e46be130e422a325623c4d4e5d2d9
 │   │   ├── 48/
 │   │   │   ├── 8dae9033c210859a235614f6a8636ab1a98041
 │   │   │   └── a3d1a786146ed465055eda80b4224f36d2e301
@@ -2279,7 +2470,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── d6d2c641bb4f22d0f90458e6dd5c59933f790c
 │   │   │   └── eb3264b7f2319904b6a703140d06d1742ccb3a
 │   │   ├── 54/
-│   │   │   └── b2d4a02927246f57027adf7d44d46ef35dc66c
+│   │   │   ├── b2d4a02927246f57027adf7d44d46ef35dc66c
+│   │   │   └── f69c7c43815b3fc3585f18bdccd0d3d8fbcafc
 │   │   ├── 58/
 │   │   │   ├── a57e44913d4498d94e8891ccb22647c921dede
 │   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
@@ -2293,9 +2485,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 5d/
 │   │   │   └── 24667a36b3b5f1e2371778879e7de4074229ca
 │   │   ├── 5f/
-│   │   │   └── 102306306d4a3c0548710ef073f4b8f888915e
+│   │   │   ├── 102306306d4a3c0548710ef073f4b8f888915e
+│   │   │   └── 66e669e438f2cc735d17f21dd8a9411c53072b
 │   │   ├── 61/
 │   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
+│   │   ├── 62/
+│   │   │   └── 3c02137ea495fc54535d9a2699c09d920be90d
 │   │   ├── 63/
 │   │   │   └── 4790c51b52b6895a12f057cae631f4106940d4
 │   │   ├── 65/
@@ -2313,8 +2508,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 6c/
 │   │   │   ├── 0913c47b99c2050de6a41cfcaa2e7bedd4d49a
 │   │   │   └── e317a2d8caa81a5fdaed750bf1d6bdbd487756
+│   │   ├── 6d/
+│   │   │   └── 03f43314d32aef36fc87bae239689e7cbf6fe4
 │   │   ├── 6e/
 │   │   │   └── 8972dcb65808eebd76243798532da8530b2e17
+│   │   ├── 6f/
+│   │   │   └── c6e12e56952a58aec2c3cf46e2a8d9635e0e38
 │   │   ├── 70/
 │   │   │   ├── 080036c9673cd3a8383c3262ad40047cbe9124
 │   │   │   └── 6b8401c9acf600ebf44d1c9e6792150d264868
@@ -2331,6 +2530,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 856a18575e0462a7095b22198238f796fa683f
 │   │   │   └── b1339456c06cabac1b1c78a261279354886882
 │   │   ├── 78/
+│   │   │   ├── 4ca363d1b634cfc85c3b442836976bff7623a2
 │   │   │   └── db8fca4c5ff6d4530790b22af870c9be3eefe8
 │   │   ├── 7d/
 │   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
@@ -2344,7 +2544,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1
 │   │   │   └── c69e1105d1aba6af0e036c9c4b43d3882aec5e
 │   │   ├── 89/
-│   │   │   └── 411192b2379a16e98dbd29c6dfeb62c7ab2aa6
+│   │   │   ├── 411192b2379a16e98dbd29c6dfeb62c7ab2aa6
+│   │   │   └── 6611d9a79669190df1a100f53de86d49a7b14e
 │   │   ├── 8a/
 │   │   │   └── bcf36652db4f61c7597d80107f89b24ae8622e
 │   │   ├── 8f/
@@ -2362,9 +2563,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── dcba4c873f548c4bb8d9f4ccf620f251c0d773
 │   │   ├── 9b/
 │   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
+│   │   ├── 9c/
+│   │   │   └── e232df0f831bbe037fbf601ac68f64b06ce234
 │   │   ├── 9e/
 │   │   │   └── 973c80445805d4124554088cf388ce23858bf1
 │   │   ├── a0/
+│   │   │   ├── 0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b
 │   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
 │   │   ├── a2/
 │   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
@@ -2377,8 +2581,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── a8/
 │   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
 │   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
+│   │   ├── a9/
+│   │   │   └── 54a8dab709295435dbbae2a9604a7bb63b8efb
 │   │   ├── ab/
 │   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
+│   │   ├── af/
+│   │   │   └── 0dcb86596c7c06003de37a245156322ccf48ad
 │   │   ├── b0/
 │   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
 │   │   ├── b2/
@@ -2401,14 +2609,18 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── c0/
 │   │   │   ├── 129b336857115aec7d4d0525bfd291b628bae3
 │   │   │   └── c1487b19e6ef9c01f1d107d60088701418f99c
+│   │   ├── c1/
+│   │   │   └── 996bb5cceea413b041b4c86548f12ab83b593d
 │   │   ├── c3/
 │   │   │   └── 011fac6e47888d8e2209dcb60f02a915e0fbf0
 │   │   ├── c4/
 │   │   │   └── acec638b0a575995c4cc8bc17db4c9e569d91e
 │   │   ├── c5/
+│   │   │   ├── b29b7fb3871de7f00a83406ec5f4266960ce32
 │   │   │   └── dcfecac7c8df924e32b4ea5fb949a2c02f4630
 │   │   ├── c6/
-│   │   │   └── 2a493c7723a61e1f3141466ceb0cec02457868
+│   │   │   ├── 2a493c7723a61e1f3141466ceb0cec02457868
+│   │   │   └── e696076b3a2304f4c7e69032abf7d85584af80
 │   │   ├── c8/
 │   │   │   └── 3b766280fd71ab4e081063f1d545a88d7ad174
 │   │   ├── c9/
@@ -2422,6 +2634,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 4ed5ee7efba785a1b6133fec4f2d5f22ee2f0c
 │   │   │   └── ceb2801153ca950613660ab9236bd7a86bfd9a
 │   │   ├── cd/
+│   │   │   ├── 258db9b51f818750d11dfa2c35eb8e6c8eeb4b
 │   │   │   ├── 5255241a586abafbdbf21215f3f8d970ae7431
 │   │   │   ├── 76336bd0487ea69c48d9f8b317faa7a295627e
 │   │   │   └── e70c6def7cb093fb320c2e961828e7cc8af7ac
@@ -2430,6 +2643,9 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── b9257d14a13e2400ee7ca3ddf89eb5228291c7
 │   │   │   ├── ebca742807efd540d805322a924257258fe186
 │   │   │   └── f52fa61bcd65129e4fdd036db7484c590ce6c2
+│   │   ├── cf/
+│   │   │   ├── 0cf9f225346c9cdbe0158e3601215a611e8bbe
+│   │   │   └── a766a699a75d48d40b8a845a71c3d0d8ec8a9e
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
@@ -2453,6 +2669,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
 │   │   ├── e5/
+│   │   │   ├── a4aa34f755570941bc7c039959ed79db2727af
+│   │   │   ├── da7db4b7c644c5960e726d3244a63f72b63b45
 │   │   │   └── dfbda607cbd9b3ca40a7d134980f946b0eb323
 │   │   ├── e6/
 │   │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
@@ -2498,6 +2716,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   ├── __init__.py
 │   ├── auth.py
 │   ├── comment_routes.py
+│   ├── list_routes.py
 │   ├── models.py
 │   ├── routes.py
 │   ├── static/
@@ -2510,6 +2729,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
 │   │   │   ├── creator_detail.css
+│   │   │   ├── library.css
 │   │   │   ├── manga_detail.css
 │   │   │   └── styles.css
 │   │   ├── flags/
@@ -2581,6 +2801,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── zh.png
 │   │   └── js/
 │   │       ├── comments.js
+│   │       ├── library.js
 │   │       ├── manga_detail.js
 │   │       └── scripts.js
 │   └── templates/
@@ -2593,6 +2814,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │       ├── home.html
 │       ├── latest_updates.html
 │       ├── library.html
+│       ├── list_public.html
 │       ├── login.html
 │       ├── manga_art.html
 │       ├── manga_detail.html
@@ -2613,14 +2835,15 @@ D:\DACSN\coursework\Demo\mini-demo/
 └── test-connection.py
 
 
-=== Folder: D:\DACSN\coursework\Demo\mini-demo ===
+=== Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.gitignore ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+config.py
 
 # Virtual environment
 venv/
@@ -2637,14 +2860,14 @@ instance/
 .DS_Store
 Thumbs.db
 
---- File: D:\DACSN\coursework\Demo\mini-demo\config.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
 import urllib
 
 class Config:
     SECRET_KEY = "secret_key_demo"
 
     DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = "DESKTOP-HKIPI1M"
+    SERVER = "HEDI-SNOWY\SQLEXPRESS"
     DATABASE = "MangaLibrary"
     connection_string = (
         f"DRIVER={{{DRIVER}}};"
@@ -2656,7 +2879,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
---- File: D:\DACSN\coursework\Demo\mini-demo\dump.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\dump.py ---
 import os
 import json
 
@@ -2750,7 +2973,7 @@ if __name__ == "__main__":
     dump_project(current_dir, OUTPUT_FILE)
     print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
 
---- File: D:\DACSN\coursework\Demo\mini-demo\project_dump.txt ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
 {
   "name": "mini-demo",
@@ -3009,6 +3232,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "17",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "99c9e1b22553a0cca9413bd091d3462c941956",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "1b",
               "type": "directory",
               "children": [
@@ -3036,6 +3269,10 @@ if __name__ == "__main__":
               "name": "1f",
               "type": "directory",
               "children": [
+                {
+                  "name": "983e4e89ef6c384589d4d56c4ab89b818c991a",
+                  "type": "file"
+                },
                 {
                   "name": "9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd",
                   "type": "file"
@@ -3074,6 +3311,10 @@ if __name__ == "__main__":
               "name": "25",
               "type": "directory",
               "children": [
+                {
+                  "name": "1c0e50878d4aae48741939f0fc044afa99acd4",
+                  "type": "file"
+                },
                 {
                   "name": "99563729b87d3931c903a5c60cb15beaf8ec5f",
                   "type": "file"
@@ -3195,6 +3436,26 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "3c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "df5449e6b7dc424acc9f668bb98c74bbddea7a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "41",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5b0f31f025d65f4104cd0d30fc1c55fc4122cf",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "42",
               "type": "directory",
               "children": [
@@ -3262,6 +3523,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "42cf7e7d6af5c90f5300081d5c6db57cf33178",
+                  "type": "file"
+                },
+                {
+                  "name": "b42e3e7b5e46be130e422a325623c4d4e5d2d9",
                   "type": "file"
                 }
               ]
@@ -3367,6 +3632,10 @@ if __name__ == "__main__":
                 {
                   "name": "b2d4a02927246f57027adf7d44d46ef35dc66c",
                   "type": "file"
+                },
+                {
+                  "name": "f69c7c43815b3fc3585f18bdccd0d3d8fbcafc",
+                  "type": "file"
                 }
               ]
             },
@@ -3435,6 +3704,10 @@ if __name__ == "__main__":
                 {
                   "name": "102306306d4a3c0548710ef073f4b8f888915e",
                   "type": "file"
+                },
+                {
+                  "name": "66e669e438f2cc735d17f21dd8a9411c53072b",
+                  "type": "file"
                 }
               ]
             },
@@ -3444,6 +3717,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "754b97c8aaf2bd4fc8e425ef292f71f1592315",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "62",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3c02137ea495fc54535d9a2699c09d920be90d",
                   "type": "file"
                 }
               ]
@@ -3531,11 +3814,31 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "6d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "03f43314d32aef36fc87bae239689e7cbf6fe4",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "6e",
               "type": "directory",
               "children": [
                 {
                   "name": "8972dcb65808eebd76243798532da8530b2e17",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "6f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c6e12e56952a58aec2c3cf46e2a8d9635e0e38",
                   "type": "file"
                 }
               ]
@@ -3617,6 +3920,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "4ca363d1b634cfc85c3b442836976bff7623a2",
+                  "type": "file"
+                },
+                {
                   "name": "db8fca4c5ff6d4530790b22af870c9be3eefe8",
                   "type": "file"
                 }
@@ -3682,6 +3989,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "411192b2379a16e98dbd29c6dfeb62c7ab2aa6",
+                  "type": "file"
+                },
+                {
+                  "name": "6611d9a79669190df1a100f53de86d49a7b14e",
                   "type": "file"
                 }
               ]
@@ -3771,6 +4082,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "9c",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "e232df0f831bbe037fbf601ac68f64b06ce234",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "9e",
               "type": "directory",
               "children": [
@@ -3784,6 +4105,10 @@ if __name__ == "__main__":
               "name": "a0",
               "type": "directory",
               "children": [
+                {
+                  "name": "0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b",
+                  "type": "file"
+                },
                 {
                   "name": "6b57666f52fef6cd448fb916ed157272dee73e",
                   "type": "file"
@@ -3843,11 +4168,31 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "a9",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "54a8dab709295435dbbae2a9604a7bb63b8efb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "ab",
               "type": "directory",
               "children": [
                 {
                   "name": "312aecebeebd9cf45a35fbbb335e4dfac03282",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "af",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0dcb86596c7c06003de37a245156322ccf48ad",
                   "type": "file"
                 }
               ]
@@ -3959,6 +4304,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "c1",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "996bb5cceea413b041b4c86548f12ab83b593d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "c3",
               "type": "directory",
               "children": [
@@ -3983,6 +4338,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "b29b7fb3871de7f00a83406ec5f4266960ce32",
+                  "type": "file"
+                },
+                {
                   "name": "dcfecac7c8df924e32b4ea5fb949a2c02f4630",
                   "type": "file"
                 }
@@ -3994,6 +4353,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "2a493c7723a61e1f3141466ceb0cec02457868",
+                  "type": "file"
+                },
+                {
+                  "name": "e696076b3a2304f4c7e69032abf7d85584af80",
                   "type": "file"
                 }
               ]
@@ -4061,6 +4424,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "258db9b51f818750d11dfa2c35eb8e6c8eeb4b",
+                  "type": "file"
+                },
+                {
                   "name": "5255241a586abafbdbf21215f3f8d970ae7431",
                   "type": "file"
                 },
@@ -4092,6 +4459,20 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "f52fa61bcd65129e4fdd036db7484c590ce6c2",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "cf",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "0cf9f225346c9cdbe0158e3601215a611e8bbe",
+                  "type": "file"
+                },
+                {
+                  "name": "a766a699a75d48d40b8a845a71c3d0d8ec8a9e",
                   "type": "file"
                 }
               ]
@@ -4210,6 +4591,14 @@ if __name__ == "__main__":
               "name": "e5",
               "type": "directory",
               "children": [
+                {
+                  "name": "a4aa34f755570941bc7c039959ed79db2727af",
+                  "type": "file"
+                },
+                {
+                  "name": "da7db4b7c644c5960e726d3244a63f72b63b45",
+                  "type": "file"
+                },
                 {
                   "name": "dfbda607cbd9b3ca40a7d134980f946b0eb323",
                   "type": "file"
@@ -4432,6 +4821,10 @@ if __name__ == "__main__":
           "type": "file"
         },
         {
+          "name": "list_routes.py",
+          "type": "file"
+        },
+        {
           "name": "models.py",
           "type": "file"
         },
@@ -4479,6 +4872,10 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "creator_detail.css",
+                  "type": "file"
+                },
+                {
+                  "name": "library.css",
                   "type": "file"
                 },
                 {
@@ -4770,6 +5167,10 @@ if __name__ == "__main__":
                   "type": "file"
                 },
                 {
+                  "name": "library.js",
+                  "type": "file"
+                },
+                {
                   "name": "manga_detail.js",
                   "type": "file"
                 },
@@ -4819,6 +5220,10 @@ if __name__ == "__main__":
             },
             {
               "name": "library.html",
+              "type": "file"
+            },
+            {
+              "name": "list_public.html",
               "type": "file"
             },
             {
@@ -4901,7 +5306,7 @@ if __name__ == "__main__":
 }
 
 === Project Tree (ASCII) ===
-D:\DACSN\coursework\Demo\mini-demo/
+D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── .git/
 │   ├── COMMIT_EDITMSG
 │   ├── FETCH_HEAD
@@ -4957,12 +5362,15 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 333c2c071f42ddd4169492d7f279bc51fdfb9d
 │   │   ├── 16/
 │   │   │   └── c2bffa4ab0b2eb562fd94d8adfb89714caede6
+│   │   ├── 17/
+│   │   │   └── 99c9e1b22553a0cca9413bd091d3462c941956
 │   │   ├── 1b/
 │   │   │   └── d12a09923ae5c7015abd46e7ebc64e21db71e2
 │   │   ├── 1d/
 │   │   │   ├── b2fd683a41de415b51387821f8a1d1a86e19e9
 │   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
 │   │   ├── 1f/
+│   │   │   ├── 983e4e89ef6c384589d4d56c4ab89b818c991a
 │   │   │   ├── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
 │   │   │   └── e85afac9c133c5d93ec78216ccd3e8129c1015
 │   │   ├── 22/
@@ -4971,6 +5379,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 23/
 │   │   │   └── f84c23c51e66c0f25063b47a435d0d01240a50
 │   │   ├── 25/
+│   │   │   ├── 1c0e50878d4aae48741939f0fc044afa99acd4
 │   │   │   └── 99563729b87d3931c903a5c60cb15beaf8ec5f
 │   │   ├── 27/
 │   │   │   ├── 0628795527266596193a26e4132b2ebb19df20
@@ -4996,6 +5405,10 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 3a/
 │   │   │   ├── 03d433a82a4c8276641502e508065071158866
 │   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
+│   │   ├── 3c/
+│   │   │   └── df5449e6b7dc424acc9f668bb98c74bbddea7a
+│   │   ├── 41/
+│   │   │   └── 5b0f31f025d65f4104cd0d30fc1c55fc4122cf
 │   │   ├── 42/
 │   │   │   └── 96e626febc0ab2617d22b56618ece39d53f232
 │   │   ├── 43/
@@ -5010,7 +5423,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 46/
 │   │   │   └── 195815b22f22371260135b5d2cb0343e0ca323
 │   │   ├── 47/
-│   │   │   └── 42cf7e7d6af5c90f5300081d5c6db57cf33178
+│   │   │   ├── 42cf7e7d6af5c90f5300081d5c6db57cf33178
+│   │   │   └── b42e3e7b5e46be130e422a325623c4d4e5d2d9
 │   │   ├── 48/
 │   │   │   ├── 8dae9033c210859a235614f6a8636ab1a98041
 │   │   │   └── a3d1a786146ed465055eda80b4224f36d2e301
@@ -5032,7 +5446,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── d6d2c641bb4f22d0f90458e6dd5c59933f790c
 │   │   │   └── eb3264b7f2319904b6a703140d06d1742ccb3a
 │   │   ├── 54/
-│   │   │   └── b2d4a02927246f57027adf7d44d46ef35dc66c
+│   │   │   ├── b2d4a02927246f57027adf7d44d46ef35dc66c
+│   │   │   └── f69c7c43815b3fc3585f18bdccd0d3d8fbcafc
 │   │   ├── 58/
 │   │   │   ├── a57e44913d4498d94e8891ccb22647c921dede
 │   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
@@ -5046,9 +5461,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 5d/
 │   │   │   └── 24667a36b3b5f1e2371778879e7de4074229ca
 │   │   ├── 5f/
-│   │   │   └── 102306306d4a3c0548710ef073f4b8f888915e
+│   │   │   ├── 102306306d4a3c0548710ef073f4b8f888915e
+│   │   │   └── 66e669e438f2cc735d17f21dd8a9411c53072b
 │   │   ├── 61/
 │   │   │   └── 754b97c8aaf2bd4fc8e425ef292f71f1592315
+│   │   ├── 62/
+│   │   │   └── 3c02137ea495fc54535d9a2699c09d920be90d
 │   │   ├── 63/
 │   │   │   └── 4790c51b52b6895a12f057cae631f4106940d4
 │   │   ├── 65/
@@ -5066,8 +5484,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 6c/
 │   │   │   ├── 0913c47b99c2050de6a41cfcaa2e7bedd4d49a
 │   │   │   └── e317a2d8caa81a5fdaed750bf1d6bdbd487756
+│   │   ├── 6d/
+│   │   │   └── 03f43314d32aef36fc87bae239689e7cbf6fe4
 │   │   ├── 6e/
 │   │   │   └── 8972dcb65808eebd76243798532da8530b2e17
+│   │   ├── 6f/
+│   │   │   └── c6e12e56952a58aec2c3cf46e2a8d9635e0e38
 │   │   ├── 70/
 │   │   │   ├── 080036c9673cd3a8383c3262ad40047cbe9124
 │   │   │   └── 6b8401c9acf600ebf44d1c9e6792150d264868
@@ -5084,6 +5506,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 856a18575e0462a7095b22198238f796fa683f
 │   │   │   └── b1339456c06cabac1b1c78a261279354886882
 │   │   ├── 78/
+│   │   │   ├── 4ca363d1b634cfc85c3b442836976bff7623a2
 │   │   │   └── db8fca4c5ff6d4530790b22af870c9be3eefe8
 │   │   ├── 7d/
 │   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
@@ -5097,7 +5520,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1
 │   │   │   └── c69e1105d1aba6af0e036c9c4b43d3882aec5e
 │   │   ├── 89/
-│   │   │   └── 411192b2379a16e98dbd29c6dfeb62c7ab2aa6
+│   │   │   ├── 411192b2379a16e98dbd29c6dfeb62c7ab2aa6
+│   │   │   └── 6611d9a79669190df1a100f53de86d49a7b14e
 │   │   ├── 8a/
 │   │   │   └── bcf36652db4f61c7597d80107f89b24ae8622e
 │   │   ├── 8f/
@@ -5115,9 +5539,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── dcba4c873f548c4bb8d9f4ccf620f251c0d773
 │   │   ├── 9b/
 │   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
+│   │   ├── 9c/
+│   │   │   └── e232df0f831bbe037fbf601ac68f64b06ce234
 │   │   ├── 9e/
 │   │   │   └── 973c80445805d4124554088cf388ce23858bf1
 │   │   ├── a0/
+│   │   │   ├── 0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b
 │   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
 │   │   ├── a2/
 │   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
@@ -5130,8 +5557,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── a8/
 │   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
 │   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
+│   │   ├── a9/
+│   │   │   └── 54a8dab709295435dbbae2a9604a7bb63b8efb
 │   │   ├── ab/
 │   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
+│   │   ├── af/
+│   │   │   └── 0dcb86596c7c06003de37a245156322ccf48ad
 │   │   ├── b0/
 │   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
 │   │   ├── b2/
@@ -5154,14 +5585,18 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── c0/
 │   │   │   ├── 129b336857115aec7d4d0525bfd291b628bae3
 │   │   │   └── c1487b19e6ef9c01f1d107d60088701418f99c
+│   │   ├── c1/
+│   │   │   └── 996bb5cceea413b041b4c86548f12ab83b593d
 │   │   ├── c3/
 │   │   │   └── 011fac6e47888d8e2209dcb60f02a915e0fbf0
 │   │   ├── c4/
 │   │   │   └── acec638b0a575995c4cc8bc17db4c9e569d91e
 │   │   ├── c5/
+│   │   │   ├── b29b7fb3871de7f00a83406ec5f4266960ce32
 │   │   │   └── dcfecac7c8df924e32b4ea5fb949a2c02f4630
 │   │   ├── c6/
-│   │   │   └── 2a493c7723a61e1f3141466ceb0cec02457868
+│   │   │   ├── 2a493c7723a61e1f3141466ceb0cec02457868
+│   │   │   └── e696076b3a2304f4c7e69032abf7d85584af80
 │   │   ├── c8/
 │   │   │   └── 3b766280fd71ab4e081063f1d545a88d7ad174
 │   │   ├── c9/
@@ -5175,6 +5610,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 4ed5ee7efba785a1b6133fec4f2d5f22ee2f0c
 │   │   │   └── ceb2801153ca950613660ab9236bd7a86bfd9a
 │   │   ├── cd/
+│   │   │   ├── 258db9b51f818750d11dfa2c35eb8e6c8eeb4b
 │   │   │   ├── 5255241a586abafbdbf21215f3f8d970ae7431
 │   │   │   ├── 76336bd0487ea69c48d9f8b317faa7a295627e
 │   │   │   └── e70c6def7cb093fb320c2e961828e7cc8af7ac
@@ -5183,6 +5619,9 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── b9257d14a13e2400ee7ca3ddf89eb5228291c7
 │   │   │   ├── ebca742807efd540d805322a924257258fe186
 │   │   │   └── f52fa61bcd65129e4fdd036db7484c590ce6c2
+│   │   ├── cf/
+│   │   │   ├── 0cf9f225346c9cdbe0158e3601215a611e8bbe
+│   │   │   └── a766a699a75d48d40b8a845a71c3d0d8ec8a9e
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
@@ -5206,6 +5645,8 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
 │   │   ├── e5/
+│   │   │   ├── a4aa34f755570941bc7c039959ed79db2727af
+│   │   │   ├── da7db4b7c644c5960e726d3244a63f72b63b45
 │   │   │   └── dfbda607cbd9b3ca40a7d134980f946b0eb323
 │   │   ├── e6/
 │   │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
@@ -5251,6 +5692,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   ├── __init__.py
 │   ├── auth.py
 │   ├── comment_routes.py
+│   ├── list_routes.py
 │   ├── models.py
 │   ├── routes.py
 │   ├── static/
@@ -5263,6 +5705,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
 │   │   │   ├── creator_detail.css
+│   │   │   ├── library.css
 │   │   │   ├── manga_detail.css
 │   │   │   └── styles.css
 │   │   ├── flags/
@@ -5334,6 +5777,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── zh.png
 │   │   └── js/
 │   │       ├── comments.js
+│   │       ├── library.js
 │   │       ├── manga_detail.js
 │   │       └── scripts.js
 │   └── templates/
@@ -5346,6 +5790,7 @@ D:\DACSN\coursework\Demo\mini-demo/
 │       ├── home.html
 │       ├── latest_updates.html
 │       ├── library.html
+│       ├── list_public.html
 │       ├── login.html
 │       ├── manga_art.html
 │       ├── manga_detail.html
@@ -5364,12 +5809,12 @@ D:\DACSN\coursework\Demo\mini-demo/
 ├── run.py
 ├── test-api.py
 └── test-connection.py
---- File: D:\DACSN\coursework\Demo\mini-demo\README.md ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\README.md ---
 
---- File: D:\DACSN\coursework\Demo\mini-demo\requirements.txt ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\requirements.txt ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\run.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\run.py ---
 from app import create_app
 
 app = create_app()
@@ -5377,12 +5822,12 @@ app = create_app()
 if __name__ == "__main__":
     app.run(debug=True)
 
---- File: D:\DACSN\coursework\Demo\mini-demo\test-api.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\test-api.py ---
 import requests
 resp = requests.get("https://api.mangadex.org/ping")
 print(resp)
 
---- File: D:\DACSN\coursework\Demo\mini-demo\test-connection.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\test-connection.py ---
 import pyodbc
 
 conn_str = (
@@ -5399,10 +5844,10 @@ except Exception as e:
     print("Kết nối thất bại:", e)
 === Folder: .git ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
-Initial commit - Flask MangaDex Clone coursework
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
+Update List Basic
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\config ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
 [core]
 	repositoryformatversion = 0
 	filemode = false
@@ -5417,24 +5862,24 @@ Initial commit - Flask MangaDex Clone coursework
 	remote = origin
 	merge = refs/heads/main
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\description ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\description ---
 Unnamed repository; edit this file 'description' to name the repository.
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\FETCH_HEAD ---
-4532251c88870e8ce76bfd365c3ccf3e7f101780		https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\FETCH_HEAD ---
+e5da7db4b7c644c5960e726d3244a63f72b63b45		https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\HEAD ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\HEAD ---
 ref: refs/heads/main
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\index ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\index ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 13: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\ORIG_HEAD ---
-6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\ORIG_HEAD ---
+4532251c88870e8ce76bfd365c3ccf3e7f101780
 
 === Folder: .git\hooks ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\applypatch-msg.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\applypatch-msg.sample ---
 #!/bin/sh
 #
 # An example hook script to check the commit log message taken by
@@ -5451,7 +5896,7 @@ commitmsg="$(git rev-parse --git-path hooks/commit-msg)"
 test -x "$commitmsg" && exec "$commitmsg" ${1+"$@"}
 :
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\commit-msg.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\commit-msg.sample ---
 #!/bin/sh
 #
 # An example hook script to check the commit log message.
@@ -5477,7 +5922,7 @@ test "" = "$(grep '^Signed-off-by: ' "$1" |
 	exit 1
 }
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\fsmonitor-watchman.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\fsmonitor-watchman.sample ---
 #!/usr/bin/perl
 
 use strict;
@@ -5653,7 +6098,7 @@ sub get_working_dir {
 	return $working_dir;
 }
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\post-update.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\post-update.sample ---
 #!/bin/sh
 #
 # An example hook script to prepare a packed repository for use over
@@ -5663,7 +6108,7 @@ sub get_working_dir {
 
 exec git update-server-info
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-applypatch.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-applypatch.sample ---
 #!/bin/sh
 #
 # An example hook script to verify what is about to be committed
@@ -5679,7 +6124,7 @@ precommit="$(git rev-parse --git-path hooks/pre-commit)"
 test -x "$precommit" && exec "$precommit" ${1+"$@"}
 :
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-commit.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-commit.sample ---
 #!/bin/sh
 #
 # An example hook script to verify what is about to be committed.
@@ -5730,7 +6175,7 @@ fi
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-merge-commit.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-merge-commit.sample ---
 #!/bin/sh
 #
 # An example hook script to verify what is about to be committed.
@@ -5745,7 +6190,7 @@ test -x "$GIT_DIR/hooks/pre-commit" &&
         exec "$GIT_DIR/hooks/pre-commit"
 :
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-push.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-push.sample ---
 #!/bin/sh
 
 # An example hook script to verify what is about to be pushed.  Called by "git
@@ -5800,7 +6245,7 @@ done
 
 exit 0
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-rebase.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-rebase.sample ---
 #!/bin/sh
 #
 # Copyright (c) 2006, 2008 Junio C Hamano
@@ -5971,7 +6416,7 @@ To compute (2):
 
 DOC_END
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-receive.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\pre-receive.sample ---
 #!/bin/sh
 #
 # An example hook script to make use of push options.
@@ -5997,7 +6442,7 @@ then
 	done
 fi
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\prepare-commit-msg.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\prepare-commit-msg.sample ---
 #!/bin/sh
 #
 # An example hook script to prepare the commit log message.
@@ -6041,7 +6486,7 @@ SHA1=$3
 #   /usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
 # fi
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\push-to-checkout.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\push-to-checkout.sample ---
 #!/bin/sh
 
 # An example hook script to update a checked-out tree on a git push.
@@ -6121,7 +6566,7 @@ then
 	die "Could not update working tree to new HEAD"
 fi
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\sendemail-validate.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\sendemail-validate.sample ---
 #!/bin/sh
 
 # An example hook script to validate a patch (and/or patch series) before
@@ -6200,7 +6645,7 @@ then
 	validate_series
 fi
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\hooks\update.sample ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\hooks\update.sample ---
 #!/bin/sh
 #
 # An example hook script to block unannotated tags from entering.
@@ -6332,7 +6777,7 @@ exit 0
 
 === Folder: .git\info ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\info\exclude ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\info\exclude ---
 # git ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 # For a project mostly in C, the following would be a good set of
@@ -6342,806 +6787,918 @@ exit 0
 
 === Folder: .git\logs ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\logs\HEAD ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\HEAD ---
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471165 +0700	commit (initial): Initial commit - Flask MangaDex Clone coursework
 c0c1487b19e6ef9c01f1d107d60088701418f99c 0000000000000000000000000000000000000000 Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
-c0c1487b19e6ef9c01f1d107d60088701418f99c c0c1487b19e6ef9c01f1d107d60088701418f99c Huy Truong Xuan <Huy@DESKTOP-HKIPI1M.(none)> 1758523877 +0700	reset: moving to HEAD
-c0c1487b19e6ef9c01f1d107d60088701418f99c 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy Truong Xuan <Huy@DESKTOP-HKIPI1M.(none)> 1758523887 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
-6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy Truong Xuan <Huy@DESKTOP-HKIPI1M.(none)> 1758586887 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
+c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475198 +0700	commit: update-code
+b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484720 +0700	commit: update-Random
+c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf69374 Huy1411 <huy14112002@gmail.com> 1758487201 +0700	commit: update_creators_basic
+92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489115 +0700	commit: search_popup_fix
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561164 +0700	commit: add-comment-get
+4532251c88870e8ce76bfd365c3ccf3e7f101780 e5da7db4b7c644c5960e726d3244a63f72b63b45 Huy1411 <huy14112002@gmail.com> 1758631345 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
+e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
 
 === Folder: .git\logs\refs ===
 
 === Folder: .git\logs\refs\heads ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\logs\refs\heads\main ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\refs\heads\main ---
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471165 +0700	commit (initial): Initial commit - Flask MangaDex Clone coursework
 c0c1487b19e6ef9c01f1d107d60088701418f99c c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471171 +0700	Branch: renamed refs/heads/master to refs/heads/main
-c0c1487b19e6ef9c01f1d107d60088701418f99c 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy Truong Xuan <Huy@DESKTOP-HKIPI1M.(none)> 1758523887 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
-6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy Truong Xuan <Huy@DESKTOP-HKIPI1M.(none)> 1758586887 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
+c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475198 +0700	commit: update-code
+b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484720 +0700	commit: update-Random
+c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf69374 Huy1411 <huy14112002@gmail.com> 1758487201 +0700	commit: update_creators_basic
+92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489115 +0700	commit: search_popup_fix
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561164 +0700	commit: add-comment-get
+4532251c88870e8ce76bfd365c3ccf3e7f101780 e5da7db4b7c644c5960e726d3244a63f72b63b45 Huy1411 <huy14112002@gmail.com> 1758631345 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
+e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
 
 === Folder: .git\logs\refs\remotes ===
 
 === Folder: .git\logs\refs\remotes\origin ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\logs\refs\remotes\origin\main ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\logs\refs\remotes\origin\main ---
 0000000000000000000000000000000000000000 c0c1487b19e6ef9c01f1d107d60088701418f99c Huy1411 <huy14112002@gmail.com> 1758471204 +0700	update by push
+c0c1487b19e6ef9c01f1d107d60088701418f99c b6b5f6494257be5ea34f741332576277b2542653 Huy1411 <huy14112002@gmail.com> 1758475206 +0700	update by push
+b6b5f6494257be5ea34f741332576277b2542653 c62a493c7723a61e1f3141466ceb0cec02457868 Huy1411 <huy14112002@gmail.com> 1758484731 +0700	update by push
+c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf69374 Huy1411 <huy14112002@gmail.com> 1758487215 +0700	update by push
+92ccd51812368f5e5efb533a62e1ff033bf69374 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a Huy1411 <huy14112002@gmail.com> 1758489122 +0700	update by push
+6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561173 +0700	update by push
+4532251c88870e8ce76bfd365c3ccf3e7f101780 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642846 +0700	update by push
 
 === Folder: .git\objects ===
 
 === Folder: .git\objects\00 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\00\6efb158bca8b24217e27787427f06b78fac469 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\00\6efb158bca8b24217e27787427f06b78fac469 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
 === Folder: .git\objects\03 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\03\32227e9f1218271277306120ddb4a6a1c60868 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\03\32227e9f1218271277306120ddb4a6a1c60868 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\09 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\09\0d8327296f11008beaf250d09b19294887a07e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\09\0d8327296f11008beaf250d09b19294887a07e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
 === Folder: .git\objects\0a ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0a\3014962ff0e3cc2f796de19bf83c7859ec1c57 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\3014962ff0e3cc2f796de19bf83c7859ec1c57 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0a\794551ad32ed40a938191708a3901b4e454212 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\794551ad32ed40a938191708a3901b4e454212 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0a\926f20c4a39d5445a68c1c60177c2670790f0a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\926f20c4a39d5445a68c1c60177c2670790f0a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0a\adc46acd963a5b80788e8ad10a27dba2c4645d ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0a\adc46acd963a5b80788e8ad10a27dba2c4645d ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\0b ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0b\9ec896bcb583ee708af129771cc5eb24f5e271 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0b\9ec896bcb583ee708af129771cc5eb24f5e271 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 === Folder: .git\objects\0e ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0e\dba748ea81df245afc761b268ada9c5df213e1 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0e\dba748ea81df245afc761b268ada9c5df213e1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc8 in position 3: invalid continuation byte]
 
 === Folder: .git\objects\0f ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\0f\e131e8751648daf1540111ff635cc7c61bc532 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\0f\e131e8751648daf1540111ff635cc7c61bc532 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\12 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\12\333c2c071f42ddd4169492d7f279bc51fdfb9d ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\12\333c2c071f42ddd4169492d7f279bc51fdfb9d ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc9 in position 21: invalid continuation byte]
 
 === Folder: .git\objects\16 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\16\c2bffa4ab0b2eb562fd94d8adfb89714caede6 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\16\c2bffa4ab0b2eb562fd94d8adfb89714caede6 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\17 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\17\99c9e1b22553a0cca9413bd091d3462c941956 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 === Folder: .git\objects\1b ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\1b\d12a09923ae5c7015abd46e7ebc64e21db71e2 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1b\d12a09923ae5c7015abd46e7ebc64e21db71e2 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte]
 
 === Folder: .git\objects\1d ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\1d\b2fd683a41de415b51387821f8a1d1a86e19e9 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1d\b2fd683a41de415b51387821f8a1d1a86e19e9 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\1d\cf6ed0436658117f8838d5cefde25fb1347924 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1d\cf6ed0436658117f8838d5cefde25fb1347924 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 === Folder: .git\objects\1f ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\1f\9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1f\983e4e89ef6c384589d4d56c4ab89b818c991a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8c in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1f\9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\1f\e85afac9c133c5d93ec78216ccd3e8129c1015 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1f\e85afac9c133c5d93ec78216ccd3e8129c1015 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte]
 
 === Folder: .git\objects\22 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\22\2ec4612406c8b23f86abbc36757aa7f6268e73 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\22\2ec4612406c8b23f86abbc36757aa7f6268e73 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe5 in position 2: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\22\c95b595184ffa73c7c4df4d82f7c04468dceea ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\22\c95b595184ffa73c7c4df4d82f7c04468dceea ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\23 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\23\f84c23c51e66c0f25063b47a435d0d01240a50 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\23\f84c23c51e66c0f25063b47a435d0d01240a50 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 === Folder: .git\objects\25 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\25\99563729b87d3931c903a5c60cb15beaf8ec5f ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\25\1c0e50878d4aae48741939f0fc044afa99acd4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\25\99563729b87d3931c903a5c60cb15beaf8ec5f ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x82 in position 3: invalid start byte]
 
 === Folder: .git\objects\27 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\27\0628795527266596193a26e4132b2ebb19df20 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\27\0628795527266596193a26e4132b2ebb19df20 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\27\a6c3af30019991e8f5d412300c7a7533388973 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\27\a6c3af30019991e8f5d412300c7a7533388973 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\27\fd86770f2888cee29509e9335758d00fc40af0 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\27\fd86770f2888cee29509e9335758d00fc40af0 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\28 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\28\b9a549dcd68879e202fbf79d5f2dc9221c8f07 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\28\b9a549dcd68879e202fbf79d5f2dc9221c8f07 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf0 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\29 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\29\fffdd9025baac2625072eb16ad2d66fc6b7394 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\29\fffdd9025baac2625072eb16ad2d66fc6b7394 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\2c ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\2c\53d7a8b6f35a475f1bec276184bfeced4da222 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2c\53d7a8b6f35a475f1bec276184bfeced4da222 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb7 in position 8: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\2c\a9dbe87cb9ade523a9281bc1624734f7f34558 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2c\a9dbe87cb9ade523a9281bc1624734f7f34558 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
 === Folder: .git\objects\2f ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\2f\a864d6aa5f97b88e052837df36519f388834f1 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2f\a864d6aa5f97b88e052837df36519f388834f1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 === Folder: .git\objects\32 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\32\6246f9cbb175ab48ee3d3dd8b705e4a310d0ba ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\32\6246f9cbb175ab48ee3d3dd8b705e4a310d0ba ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 3: invalid start byte]
 
 === Folder: .git\objects\33 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\33\0f41740bf4bb31cfc5c947fd7587b3cec819d7 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\33\0f41740bf4bb31cfc5c947fd7587b3cec819d7 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\33\5df44cfb5de4ecede6d0b8ea4061d907d1ded1 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\33\5df44cfb5de4ecede6d0b8ea4061d907d1ded1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\33\c0df5f31eacd27501545ebe50bfc4a7df7883e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\33\c0df5f31eacd27501545ebe50bfc4a7df7883e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb3 in position 3: invalid start byte]
 
 === Folder: .git\objects\38 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\38\294ce219005561b20021bef890cf55a48564bb ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\38\294ce219005561b20021bef890cf55a48564bb ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd1 in position 4: invalid continuation byte]
 
 === Folder: .git\objects\3a ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\3a\03d433a82a4c8276641502e508065071158866 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3a\03d433a82a4c8276641502e508065071158866 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xae in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\3a\f9cb6dab0f685a4781b6baeadd4923ea726a8a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3a\f9cb6dab0f685a4781b6baeadd4923ea726a8a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte]
+
+=== Folder: .git\objects\3c ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3c\df5449e6b7dc424acc9f668bb98c74bbddea7a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+=== Folder: .git\objects\41 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\41\5b0f31f025d65f4104cd0d30fc1c55fc4122cf ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 9: invalid start byte]
 
 === Folder: .git\objects\42 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\42\96e626febc0ab2617d22b56618ece39d53f232 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\42\96e626febc0ab2617d22b56618ece39d53f232 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\43 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\43\0a88302eea286048f1c204defe654dd9a61632 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\43\0a88302eea286048f1c204defe654dd9a61632 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8c in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\43\c4e3371805831cd1f16b5a394ea6d0ba3dbe52 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\43\c4e3371805831cd1f16b5a394ea6d0ba3dbe52 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x83 in position 6: invalid start byte]
 
 === Folder: .git\objects\44 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\44\6bfe36d102cb2b50b9a34c1621b384b7b9a7ec ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\44\6bfe36d102cb2b50b9a34c1621b384b7b9a7ec ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcf in position 5: invalid continuation byte]
 
 === Folder: .git\objects\45 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\45\32251c88870e8ce76bfd365c3ccf3e7f101780 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\45\32251c88870e8ce76bfd365c3ccf3e7f101780 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\45\5448abda71ebb3372cea0db603f6419e293b80 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\45\5448abda71ebb3372cea0db603f6419e293b80 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xef in position 5: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\45\6b4352594af44e22a279f69bbf4409c3d82114 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\45\6b4352594af44e22a279f69bbf4409c3d82114 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 3: invalid continuation byte]
 
 === Folder: .git\objects\46 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\46\195815b22f22371260135b5d2cb0343e0ca323 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\46\195815b22f22371260135b5d2cb0343e0ca323 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 === Folder: .git\objects\47 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\47\42cf7e7d6af5c90f5300081d5c6db57cf33178 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\47\42cf7e7d6af5c90f5300081d5c6db57cf33178 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe7 in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\47\b42e3e7b5e46be130e422a325623c4d4e5d2d9 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\48 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\48\8dae9033c210859a235614f6a8636ab1a98041 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\48\8dae9033c210859a235614f6a8636ab1a98041 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcb in position 3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\48\a3d1a786146ed465055eda80b4224f36d2e301 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\48\a3d1a786146ed465055eda80b4224f36d2e301 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte]
 
 === Folder: .git\objects\4b ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\4b\d049e7806894891e9f7b1da06689873da5e2fe ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4b\d049e7806894891e9f7b1da06689873da5e2fe ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\4b\fbca3e4bc55659bb6cd25cf30fcbdfa2f5c1fa ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4b\fbca3e4bc55659bb6cd25cf30fcbdfa2f5c1fa ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\4d ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\4d\1b0a13d87b3d8a9d7ab2b4944500e4191d48d8 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4d\1b0a13d87b3d8a9d7ab2b4944500e4191d48d8 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf8 in position 3: invalid start byte]
 
 === Folder: .git\objects\4e ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\4e\fdf016623ae0e529cfdf323a943e1238d37b80 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\4e\fdf016623ae0e529cfdf323a943e1238d37b80 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe4 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\51 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\51\526c7e2bd3614b8cbe0e331aa409e4c421f43b ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\51\526c7e2bd3614b8cbe0e331aa409e4c421f43b ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
 
 === Folder: .git\objects\52 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\52\9fc34b3681146b62483db5cabe6274a076909e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\52\9fc34b3681146b62483db5cabe6274a076909e ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\52\ba6c230a66a90191eb5003df2737b8b7c13ec9 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\52\ba6c230a66a90191eb5003df2737b8b7c13ec9 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9a in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\52\eb4d183d1426ce1323072fd82e56132ecd4840 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\52\eb4d183d1426ce1323072fd82e56132ecd4840 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\53 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\53\95eedcf90ed73ed3ca03155487382f30526b67 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\53\95eedcf90ed73ed3ca03155487382f30526b67 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\53\d6d2c641bb4f22d0f90458e6dd5c59933f790c ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\53\d6d2c641bb4f22d0f90458e6dd5c59933f790c ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xef in position 3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\53\eb3264b7f2319904b6a703140d06d1742ccb3a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\53\eb3264b7f2319904b6a703140d06d1742ccb3a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
 === Folder: .git\objects\54 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\54\b2d4a02927246f57027adf7d44d46ef35dc66c ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\54\b2d4a02927246f57027adf7d44d46ef35dc66c ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\54\f69c7c43815b3fc3585f18bdccd0d3d8fbcafc ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
 
 === Folder: .git\objects\58 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\58\a57e44913d4498d94e8891ccb22647c921dede ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\a57e44913d4498d94e8891ccb22647c921dede ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\58\d67074738d155e750e980f195791cf4c85d9e4 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\d67074738d155e750e980f195791cf4c85d9e4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf6 in position 3: invalid start byte]
 
 === Folder: .git\objects\5a ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\5a\0c0d0dd4a42005830d88bb12e6b8617a37c44a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5a\0c0d0dd4a42005830d88bb12e6b8617a37c44a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe8 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\5b ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\5b\3322eb91b073421855d1999288bdff36c060a9 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5b\3322eb91b073421855d1999288bdff36c060a9 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xfc in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\5b\e60eab89f12679223cb656b276d146792c6351 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5b\e60eab89f12679223cb656b276d146792c6351 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
 === Folder: .git\objects\5c ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\5c\384ecaa99129459ebd036d30f4568a50a0a5ab ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5c\384ecaa99129459ebd036d30f4568a50a0a5ab ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\5d ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\5d\24667a36b3b5f1e2371778879e7de4074229ca ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5d\24667a36b3b5f1e2371778879e7de4074229ca ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\5f ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\5f\102306306d4a3c0548710ef073f4b8f888915e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5f\102306306d4a3c0548710ef073f4b8f888915e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb8 in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5f\66e669e438f2cc735d17f21dd8a9411c53072b ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 === Folder: .git\objects\61 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\61\754b97c8aaf2bd4fc8e425ef292f71f1592315 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\61\754b97c8aaf2bd4fc8e425ef292f71f1592315 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+=== Folder: .git\objects\62 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\62\3c02137ea495fc54535d9a2699c09d920be90d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
 
 === Folder: .git\objects\63 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\63\4790c51b52b6895a12f057cae631f4106940d4 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\63\4790c51b52b6895a12f057cae631f4106940d4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb3 in position 9: invalid start byte]
 
 === Folder: .git\objects\65 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\65\4adb9f9d6c8633be08d544914c30fff7ec4171 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\65\4adb9f9d6c8633be08d544914c30fff7ec4171 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\68 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\68\85d30dff856aeed6ef1b3a53523c304a0cab93 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\68\85d30dff856aeed6ef1b3a53523c304a0cab93 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\69 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\69\664b3fc9916cb80fe6d79e845fb806c2882137 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\69\664b3fc9916cb80fe6d79e845fb806c2882137 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\69\988e10bdbfda8cab2a451e109f9a7cc8f9fd41 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\69\988e10bdbfda8cab2a451e109f9a7cc8f9fd41 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
 
 === Folder: .git\objects\6a ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\6a\552a576ff2e1d4d6f708863028b6980b41da3d ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6a\552a576ff2e1d4d6f708863028b6980b41da3d ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\6b ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\6b\c4c8e61dff099a4e1b9995381e1aa98e0f972a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6b\c4c8e61dff099a4e1b9995381e1aa98e0f972a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\6b\d25c15d4d1a9afc6f0d2c5c602425edd8c8bec ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6b\d25c15d4d1a9afc6f0d2c5c602425edd8c8bec ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 === Folder: .git\objects\6c ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\6c\0913c47b99c2050de6a41cfcaa2e7bedd4d49a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6c\0913c47b99c2050de6a41cfcaa2e7bedd4d49a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\6c\e317a2d8caa81a5fdaed750bf1d6bdbd487756 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6c\e317a2d8caa81a5fdaed750bf1d6bdbd487756 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
+=== Folder: .git\objects\6d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6d\03f43314d32aef36fc87bae239689e7cbf6fe4 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\6e ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\6e\8972dcb65808eebd76243798532da8530b2e17 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6e\8972dcb65808eebd76243798532da8530b2e17 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
+=== Folder: .git\objects\6f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\6f\c6e12e56952a58aec2c3cf46e2a8d9635e0e38 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\70 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\70\080036c9673cd3a8383c3262ad40047cbe9124 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\70\080036c9673cd3a8383c3262ad40047cbe9124 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\70\6b8401c9acf600ebf44d1c9e6792150d264868 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\70\6b8401c9acf600ebf44d1c9e6792150d264868 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 24: invalid continuation byte]
 
 === Folder: .git\objects\71 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\71\69886ca6c7c84379540f38494541c5a1ff26a8 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\71\69886ca6c7c84379540f38494541c5a1ff26a8 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf3 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\72 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\72\23182ebf527e095ec773562c064ea340150554 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\72\23182ebf527e095ec773562c064ea340150554 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
 
 === Folder: .git\objects\73 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\73\5669242c8f421b82de2e75d10965e151d3687e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\73\5669242c8f421b82de2e75d10965e151d3687e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
 === Folder: .git\objects\74 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\74\2c315adff5af1dbbd870d0b221f8b7a43ed8da ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\74\2c315adff5af1dbbd870d0b221f8b7a43ed8da ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbf in position 3: invalid start byte]
 
 === Folder: .git\objects\75 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\75\821913a5911adf83890a981e1d5e774d3e2d52 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\75\821913a5911adf83890a981e1d5e774d3e2d52 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa8 in position 5: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\75\856a18575e0462a7095b22198238f796fa683f ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\75\856a18575e0462a7095b22198238f796fa683f ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\75\b1339456c06cabac1b1c78a261279354886882 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\75\b1339456c06cabac1b1c78a261279354886882 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\78 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\78\db8fca4c5ff6d4530790b22af870c9be3eefe8 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\78\4ca363d1b634cfc85c3b442836976bff7623a2 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x83 in position 6: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\78\db8fca4c5ff6d4530790b22af870c9be3eefe8 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 === Folder: .git\objects\7d ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\7d\a39be23fe19ba2eeae6cccb1b6b362f5db3bfb ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7d\a39be23fe19ba2eeae6cccb1b6b362f5db3bfb ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\7e ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\7e\6c032734f13825c8b2c7316f31141b5d99703b ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7e\6c032734f13825c8b2c7316f31141b5d99703b ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xab in position 3: invalid start byte]
 
 === Folder: .git\objects\7f ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\7f\3375cfbc824744267a9eabbddfb6730ebc1a35 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7f\3375cfbc824744267a9eabbddfb6730ebc1a35 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb7 in position 9: invalid start byte]
 
 === Folder: .git\objects\85 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\85\9052402597b4c30710f9aafe41a68852119848 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\85\9052402597b4c30710f9aafe41a68852119848 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte]
 
 === Folder: .git\objects\86 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\86\34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\86\34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\86\c69e1105d1aba6af0e036c9c4b43d3882aec5e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\86\c69e1105d1aba6af0e036c9c4b43d3882aec5e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd4 in position 3: invalid continuation byte]
 
 === Folder: .git\objects\89 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\89\411192b2379a16e98dbd29c6dfeb62c7ab2aa6 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\89\411192b2379a16e98dbd29c6dfeb62c7ab2aa6 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\89\6611d9a79669190df1a100f53de86d49a7b14e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x83 in position 6: invalid start byte]
 
 === Folder: .git\objects\8a ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\8a\bcf36652db4f61c7597d80107f89b24ae8622e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\8a\bcf36652db4f61c7597d80107f89b24ae8622e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\8f ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\8f\4bf54820f8b7cb26c15ac02c79ac89cba30200 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\8f\4bf54820f8b7cb26c15ac02c79ac89cba30200 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa8 in position 5: invalid start byte]
 
 === Folder: .git\objects\92 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\92\ccd51812368f5e5efb533a62e1ff033bf69374 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\92\ccd51812368f5e5efb533a62e1ff033bf69374 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\94 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\94\2244c0607f50856efbca088d09e360e378b575 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\94\2244c0607f50856efbca088d09e360e378b575 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 === Folder: .git\objects\95 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\95\71e25710e826a99a593bdfdb962fc8d703d5bf ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\95\71e25710e826a99a593bdfdb962fc8d703d5bf ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x99 in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\95\88a49aa3bf29474607d90920873aa23e88d20a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\95\88a49aa3bf29474607d90920873aa23e88d20a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 6: invalid continuation byte]
 
 === Folder: .git\objects\97 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\97\37d2a4fcff13b42d065c1774b9bbb2f1945aca ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\97\37d2a4fcff13b42d065c1774b9bbb2f1945aca ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 3: invalid start byte]
 
 === Folder: .git\objects\98 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\98\dcba4c873f548c4bb8d9f4ccf620f251c0d773 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\98\dcba4c873f548c4bb8d9f4ccf620f251c0d773 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc9 in position 21: invalid continuation byte]
 
 === Folder: .git\objects\9b ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\9b\0b93ce20d21be74f86c9251a2c68ae5e644e96 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9b\0b93ce20d21be74f86c9251a2c68ae5e644e96 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd7 in position 3: invalid continuation byte]
+
+=== Folder: .git\objects\9c ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9c\e232df0f831bbe037fbf601ac68f64b06ce234 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\9e ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\9e\973c80445805d4124554088cf388ce23858bf1 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9e\973c80445805d4124554088cf388ce23858bf1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\a0 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a0\6b57666f52fef6cd448fb916ed157272dee73e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a0\0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a0\6b57666f52fef6cd448fb916ed157272dee73e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
 === Folder: .git\objects\a2 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a2\9744f83cf67da8616ce02e26bc1ee901ea8177 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a2\9744f83cf67da8616ce02e26bc1ee901ea8177 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a2\f77dfed98ed30efed8e094eadeb320dd1ff658 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a2\f77dfed98ed30efed8e094eadeb320dd1ff658 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcf in position 3: invalid continuation byte]
 
 === Folder: .git\objects\a4 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a4\79c6b96d22483b9ec1802e4c2af5358f58d521 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a4\79c6b96d22483b9ec1802e4c2af5358f58d521 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a4\ad84bce5a6006e479b620282e084dcd7115243 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a4\ad84bce5a6006e479b620282e084dcd7115243 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 === Folder: .git\objects\a7 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a7\540acebb98e2034a75882a0ab0a7cd4de17f5b ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a7\540acebb98e2034a75882a0ab0a7cd4de17f5b ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xce in position 19: invalid continuation byte]
 
 === Folder: .git\objects\a8 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a8\a4d25505df2b028b8b3c3ee323aee3f3ebb978 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a8\a4d25505df2b028b8b3c3ee323aee3f3ebb978 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\a8\cd58cbd7bd07cc87f5dda723e93d383736379e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a8\cd58cbd7bd07cc87f5dda723e93d383736379e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa0 in position 5: invalid start byte]
+
+=== Folder: .git\objects\a9 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a9\54a8dab709295435dbbae2a9604a7bb63b8efb ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdb in position 4: invalid continuation byte]
 
 === Folder: .git\objects\ab ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ab\312aecebeebd9cf45a35fbbb335e4dfac03282 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ab\312aecebeebd9cf45a35fbbb335e4dfac03282 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbc in position 3: invalid start byte]
+
+=== Folder: .git\objects\af ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\af\0dcb86596c7c06003de37a245156322ccf48ad ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\b0 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b0\0ebbae8efa1315b3825ddb41513e3f8f1e5eb4 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b0\0ebbae8efa1315b3825ddb41513e3f8f1e5eb4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
 
 === Folder: .git\objects\b2 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b2\3ab4e46e800968e006f5811348dc9122b46e1e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b2\3ab4e46e800968e006f5811348dc9122b46e1e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf0 in position 3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b2\3bfe2e07b6eda24d56c184581193197156cd64 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b2\3bfe2e07b6eda24d56c184581193197156cd64 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xfd in position 5: invalid start byte]
 
 === Folder: .git\objects\b3 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b3\83183d721457d9fb56fc8209bf932e02306a19 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b3\83183d721457d9fb56fc8209bf932e02306a19 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe9 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\b6 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b6\b5f6494257be5ea34f741332576277b2542653 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b6\b5f6494257be5ea34f741332576277b2542653 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\b7 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b7\7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b7\7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf4 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\b9 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b9\35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b9\35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x87 in position 5: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\b9\5822d30c60d75b9e5e1f42043381f04e684a92 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b9\5822d30c60d75b9e5e1f42043381f04e684a92 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte]
 
 === Folder: .git\objects\ba ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ba\2fe7ad47770419264a591c552ea8041abe2c3e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ba\2fe7ad47770419264a591c552ea8041abe2c3e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
 
 === Folder: .git\objects\bd ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\bd\a7ddcfc1aa77909c6dec916c2298176f528169 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\bd\a7ddcfc1aa77909c6dec916c2298176f528169 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\bd\f3bed86e49863994b94a2e44d84dfb1b59e3e4 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\bd\f3bed86e49863994b94a2e44d84dfb1b59e3e4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
 
 === Folder: .git\objects\c0 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c0\129b336857115aec7d4d0525bfd291b628bae3 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c0\129b336857115aec7d4d0525bfd291b628bae3 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c0\c1487b19e6ef9c01f1d107d60088701418f99c ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c0\c1487b19e6ef9c01f1d107d60088701418f99c ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+=== Folder: .git\objects\c1 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c1\996bb5cceea413b041b4c86548f12ab83b593d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
 === Folder: .git\objects\c3 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c3\011fac6e47888d8e2209dcb60f02a915e0fbf0 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c3\011fac6e47888d8e2209dcb60f02a915e0fbf0 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf1 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\c4 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c4\acec638b0a575995c4cc8bc17db4c9e569d91e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c4\acec638b0a575995c4cc8bc17db4c9e569d91e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\c5 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c5\dcfecac7c8df924e32b4ea5fb949a2c02f4630 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c5\b29b7fb3871de7f00a83406ec5f4266960ce32 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c5\dcfecac7c8df924e32b4ea5fb949a2c02f4630 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
 === Folder: .git\objects\c6 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c6\2a493c7723a61e1f3141466ceb0cec02457868 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c6\2a493c7723a61e1f3141466ceb0cec02457868 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c6\e696076b3a2304f4c7e69032abf7d85584af80 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\c8 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c8\3b766280fd71ab4e081063f1d545a88d7ad174 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c8\3b766280fd71ab4e081063f1d545a88d7ad174 ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
 === Folder: .git\objects\c9 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c9\1c21a15126c3a2f3555bbc554622a432c4ae9a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\1c21a15126c3a2f3555bbc554622a432c4ae9a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 23: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\c9\9788ad09028a3c12de1ddcd6909037df596f99 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\9788ad09028a3c12de1ddcd6909037df596f99 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd8 in position 5: invalid continuation byte]
 
 === Folder: .git\objects\ca ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ca\4473e0c6d7bbf7198754c8b34b9a80408dd023 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ca\4473e0c6d7bbf7198754c8b34b9a80408dd023 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\cb ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\cb\50142dcea65a71997f0280cf195bb3a0c7d701 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cb\50142dcea65a71997f0280cf195bb3a0c7d701 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd3 in position 3: invalid continuation byte]
 
 === Folder: .git\objects\cc ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\cc\4ed5ee7efba785a1b6133fec4f2d5f22ee2f0c ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cc\4ed5ee7efba785a1b6133fec4f2d5f22ee2f0c ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb7 in position 8: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\cc\ceb2801153ca950613660ab9236bd7a86bfd9a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cc\ceb2801153ca950613660ab9236bd7a86bfd9a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte]
 
 === Folder: .git\objects\cd ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\cd\5255241a586abafbdbf21215f3f8d970ae7431 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\258db9b51f818750d11dfa2c35eb8e6c8eeb4b ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\cd\76336bd0487ea69c48d9f8b317faa7a295627e ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\5255241a586abafbdbf21215f3f8d970ae7431 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\76336bd0487ea69c48d9f8b317faa7a295627e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\cd\e70c6def7cb093fb320c2e961828e7cc8af7ac ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cd\e70c6def7cb093fb320c2e961828e7cc8af7ac ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
 === Folder: .git\objects\ce ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ce\558d46e17e27af1b9bfdc47bfb052c532ac20d ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ce\558d46e17e27af1b9bfdc47bfb052c532ac20d ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ce\b9257d14a13e2400ee7ca3ddf89eb5228291c7 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ce\b9257d14a13e2400ee7ca3ddf89eb5228291c7 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ce\ebca742807efd540d805322a924257258fe186 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ce\ebca742807efd540d805322a924257258fe186 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ce\f52fa61bcd65129e4fdd036db7484c590ce6c2 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ce\f52fa61bcd65129e4fdd036db7484c590ce6c2 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\cf ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cf\0cf9f225346c9cdbe0158e3601215a611e8bbe ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cf\a766a699a75d48d40b8a845a71c3d0d8ec8a9e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
 === Folder: .git\objects\d2 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\d2\eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d2\eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xfb in position 3: invalid start byte]
 
 === Folder: .git\objects\d3 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\d3\26d95ed3d9477f152368ee2a169976cbfbc673 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d3\26d95ed3d9477f152368ee2a169976cbfbc673 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
 === Folder: .git\objects\d5 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\d5\ccc1fe847536ae42929a02c51dfaa238b53e8a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d5\ccc1fe847536ae42929a02c51dfaa238b53e8a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xac in position 3: invalid start byte]
 
 === Folder: .git\objects\d6 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\d6\2f65d3bd680969ed2311ef1ccd755ebafc6384 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d6\2f65d3bd680969ed2311ef1ccd755ebafc6384 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa9 in position 3: invalid start byte]
 
 === Folder: .git\objects\d7 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\d7\b278ba91bc60fba89a2544cd5485c311fe5261 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d7\b278ba91bc60fba89a2544cd5485c311fe5261 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x92 in position 3: invalid start byte]
 
 === Folder: .git\objects\da ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\da\c822ef92196eea7a19b7695b94a3f91e318610 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\da\c822ef92196eea7a19b7695b94a3f91e318610 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
 
 === Folder: .git\objects\db ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\db\064b837db5e7443de95808d99204ce5184c9ca ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\db\064b837db5e7443de95808d99204ce5184c9ca ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xac in position 5: invalid start byte]
 
 === Folder: .git\objects\de ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\de\019f7156d7ca8f4a712fd836e42cb8c3982197 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\de\019f7156d7ca8f4a712fd836e42cb8c3982197 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xec in position 2: invalid continuation byte]
 
 === Folder: .git\objects\e0 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e0\9d9a3457c06a6d48b0bbc7834c13a014b8d838 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e0\9d9a3457c06a6d48b0bbc7834c13a014b8d838 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\e2 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e2\a0384999a4a0a1afdc34b5844c1165544a12f0 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e2\a0384999a4a0a1afdc34b5844c1165544a12f0 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
 
 === Folder: .git\objects\e3 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e3\db853f90de235d93108b50dc31bc0a69eafe87 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e3\db853f90de235d93108b50dc31bc0a69eafe87 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xf5 in position 3: invalid start byte]
 
 === Folder: .git\objects\e5 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e5\dfbda607cbd9b3ca40a7d134980f946b0eb323 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e5\a4aa34f755570941bc7c039959ed79db2727af ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e5\da7db4b7c644c5960e726d3244a63f72b63b45 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e5\dfbda607cbd9b3ca40a7d134980f946b0eb323 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc9 in position 21: invalid continuation byte]
 
 === Folder: .git\objects\e6 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e6\ab1036a6f0c89e623c51f2775ac955907fc960 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e6\ab1036a6f0c89e623c51f2775ac955907fc960 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
 
 === Folder: .git\objects\e8 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e8\ceadd48a3cb2733be35d9bec5652e2cff14916 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e8\ceadd48a3cb2733be35d9bec5652e2cff14916 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8b in position 5: invalid start byte]
 
 === Folder: .git\objects\e9 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\e9\f0cf5810974d60757f73be589b0351a1b93b7b ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e9\f0cf5810974d60757f73be589b0351a1b93b7b ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\eb ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\eb\2eab9b71a6b9c24505e07415b31c9bac06da30 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\eb\2eab9b71a6b9c24505e07415b31c9bac06da30 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 === Folder: .git\objects\ed ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\ed\f0d6d2af7ee3607fdbb5e0613566de248cc01d ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ed\f0d6d2af7ee3607fdbb5e0613566de248cc01d ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\f0 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f0\1f9e5c12daf93745e483cfc9a286c245f74f68 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f0\1f9e5c12daf93745e483cfc9a286c245f74f68 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 === Folder: .git\objects\f1 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f1\179033fa1b395422cce326d1a8f81d8217bd6a ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f1\179033fa1b395422cce326d1a8f81d8217bd6a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x87 in position 5: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f1\b02855b88b65f9c87453089c1ddcd7904ebb8f ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f1\b02855b88b65f9c87453089c1ddcd7904ebb8f ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8a in position 5: invalid start byte]
 
 === Folder: .git\objects\f3 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f3\1763f4eca14bdafc3e1114310f846516d241ce ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f3\1763f4eca14bdafc3e1114310f846516d241ce ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 4: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f3\1de63487ffe7dd9e287f58ccacb93a644aa8f4 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f3\1de63487ffe7dd9e287f58ccacb93a644aa8f4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xeb in position 3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f3\29756fe33519c2881156542cb77f0e1207bdbe ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f3\29756fe33519c2881156542cb77f0e1207bdbe ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbc in position 5: invalid start byte]
 
 === Folder: .git\objects\f5 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f5\4592fd73da13e94c07942b06b38e537057e1e6 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f5\4592fd73da13e94c07942b06b38e537057e1e6 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xaf in position 5: invalid start byte]
 
 === Folder: .git\objects\f9 ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\f9\b1fa9239732b005c159599bd21391e21417f98 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\f9\b1fa9239732b005c159599bd21391e21417f98 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\fa ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\fa\2fd633624471308c794c31eac5daaccf1f93b5 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fa\2fd633624471308c794c31eac5daaccf1f93b5 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 === Folder: .git\objects\fe ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\fe\07a70f4d1070ccd31cd21f10dc0ae6d357dbcb ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fe\07a70f4d1070ccd31cd21f10dc0ae6d357dbcb ---
 [Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\objects\fe\fb85b76c41cce4f3559ded4747e048b53756a5 ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fe\fb85b76c41cce4f3559ded4747e048b53756a5 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe2 in position 3: invalid continuation byte]
 
 === Folder: .git\objects\info ===
@@ -7152,21 +7709,21 @@ c0c1487b19e6ef9c01f1d107d60088701418f99c 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49
 
 === Folder: .git\refs\heads ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
-4532251c88870e8ce76bfd365c3ccf3e7f101780
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
+6d03f43314d32aef36fc87bae239689e7cbf6fe4
 
 === Folder: .git\refs\remotes ===
 
 === Folder: .git\refs\remotes\origin ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
-c0c1487b19e6ef9c01f1d107d60088701418f99c
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
+6d03f43314d32aef36fc87bae239689e7cbf6fe4
 
 === Folder: .git\refs\tags ===
 
 === Folder: app ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\auth.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\auth.py ---
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -7240,7 +7797,7 @@ def logout():
     flash("You have been logged out.")
     return redirect(url_for("auth.login"))
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\comment_routes.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\comment_routes.py ---
 # app/comment_routes.py
 import uuid
 from datetime import datetime
@@ -7427,7 +7984,232 @@ def report_comment(comment_id):
     db.session.commit()
     return jsonify({"success": True, "message": "Report submitted."})
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\models.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\list_routes.py ---
+from flask import Blueprint, request, jsonify, render_template, abort
+from flask_login import login_required, current_user
+from app import db
+from app.models import List, ListManga, ListFollower, Manga
+from datetime import datetime
+import uuid
+
+list_bp = Blueprint("lists", __name__)
+
+# ==== JSON API ====
+
+@list_bp.route("/lists", methods=["GET"])
+@login_required
+def get_lists():
+    """Return user's own lists and followed lists"""
+    my_lists = List.query.filter_by(UserId=current_user.UserId).all()
+    followed = (
+        db.session.query(List)
+        .join(ListFollower, ListFollower.ListId == List.ListId)
+        .filter(ListFollower.UserId == current_user.UserId)
+        .all()
+    )
+
+    def serialize(l):
+        return {
+            "id": str(l.ListId),
+            "name": l.Name,
+            "slug": l.Slug,
+            "description": l.Description,
+            "visibility": l.Visibility,
+            "item_count": l.ItemCount or 0,
+            "follower_count": l.FollowerCount or 0,
+            "updated_at": l.UpdatedAt.isoformat() if l.UpdatedAt else None,
+        }
+
+    return jsonify(
+        {"my_lists": [serialize(l) for l in my_lists],
+         "followed_lists": [serialize(l) for l in followed]}
+    )
+
+
+@list_bp.route("/lists", methods=["POST"])
+@login_required
+def create_list():
+    data = request.get_json() or {}
+    name = data.get("name")
+    desc = data.get("description", "")
+    visibility = data.get("visibility", "private")
+
+    if not name:
+        return jsonify({"error": "Name is required"}), 400
+
+    new_list = List(
+        ListId=uuid.uuid4(),
+        UserId=current_user.UserId,
+        Name=name,
+        Description=desc,
+        Visibility=visibility,
+        Slug=name.lower().replace(" ", "-") + "-" + str(uuid.uuid4())[:8],
+        CreatedAt=datetime.utcnow(),
+        UpdatedAt=datetime.utcnow(),
+        FollowerCount=0,
+        ItemCount=0,
+    )
+    db.session.add(new_list)
+    db.session.commit()
+    return jsonify({"id": str(new_list.ListId), "slug": new_list.Slug}), 201
+
+
+@list_bp.route("/lists/<uuid:list_id>", methods=["GET"])
+def get_list(list_id):
+    l = List.query.get_or_404(list_id)
+    # check visibility
+    if l.Visibility == "private" and (
+        not current_user.is_authenticated or l.UserId != current_user.UserId
+    ):
+        abort(403)
+
+    items = (
+        db.session.query(ListManga, Manga)
+        .join(Manga, ListManga.MangaId == Manga.MangaId)
+        .filter(ListManga.ListId == l.ListId)
+        .all()
+    )
+
+    return jsonify(
+        {
+            "id": str(l.ListId),
+            "name": l.Name,
+            "description": l.Description,
+            "owner_id": str(l.UserId),
+            "items": [
+                {
+                    "manga_id": str(m.MangaId),
+                    "title": m.TitleEn,
+                    "note": li.Note if hasattr(li, "Note") else None,
+                    "position": li.Position,
+                }
+                for li, m in items
+            ],
+        }
+    )
+
+
+@list_bp.route("/lists/<uuid:list_id>", methods=["PUT", "PATCH"])
+@login_required
+def update_list(list_id):
+    l = List.query.get_or_404(list_id)
+    if l.UserId != current_user.UserId:
+        abort(403)
+
+    data = request.get_json() or {}
+    if "name" in data:
+        l.Name = data["name"]
+    if "description" in data:
+        l.Description = data["description"]
+    if "visibility" in data:
+        l.Visibility = data["visibility"]
+    l.UpdatedAt = datetime.utcnow()
+    db.session.commit()
+    return jsonify({"success": True})
+
+
+@list_bp.route("/lists/<uuid:list_id>", methods=["DELETE"])
+@login_required
+def delete_list(list_id):
+    l = List.query.get_or_404(list_id)
+    if l.UserId != current_user.UserId:
+        abort(403)
+    db.session.delete(l)
+    db.session.commit()
+    return "", 204
+
+
+@list_bp.route("/lists/<uuid:list_id>/items", methods=["POST"])
+@login_required
+def add_item(list_id):
+    l = List.query.get_or_404(list_id)
+    if l.UserId != current_user.UserId:
+        abort(403)
+
+    data = request.get_json() or {}
+    manga_id = data.get("manga_id")
+    if not manga_id:
+        return jsonify({"error": "manga_id required"}), 400
+
+    existing = ListManga.query.filter_by(ListId=l.ListId, MangaId=manga_id).first()
+    if existing:
+        return jsonify({"message": "already exists"}), 200
+
+    li = ListManga(
+        ListId=l.ListId,
+        MangaId=manga_id,
+        AddedAt=datetime.utcnow(),
+        Position=0,
+    )
+    db.session.add(li)
+    l.ItemCount = (l.ItemCount or 0) + 1
+    db.session.commit()
+    return jsonify({"success": True}), 201
+
+
+@list_bp.route("/lists/<uuid:list_id>/items/<uuid:manga_id>", methods=["DELETE"])
+@login_required
+def remove_item(list_id, manga_id):
+    l = List.query.get_or_404(list_id)
+    if l.UserId != current_user.UserId:
+        abort(403)
+
+    li = ListManga.query.filter_by(ListId=list_id, MangaId=manga_id).first()
+    if not li:
+        return "", 204
+    db.session.delete(li)
+    l.ItemCount = max(0, (l.ItemCount or 0) - 1)
+    db.session.commit()
+    return "", 204
+
+
+@list_bp.route("/lists/<uuid:list_id>/follow", methods=["POST"])
+@login_required
+def follow_list(list_id):
+    l = List.query.get_or_404(list_id)
+    if l.Visibility == "private":
+        abort(403)
+    exists = ListFollower.query.filter_by(
+        ListId=l.ListId, UserId=current_user.UserId
+    ).first()
+    if exists:
+        return jsonify({"message": "already following"}), 200
+    f = ListFollower(ListId=l.ListId, UserId=current_user.UserId)
+    db.session.add(f)
+    l.FollowerCount = (l.FollowerCount or 0) + 1
+    db.session.commit()
+    return jsonify({"success": True}), 201
+
+
+@list_bp.route("/lists/<uuid:list_id>/follow", methods=["DELETE"])
+@login_required
+def unfollow_list(list_id):
+    l = List.query.get_or_404(list_id)
+    f = ListFollower.query.filter_by(ListId=l.ListId, UserId=current_user.UserId).first()
+    if not f:
+        return "", 204
+    db.session.delete(f)
+    l.FollowerCount = max(0, (l.FollowerCount or 0) - 1)
+    db.session.commit()
+    return "", 204
+
+
+# ==== Public view ====
+
+@list_bp.route("/public/<slug>")
+def public_view(slug):
+    l = List.query.filter_by(Slug=slug).first_or_404()
+    if l.Visibility == "private":
+        abort(403)
+    items = (
+        db.session.query(ListManga, Manga)
+        .join(Manga, ListManga.MangaId == Manga.MangaId)
+        .filter(ListManga.ListId == l.ListId)
+        .all()
+    )
+    return render_template("list_public.html", list=l, items=items)
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\models.py ---
 from datetime import datetime
 import uuid
 from flask_login import UserMixin
@@ -7595,8 +8377,18 @@ class List(db.Model):
     Description = Column(Text)
     IsPublic = Column(Boolean)
 
+    Slug = Column(String(20))
+    Visibility = Column(String(20))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    FollowerCount = Column(Integer, default=0)
+    ItemCount = Column(Integer, default=0)
+    # relationships
+
     user = relationship("User", back_populates="lists")
     mangas = relationship("ListManga", back_populates="list")
+    followers = relationship("ListFollower", back_populates="list")
 
 
 class ListManga(db.Model):
@@ -7606,10 +8398,21 @@ class ListManga(db.Model):
     ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
     MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
     AddedAt = Column(DateTime)
+    Position = Column(Integer, default=0)
 
     list = relationship("List", back_populates="mangas")
     manga = relationship("Manga")
 
+class ListFollower(db.Model):
+    __tablename__ = "ListFollower"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"), primary_key=True)
+    FollowedAt = Column(DateTime, default=datetime.utcnow)
+
+    list = relationship("List", back_populates="followers")
+    user = relationship("User")
 
 # ------------------------
 # MANGA RELATED TABLES
@@ -7789,7 +8592,7 @@ class Cover(db.Model):
     rel_user_id = db.Column(db.String(36))
     url = db.Column(db.String(500))
     image_data = db.Column(db.LargeBinary)  # lưu binary ảnh
---- File: D:\DACSN\coursework\Demo\mini-demo\app\routes.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py ---
 import base64
 from io import BytesIO
 import shutil
@@ -8579,7 +9382,7 @@ def message(user_id):
 @main.route("/report/<uuid:user_id>")
 def report(user_id):
     return f"Report user {user_id}"
---- File: D:\DACSN\coursework\Demo\mini-demo\app\__init__.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\__init__.py ---
 # app/__init__.py
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -8599,6 +9402,9 @@ def create_app():
     from .auth import auth as auth_blueprint
     from .routes import main as main_blueprint, manga as manga_blueprint
     from .comment_routes import comment_bp as comment_blueprint  # new
+    from app.list_routes import list_bp
+    
+    app.register_blueprint(list_bp, url_prefix="/api")
 
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
@@ -8618,21 +9424,21 @@ def load_user(user_id):
 
 === Folder: app\static\assets ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\assets\auth_thmb.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\auth_thmb.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 4: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\assets\default_avatar.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_avatar.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\assets\favicon.ico ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\favicon.ico ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\assets\MD-logo.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\MD-logo.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
 === Folder: app\static\css ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\css\auth.css ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\auth.css ---
 /* Background */
 .auth-body {
     margin: 0;
@@ -8800,7 +9606,7 @@ def load_user(user_id):
     padding: 40px;
     /* tăng 15% so với 30px */
 }
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\css\comments.css ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\comments.css ---
 /* Comment section styles */
 .comment-form {
     background-color: #2a2a2a;
@@ -8854,7 +9660,7 @@ def load_user(user_id):
         padding: 5px;
     }
 }
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\css\creator_detail.css ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\creator_detail.css ---
 body {
     background-color: #1a1a1a;
     color: #f0f0f0;
@@ -8995,7 +9801,150 @@ body {
         font-size: 2rem;
     }
 }
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\library.css ---
+/* ==== Library page custom theme ==== */
+
+body {
+    background-color: #121212;
+    /* đảm bảo nền tối */
+    color: #f0f0f0;
+}
+
+/* Tabs */
+#libraryTabs .nav-link {
+    color: #ccc;
+    background-color: #1e1e1e;
+    border: none;
+}
+
+#libraryTabs .nav-link.active {
+    color: #fff;
+    background-color: #333;
+    border-bottom: 2px solid #ff9800;
+}
+
+/* Containers */
+#myListsContainer,
+#followedListsContainer {
+    min-height: 200px;
+}
+
+/* Cards */
+.card {
+    background-color: #1f1f1f;
+    border: 1px solid #2a2a2a;
+    border-radius: 0.75rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.card small {
+    color: #888;
+}
+
+/* Buttons inside card */
+.card .btn {
+    flex: 1;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.5rem;
+}
+
+.card .btn-outline-primary {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.card .btn-outline-primary:hover {
+    background-color: #ff9800;
+    color: #000;
+}
+
+.card .btn-outline-secondary {
+    border-color: #999;
+    color: #999;
+}
+
+.card .btn-outline-secondary:hover {
+    background-color: #999;
+    color: #000;
+}
+
+.card .btn-outline-danger {
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.card .btn-outline-danger:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.card .btn-outline-warning {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.card .btn-outline-warning:hover {
+    background-color: #ff9800;
+    color: #000;
+}
+
+/* Modals */
+.modal-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.modal-footer {
+    border-top: 1px solid #333;
+}
+
+.modal .form-label {
+    color: #ccc;
+}
+
+.modal .form-control,
+.modal .form-select {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.modal .form-control:focus,
+.modal .form-select:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+}
+
+/* Delete modal */
+#deleteListModal .modal-body {
+    text-align: center;
+}
+
+#deleteListModal .btn-danger {
+    width: 100%;
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
 .manga-detail-container {
     max-width: 90%;
     margin: 0 auto;
@@ -9272,7 +10221,7 @@ body {
     /* chữ xám nhạt như description */
     font-size: 0.9rem;
 }
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\css\styles.css ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\styles.css ---
 @charset "UTF-8";
 
 /*!
@@ -22255,67 +23204,67 @@ a {
 }
 === Folder: app\static\flags ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\af.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\af.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ar.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ar.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\az.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\az.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\be.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\be.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\bg.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\bg.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\bn.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\bn.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ca.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ca.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\cs.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\cs.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\cv.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\cv.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\da.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\da.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\de.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\de.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\el.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\el.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\en.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\en.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\eo.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\eo.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\es-la.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\es-la.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\es.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\es.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\et.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\et.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\eu.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\eu.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\fa.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\fa.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\fi.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\fi.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\flags-download.py ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\flags-download.py ---
 import os
 import requests
 
@@ -22455,144 +23404,144 @@ for lang, country in lang_to_country.items():
         print(f"❌ Không tìm được ảnh cho lang '{lang}' — thử hết size.")
 
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\fr.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\fr.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ga.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ga.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\he.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\he.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\hi.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\hi.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\hr.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\hr.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\hu.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\hu.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\id.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\id.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\it.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\it.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ja-ro.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ja-ro.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ja.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ja.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\jv.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\jv.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ka.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ka.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\kk.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\kk.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ko-ro.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ko-ro.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ko.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ko.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\la.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\la.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\lt.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\lt.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\mn.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\mn.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ms.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ms.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\my.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\my.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ne.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ne.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\nl.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\nl.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\no.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\no.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\pl.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\pl.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\pt-br.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\pt-br.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\pt.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\pt.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ro.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ro.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ru.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ru.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\sk.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sk.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\sl.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sl.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\sq.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sq.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\sr.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sr.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\sv.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sv.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ta.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ta.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\te.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\te.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\th.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\th.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\tl.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\tl.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\tr.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\tr.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\uk.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\uk.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\ur.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ur.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\uz.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\uz.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\vi.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\vi.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\zh-hk.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\zh-hk.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\zh-ro.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\zh-ro.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\flags\zh.png ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\zh.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
 === Folder: app\static\js ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\js\comments.js ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\comments.js ---
 // app/static/js/comments.js
 $(document).ready(function () {
     // Spoiler toggle: click to reveal
@@ -22831,7 +23780,168 @@ $(document).ready(function () {
     }
 });
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\library.js ---
+document.addEventListener("DOMContentLoaded", function () {
+    const myListsContainer = document.getElementById("myListsContainer");
+    const followedListsContainer = document.getElementById("followedListsContainer");
+
+    const newListBtn = document.getElementById("newListBtn");
+    const newListModal = new bootstrap.Modal(document.getElementById("newListModal"));
+    const newListForm = document.getElementById("newListForm");
+
+    const editListModal = new bootstrap.Modal(document.getElementById("editListModal"));
+    const editListForm = document.getElementById("editListForm");
+    let editListId = null;
+
+    const deleteListModal = new bootstrap.Modal(document.getElementById("deleteListModal"));
+    const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
+    let deleteListId = null;
+
+    // ==== Helpers ====
+    function renderCard(l, isOwner) {
+        const col = document.createElement("div");
+        col.className = "col-md-4";
+        col.innerHTML = `
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">${l.name}</h5>
+                    <p class="card-text">${l.description || ""}</p>
+                    <small class="mb-2">${l.item_count} items • ${l.follower_count} followers</small>
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-sm btn-outline-primary view-btn" data-slug="${l.slug}">View</button>
+                        ${isOwner ? `
+                            <button class="btn btn-sm btn-outline-secondary edit-btn" data-id="${l.id}">Edit</button>
+                            <button class="btn btn-sm btn-outline-danger delete-btn" data-id="${l.id}">Delete</button>
+                        ` : `
+                            <button class="btn btn-sm btn-outline-warning unfollow-btn" data-id="${l.id}">Unfollow</button>
+                        `}
+                    </div>
+                </div>
+            </div>
+        `;
+        return col;
+    }
+
+    function loadLists() {
+        fetch("/api/lists")
+            .then(r => r.json())
+            .then(data => {
+                myListsContainer.innerHTML = "";
+                data.my_lists.forEach(l => {
+                    myListsContainer.appendChild(renderCard(l, true));
+                });
+                followedListsContainer.innerHTML = "";
+                data.followed_lists.forEach(l => {
+                    followedListsContainer.appendChild(renderCard(l, false));
+                });
+                bindCardEvents();
+            });
+    }
+
+    function bindCardEvents() {
+        document.querySelectorAll(".edit-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                editListId = btn.dataset.id;
+                // fetch list detail
+                fetch(`/api/lists/${editListId}`)
+                    .then(r => r.json())
+                    .then(l => {
+                        document.getElementById("editListId").value = l.id;
+                        document.getElementById("editListName").value = l.name;
+                        document.getElementById("editListDescription").value = l.description || "";
+                        document.getElementById("editListVisibility").value = l.visibility;
+                        editListModal.show();
+                    });
+            });
+        });
+
+        document.querySelectorAll(".delete-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                deleteListId = btn.dataset.id;
+                deleteListModal.show();
+            });
+        });
+
+        document.querySelectorAll(".unfollow-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                fetch(`/api/lists/${btn.dataset.id}/follow`, { method: "DELETE" })
+                    .then(() => loadLists());
+            });
+        });
+
+        document.querySelectorAll(".view-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                window.location.href = `/public/${btn.dataset.slug}`;
+            });
+        });
+    }
+
+    // ==== Create List ====
+    newListBtn.addEventListener("click", () => {
+        newListForm.reset();
+        newListModal.show();
+    });
+
+    newListForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const payload = {
+            name: document.getElementById("listName").value,
+            description: document.getElementById("listDescription").value,
+            visibility: document.getElementById("listVisibility").value
+        };
+        fetch("/api/lists", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        })
+            .then(r => {
+                if (!r.ok) throw new Error("Create failed");
+                return r.json();
+            })
+            .then(() => {
+                newListModal.hide();
+                loadLists();
+            })
+            .catch(err => alert(err));
+    });
+
+    // ==== Edit List ====
+    editListForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const payload = {
+            name: document.getElementById("editListName").value,
+            description: document.getElementById("editListDescription").value,
+            visibility: document.getElementById("editListVisibility").value
+        };
+        fetch(`/api/lists/${editListId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        })
+            .then(r => {
+                if (!r.ok) throw new Error("Update failed");
+            })
+            .then(() => {
+                editListModal.hide();
+                loadLists();
+            })
+            .catch(err => alert(err));
+    });
+
+    // ==== Delete List ====
+    confirmDeleteBtn.addEventListener("click", () => {
+        if (!deleteListId) return;
+        fetch(`/api/lists/${deleteListId}`, { method: "DELETE" })
+            .then(() => {
+                deleteListModal.hide();
+                loadLists();
+            });
+    });
+
+    loadLists();
+});
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
 document.addEventListener('DOMContentLoaded', function () {
     // Header background
     const header = document.querySelector('.manga-detail-header');
@@ -22935,7 +24045,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\static\js\scripts.js ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\scripts.js ---
 /*!
 * MangaDex Clone - Custom Scripts
 * Dựa trên Start Bootstrap - Simple Sidebar
@@ -23150,7 +24260,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 === Folder: app\templates ===
 
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
 {% extends "base.html" %}
 
 {% block title %}Advanced Search | MangaDex Clone{% endblock %}
@@ -23161,7 +24271,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\art.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\art.html ---
 {% extends "manga_detail.html" %}
 
 {% block tab_content %}
@@ -23169,7 +24279,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p class="text-center text-gray">No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\base.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\base.html ---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23308,7 +24418,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\chapters.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\chapters.html ---
 <!-- app/templates/chapters.html -->
 <div class="tab-pane active" id="chapters">
     <h2>Chapters</h2>
@@ -23318,7 +24428,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {% endfor %}
     </ul>
 </div>
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\comments.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\comments.html ---
 {# app/templates/comments.html #}
 {# Partial to render comments section. #}
 
@@ -23454,7 +24564,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </nav>
     {% endif %}
 </div>
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\creator_detail.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\creator_detail.html ---
 {% extends "base.html" %}
 
 {% block title %}{{ creator.Name }} | MangaDex Clone{% endblock %}
@@ -23505,7 +24615,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\home.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\home.html ---
 {% extends "base.html" %}
 
 {% block title %}Home | MangaDex Clone{% endblock %}
@@ -23611,7 +24721,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\latest_updates.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\latest_updates.html ---
 {% extends "base.html" %}
 
 {% block title %}Latest Updates | MangaDex Clone{% endblock %}
@@ -23717,18 +24827,156 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\library.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\library.html ---
 {% extends "base.html" %}
 
 {% block title %}Library | MangaDex Clone{% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/library.css') }}">
+{% endblock %}
+
 {% block content %}
-<div class="text-center py-5 text-white">
-    <h1>Your Library</h1>
-    <p>No content available yet.</p>
+<div class="container py-4 text-white">
+    <h1 class="mb-4">Your Library</h1>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="libraryTabs" role="tablist">
+        <li class="nav-item">
+            <button class="nav-link active" id="my-lists-tab" data-bs-toggle="tab" data-bs-target="#my-lists"
+                type="button" role="tab">My MDLists</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="followed-lists-tab" data-bs-toggle="tab" data-bs-target="#followed-lists"
+                type="button" role="tab">Followed MDLists</button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-3" id="libraryTabsContent">
+        <div class="tab-pane fade show active" id="my-lists" role="tabpanel">
+            <button class="btn btn-primary mb-3" id="newListBtn">+ New MDList</button>
+            <div id="myListsContainer" class="row g-3"></div>
+        </div>
+        <div class="tab-pane fade" id="followed-lists" role="tabpanel">
+            <div id="followedListsContainer" class="row g-3"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Create New List -->
+<div class="modal fade" id="newListModal" tabindex="-1" aria-labelledby="newListLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newListLabel">Create New MDList</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="newListForm">
+                    <div class="mb-3">
+                        <label for="listName" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="listName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="listDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="listDescription"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="listVisibility" class="form-label">Visibility</label>
+                        <select class="form-select" id="listVisibility">
+                            <option value="public">Public</option>
+                            <option value="unlisted">Unlisted</option>
+                            <option value="private" selected>Private</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Edit List -->
+<div class="modal fade" id="editListModal" tabindex="-1" aria-labelledby="editListLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editListLabel">Edit MDList</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editListForm">
+                    <input type="hidden" id="editListId">
+                    <div class="mb-3">
+                        <label for="editListName" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="editListName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editListDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="editListDescription"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editListVisibility" class="form-label">Visibility</label>
+                        <select class="form-select" id="editListVisibility">
+                            <option value="public">Public</option>
+                            <option value="unlisted">Unlisted</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Confirm Delete -->
+<div class="modal fade" id="deleteListModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete MDList</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this list?</p>
+                <button id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\login.html ---
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/library.js') }}"></script>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\list_public.html ---
+{% extends "base.html" %}
+
+{% block title %}{{ list.Name }} | MDList{% endblock %}
+
+{% block content %}
+<div class="container py-4 text-white">
+    <h1>{{ list.Name }}</h1>
+    <p>{{ list.Description }}</p>
+    <p>Owner: {{ list.owner.Username if list.owner else "Unknown" }}</p>
+    <p>{{ list.ItemCount }} items • {{ list.FollowerCount }} followers</p>
+
+    <div class="row g-3">
+        {% for li, m in items %}
+        <div class="col-md-3">
+            <div class="card h-100">
+                <img src="{{ url_for('main.cover_image', cover_id=m.CoverId) }}" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="card-title">{{ m.TitleEn }}</h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\login.html ---
 <!DOCTYPE html>
 <html lang="en" class="login-pf">
 
@@ -23784,7 +25032,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\manga_art.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\manga_art.html ---
 <!-- manga_art.html -->
 <div>
     <!-- Locale filter -->
@@ -23815,7 +25063,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {% endfor %}
     </div>
 </div>
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\manga_detail.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\manga_detail.html ---
 {# app/templates/manga_detail.html #}
 {% extends "base.html" %}
 
@@ -23992,7 +25240,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\profile.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile.html ---
 {% extends "base.html" %}
 
 {% block title %}Profile | MangaDex Clone{% endblock %}
@@ -24049,7 +25297,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\random.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\random.html ---
 {% extends "base.html" %}
 
 {% block title %}Random | MangaDex Clone{% endblock %}
@@ -24060,7 +25308,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\reading_history.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\reading_history.html ---
 {% extends "base.html" %}
 
 {% block title %}Reading History | MangaDex Clone{% endblock %}
@@ -24071,7 +25319,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\recently_added.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\recently_added.html ---
 {% extends "base.html" %}
 
 {% block title %}Recently Added | MangaDex Clone{% endblock %}
@@ -24177,7 +25425,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\register.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\register.html ---
 <!DOCTYPE html>
 <html lang="en" class="login-pf">
 
@@ -24240,7 +25488,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\related.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\related.html ---
 {% extends "manga_detail.html" %}
 
 {% block tab_content %}
@@ -24248,7 +25496,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p class="text-center text-gray">No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\require_login.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\require_login.html ---
 {% extends "base.html" %}
 
 {% block title %}{{ title }} | MangaDex Clone{% endblock %}
@@ -24279,7 +25527,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
---- File: D:\DACSN\coursework\Demo\mini-demo\app\templates\updates.html ---
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\updates.html ---
 {% extends "base.html" %}
 
 {% block title %}Updates | MangaDex Clone{% endblock %}

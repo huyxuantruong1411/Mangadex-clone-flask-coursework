@@ -1,0 +1,142 @@
+/* ==== Library page custom theme ==== */
+
+body {
+    background-color: #121212;
+    /* đảm bảo nền tối */
+    color: #f0f0f0;
+}
+
+/* Tabs */
+#libraryTabs .nav-link {
+    color: #ccc;
+    background-color: #1e1e1e;
+    border: none;
+}
+
+#libraryTabs .nav-link.active {
+    color: #fff;
+    background-color: #333;
+    border-bottom: 2px solid #ff9800;
+}
+
+/* Containers */
+#myListsContainer,
+#followedListsContainer {
+    min-height: 200px;
+}
+
+/* Cards */
+.card {
+    background-color: #1f1f1f;
+    border: 1px solid #2a2a2a;
+    border-radius: 0.75rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.card small {
+    color: #888;
+}
+
+/* Buttons inside card */
+.card .btn {
+    flex: 1;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.5rem;
+}
+
+.card .btn-outline-primary {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.card .btn-outline-primary:hover {
+    background-color: #ff9800;
+    color: #000;
+}
+
+.card .btn-outline-secondary {
+    border-color: #999;
+    color: #999;
+}
+
+.card .btn-outline-secondary:hover {
+    background-color: #999;
+    color: #000;
+}
+
+.card .btn-outline-danger {
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.card .btn-outline-danger:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.card .btn-outline-warning {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.card .btn-outline-warning:hover {
+    background-color: #ff9800;
+    color: #000;
+}
+
+/* Modals */
+.modal-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.modal-footer {
+    border-top: 1px solid #333;
+}
+
+.modal .form-label {
+    color: #ccc;
+}
+
+.modal .form-control,
+.modal .form-select {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.modal .form-control:focus,
+.modal .form-select:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+}
+
+/* Delete modal */
+#deleteListModal .modal-body {
+    text-align: center;
+}
+
+#deleteListModal .btn-danger {
+    width: 100%;
+}
