@@ -9,7 +9,7 @@ import requests
 from sqlalchemy import desc, func, or_
 
 from app.comment_routes import now
-from .models import Chapter, Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Report, Tag, Comment
+from .models import Chapter, Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
 from . import db
 import os
 import uuid
@@ -304,13 +304,135 @@ def profile():
 def advanced_search():
     return render_template("advanced_search.html", title="Advanced Search")
 
-@main.route("/recently-added")
+@main.route('/recently_added')
 def recently_added():
-    return render_template("recently_added.html", title="Recently Added")
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+    manga_query = db.session.query(Manga, MangaCover.ImageData, MangaStatistics.AverageRating, MangaStatistics.Follows)\
+        .outerjoin(MangaCover, Manga.MangaId == MangaCover.MangaId)\
+        .outerjoin(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)\
+        .order_by(Manga.CreatedAt.desc())
+    
+    pagination = manga_query.paginate(page=page, per_page=per_page, error_out=False)
+    mangas = []
+    
+    for item in pagination.items:
+        manga, image_data, avg_rating, follows = item
+        cover_url = url_for('static', filename='assets/default_cover.png')
+        
+        if image_data:
+            # Convert ImageData to base64 URL
+            image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+        else:
+            # Fetch cover from MangaDex API if not in MangaCover
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info['manga_id']
+                cover_id_str = cover_info['cover_id']
+                file_name_str = cover_info['file_name']
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data,
+                        DownloadDate=datetime.utcnow()
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+        
+        your_score = None
+        if current_user.is_authenticated:
+            rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            your_score = rating.Score if rating else None
+        
+        mangas.append({
+            'manga': manga,
+            'cover_url': cover_url,
+            'stats': {'AverageRating': avg_rating, 'Follows': follows},
+            'your_score': your_score
+        })
+    
+    return render_template(
+        'recently_added.html',
+        mangas=mangas,
+        pagination=pagination,
+        is_authenticated=current_user.is_authenticated
+    )
 
-@main.route("/latest-updates")
+@main.route('/latest_updates')
 def latest_updates():
-    return render_template("latest_updates.html", title="Latest Updates")
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+    manga_query = db.session.query(Manga, MangaCover.ImageData, MangaStatistics.AverageRating, MangaStatistics.Follows)\
+        .outerjoin(MangaCover, Manga.MangaId == MangaCover.MangaId)\
+        .outerjoin(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)\
+        .order_by(Manga.UpdatedAt.desc())
+    
+    pagination = manga_query.paginate(page=page, per_page=per_page, error_out=False)
+    mangas = []
+    
+    for item in pagination.items:
+        manga, image_data, avg_rating, follows = item
+        cover_url = url_for('static', filename='assets/default_cover.png')
+        
+        if image_data:
+            # Convert ImageData to base64 URL
+            image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+        else:
+            # Fetch cover from MangaDex API if not in MangaCover
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info['manga_id']
+                cover_id_str = cover_info['cover_id']
+                file_name_str = cover_info['file_name']
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data,
+                        DownloadDate=datetime.utcnow()
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+        
+        your_score = None
+        if current_user.is_authenticated:
+            rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            your_score = rating.Score if rating else None
+        
+        mangas.append({
+            'manga': manga,
+            'cover_url': cover_url,
+            'stats': {'AverageRating': avg_rating, 'Follows': follows},
+            'your_score': your_score
+        })
+    
+    return render_template(
+        'latest_updates.html',
+        mangas=mangas,
+        pagination=pagination,
+        is_authenticated=current_user.is_authenticated
+    )
 
 @main.route("/random")
 def random():

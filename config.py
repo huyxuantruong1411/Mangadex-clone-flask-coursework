@@ -4,7 +4,7 @@ class Config:
     SECRET_KEY = "secret_key_demo"
 
     DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = r"localhost\SQLEXPRESS"
+    SERVER = "DESKTOP-HKIPI1M"
     DATABASE = "MangaLibrary"
     connection_string = (
         f"DRIVER={{{DRIVER}}};"
