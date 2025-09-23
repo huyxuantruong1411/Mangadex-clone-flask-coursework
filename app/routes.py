@@ -191,11 +191,18 @@ def home():
                     cover_url = url_for('static', filename='assets/default_cover.png')
             else:
                 cover_url = url_for('static', filename='assets/default_cover.png')
+        
+        your_score = None
+        if current_user.is_authenticated:
+            r = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            if r:
+                your_score = int(r.Score)
 
         manga_data.append({
             'manga': manga,
             'stats': stats,
-            'cover_url': cover_url
+            'cover_url': cover_url,
+            'your_score': your_score
         })
 
     return render_template('home.html', mangas=manga_data, pagination=pagination, is_authenticated=current_user.is_authenticated)
@@ -354,8 +361,9 @@ def recently_added():
         
         your_score = None
         if current_user.is_authenticated:
-            rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
-            your_score = rating.Score if rating else None
+            r = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            if r:
+                your_score = int(r.Score)
         
         mangas.append({
             'manga': manga,
@@ -845,6 +853,75 @@ def search_creators():
     return jsonify(creator_list)
 
 
+# ---------------------------
+# POST /manga/<manga_id>/rating
+# Tạo hoặc cập nhật rating của current_user cho manga này
+# ---------------------------
+# --- GET user's rating for this manga (optional, used by frontend to load current value) ---
+@manga.route('/<manga_id>/rating', methods=['GET'])
+def get_user_rating(manga_id):
+    # Validate UUID-ish if you want; keep tolerant though.
+    if not current_user or current_user.is_anonymous:
+        return jsonify({'score': None}), 200
+
+    rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if rating:
+        return jsonify({'score': rating.Score}), 200
+    return jsonify({'score': None}), 200
+
+
+# --- Create or update rating ---
+@manga.route('/<manga_id>/rating', methods=['POST'])
+@login_required
+def post_user_rating(manga_id):
+    data = request.get_json() or request.form
+    score = data.get('score', None)
+
+    try:
+        score = int(score)
+    except (TypeError, ValueError):
+        return jsonify({'success': False, 'error': 'Invalid score'}), 400
+
+    if score < 1 or score > 10:
+        return jsonify({'success': False, 'error': 'Score must be between 1 and 10'}), 400
+
+    # Optional: check manga exists
+    # if not Manga.query.filter_by(MangaId=str(manga_id)).first():
+    #     return jsonify({'success': False, 'error': 'Manga not found'}), 404
+
+    # Find existing rating
+    rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if rating:
+        rating.Score = score
+    else:
+        rating = Rating(UserId=current_user.UserId, MangaId=str(manga_id), Score=score)
+        db.session.add(rating)
+
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'success': False, 'error': 'DB error'}), 500
+
+    return jsonify({'success': True, 'score': score}), 200
+
+
+# --- Delete user's rating ---
+@manga.route('/<manga_id>/rating', methods=['DELETE'])
+@login_required
+def delete_user_rating(manga_id):
+    rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if not rating:
+        return jsonify({'success': False, 'error': 'No rating found'}), 404
+
+    try:
+        db.session.delete(rating)
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'success': False, 'error': 'DB error'}), 500
+
+    return jsonify({'success': True}), 200
 
 # ======================
 # User routes
@@ -860,3 +937,4 @@ def message(user_id):
 @main.route("/report/<uuid:user_id>")
 def report(user_id):
     return f"Report user {user_id}"
+

@@ -100,3 +100,74 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const ratingBox = document.querySelector(".your-rating");
+    if (!ratingBox) return; // user not authenticated
+
+    const mangaId = ratingBox.dataset.mangaId;
+    const select = document.getElementById("user-rating-select");
+    const saveBtn = document.getElementById("user-rating-save");
+    const removeBtn = document.getElementById("user-rating-remove");
+    const msg = document.getElementById("user-rating-msg");
+
+    // Gửi POST khi bấm Save
+    saveBtn.addEventListener("click", function () {
+        const score = select.value;
+        if (!score) {
+            msg.textContent = "Please select a score first.";
+            msg.style.color = "red";
+            return;
+        }
+
+        fetch(`/manga/${mangaId}/rating`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            body: JSON.stringify({ score: parseInt(score) })
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success) {
+                    msg.textContent = "Rating saved!";
+                    msg.style.color = "limegreen";
+                    removeBtn.style.display = "inline-block";
+                } else {
+                    msg.textContent = data.message || "Error saving rating.";
+                    msg.style.color = "red";
+                }
+            })
+            .catch(() => {
+                msg.textContent = "Network error.";
+                msg.style.color = "red";
+            });
+    });
+
+    // Gửi DELETE khi bấm Remove
+    removeBtn.addEventListener("click", function () {
+        fetch(`/manga/${mangaId}/rating`, {
+            method: "DELETE",
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success) {
+                    msg.textContent = "Rating removed.";
+                    msg.style.color = "orange";
+                    select.value = "";
+                    removeBtn.style.display = "none";
+                } else {
+                    msg.textContent = data.message || "Error removing rating.";
+                    msg.style.color = "red";
+                }
+            })
+            .catch(() => {
+                msg.textContent = "Network error.";
+                msg.style.color = "red";
+            });
+    });
+});

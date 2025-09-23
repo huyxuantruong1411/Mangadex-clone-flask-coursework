@@ -43,7 +43,7 @@
                     </div>
                 </td>
                 <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) }}</td>
-                <td class="text-center fs-5 text-light">N/A</td>
+                <td class="text-center fs-5 text-light">{{ data.your_score if data.your_score else 'N/A' }}</td>
                 <td class="text-center">
                     <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
                         List</button>

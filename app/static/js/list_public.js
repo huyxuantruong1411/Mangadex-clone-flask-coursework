@@ -49,7 +49,7 @@
             col.innerHTML = `
           <div class="card h-100 manga-card card-pos" data-manga-id="${it.manga_id}">
             <input type="checkbox" class="form-check-input select-checkbox" data-manga-id="${it.manga_id}">
-            <img src="${coverUrl(it.cover_id)}" class="cover card-img-top" alt="${escapeHtml(it.title)}" onerror="this.src='/static/assets/default_cover.png'">
+            <img src="${it.cover_url}" class="cover card-img-top" alt="${escapeHtml(it.title)}" onerror="this.src='/static/assets/default_cover.png'">
             <div class="card-body">
               <h6 class="card-title">${escapeHtml(it.title)}</h6>
             </div>
@@ -255,6 +255,41 @@
     });
 
     // single remove from item card can also reuse confirm modal flow. Already wired.
+    if (container) {
+        container.addEventListener("click", function (e) {
+            const card = e.target.closest(".manga-card");
+            if (!card) return;
+
+            if (e.target.closest("input, button")) return;
+
+            const mangaId = card.dataset.mangaId;
+            if (mangaId) {
+                window.location.href = `/manga/${mangaId}`;
+            }
+        });
+    }
+
+    const toggleSelectBtn = document.getElementById('toggleSelectBtn');
+
+    if (toggleSelectBtn) {
+        toggleSelectBtn.addEventListener('click', () => {
+            const checkboxes = container.querySelectorAll('.select-checkbox');
+            const allSelected = Array.from(checkboxes).every(cb => cb.checked);
+
+            checkboxes.forEach(cb => {
+                cb.checked = !allSelected;
+                const id = cb.dataset.mangaId;
+                if (cb.checked) {
+                    selectedForDelete.add(id);
+                } else {
+                    selectedForDelete.delete(id);
+                }
+            });
+
+            updateBulkState();
+            toggleSelectBtn.textContent = allSelected ? 'Select All' : 'Deselect All';
+        });
+    }
 
     // initial load
     loadItems();

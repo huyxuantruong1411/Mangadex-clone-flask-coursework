@@ -381,8 +381,8 @@ def get_list_items(list_id):
     items = q.all()
     items_serialized = []
     for li, m in items:
-        # create cover_url the same as other views
-        cover_url = _get_cover_url_for_manga(m)
+        # TẠO COVER URL HOÀN CHỈNH TẠI ĐÂY
+        cover_url = _get_cover_url_for_manga(m) 
         items_serialized.append({
             "manga_id": str(m.MangaId),
             "title": getattr(m, "TitleEn", "") or "",

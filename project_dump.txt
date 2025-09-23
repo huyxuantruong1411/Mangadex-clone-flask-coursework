@@ -174,11 +174,35 @@
               ]
             },
             {
+              "name": "07",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "91b3911188472a081f18c581c510a8d05f7948",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "08",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d0e027b59f727ac7845136de3516b556deedfb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "09",
               "type": "directory",
               "children": [
                 {
                   "name": "0d8327296f11008beaf250d09b19294887a07e",
+                  "type": "file"
+                },
+                {
+                  "name": "2263fafff713ce9a3003dc97afb2a172d3fba1",
                   "type": "file"
                 }
               ]
@@ -304,6 +328,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "40eb997661607d58ca5765aa8c1362ed7cd4ac",
+                  "type": "file"
+                },
+                {
                   "name": "983e4e89ef6c384589d4d56c4ab89b818c991a",
                   "type": "file"
                 },
@@ -418,6 +446,20 @@
               ]
             },
             {
+              "name": "2e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "516bc68efcc374ba0777e33433f815ff676c4e",
+                  "type": "file"
+                },
+                {
+                  "name": "d9d02379526d1263d61c897234152de355444f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "2f",
               "type": "directory",
               "children": [
@@ -462,6 +504,14 @@
                 {
                   "name": "294ce219005561b20021bef890cf55a48564bb",
                   "type": "file"
+                },
+                {
+                  "name": "84b508d1b872b189bf52415159463124650539",
+                  "type": "file"
+                },
+                {
+                  "name": "9eb84b0e5b3fb81b097c1a27deab511c822d4d",
+                  "type": "file"
                 }
               ]
             },
@@ -490,11 +540,25 @@
               ]
             },
             {
+              "name": "40",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b864d255ac3c7963ba64d0b6e3b13432475e90",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "41",
               "type": "directory",
               "children": [
                 {
                   "name": "5b0f31f025d65f4104cd0d30fc1c55fc4122cf",
+                  "type": "file"
+                },
+                {
+                  "name": "6646e76da8c93c840418e51e21c51c92a4a4b0",
                   "type": "file"
                 }
               ]
@@ -691,6 +755,10 @@
               "name": "58",
               "type": "directory",
               "children": [
+                {
+                  "name": "075b6ab24d0439e6bb90182c13c5918e374a17",
+                  "type": "file"
+                },
                 {
                   "name": "a57e44913d4498d94e8891ccb22647c921dede",
                   "type": "file"
@@ -1048,6 +1116,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "8dfa7017a9a965731fb70ad1b052b279da767d",
+                  "type": "file"
+                },
+                {
                   "name": "c69e1105d1aba6af0e036c9c4b43d3882aec5e",
                   "type": "file"
                 }
@@ -1091,6 +1163,10 @@
               "name": "92",
               "type": "directory",
               "children": [
+                {
+                  "name": "9c46278ac6c42ad7966efc34fb9b711e3a5a15",
+                  "type": "file"
+                },
                 {
                   "name": "ccd51812368f5e5efb533a62e1ff033bf69374",
                   "type": "file"
@@ -1172,6 +1248,16 @@
               ]
             },
             {
+              "name": "9f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3e096746181da3ecca51b5ec81bbb3d10f2e5d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "a0",
               "type": "directory",
               "children": [
@@ -1242,6 +1328,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "12222fbe063c29aac661aa64466770315e1529",
+                  "type": "file"
+                },
+                {
                   "name": "54a8dab709295435dbbae2a9604a7bb63b8efb",
                   "type": "file"
                 }
@@ -1258,11 +1348,25 @@
               ]
             },
             {
+              "name": "ad",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "04a5a9ecdb65d205e33f244f09c4ba8de36585",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "af",
               "type": "directory",
               "children": [
                 {
                   "name": "0dcb86596c7c06003de37a245156322ccf48ad",
+                  "type": "file"
+                },
+                {
+                  "name": "16b03423ccb8c6b86c192b9c9a4222ed78cef6",
                   "type": "file"
                 }
               ]
@@ -1450,6 +1554,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "77c21f42bd80c2818efa71cf4e59618762ca42",
+                  "type": "file"
+                },
+                {
                   "name": "9788ad09028a3c12de1ddcd6909037df596f99",
                   "type": "file"
                 }
@@ -1564,6 +1672,20 @@
                 {
                   "name": "26d95ed3d9477f152368ee2a169976cbfbc673",
                   "type": "file"
+                },
+                {
+                  "name": "4556f5c4a547d9110d0ba30122c484bbec3c0a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d4",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ce6a36d9364dd6e8a1eeb044f1ffcfe2813b72",
+                  "type": "file"
                 }
               ]
             },
@@ -1583,6 +1705,10 @@
               "children": [
                 {
                   "name": "2f65d3bd680969ed2311ef1ccd755ebafc6384",
+                  "type": "file"
+                },
+                {
+                  "name": "4ad1cdb0d421cb187095ecfb82d2019214d2fb",
                   "type": "file"
                 }
               ]
@@ -1698,6 +1824,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "71403bf89ac2d1b00033e5418066671a1d8062",
+                  "type": "file"
+                },
+                {
                   "name": "ceadd48a3cb2733be35d9bec5652e2cff14916",
                   "type": "file"
                 }
@@ -1733,6 +1863,16 @@
               "children": [
                 {
                   "name": "f0d6d2af7ee3607fdbb5e0613566de248cc01d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ef",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "682e2491bdaa57f251afd3b5842339b1da29fa",
                   "type": "file"
                 }
               ]
@@ -1819,6 +1959,16 @@
               "children": [
                 {
                   "name": "2fd633624471308c794c31eac5daaccf1f93b5",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "fd",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3211e33cd7286e3775bbd382e5b0f3a110b8c6",
                   "type": "file"
                 }
               ]
@@ -2457,8 +2607,13 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 6efb158bca8b24217e27787427f06b78fac469
 │   │   ├── 03/
 │   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
+│   │   ├── 07/
+│   │   │   └── 91b3911188472a081f18c581c510a8d05f7948
+│   │   ├── 08/
+│   │   │   └── d0e027b59f727ac7845136de3516b556deedfb
 │   │   ├── 09/
-│   │   │   └── 0d8327296f11008beaf250d09b19294887a07e
+│   │   │   ├── 0d8327296f11008beaf250d09b19294887a07e
+│   │   │   └── 2263fafff713ce9a3003dc97afb2a172d3fba1
 │   │   ├── 0a/
 │   │   │   ├── 3014962ff0e3cc2f796de19bf83c7859ec1c57
 │   │   │   ├── 794551ad32ed40a938191708a3901b4e454212
@@ -2484,6 +2639,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── b2fd683a41de415b51387821f8a1d1a86e19e9
 │   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
 │   │   ├── 1f/
+│   │   │   ├── 40eb997661607d58ca5765aa8c1362ed7cd4ac
 │   │   │   ├── 983e4e89ef6c384589d4d56c4ab89b818c991a
 │   │   │   ├── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
 │   │   │   └── e85afac9c133c5d93ec78216ccd3e8129c1015
@@ -2508,6 +2664,9 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 2c/
 │   │   │   ├── 53d7a8b6f35a475f1bec276184bfeced4da222
 │   │   │   └── a9dbe87cb9ade523a9281bc1624734f7f34558
+│   │   ├── 2e/
+│   │   │   ├── 516bc68efcc374ba0777e33433f815ff676c4e
+│   │   │   └── d9d02379526d1263d61c897234152de355444f
 │   │   ├── 2f/
 │   │   │   └── a864d6aa5f97b88e052837df36519f388834f1
 │   │   ├── 32/
@@ -2517,14 +2676,19 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 5df44cfb5de4ecede6d0b8ea4061d907d1ded1
 │   │   │   └── c0df5f31eacd27501545ebe50bfc4a7df7883e
 │   │   ├── 38/
-│   │   │   └── 294ce219005561b20021bef890cf55a48564bb
+│   │   │   ├── 294ce219005561b20021bef890cf55a48564bb
+│   │   │   ├── 84b508d1b872b189bf52415159463124650539
+│   │   │   └── 9eb84b0e5b3fb81b097c1a27deab511c822d4d
 │   │   ├── 3a/
 │   │   │   ├── 03d433a82a4c8276641502e508065071158866
 │   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
 │   │   ├── 3c/
 │   │   │   └── df5449e6b7dc424acc9f668bb98c74bbddea7a
+│   │   ├── 40/
+│   │   │   └── b864d255ac3c7963ba64d0b6e3b13432475e90
 │   │   ├── 41/
-│   │   │   └── 5b0f31f025d65f4104cd0d30fc1c55fc4122cf
+│   │   │   ├── 5b0f31f025d65f4104cd0d30fc1c55fc4122cf
+│   │   │   └── 6646e76da8c93c840418e51e21c51c92a4a4b0
 │   │   ├── 42/
 │   │   │   └── 96e626febc0ab2617d22b56618ece39d53f232
 │   │   ├── 43/
@@ -2566,6 +2730,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── b2d4a02927246f57027adf7d44d46ef35dc66c
 │   │   │   └── f69c7c43815b3fc3585f18bdccd0d3d8fbcafc
 │   │   ├── 58/
+│   │   │   ├── 075b6ab24d0439e6bb90182c13c5918e374a17
 │   │   │   ├── a57e44913d4498d94e8891ccb22647c921dede
 │   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
 │   │   ├── 5a/
@@ -2640,6 +2805,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 9052402597b4c30710f9aafe41a68852119848
 │   │   ├── 86/
 │   │   │   ├── 34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1
+│   │   │   ├── 8dfa7017a9a965731fb70ad1b052b279da767d
 │   │   │   └── c69e1105d1aba6af0e036c9c4b43d3882aec5e
 │   │   ├── 89/
 │   │   │   ├── 411192b2379a16e98dbd29c6dfeb62c7ab2aa6
@@ -2649,6 +2815,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 8f/
 │   │   │   └── 4bf54820f8b7cb26c15ac02c79ac89cba30200
 │   │   ├── 92/
+│   │   │   ├── 9c46278ac6c42ad7966efc34fb9b711e3a5a15
 │   │   │   └── ccd51812368f5e5efb533a62e1ff033bf69374
 │   │   ├── 94/
 │   │   │   └── 2244c0607f50856efbca088d09e360e378b575
@@ -2665,6 +2832,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── e232df0f831bbe037fbf601ac68f64b06ce234
 │   │   ├── 9e/
 │   │   │   └── 973c80445805d4124554088cf388ce23858bf1
+│   │   ├── 9f/
+│   │   │   └── 3e096746181da3ecca51b5ec81bbb3d10f2e5d
 │   │   ├── a0/
 │   │   │   ├── 0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b
 │   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
@@ -2680,11 +2849,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
 │   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
 │   │   ├── a9/
+│   │   │   ├── 12222fbe063c29aac661aa64466770315e1529
 │   │   │   └── 54a8dab709295435dbbae2a9604a7bb63b8efb
 │   │   ├── ab/
 │   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
+│   │   ├── ad/
+│   │   │   └── 04a5a9ecdb65d205e33f244f09c4ba8de36585
 │   │   ├── af/
-│   │   │   └── 0dcb86596c7c06003de37a245156322ccf48ad
+│   │   │   ├── 0dcb86596c7c06003de37a245156322ccf48ad
+│   │   │   └── 16b03423ccb8c6b86c192b9c9a4222ed78cef6
 │   │   ├── b0/
 │   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
 │   │   ├── b2/
@@ -2723,6 +2896,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 3b766280fd71ab4e081063f1d545a88d7ad174
 │   │   ├── c9/
 │   │   │   ├── 1c21a15126c3a2f3555bbc554622a432c4ae9a
+│   │   │   ├── 77c21f42bd80c2818efa71cf4e59618762ca42
 │   │   │   └── 9788ad09028a3c12de1ddcd6909037df596f99
 │   │   ├── ca/
 │   │   │   └── 4473e0c6d7bbf7198754c8b34b9a80408dd023
@@ -2747,11 +2921,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
-│   │   │   └── 26d95ed3d9477f152368ee2a169976cbfbc673
+│   │   │   ├── 26d95ed3d9477f152368ee2a169976cbfbc673
+│   │   │   └── 4556f5c4a547d9110d0ba30122c484bbec3c0a
+│   │   ├── d4/
+│   │   │   └── ce6a36d9364dd6e8a1eeb044f1ffcfe2813b72
 │   │   ├── d5/
 │   │   │   └── ccc1fe847536ae42929a02c51dfaa238b53e8a
 │   │   ├── d6/
-│   │   │   └── 2f65d3bd680969ed2311ef1ccd755ebafc6384
+│   │   │   ├── 2f65d3bd680969ed2311ef1ccd755ebafc6384
+│   │   │   └── 4ad1cdb0d421cb187095ecfb82d2019214d2fb
 │   │   ├── d7/
 │   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
 │   │   ├── da/
@@ -2775,6 +2953,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
 │   │   │   └── ab1036a6f0c89e623c51f2775ac955907fc960
 │   │   ├── e8/
+│   │   │   ├── 71403bf89ac2d1b00033e5418066671a1d8062
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
 │   │   │   ├── d8746897f7eaf3d7fff61f818ba60690198046
@@ -2783,6 +2962,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 2eab9b71a6b9c24505e07415b31c9bac06da30
 │   │   ├── ed/
 │   │   │   └── f0d6d2af7ee3607fdbb5e0613566de248cc01d
+│   │   ├── ef/
+│   │   │   └── 682e2491bdaa57f251afd3b5842339b1da29fa
 │   │   ├── f0/
 │   │   │   └── 1f9e5c12daf93745e483cfc9a286c245f74f68
 │   │   ├── f1/
@@ -2801,6 +2982,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── b1fa9239732b005c159599bd21391e21417f98
 │   │   ├── fa/
 │   │   │   └── 2fd633624471308c794c31eac5daaccf1f93b5
+│   │   ├── fd/
+│   │   │   └── 3211e33cd7286e3775bbd382e5b0f3a110b8c6
 │   │   ├── fe/
 │   │   │   ├── 07a70f4d1070ccd31cd21f10dc0ae6d357dbcb
 │   │   │   └── fb85b76c41cce4f3559ded4747e048b53756a5
@@ -3258,11 +3441,35 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "07",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "91b3911188472a081f18c581c510a8d05f7948",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "08",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d0e027b59f727ac7845136de3516b556deedfb",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "09",
               "type": "directory",
               "children": [
                 {
                   "name": "0d8327296f11008beaf250d09b19294887a07e",
+                  "type": "file"
+                },
+                {
+                  "name": "2263fafff713ce9a3003dc97afb2a172d3fba1",
                   "type": "file"
                 }
               ]
@@ -3388,6 +3595,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "40eb997661607d58ca5765aa8c1362ed7cd4ac",
+                  "type": "file"
+                },
+                {
                   "name": "983e4e89ef6c384589d4d56c4ab89b818c991a",
                   "type": "file"
                 },
@@ -3502,6 +3713,20 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "2e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "516bc68efcc374ba0777e33433f815ff676c4e",
+                  "type": "file"
+                },
+                {
+                  "name": "d9d02379526d1263d61c897234152de355444f",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "2f",
               "type": "directory",
               "children": [
@@ -3546,6 +3771,14 @@ if __name__ == "__main__":
                 {
                   "name": "294ce219005561b20021bef890cf55a48564bb",
                   "type": "file"
+                },
+                {
+                  "name": "84b508d1b872b189bf52415159463124650539",
+                  "type": "file"
+                },
+                {
+                  "name": "9eb84b0e5b3fb81b097c1a27deab511c822d4d",
+                  "type": "file"
                 }
               ]
             },
@@ -3574,11 +3807,25 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "40",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "b864d255ac3c7963ba64d0b6e3b13432475e90",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "41",
               "type": "directory",
               "children": [
                 {
                   "name": "5b0f31f025d65f4104cd0d30fc1c55fc4122cf",
+                  "type": "file"
+                },
+                {
+                  "name": "6646e76da8c93c840418e51e21c51c92a4a4b0",
                   "type": "file"
                 }
               ]
@@ -3775,6 +4022,10 @@ if __name__ == "__main__":
               "name": "58",
               "type": "directory",
               "children": [
+                {
+                  "name": "075b6ab24d0439e6bb90182c13c5918e374a17",
+                  "type": "file"
+                },
                 {
                   "name": "a57e44913d4498d94e8891ccb22647c921dede",
                   "type": "file"
@@ -4132,6 +4383,10 @@ if __name__ == "__main__":
                   "type": "file"
                 },
                 {
+                  "name": "8dfa7017a9a965731fb70ad1b052b279da767d",
+                  "type": "file"
+                },
+                {
                   "name": "c69e1105d1aba6af0e036c9c4b43d3882aec5e",
                   "type": "file"
                 }
@@ -4175,6 +4430,10 @@ if __name__ == "__main__":
               "name": "92",
               "type": "directory",
               "children": [
+                {
+                  "name": "9c46278ac6c42ad7966efc34fb9b711e3a5a15",
+                  "type": "file"
+                },
                 {
                   "name": "ccd51812368f5e5efb533a62e1ff033bf69374",
                   "type": "file"
@@ -4256,6 +4515,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "9f",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3e096746181da3ecca51b5ec81bbb3d10f2e5d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "a0",
               "type": "directory",
               "children": [
@@ -4326,6 +4595,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "12222fbe063c29aac661aa64466770315e1529",
+                  "type": "file"
+                },
+                {
                   "name": "54a8dab709295435dbbae2a9604a7bb63b8efb",
                   "type": "file"
                 }
@@ -4342,11 +4615,25 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "ad",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "04a5a9ecdb65d205e33f244f09c4ba8de36585",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "af",
               "type": "directory",
               "children": [
                 {
                   "name": "0dcb86596c7c06003de37a245156322ccf48ad",
+                  "type": "file"
+                },
+                {
+                  "name": "16b03423ccb8c6b86c192b9c9a4222ed78cef6",
                   "type": "file"
                 }
               ]
@@ -4534,6 +4821,10 @@ if __name__ == "__main__":
                   "type": "file"
                 },
                 {
+                  "name": "77c21f42bd80c2818efa71cf4e59618762ca42",
+                  "type": "file"
+                },
+                {
                   "name": "9788ad09028a3c12de1ddcd6909037df596f99",
                   "type": "file"
                 }
@@ -4648,6 +4939,20 @@ if __name__ == "__main__":
                 {
                   "name": "26d95ed3d9477f152368ee2a169976cbfbc673",
                   "type": "file"
+                },
+                {
+                  "name": "4556f5c4a547d9110d0ba30122c484bbec3c0a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "d4",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ce6a36d9364dd6e8a1eeb044f1ffcfe2813b72",
+                  "type": "file"
                 }
               ]
             },
@@ -4667,6 +4972,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "2f65d3bd680969ed2311ef1ccd755ebafc6384",
+                  "type": "file"
+                },
+                {
+                  "name": "4ad1cdb0d421cb187095ecfb82d2019214d2fb",
                   "type": "file"
                 }
               ]
@@ -4782,6 +5091,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "71403bf89ac2d1b00033e5418066671a1d8062",
+                  "type": "file"
+                },
+                {
                   "name": "ceadd48a3cb2733be35d9bec5652e2cff14916",
                   "type": "file"
                 }
@@ -4817,6 +5130,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "f0d6d2af7ee3607fdbb5e0613566de248cc01d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "ef",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "682e2491bdaa57f251afd3b5842339b1da29fa",
                   "type": "file"
                 }
               ]
@@ -4903,6 +5226,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "2fd633624471308c794c31eac5daaccf1f93b5",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "fd",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "3211e33cd7286e3775bbd382e5b0f3a110b8c6",
                   "type": "file"
                 }
               ]
@@ -5541,8 +5874,13 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 6efb158bca8b24217e27787427f06b78fac469
 │   │   ├── 03/
 │   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
+│   │   ├── 07/
+│   │   │   └── 91b3911188472a081f18c581c510a8d05f7948
+│   │   ├── 08/
+│   │   │   └── d0e027b59f727ac7845136de3516b556deedfb
 │   │   ├── 09/
-│   │   │   └── 0d8327296f11008beaf250d09b19294887a07e
+│   │   │   ├── 0d8327296f11008beaf250d09b19294887a07e
+│   │   │   └── 2263fafff713ce9a3003dc97afb2a172d3fba1
 │   │   ├── 0a/
 │   │   │   ├── 3014962ff0e3cc2f796de19bf83c7859ec1c57
 │   │   │   ├── 794551ad32ed40a938191708a3901b4e454212
@@ -5568,6 +5906,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── b2fd683a41de415b51387821f8a1d1a86e19e9
 │   │   │   └── cf6ed0436658117f8838d5cefde25fb1347924
 │   │   ├── 1f/
+│   │   │   ├── 40eb997661607d58ca5765aa8c1362ed7cd4ac
 │   │   │   ├── 983e4e89ef6c384589d4d56c4ab89b818c991a
 │   │   │   ├── 9c6cb2958af1ce6eb1d85c65a0a4a7475fe0cd
 │   │   │   └── e85afac9c133c5d93ec78216ccd3e8129c1015
@@ -5592,6 +5931,9 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 2c/
 │   │   │   ├── 53d7a8b6f35a475f1bec276184bfeced4da222
 │   │   │   └── a9dbe87cb9ade523a9281bc1624734f7f34558
+│   │   ├── 2e/
+│   │   │   ├── 516bc68efcc374ba0777e33433f815ff676c4e
+│   │   │   └── d9d02379526d1263d61c897234152de355444f
 │   │   ├── 2f/
 │   │   │   └── a864d6aa5f97b88e052837df36519f388834f1
 │   │   ├── 32/
@@ -5601,14 +5943,19 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 5df44cfb5de4ecede6d0b8ea4061d907d1ded1
 │   │   │   └── c0df5f31eacd27501545ebe50bfc4a7df7883e
 │   │   ├── 38/
-│   │   │   └── 294ce219005561b20021bef890cf55a48564bb
+│   │   │   ├── 294ce219005561b20021bef890cf55a48564bb
+│   │   │   ├── 84b508d1b872b189bf52415159463124650539
+│   │   │   └── 9eb84b0e5b3fb81b097c1a27deab511c822d4d
 │   │   ├── 3a/
 │   │   │   ├── 03d433a82a4c8276641502e508065071158866
 │   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
 │   │   ├── 3c/
 │   │   │   └── df5449e6b7dc424acc9f668bb98c74bbddea7a
+│   │   ├── 40/
+│   │   │   └── b864d255ac3c7963ba64d0b6e3b13432475e90
 │   │   ├── 41/
-│   │   │   └── 5b0f31f025d65f4104cd0d30fc1c55fc4122cf
+│   │   │   ├── 5b0f31f025d65f4104cd0d30fc1c55fc4122cf
+│   │   │   └── 6646e76da8c93c840418e51e21c51c92a4a4b0
 │   │   ├── 42/
 │   │   │   └── 96e626febc0ab2617d22b56618ece39d53f232
 │   │   ├── 43/
@@ -5650,6 +5997,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── b2d4a02927246f57027adf7d44d46ef35dc66c
 │   │   │   └── f69c7c43815b3fc3585f18bdccd0d3d8fbcafc
 │   │   ├── 58/
+│   │   │   ├── 075b6ab24d0439e6bb90182c13c5918e374a17
 │   │   │   ├── a57e44913d4498d94e8891ccb22647c921dede
 │   │   │   └── d67074738d155e750e980f195791cf4c85d9e4
 │   │   ├── 5a/
@@ -5724,6 +6072,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 9052402597b4c30710f9aafe41a68852119848
 │   │   ├── 86/
 │   │   │   ├── 34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1
+│   │   │   ├── 8dfa7017a9a965731fb70ad1b052b279da767d
 │   │   │   └── c69e1105d1aba6af0e036c9c4b43d3882aec5e
 │   │   ├── 89/
 │   │   │   ├── 411192b2379a16e98dbd29c6dfeb62c7ab2aa6
@@ -5733,6 +6082,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 8f/
 │   │   │   └── 4bf54820f8b7cb26c15ac02c79ac89cba30200
 │   │   ├── 92/
+│   │   │   ├── 9c46278ac6c42ad7966efc34fb9b711e3a5a15
 │   │   │   └── ccd51812368f5e5efb533a62e1ff033bf69374
 │   │   ├── 94/
 │   │   │   └── 2244c0607f50856efbca088d09e360e378b575
@@ -5749,6 +6099,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── e232df0f831bbe037fbf601ac68f64b06ce234
 │   │   ├── 9e/
 │   │   │   └── 973c80445805d4124554088cf388ce23858bf1
+│   │   ├── 9f/
+│   │   │   └── 3e096746181da3ecca51b5ec81bbb3d10f2e5d
 │   │   ├── a0/
 │   │   │   ├── 0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b
 │   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
@@ -5764,11 +6116,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── a4d25505df2b028b8b3c3ee323aee3f3ebb978
 │   │   │   └── cd58cbd7bd07cc87f5dda723e93d383736379e
 │   │   ├── a9/
+│   │   │   ├── 12222fbe063c29aac661aa64466770315e1529
 │   │   │   └── 54a8dab709295435dbbae2a9604a7bb63b8efb
 │   │   ├── ab/
 │   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
+│   │   ├── ad/
+│   │   │   └── 04a5a9ecdb65d205e33f244f09c4ba8de36585
 │   │   ├── af/
-│   │   │   └── 0dcb86596c7c06003de37a245156322ccf48ad
+│   │   │   ├── 0dcb86596c7c06003de37a245156322ccf48ad
+│   │   │   └── 16b03423ccb8c6b86c192b9c9a4222ed78cef6
 │   │   ├── b0/
 │   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
 │   │   ├── b2/
@@ -5807,6 +6163,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 3b766280fd71ab4e081063f1d545a88d7ad174
 │   │   ├── c9/
 │   │   │   ├── 1c21a15126c3a2f3555bbc554622a432c4ae9a
+│   │   │   ├── 77c21f42bd80c2818efa71cf4e59618762ca42
 │   │   │   └── 9788ad09028a3c12de1ddcd6909037df596f99
 │   │   ├── ca/
 │   │   │   └── 4473e0c6d7bbf7198754c8b34b9a80408dd023
@@ -5831,11 +6188,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
-│   │   │   └── 26d95ed3d9477f152368ee2a169976cbfbc673
+│   │   │   ├── 26d95ed3d9477f152368ee2a169976cbfbc673
+│   │   │   └── 4556f5c4a547d9110d0ba30122c484bbec3c0a
+│   │   ├── d4/
+│   │   │   └── ce6a36d9364dd6e8a1eeb044f1ffcfe2813b72
 │   │   ├── d5/
 │   │   │   └── ccc1fe847536ae42929a02c51dfaa238b53e8a
 │   │   ├── d6/
-│   │   │   └── 2f65d3bd680969ed2311ef1ccd755ebafc6384
+│   │   │   ├── 2f65d3bd680969ed2311ef1ccd755ebafc6384
+│   │   │   └── 4ad1cdb0d421cb187095ecfb82d2019214d2fb
 │   │   ├── d7/
 │   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
 │   │   ├── da/
@@ -5859,6 +6220,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
 │   │   │   └── ab1036a6f0c89e623c51f2775ac955907fc960
 │   │   ├── e8/
+│   │   │   ├── 71403bf89ac2d1b00033e5418066671a1d8062
 │   │   │   └── ceadd48a3cb2733be35d9bec5652e2cff14916
 │   │   ├── e9/
 │   │   │   ├── d8746897f7eaf3d7fff61f818ba60690198046
@@ -5867,6 +6229,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 2eab9b71a6b9c24505e07415b31c9bac06da30
 │   │   ├── ed/
 │   │   │   └── f0d6d2af7ee3607fdbb5e0613566de248cc01d
+│   │   ├── ef/
+│   │   │   └── 682e2491bdaa57f251afd3b5842339b1da29fa
 │   │   ├── f0/
 │   │   │   └── 1f9e5c12daf93745e483cfc9a286c245f74f68
 │   │   ├── f1/
@@ -5885,6 +6249,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── b1fa9239732b005c159599bd21391e21417f98
 │   │   ├── fa/
 │   │   │   └── 2fd633624471308c794c31eac5daaccf1f93b5
+│   │   ├── fd/
+│   │   │   └── 3211e33cd7286e3775bbd382e5b0f3a110b8c6
 │   │   ├── fe/
 │   │   │   ├── 07a70f4d1070ccd31cd21f10dc0ae6d357dbcb
 │   │   │   └── fb85b76c41cce4f3559ded4747e048b53756a5
@@ -6061,7 +6427,7 @@ except Exception as e:
 === Folder: .git ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
-List-CRUD-Basic
+Library-ListManagement+Users-Updates
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
 [core]
@@ -6088,7 +6454,7 @@ e5da7db4b7c644c5960e726d3244a63f72b63b45		https://github.com/huyxuantruong1411/M
 ref: refs/heads/main
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\index ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 11: invalid start byte]
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 11: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\ORIG_HEAD ---
 4532251c88870e8ce76bfd365c3ccf3e7f101780
@@ -7015,6 +7381,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 4532251c88870e8ce76bfd365c3ccf3e7f101780 e5da7db4b7c644c5960e726d3244a63f72b63b45 Huy1411 <huy14112002@gmail.com> 1758631345 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
 e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
 6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646184 +0700	commit: List-CRUD-Basic
+7b7d818314e311b6c2fb3403a472595d3fb6aa06 08d0e027b59f727ac7845136de3516b556deedfb Huy1411 <huy14112002@gmail.com> 1758654855 +0700	commit: Library-ListManagement+Users-Updates
 
 === Folder: .git\logs\refs ===
 
@@ -7031,6 +7398,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 4532251c88870e8ce76bfd365c3ccf3e7f101780 e5da7db4b7c644c5960e726d3244a63f72b63b45 Huy1411 <huy14112002@gmail.com> 1758631345 +0700	pull https://github.com/huyxuantruong1411/Mangadex-clone-flask-coursework.git: Fast-forward
 e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
 6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646184 +0700	commit: List-CRUD-Basic
+7b7d818314e311b6c2fb3403a472595d3fb6aa06 08d0e027b59f727ac7845136de3516b556deedfb Huy1411 <huy14112002@gmail.com> 1758654855 +0700	commit: Library-ListManagement+Users-Updates
 
 === Folder: .git\logs\refs\remotes ===
 
@@ -7045,6 +7413,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 6c0913c47b99c2050de6a41cfcaa2e7bedd4d49a 4532251c88870e8ce76bfd365c3ccf3e7f101780 Huy1411 <huy14112002@gmail.com> 1758561173 +0700	update by push
 4532251c88870e8ce76bfd365c3ccf3e7f101780 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642846 +0700	update by push
 6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646191 +0700	update by push
+7b7d818314e311b6c2fb3403a472595d3fb6aa06 08d0e027b59f727ac7845136de3516b556deedfb Huy1411 <huy14112002@gmail.com> 1758654864 +0700	update by push
 
 === Folder: .git\objects ===
 
@@ -7058,10 +7427,23 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\03\32227e9f1218271277306120ddb4a6a1c60868 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
+=== Folder: .git\objects\07 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\07\91b3911188472a081f18c581c510a8d05f7948 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\08 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\08\d0e027b59f727ac7845136de3516b556deedfb ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
 === Folder: .git\objects\09 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\09\0d8327296f11008beaf250d09b19294887a07e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\09\2263fafff713ce9a3003dc97afb2a172d3fba1 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 === Folder: .git\objects\0a ===
 
@@ -7127,6 +7509,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\1f ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1f\40eb997661607d58ca5765aa8c1362ed7cd4ac ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\1f\983e4e89ef6c384589d4d56c4ab89b818c991a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8c in position 3: invalid start byte]
 
@@ -7191,6 +7576,14 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2c\a9dbe87cb9ade523a9281bc1624734f7f34558 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
+=== Folder: .git\objects\2e ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2e\516bc68efcc374ba0777e33433f815ff676c4e ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2e\d9d02379526d1263d61c897234152de355444f ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
+
 === Folder: .git\objects\2f ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\2f\a864d6aa5f97b88e052837df36519f388834f1 ---
@@ -7217,6 +7610,12 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\38\294ce219005561b20021bef890cf55a48564bb ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd1 in position 4: invalid continuation byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\38\84b508d1b872b189bf52415159463124650539 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc2 in position 3: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\38\9eb84b0e5b3fb81b097c1a27deab511c822d4d ---
+[Lỗi đọc file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte]
+
 === Folder: .git\objects\3a ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3a\03d433a82a4c8276641502e508065071158866 ---
@@ -7230,10 +7629,18 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3c\df5449e6b7dc424acc9f668bb98c74bbddea7a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
+=== Folder: .git\objects\40 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\40\b864d255ac3c7963ba64d0b6e3b13432475e90 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
 === Folder: .git\objects\41 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\41\5b0f31f025d65f4104cd0d30fc1c55fc4122cf ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 9: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\41\6646e76da8c93c840418e51e21c51c92a4a4b0 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xf0 in position 18: invalid continuation byte]
 
 === Folder: .git\objects\42 ===
 
@@ -7342,6 +7749,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte]
 
 === Folder: .git\objects\58 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\075b6ab24d0439e6bb90182c13c5918e374a17 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\58\a57e44913d4498d94e8891ccb22647c921dede ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
@@ -7535,6 +7945,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\86\34e7dbeb5e4fd10fbf538f75b7c2d16d7699d1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\86\8dfa7017a9a965731fb70ad1b052b279da767d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\86\c69e1105d1aba6af0e036c9c4b43d3882aec5e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd4 in position 3: invalid continuation byte]
 
@@ -7557,6 +7970,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa8 in position 5: invalid start byte]
 
 === Folder: .git\objects\92 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\92\9c46278ac6c42ad7966efc34fb9b711e3a5a15 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\92\ccd51812368f5e5efb533a62e1ff033bf69374 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
@@ -7599,6 +8015,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9e\973c80445805d4124554088cf388ce23858bf1 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xe5 in position 2: invalid continuation byte]
 
+=== Folder: .git\objects\9f ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9f\3e096746181da3ecca51b5ec81bbb3d10f2e5d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
+
 === Folder: .git\objects\a0 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a0\0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b ---
@@ -7638,6 +8059,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\a9 ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a9\12222fbe063c29aac661aa64466770315e1529 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a9\54a8dab709295435dbbae2a9604a7bb63b8efb ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdb in position 4: invalid continuation byte]
 
@@ -7646,10 +8070,18 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ab\312aecebeebd9cf45a35fbbb335e4dfac03282 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbc in position 3: invalid start byte]
 
+=== Folder: .git\objects\ad ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ad\04a5a9ecdb65d205e33f244f09c4ba8de36585 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdb in position 6: invalid continuation byte]
+
 === Folder: .git\objects\af ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\af\0dcb86596c7c06003de37a245156322ccf48ad ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\af\16b03423ccb8c6b86c192b9c9a4222ed78cef6 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\b0 ===
 
@@ -7749,6 +8181,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\1c21a15126c3a2f3555bbc554622a432c4ae9a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 23: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\77c21f42bd80c2818efa71cf4e59618762ca42 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\c9\9788ad09028a3c12de1ddcd6909037df596f99 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd8 in position 5: invalid continuation byte]
 
@@ -7816,6 +8251,14 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d3\26d95ed3d9477f152368ee2a169976cbfbc673 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d3\4556f5c4a547d9110d0ba30122c484bbec3c0a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
+=== Folder: .git\objects\d4 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d4\ce6a36d9364dd6e8a1eeb044f1ffcfe2813b72 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
 === Folder: .git\objects\d5 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d5\ccc1fe847536ae42929a02c51dfaa238b53e8a ---
@@ -7825,6 +8268,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d6\2f65d3bd680969ed2311ef1ccd755ebafc6384 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xa9 in position 3: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d6\4ad1cdb0d421cb187095ecfb82d2019214d2fb ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte]
 
 === Folder: .git\objects\d7 ===
 
@@ -7885,6 +8331,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\e8 ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e8\71403bf89ac2d1b00033e5418066671a1d8062 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e8\ceadd48a3cb2733be35d9bec5652e2cff14916 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8b in position 5: invalid start byte]
 
@@ -7905,6 +8354,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ed\f0d6d2af7ee3607fdbb5e0613566de248cc01d ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
+
+=== Folder: .git\objects\ef ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ef\682e2491bdaa57f251afd3b5842339b1da29fa ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\f0 ===
 
@@ -7953,6 +8407,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fa\2fd633624471308c794c31eac5daaccf1f93b5 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
+=== Folder: .git\objects\fd ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fd\3211e33cd7286e3775bbd382e5b0f3a110b8c6 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte]
+
 === Folder: .git\objects\fe ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fe\07a70f4d1070ccd31cd21f10dc0ae6d357dbcb ---
@@ -7970,14 +8429,14 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 === Folder: .git\refs\heads ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
-7b7d818314e311b6c2fb3403a472595d3fb6aa06
+08d0e027b59f727ac7845136de3516b556deedfb
 
 === Folder: .git\refs\remotes ===
 
 === Folder: .git\refs\remotes\origin ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
-7b7d818314e311b6c2fb3403a472595d3fb6aa06
+08d0e027b59f727ac7845136de3516b556deedfb
 
 === Folder: .git\refs\tags ===
 
@@ -8246,17 +8705,81 @@ def report_comment(comment_id):
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\list_routes.py ---
 # mini-demo/app/list_routes.py
-from flask import Blueprint, request, jsonify, render_template, abort, current_app
+from flask import Blueprint, request, jsonify, render_template, abort, url_for, current_app
 from flask_login import login_required, current_user
 from app import db
-from app.models import List, ListManga, ListFollower, Manga, User
+from app.models import List, ListManga, ListFollower, Manga, User, MangaCover
 from datetime import datetime
-import uuid
-
-# For SQL functions
 from sqlalchemy import or_, func
+import uuid
+import base64
+import requests
 
 list_bp = Blueprint("lists", __name__)
+
+# -------------------------
+# Helper: build cover_url for a Manga
+# -------------------------
+def _get_cover_url_for_manga(manga):
+    """
+    Return a URL that can be placed into <img src="...">:
+      - data:image/... base64 if we have ImageData in MangaCover
+      - if not, try MangaDex API to download, save to MangaCover and return base64
+      - otherwise return static default cover url
+    This mirrors the logic used in your main routes (home/recently_added/etc).
+    """
+    # 1) try to find cached cover in MangaCover
+    try:
+        mc = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+    except Exception:
+        mc = None
+
+    if mc and getattr(mc, "ImageData", None):
+        try:
+            b64 = base64.b64encode(mc.ImageData).decode("utf-8")
+            return f"data:image/jpeg;base64,{b64}"
+        except Exception:
+            pass
+
+    # 2) try MangaDex API (best-effort, short timeouts)
+    try:
+        manga_id_str = str(manga.MangaId).lower()
+        api_resp = requests.get("https://api.mangadex.org/cover", params={"manga[]": manga_id_str, "limit": 1}, headers={"Referer": "https://mangadex.org"}, timeout=6)
+        api_resp.raise_for_status()
+        data = api_resp.json()
+        if data.get("data"):
+            cover_item = data["data"][0]
+            file_name = cover_item.get("attributes", {}).get("fileName")
+            cover_id = cover_item.get("id")
+            if file_name and cover_id:
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name}"
+                img_resp = requests.get(image_url, timeout=10)
+                if img_resp.status_code == 200:
+                    image_data = img_resp.content
+                    # store into MangaCover if model exists
+                    try:
+                        # CoverId in your model appears to be UUID-like; attempt to coerce
+                        new_mc = MangaCover(
+                            MangaId=manga.MangaId,
+                            CoverId=uuid.UUID(cover_id) if cover_id else None,
+                            FileName=file_name,
+                            ImageData=image_data,
+                            DownloadDate=datetime.utcnow()
+                        )
+                        db.session.add(new_mc)
+                        db.session.commit()
+                    except Exception:
+                        db.session.rollback()
+                    # return base64 data uri
+                    b64 = base64.b64encode(image_data).decode("utf-8")
+                    return f"data:image/jpeg;base64,{b64}"
+    except Exception:
+        # network error / api blocked — ignore and fallthrough to default
+        current_app.logger.debug("Failed to fetch cover for %s from MangaDex", getattr(manga, "MangaId", None), exc_info=True)
+
+    # 3) fallback static
+    return url_for("static", filename="assets/default_cover.png")
+
 
 # -------------------------
 # Helper serializers
@@ -8284,30 +8807,24 @@ def serialize_list_basic(l, include_contains=False, manga_id=None):
 
 # -------------------------
 # GET /api/lists
-# Returns: my_lists and followed_lists
-# Accepts optional query param manga_id to mark `contains` for my_lists
 # -------------------------
 @list_bp.route("/lists", methods=["GET"])
 @login_required
 def get_lists():
     manga_id = request.args.get("manga_id", None)
-    # basic lists owned by user
-    my_lists_q = List.query.filter_by(UserId=current_user.UserId).order_by(List.UpdatedAt.desc())
-    my_lists = my_lists_q.all()
+    my_lists = List.query.filter_by(UserId=current_user.UserId).order_by(List.UpdatedAt.desc()).all()
 
-    # lists the user follows (not necessarily owned)
-    followed_q = (
+    followed = (
         db.session.query(List)
         .join(ListFollower, ListFollower.ListId == List.ListId)
         .filter(ListFollower.UserId == current_user.UserId)
         .order_by(List.UpdatedAt.desc())
+        .all()
     )
-    followed = followed_q.all()
 
     include_contains = False
     parsed_manga_id = None
     if manga_id:
-        # try to parse/validate UUID / existence. If invalid UUID, treat as not provided.
         try:
             parsed_manga_id = uuid.UUID(manga_id)
             include_contains = True
@@ -8323,7 +8840,6 @@ def get_lists():
 
 # -------------------------
 # POST /api/lists
-# Create new list
 # -------------------------
 @list_bp.route("/lists", methods=["POST"])
 @login_required
@@ -8336,7 +8852,6 @@ def create_list():
     if not name:
         return jsonify({"error": "Name is required"}), 400
 
-    # generate simple slug (ensure uniqueness in your data migration or handle collisions)
     slug_base = name.strip().lower().replace(" ", "-")
     slug = f"{slug_base}-{str(uuid.uuid4())[:8]}"
 
@@ -8359,12 +8874,10 @@ def create_list():
 
 # -------------------------
 # GET /api/lists/<list_id>
-# Return metadata + items (for owner or public view) - JSON
 # -------------------------
 @list_bp.route("/lists/<uuid:list_id>", methods=["GET"])
 def get_list(list_id):
     l = List.query.get_or_404(list_id)
-    # check visibility: if private and not owner -> 403
     if l.Visibility == "private" and (not current_user.is_authenticated or l.UserId != current_user.UserId):
         abort(403)
 
@@ -8383,7 +8896,7 @@ def get_list(list_id):
             "title": getattr(m, "TitleEn", "") or "",
             "note": getattr(li, "Note", None) if hasattr(li, "Note") else None,
             "position": getattr(li, "Position", None),
-            "cover_id": getattr(m, "CoverId", None),
+            "cover_id": None  # kept for backward compatibility
         })
 
     return jsonify({
@@ -8399,7 +8912,6 @@ def get_list(list_id):
 
 # -------------------------
 # PUT/PATCH /api/lists/<list_id>
-# Update metadata (owner only)
 # -------------------------
 @list_bp.route("/lists/<uuid:list_id>", methods=["PUT", "PATCH"])
 @login_required
@@ -8422,7 +8934,6 @@ def update_list(list_id):
 
 # -------------------------
 # DELETE /api/lists/<list_id>
-# Delete list (owner only)
 # -------------------------
 @list_bp.route("/lists/<uuid:list_id>", methods=["DELETE"])
 @login_required
@@ -8437,13 +8948,11 @@ def delete_list(list_id):
 
 # -------------------------
 # POST /api/lists/<list_id>/items
-# Add a manga to a list (owner only)
 # -------------------------
 @list_bp.route("/lists/<uuid:list_id>/items", methods=["POST"])
 @login_required
 def add_item(list_id):
     l = List.query.get_or_404(list_id)
-    # Only owner can add items (per your current design)
     if l.UserId != current_user.UserId:
         abort(403)
 
@@ -8452,13 +8961,10 @@ def add_item(list_id):
     if not manga_id:
         return jsonify({"error": "manga_id required"}), 400
 
-    # Check existing
     existing = ListManga.query.filter_by(ListId=l.ListId, MangaId=manga_id).first()
     if existing:
-        # idempotent
         return jsonify({"message": "already exists", "item_count": l.ItemCount or 0}), 200
 
-    # Validate manga exists in Manga table
     manga_obj = Manga.query.filter_by(MangaId=manga_id).first()
     if manga_obj is None:
         return jsonify({"error": "manga not found"}), 404
@@ -8478,7 +8984,6 @@ def add_item(list_id):
 
 # -------------------------
 # DELETE /api/lists/<list_id>/items/<manga_id>
-# Remove a manga from a list (owner only)
 # -------------------------
 @list_bp.route("/lists/<uuid:list_id>/items/<uuid:manga_id>", methods=["DELETE"])
 @login_required
@@ -8489,7 +8994,6 @@ def remove_item(list_id, manga_id):
 
     li = ListManga.query.filter_by(ListId=l.ListId, MangaId=manga_id).first()
     if not li:
-        # already gone — treat as success for idempotency
         return jsonify({"message": "not found", "item_count": l.ItemCount or 0}), 200
 
     db.session.delete(li)
@@ -8541,6 +9045,7 @@ def public_view(slug):
     l = List.query.filter_by(Slug=slug).first_or_404()
     if l.Visibility == "private":
         abort(403)
+
     items = (
         db.session.query(ListManga, Manga)
         .join(Manga, ListManga.MangaId == Manga.MangaId)
@@ -8548,32 +9053,23 @@ def public_view(slug):
         .order_by(ListManga.Position.asc(), ListManga.AddedAt.asc())
         .all()
     )
-    # fetch owner (safe)
-    owner = None
-    try:
-        owner = User.query.filter_by(UserId=l.UserId).first()
-    except Exception:
-        owner = None
 
-    # pass simple list metadata (some templates expect attributes)
+    owner = User.query.filter_by(UserId=l.UserId).first()
+    # enrich items with cover_url and pass to template as list of dicts
+    items_enriched = []
+    for li, m in items:
+        cover_url = _get_cover_url_for_manga(m)
+        items_enriched.append({"list_item": li, "manga": m, "cover_url": cover_url})
+
     list_meta = l
     list_meta.owner = owner
-    return render_template("list_public.html", list=list_meta, items=items)
+    return render_template("list_public.html", list=list_meta, items=items_enriched)
 
 
-# -----------------------------------------------------------------
 # GET items for a list (JSON) with optional sort
-# -----------------------------------------------------------------
 @list_bp.route("/lists/<uuid:list_id>/items", methods=["GET"])
 def get_list_items(list_id):
-    """
-    Returns JSON list of items for a list.
-    Query params:
-      - sort: 'recent' (default), 'title', 'added'
-    """
     l = List.query.get_or_404(list_id)
-
-    # visibility check: if private and not owner -> 403
     if l.Visibility == "private" and (not current_user.is_authenticated or l.UserId != current_user.UserId):
         abort(403)
 
@@ -8581,29 +9077,26 @@ def get_list_items(list_id):
     q = db.session.query(ListManga, Manga).join(Manga, ListManga.MangaId == Manga.MangaId).filter(ListManga.ListId == l.ListId)
 
     if sort == "title":
-        # use TitleEn only (your model has TitleEn), coalesce to empty string to avoid NULL issues
+        # Manga model only has TitleEn in your schema; coalesce to empty string to avoid errors
         q = q.order_by(func.lower(func.coalesce(Manga.TitleEn, "")).asc())
     elif sort == "added":
         q = q.order_by(ListManga.AddedAt.desc())
     else:
-        # recent (default): by AddedAt desc
         q = q.order_by(ListManga.AddedAt.desc())
 
     items = q.all()
     items_serialized = []
     for li, m in items:
+        # create cover_url the same as other views
+        cover_url = _get_cover_url_for_manga(m)
         items_serialized.append({
             "manga_id": str(m.MangaId),
             "title": getattr(m, "TitleEn", "") or "",
-            "cover_id": getattr(m, "CoverId", None),
+            "cover_url": cover_url,
             "added_at": li.AddedAt.isoformat() if hasattr(li, "AddedAt") and li.AddedAt else None,
         })
 
-    owner = None
-    try:
-        owner = User.query.filter_by(UserId=l.UserId).first()
-    except Exception:
-        owner = None
+    owner = User.query.filter_by(UserId=l.UserId).first()
 
     return jsonify({
         "list": {
@@ -8623,10 +9116,6 @@ def get_list_items(list_id):
 @list_bp.route("/lists/<uuid:list_id>/items", methods=["DELETE"])
 @login_required
 def bulk_delete_items(list_id):
-    """
-    Accept JSON body: {"manga_ids": ["uuid1", "uuid2", ...]}
-    Only owner can delete items from their list.
-    """
     l = List.query.get_or_404(list_id)
     if l.UserId != current_user.UserId:
         abort(403)
@@ -8653,17 +9142,13 @@ def bulk_delete_items(list_id):
 @list_bp.route("/search/manga", methods=["GET"])
 @login_required
 def search_manga():
-    """
-    Query params: q (string), limit (int)
-    Returns JSON: list of {manga_id, title, cover_id}
-    """
     q = request.args.get("q", "").strip()
     limit = int(request.args.get("limit", 12))
     if not q:
         return jsonify({"results": []})
 
-    # basic case-insensitive LIKE search on TitleEn only (your model uses TitleEn)
     like = f"%{q}%"
+    # note: Manga model doesn't have Title fallback column; search TitleEn and alt titles if you want more
     results = (
         db.session.query(Manga)
         .filter(Manga.TitleEn.ilike(like))
@@ -8675,7 +9160,7 @@ def search_manga():
         out.append({
             "manga_id": str(m.MangaId),
             "title": getattr(m, "TitleEn", "") or "",
-            "cover_id": getattr(m, "CoverId", None)
+            "cover_url": _get_cover_url_for_manga(m)
         })
     return jsonify({"results": out})
 
@@ -9074,10 +9559,12 @@ import requests
 from sqlalchemy import desc, func, or_
 
 from app.comment_routes import now
-from .models import Chapter, Cover, Creator, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
+from .models import Chapter, Cover, Creator, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
 from . import db
 import os
 import uuid
+
+from app.models import ListManga
 
 main = Blueprint('main', __name__)
 manga = Blueprint('manga', __name__)
@@ -9254,11 +9741,18 @@ def home():
                     cover_url = url_for('static', filename='assets/default_cover.png')
             else:
                 cover_url = url_for('static', filename='assets/default_cover.png')
+        
+        your_score = None
+        if current_user.is_authenticated:
+            r = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            if r:
+                your_score = int(r.Score)
 
         manga_data.append({
             'manga': manga,
             'stats': stats,
-            'cover_url': cover_url
+            'cover_url': cover_url,
+            'your_score': your_score
         })
 
     return render_template('home.html', mangas=manga_data, pagination=pagination, is_authenticated=current_user.is_authenticated)
@@ -9417,8 +9911,9 @@ def recently_added():
         
         your_score = None
         if current_user.is_authenticated:
-            rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
-            your_score = rating.Score if rating else None
+            r = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            if r:
+                your_score = int(r.Score)
         
         mangas.append({
             'manga': manga,
@@ -9508,11 +10003,82 @@ def random():
         return render_template("random.html", title="Random")  # Fallback nếu không có manga nào
     
     
+
 @main.route("/updates")
 def updates():
     if not current_user.is_authenticated:
         return render_template("require_login.html", title="Updates")
-    return render_template("updates.html", title="Updates")
+
+    page = request.args.get("page", 1, type=int)
+    per_page = 10
+
+    # Chỉ lấy Manga có trong các list của user hiện tại
+    manga_query = (
+        db.session.query(Manga, MangaCover.ImageData, MangaStatistics.AverageRating, MangaStatistics.Follows)
+        .join(ListManga, ListManga.MangaId == Manga.MangaId)
+        .join(List, List.ListId == ListManga.ListId)
+        .outerjoin(MangaCover, Manga.MangaId == MangaCover.MangaId)
+        .outerjoin(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
+        .filter(List.UserId == current_user.UserId)
+        .order_by(Manga.UpdatedAt.desc())
+    )
+
+    pagination = manga_query.paginate(page=page, per_page=per_page, error_out=False)
+    mangas = []
+
+    for item in pagination.items:
+        manga, image_data, avg_rating, follows = item
+        cover_url = url_for("static", filename="assets/default_cover.png")
+
+        if image_data:
+            image_data_b64 = base64.b64encode(image_data).decode("utf-8")
+            cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+        else:
+            cover_info = get_cover_info(str(manga.MangaId).lower())
+            if cover_info:
+                manga_id_str = cover_info["manga_id"]
+                cover_id_str = cover_info["cover_id"]
+                file_name_str = cover_info["file_name"]
+                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                try:
+                    response = requests.get(image_url, stream=True)
+                    response.raise_for_status()
+                    image_data = response.content
+                    new_cover = MangaCover(
+                        MangaId=manga.MangaId,
+                        CoverId=uuid.UUID(cover_id_str),
+                        FileName=file_name_str,
+                        ImageData=image_data,
+                        DownloadDate=datetime.utcnow(),
+                    )
+                    db.session.add(new_cover)
+                    db.session.commit()
+                    image_data_b64 = base64.b64encode(image_data).decode("utf-8")
+                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                except Exception as e:
+                    print(f"Error downloading cover for {manga_id_str}: {e}")
+
+        your_score = None
+        if current_user.is_authenticated:
+            rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=manga.MangaId).first()
+            your_score = rating.Score if rating else None
+
+        mangas.append(
+            {
+                "manga": manga,
+                "cover_url": cover_url,
+                "stats": {"AverageRating": avg_rating, "Follows": follows},
+                "your_score": your_score,
+            }
+        )
+
+    return render_template(
+        "updates.html",
+        mangas=mangas,
+        pagination=pagination,
+        is_authenticated=current_user.is_authenticated,
+    )
+
 
 
 @main.route("/library")
@@ -9837,6 +10403,75 @@ def search_creators():
     return jsonify(creator_list)
 
 
+# ---------------------------
+# POST /manga/<manga_id>/rating
+# Tạo hoặc cập nhật rating của current_user cho manga này
+# ---------------------------
+# --- GET user's rating for this manga (optional, used by frontend to load current value) ---
+@manga.route('/<manga_id>/rating', methods=['GET'])
+def get_user_rating(manga_id):
+    # Validate UUID-ish if you want; keep tolerant though.
+    if not current_user or current_user.is_anonymous:
+        return jsonify({'score': None}), 200
+
+    rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if rating:
+        return jsonify({'score': rating.Score}), 200
+    return jsonify({'score': None}), 200
+
+
+# --- Create or update rating ---
+@manga.route('/<manga_id>/rating', methods=['POST'])
+@login_required
+def post_user_rating(manga_id):
+    data = request.get_json() or request.form
+    score = data.get('score', None)
+
+    try:
+        score = int(score)
+    except (TypeError, ValueError):
+        return jsonify({'success': False, 'error': 'Invalid score'}), 400
+
+    if score < 1 or score > 10:
+        return jsonify({'success': False, 'error': 'Score must be between 1 and 10'}), 400
+
+    # Optional: check manga exists
+    # if not Manga.query.filter_by(MangaId=str(manga_id)).first():
+    #     return jsonify({'success': False, 'error': 'Manga not found'}), 404
+
+    # Find existing rating
+    rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if rating:
+        rating.Score = score
+    else:
+        rating = Rating(UserId=current_user.UserId, MangaId=str(manga_id), Score=score)
+        db.session.add(rating)
+
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'success': False, 'error': 'DB error'}), 500
+
+    return jsonify({'success': True, 'score': score}), 200
+
+
+# --- Delete user's rating ---
+@manga.route('/<manga_id>/rating', methods=['DELETE'])
+@login_required
+def delete_user_rating(manga_id):
+    rating = Rating.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if not rating:
+        return jsonify({'success': False, 'error': 'No rating found'}), 404
+
+    try:
+        db.session.delete(rating)
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'success': False, 'error': 'DB error'}), 500
+
+    return jsonify({'success': True}), 200
 
 # ======================
 # User routes
@@ -9852,6 +10487,8 @@ def message(user_id):
 @main.route("/report/<uuid:user_id>")
 def report(user_id):
     return f"Report user {user_id}"
+
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\__init__.py ---
 # app/__init__.py
 from flask import Flask
@@ -10620,6 +11257,32 @@ body {
         height: 180px;
     }
 }
+
+.card.hover-shadow {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card.hover-shadow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+a.text-decoration-none.text-reset {
+    display: block;
+    height: 100%;
+}
+
+a.text-decoration-none.text-reset .card {
+    cursor: pointer;
+}
+
+.card .form-check-input,
+.card .btn {
+    position: relative;
+    z-index: 2;
+    /* luôn trên link */
+}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
 .manga-detail-container {
     max-width: 90%;
@@ -10896,6 +11559,76 @@ body {
     color: #cccccc;
     /* chữ xám nhạt như description */
     font-size: 0.9rem;
+}
+
+/* app/static/css/manga_detail.css */
+
+/* Rating widget */
+.your-rating {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.your-rating label {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+#user-rating-select {
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.btn-small {
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #0066cc;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 2px 6px;
+    font-size: 13px;
+}
+
+.rating-msg {
+    margin-left: 8px;
+    font-size: 13px;
+    color: #2b2b2b;
+}
+
+/* Nút Save cho user rating */
+#user-rating-save {
+    background-color: #28a745;
+    /* xanh lá */
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+#user-rating-save:hover {
+    background-color: #218838;
+}
+
+/* Nút Remove nhỏ hơn, dạng link đỏ */
+#user-rating-remove {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-left: 8px;
+    cursor: pointer;
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\styles.css ---
 @charset "UTF-8";
@@ -25125,6 +25858,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })();
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".manga-card").forEach(card => {
+        card.addEventListener("click", e => {
+            // Nếu click vào checkbox hoặc button thì bỏ qua
+            if (e.target.closest("input[type=checkbox]") || e.target.closest("button")) {
+                return;
+            }
+
+            const mangaId = card.dataset.mangaId;
+            if (mangaId) {
+                window.location.href = `/manga/${mangaId}`;
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".manga-card").forEach(card => {
+        card.addEventListener("click", e => {
+            if (e.target.closest("input, button")) return; // bỏ qua click checkbox, button
+            const mangaId = card.dataset.mangaId;
+            if (mangaId) {
+                window.location.href = `/manga/${mangaId}`;
+            }
+        });
+    });
+});
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
 document.addEventListener('DOMContentLoaded', function () {
     // Header background
@@ -25227,6 +25989,77 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const ratingBox = document.querySelector(".your-rating");
+    if (!ratingBox) return; // user not authenticated
+
+    const mangaId = ratingBox.dataset.mangaId;
+    const select = document.getElementById("user-rating-select");
+    const saveBtn = document.getElementById("user-rating-save");
+    const removeBtn = document.getElementById("user-rating-remove");
+    const msg = document.getElementById("user-rating-msg");
+
+    // Gửi POST khi bấm Save
+    saveBtn.addEventListener("click", function () {
+        const score = select.value;
+        if (!score) {
+            msg.textContent = "Please select a score first.";
+            msg.style.color = "red";
+            return;
+        }
+
+        fetch(`/manga/${mangaId}/rating`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            body: JSON.stringify({ score: parseInt(score) })
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success) {
+                    msg.textContent = "Rating saved!";
+                    msg.style.color = "limegreen";
+                    removeBtn.style.display = "inline-block";
+                } else {
+                    msg.textContent = data.message || "Error saving rating.";
+                    msg.style.color = "red";
+                }
+            })
+            .catch(() => {
+                msg.textContent = "Network error.";
+                msg.style.color = "red";
+            });
+    });
+
+    // Gửi DELETE khi bấm Remove
+    removeBtn.addEventListener("click", function () {
+        fetch(`/manga/${mangaId}/rating`, {
+            method: "DELETE",
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success) {
+                    msg.textContent = "Rating removed.";
+                    msg.style.color = "orange";
+                    select.value = "";
+                    removeBtn.style.display = "none";
+                } else {
+                    msg.textContent = data.message || "Error removing rating.";
+                    msg.style.color = "red";
+                }
+            })
+            .catch(() => {
+                msg.textContent = "Network error.";
+                msg.style.color = "red";
+            });
+    });
 });
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\scripts.js ---
@@ -25886,7 +26719,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </td>
                 <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) }}</td>
-                <td class="text-center fs-5 text-light">N/A</td>
+                <td class="text-center fs-5 text-light">{{ data.your_score if data.your_score else 'N/A' }}</td>
                 <td class="text-center">
                     <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
                         List</button>
@@ -25988,10 +26821,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                 </td>
-                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else 'N/A' }}</td>
-                <td class="text-center fs-5 text-light">N/A</td>
+                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else
+                    'N/A' }}</td>
+                <td class="text-center fs-5 text-light">{{ data.your_score if data.your_score else 'N/A' }}</td>
                 <td class="text-center">
-                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My List</button>
+                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
+                        List</button>
                 </td>
             </tr>
             {% endfor %}
@@ -26035,7 +26870,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="modal-content bg-dark text-white">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="modalLabel"></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-body">
                 <!-- Dynamic content from JS -->
@@ -26214,8 +27050,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- Grid of manga -->
     <div class="row g-3" id="listItemsContainer">
-        <!-- JS will populate cards here -->
+        {% for item in items %}
+        <div class="col-md-3">
+            <div class="card h-100 manga-card card-pos position-relative">
+                <a href="{{ url_for('manga.manga_detail', manga_id=item.manga.MangaId) }}" class="stretched-link"></a>
+
+                <input type="checkbox" class="form-check-input select-checkbox"
+                    data-manga-id="{{ item.manga.MangaId }}">
+                <img src="{{ item.cover_url }}" class="cover card-img-top" alt="{{ item.manga.TitleEn }}">
+                <div class="card-body">
+                    <h6 class="card-title">{{ item.manga.TitleEn }}</h6>
+                </div>
+                <div class="card-footer">
+                    <div class="small text-muted">{{ item.added_date }}</div>
+                    <div>
+                        <button class="btn btn-sm btn-outline-light add-to-list-btn">Add to list</button>
+                        <button class="btn btn-sm btn-danger remove-from-list-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% endfor %}
     </div>
+
 </div>
 
 <!-- Modal: Add manga via search -->
@@ -26264,7 +27123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block scripts %}
 <script id="list-context" type="application/json">
     {{ {
-        "listId": str(list.ListId),
+        "listId": list.ListId,
         "isOwner": current_user.is_authenticated and list.UserId == current_user.UserId
     } | tojson }}
 </script>
@@ -26374,7 +27233,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
-
 {% endblock %}
 
 {% block content %}
@@ -26407,6 +27265,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         'N/A' }}
                     </span>
                 </div>
+
+                <!-- === UPDATED: Manga stats + Your rating widget === -->
                 <div class="manga-stats">
                     <span class="stat-rating">
                         ⭐ {{ (manga_stats.AverageRating if manga_stats and manga_stats.AverageRating else
@@ -26415,7 +27275,29 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span class="stat-follows">
                         ❤️ {{ manga_stats.Follows if manga_stats and manga_stats.Follows else 0 }}
                     </span>
+
+                    <div class="your-rating" data-manga-id="{{ manga.MangaId }}">
+                        {% if is_authenticated %}
+                        <label for="user-rating-select">Your score:</label>
+                        <select id="user-rating-select" name="score" aria-label="Your score (1-10)">
+                            <option value="">N/A</option>
+                            {% for i in range(1,11) %}
+                            <option value="{{ i }}">{{ i }}</option>
+                            {% endfor %}
+                        </select>
+                        <button id="user-rating-save" class="btn btn-success btn-sm">Save</button>
+                        <button id="user-rating-remove" class="btn btn-outline-danger btn-sm"
+                            style="display:none;">Remove</button>
+                        <span id="user-rating-msg" class="rating-msg" aria-live="polite"></span>
+                        {% else %}
+                        <span class="please-login">
+                            <a href="{{ url_for('auth.login') }}">Login to rate</a>
+                        </span>
+                        {% endif %}
+                    </div>
                 </div>
+                <!-- === END UPDATED === -->
+
             </div>
         </div>
 
@@ -26668,10 +27550,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                 </td>
-                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else 'N/A' }}</td>
-                <td class="text-center fs-5 text-light">N/A</td>
+                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else
+                    'N/A' }}</td>
+                <td class="text-center fs-5 text-light">{{ data.your_score if data.your_score else 'N/A' }}</td>
                 <td class="text-center">
-                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My List</button>
+                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
+                        List</button>
                 </td>
             </tr>
             {% endfor %}
@@ -26715,7 +27599,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="modal-content bg-dark text-white">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="modalLabel"></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-body">
                 <!-- Dynamic content from JS -->
@@ -26840,8 +27725,105 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block title %}Updates | MangaDex Clone{% endblock %}
 
 {% block content %}
-<div class="text-center py-5 text-white">
-    <h1>Updates</h1>
-    <p>No content available yet.</p>
+<div class="container-fluid py-4" data-auth="{{ is_authenticated | tojson | safe }}">
+    <h1 class="text-white mb-4">Your Followed Manga Updates</h1>
+
+    {% if mangas %}
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th class="text-center fs-5" style="font-size: 1.3em;">Title</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;">Score</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;">Your Score</th>
+                <th class="text-center fs-5" style="font-size: 1.3em;" width="10%">List Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in mangas %}
+            {% set manga = data.manga %}
+            {% set stats = data.stats %}
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img src="{{ data.cover_url }}" alt="Cover of {{ manga.TitleEn }}" class="me-3"
+                            style="width: 130px; height: auto; border-radius: 4px;">
+                        <div>
+                            <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}"
+                                class="text-white fw-bold" style="font-size: 1.5em; text-decoration: none;">
+                                {{ manga.TitleEn }}
+                            </a>
+                            <div class="mt-3 text-muted small">
+                                <span class="me-2 fs-5 fw-bold text-info">{{ manga.ContentRating }}</span>
+                                <span class="me-2 fs-5 fw-bold text-info">{{ manga.PublicationDemographic }}</span>
+                                <span class="me-2 fs-5 fw-bold text-info">{{ manga.Status }}</span>
+                                <span class="fs-5 fw-bold text-info">{{ manga.Year }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else
+                    'N/A' }}</td>
+                <td class="text-center fs-5 text-light">{{ data.your_score if data.your_score else 'N/A' }}</td>
+                <td class="text-center">
+                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
+                        List</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if pagination.has_prev %}
+            <li class="page-item">
+                <a class="page-link text-white bg-dark"
+                    href="{{ url_for('main.updates', page=pagination.prev_num) }}">Previous</a>
+            </li>
+            {% endif %}
+            {% for p in pagination.iter_pages() %}
+            {% if p %}
+            <li class="page-item {{ 'active' if p == pagination.page else '' }}">
+                <a class="page-link text-white bg-dark" href="{{ url_for('main.updates', page=p) }}">{{ p }}</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link bg-dark">...</span></li>
+            {% endif %}
+            {% endfor %}
+            {% if pagination.has_next %}
+            <li class="page-item">
+                <a class="page-link text-white bg-dark"
+                    href="{{ url_for('main.updates', page=pagination.next_num) }}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% else %}
+    <p class="text-white">No updates found in your lists.</p>
+    {% endif %}
 </div>
+
+<!-- Modal for Add to List -->
+<div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="modalLabel"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content from JS -->
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
+</script>
 {% endblock %}

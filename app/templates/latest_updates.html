@@ -39,10 +39,12 @@
                         </div>
                     </div>
                 </td>
-                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else 'N/A' }}</td>
-                <td class="text-center fs-5 text-light">N/A</td>
+                <td class="text-center fs-5 text-light">{{ stats.AverageRating|round(2) if stats.AverageRating else
+                    'N/A' }}</td>
+                <td class="text-center fs-5 text-light">{{ data.your_score if data.your_score else 'N/A' }}</td>
                 <td class="text-center">
-                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My List</button>
+                    <button class="btn btn-primary add-to-list" data-manga-id="{{ manga.MangaId }}">Add to My
+                        List</button>
                 </td>
             </tr>
             {% endfor %}
@@ -86,7 +88,8 @@
         <div class="modal-content bg-dark text-white">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="modalLabel"></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-body">
                 <!-- Dynamic content from JS -->

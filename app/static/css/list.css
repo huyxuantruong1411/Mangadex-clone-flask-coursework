@@ -83,3 +83,58 @@
         height: 180px;
     }
 }
+
+.card.hover-shadow {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card.hover-shadow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+a.text-decoration-none.text-reset {
+    display: block;
+    height: 100%;
+}
+
+a.text-decoration-none.text-reset .card {
+    cursor: pointer;
+}
+
+.card .form-check-input,
+.card .btn {
+    position: relative;
+    z-index: 2;
+    /* luôn trên link */
+}
+
+/* list.css */
+
+/* Cho toàn bộ card manga trông như có thể click được */
+.manga-card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hiệu ứng hover: nổi nhẹ + shadow */
+.manga-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Tăng kích thước ô checkbox trong list */
+.select-checkbox {
+    width: 1.4em;
+    height: 1.4em;
+    cursor: pointer;
+}
+
+/* Style cho thông tin owner, item count, follower count */
+.list-meta {
+    font-size: 1rem;
+    /* tăng kích thước chữ (Bootstrap small = 0.875rem) */
+    color: #d1d1d1;
+    /* trắng xám, dễ đọc trên nền tối */
+}

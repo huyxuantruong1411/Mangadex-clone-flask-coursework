@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/manga_detail.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
-
 {% endblock %}
 
 {% block content %}
@@ -40,6 +39,8 @@
                         'N/A' }}
                     </span>
                 </div>
+
+                <!-- === UPDATED: Manga stats + Your rating widget === -->
                 <div class="manga-stats">
                     <span class="stat-rating">
                         ⭐ {{ (manga_stats.AverageRating if manga_stats and manga_stats.AverageRating else
@@ -48,7 +49,29 @@
                     <span class="stat-follows">
                         ❤️ {{ manga_stats.Follows if manga_stats and manga_stats.Follows else 0 }}
                     </span>
+
+                    <div class="your-rating" data-manga-id="{{ manga.MangaId }}">
+                        {% if is_authenticated %}
+                        <label for="user-rating-select">Your score:</label>
+                        <select id="user-rating-select" name="score" aria-label="Your score (1-10)">
+                            <option value="">N/A</option>
+                            {% for i in range(1,11) %}
+                            <option value="{{ i }}">{{ i }}</option>
+                            {% endfor %}
+                        </select>
+                        <button id="user-rating-save" class="btn btn-success btn-sm">Save</button>
+                        <button id="user-rating-remove" class="btn btn-outline-danger btn-sm"
+                            style="display:none;">Remove</button>
+                        <span id="user-rating-msg" class="rating-msg" aria-live="polite"></span>
+                        {% else %}
+                        <span class="please-login">
+                            <a href="{{ url_for('auth.login') }}">Login to rate</a>
+                        </span>
+                        {% endif %}
+                    </div>
                 </div>
+                <!-- === END UPDATED === -->
+
             </div>
         </div>
 

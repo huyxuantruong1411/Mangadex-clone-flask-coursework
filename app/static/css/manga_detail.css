@@ -274,3 +274,73 @@
     /* chữ xám nhạt như description */
     font-size: 0.9rem;
 }
+
+/* app/static/css/manga_detail.css */
+
+/* Rating widget */
+.your-rating {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.your-rating label {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+#user-rating-select {
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.btn-small {
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #0066cc;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 2px 6px;
+    font-size: 13px;
+}
+
+.rating-msg {
+    margin-left: 8px;
+    font-size: 13px;
+    color: #2b2b2b;
+}
+
+/* Nút Save cho user rating */
+#user-rating-save {
+    background-color: #28a745;
+    /* xanh lá */
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+#user-rating-save:hover {
+    background-color: #218838;
+}
+
+/* Nút Remove nhỏ hơn, dạng link đỏ */
+#user-rating-remove {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-left: 8px;
+    cursor: pointer;
+}
