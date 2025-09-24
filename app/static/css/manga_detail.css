@@ -344,3 +344,83 @@
     margin-left: 8px;
     cursor: pointer;
 }
+
+/* Existing styles remain unchanged */
+.manga-detail-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.manga-main {
+    flex: 3;
+}
+
+.manga-sidebar {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* New styles for Chapters tab */
+.chapter-controls {
+    margin-bottom: 10px;
+}
+
+.chapter-list {
+    max-height: 60vh;
+    /* Giới hạn chiều cao để cuộn */
+    overflow-y: auto;
+    border: 1px solid #333;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#no-chapters-msg {
+    padding: 20px;
+}
+
+.chapter-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.chapter-table th,
+.chapter-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.chapter-table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+.chapter-row {
+    background-color: #2a2a2a;
+}
+
+.chapter-subrow {
+    padding-left: 20px;
+    background-color: #1e1e1e;
+}
+
+.chapter-subrow a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.chapter-subrow a:hover {
+    text-decoration: underline;
+}
+
+.chapter-subrow .read {
+    color: #28a745;
+    /* Green for read chapters */
+}
+
+.chapter-subrow .unread {
+    color: #dc3545;
+    /* Red for unread chapters */
+}

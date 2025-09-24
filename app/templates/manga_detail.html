@@ -14,7 +14,8 @@
 <div class="manga-detail-container">
     <div class="manga-main">
         <!-- Header Section -->
-        <div class="manga-detail-header" data-cover-url="{{ manga_cover_url }}">
+        <div class="manga-detail-header" data-manga-id="{{ manga.MangaId }}" data-cover-url="{{ manga_cover_url }}">
+
             <div class="manga-cover-thumbnail">
                 <img src="{{ manga_cover_url }}" alt="Cover of {{ manga.TitleEn }}" class="cover-img">
             </div>
@@ -102,16 +103,13 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="chapters">
-                {% if chapters %}
-                <h2>Chapters</h2>
-                <ul>
-                    {% for chapter in chapters %}
-                    <li>{{ chapter.Title }} - {{ chapter.ChapterNumber }}</li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <p class="text-center text-gray">This feature is under development.</p>
-                {% endif %}
+                <div class="chapter-controls">
+                    <button id="sort-asc" class="btn btn-secondary btn-sm me-2">Asc</button>
+                    <button id="sort-desc" class="btn btn-secondary btn-sm">Desc</button>
+                </div>
+                <div id="chapter-list" class="chapter-list">
+                    <p class="text-center text-gray" id="no-chapters-msg">Loading chapters...</p>
+                </div>
             </div>
 
             <div class="tab-pane" id="comments">

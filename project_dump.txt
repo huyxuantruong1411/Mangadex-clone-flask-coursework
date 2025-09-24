@@ -2812,92 +2812,38 @@ class Cover(db.Model):
     url = db.Column(db.String(500))
     image_data = db.Column(db.LargeBinary)  # lưu binary ảnh
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\reader_controller.py ---
-import uuid
 from . import db
 from .models import Chapter, ReadingHistory, Manga
 from sqlalchemy import func
-from uuid import UUID
-import requests
+from uuid import uuid4
 from datetime import datetime
+import requests
 
-def get_available_langs(manga_id):
-    """Trả về danh sách ngôn ngữ có sẵn cho chapters của manga."""
-    # Chuyển manga_id thành chuỗi
-    manga_id_str = str(manga_id)  # UUID đã được Flask xử lý, chỉ cần str()
-    
-    chapters = db.session.query(Chapter)\
-        .filter(
-            Chapter.MangaId == manga_id_str,
-            Chapter.TranslatedLang.in_(['en', 'vi']),
-            Chapter.IsUnavailable == False
-        )\
-        .order_by(Chapter.ChapterNumber.asc())\
-        .all()
-    
-    print(f"Found {len(chapters)} chapters for manga {manga_id_str}")
-    for chap in chapters:
-        print(f"Chapter {chap.ChapterNumber}, Lang: {chap.TranslatedLang}, IsUnavailable: {chap.IsUnavailable}")
-    
-    langs = sorted(list(set(c.TranslatedLang for c in chapters)))
-    print(f"Available languages for manga {manga_id_str}: {langs}")
-    return langs
-
-def get_continue_chapter(user_id, manga_id):
-    """Tìm chapter tiếp theo để đọc dựa trên lịch sử hoặc chapter đầu tiên."""
-    manga_id_str = str(manga_id)  # UUID đã được Flask xử lý, chỉ cần str()
-    
-    if user_id:
-        history = db.session.query(ReadingHistory)\
-            .filter_by(UserId=user_id, MangaId=manga_id_str)\
-            .order_by(ReadingHistory.LastRead.desc())\
-            .first()
-        
-        if history:
-            last_chapter_id = history.ChapterId
-            last_chapter = db.session.query(Chapter)\
-                .filter_by(ChapterId=last_chapter_id, MangaId=manga_id_str, IsUnavailable=False)\
-                .first()
-            
-            if last_chapter:
-                next_chapters = db.session.query(Chapter)\
-                    .filter(
-                        Chapter.MangaId == manga_id_str,
-                        Chapter.TranslatedLang == last_chapter.TranslatedLang,
-                        Chapter.ChapterNumber > last_chapter.ChapterNumber,
-                        Chapter.IsUnavailable == False
-                    )\
-                    .order_by(Chapter.ChapterNumber.asc())\
-                    .all()
-                
-                next_chapter = next_chapters[0] if next_chapters else last_chapter
-                return next_chapter, last_chapter.TranslatedLang
-    
-    # Nếu không có lịch sử, lấy chapter đầu tiên
-    first_chapter = db.session.query(Chapter)\
-        .filter(
-            Chapter.MangaId == manga_id_str,
-            Chapter.TranslatedLang.in_(['en', 'vi']),
-            Chapter.IsUnavailable == False
-        )\
-        .order_by(Chapter.ChapterNumber.asc())\
-        .first()
-    
-    return (first_chapter, first_chapter.TranslatedLang) if first_chapter else (None, None)
-
-def sync_chapters(manga_id):
+def sync_chapters(manga_id, timeout=5):
+    """
+    Best-effort: đồng bộ chapters từ MangaDex. 
+    IMPORTANT: do NOT call this on every page request - call it only when DB empty or via background job.
+    """
     try:
         params = {
             "translatedLanguage[]": ["en", "vi"],
             "limit": 100
         }
-        resp = requests.get(f"https://api.mangadex.org/manga/{manga_id}/feed", params=params)
+        resp = requests.get(
+            f"https://api.mangadex.org/manga/{manga_id}/feed",
+            params=params,
+            timeout=timeout
+        )
         resp.raise_for_status()
         data = resp.json()
         chapters = data.get("data", [])
-        
+
+        new_added = False
         for chap in chapters:
-            chapter_id = chap["id"]
-            attributes = chap["attributes"]
+            chapter_id = chap.get("id")
+            attributes = chap.get("attributes", {})
+            if not chapter_id:
+                continue
             existing = db.session.query(Chapter).filter_by(ChapterId=chapter_id).first()
             if not existing:
                 new_chapter = Chapter(
@@ -2908,7 +2854,7 @@ def sync_chapters(manga_id):
                     ChapterNumber=attributes.get("chapter"),
                     Title=attributes.get("title"),
                     TranslatedLang=attributes.get("translatedLanguage"),
-                    Pages=len(attributes.get("pages", [])),
+                    Pages=attributes.get("pages"),
                     PublishAt=attributes.get("publishAt"),
                     ReadableAt=attributes.get("readableAt"),
                     IsUnavailable=False,
@@ -2916,14 +2862,71 @@ def sync_chapters(manga_id):
                     UpdatedAt=attributes.get("updatedAt")
                 )
                 db.session.add(new_chapter)
-        db.session.commit()
+                new_added = True
+
+        if new_added:
+            db.session.commit()
         return True
     except Exception as e:
-        print(f"Error syncing chapters for manga {manga_id}: {str(e)}")
+        # an toàn: rollback và log
+        try:
+            db.session.rollback()
+        except:
+            pass
+        print(f"[sync_chapters] Error syncing chapters for {manga_id}: {e}")
         return False
 
+
+def get_available_langs(manga_id):
+    manga_id_str = str(manga_id)
+    # **Guard**: chỉ sync khi DB không có chapter nào cho manga này
+    exists = db.session.query(Chapter).filter(Chapter.MangaId == manga_id_str).first()
+    if not exists:
+        sync_chapters(manga_id_str)
+
+    chapters = db.session.query(Chapter).filter(
+        Chapter.MangaId == manga_id_str,
+        Chapter.TranslatedLang.in_(['en', 'vi']),
+        Chapter.IsUnavailable == False
+    ).order_by(Chapter.ChapterNumber.asc()).all()
+
+    langs = sorted(list(set(c.TranslatedLang for c in chapters)))
+    return langs
+
+
+def get_chapter_list(manga_id, sort_order='asc'):
+    manga_id_str = str(manga_id)
+
+    # **Guard**: không gọi sync vô tội vạ
+    exists = db.session.query(Chapter).filter(Chapter.MangaId == manga_id_str).first()
+    if not exists:
+        sync_chapters(manga_id_str)
+
+    chapters = db.session.query(Chapter).filter(
+        Chapter.MangaId == manga_id_str,
+        Chapter.IsUnavailable == False
+    ).all()
+
+    # Group chapters by ChapterNumber (giữ logic cũ)
+    chapters_by_num = {}
+    for chap in chapters:
+        if chap.ChapterNumber not in chapters_by_num:
+            chapters_by_num[chap.ChapterNumber] = []
+        chapters_by_num[chap.ChapterNumber].append(chap)
+
+    # Sort by ChapterNumber: fallback an toàn khi chapter number không phải số
+    def chapter_key(item):
+        num = item[0]
+        try:
+            return float(str(num))
+        except Exception:
+            return str(num)
+
+    sorted_chapters = dict(sorted(chapters_by_num.items(), key=chapter_key, reverse=(sort_order == 'desc')))
+    return sorted_chapters
+
 def get_first_chapter(manga_id, lang):
-    manga_id_str = str(UUID(manga_id)) if not isinstance(manga_id, str) else manga_id
+    manga_id_str = str(manga_id)
     fallback_lang = 'vi' if lang == 'en' else 'en'
     chap = db.session.query(Chapter).filter(
         Chapter.MangaId == manga_id_str,
@@ -2938,8 +2941,19 @@ def get_first_chapter(manga_id, lang):
         ).order_by(Chapter.ChapterNumber.asc()).first()
     return chap
 
+def get_continue_chapter(user_id, manga_id):
+    manga_id_str = str(manga_id)
+    history = db.session.query(ReadingHistory).filter(
+        ReadingHistory.UserId == user_id,
+        ReadingHistory.MangaId == manga_id_str
+    ).order_by(ReadingHistory.ReadAt.desc()).first()
+    if history:
+        chap = db.session.get(Chapter, history.ChapterId)
+        return chap, chap.TranslatedLang if chap else (None, None)
+    return get_first_chapter(manga_id_str, 'en') or get_first_chapter(manga_id_str, 'vi'), 'en'
+
 def get_chapter(manga_id, chapter_id):
-    manga_id_str = str(UUID(manga_id)) if not isinstance(manga_id, str) else manga_id
+    manga_id_str = str(manga_id)
     return db.session.query(Chapter).filter(
         Chapter.MangaId == manga_id_str,
         Chapter.ChapterId == chapter_id,
@@ -2947,7 +2961,7 @@ def get_chapter(manga_id, chapter_id):
     ).first()
 
 def get_next_chapter(manga_id, current_num, lang):
-    manga_id_str = str(UUID(manga_id)) if not isinstance(manga_id, str) else manga_id
+    manga_id_str = str(manga_id)
     fallback_lang = 'vi' if lang == 'en' else 'en'
     next_chap = db.session.query(Chapter).filter(
         Chapter.MangaId == manga_id_str,
@@ -2965,7 +2979,7 @@ def get_next_chapter(manga_id, current_num, lang):
     return next_chap
 
 def get_prev_chapter(manga_id, current_num, lang):
-    manga_id_str = str(UUID(manga_id)) if not isinstance(manga_id, str) else manga_id
+    manga_id_str = str(manga_id)
     fallback_lang = 'vi' if lang == 'en' else 'en'
     prev_chap = db.session.query(Chapter).filter(
         Chapter.MangaId == manga_id_str,
@@ -2983,7 +2997,7 @@ def get_prev_chapter(manga_id, current_num, lang):
     return prev_chap
 
 def save_reading_history(user_id, manga_id, chapter_id, last_page):
-    manga_id_str = str(UUID(manga_id)) if not isinstance(manga_id, str) else manga_id
+    manga_id_str = str(manga_id)
     history = db.session.query(ReadingHistory).filter(
         ReadingHistory.UserId == user_id,
         ReadingHistory.MangaId == manga_id_str,
@@ -2995,7 +3009,7 @@ def save_reading_history(user_id, manga_id, chapter_id, last_page):
         history.ReadAt = now
     else:
         history = ReadingHistory(
-            HistoryId=uuid.uuid4(),
+            HistoryId=uuid4(),
             UserId=user_id,
             MangaId=manga_id_str,
             ChapterId=chapter_id,
@@ -3004,6 +3018,8 @@ def save_reading_history(user_id, manga_id, chapter_id, last_page):
         )
         db.session.add(history)
     db.session.commit()
+
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py ---
 import base64
 from io import BytesIO
@@ -3574,9 +3590,12 @@ def manga_detail(manga_id):
         print(f"Manga not found: {manga_id_str}")
         return render_template('error.html', message='Manga not found'), 404
 
-    # Kiểm tra chapters
-    available_langs = get_available_langs(manga_id_str)
-    has_chapters = len(available_langs) > 0
+    # Check DB directly (tránh gọi sync_chapters khi render)
+    has_chapters = db.session.query(Chapter).filter(
+        Chapter.MangaId == manga_id_str,
+        Chapter.IsUnavailable == False
+    ).count() > 0
+
     print(f"has_chapters for manga {manga_id_str}: {has_chapters}")  # Debug
 
     # --- cover logic (as in your original file) ---
@@ -4000,7 +4019,7 @@ def create_app():
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\blueprints\reader.py ---
 from flask import Blueprint, render_template, redirect, url_for, request, jsonify, flash
 from flask_login import login_required, current_user
-from ..reader_controller import get_chapter, get_first_chapter, get_next_chapter, get_prev_chapter, save_reading_history, get_available_langs, get_continue_chapter
+from ..reader_controller import get_chapter, get_first_chapter, get_next_chapter, get_prev_chapter, save_reading_history, get_available_langs, get_continue_chapter, get_chapter_list
 from app.models import Chapter, ReadingHistory, Manga
 from uuid import uuid4
 import requests
@@ -4089,6 +4108,29 @@ def save_history():
     data = request.json
     save_reading_history(current_user.UserId, data['manga_id'], data['chapter_id'], data.get('last_page', 0))
     return jsonify({'success': True})
+
+@reader.route('/<uuid:manga_id>/chapters', methods=['GET'])
+def get_chapters(manga_id):
+    sort_order = request.args.get('sort', 'asc')
+    chapters = get_chapter_list(manga_id, sort_order)
+    has_chapters = len(chapters) > 0
+    user_id = current_user.UserId if current_user.is_authenticated else None
+    read_chapters = set()
+    if user_id:
+        read_chapters = set(r.ChapterId for r in db.session.query(ReadingHistory.ChapterId).filter_by(UserId=user_id, MangaId=str(manga_id)).all())
+    
+    chapter_data = []
+    for chapter_num, chapters_by_num in chapters.items():
+        translations = []
+        for chapter in chapters_by_num:
+            translations.append({
+                "lang": chapter.TranslatedLang,
+                "chapter_id": chapter.ChapterId,
+                "read": chapter.ChapterId in read_chapters
+            })
+        chapter_data.append({"chapter_number": chapter_num, "translations": translations})
+    
+    return jsonify({"chapters": chapter_data, "has_chapters": has_chapters})
 === Folder: app\static ===
 
 === Folder: app\static\assets ===
@@ -5252,27 +5294,131 @@ a.text-decoration-none.text-reset .card {
     margin-left: 8px;
     cursor: pointer;
 }
+
+/* Existing styles remain unchanged */
+.manga-detail-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.manga-main {
+    flex: 3;
+}
+
+.manga-sidebar {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* New styles for Chapters tab */
+.chapter-controls {
+    margin-bottom: 10px;
+}
+
+.chapter-list {
+    max-height: 60vh;
+    /* Giới hạn chiều cao để cuộn */
+    overflow-y: auto;
+    border: 1px solid #333;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#no-chapters-msg {
+    padding: 20px;
+}
+
+.chapter-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.chapter-table th,
+.chapter-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.chapter-table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+.chapter-row {
+    background-color: #2a2a2a;
+}
+
+.chapter-subrow {
+    padding-left: 20px;
+    background-color: #1e1e1e;
+}
+
+.chapter-subrow a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.chapter-subrow a:hover {
+    text-decoration: underline;
+}
+
+.chapter-subrow .read {
+    color: #28a745;
+    /* Green for read chapters */
+}
+
+.chapter-subrow .unread {
+    color: #dc3545;
+    /* Red for unread chapters */
+}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\reader.css ---
 .reader-container {
-    max-width: 900px;
+    max-width: 1200px;
+    /* Tăng từ 900px lên 1200px để rộng hơn */
     margin: auto;
+    width: 100%;
+    /* Đảm bảo chiếm toàn bộ chiều rộng container */
 }
 
 .long-strip {
     border: 1px solid #333;
+    height: 90vh;
+    /* Đảm bảo đồng bộ với template, có thể thử 100vh */
+    overflow-y: auto;
+    /* Chỉ cuộn dọc nếu cần */
+    position: relative;
+    /* Giúp điều chỉnh vị trí nếu cần */
 }
 
 .chapter-page {
     max-width: 100%;
     height: auto;
+    width: auto;
+    /* Đảm bảo ảnh tự điều chỉnh theo kích thước */
+    display: block;
+    margin: 0 auto 20px;
+    /* Tăng khoảng cách giữa các ảnh */
 }
 
 .reader-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    /* Tăng kích thước tiêu đề để phù hợp với không gian lớn hơn */
 }
 
 .reader-footer .progress {
     background-color: #222;
+    height: 10px;
+    /* Tăng độ dày của thanh tiến độ */
+}
+
+.reader-footer button {
+    padding: 10px 20px;
+    /* Tăng kích thước nút */
+    font-size: 1.1rem;
+    /* Tăng cỡ chữ nút */
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\styles.css ---
 @charset "UTF-8";
@@ -19784,6 +19930,59 @@ document.addEventListener('DOMContentLoaded', () => {
             new bootstrap.Modal(document.getElementById('login-required-modal')).show();
         });
     }
+
+    $('.tab').on('click', function () {
+        const tab = $(this).data('tab');
+        $('.tab-pane').removeClass('active');
+        $(`#${tab}`).addClass('active');
+        if (tab === 'chapters') {
+            loadChapters('asc');
+        }
+    });
+
+    function loadChapters(sortOrder) {
+        const mangaId = $('.manga-detail-header').data('cover-url').split('/covers/')[1].split('/')[0];
+        $('#no-chapters-msg').show();
+        $('#chapter-list').html('<p class="text-center text-gray">Loading chapters...</p>');
+        $.get(`/reader/${mangaId}/chapters?sort=${sortOrder}`, function (data) {
+            $('#no-chapters-msg').hide();
+            if (!data.has_chapters) {
+                $('#chapter-list').html('<p class="text-center text-gray">No chapters available for this manga yet.</p>');
+                return;
+            }
+            let html = '<table class="chapter-table"><thead><tr><th>Chapter Number</th><th>Translations</th></tr></thead><tbody>';
+            data.chapters.forEach(chapter => {
+                html += `<tr class="chapter-row"><td>${chapter.chapter_number}</td><td>`;
+                if (chapter.translations.length === 0) {
+                    html += 'No translations available';
+                } else {
+                    chapter.translations.forEach(trans => {
+                        const readClass = trans.read ? 'read' : 'unread';
+                        html += `<div class="chapter-subrow"><a href="/reader/${mangaId}/${trans.chapter_id}" class="${readClass}">${trans.lang.toUpperCase()}</a></div>`;
+                    });
+                }
+                html += '</td></tr>';
+            });
+            html += '</tbody></table>';
+            $('#chapter-list').html(html);
+        }).fail(function () {
+            $('#chapter-list').html('<p class="text-center text-gray">Failed to load chapters.</p>');
+        });
+    }
+
+    // Handle sort buttons
+    $('#sort-asc').on('click', function () {
+        loadChapters('asc');
+    });
+
+    $('#sort-desc').on('click', function () {
+        loadChapters('desc');
+    });
+
+    // Initial load of chapters
+    if ($('.tab.active').data('tab') === 'chapters') {
+        loadChapters('asc');
+    }
 });
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\reader.js ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -19846,7 +20045,7 @@ document.addEventListener('DOMContentLoaded', () => {
 * Dựa trên Start Bootstrap - Simple Sidebar
 */
 
-// Khi DOM load xong
+// Khi DOM load xong (phần này dùng vanilla, an toàn ngay cả khi jQuery chưa load)
 window.addEventListener('DOMContentLoaded', event => {
 
     // Toggle Sidebar
@@ -19882,6 +20081,8 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
+
+// Flash messages (vanilla)
 document.addEventListener("DOMContentLoaded", function () {
     const el = document.getElementById('flash-messages');
     if (!el) return;
@@ -19893,8 +20094,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Add-to-list modal fallback (vanilla + bootstrap)
 document.addEventListener('DOMContentLoaded', function () {
-    const modal = new bootstrap.Modal(document.getElementById('add-modal'));
+    const modalElement = document.getElementById('add-modal');
+    const modal = modalElement ? new bootstrap.Modal(modalElement) : null;
     const modalTitle = document.getElementById('modalLabel');
     const modalBody = document.getElementById('modal-body');
 
@@ -19903,15 +20106,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const mangaId = this.dataset.mangaId || this.getAttribute('data-manga-id');
 
             if (!window.isAuthenticated) {
-                modalTitle.textContent = 'Require Login';
-                modalBody.innerHTML = `
+                if (modalTitle) modalTitle.textContent = 'Require Login';
+                if (modalBody) modalBody.innerHTML = `
                     <p class="fs-5 mb-4">You need to sign in to access this feature.</p>
                     <div class="d-flex justify-content-center gap-3">
                         <a href="/login" class="btn btn-signin fw-bold px-4">Sign in</a>
                         <a href="/register" class="btn btn-register fw-bold px-4">Register</a>
                     </div>
                 `;
-                modal.show();
+                if (modal) modal.show();
                 return;
             }
 
@@ -19925,21 +20128,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // Fallback: show the old placeholder modal (backwards-compatible)
-            modalTitle.textContent = 'Add to List';
-            modalBody.innerHTML = '<p>Coming soon. (Empty for now)</p>';
-            modal.show();
+            if (modalTitle) modalTitle.textContent = 'Add to List';
+            if (modalBody) modalBody.innerHTML = '<p>Coming soon. (Empty for now)</p>';
+            if (modal) modal.show();
         });
     });
 });
-
 
 
 // Debounce function (giữ nguyên)
 function debounce(func, delay) {
     let timer;
     return function () {
+        const args = arguments;
+        const ctx = this;
         clearTimeout(timer);
-        timer = setTimeout(func, delay);
+        timer = setTimeout(() => func.apply(ctx, args), delay);
     };
 }
 
@@ -19948,6 +20152,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBox = document.getElementById('searchBox');
     const searchPopup = document.getElementById('search-popup');
 
+    if (!searchBox || !searchPopup) return;
+
     // Thêm logic để đóng popup khi nhấn phím ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") {
@@ -19955,117 +20161,354 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    if (searchBox && searchPopup) {
-        const performSearch = async () => {
-            const query = searchBox.value.trim();
+    const performSearch = async () => {
+        const query = searchBox.value.trim();
 
-            if (query.length < 2) {
-                searchPopup.style.display = 'none';
+        if (query.length < 2) {
+            searchPopup.style.display = 'none';
+            return;
+        }
+
+        // Đặt chiều rộng của pop-up bằng chiều rộng của search box
+        const searchBoxWidth = searchBox.getBoundingClientRect().width;
+        searchPopup.style.width = `${searchBoxWidth}px`;
+
+        try {
+            // Gửi 2 yêu cầu API song song với Promise.all
+            const [mangaResponse, creatorsResponse] = await Promise.all([
+                fetch(`/search?title=${encodeURIComponent(query)}`),
+                fetch(`/search_creators?query=${encodeURIComponent(query)}`)
+            ]);
+
+            if (!mangaResponse.ok || !creatorsResponse.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const mangaResults = await mangaResponse.json();
+            const creatorsResults = await creatorsResponse.json();
+
+            let htmlContent = '';
+
+            // === Phần hiển thị kết quả Manga ===
+            if (Array.isArray(mangaResults) && mangaResults.length > 0) {
+                htmlContent += '<div class="search-group-title">Manga</div>';
+                mangaResults.forEach(r => {
+                    htmlContent += `
+                        <a href="/manga/${r.id}" class="search-result-item">
+                            <img src="${r.cover_url}" alt="${r.title}" class="search-result-cover">
+                            <div class="search-result-info">
+                                <span class="search-result-title">${r.title}</span>
+                                <div class="search-result-stats">
+                                    ⭐ ${r.rating} | ❤️ ${r.follows}
+                                </div>
+                                <div class="search-result-status">
+                                    <span class="status-dot" data-status="${(r.status || 'unknown').toLowerCase()}"></span> ${r.status || ''}
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                });
+            }
+
+            // === Phần hiển thị kết quả Creator ===
+            if (Array.isArray(creatorsResults) && creatorsResults.length > 0) {
+                htmlContent += '<div class="search-group-title">Creators</div>';
+                creatorsResults.forEach(creator => {
+                    htmlContent += `
+                        <a href="/creator/${creator.creator_id}" class="search-result-item creator-item">
+                            <i class="bi bi-person-circle search-icon"></i>
+                            <span class="search-result-title">${creator.name}</span>
+                        </a>
+                    `;
+                });
+            }
+
+            // Hiển thị kết quả hoặc thông báo không tìm thấy
+            if (htmlContent) {
+                searchPopup.innerHTML = htmlContent;
+                searchPopup.style.display = 'block';
+
+                // Set status dot colors cho manga
+                document.querySelectorAll('.status-dot').forEach(dot => {
+                    let status = dot.getAttribute('data-status') || '';
+                    status = status.toLowerCase();
+                    switch (status) {
+                        case "ongoing": dot.style.backgroundColor = "#00cc00"; break;
+                        case "canceled": dot.style.backgroundColor = "#ff0000"; break;
+                        case "hiatus": dot.style.backgroundColor = "#cc9900"; break;
+                        case "completed": dot.style.backgroundColor = "#0099ff"; break;
+                        default: dot.style.backgroundColor = "#999999";
+                    }
+                });
+
+            } else {
+                searchPopup.innerHTML = '<div class="no-results">Không có kết quả nào.</div>';
+                searchPopup.style.display = 'block';
+            }
+
+        } catch (error) {
+            console.error('Search failed:', error);
+            searchPopup.style.display = 'none';
+        }
+    };
+
+    // Gắn lại event listener cho searchBox, sử dụng debounce
+    searchBox.addEventListener('input', debounce(performSearch, 500));
+
+    searchBox.addEventListener('blur', function () {
+        // Chỉ thu nhỏ lại nếu không có chữ bên trong
+        if (searchBox.value.trim() === '') {
+            searchBox.classList.remove('expanded');
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!searchBox.contains(e.target) && !searchPopup.contains(e.target)) {
+            searchPopup.style.display = 'none';
+        }
+    });
+
+});
+
+
+// ================== Manga Detail / Reader helpers ==================
+// (Các handler này dùng DOMContentLoaded để đảm bảo jQuery (nếu cần) đã load
+//  bởi template child (ví dụ: manga_detail.html) trước khi gọi chúng.)
+
+// Helper: lấy mangaId theo nhiều fallback (không phá cấu trúc template hiện tại)
+function detectMangaId() {
+    // 1) cố gắng lấy từ element header data-manga-id (nếu template sau này có thêm)
+    const header = document.querySelector('.manga-detail-header');
+    if (header && header.dataset && header.dataset.mangaId) {
+        return header.dataset.mangaId;
+    }
+
+    // 2) fallback: nếu header có data-cover-url dạng /covers/<MANGAID>/..., tách ra
+    if (header && header.getAttribute) {
+        const coverUrl = header.getAttribute('data-cover-url') || header.dataset.coverUrl;
+        if (coverUrl && coverUrl.indexOf('/covers/') !== -1) {
+            try {
+                const parts = coverUrl.split('/covers/')[1].split('/');
+                if (parts && parts.length > 0) return parts[0];
+            } catch (e) {
+                // ignore
+            }
+        }
+    }
+
+    // 3) fallback: lấy từ path /manga/<id>
+    const m = window.location.pathname.match(/\/manga\/([0-9a-fA-F\-]{36})/);
+    if (m) return m[1];
+
+    // 4) không tìm được
+    return null;
+}
+
+// Hàm load chapters (giữ logic cũ, trả về bảng)
+function loadChapters(sortOrder) {
+    const mangaId = detectMangaId();
+
+    if (!mangaId) {
+        const cl = document.getElementById('chapter-list');
+        if (cl) cl.innerHTML = '<p class="text-center text-gray">Cannot determine manga id.</p>';
+        return;
+    }
+
+    const noMsg = document.getElementById('no-chapters-msg');
+    const listEl = document.getElementById('chapter-list');
+    if (noMsg) noMsg.style.display = '';
+    if (listEl) listEl.innerHTML = '<p class="text-center text-gray">Loading chapters...</p>';
+
+    // Use jQuery's $.get if available (the endpoint expects JSON in the project's routes),
+    // otherwise fallback to fetch.
+    const url = `/reader/${mangaId}/chapters?sort=${encodeURIComponent(sortOrder)}`;
+
+    if (window.jQuery && typeof window.jQuery.get === 'function') {
+        // jQuery path (keeps original style)
+        $.get(url, function (data) {
+            if (noMsg) noMsg.style.display = 'none';
+            if (!data || !data.has_chapters) {
+                if (listEl) listEl.innerHTML = '<p class="text-center text-gray">No chapters available for this manga yet.</p>';
                 return;
             }
 
-            // Đặt chiều rộng của pop-up bằng chiều rộng của search box
-            const searchBoxWidth = searchBox.getBoundingClientRect().width;
-            searchPopup.style.width = `${searchBoxWidth}px`;
-
-            try {
-                // Gửi 2 yêu cầu API song song với Promise.all
-                const [mangaResponse, creatorsResponse] = await Promise.all([
-                    // SỬA LỖI TẠI ĐÂY: Sử dụng đúng endpoint `/search`
-                    fetch(`/search?title=${encodeURIComponent(query)}`),
-                    fetch(`/search_creators?query=${encodeURIComponent(query)}`)
-                ]);
-
-                if (!mangaResponse.ok || !creatorsResponse.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const mangaResults = await mangaResponse.json();
-                const creatorsResults = await creatorsResponse.json();
-
-                let htmlContent = '';
-
-                // === Phần hiển thị kết quả Manga ===
-                if (mangaResults.length > 0) {
-                    htmlContent += '<div class="search-group-title">Manga</div>';
-                    mangaResults.forEach(r => {
-                        htmlContent += `
-                            <a href="/manga/${r.id}" class="search-result-item">
-                                <img src="${r.cover_url}" alt="${r.title}" class="search-result-cover">
-                                <div class="search-result-info">
-                                    <span class="search-result-title">${r.title}</span>
-                                    <div class="search-result-stats">
-                                        ⭐ ${r.rating} | ❤️ ${r.follows}
-                                    </div>
-                                    <div class="search-result-status">
-                                        <span class="status-dot" data-status="${r.status.toLowerCase()}"></span> ${r.status}
-                                    </div>
-                                </div>
-                            </a>
-                        `;
-                    });
-                }
-
-                // === Phần hiển thị kết quả Creator ===
-                if (creatorsResults.length > 0) {
-                    htmlContent += '<div class="search-group-title">Creators</div>';
-                    creatorsResults.forEach(creator => {
-                        htmlContent += `
-                            <a href="/creator/${creator.creator_id}" class="search-result-item creator-item">
-                                <i class="bi bi-person-circle search-icon"></i>
-                                <span class="search-result-title">${creator.name}</span>
-                            </a>
-                        `;
-                    });
-                }
-
-                // Hiển thị kết quả hoặc thông báo không tìm thấy
-                if (htmlContent) {
-                    searchPopup.innerHTML = htmlContent;
-                    searchPopup.style.display = 'block';
-
-                    // Set status dot colors cho manga
-                    document.querySelectorAll('.status-dot').forEach(dot => {
-                        let status = dot.getAttribute('data-status').toLowerCase();
-                        switch (status) {
-                            case "ongoing": dot.style.backgroundColor = "#00cc00"; break;
-                            case "canceled": dot.style.backgroundColor = "#ff0000"; break;
-                            case "hiatus": dot.style.backgroundColor = "#cc9900"; break;
-                            case "completed": dot.style.backgroundColor = "#0099ff"; break;
-                            default: dot.style.backgroundColor = "#999999";
-                        }
-                    });
-
+            // data.chapters is expected to be an array of { chapter_number, translations: [...] }
+            let html = '<table class="chapter-table"><thead><tr><th>Chapter Number</th><th>Translations</th></tr></thead><tbody>';
+            data.chapters.forEach(chapter => {
+                html += `<tr class="chapter-row"><td>${chapter.chapter_number}</td><td>`;
+                if (!Array.isArray(chapter.translations) || chapter.translations.length === 0) {
+                    html += 'No translations available';
                 } else {
-                    searchPopup.innerHTML = '<div class="no-results">Không có kết quả nào.</div>';
-                    searchPopup.style.display = 'block';
+                    chapter.translations
+                        .filter(trans => trans.lang === 'en' || trans.lang === 'vi')
+                        .forEach(trans => {
+                            const readClass = trans.read ? 'read' : 'unread';
+                            html += `<div class="chapter-subrow">
+                   <a href="/reader/${mangaId}/${trans.chapter_id}" class="${readClass}">
+                   ${trans.lang.toUpperCase()}
+                   </a>
+                 </div>`;
+                        });
+
                 }
-
-            } catch (error) {
-                console.error('Search failed:', error);
-                searchPopup.style.display = 'none';
+                html += '</td></tr>';
+            });
+            html += '</tbody></table>';
+            if (listEl) listEl.innerHTML = html;
+        }).fail(function () {
+            if (listEl) listEl.innerHTML = '<p class="text-center text-gray">Failed to load chapters.</p>';
+        });
+    } else {
+        // fetch fallback
+        fetch(url).then(res => {
+            if (!res.ok) throw new Error('Network error');
+            return res.json();
+        }).then(data => {
+            if (noMsg) noMsg.style.display = 'none';
+            if (!data || !data.has_chapters) {
+                if (listEl) listEl.innerHTML = '<p class="text-center text-gray">No chapters available for this manga yet.</p>';
+                return;
             }
-        };
+            let html = '<table class="chapter-table"><thead><tr><th>Chapter Number</th><th>Translations</th></tr></thead><tbody>';
+            (data.chapters || []).forEach(chapter => {
+                html += `<tr class="chapter-row"><td>${chapter.chapter_number}</td><td>`;
+                if (!Array.isArray(chapter.translations) || chapter.translations.length === 0) {
+                    html += 'No translations available';
+                } else {
+                    chapter.translations.forEach(trans => {
+                        const readClass = trans.read ? 'read' : 'unread';
+                        html += `<div class="chapter-subrow"><a href="/reader/${mangaId}/${trans.chapter_id}" class="${readClass}">${(trans.lang || '').toUpperCase()}</a></div>`;
+                    });
+                }
+                html += '</td></tr>';
+            });
+            html += '</tbody></table>';
+            if (listEl) listEl.innerHTML = html;
+        }).catch(() => {
+            if (listEl) listEl.innerHTML = '<p class="text-center text-gray">Failed to load chapters.</p>';
+        });
+    }
+}
 
-        // Gắn lại event listener cho searchBox, sử dụng debounce
-        searchBox.addEventListener('input', debounce(performSearch, 500));
+// Các hành vi liên quan đến reader / start / continue (được bind sau khi DOM & scripts (jQuery) load)
+document.addEventListener('DOMContentLoaded', function () {
+    // Start reading => show lang modal populated from /reader/<manga>/available-langs
+    const startBtn = document.getElementById('start-reading');
+    if (startBtn) {
+        startBtn.addEventListener('click', function (e) {
+            const mangaId = this.dataset.mangaId || detectMangaId();
+            if (!mangaId) return;
 
+            // Fetch available langs and populate modal radios
+            fetch(`/reader/${mangaId}/available-langs`)
+                .then(res => res.json())
+                .then(json => {
+                    const langs = json.langs || [];
+                    const form = document.getElementById('lang-form');
+                    if (!form) return;
+                    form.innerHTML = '';
+                    // Prefer en/vi ordering
+                    const preferred = ['en', 'vi'];
+                    const sorted = langs.slice().sort((a, b) => {
+                        const ai = preferred.indexOf(a) >= 0 ? preferred.indexOf(a) : preferred.length;
+                        const bi = preferred.indexOf(b) >= 0 ? preferred.indexOf(b) : preferred.length;
+                        if (ai !== bi) return ai - bi;
+                        return a.localeCompare(b);
+                    });
+                    sorted.forEach((lang, idx) => {
+                        const div = document.createElement('div');
+                        div.className = 'form-check';
+                        div.innerHTML = `<input class="form-check-input" type="radio" name="lang" id="lang_${idx}" value="${lang}" ${idx === 0 ? 'checked' : ''}>
+                                         <label class="form-check-label" for="lang_${idx}">${lang.toUpperCase()}</label>`;
+                        form.appendChild(div);
+                    });
+                    const modalEl = document.getElementById('lang-modal');
+                    if (modalEl) {
+                        const modal = new bootstrap.Modal(modalEl);
+                        modal.show();
 
-        searchBox.addEventListener('blur', function () {
-            // Chỉ thu nhỏ lại nếu không có chữ bên trong
-            if (searchBox.value.trim() === '') {
-                searchBox.classList.remove('expanded');
+                        // attach handler for submit
+                        const submitBtn = document.getElementById('submit-lang');
+                        if (submitBtn) {
+                            // remove previous listeners by cloning
+                            const newBtn = submitBtn.cloneNode(true);
+                            submitBtn.parentNode.replaceChild(newBtn, submitBtn);
+                            newBtn.addEventListener('click', () => {
+                                const selected = document.querySelector('input[name="lang"]:checked');
+                                if (selected) {
+                                    window.location.href = `/reader/${mangaId}/start?lang=${selected.value}`;
+                                }
+                            });
+                        }
+                    }
+                })
+                .catch(err => {
+                    console.error('Failed to fetch available langs', err);
+                });
+        });
+    }
+
+    // Continue reading (authenticated)
+    const continueBtn = document.getElementById('continue-reading');
+    if (continueBtn) {
+        continueBtn.addEventListener('click', () => {
+            const mangaId = continueBtn.dataset.mangaId || detectMangaId();
+            if (!mangaId) return;
+            fetch(`/reader/${mangaId}/continue`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.chapter_id) {
+                        window.location.href = `/reader/${mangaId}/${data.chapter_id}`;
+                    } else {
+                        // fallback: go to manga page or start
+                        window.location.href = `/manga/${mangaId}`;
+                    }
+                }).catch(() => {
+                    window.location.href = `/manga/${mangaId}`;
+                });
+        });
+    }
+
+    // Continue reading (guest) -> show login modal
+    const continueGuest = document.getElementById('continue-reading-guest');
+    if (continueGuest) {
+        continueGuest.addEventListener('click', () => {
+            const modal = new bootstrap.Modal(document.getElementById('login-required-modal'));
+            modal.show();
+        });
+    }
+
+    // Tabs click (vanilla) - keep compatibility with existing tab HTML
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', function (e) {
+            e.preventDefault();
+            const selectedTab = this.dataset.tab;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            const pane = document.getElementById(selectedTab);
+            if (pane) pane.classList.add('active');
+
+            if (selectedTab === 'chapters') {
+                // default sort asc
+                loadChapters('asc');
             }
         });
+    });
 
-        document.addEventListener('click', function (e) {
-            if (!searchBox.contains(e.target) && !searchPopup.contains(e.target)) {
-                searchPopup.style.display = 'none';
-            }
-        });
+    // Sort buttons (vanilla)
+    const sortAsc = document.getElementById('sort-asc');
+    const sortDesc = document.getElementById('sort-desc');
+    if (sortAsc) sortAsc.addEventListener('click', () => loadChapters('asc'));
+    if (sortDesc) sortDesc.addEventListener('click', () => loadChapters('desc'));
 
+    // Initial load of chapters if currently on chapters tab
+    const activeTab = document.querySelector('.tab.active');
+    if (activeTab && activeTab.dataset && activeTab.dataset.tab === 'chapters') {
+        loadChapters('asc');
     }
 });
+
 === Folder: app\templates ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
@@ -21025,7 +21468,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="manga-detail-container">
     <div class="manga-main">
         <!-- Header Section -->
-        <div class="manga-detail-header" data-cover-url="{{ manga_cover_url }}">
+        <div class="manga-detail-header" data-manga-id="{{ manga.MangaId }}" data-cover-url="{{ manga_cover_url }}">
+
             <div class="manga-cover-thumbnail">
                 <img src="{{ manga_cover_url }}" alt="Cover of {{ manga.TitleEn }}" class="cover-img">
             </div>
@@ -21113,16 +21557,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <div class="tab-content">
             <div class="tab-pane active" id="chapters">
-                {% if chapters %}
-                <h2>Chapters</h2>
-                <ul>
-                    {% for chapter in chapters %}
-                    <li>{{ chapter.Title }} - {{ chapter.ChapterNumber }}</li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <p class="text-center text-gray">This feature is under development.</p>
-                {% endif %}
+                <div class="chapter-controls">
+                    <button id="sort-asc" class="btn btn-secondary btn-sm me-2">Asc</button>
+                    <button id="sort-desc" class="btn btn-secondary btn-sm">Desc</button>
+                </div>
+                <div id="chapter-list" class="chapter-list">
+                    <p class="text-center text-gray" id="no-chapters-msg">Loading chapters...</p>
+                </div>
             </div>
 
             <div class="tab-pane" id="comments">
@@ -21365,13 +21806,13 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block content %}
 <div class="reader-container py-4 text-white">
     <div class="reader-header mb-3">
-        <a href="{{ url_for('main.manga_detail', manga_id=manga.MangaId) }}" class="btn btn-outline-light me-2">← Back
+        <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}" class="btn btn-outline-light me-2">← Back
             to Manga</a>
         <h2 class="d-inline">{{ manga.TitleEn }} - Vol. {{ chapter.Volume or 'N/A' }} Ch. {{ chapter.ChapterNumber }}:
             {{ chapter.Title or 'Untitled' }}</h2>
     </div>
 
-    <div id="long-strip" class="long-strip overflow-auto bg-dark p-3 rounded" style="height: 70vh;">
+    <div id="long-strip" class="long-strip overflow-auto bg-dark p-3 rounded" style="height: 90vh;">
         <div id="loading-spinner" class="text-center py-5">
             <div class="spinner-border text-primary" role="status"></div>
             <p>Loading chapter...</p>

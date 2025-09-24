@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, redirect, url_for, request, jsonify, flash
 from flask_login import login_required, current_user
-from ..reader_controller import get_chapter, get_first_chapter, get_next_chapter, get_prev_chapter, save_reading_history, get_available_langs, get_continue_chapter
+from ..reader_controller import get_chapter, get_first_chapter, get_next_chapter, get_prev_chapter, save_reading_history, get_available_langs, get_continue_chapter, get_chapter_list
 from app.models import Chapter, ReadingHistory, Manga
 from uuid import uuid4
 import requests
@@ -89,3 +89,26 @@ def save_history():
     data = request.json
     save_reading_history(current_user.UserId, data['manga_id'], data['chapter_id'], data.get('last_page', 0))
     return jsonify({'success': True})
+
+@reader.route('/<uuid:manga_id>/chapters', methods=['GET'])
+def get_chapters(manga_id):
+    sort_order = request.args.get('sort', 'asc')
+    chapters = get_chapter_list(manga_id, sort_order)
+    has_chapters = len(chapters) > 0
+    user_id = current_user.UserId if current_user.is_authenticated else None
+    read_chapters = set()
+    if user_id:
+        read_chapters = set(r.ChapterId for r in db.session.query(ReadingHistory.ChapterId).filter_by(UserId=user_id, MangaId=str(manga_id)).all())
+    
+    chapter_data = []
+    for chapter_num, chapters_by_num in chapters.items():
+        translations = []
+        for chapter in chapters_by_num:
+            translations.append({
+                "lang": chapter.TranslatedLang,
+                "chapter_id": chapter.ChapterId,
+                "read": chapter.ChapterId in read_chapters
+            })
+        chapter_data.append({"chapter_number": chapter_num, "translations": translations})
+    
+    return jsonify({"chapters": chapter_data, "has_chapters": has_chapters})

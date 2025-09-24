@@ -1,4 +1,3 @@
-# app/reader_controller.py (full updated file)
 from . import db
 from .models import Chapter, ReadingHistory, Manga
 from sqlalchemy import func
@@ -6,23 +5,31 @@ from uuid import uuid4
 from datetime import datetime
 import requests
 
-def sync_chapters(manga_id):
+def sync_chapters(manga_id, timeout=5):
+    """
+    Best-effort: đồng bộ chapters từ MangaDex. 
+    IMPORTANT: do NOT call this on every page request - call it only when DB empty or via background job.
+    """
     try:
         params = {
             "translatedLanguage[]": ["en", "vi"],
             "limit": 100
         }
-        response = requests.get(
+        resp = requests.get(
             f"https://api.mangadex.org/manga/{manga_id}/feed",
-            params=params
+            params=params,
+            timeout=timeout
         )
-        response.raise_for_status()
-        data = response.json()
+        resp.raise_for_status()
+        data = resp.json()
         chapters = data.get("data", [])
-        
+
+        new_added = False
         for chap in chapters:
-            chapter_id = chap["id"]
-            attributes = chap["attributes"]
+            chapter_id = chap.get("id")
+            attributes = chap.get("attributes", {})
+            if not chapter_id:
+                continue
             existing = db.session.query(Chapter).filter_by(ChapterId=chapter_id).first()
             if not existing:
                 new_chapter = Chapter(
@@ -41,28 +48,68 @@ def sync_chapters(manga_id):
                     UpdatedAt=attributes.get("updatedAt")
                 )
                 db.session.add(new_chapter)
-        db.session.commit()
+                new_added = True
+
+        if new_added:
+            db.session.commit()
         return True
     except Exception as e:
-        print(f"Error syncing chapters for manga {manga_id}: {str(e)}")
+        # an toàn: rollback và log
+        try:
+            db.session.rollback()
+        except:
+            pass
+        print(f"[sync_chapters] Error syncing chapters for {manga_id}: {e}")
         return False
+
 
 def get_available_langs(manga_id):
     manga_id_str = str(manga_id)
-    sync_chapters(manga_id_str)
+    # **Guard**: chỉ sync khi DB không có chapter nào cho manga này
+    exists = db.session.query(Chapter).filter(Chapter.MangaId == manga_id_str).first()
+    if not exists:
+        sync_chapters(manga_id_str)
+
     chapters = db.session.query(Chapter).filter(
         Chapter.MangaId == manga_id_str,
         Chapter.TranslatedLang.in_(['en', 'vi']),
         Chapter.IsUnavailable == False
     ).order_by(Chapter.ChapterNumber.asc()).all()
-    
-    print(f"Found {len(chapters)} chapters for manga {manga_id_str}")
-    for chap in chapters:
-        print(f"Chapter {chap.ChapterNumber}, Lang: {chap.TranslatedLang}, IsUnavailable: {chap.IsUnavailable}")
-    
+
     langs = sorted(list(set(c.TranslatedLang for c in chapters)))
-    print(f"Available languages for manga {manga_id_str}: {langs}")
     return langs
+
+
+def get_chapter_list(manga_id, sort_order='asc'):
+    manga_id_str = str(manga_id)
+
+    # **Guard**: không gọi sync vô tội vạ
+    exists = db.session.query(Chapter).filter(Chapter.MangaId == manga_id_str).first()
+    if not exists:
+        sync_chapters(manga_id_str)
+
+    chapters = db.session.query(Chapter).filter(
+        Chapter.MangaId == manga_id_str,
+        Chapter.IsUnavailable == False
+    ).all()
+
+    # Group chapters by ChapterNumber (giữ logic cũ)
+    chapters_by_num = {}
+    for chap in chapters:
+        if chap.ChapterNumber not in chapters_by_num:
+            chapters_by_num[chap.ChapterNumber] = []
+        chapters_by_num[chap.ChapterNumber].append(chap)
+
+    # Sort by ChapterNumber: fallback an toàn khi chapter number không phải số
+    def chapter_key(item):
+        num = item[0]
+        try:
+            return float(str(num))
+        except Exception:
+            return str(num)
+
+    sorted_chapters = dict(sorted(chapters_by_num.items(), key=chapter_key, reverse=(sort_order == 'desc')))
+    return sorted_chapters
 
 def get_first_chapter(manga_id, lang):
     manga_id_str = str(manga_id)
@@ -157,3 +204,4 @@ def save_reading_history(user_id, manga_id, chapter_id, last_page):
         )
         db.session.add(history)
     db.session.commit()
+

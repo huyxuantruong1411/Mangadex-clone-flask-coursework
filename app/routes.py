@@ -567,9 +567,12 @@ def manga_detail(manga_id):
         print(f"Manga not found: {manga_id_str}")
         return render_template('error.html', message='Manga not found'), 404
 
-    # Kiểm tra chapters
-    available_langs = get_available_langs(manga_id_str)
-    has_chapters = len(available_langs) > 0
+    # Check DB directly (tránh gọi sync_chapters khi render)
+    has_chapters = db.session.query(Chapter).filter(
+        Chapter.MangaId == manga_id_str,
+        Chapter.IsUnavailable == False
+    ).count() > 0
+
     print(f"has_chapters for manga {manga_id_str}: {has_chapters}")  # Debug
 
     # --- cover logic (as in your original file) ---

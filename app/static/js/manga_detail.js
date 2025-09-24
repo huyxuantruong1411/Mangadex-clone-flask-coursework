@@ -228,4 +228,57 @@ document.addEventListener('DOMContentLoaded', () => {
             new bootstrap.Modal(document.getElementById('login-required-modal')).show();
         });
     }
+
+    $('.tab').on('click', function () {
+        const tab = $(this).data('tab');
+        $('.tab-pane').removeClass('active');
+        $(`#${tab}`).addClass('active');
+        if (tab === 'chapters') {
+            loadChapters('asc');
+        }
+    });
+
+    function loadChapters(sortOrder) {
+        const mangaId = $('.manga-detail-header').data('cover-url').split('/covers/')[1].split('/')[0];
+        $('#no-chapters-msg').show();
+        $('#chapter-list').html('<p class="text-center text-gray">Loading chapters...</p>');
+        $.get(`/reader/${mangaId}/chapters?sort=${sortOrder}`, function (data) {
+            $('#no-chapters-msg').hide();
+            if (!data.has_chapters) {
+                $('#chapter-list').html('<p class="text-center text-gray">No chapters available for this manga yet.</p>');
+                return;
+            }
+            let html = '<table class="chapter-table"><thead><tr><th>Chapter Number</th><th>Translations</th></tr></thead><tbody>';
+            data.chapters.forEach(chapter => {
+                html += `<tr class="chapter-row"><td>${chapter.chapter_number}</td><td>`;
+                if (chapter.translations.length === 0) {
+                    html += 'No translations available';
+                } else {
+                    chapter.translations.forEach(trans => {
+                        const readClass = trans.read ? 'read' : 'unread';
+                        html += `<div class="chapter-subrow"><a href="/reader/${mangaId}/${trans.chapter_id}" class="${readClass}">${trans.lang.toUpperCase()}</a></div>`;
+                    });
+                }
+                html += '</td></tr>';
+            });
+            html += '</tbody></table>';
+            $('#chapter-list').html(html);
+        }).fail(function () {
+            $('#chapter-list').html('<p class="text-center text-gray">Failed to load chapters.</p>');
+        });
+    }
+
+    // Handle sort buttons
+    $('#sort-asc').on('click', function () {
+        loadChapters('asc');
+    });
+
+    $('#sort-desc').on('click', function () {
+        loadChapters('desc');
+    });
+
+    // Initial load of chapters
+    if ($('.tab.active').data('tab') === 'chapters') {
+        loadChapters('asc');
+    }
 });
