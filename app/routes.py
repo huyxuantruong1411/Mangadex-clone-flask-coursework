@@ -8,6 +8,8 @@ from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta đ
 import requests
 from sqlalchemy import desc, func, or_
 
+from werkzeug.security import generate_password_hash
+
 from app.comment_routes import now
 from app.reader_controller import get_available_langs
 from .models import Chapter, Cover, Creator, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
@@ -939,6 +941,24 @@ def delete_user_rating(manga_id):
 # ======================
 # User routes
 # ======================
+@main.route("/profile/update", methods=["POST"])
+@login_required
+def update_profile():
+    username = request.form.get("username")
+    email = request.form.get("email")
+    password = request.form.get("password")
+
+    current_user.Username = username
+    current_user.Email = email
+    if password and password.strip():
+        current_user.PasswordHash = generate_password_hash(password)
+
+    db.session.commit()
+    flash("Profile updated successfully!", "success")
+    return redirect(url_for("main.profile", user_id=current_user.UserId))
+
+
+
 @main.route("/follow/<uuid:user_id>")
 def follow(user_id):
     return f"Follow user {user_id}"

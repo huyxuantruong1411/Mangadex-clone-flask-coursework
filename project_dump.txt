@@ -50,6 +50,16 @@
           "type": "file"
         },
         {
+          "name": "routes",
+          "type": "directory",
+          "children": [
+            {
+              "name": "user.py",
+              "type": "file"
+            }
+          ]
+        },
+        {
           "name": "routes.py",
           "type": "file"
         },
@@ -121,276 +131,6 @@
                 },
                 {
                   "name": "styles.css",
-                  "type": "file"
-                }
-              ]
-            },
-            {
-              "name": "flags",
-              "type": "directory",
-              "children": [
-                {
-                  "name": "af.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ar.png",
-                  "type": "file"
-                },
-                {
-                  "name": "az.png",
-                  "type": "file"
-                },
-                {
-                  "name": "be.png",
-                  "type": "file"
-                },
-                {
-                  "name": "bg.png",
-                  "type": "file"
-                },
-                {
-                  "name": "bn.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ca.png",
-                  "type": "file"
-                },
-                {
-                  "name": "cs.png",
-                  "type": "file"
-                },
-                {
-                  "name": "cv.png",
-                  "type": "file"
-                },
-                {
-                  "name": "da.png",
-                  "type": "file"
-                },
-                {
-                  "name": "de.png",
-                  "type": "file"
-                },
-                {
-                  "name": "el.png",
-                  "type": "file"
-                },
-                {
-                  "name": "en.png",
-                  "type": "file"
-                },
-                {
-                  "name": "eo.png",
-                  "type": "file"
-                },
-                {
-                  "name": "es-la.png",
-                  "type": "file"
-                },
-                {
-                  "name": "es.png",
-                  "type": "file"
-                },
-                {
-                  "name": "et.png",
-                  "type": "file"
-                },
-                {
-                  "name": "eu.png",
-                  "type": "file"
-                },
-                {
-                  "name": "fa.png",
-                  "type": "file"
-                },
-                {
-                  "name": "fi.png",
-                  "type": "file"
-                },
-                {
-                  "name": "flags-download.py",
-                  "type": "file"
-                },
-                {
-                  "name": "fr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ga.png",
-                  "type": "file"
-                },
-                {
-                  "name": "he.png",
-                  "type": "file"
-                },
-                {
-                  "name": "hi.png",
-                  "type": "file"
-                },
-                {
-                  "name": "hr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "hu.png",
-                  "type": "file"
-                },
-                {
-                  "name": "id.png",
-                  "type": "file"
-                },
-                {
-                  "name": "it.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ja-ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ja.png",
-                  "type": "file"
-                },
-                {
-                  "name": "jv.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ka.png",
-                  "type": "file"
-                },
-                {
-                  "name": "kk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ko-ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ko.png",
-                  "type": "file"
-                },
-                {
-                  "name": "la.png",
-                  "type": "file"
-                },
-                {
-                  "name": "lt.png",
-                  "type": "file"
-                },
-                {
-                  "name": "mn.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ms.png",
-                  "type": "file"
-                },
-                {
-                  "name": "my.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ne.png",
-                  "type": "file"
-                },
-                {
-                  "name": "nl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "no.png",
-                  "type": "file"
-                },
-                {
-                  "name": "pl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "pt-br.png",
-                  "type": "file"
-                },
-                {
-                  "name": "pt.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ru.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sq.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sv.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ta.png",
-                  "type": "file"
-                },
-                {
-                  "name": "te.png",
-                  "type": "file"
-                },
-                {
-                  "name": "th.png",
-                  "type": "file"
-                },
-                {
-                  "name": "tl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "tr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "uk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ur.png",
-                  "type": "file"
-                },
-                {
-                  "name": "uz.png",
-                  "type": "file"
-                },
-                {
-                  "name": "vi.png",
-                  "type": "file"
-                },
-                {
-                  "name": "zh-hk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "zh-ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "zh.png",
                   "type": "file"
                 }
               ]
@@ -571,6 +311,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   ├── list_routes.py
 │   ├── models.py
 │   ├── reader_controller.py
+│   ├── routes/
+│   │   └── user.py
 │   ├── routes.py
 │   ├── static/
 │   │   ├── assets/
@@ -589,73 +331,6 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── manga_detail.css
 │   │   │   ├── reader.css
 │   │   │   └── styles.css
-│   │   ├── flags/
-│   │   │   ├── af.png
-│   │   │   ├── ar.png
-│   │   │   ├── az.png
-│   │   │   ├── be.png
-│   │   │   ├── bg.png
-│   │   │   ├── bn.png
-│   │   │   ├── ca.png
-│   │   │   ├── cs.png
-│   │   │   ├── cv.png
-│   │   │   ├── da.png
-│   │   │   ├── de.png
-│   │   │   ├── el.png
-│   │   │   ├── en.png
-│   │   │   ├── eo.png
-│   │   │   ├── es-la.png
-│   │   │   ├── es.png
-│   │   │   ├── et.png
-│   │   │   ├── eu.png
-│   │   │   ├── fa.png
-│   │   │   ├── fi.png
-│   │   │   ├── flags-download.py
-│   │   │   ├── fr.png
-│   │   │   ├── ga.png
-│   │   │   ├── he.png
-│   │   │   ├── hi.png
-│   │   │   ├── hr.png
-│   │   │   ├── hu.png
-│   │   │   ├── id.png
-│   │   │   ├── it.png
-│   │   │   ├── ja-ro.png
-│   │   │   ├── ja.png
-│   │   │   ├── jv.png
-│   │   │   ├── ka.png
-│   │   │   ├── kk.png
-│   │   │   ├── ko-ro.png
-│   │   │   ├── ko.png
-│   │   │   ├── la.png
-│   │   │   ├── lt.png
-│   │   │   ├── mn.png
-│   │   │   ├── ms.png
-│   │   │   ├── my.png
-│   │   │   ├── ne.png
-│   │   │   ├── nl.png
-│   │   │   ├── no.png
-│   │   │   ├── pl.png
-│   │   │   ├── pt-br.png
-│   │   │   ├── pt.png
-│   │   │   ├── ro.png
-│   │   │   ├── ru.png
-│   │   │   ├── sk.png
-│   │   │   ├── sl.png
-│   │   │   ├── sq.png
-│   │   │   ├── sr.png
-│   │   │   ├── sv.png
-│   │   │   ├── ta.png
-│   │   │   ├── te.png
-│   │   │   ├── th.png
-│   │   │   ├── tl.png
-│   │   │   ├── tr.png
-│   │   │   ├── uk.png
-│   │   │   ├── ur.png
-│   │   │   ├── uz.png
-│   │   │   ├── vi.png
-│   │   │   ├── zh-hk.png
-│   │   │   ├── zh-ro.png
-│   │   │   └── zh.png
 │   │   └── js/
 │   │       ├── add_to_list.js
 │   │       ├── comments.js
@@ -748,7 +423,7 @@ OUTPUT_FILE = "project_dump.txt"
 
 def should_ignore_dir(dirname: str) -> bool:
     """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git"))
+    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags"))
 
 def build_tree_dict(root_dir: str) -> dict:
     """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
@@ -887,6 +562,16 @@ if __name__ == "__main__":
           "type": "file"
         },
         {
+          "name": "routes",
+          "type": "directory",
+          "children": [
+            {
+              "name": "user.py",
+              "type": "file"
+            }
+          ]
+        },
+        {
           "name": "routes.py",
           "type": "file"
         },
@@ -958,276 +643,6 @@ if __name__ == "__main__":
                 },
                 {
                   "name": "styles.css",
-                  "type": "file"
-                }
-              ]
-            },
-            {
-              "name": "flags",
-              "type": "directory",
-              "children": [
-                {
-                  "name": "af.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ar.png",
-                  "type": "file"
-                },
-                {
-                  "name": "az.png",
-                  "type": "file"
-                },
-                {
-                  "name": "be.png",
-                  "type": "file"
-                },
-                {
-                  "name": "bg.png",
-                  "type": "file"
-                },
-                {
-                  "name": "bn.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ca.png",
-                  "type": "file"
-                },
-                {
-                  "name": "cs.png",
-                  "type": "file"
-                },
-                {
-                  "name": "cv.png",
-                  "type": "file"
-                },
-                {
-                  "name": "da.png",
-                  "type": "file"
-                },
-                {
-                  "name": "de.png",
-                  "type": "file"
-                },
-                {
-                  "name": "el.png",
-                  "type": "file"
-                },
-                {
-                  "name": "en.png",
-                  "type": "file"
-                },
-                {
-                  "name": "eo.png",
-                  "type": "file"
-                },
-                {
-                  "name": "es-la.png",
-                  "type": "file"
-                },
-                {
-                  "name": "es.png",
-                  "type": "file"
-                },
-                {
-                  "name": "et.png",
-                  "type": "file"
-                },
-                {
-                  "name": "eu.png",
-                  "type": "file"
-                },
-                {
-                  "name": "fa.png",
-                  "type": "file"
-                },
-                {
-                  "name": "fi.png",
-                  "type": "file"
-                },
-                {
-                  "name": "flags-download.py",
-                  "type": "file"
-                },
-                {
-                  "name": "fr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ga.png",
-                  "type": "file"
-                },
-                {
-                  "name": "he.png",
-                  "type": "file"
-                },
-                {
-                  "name": "hi.png",
-                  "type": "file"
-                },
-                {
-                  "name": "hr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "hu.png",
-                  "type": "file"
-                },
-                {
-                  "name": "id.png",
-                  "type": "file"
-                },
-                {
-                  "name": "it.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ja-ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ja.png",
-                  "type": "file"
-                },
-                {
-                  "name": "jv.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ka.png",
-                  "type": "file"
-                },
-                {
-                  "name": "kk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ko-ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ko.png",
-                  "type": "file"
-                },
-                {
-                  "name": "la.png",
-                  "type": "file"
-                },
-                {
-                  "name": "lt.png",
-                  "type": "file"
-                },
-                {
-                  "name": "mn.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ms.png",
-                  "type": "file"
-                },
-                {
-                  "name": "my.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ne.png",
-                  "type": "file"
-                },
-                {
-                  "name": "nl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "no.png",
-                  "type": "file"
-                },
-                {
-                  "name": "pl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "pt-br.png",
-                  "type": "file"
-                },
-                {
-                  "name": "pt.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ru.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sq.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "sv.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ta.png",
-                  "type": "file"
-                },
-                {
-                  "name": "te.png",
-                  "type": "file"
-                },
-                {
-                  "name": "th.png",
-                  "type": "file"
-                },
-                {
-                  "name": "tl.png",
-                  "type": "file"
-                },
-                {
-                  "name": "tr.png",
-                  "type": "file"
-                },
-                {
-                  "name": "uk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "ur.png",
-                  "type": "file"
-                },
-                {
-                  "name": "uz.png",
-                  "type": "file"
-                },
-                {
-                  "name": "vi.png",
-                  "type": "file"
-                },
-                {
-                  "name": "zh-hk.png",
-                  "type": "file"
-                },
-                {
-                  "name": "zh-ro.png",
-                  "type": "file"
-                },
-                {
-                  "name": "zh.png",
                   "type": "file"
                 }
               ]
@@ -1408,6 +823,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   ├── list_routes.py
 │   ├── models.py
 │   ├── reader_controller.py
+│   ├── routes/
+│   │   └── user.py
 │   ├── routes.py
 │   ├── static/
 │   │   ├── assets/
@@ -1426,73 +843,6 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── manga_detail.css
 │   │   │   ├── reader.css
 │   │   │   └── styles.css
-│   │   ├── flags/
-│   │   │   ├── af.png
-│   │   │   ├── ar.png
-│   │   │   ├── az.png
-│   │   │   ├── be.png
-│   │   │   ├── bg.png
-│   │   │   ├── bn.png
-│   │   │   ├── ca.png
-│   │   │   ├── cs.png
-│   │   │   ├── cv.png
-│   │   │   ├── da.png
-│   │   │   ├── de.png
-│   │   │   ├── el.png
-│   │   │   ├── en.png
-│   │   │   ├── eo.png
-│   │   │   ├── es-la.png
-│   │   │   ├── es.png
-│   │   │   ├── et.png
-│   │   │   ├── eu.png
-│   │   │   ├── fa.png
-│   │   │   ├── fi.png
-│   │   │   ├── flags-download.py
-│   │   │   ├── fr.png
-│   │   │   ├── ga.png
-│   │   │   ├── he.png
-│   │   │   ├── hi.png
-│   │   │   ├── hr.png
-│   │   │   ├── hu.png
-│   │   │   ├── id.png
-│   │   │   ├── it.png
-│   │   │   ├── ja-ro.png
-│   │   │   ├── ja.png
-│   │   │   ├── jv.png
-│   │   │   ├── ka.png
-│   │   │   ├── kk.png
-│   │   │   ├── ko-ro.png
-│   │   │   ├── ko.png
-│   │   │   ├── la.png
-│   │   │   ├── lt.png
-│   │   │   ├── mn.png
-│   │   │   ├── ms.png
-│   │   │   ├── my.png
-│   │   │   ├── ne.png
-│   │   │   ├── nl.png
-│   │   │   ├── no.png
-│   │   │   ├── pl.png
-│   │   │   ├── pt-br.png
-│   │   │   ├── pt.png
-│   │   │   ├── ro.png
-│   │   │   ├── ru.png
-│   │   │   ├── sk.png
-│   │   │   ├── sl.png
-│   │   │   ├── sq.png
-│   │   │   ├── sr.png
-│   │   │   ├── sv.png
-│   │   │   ├── ta.png
-│   │   │   ├── te.png
-│   │   │   ├── th.png
-│   │   │   ├── tl.png
-│   │   │   ├── tr.png
-│   │   │   ├── uk.png
-│   │   │   ├── ur.png
-│   │   │   ├── uz.png
-│   │   │   ├── vi.png
-│   │   │   ├── zh-hk.png
-│   │   │   ├── zh-ro.png
-│   │   │   └── zh.png
 │   │   └── js/
 │   │       ├── add_to_list.js
 │   │       ├── comments.js
@@ -1531,146 +881,6 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── run.py
 ├── test-api.py
 └── test-connection.py
-
-
-=== Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-config.py
-
-# Virtual environment
-venv/
-.env/
-
-# Flask cache
-instance/
-*.db
-*.sqlite3
-
-# IDE / OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
-import urllib
-
-class Config:
-    SECRET_KEY = "secret_key_demo"
-
-    DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = "HEDI-SNOWY\SQLEXPRESS"
-    DATABASE = "MangaLibrary"
-    connection_string = (
-        f"DRIVER={{{DRIVER}}};"
-        f"SERVER={SERVER};"
-        f"DATABASE={DATABASE};"
-        f"Trusted_Connection=yes;"
-    )
-
-    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\dump.py ---
-import os
-import json
-
-OUTPUT_FILE = "project_dump.txt"
-
-def should_ignore_dir(dirname: str) -> bool:
-    """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git"))
-
-def build_tree_dict(root_dir: str) -> dict:
-    """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
-    tree = {"name": os.path.basename(root_dir), "type": "directory", "children": []}
-
-    if should_ignore_dir(os.path.basename(root_dir)):
-        return tree
-
-    try:
-        with os.scandir(root_dir) as it:
-            for entry in sorted(it, key=lambda e: e.name):
-                if entry.is_dir():
-                    if should_ignore_dir(entry.name):
-                        continue
-                    tree["children"].append(build_tree_dict(entry.path))
-                elif entry.is_file():
-                    tree["children"].append({"name": entry.name, "type": "file"})
-    except PermissionError:
-        pass
-    return tree
-
-def build_tree_ascii(root_dir: str, prefix: str = "") -> str:
-    """Tạo cây thư mục dạng text giống `tree` (chỉ bỏ qua venv)."""
-    entries = []
-    try:
-        with os.scandir(root_dir) as it:
-            for entry in sorted(it, key=lambda e: e.name):
-                if entry.is_dir():
-                    if should_ignore_dir(entry.name):
-                        continue
-                    entries.append(entry)
-                elif entry.is_file():
-                    entries.append(entry)
-    except PermissionError:
-        return ""
-
-    lines = []
-    for i, entry in enumerate(entries):
-        connector = "└── " if i == len(entries) - 1 else "├── "
-        if entry.is_dir():
-            lines.append(prefix + connector + entry.name + "/")
-            extension = "    " if i == len(entries) - 1 else "│   "
-            lines.extend(build_tree_ascii(entry.path, prefix + extension).splitlines())
-        else:
-            lines.append(prefix + connector + entry.name)
-    return "\n".join(lines)
-
-def dump_project(root_dir: str, output_file: str):
-    with open(output_file, "w", encoding="utf-8") as out:
-        # Xuất cây thư mục dạng JSON
-        tree_dict = build_tree_dict(root_dir)
-        out.write("=== Project Tree (JSON) ===\n")
-        out.write(json.dumps(tree_dict, indent=2, ensure_ascii=False))
-        out.write("\n\n")
-
-        # Xuất cây thư mục dạng ASCII
-        out.write("=== Project Tree (ASCII) ===\n")
-        out.write(root_dir + "/\n")
-        out.write(build_tree_ascii(root_dir))
-        out.write("\n\n")
-
-        # Xuất nội dung tất cả file
-        for dirpath, dirnames, filenames in os.walk(root_dir):
-            # Lọc thư mục
-            dirnames[:] = [d for d in dirnames if not should_ignore_dir(d)]
-
-            rel_path = os.path.relpath(dirpath, root_dir)
-            if rel_path == ".":
-                rel_path = ""
-            out.write(f"\n=== Folder: {rel_path or root_dir} ===\n")
-
-            for filename in filenames:
-                file_path = os.path.join(dirpath, filename)
-                out.write(f"\n--- File: {file_path} ---\n")
-                try:
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        out.write(f.read())
-                except Exception as e:
-                    out.write(f"[Lỗi đọc file: {e}]\n")
-
-if __name__ == "__main__":
-    current_dir = os.getcwd()
-    dump_project(current_dir, OUTPUT_FILE)
-    print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
-
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\README.md ---
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\requirements.txt ---
@@ -4005,7 +3215,9 @@ def create_app():
     from .comment_routes import comment_bp as comment_blueprint
     from .list_routes import list_bp as list_blueprint
     from .blueprints.reader import reader as reader_blueprint
-
+    from .user import user_bp
+    
+    app.register_blueprint(user_bp, url_prefix="/user")
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
     app.register_blueprint(main_blueprint)
     app.register_blueprint(manga_blueprint, url_prefix='/manga')
@@ -4131,6 +3343,35 @@ def get_chapters(manga_id):
         chapter_data.append({"chapter_number": chapter_num, "translations": translations})
     
     return jsonify({"chapters": chapter_data, "has_chapters": has_chapters})
+=== Folder: app\routes ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes\user.py ---
+from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask_login import login_required, current_user
+from werkzeug.security import generate_password_hash
+from app import db
+from app.models import User
+
+user_bp = Blueprint("user", __name__)
+
+@user_bp.route("/profile/update", methods=["POST"])
+@login_required
+def update_profile():
+    username = request.form.get("username")
+    email = request.form.get("email")
+    password = request.form.get("password")
+
+    # Update các field
+    current_user.Username = username
+    current_user.Email = email
+
+    if password and password.strip():
+        current_user.PasswordHash = generate_password_hash(password)
+
+    db.session.commit()
+    flash("Profile updated successfully", "success")
+    return redirect(url_for("main.profile", user_id=current_user.UserId))
+
 === Folder: app\static ===
 
 === Folder: app\static\assets ===
@@ -18401,343 +17642,6 @@ a {
 .alert-container .alert {
   margin-bottom: 10px;
 }
-=== Folder: app\static\flags ===
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\af.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ar.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\az.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\be.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\bg.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\bn.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ca.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\cs.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\cv.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\da.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\de.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\el.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\en.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\eo.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\es-la.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\es.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\et.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\eu.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\fa.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\fi.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\flags-download.py ---
-import os
-import requests
-
-# Danh sách iso hợp lệ
-VALID_ISO_ALPHA2 = set([
-    "af","ax","al","dz","as","ad","ao","ai","aq","ag","ar","am","aw","au","at","az",
-    "bs","bh","bd","bb","by","be","bz","bj","bm","bt","bo","bq","ba","bw","bv","br",
-    "io","bn","bg","bf","bi","kh","cm","ca","cv","ky","cf","td","cl","cn","cx","cc",
-    "co","km","cg","cd","ck","cr","ci","hr","cu","cw","cy","cz","dk","dj","dm","do",
-    "ec","eg","sv","gq","er","ee","et","fk","fo","fj","fi","fr","gf","pf","tf","ga",
-    "gm","ge","de","gh","gi","gr","gl","gd","gp","gu","gt","gg","gn","gw","gy","ht",
-    "hm","va","hn","hk","hu","is","in","id","ir","iq","ie","im","il","it","jm","jp",
-    "je","jo","kz","ke","ki","kp","kr","kw","kg","la","lv","lb","ls","lr","ly","li",
-    "lt","lu","mo","mk","mg","mw","my","mv","ml","mt","mh","mq","mr","mu","yt","mx",
-    "fm","md","mc","mn","me","ms","ma","mz","mm","na","nr","np","nl","nc","nz","ni",
-    "ne","ng","nu","nf","mp","no","om","pk","pw","ps","pa","pg","py","pe","ph","pn",
-    "pl","pt","pr","qa","re","ro","ru","rw","bl","sh","kn","lc","mf","pm","vc","ws",
-    "sm","st","sa","sn","rs","sc","sl","sg","sx","sk","si","sb","so","za","gs","ss",
-    "es","lk","sd","sr","sj","se","ch","sy","tw","tj","tz","th","tl","tg","tk","to",
-    "tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","uy","uz","vu","ve","vn",
-    "vg","vi","wf","eh","ye","zm","zw"
-])
-
-# mapping langcode -> country ISO alpha-2
-lang_to_country = {
-    "tr": "tr",
-    "hu": "hu",
-    "de": "de",
-    "es-la": "es",
-    "eu": "es",
-    "jv": "id",
-    "ja-ro": "jp",
-    "cs": "cz",
-    "da": "dk",
-    "sq": "al",
-    "be": "by",
-    "he": "il",
-    "af": "za",
-    "tl": "ph",
-    "ka": "ge",
-    "ko": "kr",
-    "te": "in",
-    "it": "it",
-    "nl": "nl",
-    "vi": "vn",
-    "ta": "in",
-    "zh-ro": "cn",
-    "ro": "ro",
-    "la": "la",  # 'la' là Latin, không là quốc gia → có thể bỏ
-    "ca": "es",
-    "mn": "mn",
-    "bg": "bg",
-    "uk": "ua",
-    "zh": "cn",
-    "en": "gb",
-    "ar": "sa",
-    "hr": "hr",
-    "th": "th",
-    "zh-hk": "hk",
-    "bn": "bd",
-    "el": "gr",
-    "ur": "pk",
-    "pl": "pl",
-    "lt": "lt",
-    "cv": "ru",
-    "fr": "fr",
-    "eo": "es",  # Esperanto → dùng Spain như fallback?
-    "id": "id",
-    "et": "ee",
-    "pt": "pt",
-    "my": "mm",
-    "ga": "ie",
-    "??": None,
-    "az": "az",
-    "kk": "kz",
-    "ms": "my",
-    "sl": "si",
-    "ru": "ru",
-    "ne": "np",
-    "uz": "uz",
-    "fa": "ir",
-    "ja": "jp",
-    "hi": "in",
-    "sk": "sk",
-    "pt-br": "br",
-    "es": "es",
-    "sv": "se",
-    "no": "no",
-    "sr": "rs",
-    "ko-ro": "kr",
-    "fi": "fi"
-}
-
-# Kích thước thử, theo flagcdn API
-SIZE_VARIANTS = [
-    "16x12",
-    "32x24",
-    "64x48",
-    "w20",
-    "w40",
-    "w80"
-]
-
-output_dir = os.path.dirname(os.path.abspath(__file__))
-
-for lang, country in lang_to_country.items():
-    if country is None:
-        print(f"⚠️ No mapping for lang '{lang}' — skipping.")
-        continue
-
-    iso = country.lower()
-    if iso not in VALID_ISO_ALPHA2:
-        print(f"⚠️ ISO code '{iso}' invalid or not in list — lang '{lang}'.")
-        continue
-
-    success = False
-    for size in SIZE_VARIANTS:
-        if "x" in size:
-            url = f"https://flagcdn.com/{size}/{iso}.png"
-        else:  # w20, w40, etc
-            url = f"https://flagcdn.com/{size}/{iso}.png"
-
-        filename = os.path.join(output_dir, f"{lang}.png")
-        try:
-            r = requests.get(url, timeout=5)
-            if r.status_code == 200:
-                with open(filename, "wb") as f:
-                    f.write(r.content)
-                print(f"✅ Tải thành công lang '{lang}' (iso '{iso}') với size '{size}' → {filename}")
-                success = True
-                break
-            else:
-                print(f"   ❌ {lang}: size '{size}' → {url} trả về status {r.status_code}")
-        except Exception as e:
-            print(f"   ❌ {lang}: lỗi với url {url}: {e}")
-    if not success:
-        print(f"❌ Không tìm được ảnh cho lang '{lang}' — thử hết size.")
-
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\fr.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ga.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\he.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\hi.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\hr.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\hu.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\id.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\it.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ja-ro.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ja.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\jv.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ka.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\kk.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ko-ro.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ko.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\la.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\lt.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\mn.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ms.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\my.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ne.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\nl.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\no.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\pl.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\pt-br.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\pt.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ro.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ru.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sk.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sl.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sq.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sr.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\sv.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ta.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\te.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\th.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\tl.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\tr.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\uk.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\ur.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\uz.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\vi.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\zh-hk.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\zh-ro.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\flags\zh.png ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
-
 === Folder: app\static\js ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\add_to_list.js ---

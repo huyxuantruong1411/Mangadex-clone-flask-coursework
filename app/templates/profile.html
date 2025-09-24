@@ -25,6 +25,12 @@
         <a href="{{ url_for('main.follow', user_id=user.UserId) }}" class="btn btn-signin">Follow</a>
         <a href="{{ url_for('main.message', user_id=user.UserId) }}" class="btn btn-secondary">Message</a>
         <a href="{{ url_for('main.report', user_id=user.UserId) }}" class="btn btn-dark">Report</a>
+        <!-- NEW: Edit Profile -->
+        {% if current_user.is_authenticated and current_user.UserId == user.UserId %}
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+            Edit Profile
+        </button>
+        {% endif %}
     </div>
 
     <!-- Info Section -->
@@ -51,6 +57,39 @@
                 {% endif %}
             </span>
         </div>
+    </div>
+</div>
+
+<!-- Modal Edit Profile -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="POST" action="{{ url_for('main.update_profile') }}">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" value="{{ user.Username }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" value="{{ user.Email }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">New Password</label>
+                        <input type="password" class="form-control" name="password"
+                            placeholder="Leave blank to keep current password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}
