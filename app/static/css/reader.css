@@ -1,0 +1,45 @@
+.reader-container {
+    max-width: 1200px;
+    /* Tăng từ 900px lên 1200px để rộng hơn */
+    margin: auto;
+    width: 100%;
+    /* Đảm bảo chiếm toàn bộ chiều rộng container */
+}
+
+.long-strip {
+    border: 1px solid #333;
+    height: 90vh;
+    /* Đảm bảo đồng bộ với template, có thể thử 100vh */
+    overflow-y: auto;
+    /* Chỉ cuộn dọc nếu cần */
+    position: relative;
+    /* Giúp điều chỉnh vị trí nếu cần */
+}
+
+.chapter-page {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    /* Đảm bảo ảnh tự điều chỉnh theo kích thước */
+    display: block;
+    margin: 0 auto 20px;
+    /* Tăng khoảng cách giữa các ảnh */
+}
+
+.reader-header h2 {
+    font-size: 1.8rem;
+    /* Tăng kích thước tiêu đề để phù hợp với không gian lớn hơn */
+}
+
+.reader-footer .progress {
+    background-color: #222;
+    height: 10px;
+    /* Tăng độ dày của thanh tiến độ */
+}
+
+.reader-footer button {
+    padding: 10px 20px;
+    /* Tăng kích thước nút */
+    font-size: 1.1rem;
+    /* Tăng cỡ chữ nút */
+}

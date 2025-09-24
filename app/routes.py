@@ -9,6 +9,7 @@ import requests
 from sqlalchemy import desc, func, or_
 
 from app.comment_routes import now
+from app.reader_controller import get_available_langs
 from .models import Chapter, Cover, Creator, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
 from . import db
 import os
@@ -559,9 +560,17 @@ def register():
 
 @manga.route('/<uuid:manga_id>')
 def manga_detail(manga_id):
-    manga = Manga.query.get(manga_id)
+    # Chuyển manga_id thành chuỗi UUID
+    manga_id_str = str(manga_id)
+    manga = Manga.query.get(manga_id_str)
     if not manga:
-        return "Manga not found", 404
+        print(f"Manga not found: {manga_id_str}")
+        return render_template('error.html', message='Manga not found'), 404
+
+    # Kiểm tra chapters
+    available_langs = get_available_langs(manga_id_str)
+    has_chapters = len(available_langs) > 0
+    print(f"has_chapters for manga {manga_id_str}: {has_chapters}")  # Debug
 
     # --- cover logic (as in your original file) ---
     cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
@@ -648,7 +657,8 @@ def manga_detail(manga_id):
                            comments=comments,
                            comments_pagination=comments_pagination,
                            comments_sort=sort,
-                           is_authenticated=current_user.is_authenticated)
+                           is_authenticated=current_user.is_authenticated,
+                           has_chapters=has_chapters)
 
 # ======================
 # Comment helpers

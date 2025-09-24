@@ -171,3 +171,61 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const startBtn = document.getElementById('start-reading');
+    if (startBtn) {
+        startBtn.addEventListener('click', () => {
+            const mangaId = startBtn.dataset.mangaId;
+            fetch(`/reader/${mangaId}/available-langs`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.langs.length === 0) {
+                        new bootstrap.Modal(document.getElementById('no-chapter-modal')).show();
+                        return;
+                    }
+                    // Show modal and populate radios
+                    const form = document.getElementById('lang-form');
+                    form.innerHTML = ''; // Clear
+                    data.langs.forEach(lang => {
+                        const div = document.createElement('div');
+                        div.className = 'form-check';
+                        div.innerHTML = `<input class="form-check-input" type="radio" name="lang" id="${lang}" value="${lang}">
+                                         <label class="form-check-label" for="${lang}">${lang.toUpperCase()}</label>`;
+                        form.appendChild(div);
+                    });
+                    const modal = new bootstrap.Modal(document.getElementById('lang-modal'));
+                    modal.show();
+
+                    document.getElementById('submit-lang').addEventListener('click', () => {
+                        const selected = document.querySelector('input[name="lang"]:checked');
+                        if (selected) {
+                            window.location.href = `/reader/${mangaId}/start?lang=${selected.value}`;
+                        }
+                    });
+                });
+        });
+    }
+
+    const continueBtn = document.getElementById('continue-reading');
+    if (continueBtn) {
+        continueBtn.addEventListener('click', () => {
+            const mangaId = continueBtn.dataset.mangaId;
+            fetch(`/reader/${mangaId}/continue`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.chapter_id) {
+                        window.location.href = `/reader/${mangaId}/${data.chapter_id}`;
+                    }
+                });
+        });
+    }
+
+    const continueGuest = document.getElementById('continue-reading-guest');
+    if (continueGuest) {
+        continueGuest.addEventListener('click', () => {
+            new bootstrap.Modal(document.getElementById('login-required-modal')).show();
+        });
+    }
+});
