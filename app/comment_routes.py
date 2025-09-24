@@ -57,7 +57,7 @@ def add_comment(manga_id):
 
     new_comment = Comment(
         CommentId=str(uuid.uuid4()),
-        UserId=str(current_user.get_id()),
+        UserId=str(current_user.get_id()).lower(),
         MangaId=str(manga_id),
         ChapterId=chapter_id if chapter_id else None,
         Content=content,
@@ -115,7 +115,7 @@ def edit_comment(comment_id):
     if not c or c.IsDeleted:
         return jsonify({"success": False, "message": "Comment not found."}), 404
 
-    if str(c.UserId) != str(current_user.get_id()):
+    if str(c.UserId).lower() != str(current_user.get_id()).lower():
         return jsonify({"success": False, "message": "Forbidden: not the comment owner."}), 403
 
     # Retrieve content
@@ -147,7 +147,7 @@ def delete_comment(comment_id):
     if not c:
         return jsonify({"success": False, "message": "Comment not found."}), 404
 
-    if str(c.UserId) != str(current_user.get_id()):
+    if str(c.UserId).lower() != str(current_user.get_id()).lower():
         return jsonify({"success": False, "message": "Forbidden: not the comment owner."}), 403
 
     c.IsDeleted = True
@@ -174,7 +174,7 @@ def report_comment(comment_id):
 
     rep = Report(
         ReportId=str(uuid.uuid4()),
-        UserId=str(current_user.get_id()),
+        UserId=str(current_user.get_id()).lower(),
         CommentId=str(comment_id),
         Reason=reason,
         Status='pending',

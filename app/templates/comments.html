@@ -1,9 +1,12 @@
-{# app/templates/comments.html #}
-{# Partial to render comments section. #}
-
 {% set mid = manga.MangaId if manga is defined else (manga_id if manga_id is defined else None) %}
 
 <div class="comments-section container-fluid py-3">
+
+    <!-- Debug info -->
+    <div class="debug-info mb-3 text-muted">
+        <p>Authenticated: {{ is_authenticated }}</p>
+        <p>Current User ID: {{ current_user.get_id() if is_authenticated else 'N/A' }}</p>
+    </div>
 
     <!-- Comment form -->
     <div class="comment-form mb-3">
@@ -20,7 +23,7 @@
                     <div class="d-flex align-items-center">
                         <label class="me-3"><input type="checkbox" name="is_spoiler" id="is-spoiler"> Mark as
                             spoiler</label>
-                        <button type="submit" class="btn btn-primary btn-sm ms-auto" id="btn-submit-comment">Post
+                        <button type="button" class="btn btn-primary btn-sm ms-auto" id="btn-submit-comment">Post
                             Comment</button>
                     </div>
                     <small class="text-muted">Minimum 5 characters.</small>
@@ -70,6 +73,10 @@
                                 class="fw-bold">{{ c.user.Username if c.user else 'Unknown' }}</a>
                             <div class="text-muted small">{{ c.CreatedAt.strftime('%Y-%m-%d %H:%M') if c.CreatedAt else
                                 '' }}</div>
+                            <!-- Debug UserId -->
+                            <div class="text-muted small">Comment UserId: {{ c.UserId }}</div>
+                            <div class="text-muted small">Condition: {{ 'True' if is_authenticated and
+                                (current_user.get_id()|lower == (c.UserId|string)|lower) else 'False' }}</div>
                         </div>
                         <div class="ms-auto comment-actions">
                             <button class="btn btn-sm btn-outline-success comment-like"
@@ -80,19 +87,16 @@
                                 data-comment-id="{{ c.CommentId }}">
                                 👎 <span>{{ c.DislikeCount or 0 }}</span>
                             </button>
-
-                            {% if is_authenticated and (current_user.get_id() == (c.UserId|string)) %}
+                            {% if is_authenticated and (current_user.get_id()|lower == (c.UserId|string)|lower) %}
                             <button class="btn btn-sm btn-outline-secondary comment-edit"
                                 data-comment-id="{{ c.CommentId }}">Edit</button>
                             <button class="btn btn-sm btn-outline-dark comment-delete"
                                 data-comment-id="{{ c.CommentId }}">Delete</button>
                             {% endif %}
-
                             <button class="btn btn-sm btn-outline-warning comment-report"
                                 data-comment-id="{{ c.CommentId }}">Report</button>
                         </div>
                     </div>
-
                     <div class="comment-content mt-2 {% if c.IsSpoiler %}spoiler{% endif %}">
                         {{ c.Content | e | replace('\n', '<br>') | safe }}
                     </div>

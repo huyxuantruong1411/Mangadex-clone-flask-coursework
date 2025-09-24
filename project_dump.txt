@@ -174,6 +174,16 @@
               ]
             },
             {
+              "name": "06",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "caddec83747ceac7945615e9762b363183a93b",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "07",
               "type": "directory",
               "children": [
@@ -498,6 +508,16 @@
               ]
             },
             {
+              "name": "37",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "136e71401adadea3acb226b42d1868fcab5f05",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "38",
               "type": "directory",
               "children": [
@@ -535,6 +555,16 @@
               "children": [
                 {
                   "name": "df5449e6b7dc424acc9f668bb98c74bbddea7a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "3e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bcf53b0da308de3a0a15eac73a45e3d4c733ba",
                   "type": "file"
                 }
               ]
@@ -593,6 +623,10 @@
               "children": [
                 {
                   "name": "6bfe36d102cb2b50b9a34c1621b384b7b9a7ec",
+                  "type": "file"
+                },
+                {
+                  "name": "ef92877621d7b0a4483a6f9a1529e4295271de",
                   "type": "file"
                 }
               ]
@@ -813,6 +847,10 @@
               "children": [
                 {
                   "name": "24667a36b3b5f1e2371778879e7de4074229ca",
+                  "type": "file"
+                },
+                {
+                  "name": "e14d9860031ab9f3153cdd8d80b27a94e47e1a",
                   "type": "file"
                 }
               ]
@@ -1062,6 +1100,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "6916862eafbb7103e2a03a3074c94c04686365",
+                  "type": "file"
+                },
+                {
                   "name": "7d818314e311b6c2fb3403a472595d3fb6aa06",
                   "type": "file"
                 }
@@ -1073,6 +1115,10 @@
               "children": [
                 {
                   "name": "a39be23fe19ba2eeae6cccb1b6b362f5db3bfb",
+                  "type": "file"
+                },
+                {
+                  "name": "d29950a2902cc794dd94e4dd01f6561c1a60bb",
                   "type": "file"
                 }
               ]
@@ -1093,6 +1139,26 @@
               "children": [
                 {
                   "name": "3375cfbc824744267a9eabbddfb6730ebc1a35",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "81",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "12a4c89ae5b5c0963d5b845bd9b3ae4e31fbbe",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "84",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c28f4eb2f40598238d8da93d5b4e9e3844ded3",
                   "type": "file"
                 }
               ]
@@ -1238,6 +1304,16 @@
               ]
             },
             {
+              "name": "9d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5eb81169e968bf8b40a6a3ca9510e988832e9d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "9e",
               "type": "directory",
               "children": [
@@ -1275,6 +1351,10 @@
               "name": "a2",
               "type": "directory",
               "children": [
+                {
+                  "name": "5c0d09d10440e6eaeb3488cbd675b2b60e1f3b",
+                  "type": "file"
+                },
                 {
                   "name": "9744f83cf67da8616ce02e26bc1ee901ea8177",
                   "type": "file"
@@ -1354,6 +1434,10 @@
                 {
                   "name": "04a5a9ecdb65d205e33f244f09c4ba8de36585",
                   "type": "file"
+                },
+                {
+                  "name": "fa59474d5de617b454fe6fa457c8397c323ae7",
+                  "type": "file"
                 }
               ]
             },
@@ -1377,6 +1461,10 @@
               "children": [
                 {
                   "name": "0ebbae8efa1315b3825ddb41513e3f8f1e5eb4",
+                  "type": "file"
+                },
+                {
+                  "name": "bf22c94477d8367e4d2d911e532d471d9a8d6a",
                   "type": "file"
                 }
               ]
@@ -1412,6 +1500,10 @@
                 {
                   "name": "b5f6494257be5ea34f741332576277b2542653",
                   "type": "file"
+                },
+                {
+                  "name": "c7de93749ed290c291c64ee70f3b38258bb933",
+                  "type": "file"
                 }
               ]
             },
@@ -1436,6 +1528,10 @@
                 {
                   "name": "5822d30c60d75b9e5e1f42043381f04e684a92",
                   "type": "file"
+                },
+                {
+                  "name": "853599ce0c339f3dd45b62e71b08e2b3e6c323",
+                  "type": "file"
                 }
               ]
             },
@@ -1445,6 +1541,16 @@
               "children": [
                 {
                   "name": "2fe7ad47770419264a591c552ea8041abe2c3e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "bb",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9f2ef05ac38cdd1ee90436799c783d91901bfc",
                   "type": "file"
                 }
               ]
@@ -1652,6 +1758,10 @@
                 {
                   "name": "a766a699a75d48d40b8a845a71c3d0d8ec8a9e",
                   "type": "file"
+                },
+                {
+                  "name": "b573e1d64a9823e89e174271d90b483576c1ef",
+                  "type": "file"
                 }
               ]
             },
@@ -1710,6 +1820,10 @@
                 {
                   "name": "4ad1cdb0d421cb187095ecfb82d2019214d2fb",
                   "type": "file"
+                },
+                {
+                  "name": "f724f416461a511e8c820bec7e63e2f0073680",
+                  "type": "file"
                 }
               ]
             },
@@ -1762,6 +1876,10 @@
               "type": "directory",
               "children": [
                 {
+                  "name": "84eec63ef0a48b23e3ba5c491d5bb068b16117",
+                  "type": "file"
+                },
+                {
                   "name": "9d9a3457c06a6d48b0bbc7834c13a014b8d838",
                   "type": "file"
                 }
@@ -1773,6 +1891,10 @@
               "children": [
                 {
                   "name": "a0384999a4a0a1afdc34b5844c1165544a12f0",
+                  "type": "file"
+                },
+                {
+                  "name": "c48022d27657d2cd3c428afb67e515c1d01705",
                   "type": "file"
                 }
               ]
@@ -1969,6 +2091,10 @@
               "children": [
                 {
                   "name": "3211e33cd7286e3775bbd382e5b0f3a110b8c6",
+                  "type": "file"
+                },
+                {
+                  "name": "a151b9f44e45ecc479fdccb5f512f84e3a6a39",
                   "type": "file"
                 }
               ]
@@ -2607,6 +2733,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 6efb158bca8b24217e27787427f06b78fac469
 │   │   ├── 03/
 │   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
+│   │   ├── 06/
+│   │   │   └── caddec83747ceac7945615e9762b363183a93b
 │   │   ├── 07/
 │   │   │   └── 91b3911188472a081f18c581c510a8d05f7948
 │   │   ├── 08/
@@ -2675,6 +2803,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 0f41740bf4bb31cfc5c947fd7587b3cec819d7
 │   │   │   ├── 5df44cfb5de4ecede6d0b8ea4061d907d1ded1
 │   │   │   └── c0df5f31eacd27501545ebe50bfc4a7df7883e
+│   │   ├── 37/
+│   │   │   └── 136e71401adadea3acb226b42d1868fcab5f05
 │   │   ├── 38/
 │   │   │   ├── 294ce219005561b20021bef890cf55a48564bb
 │   │   │   ├── 84b508d1b872b189bf52415159463124650539
@@ -2684,6 +2814,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
 │   │   ├── 3c/
 │   │   │   └── df5449e6b7dc424acc9f668bb98c74bbddea7a
+│   │   ├── 3e/
+│   │   │   └── bcf53b0da308de3a0a15eac73a45e3d4c733ba
 │   │   ├── 40/
 │   │   │   └── b864d255ac3c7963ba64d0b6e3b13432475e90
 │   │   ├── 41/
@@ -2695,7 +2827,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 0a88302eea286048f1c204defe654dd9a61632
 │   │   │   └── c4e3371805831cd1f16b5a394ea6d0ba3dbe52
 │   │   ├── 44/
-│   │   │   └── 6bfe36d102cb2b50b9a34c1621b384b7b9a7ec
+│   │   │   ├── 6bfe36d102cb2b50b9a34c1621b384b7b9a7ec
+│   │   │   └── ef92877621d7b0a4483a6f9a1529e4295271de
 │   │   ├── 45/
 │   │   │   ├── 32251c88870e8ce76bfd365c3ccf3e7f101780
 │   │   │   ├── 5448abda71ebb3372cea0db603f6419e293b80
@@ -2742,7 +2875,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 5c/
 │   │   │   └── 384ecaa99129459ebd036d30f4568a50a0a5ab
 │   │   ├── 5d/
-│   │   │   └── 24667a36b3b5f1e2371778879e7de4074229ca
+│   │   │   ├── 24667a36b3b5f1e2371778879e7de4074229ca
+│   │   │   └── e14d9860031ab9f3153cdd8d80b27a94e47e1a
 │   │   ├── 5f/
 │   │   │   ├── 102306306d4a3c0548710ef073f4b8f888915e
 │   │   │   └── 66e669e438f2cc735d17f21dd8a9411c53072b
@@ -2794,13 +2928,19 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 4ca363d1b634cfc85c3b442836976bff7623a2
 │   │   │   └── db8fca4c5ff6d4530790b22af870c9be3eefe8
 │   │   ├── 7b/
+│   │   │   ├── 6916862eafbb7103e2a03a3074c94c04686365
 │   │   │   └── 7d818314e311b6c2fb3403a472595d3fb6aa06
 │   │   ├── 7d/
-│   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
+│   │   │   ├── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
+│   │   │   └── d29950a2902cc794dd94e4dd01f6561c1a60bb
 │   │   ├── 7e/
 │   │   │   └── 6c032734f13825c8b2c7316f31141b5d99703b
 │   │   ├── 7f/
 │   │   │   └── 3375cfbc824744267a9eabbddfb6730ebc1a35
+│   │   ├── 81/
+│   │   │   └── 12a4c89ae5b5c0963d5b845bd9b3ae4e31fbbe
+│   │   ├── 84/
+│   │   │   └── c28f4eb2f40598238d8da93d5b4e9e3844ded3
 │   │   ├── 85/
 │   │   │   └── 9052402597b4c30710f9aafe41a68852119848
 │   │   ├── 86/
@@ -2830,6 +2970,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
 │   │   ├── 9c/
 │   │   │   └── e232df0f831bbe037fbf601ac68f64b06ce234
+│   │   ├── 9d/
+│   │   │   └── 5eb81169e968bf8b40a6a3ca9510e988832e9d
 │   │   ├── 9e/
 │   │   │   └── 973c80445805d4124554088cf388ce23858bf1
 │   │   ├── 9f/
@@ -2838,6 +2980,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b
 │   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
 │   │   ├── a2/
+│   │   │   ├── 5c0d09d10440e6eaeb3488cbd675b2b60e1f3b
 │   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
 │   │   │   └── f77dfed98ed30efed8e094eadeb320dd1ff658
 │   │   ├── a4/
@@ -2854,26 +2997,32 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── ab/
 │   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
 │   │   ├── ad/
-│   │   │   └── 04a5a9ecdb65d205e33f244f09c4ba8de36585
+│   │   │   ├── 04a5a9ecdb65d205e33f244f09c4ba8de36585
+│   │   │   └── fa59474d5de617b454fe6fa457c8397c323ae7
 │   │   ├── af/
 │   │   │   ├── 0dcb86596c7c06003de37a245156322ccf48ad
 │   │   │   └── 16b03423ccb8c6b86c192b9c9a4222ed78cef6
 │   │   ├── b0/
-│   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
+│   │   │   ├── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
+│   │   │   └── bf22c94477d8367e4d2d911e532d471d9a8d6a
 │   │   ├── b2/
 │   │   │   ├── 3ab4e46e800968e006f5811348dc9122b46e1e
 │   │   │   └── 3bfe2e07b6eda24d56c184581193197156cd64
 │   │   ├── b3/
 │   │   │   └── 83183d721457d9fb56fc8209bf932e02306a19
 │   │   ├── b6/
-│   │   │   └── b5f6494257be5ea34f741332576277b2542653
+│   │   │   ├── b5f6494257be5ea34f741332576277b2542653
+│   │   │   └── c7de93749ed290c291c64ee70f3b38258bb933
 │   │   ├── b7/
 │   │   │   └── 7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0
 │   │   ├── b9/
 │   │   │   ├── 35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e
-│   │   │   └── 5822d30c60d75b9e5e1f42043381f04e684a92
+│   │   │   ├── 5822d30c60d75b9e5e1f42043381f04e684a92
+│   │   │   └── 853599ce0c339f3dd45b62e71b08e2b3e6c323
 │   │   ├── ba/
 │   │   │   └── 2fe7ad47770419264a591c552ea8041abe2c3e
+│   │   ├── bb/
+│   │   │   └── 9f2ef05ac38cdd1ee90436799c783d91901bfc
 │   │   ├── bd/
 │   │   │   ├── a7ddcfc1aa77909c6dec916c2298176f528169
 │   │   │   └── f3bed86e49863994b94a2e44d84dfb1b59e3e4
@@ -2917,7 +3066,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── f52fa61bcd65129e4fdd036db7484c590ce6c2
 │   │   ├── cf/
 │   │   │   ├── 0cf9f225346c9cdbe0158e3601215a611e8bbe
-│   │   │   └── a766a699a75d48d40b8a845a71c3d0d8ec8a9e
+│   │   │   ├── a766a699a75d48d40b8a845a71c3d0d8ec8a9e
+│   │   │   └── b573e1d64a9823e89e174271d90b483576c1ef
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
@@ -2929,7 +3079,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── ccc1fe847536ae42929a02c51dfaa238b53e8a
 │   │   ├── d6/
 │   │   │   ├── 2f65d3bd680969ed2311ef1ccd755ebafc6384
-│   │   │   └── 4ad1cdb0d421cb187095ecfb82d2019214d2fb
+│   │   │   ├── 4ad1cdb0d421cb187095ecfb82d2019214d2fb
+│   │   │   └── f724f416461a511e8c820bec7e63e2f0073680
 │   │   ├── d7/
 │   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
 │   │   ├── da/
@@ -2940,9 +3091,11 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── de/
 │   │   │   └── 019f7156d7ca8f4a712fd836e42cb8c3982197
 │   │   ├── e0/
+│   │   │   ├── 84eec63ef0a48b23e3ba5c491d5bb068b16117
 │   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
 │   │   ├── e2/
-│   │   │   └── a0384999a4a0a1afdc34b5844c1165544a12f0
+│   │   │   ├── a0384999a4a0a1afdc34b5844c1165544a12f0
+│   │   │   └── c48022d27657d2cd3c428afb67e515c1d01705
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
 │   │   ├── e5/
@@ -2983,7 +3136,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── fa/
 │   │   │   └── 2fd633624471308c794c31eac5daaccf1f93b5
 │   │   ├── fd/
-│   │   │   └── 3211e33cd7286e3775bbd382e5b0f3a110b8c6
+│   │   │   ├── 3211e33cd7286e3775bbd382e5b0f3a110b8c6
+│   │   │   └── a151b9f44e45ecc479fdccb5f512f84e3a6a39
 │   │   ├── fe/
 │   │   │   ├── 07a70f4d1070ccd31cd21f10dc0ae6d357dbcb
 │   │   │   └── fb85b76c41cce4f3559ded4747e048b53756a5
@@ -3441,6 +3595,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "06",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "caddec83747ceac7945615e9762b363183a93b",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "07",
               "type": "directory",
               "children": [
@@ -3765,6 +3929,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "37",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "136e71401adadea3acb226b42d1868fcab5f05",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "38",
               "type": "directory",
               "children": [
@@ -3802,6 +3976,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "df5449e6b7dc424acc9f668bb98c74bbddea7a",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "3e",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bcf53b0da308de3a0a15eac73a45e3d4c733ba",
                   "type": "file"
                 }
               ]
@@ -3860,6 +4044,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "6bfe36d102cb2b50b9a34c1621b384b7b9a7ec",
+                  "type": "file"
+                },
+                {
+                  "name": "ef92877621d7b0a4483a6f9a1529e4295271de",
                   "type": "file"
                 }
               ]
@@ -4080,6 +4268,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "24667a36b3b5f1e2371778879e7de4074229ca",
+                  "type": "file"
+                },
+                {
+                  "name": "e14d9860031ab9f3153cdd8d80b27a94e47e1a",
                   "type": "file"
                 }
               ]
@@ -4329,6 +4521,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "6916862eafbb7103e2a03a3074c94c04686365",
+                  "type": "file"
+                },
+                {
                   "name": "7d818314e311b6c2fb3403a472595d3fb6aa06",
                   "type": "file"
                 }
@@ -4340,6 +4536,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "a39be23fe19ba2eeae6cccb1b6b362f5db3bfb",
+                  "type": "file"
+                },
+                {
+                  "name": "d29950a2902cc794dd94e4dd01f6561c1a60bb",
                   "type": "file"
                 }
               ]
@@ -4360,6 +4560,26 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "3375cfbc824744267a9eabbddfb6730ebc1a35",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "81",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "12a4c89ae5b5c0963d5b845bd9b3ae4e31fbbe",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "84",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "c28f4eb2f40598238d8da93d5b4e9e3844ded3",
                   "type": "file"
                 }
               ]
@@ -4505,6 +4725,16 @@ if __name__ == "__main__":
               ]
             },
             {
+              "name": "9d",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "5eb81169e968bf8b40a6a3ca9510e988832e9d",
+                  "type": "file"
+                }
+              ]
+            },
+            {
               "name": "9e",
               "type": "directory",
               "children": [
@@ -4542,6 +4772,10 @@ if __name__ == "__main__":
               "name": "a2",
               "type": "directory",
               "children": [
+                {
+                  "name": "5c0d09d10440e6eaeb3488cbd675b2b60e1f3b",
+                  "type": "file"
+                },
                 {
                   "name": "9744f83cf67da8616ce02e26bc1ee901ea8177",
                   "type": "file"
@@ -4621,6 +4855,10 @@ if __name__ == "__main__":
                 {
                   "name": "04a5a9ecdb65d205e33f244f09c4ba8de36585",
                   "type": "file"
+                },
+                {
+                  "name": "fa59474d5de617b454fe6fa457c8397c323ae7",
+                  "type": "file"
                 }
               ]
             },
@@ -4644,6 +4882,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "0ebbae8efa1315b3825ddb41513e3f8f1e5eb4",
+                  "type": "file"
+                },
+                {
+                  "name": "bf22c94477d8367e4d2d911e532d471d9a8d6a",
                   "type": "file"
                 }
               ]
@@ -4679,6 +4921,10 @@ if __name__ == "__main__":
                 {
                   "name": "b5f6494257be5ea34f741332576277b2542653",
                   "type": "file"
+                },
+                {
+                  "name": "c7de93749ed290c291c64ee70f3b38258bb933",
+                  "type": "file"
                 }
               ]
             },
@@ -4703,6 +4949,10 @@ if __name__ == "__main__":
                 {
                   "name": "5822d30c60d75b9e5e1f42043381f04e684a92",
                   "type": "file"
+                },
+                {
+                  "name": "853599ce0c339f3dd45b62e71b08e2b3e6c323",
+                  "type": "file"
                 }
               ]
             },
@@ -4712,6 +4962,16 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "2fe7ad47770419264a591c552ea8041abe2c3e",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "bb",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "9f2ef05ac38cdd1ee90436799c783d91901bfc",
                   "type": "file"
                 }
               ]
@@ -4919,6 +5179,10 @@ if __name__ == "__main__":
                 {
                   "name": "a766a699a75d48d40b8a845a71c3d0d8ec8a9e",
                   "type": "file"
+                },
+                {
+                  "name": "b573e1d64a9823e89e174271d90b483576c1ef",
+                  "type": "file"
                 }
               ]
             },
@@ -4977,6 +5241,10 @@ if __name__ == "__main__":
                 {
                   "name": "4ad1cdb0d421cb187095ecfb82d2019214d2fb",
                   "type": "file"
+                },
+                {
+                  "name": "f724f416461a511e8c820bec7e63e2f0073680",
+                  "type": "file"
                 }
               ]
             },
@@ -5029,6 +5297,10 @@ if __name__ == "__main__":
               "type": "directory",
               "children": [
                 {
+                  "name": "84eec63ef0a48b23e3ba5c491d5bb068b16117",
+                  "type": "file"
+                },
+                {
                   "name": "9d9a3457c06a6d48b0bbc7834c13a014b8d838",
                   "type": "file"
                 }
@@ -5040,6 +5312,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "a0384999a4a0a1afdc34b5844c1165544a12f0",
+                  "type": "file"
+                },
+                {
+                  "name": "c48022d27657d2cd3c428afb67e515c1d01705",
                   "type": "file"
                 }
               ]
@@ -5236,6 +5512,10 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "3211e33cd7286e3775bbd382e5b0f3a110b8c6",
+                  "type": "file"
+                },
+                {
+                  "name": "a151b9f44e45ecc479fdccb5f512f84e3a6a39",
                   "type": "file"
                 }
               ]
@@ -5874,6 +6154,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 6efb158bca8b24217e27787427f06b78fac469
 │   │   ├── 03/
 │   │   │   └── 32227e9f1218271277306120ddb4a6a1c60868
+│   │   ├── 06/
+│   │   │   └── caddec83747ceac7945615e9762b363183a93b
 │   │   ├── 07/
 │   │   │   └── 91b3911188472a081f18c581c510a8d05f7948
 │   │   ├── 08/
@@ -5942,6 +6224,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 0f41740bf4bb31cfc5c947fd7587b3cec819d7
 │   │   │   ├── 5df44cfb5de4ecede6d0b8ea4061d907d1ded1
 │   │   │   └── c0df5f31eacd27501545ebe50bfc4a7df7883e
+│   │   ├── 37/
+│   │   │   └── 136e71401adadea3acb226b42d1868fcab5f05
 │   │   ├── 38/
 │   │   │   ├── 294ce219005561b20021bef890cf55a48564bb
 │   │   │   ├── 84b508d1b872b189bf52415159463124650539
@@ -5951,6 +6235,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── f9cb6dab0f685a4781b6baeadd4923ea726a8a
 │   │   ├── 3c/
 │   │   │   └── df5449e6b7dc424acc9f668bb98c74bbddea7a
+│   │   ├── 3e/
+│   │   │   └── bcf53b0da308de3a0a15eac73a45e3d4c733ba
 │   │   ├── 40/
 │   │   │   └── b864d255ac3c7963ba64d0b6e3b13432475e90
 │   │   ├── 41/
@@ -5962,7 +6248,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 0a88302eea286048f1c204defe654dd9a61632
 │   │   │   └── c4e3371805831cd1f16b5a394ea6d0ba3dbe52
 │   │   ├── 44/
-│   │   │   └── 6bfe36d102cb2b50b9a34c1621b384b7b9a7ec
+│   │   │   ├── 6bfe36d102cb2b50b9a34c1621b384b7b9a7ec
+│   │   │   └── ef92877621d7b0a4483a6f9a1529e4295271de
 │   │   ├── 45/
 │   │   │   ├── 32251c88870e8ce76bfd365c3ccf3e7f101780
 │   │   │   ├── 5448abda71ebb3372cea0db603f6419e293b80
@@ -6009,7 +6296,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── 5c/
 │   │   │   └── 384ecaa99129459ebd036d30f4568a50a0a5ab
 │   │   ├── 5d/
-│   │   │   └── 24667a36b3b5f1e2371778879e7de4074229ca
+│   │   │   ├── 24667a36b3b5f1e2371778879e7de4074229ca
+│   │   │   └── e14d9860031ab9f3153cdd8d80b27a94e47e1a
 │   │   ├── 5f/
 │   │   │   ├── 102306306d4a3c0548710ef073f4b8f888915e
 │   │   │   └── 66e669e438f2cc735d17f21dd8a9411c53072b
@@ -6061,13 +6349,19 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 4ca363d1b634cfc85c3b442836976bff7623a2
 │   │   │   └── db8fca4c5ff6d4530790b22af870c9be3eefe8
 │   │   ├── 7b/
+│   │   │   ├── 6916862eafbb7103e2a03a3074c94c04686365
 │   │   │   └── 7d818314e311b6c2fb3403a472595d3fb6aa06
 │   │   ├── 7d/
-│   │   │   └── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
+│   │   │   ├── a39be23fe19ba2eeae6cccb1b6b362f5db3bfb
+│   │   │   └── d29950a2902cc794dd94e4dd01f6561c1a60bb
 │   │   ├── 7e/
 │   │   │   └── 6c032734f13825c8b2c7316f31141b5d99703b
 │   │   ├── 7f/
 │   │   │   └── 3375cfbc824744267a9eabbddfb6730ebc1a35
+│   │   ├── 81/
+│   │   │   └── 12a4c89ae5b5c0963d5b845bd9b3ae4e31fbbe
+│   │   ├── 84/
+│   │   │   └── c28f4eb2f40598238d8da93d5b4e9e3844ded3
 │   │   ├── 85/
 │   │   │   └── 9052402597b4c30710f9aafe41a68852119848
 │   │   ├── 86/
@@ -6097,6 +6391,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── 0b93ce20d21be74f86c9251a2c68ae5e644e96
 │   │   ├── 9c/
 │   │   │   └── e232df0f831bbe037fbf601ac68f64b06ce234
+│   │   ├── 9d/
+│   │   │   └── 5eb81169e968bf8b40a6a3ca9510e988832e9d
 │   │   ├── 9e/
 │   │   │   └── 973c80445805d4124554088cf388ce23858bf1
 │   │   ├── 9f/
@@ -6105,6 +6401,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   ├── 0d7cc4cff44f4cf01bf6d7d8c31a3f70b30a8b
 │   │   │   └── 6b57666f52fef6cd448fb916ed157272dee73e
 │   │   ├── a2/
+│   │   │   ├── 5c0d09d10440e6eaeb3488cbd675b2b60e1f3b
 │   │   │   ├── 9744f83cf67da8616ce02e26bc1ee901ea8177
 │   │   │   └── f77dfed98ed30efed8e094eadeb320dd1ff658
 │   │   ├── a4/
@@ -6121,26 +6418,32 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── ab/
 │   │   │   └── 312aecebeebd9cf45a35fbbb335e4dfac03282
 │   │   ├── ad/
-│   │   │   └── 04a5a9ecdb65d205e33f244f09c4ba8de36585
+│   │   │   ├── 04a5a9ecdb65d205e33f244f09c4ba8de36585
+│   │   │   └── fa59474d5de617b454fe6fa457c8397c323ae7
 │   │   ├── af/
 │   │   │   ├── 0dcb86596c7c06003de37a245156322ccf48ad
 │   │   │   └── 16b03423ccb8c6b86c192b9c9a4222ed78cef6
 │   │   ├── b0/
-│   │   │   └── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
+│   │   │   ├── 0ebbae8efa1315b3825ddb41513e3f8f1e5eb4
+│   │   │   └── bf22c94477d8367e4d2d911e532d471d9a8d6a
 │   │   ├── b2/
 │   │   │   ├── 3ab4e46e800968e006f5811348dc9122b46e1e
 │   │   │   └── 3bfe2e07b6eda24d56c184581193197156cd64
 │   │   ├── b3/
 │   │   │   └── 83183d721457d9fb56fc8209bf932e02306a19
 │   │   ├── b6/
-│   │   │   └── b5f6494257be5ea34f741332576277b2542653
+│   │   │   ├── b5f6494257be5ea34f741332576277b2542653
+│   │   │   └── c7de93749ed290c291c64ee70f3b38258bb933
 │   │   ├── b7/
 │   │   │   └── 7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0
 │   │   ├── b9/
 │   │   │   ├── 35f6fe32b5b9bb38ac3a1916ade7f5cd65ce2e
-│   │   │   └── 5822d30c60d75b9e5e1f42043381f04e684a92
+│   │   │   ├── 5822d30c60d75b9e5e1f42043381f04e684a92
+│   │   │   └── 853599ce0c339f3dd45b62e71b08e2b3e6c323
 │   │   ├── ba/
 │   │   │   └── 2fe7ad47770419264a591c552ea8041abe2c3e
+│   │   ├── bb/
+│   │   │   └── 9f2ef05ac38cdd1ee90436799c783d91901bfc
 │   │   ├── bd/
 │   │   │   ├── a7ddcfc1aa77909c6dec916c2298176f528169
 │   │   │   └── f3bed86e49863994b94a2e44d84dfb1b59e3e4
@@ -6184,7 +6487,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── f52fa61bcd65129e4fdd036db7484c590ce6c2
 │   │   ├── cf/
 │   │   │   ├── 0cf9f225346c9cdbe0158e3601215a611e8bbe
-│   │   │   └── a766a699a75d48d40b8a845a71c3d0d8ec8a9e
+│   │   │   ├── a766a699a75d48d40b8a845a71c3d0d8ec8a9e
+│   │   │   └── b573e1d64a9823e89e174271d90b483576c1ef
 │   │   ├── d2/
 │   │   │   └── eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc
 │   │   ├── d3/
@@ -6196,7 +6500,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   │   └── ccc1fe847536ae42929a02c51dfaa238b53e8a
 │   │   ├── d6/
 │   │   │   ├── 2f65d3bd680969ed2311ef1ccd755ebafc6384
-│   │   │   └── 4ad1cdb0d421cb187095ecfb82d2019214d2fb
+│   │   │   ├── 4ad1cdb0d421cb187095ecfb82d2019214d2fb
+│   │   │   └── f724f416461a511e8c820bec7e63e2f0073680
 │   │   ├── d7/
 │   │   │   └── b278ba91bc60fba89a2544cd5485c311fe5261
 │   │   ├── da/
@@ -6207,9 +6512,11 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── de/
 │   │   │   └── 019f7156d7ca8f4a712fd836e42cb8c3982197
 │   │   ├── e0/
+│   │   │   ├── 84eec63ef0a48b23e3ba5c491d5bb068b16117
 │   │   │   └── 9d9a3457c06a6d48b0bbc7834c13a014b8d838
 │   │   ├── e2/
-│   │   │   └── a0384999a4a0a1afdc34b5844c1165544a12f0
+│   │   │   ├── a0384999a4a0a1afdc34b5844c1165544a12f0
+│   │   │   └── c48022d27657d2cd3c428afb67e515c1d01705
 │   │   ├── e3/
 │   │   │   └── db853f90de235d93108b50dc31bc0a69eafe87
 │   │   ├── e5/
@@ -6250,7 +6557,8 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── fa/
 │   │   │   └── 2fd633624471308c794c31eac5daaccf1f93b5
 │   │   ├── fd/
-│   │   │   └── 3211e33cd7286e3775bbd382e5b0f3a110b8c6
+│   │   │   ├── 3211e33cd7286e3775bbd382e5b0f3a110b8c6
+│   │   │   └── a151b9f44e45ecc479fdccb5f512f84e3a6a39
 │   │   ├── fe/
 │   │   │   ├── 07a70f4d1070ccd31cd21f10dc0ae6d357dbcb
 │   │   │   └── fb85b76c41cce4f3559ded4747e048b53756a5
@@ -6427,7 +6735,7 @@ except Exception as e:
 === Folder: .git ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\COMMIT_EDITMSG ---
-Library-ListManagement+Users-Updates
+add-rating+fix-list-layout
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\config ---
 [core]
@@ -7382,6 +7690,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
 6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646184 +0700	commit: List-CRUD-Basic
 7b7d818314e311b6c2fb3403a472595d3fb6aa06 08d0e027b59f727ac7845136de3516b556deedfb Huy1411 <huy14112002@gmail.com> 1758654855 +0700	commit: Library-ListManagement+Users-Updates
+08d0e027b59f727ac7845136de3516b556deedfb a25c0d09d10440e6eaeb3488cbd675b2b60e1f3b Huy1411 <huy14112002@gmail.com> 1758665184 +0700	commit: add-rating+fix-list-layout
 
 === Folder: .git\logs\refs ===
 
@@ -7399,6 +7708,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 e5da7db4b7c644c5960e726d3244a63f72b63b45 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642839 +0700	commit: Update List Basic
 6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646184 +0700	commit: List-CRUD-Basic
 7b7d818314e311b6c2fb3403a472595d3fb6aa06 08d0e027b59f727ac7845136de3516b556deedfb Huy1411 <huy14112002@gmail.com> 1758654855 +0700	commit: Library-ListManagement+Users-Updates
+08d0e027b59f727ac7845136de3516b556deedfb a25c0d09d10440e6eaeb3488cbd675b2b60e1f3b Huy1411 <huy14112002@gmail.com> 1758665184 +0700	commit: add-rating+fix-list-layout
 
 === Folder: .git\logs\refs\remotes ===
 
@@ -7414,6 +7724,7 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 4532251c88870e8ce76bfd365c3ccf3e7f101780 6d03f43314d32aef36fc87bae239689e7cbf6fe4 Huy1411 <huy14112002@gmail.com> 1758642846 +0700	update by push
 6d03f43314d32aef36fc87bae239689e7cbf6fe4 7b7d818314e311b6c2fb3403a472595d3fb6aa06 Huy1411 <huy14112002@gmail.com> 1758646191 +0700	update by push
 7b7d818314e311b6c2fb3403a472595d3fb6aa06 08d0e027b59f727ac7845136de3516b556deedfb Huy1411 <huy14112002@gmail.com> 1758654864 +0700	update by push
+08d0e027b59f727ac7845136de3516b556deedfb a25c0d09d10440e6eaeb3488cbd675b2b60e1f3b Huy1411 <huy14112002@gmail.com> 1758665192 +0700	update by push
 
 === Folder: .git\objects ===
 
@@ -7426,6 +7737,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\03\32227e9f1218271277306120ddb4a6a1c60868 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
+=== Folder: .git\objects\06 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\06\caddec83747ceac7945615e9762b363183a93b ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
 
 === Folder: .git\objects\07 ===
 
@@ -7605,6 +7921,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\33\c0df5f31eacd27501545ebe50bfc4a7df7883e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb3 in position 3: invalid start byte]
 
+=== Folder: .git\objects\37 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\37\136e71401adadea3acb226b42d1868fcab5f05 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
+
 === Folder: .git\objects\38 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\38\294ce219005561b20021bef890cf55a48564bb ---
@@ -7628,6 +7949,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3c\df5449e6b7dc424acc9f668bb98c74bbddea7a ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte]
+
+=== Folder: .git\objects\3e ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\3e\bcf53b0da308de3a0a15eac73a45e3d4c733ba ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte]
 
 === Folder: .git\objects\40 ===
 
@@ -7659,6 +7985,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\44\6bfe36d102cb2b50b9a34c1621b384b7b9a7ec ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcf in position 5: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\44\ef92877621d7b0a4483a6f9a1529e4295271de ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\45 ===
 
@@ -7784,6 +8113,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5d\24667a36b3b5f1e2371778879e7de4074229ca ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\5d\e14d9860031ab9f3153cdd8d80b27a94e47e1a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\5f ===
 
@@ -7917,6 +8249,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\7b ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7b\6916862eafbb7103e2a03a3074c94c04686365 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7b\7d818314e311b6c2fb3403a472595d3fb6aa06 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
@@ -7924,6 +8259,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7d\a39be23fe19ba2eeae6cccb1b6b362f5db3bfb ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7d\d29950a2902cc794dd94e4dd01f6561c1a60bb ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
 === Folder: .git\objects\7e ===
 
@@ -7934,6 +8272,16 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\7f\3375cfbc824744267a9eabbddfb6730ebc1a35 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xb7 in position 9: invalid start byte]
+
+=== Folder: .git\objects\81 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\81\12a4c89ae5b5c0963d5b845bd9b3ae4e31fbbe ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte]
+
+=== Folder: .git\objects\84 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\84\c28f4eb2f40598238d8da93d5b4e9e3844ded3 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\85 ===
 
@@ -8010,6 +8358,11 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9c\e232df0f831bbe037fbf601ac68f64b06ce234 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte]
 
+=== Folder: .git\objects\9d ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9d\5eb81169e968bf8b40a6a3ca9510e988832e9d ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
+
 === Folder: .git\objects\9e ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\9e\973c80445805d4124554088cf388ce23858bf1 ---
@@ -8029,6 +8382,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte]
 
 === Folder: .git\objects\a2 ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a2\5c0d09d10440e6eaeb3488cbd675b2b60e1f3b ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\a2\9744f83cf67da8616ce02e26bc1ee901ea8177 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
@@ -8075,6 +8431,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ad\04a5a9ecdb65d205e33f244f09c4ba8de36585 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xdb in position 6: invalid continuation byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ad\fa59474d5de617b454fe6fa457c8397c323ae7 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
 === Folder: .git\objects\af ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\af\0dcb86596c7c06003de37a245156322ccf48ad ---
@@ -8087,6 +8446,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b0\0ebbae8efa1315b3825ddb41513e3f8f1e5eb4 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b0\bf22c94477d8367e4d2d911e532d471d9a8d6a ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\b2 ===
 
@@ -8106,6 +8468,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b6\b5f6494257be5ea34f741332576277b2542653 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b6\c7de93749ed290c291c64ee70f3b38258bb933 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte]
+
 === Folder: .git\objects\b7 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b7\7615351c6d62e6ab4e7cc4f4c48c1e9b0996d0 ---
@@ -8119,10 +8484,18 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b9\5822d30c60d75b9e5e1f42043381f04e684a92 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\b9\853599ce0c339f3dd45b62e71b08e2b3e6c323 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x85 in position 15: invalid start byte]
+
 === Folder: .git\objects\ba ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\ba\2fe7ad47770419264a591c552ea8041abe2c3e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte]
+
+=== Folder: .git\objects\bb ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\bb\9f2ef05ac38cdd1ee90436799c783d91901bfc ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd5 in position 2: invalid continuation byte]
 
 === Folder: .git\objects\bd ===
 
@@ -8241,6 +8614,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cf\a766a699a75d48d40b8a845a71c3d0d8ec8a9e ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x88 in position 18: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\cf\b573e1d64a9823e89e174271d90b483576c1ef ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte]
+
 === Folder: .git\objects\d2 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d2\eb3cedbd56b7ffd05e8c9dc8d6b41089af7bfc ---
@@ -8272,6 +8648,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d6\4ad1cdb0d421cb187095ecfb82d2019214d2fb ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d6\f724f416461a511e8c820bec7e63e2f0073680 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte]
+
 === Folder: .git\objects\d7 ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\d7\b278ba91bc60fba89a2544cd5485c311fe5261 ---
@@ -8297,6 +8676,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 === Folder: .git\objects\e0 ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e0\84eec63ef0a48b23e3ba5c491d5bb068b16117 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xe4 in position 2: invalid continuation byte]
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e0\9d9a3457c06a6d48b0bbc7834c13a014b8d838 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte]
 
@@ -8304,6 +8686,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e2\a0384999a4a0a1afdc34b5844c1165544a12f0 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\e2\c48022d27657d2cd3c428afb67e515c1d01705 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte]
 
 === Folder: .git\objects\e3 ===
 
@@ -8412,6 +8797,9 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fd\3211e33cd7286e3775bbd382e5b0f3a110b8c6 ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte]
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fd\a151b9f44e45ecc479fdccb5f512f84e3a6a39 ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte]
+
 === Folder: .git\objects\fe ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\objects\fe\07a70f4d1070ccd31cd21f10dc0ae6d357dbcb ---
@@ -8429,14 +8817,14 @@ c62a493c7723a61e1f3141466ceb0cec02457868 92ccd51812368f5e5efb533a62e1ff033bf6937
 === Folder: .git\refs\heads ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\heads\main ---
-08d0e027b59f727ac7845136de3516b556deedfb
+a25c0d09d10440e6eaeb3488cbd675b2b60e1f3b
 
 === Folder: .git\refs\remotes ===
 
 === Folder: .git\refs\remotes\origin ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.git\refs\remotes\origin\main ---
-08d0e027b59f727ac7845136de3516b556deedfb
+a25c0d09d10440e6eaeb3488cbd675b2b60e1f3b
 
 === Folder: .git\refs\tags ===
 
@@ -9087,8 +9475,8 @@ def get_list_items(list_id):
     items = q.all()
     items_serialized = []
     for li, m in items:
-        # create cover_url the same as other views
-        cover_url = _get_cover_url_for_manga(m)
+        # TẠO COVER URL HOÀN CHỈNH TẠI ĐÂY
+        cover_url = _get_cover_url_for_manga(m) 
         items_serialized.append({
             "manga_id": str(m.MangaId),
             "title": getattr(m, "TitleEn", "") or "",
@@ -11282,6 +11670,35 @@ a.text-decoration-none.text-reset .card {
     position: relative;
     z-index: 2;
     /* luôn trên link */
+}
+
+/* list.css */
+
+/* Cho toàn bộ card manga trông như có thể click được */
+.manga-card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hiệu ứng hover: nổi nhẹ + shadow */
+.manga-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Tăng kích thước ô checkbox trong list */
+.select-checkbox {
+    width: 1.4em;
+    height: 1.4em;
+    cursor: pointer;
+}
+
+/* Style cho thông tin owner, item count, follower count */
+.list-meta {
+    font-size: 1rem;
+    /* tăng kích thước chữ (Bootstrap small = 0.875rem) */
+    color: #d1d1d1;
+    /* trắng xám, dễ đọc trên nền tối */
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
 .manga-detail-container {
@@ -25201,31 +25618,34 @@ $(document).ready(function () {
         $(this).toggleClass('revealed');
     });
 
-    // Submit new comment (AJAX)
-    $('#comment-add-form').submit(function (e) {
-        e.preventDefault();
-        const form = $(this);
+    // Submit new comment (AJAX) - Dùng click trên button thay vì form submit
+    $(document).on('click', '#btn-submit-comment', function (e) {
+        const form = $('#comment-add-form');
         const content = $('#comment-content-input').val().trim();
+        const is_spoiler_raw = $('#is-spoiler').is(':checked') ? '1' : '0';
+        const action = form.attr('action');
+
         if (!content || content.length < 5) {
             alert('Comment is too short (minimum 5 characters).');
             return;
         }
-        const is_spoiler = $('#is-spoiler').is(':checked') ? '1' : '0';
-        const action = form.attr('action'); // should be /manga/<id>/comments
+
+        console.log('Posting comment...'); // Debug: kiểm tra console
+
         $.ajax({
             url: action,
             method: 'POST',
             data: {
                 content: content,
-                is_spoiler: is_spoiler
+                is_spoiler: is_spoiler_raw
             },
+            dataType: 'json',
             success: function (data) {
+                console.log('Success:', data); // Debug
                 if (data.success) {
-                    // prepend new comment to list
                     const c = data.comment;
                     const newHtml = buildCommentHtml(c);
                     $('#comments-list').prepend(newHtml);
-                    // clear input
                     $('#comment-content-input').val('');
                     $('#is-spoiler').prop('checked', false);
                 } else {
@@ -25233,8 +25653,11 @@ $(document).ready(function () {
                 }
             },
             error: function (xhr) {
+                console.error('Error:', xhr.responseText); // Debug
                 let msg = 'Error adding comment.';
-                try { msg = JSON.parse(xhr.responseText).message || msg; } catch (e) { }
+                try {
+                    msg = JSON.parse(xhr.responseText).message || msg;
+                } catch (e) { }
                 alert(msg);
             }
         });
@@ -25267,7 +25690,6 @@ $(document).ready(function () {
 
         $.post(url, function (data) {
             if (data.success) {
-                // update counters
                 const parent = $(`[data-comment-id="${commentId}"]`);
                 parent.find('.comment-like span').text(data.like_count);
                 parent.find('.comment-dislike span').text(data.dislike_count);
@@ -25276,7 +25698,9 @@ $(document).ready(function () {
             }
         }).fail(function (xhr) {
             let m = 'Error processing reaction.';
-            try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+            try {
+                m = JSON.parse(xhr.responseText).message || m;
+            } catch (e) { }
             alert(m);
         });
     });
@@ -25304,7 +25728,6 @@ $(document).ready(function () {
     // Cancel edit
     $(document).on('click', '.cancel-edit', function () {
         const container = $(this).closest('.comment');
-        const commentId = container.data('comment-id');
         const contentEl = container.find('.comment-content');
         const orig = contentEl.data('orig') || '';
         contentEl.html(orig);
@@ -25325,7 +25748,9 @@ $(document).ready(function () {
             url: `/comment/${commentId}`,
             method: 'PUT',
             contentType: 'application/json',
-            data: JSON.stringify({ content: newContent }),
+            data: JSON.stringify({
+                content: newContent
+            }),
             success: function (data) {
                 if (data.success) {
                     container.find('.comment-content').html(escapeHtml(newContent));
@@ -25335,7 +25760,9 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 let m = 'Error updating comment.';
-                try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+                try {
+                    m = JSON.parse(xhr.responseText).message || m;
+                } catch (e) { }
                 alert(m);
             }
         });
@@ -25359,7 +25786,9 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 let m = 'Error deleting comment.';
-                try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+                try {
+                    m = JSON.parse(xhr.responseText).message || m;
+                } catch (e) { }
                 alert(m);
             }
         });
@@ -25373,7 +25802,9 @@ $(document).ready(function () {
             alert('Report reason must be at least 5 characters.');
             return;
         }
-        $.post(`/comment/${commentId}/report`, { reason: reason.trim() }, function (data) {
+        $.post(`/comment/${commentId}/report`, {
+            reason: reason.trim()
+        }, function (data) {
             if (data.success) {
                 alert('Report submitted. Thank you.');
             } else {
@@ -25381,7 +25812,9 @@ $(document).ready(function () {
             }
         }).fail(function (xhr) {
             let m = 'Error submitting report.';
-            try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+            try {
+                m = JSON.parse(xhr.responseText).message || m;
+            } catch (e) { }
             alert(m);
         });
     });
@@ -25431,7 +25864,6 @@ $(document).ready(function () {
             .replace(/\n/g, '<br>');
     }
 });
-
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\library.js ---
 document.addEventListener("DOMContentLoaded", function () {
     const myListsContainer = document.getElementById("myListsContainer");
@@ -25646,7 +26078,7 @@ document.addEventListener("DOMContentLoaded", function () {
             col.innerHTML = `
           <div class="card h-100 manga-card card-pos" data-manga-id="${it.manga_id}">
             <input type="checkbox" class="form-check-input select-checkbox" data-manga-id="${it.manga_id}">
-            <img src="${coverUrl(it.cover_id)}" class="cover card-img-top" alt="${escapeHtml(it.title)}" onerror="this.src='/static/assets/default_cover.png'">
+            <img src="${it.cover_url}" class="cover card-img-top" alt="${escapeHtml(it.title)}" onerror="this.src='/static/assets/default_cover.png'">
             <div class="card-body">
               <h6 class="card-title">${escapeHtml(it.title)}</h6>
             </div>
@@ -25852,40 +26284,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // single remove from item card can also reuse confirm modal flow. Already wired.
+    if (container) {
+        container.addEventListener("click", function (e) {
+            const card = e.target.closest(".manga-card");
+            if (!card) return;
+
+            if (e.target.closest("input, button")) return;
+
+            const mangaId = card.dataset.mangaId;
+            if (mangaId) {
+                window.location.href = `/manga/${mangaId}`;
+            }
+        });
+    }
+
+    const toggleSelectBtn = document.getElementById('toggleSelectBtn');
+
+    if (toggleSelectBtn) {
+        toggleSelectBtn.addEventListener('click', () => {
+            const checkboxes = container.querySelectorAll('.select-checkbox');
+            const allSelected = Array.from(checkboxes).every(cb => cb.checked);
+
+            checkboxes.forEach(cb => {
+                cb.checked = !allSelected;
+                const id = cb.dataset.mangaId;
+                if (cb.checked) {
+                    selectedForDelete.add(id);
+                } else {
+                    selectedForDelete.delete(id);
+                }
+            });
+
+            updateBulkState();
+            toggleSelectBtn.textContent = allSelected ? 'Select All' : 'Deselect All';
+        });
+    }
 
     // initial load
     loadItems();
 
 })();
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".manga-card").forEach(card => {
-        card.addEventListener("click", e => {
-            // Nếu click vào checkbox hoặc button thì bỏ qua
-            if (e.target.closest("input[type=checkbox]") || e.target.closest("button")) {
-                return;
-            }
-
-            const mangaId = card.dataset.mangaId;
-            if (mangaId) {
-                window.location.href = `/manga/${mangaId}`;
-            }
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".manga-card").forEach(card => {
-        card.addEventListener("click", e => {
-            if (e.target.closest("input, button")) return; // bỏ qua click checkbox, button
-            const mangaId = card.dataset.mangaId;
-            if (mangaId) {
-                window.location.href = `/manga/${mangaId}`;
-            }
-        });
-    });
-});
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
 document.addEventListener('DOMContentLoaded', function () {
@@ -26500,19 +26938,21 @@ document.addEventListener('DOMContentLoaded', function () {
         <form id="comment-add-form" method="post" action="{{ url_for('comment_bp.add_comment', manga_id=mid) }}">
             <div class="d-flex">
                 <div class="me-2">
-                    <img src="{{ current_user.Avatar if current_user and current_user.Avatar else url_for('static', filename='assets/default_avatar.png') }}"
-                        class="comment-avatar" alt="avatar" width="48" height="48">
+                    <img src="/static/assets/default_avatar.png" class="comment-avatar" alt="avatar" width="48"
+                        height="48">
                 </div>
                 <div class="flex-fill">
-                    <textarea name="content" id="comment-content-input" class="form-control mb-2" rows="4"
-                        placeholder="Write your comment..."></textarea>
-                    <div class="d-flex align-items-center">
-                        <label class="me-3"><input type="checkbox" name="is_spoiler" id="is-spoiler"> Mark as
-                            spoiler</label>
-                        <button type="submit" class="btn btn-primary btn-sm ms-auto" id="btn-submit-comment">Post
-                            Comment</button>
-                    </div>
-                    <small class="text-muted">Minimum 5 characters.</small>
+                    <form id="comment-add-form" action="/manga/<manga_id>/comment" method="post">
+                        <textarea name="content" id="comment-content-input" class="form-control mb-2" rows="4"
+                            placeholder="Write your comment..."></textarea>
+                        <div class="d-flex align-items-center">
+                            <label class="me-3"><input type="checkbox" name="is_spoiler" id="is-spoiler"> Mark as
+                                spoiler</label>
+                            <button type="button" class="btn btn-primary btn-sm ms-auto" id="btn-submit-comment">Post
+                                Comment</button>
+                        </div>
+                        <small class="text-muted">Minimum 5 characters.</small>
+                    </form>
                 </div>
             </div>
         </form>
@@ -27027,8 +27467,8 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="d-flex justify-content-between align-items-start mb-3">
         <div>
             <h1 class="mb-1">{{ list.Name }}</h1>
-            <div class="text-muted mb-2">{{ list.Description }}</div>
-            <div class="small text-muted">
+            <div class="mb-2 list-meta">{{ list.Description }}</div>
+            <div class="list-meta">
                 Owner: {{ list.owner.Username if list.owner else "Unknown" }}
                 &nbsp;•&nbsp; {{ list.ItemCount }} items &nbsp;•&nbsp; {{ list.FollowerCount }} followers
             </div>
@@ -27037,6 +27477,7 @@ document.addEventListener('DOMContentLoaded', function () {
             {% if current_user.is_authenticated and list.UserId == current_user.UserId %}
             <button class="btn btn-primary" id="addMangaBtn">+ Add Manga</button>
             <button class="btn btn-outline-danger" id="bulkDeleteBtn" disabled>Delete Selected</button>
+            <button class="btn btn-outline-light" id="toggleSelectBtn">Select All</button>
             {% endif %}
             <div>
                 <select id="sortSelect" class="form-select form-select-sm">
@@ -27118,6 +27559,8 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
+
+
 {% endblock %}
 
 {% block scripts %}
@@ -27425,6 +27868,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endblock %}
 
 {% block scripts %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
 <script src="{{ url_for('static', filename='js/add_to_list.js') }}"></script>

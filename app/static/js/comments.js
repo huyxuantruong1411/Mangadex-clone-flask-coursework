@@ -5,40 +5,47 @@ $(document).ready(function () {
         $(this).toggleClass('revealed');
     });
 
-    // Submit new comment (AJAX)
-    $('#comment-add-form').submit(function (e) {
-        e.preventDefault();
-        const form = $(this);
+    // Submit new comment (AJAX) - Dùng click trên button thay vì form submit
+    $(document).on('click', '#btn-submit-comment', function (e) {
+        const form = $('#comment-add-form');
         const content = $('#comment-content-input').val().trim();
+        const is_spoiler_raw = $('#is-spoiler').is(':checked') ? '1' : '0';
+        const action = form.attr('action');
+
         if (!content || content.length < 5) {
             alert('Comment is too short (minimum 5 characters).');
             return;
         }
-        const is_spoiler = $('#is-spoiler').is(':checked') ? '1' : '0';
-        const action = form.attr('action'); // should be /manga/<id>/comments
+
+        console.log('Posting comment...'); // Debug: kiểm tra console
+
         $.ajax({
             url: action,
             method: 'POST',
             data: {
                 content: content,
-                is_spoiler: is_spoiler
+                is_spoiler: is_spoiler_raw
             },
+            dataType: 'json',
             success: function (data) {
+                console.log('Success:', data); // Debug
                 if (data.success) {
-                    // prepend new comment to list
                     const c = data.comment;
                     const newHtml = buildCommentHtml(c);
                     $('#comments-list').prepend(newHtml);
-                    // clear input
                     $('#comment-content-input').val('');
                     $('#is-spoiler').prop('checked', false);
+                    window.location.href = action.replace('/comments', '') + '#comments';
                 } else {
                     alert(data.message || 'Error adding comment.');
                 }
             },
             error: function (xhr) {
+                console.error('Error:', xhr.responseText); // Debug
                 let msg = 'Error adding comment.';
-                try { msg = JSON.parse(xhr.responseText).message || msg; } catch (e) { }
+                try {
+                    msg = JSON.parse(xhr.responseText).message || msg;
+                } catch (e) { }
                 alert(msg);
             }
         });
@@ -71,7 +78,6 @@ $(document).ready(function () {
 
         $.post(url, function (data) {
             if (data.success) {
-                // update counters
                 const parent = $(`[data-comment-id="${commentId}"]`);
                 parent.find('.comment-like span').text(data.like_count);
                 parent.find('.comment-dislike span').text(data.dislike_count);
@@ -80,7 +86,9 @@ $(document).ready(function () {
             }
         }).fail(function (xhr) {
             let m = 'Error processing reaction.';
-            try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+            try {
+                m = JSON.parse(xhr.responseText).message || m;
+            } catch (e) { }
             alert(m);
         });
     });
@@ -108,7 +116,6 @@ $(document).ready(function () {
     // Cancel edit
     $(document).on('click', '.cancel-edit', function () {
         const container = $(this).closest('.comment');
-        const commentId = container.data('comment-id');
         const contentEl = container.find('.comment-content');
         const orig = contentEl.data('orig') || '';
         contentEl.html(orig);
@@ -129,7 +136,9 @@ $(document).ready(function () {
             url: `/comment/${commentId}`,
             method: 'PUT',
             contentType: 'application/json',
-            data: JSON.stringify({ content: newContent }),
+            data: JSON.stringify({
+                content: newContent
+            }),
             success: function (data) {
                 if (data.success) {
                     container.find('.comment-content').html(escapeHtml(newContent));
@@ -139,7 +148,9 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 let m = 'Error updating comment.';
-                try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+                try {
+                    m = JSON.parse(xhr.responseText).message || m;
+                } catch (e) { }
                 alert(m);
             }
         });
@@ -163,7 +174,9 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 let m = 'Error deleting comment.';
-                try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+                try {
+                    m = JSON.parse(xhr.responseText).message || m;
+                } catch (e) { }
                 alert(m);
             }
         });
@@ -177,7 +190,9 @@ $(document).ready(function () {
             alert('Report reason must be at least 5 characters.');
             return;
         }
-        $.post(`/comment/${commentId}/report`, { reason: reason.trim() }, function (data) {
+        $.post(`/comment/${commentId}/report`, {
+            reason: reason.trim()
+        }, function (data) {
             if (data.success) {
                 alert('Report submitted. Thank you.');
             } else {
@@ -185,7 +200,9 @@ $(document).ready(function () {
             }
         }).fail(function (xhr) {
             let m = 'Error submitting report.';
-            try { m = JSON.parse(xhr.responseText).message || m; } catch (e) { }
+            try {
+                m = JSON.parse(xhr.responseText).message || m;
+            } catch (e) { }
             alert(m);
         });
     });
