@@ -6,7 +6,8 @@ from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
-from sqlalchemy import desc, func, or_
+from sqlalchemy import case, desc, func, or_
+from flask_paginate import Pagination
 
 from werkzeug.security import generate_password_hash
 
@@ -312,9 +313,192 @@ def require_login():
 def profile():
     return render_template("profile.html", title="Profile", user=current_user)
 
-@main.route("/advanced-search")
+@main.route('/advanced_search/options')
+def advanced_search_options():
+    return jsonify(load_options())
+
+def load_options():
+    return {
+        'tags': [(tag.TagId, tag.GroupName, tag.NameEn) for tag in db.session.query(Tag.TagId, Tag.GroupName, Tag.NameEn).distinct().all()],
+        'ratings': [(r[0],) for r in db.session.query(Manga.ContentRating).distinct().all() if r[0]],
+        'demographics': [(d[0],) for d in db.session.query(Manga.PublicationDemographic).distinct().all() if d[0]],
+        'original_langs': [(l[0],) for l in db.session.query(Manga.OriginalLanguage).distinct().all() if l[0]],
+        'translated_langs': [(l[0],) for l in db.session.query(Chapter.TranslatedLang).distinct().all() if l[0]],
+        'statuses': [(s[0],) for s in db.session.query(Manga.Status).distinct().all() if s[0]]
+    }
+
+
+@main.route('/advanced_search', methods=['GET', 'POST'])
 def advanced_search():
-    return render_template("advanced_search.html", title="Advanced Search")
+    options = load_options()
+    mangas = None
+    pagination = None
+    your_scores = {}
+
+    if request.method == 'POST' or request.args:
+        search_query = request.form.get('search_query', request.args.get('q', ''))
+        sort_by = request.form.get('sort_by', request.args.get('sort_by', 'None'))
+        include_tags = request.form.getlist('include_tags') or request.args.getlist('include_tags')
+        exclude_tags = request.form.getlist('exclude_tags') or request.args.getlist('exclude_tags')
+        content_ratings = request.form.getlist('content_rating') or request.args.getlist('content_rating')
+        demographics = request.form.getlist('demographic') or request.args.getlist('demographic')
+        authors = request.form.get('authors', request.args.get('authors', '')).split(',')
+        artists = request.form.get('artists', request.args.get('artists', '')).split(',')
+        original_langs = request.form.getlist('original_langs') or request.args.getlist('original_langs')
+        year_from = request.form.get('year_from', request.args.get('year_from', ''))
+        year_to = request.form.get('year_to', request.args.get('year_to', ''))
+        statuses = request.form.getlist('status') or request.args.getlist('status')
+        has_translated = request.form.get('has_translated') == 'on' or request.args.get('has_translated') == 'on'
+        translated_langs = request.form.getlist('translated_langs') or request.args.getlist('translated_langs')
+
+        # --- BẮT ĐẦU PHẦN SỬA ĐỔI ---
+        # BƯỚC 1: Xây dựng truy vấn để lấy các MangaId duy nhất.
+        # Truy vấn này chỉ chọn các cột cần thiết cho việc lọc, sắp xếp và phân trang.
+        query_ids = db.session.query(
+            Manga.MangaId,
+            Manga.TitleEn,
+            Manga.Year,
+            MangaStatistics.Follows,
+            MangaStatistics.AverageRating
+        ).outerjoin(MangaStatistics).outerjoin(MangaAltTitle)
+
+        # Áp dụng các bộ lọc như cũ
+        if search_query:
+            query_ids = query_ids.filter(or_(Manga.TitleEn.ilike(f'%{search_query}%'), MangaAltTitle.AltTitle.ilike(f'%{search_query}%')))
+        if include_tags:
+            query_ids = query_ids.join(MangaTag).filter(MangaTag.TagId.in_(include_tags))
+        if exclude_tags:
+            exclude_mangas = db.session.query(MangaTag.MangaId).filter(MangaTag.TagId.in_(exclude_tags)).distinct().subquery()
+            query_ids = query_ids.filter(~Manga.MangaId.in_(exclude_mangas))
+        if content_ratings:
+            query_ids = query_ids.filter(Manga.ContentRating.in_(content_ratings))
+        if demographics:
+            query_ids = query_ids.filter(Manga.PublicationDemographic.in_(demographics))
+        if authors and any(a.strip() for a in authors):
+            query_ids = query_ids.join(Creator).filter(Creator.Name.ilike(f'%{authors[0].strip()}%'))
+        if artists and any(a.strip() for a in artists):
+            query_ids = query_ids.join(Creator).filter(Creator.Name.ilike(f'%{artists[0].strip()}%'))
+        if original_langs:
+            query_ids = query_ids.filter(Manga.OriginalLanguage.in_(original_langs))
+        if year_from or year_to:
+            from_year = int(year_from) if year_from else 0
+            to_year = int(year_to) if year_to else 9999
+            query_ids = query_ids.filter(Manga.Year.between(min(from_year, to_year), max(from_year, to_year)))
+        if statuses:
+            query_ids = query_ids.filter(Manga.Status.in_(statuses))
+        if has_translated and translated_langs:
+            query_ids = query_ids.join(Chapter).filter(Chapter.TranslatedLang.in_(translated_langs))
+
+        # Thêm biểu thức CASE vào SELECT để nó có thể được sử dụng trong ORDER BY với DISTINCT
+        if sort_by == 'Rating DESC' or sort_by == 'Follows DESC':
+            # Sử dụng label để có thể tham chiếu đến cột này trong ORDER BY
+            query_ids = query_ids.add_columns(case((MangaStatistics.Follows.is_(None), 1), else_=0).label('sort_helper'))
+
+        # Sử dụng distinct() trên truy vấn ID
+        query_ids = query_ids.distinct()
+
+        # Áp dụng sắp xếp trên truy vấn ID
+        if sort_by == 'Title ASC':
+            query_ids = query_ids.order_by(Manga.TitleEn.asc())
+        elif sort_by == 'Title DESC':
+            query_ids = query_ids.order_by(Manga.TitleEn.desc())
+        elif sort_by == 'Year ASC':
+            query_ids = query_ids.order_by(Manga.Year.asc())
+        elif sort_by == 'Year DESC':
+            query_ids = query_ids.order_by(Manga.Year.desc())
+        elif sort_by == 'Rating DESC':
+            # Sắp xếp theo cột ảo 'sort_helper' rồi mới đến AverageRating
+            query_ids = query_ids.order_by('sort_helper', desc(MangaStatistics.AverageRating))
+        elif sort_by == 'Follows DESC':
+            # Sắp xếp theo cột ảo 'sort_helper' rồi mới đến Follows
+            query_ids = query_ids.order_by('sort_helper', desc(MangaStatistics.Follows))
+        else: # Sắp xếp mặc định
+            query_ids = query_ids.order_by(Manga.MangaId.asc())
+
+        # Tính tổng số bản ghi trước khi phân trang
+        total = query_ids.count()
+        
+        # Phân trang
+        page = request.args.get('page', 1, type=int)
+        per_page = 20
+        
+        # Lấy danh sách ID đã được phân trang
+        manga_ids_paginated = query_ids.offset((page - 1) * per_page).limit(per_page).all()
+        # manga_ids là danh sách các ID của manga trên trang hiện tại
+        manga_ids = [item.MangaId for item in manga_ids_paginated]
+
+        # BƯỚC 2: Tải lại các đối tượng đầy đủ dựa trên danh sách ID đã có
+        id_order = {id: index for index, id in enumerate(manga_ids)}
+        
+        mangas_paginated_full_data = db.session.query(Manga, MangaStatistics)\
+            .outerjoin(MangaStatistics)\
+            .filter(Manga.MangaId.in_(manga_ids))\
+            .all()
+
+        # Sắp xếp lại kết quả bằng Python để khớp với thứ tự đã phân trang
+        mangas_paginated_full_data.sort(key=lambda item: id_order[item[0].MangaId])
+
+        pagination = Pagination(page=page, total=total, per_page=per_page)
+        
+        # --- KẾT THÚC PHẦN SỬA ĐỔI ---
+
+        # BẮT CHƯỚC LOGIC TẢI COVER TỪ /home
+        mangas_with_covers = []
+        for manga, stat in mangas_paginated_full_data:
+            # Tra cứu trong MangaCover theo MangaId
+            cover = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+            if cover and cover.ImageData:
+                # Chuyển đổi ImageData thành URL base64
+                image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+                cover_url = f"data:image/jpeg;base64,{image_data}"
+            else:
+                # Nếu không tìm thấy, tải ảnh và lưu vào bảng
+                cover_info = get_cover_info(str(manga.MangaId).lower())
+                if cover_info:
+                    manga_id_str = cover_info['manga_id']
+                    cover_id_str = cover_info['cover_id']
+                    file_name_str = cover_info['file_name']
+                    image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                    try:
+                        response = requests.get(image_url, stream=True)
+                        response.raise_for_status()
+                        image_data = response.content
+                        new_cover = MangaCover(
+                            MangaId=manga.MangaId,
+                            CoverId=uuid.UUID(cover_id_str),
+                            FileName=file_name_str,
+                            ImageData=image_data,
+                            DownloadDate=datetime.utcnow()
+                        )
+                        db.session.add(new_cover)
+                        db.session.commit()
+                        image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                        cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                    except Exception as e:
+                        print(f"Error downloading cover for {manga_id_str}: {e}")
+                        cover_url = url_for('static', filename='assets/default_cover.png')
+                else:
+                    cover_url = url_for('static', filename='assets/default_cover.png')
+
+            score = your_scores.get(manga.MangaId, 'N/A')
+            mangas_with_covers.append({
+                'manga': manga,
+                'stat': stat,
+                'cover_url': cover_url,
+                'your_score': score
+            })
+        
+        mangas = mangas_with_covers
+
+        if current_user.is_authenticated:
+            ratings = db.session.query(Rating.MangaId, Rating.Score).filter_by(UserId=current_user.UserId).all()
+            your_scores = dict(ratings)
+
+        if year_from and year_to and int(year_from) > int(year_to):
+            flash('warning', 'Swapped years for valid range.')
+
+    return render_template('advanced_search.html', options=options, mangas=mangas, pagination=pagination, your_scores=your_scores)
+
 
 @main.route('/recently_added')
 def recently_added():

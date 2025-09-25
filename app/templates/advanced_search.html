@@ -1,10 +1,127 @@
 {% extends "base.html" %}
-
-{% block title %}Advanced Search | MangaDex Clone{% endblock %}
+{% block title %}Advanced Search{% endblock %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/advanced_search.css') }}">
+{% endblock %}
 
 {% block content %}
-<div class="text-center py-5 text-white">
-    <h1>Advanced Search</h1>
-    <p>No content available yet.</p>
+<div class="container-fluid p-4" data-auth="{{ current_user.is_authenticated }}">
+    <h2 class="text-white mb-4">Advanced Search</h2>
+    <form method="POST" id="search-form" class="advanced-search-form">
+        {{ form.hidden_tag() if form else "" }}
+        <div class="row">
+            <div class="col-lg-8 col-md-6 mb-3">
+                <label for="search-query" class="form-label">Search Query</label>
+                <input type="text" id="search-query" name="search_query" class="form-control"
+                    placeholder="Search manga by title..." value="{{ request.form.get('search_query', '') }}">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <label for="sort-by" class="form-label">Sort By</label>
+                <select id="sort-by" name="sort_by" class="form-select">
+                    <option value="None" {% if request.form.get('sort_by')=='None' %}selected{% endif %}>None</option>
+                    <option value="Title ASC" {% if request.form.get('sort_by')=='Title ASC' %}selected{% endif %}>Title
+                        ASC</option>
+                    <option value="Title DESC" {% if request.form.get('sort_by')=='Title DESC' %}selected{% endif %}>
+                        Title DESC</option>
+                    <option value="Year ASC" {% if request.form.get('sort_by')=='Year ASC' %}selected{% endif %}>Year
+                        ASC</option>
+                    <option value="Year DESC" {% if request.form.get('sort_by')=='Year DESC' %}selected{% endif %}>Year
+                        DESC</option>
+                    <option value="Rating DESC" {% if request.form.get('sort_by')=='Rating DESC' %}selected{% endif %}>
+                        Rating DESC</option>
+                    <option value="Follows DESC" {% if request.form.get('sort_by')=='Follows DESC' %}selected{% endif
+                        %}>Most Follows</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Include Tags</label>
+                <div id="include-tags" class="tag-checklist"></div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Exclude Tags</label>
+                <div id="exclude-tags" class="tag-checklist"></div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="content-rating" class="form-label">Content Rating</label>
+                <select id="content-rating" name="content_rating" multiple class="form-select" size="3">
+                    {% for rating in options.ratings %}
+                    <option value="{{ rating[0] }}" {% if rating[0] in request.form.getlist('content_rating')
+                        %}selected{% endif %}>{{ rating[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="demographic" class="form-label">Magazine Demographic</label>
+                <select id="demographic" name="demographic" multiple class="form-select" size="3">
+                    {% for demo in options.demographics %}
+                    <option value="{{ demo[0] }}" {% if demo[0] in request.form.getlist('demographic') %}selected{%
+                        endif %}>{{ demo[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="status" class="form-label">Publication Status</label>
+                <select id="status" name="status" multiple class="form-select" size="3">
+                    {% for stat in options.statuses %}
+                    <option value="{{ stat[0] }}" {% if stat[0] in request.form.getlist('status') %}selected{% endif %}>
+                        {{ stat[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-secondary" id="reset-filters">Reset Filters</button>
+        </div>
+    </form>
+
+    {% if mangas is not none %}
+    <h3 class="text-white mt-5">Search Results</h3>
+    {% if mangas %}
+    <div class="table-responsive">
+        <table class="table table-dark table-hover mt-2">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Score</th>
+                    <th>Your Score</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in mangas %}
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ item.cover_url }}" alt="{{ item.manga.TitleEn }}"
+                                class="img-thumbnail me-2 manga-cover-lg">
+                            <a href="{{ url_for('manga.manga_detail', manga_id=item.manga.MangaId) }}"
+                                class="text-decoration-none text-white">{{ item.manga.TitleEn }}</a>
+                        </div>
+                    </td>
+                    <td>{{ '{:.1f}'.format(item.stat.AverageRating) if item.stat and item.stat.AverageRating else 'N/A'
+                        }}</td>
+                    <td>{{ item.your_score }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary add-to-list" data-manga-id="{{ item.manga.MangaId }}">Add
+                            to List</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-white mt-4">No manga found matching your criteria.</p>
+    {% endif %}
+    {% endif %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/advanced_search.js') }}"></script>
 {% endblock %}

@@ -27,7 +27,9 @@ def create_app():
     from .comment_routes import comment_bp as comment_blueprint
     from .list_routes import list_bp as list_blueprint
     from .blueprints.reader import reader as reader_blueprint
-    
+    from app.admin_bp import admin_bp
+
+    app.register_blueprint(admin_bp)
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
     app.register_blueprint(main_blueprint)
     app.register_blueprint(manga_blueprint, url_prefix='/manga')

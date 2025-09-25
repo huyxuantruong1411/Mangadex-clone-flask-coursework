@@ -1,0 +1,40 @@
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #343a40;
+}
+
+.sidebar .nav-link {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+}
+
+.table-dark th,
+.table-dark td {
+    vertical-align: middle;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.btn-sm {
+    margin-right: 5px;
+}

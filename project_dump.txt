@@ -12,11 +12,25 @@
       "type": "file"
     },
     {
+      "name": "Simulation",
+      "type": "directory",
+      "children": [
+        {
+          "name": "single-user.py",
+          "type": "file"
+        }
+      ]
+    },
+    {
       "name": "app",
       "type": "directory",
       "children": [
         {
           "name": "__init__.py",
+          "type": "file"
+        },
+        {
+          "name": "admin_bp.py",
           "type": "file"
         },
         {
@@ -38,6 +52,10 @@
           "type": "file"
         },
         {
+          "name": "dashboard_routes.py",
+          "type": "file"
+        },
+        {
           "name": "list_routes.py",
           "type": "file"
         },
@@ -50,17 +68,11 @@
           "type": "file"
         },
         {
-          "name": "routes",
-          "type": "directory",
-          "children": [
-            {
-              "name": "user.py",
-              "type": "file"
-            }
-          ]
+          "name": "routes.py",
+          "type": "file"
         },
         {
-          "name": "routes.py",
+          "name": "search_index.py",
           "type": "file"
         },
         {
@@ -84,6 +96,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "default_banner.png",
+                  "type": "file"
+                },
+                {
                   "name": "default_cover.png",
                   "type": "file"
                 },
@@ -99,6 +115,14 @@
               "children": [
                 {
                   "name": "add_to_list.css",
+                  "type": "file"
+                },
+                {
+                  "name": "admin.css",
+                  "type": "file"
+                },
+                {
+                  "name": "advanced_search.css",
                   "type": "file"
                 },
                 {
@@ -126,6 +150,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "modal.css",
+                  "type": "file"
+                },
+                {
                   "name": "reader.css",
                   "type": "file"
                 },
@@ -141,6 +169,18 @@
               "children": [
                 {
                   "name": "add_to_list.js",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_comments.js",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_users.js",
+                  "type": "file"
+                },
+                {
+                  "name": "advanced_search.js",
                   "type": "file"
                 },
                 {
@@ -176,6 +216,30 @@
           "type": "directory",
           "children": [
             {
+              "name": "admin_base.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_comments.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_creators.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_dashboard.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_manga.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_users.html",
+              "type": "file"
+            },
+            {
               "name": "advanced_search.html",
               "type": "file"
             },
@@ -197,6 +261,10 @@
             },
             {
               "name": "creator_detail.html",
+              "type": "file"
+            },
+            {
+              "name": "dashboard.html",
               "type": "file"
             },
             {
@@ -229,6 +297,10 @@
             },
             {
               "name": "profile.html",
+              "type": "file"
+            },
+            {
+              "name": "profile_dashboard.html",
               "type": "file"
             },
             {
@@ -268,11 +340,19 @@
       ]
     },
     {
+      "name": "build_index.py",
+      "type": "file"
+    },
+    {
       "name": "config.py",
       "type": "file"
     },
     {
       "name": "dump.py",
+      "type": "file"
+    },
+    {
+      "name": "log.txt",
       "type": "file"
     },
     {
@@ -285,6 +365,14 @@
     },
     {
       "name": "run.py",
+      "type": "file"
+    },
+    {
+      "name": "search_index.joblib",
+      "type": "file"
+    },
+    {
+      "name": "search_index.pkl",
       "type": "file"
     },
     {
@@ -302,37 +390,47 @@
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── .gitignore
 ├── README.md
+├── Simulation/
+│   └── single-user.py
 ├── app/
 │   ├── __init__.py
+│   ├── admin_bp.py
 │   ├── auth.py
 │   ├── blueprints/
 │   │   └── reader.py
 │   ├── comment_routes.py
+│   ├── dashboard_routes.py
 │   ├── list_routes.py
 │   ├── models.py
 │   ├── reader_controller.py
-│   ├── routes/
-│   │   └── user.py
 │   ├── routes.py
+│   ├── search_index.py
 │   ├── static/
 │   │   ├── assets/
 │   │   │   ├── MD-logo.png
 │   │   │   ├── auth_thmb.png
 │   │   │   ├── default_avatar.png
+│   │   │   ├── default_banner.png
 │   │   │   ├── default_cover.png
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── add_to_list.css
+│   │   │   ├── admin.css
+│   │   │   ├── advanced_search.css
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
 │   │   │   ├── creator_detail.css
 │   │   │   ├── library.css
 │   │   │   ├── list.css
 │   │   │   ├── manga_detail.css
+│   │   │   ├── modal.css
 │   │   │   ├── reader.css
 │   │   │   └── styles.css
 │   │   └── js/
 │   │       ├── add_to_list.js
+│   │       ├── admin_comments.js
+│   │       ├── admin_users.js
+│   │       ├── advanced_search.js
 │   │       ├── comments.js
 │   │       ├── library.js
 │   │       ├── list_public.js
@@ -340,12 +438,19 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │       ├── reader.js
 │   │       └── scripts.js
 │   └── templates/
+│       ├── admin_base.html
+│       ├── admin_comments.html
+│       ├── admin_creators.html
+│       ├── admin_dashboard.html
+│       ├── admin_manga.html
+│       ├── admin_users.html
 │       ├── advanced_search.html
 │       ├── art.html
 │       ├── base.html
 │       ├── chapters.html
 │       ├── comments.html
 │       ├── creator_detail.html
+│       ├── dashboard.html
 │       ├── home.html
 │       ├── latest_updates.html
 │       ├── library.html
@@ -354,6 +459,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── manga_art.html
 │       ├── manga_detail.html
 │       ├── profile.html
+│       ├── profile_dashboard.html
 │       ├── random.html
 │       ├── reader.html
 │       ├── reading_history.html
@@ -362,11 +468,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── related.html
 │       ├── require_login.html
 │       └── updates.html
+├── build_index.py
 ├── config.py
 ├── dump.py
+├── log.txt
 ├── project_dump.txt
 ├── requirements.txt
 ├── run.py
+├── search_index.joblib
+├── search_index.pkl
 ├── test-api.py
 └── test-connection.py
 
@@ -395,6 +505,52 @@ instance/
 .idea/
 .DS_Store
 Thumbs.db
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\build_index.py ---
+# build_index.py
+import pickle
+import re
+from unidecode import unidecode
+from sklearn.feature_extraction.text import TfidfVectorizer
+from app import db, create_app
+from app.models import Manga, MangaAltTitle
+
+def norm(s: str) -> str:
+    if not s:
+        return ""
+    s = s.lower()
+    s = unidecode(s)  # bỏ dấu
+    s = re.sub(r"[^0-9a-z\s]", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+def build_index():
+    app = create_app()
+    with app.app_context():
+        mangas = db.session.query(Manga).all()
+        alt_titles = db.session.query(MangaAltTitle).all()
+
+        alt_map = {}
+        for alt in alt_titles:
+            alt_map.setdefault(str(alt.MangaId), []).append(alt.AltTitle)
+
+        docs, ids = [], []
+        for m in mangas:
+            texts = [m.TitleEn] + alt_map.get(str(m.MangaId), [])
+            text = " ".join([norm(t) for t in texts if t])
+            if text.strip():
+                docs.append(text)
+                ids.append(str(m.MangaId))
+
+        vectorizer = TfidfVectorizer()
+        tfidf_matrix = vectorizer.fit_transform(docs)
+
+        with open("search_index.pkl", "wb") as f:
+            pickle.dump((vectorizer, tfidf_matrix, ids), f)
+
+        print(f"Indexed {len(ids)} mangas")
+
+if __name__ == "__main__":
+    build_index()
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
 import urllib
@@ -509,6 +665,1067 @@ if __name__ == "__main__":
     dump_project(current_dir, OUTPUT_FILE)
     print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\log.txt ---
+Manga không có cột cover url.
+----
+Cấu trúc db:
+USE [MangaLibrary]
+GO
+/****** Object:  Table [dbo].[Chapter]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Chapter](
+	[ChapterId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NULL,
+	[Volume] [nvarchar](50) NULL,
+	[ChapterNumber] [nvarchar](50) NULL,
+	[Title] [nvarchar](max) NULL,
+	[TranslatedLang] [nvarchar](10) NULL,
+	[Pages] [int] NULL,
+	[PublishAt] [datetime2](7) NULL,
+	[ReadableAt] [datetime2](7) NULL,
+	[IsUnavailable] [bit] NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ChapterId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Comment]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Comment](
+	[CommentId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[ChapterId] [uniqueidentifier] NULL,
+	[Content] [nvarchar](max) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+	[IsDeleted] [bit] NULL,
+	[IsSpoiler] [bit] NOT NULL,
+	[LikeCount] [int] NOT NULL,
+	[DislikeCount] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CommentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Covers]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Covers](
+	[cover_id] [uniqueidentifier] NOT NULL,
+	[manga_id] [uniqueidentifier] NOT NULL,
+	[type] [nvarchar](50) NULL,
+	[description] [nvarchar](max) NULL,
+	[volume] [nvarchar](50) NULL,
+	[fileName] [nvarchar](255) NULL,
+	[locale] [nvarchar](10) NULL,
+	[createdAt] [datetimeoffset](7) NULL,
+	[updatedAt] [datetimeoffset](7) NULL,
+	[version] [int] NULL,
+	[rel_user_id] [uniqueidentifier] NULL,
+	[url] [nvarchar](500) NULL,
+	[image_data] [varbinary](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[cover_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Creator]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Creator](
+	[CreatorId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NULL,
+	[Name] [nvarchar](500) NULL,
+	[ImageUrl] [nvarchar](max) NULL,
+	[BiographyEn] [nvarchar](max) NULL,
+	[BiographyJa] [nvarchar](max) NULL,
+	[BiographyPtBr] [nvarchar](max) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CreatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[CreatorRelationship]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CreatorRelationship](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CreatorId] [uniqueidentifier] NOT NULL,
+	[RelatedId] [uniqueidentifier] NOT NULL,
+	[RelatedType] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[List]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[List](
+	[ListId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](200) NULL,
+	[Description] [nvarchar](max) NULL,
+	[IsPublic] [bit] NULL,
+	[Slug] [nvarchar](255) NULL,
+	[Visibility] [nvarchar](20) NOT NULL,
+	[CreatedAt] [datetime2](7) NOT NULL,
+	[UpdatedAt] [datetime2](7) NOT NULL,
+	[FollowerCount] [int] NOT NULL,
+	[ItemCount] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ListId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ListFollower]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ListFollower](
+	[ListId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[FollowedAt] [datetime2](7) NOT NULL,
+ CONSTRAINT [PK_ListFollower] PRIMARY KEY CLUSTERED 
+(
+	[ListId] ASC,
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ListManga]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ListManga](
+	[ListId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[AddedAt] [datetime2](7) NULL,
+	[Position] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ListId] ASC,
+	[MangaId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Manga]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Manga](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NULL,
+	[TitleEn] [nvarchar](500) NULL,
+	[ChapterNumbersResetOnNewVolume] [bit] NULL,
+	[ContentRating] [nvarchar](50) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+	[IsLocked] [bit] NULL,
+	[LastChapter] [nvarchar](50) NULL,
+	[LastVolume] [nvarchar](50) NULL,
+	[LatestUploadedChapter] [nvarchar](50) NULL,
+	[OriginalLanguage] [nvarchar](10) NULL,
+	[PublicationDemographic] [nvarchar](50) NULL,
+	[State] [nvarchar](50) NULL,
+	[Status] [nvarchar](50) NULL,
+	[Year] [int] NULL,
+	[OfficialLinks] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaAltTitle]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaAltTitle](
+	[AltTitleId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[LangCode] [nvarchar](10) NULL,
+	[AltTitle] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[AltTitleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaAvailableLanguage]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaAvailableLanguage](
+	[LangId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[LangCode] [nvarchar](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LangId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaCover]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaCover](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[CoverId] [uniqueidentifier] NOT NULL,
+	[FileName] [nvarchar](255) NOT NULL,
+	[DownloadDate] [datetime2](7) NOT NULL,
+	[ImageData] [varbinary](max) NOT NULL,
+ CONSTRAINT [PK_MangaCover] PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC,
+	[CoverId] ASC,
+	[FileName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaCovers]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaCovers](
+	[cover_id] [nvarchar](50) NOT NULL,
+	[manga_id] [uniqueidentifier] NOT NULL,
+	[file_name] [nvarchar](300) NULL,
+	[description] [nvarchar](max) NULL,
+	[volume] [nvarchar](50) NULL,
+	[locale] [nvarchar](20) NULL,
+	[created_at] [datetimeoffset](7) NULL,
+	[updated_at] [datetimeoffset](7) NULL,
+	[version] [int] NULL,
+	[image_url] [nvarchar](1000) NULL,
+	[file_path] [nvarchar](1000) NULL,
+	[downloaded_at] [datetimeoffset](7) NULL,
+	[raw_json] [nvarchar](max) NULL,
+	[inserted_at] [datetimeoffset](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[cover_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaDescription]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaDescription](
+	[DescriptionId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[LangCode] [nvarchar](10) NULL,
+	[Description] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[DescriptionId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaLink]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaLink](
+	[LinkId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Provider] [nvarchar](20) NULL,
+	[Url] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LinkId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaRelated]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaRelated](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[RelatedId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NOT NULL,
+	[Related] [nvarchar](50) NULL,
+	[FetchedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC,
+	[RelatedId] ASC,
+	[Type] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaStatistics]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaStatistics](
+	[StatisticId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Source] [nvarchar](50) NULL,
+	[Follows] [int] NULL,
+	[AverageRating] [float] NULL,
+	[BayesianRating] [float] NULL,
+	[UnavailableChapters] [int] NULL,
+	[FetchedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[StatisticId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaTag]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaTag](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[TagId] [uniqueidentifier] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC,
+	[TagId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Rating]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Rating](
+	[RatingId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Score] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[RatingId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ReadingHistory]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ReadingHistory](
+	[HistoryId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[ChapterId] [uniqueidentifier] NOT NULL,
+	[LastPageRead] [int] NULL,
+	[ReadAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[HistoryId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Report]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Report](
+	[ReportId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[CommentId] [uniqueidentifier] NOT NULL,
+	[Reason] [nvarchar](max) NULL,
+	[Status] [nvarchar](50) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ReportId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tag]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tag](
+	[TagId] [uniqueidentifier] NOT NULL,
+	[GroupName] [nvarchar](100) NULL,
+	[NameEn] [nvarchar](200) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TagId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserId] [uniqueidentifier] NOT NULL,
+	[Username] [nvarchar](100) NOT NULL,
+	[Email] [nvarchar](255) NOT NULL,
+	[PasswordHash] [nvarchar](255) NOT NULL,
+	[Avatar] [nvarchar](max) NULL,
+	[Role] [nvarchar](20) NOT NULL,
+	[IsLocked] [bit] NULL,
+	[CreatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Comment] ADD  DEFAULT ((0)) FOR [IsSpoiler]
+GO
+ALTER TABLE [dbo].[Comment] ADD  DEFAULT ((0)) FOR [LikeCount]
+GO
+ALTER TABLE [dbo].[Comment] ADD  DEFAULT ((0)) FOR [DislikeCount]
+GO
+ALTER TABLE [dbo].[List] ADD  CONSTRAINT [DF_List_FollowerCount]  DEFAULT ((0)) FOR [FollowerCount]
+GO
+ALTER TABLE [dbo].[List] ADD  CONSTRAINT [DF_List_ItemCount]  DEFAULT ((0)) FOR [ItemCount]
+GO
+ALTER TABLE [dbo].[ListFollower] ADD  CONSTRAINT [DF_ListFollower_FollowedAt]  DEFAULT (sysutcdatetime()) FOR [FollowedAt]
+GO
+ALTER TABLE [dbo].[ListManga] ADD  CONSTRAINT [DF_ListManga_Position]  DEFAULT ((0)) FOR [Position]
+GO
+ALTER TABLE [dbo].[MangaCover] ADD  DEFAULT (getdate()) FOR [DownloadDate]
+GO
+ALTER TABLE [dbo].[MangaCovers] ADD  DEFAULT (sysutcdatetime()) FOR [inserted_at]
+GO
+ALTER TABLE [dbo].[Chapter]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[Comment]  WITH CHECK ADD FOREIGN KEY([ChapterId])
+REFERENCES [dbo].[Chapter] ([ChapterId])
+GO
+ALTER TABLE [dbo].[Comment]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[Comment]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[CreatorRelationship]  WITH CHECK ADD FOREIGN KEY([CreatorId])
+REFERENCES [dbo].[Creator] ([CreatorId])
+GO
+ALTER TABLE [dbo].[List]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[ListFollower]  WITH CHECK ADD  CONSTRAINT [FK_ListFollower_List] FOREIGN KEY([ListId])
+REFERENCES [dbo].[List] ([ListId])
+GO
+ALTER TABLE [dbo].[ListFollower] CHECK CONSTRAINT [FK_ListFollower_List]
+GO
+ALTER TABLE [dbo].[ListFollower]  WITH CHECK ADD  CONSTRAINT [FK_ListFollower_User] FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[ListFollower] CHECK CONSTRAINT [FK_ListFollower_User]
+GO
+ALTER TABLE [dbo].[ListManga]  WITH CHECK ADD FOREIGN KEY([ListId])
+REFERENCES [dbo].[List] ([ListId])
+GO
+ALTER TABLE [dbo].[ListManga]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaAltTitle]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaAvailableLanguage]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaDescription]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaLink]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaRelated]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaStatistics]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaTag]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaTag]  WITH CHECK ADD FOREIGN KEY([TagId])
+REFERENCES [dbo].[Tag] ([TagId])
+GO
+ALTER TABLE [dbo].[Rating]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[Rating]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[ReadingHistory]  WITH CHECK ADD FOREIGN KEY([ChapterId])
+REFERENCES [dbo].[Chapter] ([ChapterId])
+GO
+ALTER TABLE [dbo].[ReadingHistory]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[ReadingHistory]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[Report]  WITH CHECK ADD FOREIGN KEY([CommentId])
+REFERENCES [dbo].[Comment] ([CommentId])
+GO
+ALTER TABLE [dbo].[Report]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+----
+models:
+from datetime import datetime
+import uuid
+from flask_login import UserMixin
+from sqlalchemy.dialects.mssql import UNIQUEIDENTIFIER
+from sqlalchemy import Column, LargeBinary, PrimaryKeyConstraint, String, Integer, Boolean, DateTime, Text, Float, ForeignKey
+from sqlalchemy.orm import relationship
+from . import db
+
+# ------------------------
+# USER
+# ------------------------
+class User(UserMixin, db.Model):
+    __tablename__ = "User"
+    __table_args__ = {"schema": "dbo"}
+
+    UserId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    Username = Column(String(100), nullable=False)
+    Email = Column(String(255), nullable=False)
+    PasswordHash = Column(String(255), nullable=False)
+    Avatar = Column(Text)
+    Role = Column(String(20), nullable=False)
+    IsLocked = Column(Boolean)
+    CreatedAt = Column(DateTime)
+
+    # relationships
+    comments = relationship("Comment", back_populates="user")
+    ratings = relationship("Rating", back_populates="user")
+    lists = relationship("List", back_populates="user")
+    histories = relationship("ReadingHistory", back_populates="user")
+    reports = relationship("Report", back_populates="user")
+
+    def get_id(self):
+        return str(self.UserId)
+
+# ------------------------
+# MANGA
+# ------------------------
+class Manga(db.Model):
+    __tablename__ = "Manga"
+    __table_args__ = {"schema": "dbo"}
+
+    MangaId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    Type = Column(String(50))
+    TitleEn = Column(String(500))
+    ChapterNumbersResetOnNewVolume = Column(Boolean)
+    ContentRating = Column(String(50))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+    IsLocked = Column(Boolean)
+    LastChapter = Column(String(50))
+    LastVolume = Column(String(50))
+    LatestUploadedChapter = Column(String(50))
+    OriginalLanguage = Column(String(10))
+    PublicationDemographic = Column(String(50))
+    State = Column(String(50))
+    Status = Column(String(50))
+    Year = Column(Integer)
+    OfficialLinks = Column(Text)
+
+    # relationships
+    chapters = relationship("Chapter", back_populates="manga")
+    comments = relationship("Comment", back_populates="manga")
+    ratings = relationship("Rating", back_populates="manga")
+    alt_titles = relationship("MangaAltTitle", back_populates="manga")
+    descriptions = relationship("MangaDescription", back_populates="manga")
+    links = relationship("MangaLink", back_populates="manga")
+    stats = relationship("MangaStatistics", back_populates="manga")
+    available_languages = relationship("MangaAvailableLanguage", back_populates="manga")
+    tags = relationship("MangaTag", back_populates="manga")
+    histories = relationship("ReadingHistory", back_populates="manga")
+
+
+# ------------------------
+# CHAPTER
+# ------------------------
+class Chapter(db.Model):
+    __tablename__ = "Chapter"
+    __table_args__ = {"schema": "dbo"}
+
+    ChapterId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Type = Column(String(50))
+    Volume = Column(String(50))
+    ChapterNumber = Column(String(50))
+    Title = Column(Text)
+    TranslatedLang = Column(String(10))
+    Pages = Column(Integer)
+    PublishAt = Column(DateTime)
+    ReadableAt = Column(DateTime)
+    IsUnavailable = Column(Boolean)
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    manga = relationship("Manga", back_populates="chapters")
+    comments = relationship("Comment", back_populates="chapter")
+    histories = relationship("ReadingHistory", back_populates="chapter")
+
+
+# ------------------------
+# COMMENT
+# ------------------------
+class Comment(db.Model):
+    __tablename__ = 'Comment'
+    __table_args__ = {'schema': 'dbo'}
+    CommentId = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    UserId = db.Column(db.String(36), db.ForeignKey('dbo.User.UserId'), nullable=False)
+    MangaId = db.Column(db.String(36), db.ForeignKey('dbo.Manga.MangaId'), nullable=False)
+    ChapterId = db.Column(db.String(36), db.ForeignKey('dbo.Chapter.ChapterId'), nullable=True)
+    Content = db.Column(db.Text, nullable=False)
+    CreatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    UpdatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    IsDeleted = db.Column(db.Boolean, default=False)
+    IsSpoiler = db.Column(db.Boolean, default=False)
+    LikeCount = db.Column(db.Integer, default=0)
+    DislikeCount = db.Column(db.Integer, default=0)
+
+    user = relationship("User", back_populates="comments")
+    manga = relationship("Manga", back_populates="comments")
+    chapter = relationship("Chapter", back_populates="comments")
+    reports = relationship("Report", back_populates="comment")
+
+
+# ------------------------
+# CREATOR
+# ------------------------
+class Creator(db.Model):
+    __tablename__ = "Creator"
+    __table_args__ = {"schema": "dbo"}
+
+    CreatorId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    Type = Column(String(50))
+    Name = Column(String(500))
+    ImageUrl = Column(Text)
+    BiographyEn = Column(Text)
+    BiographyJa = Column(Text)
+    BiographyPtBr = Column(Text)
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    relationships = relationship("CreatorRelationship", back_populates="creator")
+
+
+class CreatorRelationship(db.Model):
+    __tablename__ = "CreatorRelationship"
+    __table_args__ = {"schema": "dbo"}
+
+    Id = Column(Integer, primary_key=True, autoincrement=True)
+    CreatorId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Creator.CreatorId"))
+    RelatedId = Column(UNIQUEIDENTIFIER, nullable=False)
+    RelatedType = Column(String(50))
+
+    creator = relationship("Creator", back_populates="relationships")
+
+
+# ------------------------
+# LIST
+# ------------------------
+class List(db.Model):
+    __tablename__ = "List"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    Name = Column(String(200))
+    Description = Column(Text)
+    IsPublic = Column(Boolean)
+
+    Slug = Column(String(20))
+    Visibility = Column(String(20))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    FollowerCount = Column(Integer, default=0)
+    ItemCount = Column(Integer, default=0)
+    # relationships
+
+    user = relationship("User", back_populates="lists")
+    mangas = relationship("ListManga", back_populates="list")
+    followers = relationship("ListFollower", back_populates="list")
+
+
+class ListManga(db.Model):
+    __tablename__ = "ListManga"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
+    AddedAt = Column(DateTime)
+    Position = Column(Integer, default=0)
+
+    list = relationship("List", back_populates="mangas")
+    manga = relationship("Manga")
+
+class ListFollower(db.Model):
+    __tablename__ = "ListFollower"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"), primary_key=True)
+    FollowedAt = Column(DateTime, default=datetime.utcnow)
+
+    list = relationship("List", back_populates="followers")
+    user = relationship("User")
+
+# ------------------------
+# MANGA RELATED TABLES
+# ------------------------
+class MangaAltTitle(db.Model):
+    __tablename__ = "MangaAltTitle"
+    __table_args__ = {"schema": "dbo"}
+
+    AltTitleId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    LangCode = Column(String(10))
+    AltTitle = Column(Text)
+
+    manga = relationship("Manga", back_populates="alt_titles")
+
+
+class MangaAvailableLanguage(db.Model):
+    __tablename__ = "MangaAvailableLanguage"
+    __table_args__ = {"schema": "dbo"}
+
+    LangId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    LangCode = Column(String(10))
+
+    manga = relationship("Manga", back_populates="available_languages")
+
+
+class MangaDescription(db.Model):
+    __tablename__ = "MangaDescription"
+    __table_args__ = {"schema": "dbo"}
+
+    DescriptionId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    LangCode = Column(String(10))
+    Description = Column(Text)
+
+    manga = relationship("Manga", back_populates="descriptions")
+
+
+class MangaLink(db.Model):
+    __tablename__ = "MangaLink"
+    __table_args__ = {"schema": "dbo"}
+
+    LinkId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Provider = Column(String(20))
+    Url = Column(Text)
+
+    manga = relationship("Manga", back_populates="links")
+
+
+class MangaRelated(db.Model):
+    __tablename__ = "MangaRelated"
+    __table_args__ = {"schema": "dbo"}
+
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
+    RelatedId = Column(UNIQUEIDENTIFIER, primary_key=True)
+    Type = Column(String(50), primary_key=True)
+    Related = Column(String(50))
+    FetchedAt = Column(DateTime)
+
+
+class MangaStatistics(db.Model):
+    __tablename__ = "MangaStatistics"
+    __table_args__ = {"schema": "dbo"}
+
+    StatisticId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Source = Column(String(50))
+    Follows = Column(Integer)
+    AverageRating = Column(Float)
+    BayesianRating = Column(Float)
+    UnavailableChapters = Column(Integer)
+    FetchedAt = Column(DateTime)
+
+    manga = relationship("Manga", back_populates="stats")
+
+
+class Tag(db.Model):
+    __tablename__ = "Tag"
+    __table_args__ = {"schema": "dbo"}
+
+    TagId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    GroupName = Column(String(100))
+    NameEn = Column(String(200))
+
+    mangas = relationship("MangaTag", back_populates="tag")
+
+
+class MangaTag(db.Model):
+    __tablename__ = "MangaTag"
+    __table_args__ = {"schema": "dbo"}
+
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
+    TagId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Tag.TagId"), primary_key=True)
+
+    manga = relationship("Manga", back_populates="tags")
+    tag = relationship("Tag", back_populates="mangas")
+
+
+# ------------------------
+# RATING, HISTORY, REPORT
+# ------------------------
+class Rating(db.Model):
+    __tablename__ = "Rating"
+    __table_args__ = {"schema": "dbo"}
+
+    RatingId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Score = Column(Integer)
+
+    user = relationship("User", back_populates="ratings")
+    manga = relationship("Manga", back_populates="ratings")
+
+
+class ReadingHistory(db.Model):
+    __tablename__ = "ReadingHistory"
+    __table_args__ = {"schema": "dbo"}
+
+    HistoryId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    ChapterId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Chapter.ChapterId"))
+    LastPageRead = Column(Integer)
+    ReadAt = Column(DateTime)
+
+    user = relationship("User", back_populates="histories")
+    manga = relationship("Manga", back_populates="histories")
+    chapter = relationship("Chapter", back_populates="histories")
+
+
+class Report(db.Model):
+    __tablename__ = "Report"
+    __table_args__ = {"schema": "dbo"}
+
+    ReportId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    CommentId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Comment.CommentId"))
+    Reason = Column(Text)
+    Status = Column(String(50))
+    CreatedAt = Column(DateTime)
+
+    user = relationship("User", back_populates="reports")
+    comment = relationship("Comment", back_populates="reports")
+    
+# ------------------------
+# MANGA COVER
+# ------------------------
+class MangaCover(db.Model):
+    __tablename__ = "MangaCover"
+    __table_args__ = (
+        PrimaryKeyConstraint("MangaId", "CoverId", "FileName", name="PK_MangaCover"),
+        {"schema": "dbo"}
+    )
+
+    MangaId = Column(UNIQUEIDENTIFIER, nullable=False)
+    CoverId = Column(UNIQUEIDENTIFIER, nullable=False)
+    FileName = Column(String(255), nullable=False)
+    DownloadDate = Column(DateTime, nullable=False, default=datetime.utcnow)
+    ImageData = Column(LargeBinary, nullable=False)
+
+
+class Cover(db.Model):
+    __tablename__ = "Covers"
+
+    cover_id = db.Column(db.String(36), primary_key=True)  # UUID string
+    manga_id = db.Column(db.String(36), nullable=False)
+    type = db.Column(db.String(50))
+    description = db.Column(db.Text)
+    volume = db.Column(db.String(50))
+    fileName = db.Column(db.String(255))
+    locale = db.Column(db.String(10))
+    createdAt = db.Column(db.DateTime)
+    updatedAt = db.Column(db.DateTime)
+    version = db.Column(db.Integer)
+    rel_user_id = db.Column(db.String(36))
+    url = db.Column(db.String(500))
+    image_data = db.Column(db.LargeBinary)  # lưu binary ảnh
+----
+Yêu cầu đọc kỹ project đính kèm để fix lỗi:
+jinja2.exceptions.UndefinedError
+jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attribute 'iter_pages'
+
+Traceback (most recent call last)
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+return self.wsgi_app(environ, start_response)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+response = self.handle_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+response = self.full_dispatch_request()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+rv = self.handle_user_exception(e)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+rv = self.dispatch_request()
+     ^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py", line 426, in advanced_search
+return render_template('advanced_search.html', options=options, mangas=mangas, pagination=pagination, your_scores=your_scores)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+return _render(app, template, context)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+rv = template.render(context)
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+self.environment.handle_exception()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+raise rewrite_traceback_stack(source=source)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 1, in top-level template code
+{% extends "base.html" %}
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\base.html", line 119, in top-level template code
+{% block content %}
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 128, in block 'content'
+{% for p in pagination.iter_pages() %}
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+if hasattr(obj, "jinja_pass_arg"):
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attribute 'iter_pages'
+-----
+(venv) PS D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo> python .\run.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 875-406-510
+127.0.0.1 - - [25/Sep/2025 17:05:36] "GET /advanced_search HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/add_to_list.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/js/advanced_search.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/advanced_search.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/modal.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/js/scripts.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/js/add_to_list.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /advanced_search/options HTTP/1.1" 200 -
+D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py:365: SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+  query = query.filter(~Manga.MangaId.in_(exclude_mangas))
+127.0.0.1 - - [25/Sep/2025 17:05:50] "POST /advanced_search HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/add_to_list.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/modal.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/advanced_search.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/assets/default_cover.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/js/scripts.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/js/add_to_list.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/js/advanced_search.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /advanced_search/options HTTP/1.1" 200 -
+ * Detected change in 'D:\\TDMU\\2025-2026\\HKI_2025-2026\\DACSN\\coursework\\Demo\\mini-demo\\app\\routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 875-406-510
+D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py:366: SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+  query = query.filter(~Manga.MangaId.in_(exclude_mangas))
+127.0.0.1 - - [25/Sep/2025 17:09:17] "POST /advanced_search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py", line 426, in advanced_search
+    return render_template('advanced_search.html', options=options, mangas=mangas, pagination=pagination, your_scores=your_scores)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\base.html", line 119, in top-level template code
+    {% block content %}
+    ^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 128, in block 'content'
+    {% for p in pagination.iter_pages() %}
+    ^^^^^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attribute 'iter_pages'
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png&s=pg1z0Ua4BogeQ8Na2CDz HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
 {
@@ -524,11 +1741,25 @@ if __name__ == "__main__":
       "type": "file"
     },
     {
+      "name": "Simulation",
+      "type": "directory",
+      "children": [
+        {
+          "name": "single-user.py",
+          "type": "file"
+        }
+      ]
+    },
+    {
       "name": "app",
       "type": "directory",
       "children": [
         {
           "name": "__init__.py",
+          "type": "file"
+        },
+        {
+          "name": "admin_bp.py",
           "type": "file"
         },
         {
@@ -550,6 +1781,10 @@ if __name__ == "__main__":
           "type": "file"
         },
         {
+          "name": "dashboard_routes.py",
+          "type": "file"
+        },
+        {
           "name": "list_routes.py",
           "type": "file"
         },
@@ -562,17 +1797,11 @@ if __name__ == "__main__":
           "type": "file"
         },
         {
-          "name": "routes",
-          "type": "directory",
-          "children": [
-            {
-              "name": "user.py",
-              "type": "file"
-            }
-          ]
+          "name": "routes.py",
+          "type": "file"
         },
         {
-          "name": "routes.py",
+          "name": "search_index.py",
           "type": "file"
         },
         {
@@ -596,6 +1825,10 @@ if __name__ == "__main__":
                   "type": "file"
                 },
                 {
+                  "name": "default_banner.png",
+                  "type": "file"
+                },
+                {
                   "name": "default_cover.png",
                   "type": "file"
                 },
@@ -611,6 +1844,14 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "add_to_list.css",
+                  "type": "file"
+                },
+                {
+                  "name": "admin.css",
+                  "type": "file"
+                },
+                {
+                  "name": "advanced_search.css",
                   "type": "file"
                 },
                 {
@@ -638,6 +1879,10 @@ if __name__ == "__main__":
                   "type": "file"
                 },
                 {
+                  "name": "modal.css",
+                  "type": "file"
+                },
+                {
                   "name": "reader.css",
                   "type": "file"
                 },
@@ -653,6 +1898,18 @@ if __name__ == "__main__":
               "children": [
                 {
                   "name": "add_to_list.js",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_comments.js",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_users.js",
+                  "type": "file"
+                },
+                {
+                  "name": "advanced_search.js",
                   "type": "file"
                 },
                 {
@@ -688,6 +1945,30 @@ if __name__ == "__main__":
           "type": "directory",
           "children": [
             {
+              "name": "admin_base.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_comments.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_creators.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_dashboard.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_manga.html",
+              "type": "file"
+            },
+            {
+              "name": "admin_users.html",
+              "type": "file"
+            },
+            {
               "name": "advanced_search.html",
               "type": "file"
             },
@@ -709,6 +1990,10 @@ if __name__ == "__main__":
             },
             {
               "name": "creator_detail.html",
+              "type": "file"
+            },
+            {
+              "name": "dashboard.html",
               "type": "file"
             },
             {
@@ -741,6 +2026,10 @@ if __name__ == "__main__":
             },
             {
               "name": "profile.html",
+              "type": "file"
+            },
+            {
+              "name": "profile_dashboard.html",
               "type": "file"
             },
             {
@@ -780,11 +2069,19 @@ if __name__ == "__main__":
       ]
     },
     {
+      "name": "build_index.py",
+      "type": "file"
+    },
+    {
       "name": "config.py",
       "type": "file"
     },
     {
       "name": "dump.py",
+      "type": "file"
+    },
+    {
+      "name": "log.txt",
       "type": "file"
     },
     {
@@ -797,6 +2094,14 @@ if __name__ == "__main__":
     },
     {
       "name": "run.py",
+      "type": "file"
+    },
+    {
+      "name": "search_index.joblib",
+      "type": "file"
+    },
+    {
+      "name": "search_index.pkl",
       "type": "file"
     },
     {
@@ -814,37 +2119,47 @@ if __name__ == "__main__":
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── .gitignore
 ├── README.md
+├── Simulation/
+│   └── single-user.py
 ├── app/
 │   ├── __init__.py
+│   ├── admin_bp.py
 │   ├── auth.py
 │   ├── blueprints/
 │   │   └── reader.py
 │   ├── comment_routes.py
+│   ├── dashboard_routes.py
 │   ├── list_routes.py
 │   ├── models.py
 │   ├── reader_controller.py
-│   ├── routes/
-│   │   └── user.py
 │   ├── routes.py
+│   ├── search_index.py
 │   ├── static/
 │   │   ├── assets/
 │   │   │   ├── MD-logo.png
 │   │   │   ├── auth_thmb.png
 │   │   │   ├── default_avatar.png
+│   │   │   ├── default_banner.png
 │   │   │   ├── default_cover.png
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── add_to_list.css
+│   │   │   ├── admin.css
+│   │   │   ├── advanced_search.css
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
 │   │   │   ├── creator_detail.css
 │   │   │   ├── library.css
 │   │   │   ├── list.css
 │   │   │   ├── manga_detail.css
+│   │   │   ├── modal.css
 │   │   │   ├── reader.css
 │   │   │   └── styles.css
 │   │   └── js/
 │   │       ├── add_to_list.js
+│   │       ├── admin_comments.js
+│   │       ├── admin_users.js
+│   │       ├── advanced_search.js
 │   │       ├── comments.js
 │   │       ├── library.js
 │   │       ├── list_public.js
@@ -852,12 +2167,19 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │       ├── reader.js
 │   │       └── scripts.js
 │   └── templates/
+│       ├── admin_base.html
+│       ├── admin_comments.html
+│       ├── admin_creators.html
+│       ├── admin_dashboard.html
+│       ├── admin_manga.html
+│       ├── admin_users.html
 │       ├── advanced_search.html
 │       ├── art.html
 │       ├── base.html
 │       ├── chapters.html
 │       ├── comments.html
 │       ├── creator_detail.html
+│       ├── dashboard.html
 │       ├── home.html
 │       ├── latest_updates.html
 │       ├── library.html
@@ -866,6 +2188,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── manga_art.html
 │       ├── manga_detail.html
 │       ├── profile.html
+│       ├── profile_dashboard.html
 │       ├── random.html
 │       ├── reader.html
 │       ├── reading_history.html
@@ -874,13 +2197,1264 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── related.html
 │       ├── require_login.html
 │       └── updates.html
+├── build_index.py
 ├── config.py
 ├── dump.py
+├── log.txt
 ├── project_dump.txt
 ├── requirements.txt
 ├── run.py
+├── search_index.joblib
+├── search_index.pkl
 ├── test-api.py
 └── test-connection.py
+
+
+=== Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+config.py
+
+# Virtual environment
+venv/
+.env/
+
+# Flask cache
+instance/
+*.db
+*.sqlite3
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\build_index.py ---
+# build_index.py
+import pickle
+import re
+from unidecode import unidecode
+from sklearn.feature_extraction.text import TfidfVectorizer
+from app import db, create_app
+from app.models import Manga, MangaAltTitle
+
+def norm(s: str) -> str:
+    if not s:
+        return ""
+    s = s.lower()
+    s = unidecode(s)  # bỏ dấu
+    s = re.sub(r"[^0-9a-z\s]", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+def build_index():
+    app = create_app()
+    with app.app_context():
+        mangas = db.session.query(Manga).all()
+        alt_titles = db.session.query(MangaAltTitle).all()
+
+        alt_map = {}
+        for alt in alt_titles:
+            alt_map.setdefault(str(alt.MangaId), []).append(alt.AltTitle)
+
+        docs, ids = [], []
+        for m in mangas:
+            texts = [m.TitleEn] + alt_map.get(str(m.MangaId), [])
+            text = " ".join([norm(t) for t in texts if t])
+            if text.strip():
+                docs.append(text)
+                ids.append(str(m.MangaId))
+
+        vectorizer = TfidfVectorizer()
+        tfidf_matrix = vectorizer.fit_transform(docs)
+
+        with open("search_index.pkl", "wb") as f:
+            pickle.dump((vectorizer, tfidf_matrix, ids), f)
+
+        print(f"Indexed {len(ids)} mangas")
+
+if __name__ == "__main__":
+    build_index()
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
+import urllib
+
+class Config:
+    SECRET_KEY = "secret_key_demo"
+
+    DRIVER = "ODBC Driver 17 for SQL Server"
+    SERVER = "HEDI-SNOWY\SQLEXPRESS"
+    DATABASE = "MangaLibrary"
+    connection_string = (
+        f"DRIVER={{{DRIVER}}};"
+        f"SERVER={SERVER};"
+        f"DATABASE={DATABASE};"
+        f"Trusted_Connection=yes;"
+    )
+
+    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\dump.py ---
+import os
+import json
+
+OUTPUT_FILE = "project_dump.txt"
+
+def should_ignore_dir(dirname: str) -> bool:
+    """Bỏ qua thư mục venv (dù tên kiểu gì)."""
+    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags"))
+
+def build_tree_dict(root_dir: str) -> dict:
+    """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
+    tree = {"name": os.path.basename(root_dir), "type": "directory", "children": []}
+
+    if should_ignore_dir(os.path.basename(root_dir)):
+        return tree
+
+    try:
+        with os.scandir(root_dir) as it:
+            for entry in sorted(it, key=lambda e: e.name):
+                if entry.is_dir():
+                    if should_ignore_dir(entry.name):
+                        continue
+                    tree["children"].append(build_tree_dict(entry.path))
+                elif entry.is_file():
+                    tree["children"].append({"name": entry.name, "type": "file"})
+    except PermissionError:
+        pass
+    return tree
+
+def build_tree_ascii(root_dir: str, prefix: str = "") -> str:
+    """Tạo cây thư mục dạng text giống `tree` (chỉ bỏ qua venv)."""
+    entries = []
+    try:
+        with os.scandir(root_dir) as it:
+            for entry in sorted(it, key=lambda e: e.name):
+                if entry.is_dir():
+                    if should_ignore_dir(entry.name):
+                        continue
+                    entries.append(entry)
+                elif entry.is_file():
+                    entries.append(entry)
+    except PermissionError:
+        return ""
+
+    lines = []
+    for i, entry in enumerate(entries):
+        connector = "└── " if i == len(entries) - 1 else "├── "
+        if entry.is_dir():
+            lines.append(prefix + connector + entry.name + "/")
+            extension = "    " if i == len(entries) - 1 else "│   "
+            lines.extend(build_tree_ascii(entry.path, prefix + extension).splitlines())
+        else:
+            lines.append(prefix + connector + entry.name)
+    return "\n".join(lines)
+
+def dump_project(root_dir: str, output_file: str):
+    with open(output_file, "w", encoding="utf-8") as out:
+        # Xuất cây thư mục dạng JSON
+        tree_dict = build_tree_dict(root_dir)
+        out.write("=== Project Tree (JSON) ===\n")
+        out.write(json.dumps(tree_dict, indent=2, ensure_ascii=False))
+        out.write("\n\n")
+
+        # Xuất cây thư mục dạng ASCII
+        out.write("=== Project Tree (ASCII) ===\n")
+        out.write(root_dir + "/\n")
+        out.write(build_tree_ascii(root_dir))
+        out.write("\n\n")
+
+        # Xuất nội dung tất cả file
+        for dirpath, dirnames, filenames in os.walk(root_dir):
+            # Lọc thư mục
+            dirnames[:] = [d for d in dirnames if not should_ignore_dir(d)]
+
+            rel_path = os.path.relpath(dirpath, root_dir)
+            if rel_path == ".":
+                rel_path = ""
+            out.write(f"\n=== Folder: {rel_path or root_dir} ===\n")
+
+            for filename in filenames:
+                file_path = os.path.join(dirpath, filename)
+                out.write(f"\n--- File: {file_path} ---\n")
+                try:
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        out.write(f.read())
+                except Exception as e:
+                    out.write(f"[Lỗi đọc file: {e}]\n")
+
+if __name__ == "__main__":
+    current_dir = os.getcwd()
+    dump_project(current_dir, OUTPUT_FILE)
+    print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\log.txt ---
+Manga không có cột cover url.
+----
+Cấu trúc db:
+USE [MangaLibrary]
+GO
+/****** Object:  Table [dbo].[Chapter]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Chapter](
+	[ChapterId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NULL,
+	[Volume] [nvarchar](50) NULL,
+	[ChapterNumber] [nvarchar](50) NULL,
+	[Title] [nvarchar](max) NULL,
+	[TranslatedLang] [nvarchar](10) NULL,
+	[Pages] [int] NULL,
+	[PublishAt] [datetime2](7) NULL,
+	[ReadableAt] [datetime2](7) NULL,
+	[IsUnavailable] [bit] NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ChapterId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Comment]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Comment](
+	[CommentId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[ChapterId] [uniqueidentifier] NULL,
+	[Content] [nvarchar](max) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+	[IsDeleted] [bit] NULL,
+	[IsSpoiler] [bit] NOT NULL,
+	[LikeCount] [int] NOT NULL,
+	[DislikeCount] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CommentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Covers]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Covers](
+	[cover_id] [uniqueidentifier] NOT NULL,
+	[manga_id] [uniqueidentifier] NOT NULL,
+	[type] [nvarchar](50) NULL,
+	[description] [nvarchar](max) NULL,
+	[volume] [nvarchar](50) NULL,
+	[fileName] [nvarchar](255) NULL,
+	[locale] [nvarchar](10) NULL,
+	[createdAt] [datetimeoffset](7) NULL,
+	[updatedAt] [datetimeoffset](7) NULL,
+	[version] [int] NULL,
+	[rel_user_id] [uniqueidentifier] NULL,
+	[url] [nvarchar](500) NULL,
+	[image_data] [varbinary](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[cover_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Creator]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Creator](
+	[CreatorId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NULL,
+	[Name] [nvarchar](500) NULL,
+	[ImageUrl] [nvarchar](max) NULL,
+	[BiographyEn] [nvarchar](max) NULL,
+	[BiographyJa] [nvarchar](max) NULL,
+	[BiographyPtBr] [nvarchar](max) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CreatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[CreatorRelationship]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CreatorRelationship](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CreatorId] [uniqueidentifier] NOT NULL,
+	[RelatedId] [uniqueidentifier] NOT NULL,
+	[RelatedType] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[List]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[List](
+	[ListId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](200) NULL,
+	[Description] [nvarchar](max) NULL,
+	[IsPublic] [bit] NULL,
+	[Slug] [nvarchar](255) NULL,
+	[Visibility] [nvarchar](20) NOT NULL,
+	[CreatedAt] [datetime2](7) NOT NULL,
+	[UpdatedAt] [datetime2](7) NOT NULL,
+	[FollowerCount] [int] NOT NULL,
+	[ItemCount] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ListId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ListFollower]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ListFollower](
+	[ListId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[FollowedAt] [datetime2](7) NOT NULL,
+ CONSTRAINT [PK_ListFollower] PRIMARY KEY CLUSTERED 
+(
+	[ListId] ASC,
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ListManga]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ListManga](
+	[ListId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[AddedAt] [datetime2](7) NULL,
+	[Position] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ListId] ASC,
+	[MangaId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Manga]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Manga](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NULL,
+	[TitleEn] [nvarchar](500) NULL,
+	[ChapterNumbersResetOnNewVolume] [bit] NULL,
+	[ContentRating] [nvarchar](50) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+	[UpdatedAt] [datetime2](7) NULL,
+	[IsLocked] [bit] NULL,
+	[LastChapter] [nvarchar](50) NULL,
+	[LastVolume] [nvarchar](50) NULL,
+	[LatestUploadedChapter] [nvarchar](50) NULL,
+	[OriginalLanguage] [nvarchar](10) NULL,
+	[PublicationDemographic] [nvarchar](50) NULL,
+	[State] [nvarchar](50) NULL,
+	[Status] [nvarchar](50) NULL,
+	[Year] [int] NULL,
+	[OfficialLinks] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaAltTitle]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaAltTitle](
+	[AltTitleId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[LangCode] [nvarchar](10) NULL,
+	[AltTitle] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[AltTitleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaAvailableLanguage]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaAvailableLanguage](
+	[LangId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[LangCode] [nvarchar](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LangId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaCover]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaCover](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[CoverId] [uniqueidentifier] NOT NULL,
+	[FileName] [nvarchar](255) NOT NULL,
+	[DownloadDate] [datetime2](7) NOT NULL,
+	[ImageData] [varbinary](max) NOT NULL,
+ CONSTRAINT [PK_MangaCover] PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC,
+	[CoverId] ASC,
+	[FileName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaCovers]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaCovers](
+	[cover_id] [nvarchar](50) NOT NULL,
+	[manga_id] [uniqueidentifier] NOT NULL,
+	[file_name] [nvarchar](300) NULL,
+	[description] [nvarchar](max) NULL,
+	[volume] [nvarchar](50) NULL,
+	[locale] [nvarchar](20) NULL,
+	[created_at] [datetimeoffset](7) NULL,
+	[updated_at] [datetimeoffset](7) NULL,
+	[version] [int] NULL,
+	[image_url] [nvarchar](1000) NULL,
+	[file_path] [nvarchar](1000) NULL,
+	[downloaded_at] [datetimeoffset](7) NULL,
+	[raw_json] [nvarchar](max) NULL,
+	[inserted_at] [datetimeoffset](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[cover_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaDescription]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaDescription](
+	[DescriptionId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[LangCode] [nvarchar](10) NULL,
+	[Description] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[DescriptionId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaLink]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaLink](
+	[LinkId] [int] IDENTITY(1,1) NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Provider] [nvarchar](20) NULL,
+	[Url] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LinkId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaRelated]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaRelated](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[RelatedId] [uniqueidentifier] NOT NULL,
+	[Type] [nvarchar](50) NOT NULL,
+	[Related] [nvarchar](50) NULL,
+	[FetchedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC,
+	[RelatedId] ASC,
+	[Type] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaStatistics]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaStatistics](
+	[StatisticId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Source] [nvarchar](50) NULL,
+	[Follows] [int] NULL,
+	[AverageRating] [float] NULL,
+	[BayesianRating] [float] NULL,
+	[UnavailableChapters] [int] NULL,
+	[FetchedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[StatisticId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MangaTag]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MangaTag](
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[TagId] [uniqueidentifier] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MangaId] ASC,
+	[TagId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Rating]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Rating](
+	[RatingId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[Score] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[RatingId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ReadingHistory]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ReadingHistory](
+	[HistoryId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[MangaId] [uniqueidentifier] NOT NULL,
+	[ChapterId] [uniqueidentifier] NOT NULL,
+	[LastPageRead] [int] NULL,
+	[ReadAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[HistoryId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Report]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Report](
+	[ReportId] [uniqueidentifier] NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[CommentId] [uniqueidentifier] NOT NULL,
+	[Reason] [nvarchar](max) NULL,
+	[Status] [nvarchar](50) NULL,
+	[CreatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ReportId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tag]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tag](
+	[TagId] [uniqueidentifier] NOT NULL,
+	[GroupName] [nvarchar](100) NULL,
+	[NameEn] [nvarchar](200) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TagId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 9/24/2025 10:30:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserId] [uniqueidentifier] NOT NULL,
+	[Username] [nvarchar](100) NOT NULL,
+	[Email] [nvarchar](255) NOT NULL,
+	[PasswordHash] [nvarchar](255) NOT NULL,
+	[Avatar] [nvarchar](max) NULL,
+	[Role] [nvarchar](20) NOT NULL,
+	[IsLocked] [bit] NULL,
+	[CreatedAt] [datetime2](7) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Comment] ADD  DEFAULT ((0)) FOR [IsSpoiler]
+GO
+ALTER TABLE [dbo].[Comment] ADD  DEFAULT ((0)) FOR [LikeCount]
+GO
+ALTER TABLE [dbo].[Comment] ADD  DEFAULT ((0)) FOR [DislikeCount]
+GO
+ALTER TABLE [dbo].[List] ADD  CONSTRAINT [DF_List_FollowerCount]  DEFAULT ((0)) FOR [FollowerCount]
+GO
+ALTER TABLE [dbo].[List] ADD  CONSTRAINT [DF_List_ItemCount]  DEFAULT ((0)) FOR [ItemCount]
+GO
+ALTER TABLE [dbo].[ListFollower] ADD  CONSTRAINT [DF_ListFollower_FollowedAt]  DEFAULT (sysutcdatetime()) FOR [FollowedAt]
+GO
+ALTER TABLE [dbo].[ListManga] ADD  CONSTRAINT [DF_ListManga_Position]  DEFAULT ((0)) FOR [Position]
+GO
+ALTER TABLE [dbo].[MangaCover] ADD  DEFAULT (getdate()) FOR [DownloadDate]
+GO
+ALTER TABLE [dbo].[MangaCovers] ADD  DEFAULT (sysutcdatetime()) FOR [inserted_at]
+GO
+ALTER TABLE [dbo].[Chapter]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[Comment]  WITH CHECK ADD FOREIGN KEY([ChapterId])
+REFERENCES [dbo].[Chapter] ([ChapterId])
+GO
+ALTER TABLE [dbo].[Comment]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[Comment]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[CreatorRelationship]  WITH CHECK ADD FOREIGN KEY([CreatorId])
+REFERENCES [dbo].[Creator] ([CreatorId])
+GO
+ALTER TABLE [dbo].[List]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[ListFollower]  WITH CHECK ADD  CONSTRAINT [FK_ListFollower_List] FOREIGN KEY([ListId])
+REFERENCES [dbo].[List] ([ListId])
+GO
+ALTER TABLE [dbo].[ListFollower] CHECK CONSTRAINT [FK_ListFollower_List]
+GO
+ALTER TABLE [dbo].[ListFollower]  WITH CHECK ADD  CONSTRAINT [FK_ListFollower_User] FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[ListFollower] CHECK CONSTRAINT [FK_ListFollower_User]
+GO
+ALTER TABLE [dbo].[ListManga]  WITH CHECK ADD FOREIGN KEY([ListId])
+REFERENCES [dbo].[List] ([ListId])
+GO
+ALTER TABLE [dbo].[ListManga]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaAltTitle]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaAvailableLanguage]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaDescription]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaLink]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaRelated]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaStatistics]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaTag]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[MangaTag]  WITH CHECK ADD FOREIGN KEY([TagId])
+REFERENCES [dbo].[Tag] ([TagId])
+GO
+ALTER TABLE [dbo].[Rating]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[Rating]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[ReadingHistory]  WITH CHECK ADD FOREIGN KEY([ChapterId])
+REFERENCES [dbo].[Chapter] ([ChapterId])
+GO
+ALTER TABLE [dbo].[ReadingHistory]  WITH CHECK ADD FOREIGN KEY([MangaId])
+REFERENCES [dbo].[Manga] ([MangaId])
+GO
+ALTER TABLE [dbo].[ReadingHistory]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+ALTER TABLE [dbo].[Report]  WITH CHECK ADD FOREIGN KEY([CommentId])
+REFERENCES [dbo].[Comment] ([CommentId])
+GO
+ALTER TABLE [dbo].[Report]  WITH CHECK ADD FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([UserId])
+GO
+----
+models:
+from datetime import datetime
+import uuid
+from flask_login import UserMixin
+from sqlalchemy.dialects.mssql import UNIQUEIDENTIFIER
+from sqlalchemy import Column, LargeBinary, PrimaryKeyConstraint, String, Integer, Boolean, DateTime, Text, Float, ForeignKey
+from sqlalchemy.orm import relationship
+from . import db
+
+# ------------------------
+# USER
+# ------------------------
+class User(UserMixin, db.Model):
+    __tablename__ = "User"
+    __table_args__ = {"schema": "dbo"}
+
+    UserId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    Username = Column(String(100), nullable=False)
+    Email = Column(String(255), nullable=False)
+    PasswordHash = Column(String(255), nullable=False)
+    Avatar = Column(Text)
+    Role = Column(String(20), nullable=False)
+    IsLocked = Column(Boolean)
+    CreatedAt = Column(DateTime)
+
+    # relationships
+    comments = relationship("Comment", back_populates="user")
+    ratings = relationship("Rating", back_populates="user")
+    lists = relationship("List", back_populates="user")
+    histories = relationship("ReadingHistory", back_populates="user")
+    reports = relationship("Report", back_populates="user")
+
+    def get_id(self):
+        return str(self.UserId)
+
+# ------------------------
+# MANGA
+# ------------------------
+class Manga(db.Model):
+    __tablename__ = "Manga"
+    __table_args__ = {"schema": "dbo"}
+
+    MangaId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    Type = Column(String(50))
+    TitleEn = Column(String(500))
+    ChapterNumbersResetOnNewVolume = Column(Boolean)
+    ContentRating = Column(String(50))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+    IsLocked = Column(Boolean)
+    LastChapter = Column(String(50))
+    LastVolume = Column(String(50))
+    LatestUploadedChapter = Column(String(50))
+    OriginalLanguage = Column(String(10))
+    PublicationDemographic = Column(String(50))
+    State = Column(String(50))
+    Status = Column(String(50))
+    Year = Column(Integer)
+    OfficialLinks = Column(Text)
+
+    # relationships
+    chapters = relationship("Chapter", back_populates="manga")
+    comments = relationship("Comment", back_populates="manga")
+    ratings = relationship("Rating", back_populates="manga")
+    alt_titles = relationship("MangaAltTitle", back_populates="manga")
+    descriptions = relationship("MangaDescription", back_populates="manga")
+    links = relationship("MangaLink", back_populates="manga")
+    stats = relationship("MangaStatistics", back_populates="manga")
+    available_languages = relationship("MangaAvailableLanguage", back_populates="manga")
+    tags = relationship("MangaTag", back_populates="manga")
+    histories = relationship("ReadingHistory", back_populates="manga")
+
+
+# ------------------------
+# CHAPTER
+# ------------------------
+class Chapter(db.Model):
+    __tablename__ = "Chapter"
+    __table_args__ = {"schema": "dbo"}
+
+    ChapterId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Type = Column(String(50))
+    Volume = Column(String(50))
+    ChapterNumber = Column(String(50))
+    Title = Column(Text)
+    TranslatedLang = Column(String(10))
+    Pages = Column(Integer)
+    PublishAt = Column(DateTime)
+    ReadableAt = Column(DateTime)
+    IsUnavailable = Column(Boolean)
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    manga = relationship("Manga", back_populates="chapters")
+    comments = relationship("Comment", back_populates="chapter")
+    histories = relationship("ReadingHistory", back_populates="chapter")
+
+
+# ------------------------
+# COMMENT
+# ------------------------
+class Comment(db.Model):
+    __tablename__ = 'Comment'
+    __table_args__ = {'schema': 'dbo'}
+    CommentId = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    UserId = db.Column(db.String(36), db.ForeignKey('dbo.User.UserId'), nullable=False)
+    MangaId = db.Column(db.String(36), db.ForeignKey('dbo.Manga.MangaId'), nullable=False)
+    ChapterId = db.Column(db.String(36), db.ForeignKey('dbo.Chapter.ChapterId'), nullable=True)
+    Content = db.Column(db.Text, nullable=False)
+    CreatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    UpdatedAt = db.Column(db.DateTime, default=datetime.utcnow)
+    IsDeleted = db.Column(db.Boolean, default=False)
+    IsSpoiler = db.Column(db.Boolean, default=False)
+    LikeCount = db.Column(db.Integer, default=0)
+    DislikeCount = db.Column(db.Integer, default=0)
+
+    user = relationship("User", back_populates="comments")
+    manga = relationship("Manga", back_populates="comments")
+    chapter = relationship("Chapter", back_populates="comments")
+    reports = relationship("Report", back_populates="comment")
+
+
+# ------------------------
+# CREATOR
+# ------------------------
+class Creator(db.Model):
+    __tablename__ = "Creator"
+    __table_args__ = {"schema": "dbo"}
+
+    CreatorId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    Type = Column(String(50))
+    Name = Column(String(500))
+    ImageUrl = Column(Text)
+    BiographyEn = Column(Text)
+    BiographyJa = Column(Text)
+    BiographyPtBr = Column(Text)
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    relationships = relationship("CreatorRelationship", back_populates="creator")
+
+
+class CreatorRelationship(db.Model):
+    __tablename__ = "CreatorRelationship"
+    __table_args__ = {"schema": "dbo"}
+
+    Id = Column(Integer, primary_key=True, autoincrement=True)
+    CreatorId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Creator.CreatorId"))
+    RelatedId = Column(UNIQUEIDENTIFIER, nullable=False)
+    RelatedType = Column(String(50))
+
+    creator = relationship("Creator", back_populates="relationships")
+
+
+# ------------------------
+# LIST
+# ------------------------
+class List(db.Model):
+    __tablename__ = "List"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    Name = Column(String(200))
+    Description = Column(Text)
+    IsPublic = Column(Boolean)
+
+    Slug = Column(String(20))
+    Visibility = Column(String(20))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+
+    FollowerCount = Column(Integer, default=0)
+    ItemCount = Column(Integer, default=0)
+    # relationships
+
+    user = relationship("User", back_populates="lists")
+    mangas = relationship("ListManga", back_populates="list")
+    followers = relationship("ListFollower", back_populates="list")
+
+
+class ListManga(db.Model):
+    __tablename__ = "ListManga"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
+    AddedAt = Column(DateTime)
+    Position = Column(Integer, default=0)
+
+    list = relationship("List", back_populates="mangas")
+    manga = relationship("Manga")
+
+class ListFollower(db.Model):
+    __tablename__ = "ListFollower"
+    __table_args__ = {"schema": "dbo"}
+
+    ListId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.List.ListId"), primary_key=True)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"), primary_key=True)
+    FollowedAt = Column(DateTime, default=datetime.utcnow)
+
+    list = relationship("List", back_populates="followers")
+    user = relationship("User")
+
+# ------------------------
+# MANGA RELATED TABLES
+# ------------------------
+class MangaAltTitle(db.Model):
+    __tablename__ = "MangaAltTitle"
+    __table_args__ = {"schema": "dbo"}
+
+    AltTitleId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    LangCode = Column(String(10))
+    AltTitle = Column(Text)
+
+    manga = relationship("Manga", back_populates="alt_titles")
+
+
+class MangaAvailableLanguage(db.Model):
+    __tablename__ = "MangaAvailableLanguage"
+    __table_args__ = {"schema": "dbo"}
+
+    LangId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    LangCode = Column(String(10))
+
+    manga = relationship("Manga", back_populates="available_languages")
+
+
+class MangaDescription(db.Model):
+    __tablename__ = "MangaDescription"
+    __table_args__ = {"schema": "dbo"}
+
+    DescriptionId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    LangCode = Column(String(10))
+    Description = Column(Text)
+
+    manga = relationship("Manga", back_populates="descriptions")
+
+
+class MangaLink(db.Model):
+    __tablename__ = "MangaLink"
+    __table_args__ = {"schema": "dbo"}
+
+    LinkId = Column(Integer, primary_key=True, autoincrement=True)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Provider = Column(String(20))
+    Url = Column(Text)
+
+    manga = relationship("Manga", back_populates="links")
+
+
+class MangaRelated(db.Model):
+    __tablename__ = "MangaRelated"
+    __table_args__ = {"schema": "dbo"}
+
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
+    RelatedId = Column(UNIQUEIDENTIFIER, primary_key=True)
+    Type = Column(String(50), primary_key=True)
+    Related = Column(String(50))
+    FetchedAt = Column(DateTime)
+
+
+class MangaStatistics(db.Model):
+    __tablename__ = "MangaStatistics"
+    __table_args__ = {"schema": "dbo"}
+
+    StatisticId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Source = Column(String(50))
+    Follows = Column(Integer)
+    AverageRating = Column(Float)
+    BayesianRating = Column(Float)
+    UnavailableChapters = Column(Integer)
+    FetchedAt = Column(DateTime)
+
+    manga = relationship("Manga", back_populates="stats")
+
+
+class Tag(db.Model):
+    __tablename__ = "Tag"
+    __table_args__ = {"schema": "dbo"}
+
+    TagId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    GroupName = Column(String(100))
+    NameEn = Column(String(200))
+
+    mangas = relationship("MangaTag", back_populates="tag")
+
+
+class MangaTag(db.Model):
+    __tablename__ = "MangaTag"
+    __table_args__ = {"schema": "dbo"}
+
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"), primary_key=True)
+    TagId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Tag.TagId"), primary_key=True)
+
+    manga = relationship("Manga", back_populates="tags")
+    tag = relationship("Tag", back_populates="mangas")
+
+
+# ------------------------
+# RATING, HISTORY, REPORT
+# ------------------------
+class Rating(db.Model):
+    __tablename__ = "Rating"
+    __table_args__ = {"schema": "dbo"}
+
+    RatingId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    Score = Column(Integer)
+
+    user = relationship("User", back_populates="ratings")
+    manga = relationship("Manga", back_populates="ratings")
+
+
+class ReadingHistory(db.Model):
+    __tablename__ = "ReadingHistory"
+    __table_args__ = {"schema": "dbo"}
+
+    HistoryId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Manga.MangaId"))
+    ChapterId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Chapter.ChapterId"))
+    LastPageRead = Column(Integer)
+    ReadAt = Column(DateTime)
+
+    user = relationship("User", back_populates="histories")
+    manga = relationship("Manga", back_populates="histories")
+    chapter = relationship("Chapter", back_populates="histories")
+
+
+class Report(db.Model):
+    __tablename__ = "Report"
+    __table_args__ = {"schema": "dbo"}
+
+    ReportId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.User.UserId"))
+    CommentId = Column(UNIQUEIDENTIFIER, ForeignKey("dbo.Comment.CommentId"))
+    Reason = Column(Text)
+    Status = Column(String(50))
+    CreatedAt = Column(DateTime)
+
+    user = relationship("User", back_populates="reports")
+    comment = relationship("Comment", back_populates="reports")
+    
+# ------------------------
+# MANGA COVER
+# ------------------------
+class MangaCover(db.Model):
+    __tablename__ = "MangaCover"
+    __table_args__ = (
+        PrimaryKeyConstraint("MangaId", "CoverId", "FileName", name="PK_MangaCover"),
+        {"schema": "dbo"}
+    )
+
+    MangaId = Column(UNIQUEIDENTIFIER, nullable=False)
+    CoverId = Column(UNIQUEIDENTIFIER, nullable=False)
+    FileName = Column(String(255), nullable=False)
+    DownloadDate = Column(DateTime, nullable=False, default=datetime.utcnow)
+    ImageData = Column(LargeBinary, nullable=False)
+
+
+class Cover(db.Model):
+    __tablename__ = "Covers"
+
+    cover_id = db.Column(db.String(36), primary_key=True)  # UUID string
+    manga_id = db.Column(db.String(36), nullable=False)
+    type = db.Column(db.String(50))
+    description = db.Column(db.Text)
+    volume = db.Column(db.String(50))
+    fileName = db.Column(db.String(255))
+    locale = db.Column(db.String(10))
+    createdAt = db.Column(db.DateTime)
+    updatedAt = db.Column(db.DateTime)
+    version = db.Column(db.Integer)
+    rel_user_id = db.Column(db.String(36))
+    url = db.Column(db.String(500))
+    image_data = db.Column(db.LargeBinary)  # lưu binary ảnh
+----
+Yêu cầu đọc kỹ project đính kèm để fix lỗi:
+jinja2.exceptions.UndefinedError
+jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attribute 'iter_pages'
+
+Traceback (most recent call last)
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+return self.wsgi_app(environ, start_response)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+response = self.handle_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+response = self.full_dispatch_request()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+rv = self.handle_user_exception(e)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+rv = self.dispatch_request()
+     ^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py", line 426, in advanced_search
+return render_template('advanced_search.html', options=options, mangas=mangas, pagination=pagination, your_scores=your_scores)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+return _render(app, template, context)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+rv = template.render(context)
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+self.environment.handle_exception()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+raise rewrite_traceback_stack(source=source)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 1, in top-level template code
+{% extends "base.html" %}
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\base.html", line 119, in top-level template code
+{% block content %}
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 128, in block 'content'
+{% for p in pagination.iter_pages() %}
+File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+if hasattr(obj, "jinja_pass_arg"):
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attribute 'iter_pages'
+-----
+(venv) PS D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo> python .\run.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 875-406-510
+127.0.0.1 - - [25/Sep/2025 17:05:36] "GET /advanced_search HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/add_to_list.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/js/advanced_search.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/advanced_search.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/modal.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/js/scripts.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /static/js/add_to_list.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:37] "GET /advanced_search/options HTTP/1.1" 200 -
+D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py:365: SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+  query = query.filter(~Manga.MangaId.in_(exclude_mangas))
+127.0.0.1 - - [25/Sep/2025 17:05:50] "POST /advanced_search HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/add_to_list.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/modal.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/css/advanced_search.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/assets/default_cover.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/js/scripts.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/js/add_to_list.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /static/js/advanced_search.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:05:50] "GET /advanced_search/options HTTP/1.1" 200 -
+ * Detected change in 'D:\\TDMU\\2025-2026\\HKI_2025-2026\\DACSN\\coursework\\Demo\\mini-demo\\app\\routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 875-406-510
+D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py:366: SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+  query = query.filter(~Manga.MangaId.in_(exclude_mangas))
+127.0.0.1 - - [25/Sep/2025 17:09:17] "POST /advanced_search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py", line 426, in advanced_search
+    return render_template('advanced_search.html', options=options, mangas=mangas, pagination=pagination, your_scores=your_scores)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\base.html", line 119, in top-level template code
+    {% block content %}
+    ^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html", line 128, in block 'content'
+    {% for p in pagination.iter_pages() %}
+    ^^^^^^^^^^^^^
+  File "D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attribute 'iter_pages'
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png&s=pg1z0Ua4BogeQ8Na2CDz HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\README.md ---
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\requirements.txt ---
@@ -893,6 +3467,12 @@ app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\search_index.joblib ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 0: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\search_index.pkl ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 0: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\test-api.py ---
 import requests
@@ -916,6 +3496,109 @@ except Exception as e:
     print("Kết nối thất bại:", e)
 === Folder: app ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\admin_bp.py ---
+from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
+from flask_login import current_user
+from app import db
+from app.models import User, Comment, Report, Manga
+from functools import wraps
+from datetime import datetime
+
+admin_bp = Blueprint('admin_bp', __name__)
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not current_user.is_authenticated or current_user.Role != 'Admin':
+            flash('Access denied: Admins only.', 'danger')
+            return redirect(url_for('main.home'))
+        return f(*args, **kwargs)
+    return decorated_function
+
+@admin_bp.route('/admin/dashboard')
+@admin_required
+def admin_dashboard():
+    return render_template('admin_dashboard.html')
+
+@admin_bp.route('/admin/users', methods=['GET', 'POST'])
+@admin_required
+def admin_users():
+    if request.method == 'POST':
+        data = request.get_json()
+        user_id = data.get('user_id')
+        action = data.get('action')
+        user = User.query.get(user_id)
+        if not user:
+            return jsonify({'success': False, 'message': 'User not found'}), 404
+        if user.UserId == current_user.UserId:
+            return jsonify({'success': False, 'message': 'Cannot ban yourself'}), 403
+        if action == 'ban':
+            user.IsLocked = True
+            flash(f'User {user.Username} banned successfully.', 'success')
+        elif action == 'unban':
+            user.IsLocked = False
+            flash(f'User {user.Username} unbanned successfully.', 'success')
+        else:
+            return jsonify({'success': False, 'message': 'Invalid action'}), 400
+        db.session.commit()
+        return jsonify({'success': True, 'message': 'Action completed'})
+    
+    page = request.args.get('page', 1, type=int)
+    query = request.args.get('q', '')
+    users_query = User.query
+    if query:
+        users_query = users_query.filter(
+            User.Username.ilike(f'%{query}%') | User.Email.ilike(f'%{query}%')
+        )
+    users = users_query.order_by(User.CreatedAt.desc()).paginate(page=page, per_page=20)
+    return render_template('admin_users.html', users=users)
+
+@admin_bp.route('/admin/comments', methods=['GET', 'POST'])
+@admin_required
+def admin_comments():
+    if request.method == 'POST':
+        data = request.get_json()
+        comment_id = data.get('comment_id')
+        action = data.get('action')
+        comment = Comment.query.get(comment_id)
+        if not comment:
+            return jsonify({'success': False, 'message': 'Comment not found'}), 404
+        if action == 'delete':
+            comment.IsDeleted = True
+            comment.UpdatedAt = datetime.utcnow()
+            Report.query.filter_by(CommentId=comment_id).update({'Status': 'resolved'})
+            flash('Comment deleted successfully.', 'success')
+        elif action == 'ignore':
+            Report.query.filter_by(CommentId=comment_id).update({'Status': 'ignored'})
+            flash('Comment reports ignored.', 'success')
+        else:
+            return jsonify({'success': False, 'message': 'Invalid action'}), 400
+        db.session.commit()
+        return jsonify({'success': True, 'message': 'Action completed'})
+    
+    page = request.args.get('page', 1, type=int)
+    status = request.args.get('status', '')
+    query = db.session.query(
+        Comment, User.Username, Manga.TitleEn, Report.Reason, db.func.count(Report.ReportId).label('report_count')
+    ).join(Report, Report.CommentId == Comment.CommentId
+    ).join(User, Comment.UserId == User.UserId
+    ).join(Manga, Comment.MangaId == Manga.MangaId)
+    if status:
+        query = query.filter(Report.Status == status)
+    query = query.group_by(Comment.CommentId, User.Username, Manga.TitleEn, Report.Reason
+    ).order_by(Comment.CreatedAt.desc())
+    comments = query.paginate(page=page, per_page=20)
+    return render_template('admin_comments.html', comments=comments)
+
+@admin_bp.route('/admin/manga')
+@admin_required
+def admin_manga():
+    return render_template('admin_manga.html')
+
+@admin_bp.route('/admin/creators')
+@admin_required
+def admin_creators():
+    return render_template('admin_creators.html')
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\auth.py ---
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required
@@ -1177,6 +3860,250 @@ def report_comment(comment_id):
     db.session.commit()
     return jsonify({"success": True, "message": "Report submitted."})
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\dashboard_routes.py ---
+from flask import Blueprint, render_template, jsonify
+from flask_login import login_required
+from . import db
+from .models import User, Manga, Tag, MangaTag, ReadingHistory, Rating, Creator, CreatorRelationship
+import plotly.express as px
+import plotly.graph_objects as go
+from sqlalchemy import func
+import pandas as pd
+from collections import defaultdict
+
+dashboard_bp = Blueprint("dashboard", __name__, template_folder="templates")
+
+@dashboard_bp.route("/dashboard/<user_id>")
+@login_required
+def user_dashboard(user_id):
+    """Render dashboard for a given user, returns charts as JSON"""
+
+    # 1️⃣ Top 5 tags user đọc nhiều nhất (Bar + Line)
+    tag_counts = (
+        db.session.query(Tag.NameEn, func.count().label("count"))
+        .join(MangaTag, MangaTag.TagId == Tag.TagId)
+        .join(ReadingHistory, ReadingHistory.MangaId == MangaTag.MangaId)
+        .filter(ReadingHistory.UserId == user_id)
+        .group_by(Tag.NameEn)
+        .order_by(func.count().desc())
+        .limit(5)
+        .all()
+    )
+    tags, counts = zip(*tag_counts) if tag_counts else ([], [])
+    
+    fig1 = go.Figure()
+    fig1.add_trace(go.Bar(
+        x=tags,
+        y=counts,
+        name="Số lần đọc",
+        marker_color="orange"
+    ))
+    fig1.add_trace(go.Scatter(
+        x=tags,
+        y=counts,
+        name="Xu hướng",
+        mode="lines+markers",
+        marker=dict(color="blue", size=8),
+        line=dict(color="blue", width=3),
+        yaxis="y2" # Sử dụng trục Y thứ 2
+    ))
+    fig1.update_layout(
+        title="Top 5 Tags được đọc nhiều nhất & Xu hướng",
+        xaxis_title="Tag",
+        yaxis_title="Số lần đọc",
+        yaxis2=dict(title="Số lần đọc (xu hướng)", overlaying="y", side="right"),
+        legend=dict(x=0, y=1.1, orientation="h"),
+        barmode="group",
+        template="plotly_dark"
+    )
+    chart1 = fig1.to_html(full_html=False)
+
+    # 2️⃣ Sunburst chart: Phân bổ manga đọc nhiều nhất theo tag
+    # Lấy top 5 manga và top 3 tags của từng manga
+    manga_with_tags = (
+        db.session.query(
+            Manga.TitleEn,
+            Tag.NameEn,
+            func.count(ReadingHistory.MangaId).label("read_count")
+        )
+        .join(ReadingHistory, ReadingHistory.MangaId == Manga.MangaId)
+        .join(MangaTag, MangaTag.MangaId == Manga.MangaId)
+        .join(Tag, Tag.TagId == MangaTag.TagId)
+        .filter(ReadingHistory.UserId == user_id)
+        .group_by(Manga.TitleEn, Tag.NameEn)
+        .order_by(func.count(ReadingHistory.MangaId).desc())
+        .limit(20) # Lấy nhiều hơn để đảm bảo có đủ dữ liệu
+        .all()
+    )
+    
+    df_sunburst = pd.DataFrame(manga_with_tags, columns=["manga", "tag", "count"])
+    df_sunburst = df_sunburst.sort_values("count", ascending=False)
+    
+    data = []
+    parent_map = {"Tổng": ""}
+    value_map = {"Tổng": df_sunburst["count"].sum()}
+    
+    for i, row in df_sunburst.iterrows():
+        manga_name = row["manga"]
+        tag_name = row["tag"]
+        count = row["count"]
+
+        # Thêm manga vào vòng trong
+        if manga_name not in parent_map:
+            parent_map[manga_name] = "Tổng"
+            value_map[manga_name] = 0
+        value_map[manga_name] += count
+        
+        # Thêm tag vào vòng ngoài
+        tag_key = f"{manga_name} - {tag_name}"
+        parent_map[tag_key] = manga_name
+        value_map[tag_key] = count
+    
+    labels = list(value_map.keys())
+    parents = [parent_map.get(l, "") for l in labels]
+    values = [value_map[l] for l in labels]
+    
+    fig2 = go.Figure(go.Sunburst(
+        labels=labels,
+        parents=parents,
+        values=values,
+        branchvalues="total",
+        hovertemplate='<b>%{label}</b><br>Số lượt đọc: %{value}<br>Phần trăm: %{percentParent:.1%}'
+    ))
+    fig2.update_layout(title="Phân bổ lượt đọc của Manga theo Tag", template="plotly_dark")
+    chart2 = fig2.to_html(full_html=False)
+
+    # 3️⃣ Lịch sử đọc trong 7 ngày qua (Area Chart)
+    daily_counts = (
+        db.session.query(func.cast(ReadingHistory.ReadAt, db.Date).label("day"), func.count())
+        .filter(ReadingHistory.UserId == user_id)
+        .filter(ReadingHistory.ReadAt != None)
+        .group_by("day")
+        .order_by("day")
+        .limit(7)
+        .all()
+    )
+    days, dcounts = zip(*daily_counts) if daily_counts else ([], [])
+    fig3 = px.area(x=days, y=dcounts, title="Lịch sử đọc trong 7 ngày qua",
+                   labels={"x": "Ngày", "y": "Số lần đọc"},
+                   line_shape="spline",
+                   template="plotly_dark")
+    fig3.update_traces(marker=dict(size=8, symbol='circle', line=dict(width=2, color='DarkSlateGrey')),
+                       mode='lines+markers',
+                       fill='tozeroy',
+                       fillcolor='rgba(135, 206, 235, 0.4)')
+    chart3 = fig3.to_html(full_html=False)
+
+    # 4️⃣ Phân bố điểm Rating của user (Violin Plot)
+    ratings = (
+        db.session.query(Rating.Score)
+        .filter(Rating.UserId == user_id)
+        .all()
+    )
+    scores = [r.Score for r in ratings]
+    fig4 = go.Figure(data=go.Violin(y=scores,
+                                    box_visible=True,
+                                    meanline_visible=True,
+                                    points="all",
+                                    line_color='green',
+                                    fillcolor='lightgreen',
+                                    opacity=0.6))
+    fig4.update_layout(title="Phân bố Rating của bạn (Violin Plot)",
+                       yaxis_title="Điểm Rating",
+                       xaxis_title="Phân bố",
+                       template="plotly_dark")
+    chart4 = fig4.to_html(full_html=False)
+
+    # 5️⃣ Creator có nhiều manga được đọc nhất (Horizontal Bar)
+    creator_counts = (
+        db.session.query(Creator.Name, func.count(ReadingHistory.MangaId).label("cnt"))
+        .join(CreatorRelationship, Creator.CreatorId == CreatorRelationship.CreatorId)
+        .join(ReadingHistory, ReadingHistory.MangaId == CreatorRelationship.RelatedId)
+        .filter(ReadingHistory.UserId == user_id)
+        .group_by(Creator.Name)
+        .order_by(func.count(ReadingHistory.MangaId).desc())
+        .limit(5)
+        .all()
+    )
+    cnames, ccnts = zip(*creator_counts) if creator_counts else ([], [])
+    
+    fig5 = go.Figure(data=[go.Bar(
+        y=cnames,
+        x=ccnts,
+        orientation='h',
+        marker_color='red',
+        text=ccnts,
+        textposition='outside'
+    )])
+    fig5.update_layout(title="Top 5 Tác giả bạn đọc nhiều nhất",
+                       xaxis_title="Số lượt đọc",
+                       yaxis_title="Tên tác giả",
+                       yaxis={'categoryorder':'total ascending'},
+                       template="plotly_dark")
+    chart5 = fig5.to_html(full_html=False)
+
+    # 6️⃣ Biểu đồ 3D kết hợp (Scatter3D với 2D Projection)
+    history_with_rating = (
+        db.session.query(
+            func.cast(ReadingHistory.ReadAt, db.Date).label("day"),
+            func.count(ReadingHistory.HistoryId).label("read_count"),
+            func.avg(Rating.Score).label("avg_rating")
+        )
+        .join(Rating, ReadingHistory.MangaId == Rating.MangaId, isouter=True)
+        .filter(ReadingHistory.UserId == user_id)
+        .group_by(func.cast(ReadingHistory.ReadAt, db.Date))
+        .order_by(func.cast(ReadingHistory.ReadAt, db.Date))
+        .limit(10)
+        .all()
+    )
+    if history_with_rating:
+        days3d, reads3d, rating3d = zip(*history_with_rating)
+        rating3d = [r if r is not None else 0.0 for r in rating3d]
+    else:
+        days3d, reads3d, rating3d = ([], [], [])
+
+    fig6 = go.Figure()
+
+    # Thêm biểu đồ 3D
+    fig6.add_trace(go.Scatter3d(
+        x=days3d,
+        y=reads3d,
+        z=rating3d,
+        mode="markers",
+        marker=dict(size=8, color=rating3d, colorscale="Viridis", opacity=0.8,
+                    colorbar=dict(title="Điểm Rating TB")),
+        name="Tương quan"
+    ))
+
+    # Thêm biểu đồ 2D projection lên mặt phẳng XY
+    fig6.add_trace(go.Scatter3d(
+        x=days3d,
+        y=reads3d,
+        z=[0] * len(days3d), # Đặt z = 0 để tạo projection
+        mode="lines",
+        name="Lượt đọc theo ngày (Projection)",
+        line=dict(color="lightblue", width=2)
+    ))
+
+    fig6.update_layout(
+        title="Tương quan giữa Lượt đọc và Rating theo Ngày",
+        scene=dict(
+            xaxis_title="Ngày",
+            yaxis_title="Lượt đọc",
+            zaxis_title="Điểm Rating TB"
+        ),
+        template="plotly_dark"
+    )
+    chart6 = fig6.to_html(full_html=False)
+
+    return jsonify({
+        "chart1": chart1,
+        "chart2": chart2,
+        "chart3": chart3,
+        "chart4": chart4,
+        "chart5": chart5,
+        "chart6": chart6
+    })
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\list_routes.py ---
 # mini-demo/app/list_routes.py
 from flask import Blueprint, request, jsonify, render_template, abort, url_for, current_app
@@ -2239,7 +5166,10 @@ from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
 import requests
-from sqlalchemy import desc, func, or_
+from sqlalchemy import case, desc, func, or_
+from flask_paginate import Pagination
+
+from werkzeug.security import generate_password_hash
 
 from app.comment_routes import now
 from app.reader_controller import get_available_langs
@@ -2543,9 +5473,192 @@ def require_login():
 def profile():
     return render_template("profile.html", title="Profile", user=current_user)
 
-@main.route("/advanced-search")
+@main.route('/advanced_search/options')
+def advanced_search_options():
+    return jsonify(load_options())
+
+def load_options():
+    return {
+        'tags': [(tag.TagId, tag.GroupName, tag.NameEn) for tag in db.session.query(Tag.TagId, Tag.GroupName, Tag.NameEn).distinct().all()],
+        'ratings': [(r[0],) for r in db.session.query(Manga.ContentRating).distinct().all() if r[0]],
+        'demographics': [(d[0],) for d in db.session.query(Manga.PublicationDemographic).distinct().all() if d[0]],
+        'original_langs': [(l[0],) for l in db.session.query(Manga.OriginalLanguage).distinct().all() if l[0]],
+        'translated_langs': [(l[0],) for l in db.session.query(Chapter.TranslatedLang).distinct().all() if l[0]],
+        'statuses': [(s[0],) for s in db.session.query(Manga.Status).distinct().all() if s[0]]
+    }
+
+
+@main.route('/advanced_search', methods=['GET', 'POST'])
 def advanced_search():
-    return render_template("advanced_search.html", title="Advanced Search")
+    options = load_options()
+    mangas = None
+    pagination = None
+    your_scores = {}
+
+    if request.method == 'POST' or request.args:
+        search_query = request.form.get('search_query', request.args.get('q', ''))
+        sort_by = request.form.get('sort_by', request.args.get('sort_by', 'None'))
+        include_tags = request.form.getlist('include_tags') or request.args.getlist('include_tags')
+        exclude_tags = request.form.getlist('exclude_tags') or request.args.getlist('exclude_tags')
+        content_ratings = request.form.getlist('content_rating') or request.args.getlist('content_rating')
+        demographics = request.form.getlist('demographic') or request.args.getlist('demographic')
+        authors = request.form.get('authors', request.args.get('authors', '')).split(',')
+        artists = request.form.get('artists', request.args.get('artists', '')).split(',')
+        original_langs = request.form.getlist('original_langs') or request.args.getlist('original_langs')
+        year_from = request.form.get('year_from', request.args.get('year_from', ''))
+        year_to = request.form.get('year_to', request.args.get('year_to', ''))
+        statuses = request.form.getlist('status') or request.args.getlist('status')
+        has_translated = request.form.get('has_translated') == 'on' or request.args.get('has_translated') == 'on'
+        translated_langs = request.form.getlist('translated_langs') or request.args.getlist('translated_langs')
+
+        # --- BẮT ĐẦU PHẦN SỬA ĐỔI ---
+        # BƯỚC 1: Xây dựng truy vấn để lấy các MangaId duy nhất.
+        # Truy vấn này chỉ chọn các cột cần thiết cho việc lọc, sắp xếp và phân trang.
+        query_ids = db.session.query(
+            Manga.MangaId,
+            Manga.TitleEn,
+            Manga.Year,
+            MangaStatistics.Follows,
+            MangaStatistics.AverageRating
+        ).outerjoin(MangaStatistics).outerjoin(MangaAltTitle)
+
+        # Áp dụng các bộ lọc như cũ
+        if search_query:
+            query_ids = query_ids.filter(or_(Manga.TitleEn.ilike(f'%{search_query}%'), MangaAltTitle.AltTitle.ilike(f'%{search_query}%')))
+        if include_tags:
+            query_ids = query_ids.join(MangaTag).filter(MangaTag.TagId.in_(include_tags))
+        if exclude_tags:
+            exclude_mangas = db.session.query(MangaTag.MangaId).filter(MangaTag.TagId.in_(exclude_tags)).distinct().subquery()
+            query_ids = query_ids.filter(~Manga.MangaId.in_(exclude_mangas))
+        if content_ratings:
+            query_ids = query_ids.filter(Manga.ContentRating.in_(content_ratings))
+        if demographics:
+            query_ids = query_ids.filter(Manga.PublicationDemographic.in_(demographics))
+        if authors and any(a.strip() for a in authors):
+            query_ids = query_ids.join(Creator).filter(Creator.Name.ilike(f'%{authors[0].strip()}%'))
+        if artists and any(a.strip() for a in artists):
+            query_ids = query_ids.join(Creator).filter(Creator.Name.ilike(f'%{artists[0].strip()}%'))
+        if original_langs:
+            query_ids = query_ids.filter(Manga.OriginalLanguage.in_(original_langs))
+        if year_from or year_to:
+            from_year = int(year_from) if year_from else 0
+            to_year = int(year_to) if year_to else 9999
+            query_ids = query_ids.filter(Manga.Year.between(min(from_year, to_year), max(from_year, to_year)))
+        if statuses:
+            query_ids = query_ids.filter(Manga.Status.in_(statuses))
+        if has_translated and translated_langs:
+            query_ids = query_ids.join(Chapter).filter(Chapter.TranslatedLang.in_(translated_langs))
+
+        # Sử dụng distinct() trên truy vấn ID
+        query_ids = query_ids.distinct()
+
+        # Áp dụng sắp xếp trên truy vấn ID
+        if sort_by == 'Title ASC':
+            query_ids = query_ids.order_by(Manga.TitleEn.asc())
+        elif sort_by == 'Title DESC':
+            query_ids = query_ids.order_by(Manga.TitleEn.desc())
+        elif sort_by == 'Year ASC':
+            query_ids = query_ids.order_by(Manga.Year.asc())
+        elif sort_by == 'Year DESC':
+            query_ids = query_ids.order_by(Manga.Year.desc())
+        elif sort_by == 'Rating DESC':
+            query_ids = query_ids.order_by(
+                case((MangaStatistics.Follows.is_(None), 1), else_=0),
+                desc(MangaStatistics.AverageRating)
+            )
+        elif sort_by == 'Follows DESC':
+            query_ids = query_ids.order_by(
+                case((MangaStatistics.Follows.is_(None), 1), else_=0),
+                desc(MangaStatistics.Follows)
+            )
+        else: # Sắp xếp mặc định
+            query_ids = query_ids.order_by(Manga.MangaId.asc())
+
+        # Tính tổng số bản ghi trước khi phân trang
+        total = query_ids.count()
+        
+        # Phân trang
+        page = request.args.get('page', 1, type=int)
+        per_page = 20
+        
+        # Lấy danh sách ID đã được phân trang
+        manga_ids_paginated = query_ids.offset((page - 1) * per_page).limit(per_page).all()
+        manga_ids = [item[0] for item in manga_ids_paginated]
+
+        # BƯỚC 2: Tải lại các đối tượng đầy đủ dựa trên danh sách ID đã có
+        # Sắp xếp các ID theo thứ tự ban đầu để đảm bảo kết quả cuối cùng đúng thứ tự
+        id_order = {id: index for index, id in enumerate(manga_ids)}
+        
+        mangas_paginated_full_data = db.session.query(Manga, MangaStatistics)\
+            .outerjoin(MangaStatistics)\
+            .filter(Manga.MangaId.in_(manga_ids))\
+            .all()
+
+        # Sắp xếp lại kết quả bằng Python để khớp với thứ tự đã phân trang
+        mangas_paginated_full_data.sort(key=lambda item: id_order[item[0].MangaId])
+
+        pagination = Pagination(page=page, total=total, per_page=per_page)
+        
+        # --- KẾT THÚC PHẦN SỬA ĐỔI ---
+
+        # BẮT CHƯỚC LOGIC TẢI COVER TỪ /home
+        mangas_with_covers = []
+        for manga, stat in mangas_paginated_full_data:
+            # Tra cứu trong MangaCover theo MangaId
+            cover = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+            if cover and cover.ImageData:
+                # Chuyển đổi ImageData thành URL base64
+                image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+                cover_url = f"data:image/jpeg;base64,{image_data}"
+            else:
+                # Nếu không tìm thấy, tải ảnh và lưu vào bảng
+                cover_info = get_cover_info(str(manga.MangaId).lower())
+                if cover_info:
+                    manga_id_str = cover_info['manga_id']
+                    cover_id_str = cover_info['cover_id']
+                    file_name_str = cover_info['file_name']
+                    image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                    try:
+                        response = requests.get(image_url, stream=True)
+                        response.raise_for_status()
+                        image_data = response.content
+                        new_cover = MangaCover(
+                            MangaId=manga.MangaId,
+                            CoverId=uuid.UUID(cover_id_str),
+                            FileName=file_name_str,
+                            ImageData=image_data,
+                            DownloadDate=datetime.utcnow()
+                        )
+                        db.session.add(new_cover)
+                        db.session.commit()
+                        image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                        cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+                    except Exception as e:
+                        print(f"Error downloading cover for {manga_id_str}: {e}")
+                        cover_url = url_for('static', filename='assets/default_cover.png')
+                else:
+                    cover_url = url_for('static', filename='assets/default_cover.png')
+
+            score = your_scores.get(manga.MangaId, 'N/A')
+            mangas_with_covers.append({
+                'manga': manga,
+                'stat': stat,
+                'cover_url': cover_url,
+                'your_score': score
+            })
+        
+        mangas = mangas_with_covers
+
+        if current_user.is_authenticated:
+            from app.models import Rating
+            ratings = db.session.query(Rating.MangaId, Rating.Score).filter_by(UserId=current_user.UserId).all()
+            your_scores = dict(ratings)
+
+        if year_from and year_to and int(year_from) > int(year_to):
+            flash('warning', 'Swapped years for valid range.')
+
+    return render_template('advanced_search.html', options=options, mangas=mangas, pagination=pagination, your_scores=your_scores)
+
 
 @main.route('/recently_added')
 def recently_added():
@@ -3172,6 +6285,24 @@ def delete_user_rating(manga_id):
 # ======================
 # User routes
 # ======================
+@main.route("/profile/update", methods=["POST"])
+@login_required
+def update_profile():
+    username = request.form.get("username")
+    email = request.form.get("email")
+    password = request.form.get("password")
+
+    current_user.Username = username
+    current_user.Email = email
+    if password and password.strip():
+        current_user.PasswordHash = generate_password_hash(password)
+
+    db.session.commit()
+    flash("Profile updated successfully!", "success")
+    return redirect(url_for("main.profile", user_id=current_user.UserId))
+
+
+
 @main.route("/follow/<uuid:user_id>")
 def follow(user_id):
     return f"Follow user {user_id}"
@@ -3184,6 +6315,115 @@ def message(user_id):
 def report(user_id):
     return f"Report user {user_id}"
 
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\search_index.py ---
+# app/search_index.py
+import os
+import re
+import joblib
+from unidecode import unidecode
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+from app import create_app, db   # dùng create_app để lấy context
+from app.models import Manga, MangaAltTitle
+
+# mặc định file index
+INDEX_PATH_DEFAULT = os.path.join(
+    os.path.dirname(__file__), "..", "search_index.joblib"
+)
+
+
+def norm(s: str) -> str:
+    """Chuẩn hoá text: remove diacritics, punctuation -> lowercase + collapse spaces."""
+    if not s:
+        return ""
+    s = s.lower()
+    s = unidecode(s)
+    # remove most punctuation, keep letters/numbers/space
+    s = re.sub(r"[^0-9a-z\s]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def build_index(
+    out_path: str = INDEX_PATH_DEFAULT,
+    ngram_range=(3, 5),
+    max_features: int = 50000,
+):
+    """
+    Build TF-IDF index from Manga + MangaAltTitle.
+    Save a dict {'vectorizer','tfidf_matrix','ids','titles'} via joblib to out_path.
+    """
+    docs = []
+    ids = []
+    titles = []
+
+    mangas = Manga.query.all()
+    for m in mangas:
+        parts = []
+        if getattr(m, "TitleEn", None):
+            parts.append(m.TitleEn)
+        # lấy alt titles
+        alts = MangaAltTitle.query.filter_by(MangaId=m.MangaId).all()
+        for a in alts:
+            if getattr(a, "AltTitle", None):
+                parts.append(a.AltTitle)
+
+        if not parts:
+            continue
+
+        doc = " ".join(parts).strip()
+        docs.append(norm(doc))
+        ids.append(str(m.MangaId))
+        titles.append(m.TitleEn or "")
+
+    vectorizer = TfidfVectorizer(
+        analyzer="char_wb",
+        ngram_range=ngram_range,
+        max_features=max_features,
+        sublinear_tf=True,
+    )
+    tfidf_matrix = vectorizer.fit_transform(docs)  # sparse matrix
+
+    payload = {
+        "vectorizer": vectorizer,
+        "tfidf_matrix": tfidf_matrix,
+        "ids": ids,
+        "titles": titles,
+    }
+
+    joblib.dump(payload, out_path)
+    return out_path
+
+
+def load_index(path: str = INDEX_PATH_DEFAULT):
+    """Return (vectorizer, tfidf_matrix, ids, titles) or (None, None, [], [])."""
+    try:
+        payload = joblib.load(path)
+        return (
+            payload.get("vectorizer"),
+            payload.get("tfidf_matrix"),
+            payload.get("ids", []),
+            payload.get("titles", []),
+        )
+    except Exception as e:
+        print(f"[search_index] load failed: {e}")
+        return None, None, [], []
+
+
+if __name__ == "__main__":
+    # chính: chạy trong root project: python -m app.search_index
+    try:
+        from app import create_app, db
+    except Exception as e:
+        print("Import failed:", e)
+        raise
+
+    flask_app = create_app()
+
+    with flask_app.app_context():
+        out = build_index()
+        print("✅ Index built ->", out)
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\__init__.py ---
 from flask import Flask
@@ -3215,9 +6455,9 @@ def create_app():
     from .comment_routes import comment_bp as comment_blueprint
     from .list_routes import list_bp as list_blueprint
     from .blueprints.reader import reader as reader_blueprint
-    from .user import user_bp
-    
-    app.register_blueprint(user_bp, url_prefix="/user")
+    from app.admin_bp import admin_bp
+
+    app.register_blueprint(admin_bp)
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
     app.register_blueprint(main_blueprint)
     app.register_blueprint(manga_blueprint, url_prefix='/manga')
@@ -3343,35 +6583,6 @@ def get_chapters(manga_id):
         chapter_data.append({"chapter_number": chapter_num, "translations": translations})
     
     return jsonify({"chapters": chapter_data, "has_chapters": has_chapters})
-=== Folder: app\routes ===
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes\user.py ---
-from flask import Blueprint, render_template, redirect, url_for, request, flash
-from flask_login import login_required, current_user
-from werkzeug.security import generate_password_hash
-from app import db
-from app.models import User
-
-user_bp = Blueprint("user", __name__)
-
-@user_bp.route("/profile/update", methods=["POST"])
-@login_required
-def update_profile():
-    username = request.form.get("username")
-    email = request.form.get("email")
-    password = request.form.get("password")
-
-    # Update các field
-    current_user.Username = username
-    current_user.Email = email
-
-    if password and password.strip():
-        current_user.PasswordHash = generate_password_hash(password)
-
-    db.session.commit()
-    flash("Profile updated successfully", "success")
-    return redirect(url_for("main.profile", user_id=current_user.UserId))
-
 === Folder: app\static ===
 
 === Folder: app\static\assets ===
@@ -3380,6 +6591,9 @@ def update_profile():
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 4: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_avatar.png ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_banner.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_cover.png ---
@@ -3510,6 +6724,113 @@ def update_profile():
 #addToListModal .d-flex.align-items-center:hover {
     background-color: #2a2a2a;
     /* nền tối nhấn nhẹ */
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\admin.css ---
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #343a40;
+}
+
+.sidebar .nav-link {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+}
+
+.table-dark th,
+.table-dark td {
+    vertical-align: middle;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.btn-sm {
+    margin-right: 5px;
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\advanced_search.css ---
+.advanced-search-form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-label {
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control,
+.form-select {
+    background-color: #2c2c2c;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #2c2c2c;
+    color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* New styles for tag checkbox lists */
+.tag-checklist {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 1rem;
+    max-height: 250px;
+    /* Limit height and make scrollable */
+    overflow-y: auto;
+}
+
+.tag-checklist .form-check {
+    margin-bottom: 0.5rem;
+}
+
+.tag-checklist .form-check-label {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.tag-checklist .form-check-input {
+    cursor: pointer;
+}
+
+.tag-group-label {
+    font-weight: bold;
+    color: #ffc107;
+    /* Yellowish color for group headers */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.tag-checklist .tag-group:first-child .tag-group-label {
+    margin-top: 0;
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\auth.css ---
 /* Background */
@@ -4614,6 +7935,152 @@ a.text-decoration-none.text-reset .card {
 .chapter-subrow .unread {
     color: #dc3545;
     /* Red for unread chapters */
+}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\modal.css ---
+/* modal.css */
+
+/* Overlay nền tối khi popup bật */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+/* Box popup chính */
+.modal-content {
+    background-color: #1e1e1e;
+    /* Màu tối đồng bộ UI */
+    border-radius: 12px;
+    padding: 20px 25px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
+    animation: fadeInUp 0.3s ease;
+}
+
+/* Hiệu ứng mở */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header popup */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    margin-bottom: 15px;
+}
+
+.modal-header h5 {
+    margin: 0;
+    color: #f5f5f5;
+    font-weight: 600;
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-header button:hover {
+    color: #fff;
+}
+
+/* Input */
+.modal-body input {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #eee;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: border 0.2s, background 0.2s;
+}
+
+.modal-body input:focus {
+    outline: none;
+    border-color: #007bff;
+    background: #1f1f1f;
+}
+
+/* Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-footer .btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.modal-footer .btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+}
+
+.modal-footer .btn-success:hover {
+    background-color: #218838;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Đảm bảo text nhập vào trong input đều màu trắng */
+.modal-body input {
+    color: #fff;
+    /* text màu trắng */
+}
+
+/* Placeholder cũng màu trắng mờ */
+.modal-body input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Chữ nhập trong ô */
+.modal-body .form-control {
+    color: #fff !important;
+    background-color: #2b2b2b;
+    /* đồng bộ theme tối */
+    border: 1px solid #444;
+}
+
+/* Placeholder */
+.modal-body .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\reader.css ---
 .reader-container {
@@ -17642,6 +21109,11 @@ a {
 .alert-container .alert {
   margin-bottom: 10px;
 }
+
+h2.text-white fw-bold {
+  color: black !important;
+  font-weight: 600 !important;
+}
 === Folder: app\static\js ===
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\add_to_list.js ---
@@ -17887,6 +21359,158 @@ a {
 
 })();
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\admin_comments.js ---
+function confirmAction(commentId, action) {
+    const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+    document.getElementById('actionText').textContent = action;
+    document.getElementById('confirmButton').onclick = function () {
+        fetch('/admin/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ comment_id: commentId, action: action })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        modal.hide();
+    };
+    modal.show();
+}
+
+document.getElementById('statusFilter').addEventListener('change', function (e) {
+    const status = e.target.value;
+    window.location.href = `/admin/comments?status=${status}`;
+});
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\admin_users.js ---
+function confirmAction(userId, action) {
+    const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+    document.getElementById('actionText').textContent = action;
+    document.getElementById('confirmButton').onclick = function () {
+        fetch('/admin/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ user_id: userId, action: action })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        modal.hide();
+    };
+    modal.show();
+}
+
+document.getElementById('userSearch').addEventListener('input', function (e) {
+    const query = e.target.value.toLowerCase();
+    const rows = document.querySelectorAll('#userTableBody tr');
+    rows.forEach(row => {
+        const username = row.cells[1].textContent.toLowerCase();
+        const email = row.cells[2].textContent.toLowerCase();
+        row.style.display = (username.includes(query) || email.includes(query)) ? '' : 'none';
+    });
+});
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\advanced_search.js ---
+document.addEventListener('DOMContentLoaded', () => {
+    function populateTags(data) {
+        const includeContainer = document.getElementById('include-tags');
+        const excludeContainer = document.getElementById('exclude-tags');
+        if (!includeContainer || !excludeContainer) return;
+
+        const tagsByGroup = {};
+        data.tags.forEach(([tagId, groupName, nameEn]) => {
+            if (!tagsByGroup[groupName]) tagsByGroup[groupName] = [];
+            tagsByGroup[groupName].push({ tagId, nameEn });
+        });
+
+        const createChecklist = (container, name) => {
+            Object.entries(tagsByGroup).forEach(([groupName, tagList]) => {
+                const groupWrapper = document.createElement('div');
+                groupWrapper.className = 'tag-group';
+
+                const groupLabel = document.createElement('h6');
+                groupLabel.className = 'tag-group-label';
+                groupLabel.textContent = groupName || 'Other';
+                groupWrapper.appendChild(groupLabel);
+
+                tagList.forEach(tag => {
+                    const checkWrapper = document.createElement('div');
+                    checkWrapper.className = 'form-check';
+                    checkWrapper.innerHTML = `
+                        <input class="form-check-input" type="checkbox" name="${name}" value="${tag.tagId}" id="${name}_${tag.tagId}">
+                        <label class="form-check-label" for="${name}_${tag.tagId}">${tag.nameEn}</label>
+                    `;
+                    groupWrapper.appendChild(checkWrapper);
+                });
+                container.appendChild(groupWrapper);
+            });
+        };
+
+        createChecklist(includeContainer, 'include_tags');
+        createChecklist(excludeContainer, 'exclude_tags');
+
+        // Restore state from form data (if any was submitted)
+        const currentInclude = new URLSearchParams(window.location.search).getAll('include_tags');
+        const currentExclude = new URLSearchParams(window.location.search).getAll('exclude_tags');
+
+        currentInclude.forEach(id => {
+            const cb = includeContainer.querySelector(`input[value="${id}"]`);
+            if (cb) cb.checked = true;
+        });
+        currentExclude.forEach(id => {
+            const cb = excludeContainer.querySelector(`input[value="${id}"]`);
+            if (cb) cb.checked = true;
+        });
+
+        // Add event listeners for mutual exclusion
+        includeContainer.addEventListener('change', (e) => {
+            if (e.target.type === 'checkbox' && e.target.checked) {
+                const correspondingExclude = excludeContainer.querySelector(`input[value="${e.target.value}"]`);
+                if (correspondingExclude) correspondingExclude.checked = false;
+            }
+        });
+
+        excludeContainer.addEventListener('change', (e) => {
+            if (e.target.type === 'checkbox' && e.target.checked) {
+                const correspondingInclude = includeContainer.querySelector(`input[value="${e.target.value}"]`);
+                if (correspondingInclude) correspondingInclude.checked = false;
+            }
+        });
+    }
+
+    // Fetch options and initialize
+    fetch('/advanced_search/options')
+        .then(response => response.json())
+        .then(populateTags)
+        .catch(error => console.error('Error fetching search options:', error));
+
+    // Reset button logic
+    const resetButton = document.getElementById('reset-filters');
+    if (resetButton) {
+        resetButton.addEventListener('click', () => {
+            const form = document.getElementById('search-form');
+            if (form) {
+                form.reset();
+                // Manually uncheck all tag checkboxes
+                form.querySelectorAll('.tag-checklist input[type="checkbox"]').forEach(cb => cb.checked = false);
+            }
+        });
+    }
+});
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\comments.js ---
 // app/static/js/comments.js
 $(document).ready(function () {
@@ -19415,16 +23039,438 @@ document.addEventListener('DOMContentLoaded', function () {
 
 === Folder: app\templates ===
 
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_base.html ---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - {% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="bg-dark text-white sidebar">
+            <div class="p-3">
+                <h4 class="text-center">Admin Panel</h4>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == '/admin/dashboard' %}active{% endif %}"
+                            href="{{ url_for('admin_bp.admin_dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == '/admin/users' %}active{% endif %}"
+                            href="{{ url_for('admin_bp.admin_users') }}">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == '/admin/comments' %}active{% endif %}"
+                            href="{{ url_for('admin_bp.admin_comments') }}">Comments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == '/admin/manga' %}active{% endif %}"
+                            href="{{ url_for('admin_bp.admin_manga') }}">Manga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == '/admin/creators' %}active{% endif %}"
+                            href="{{ url_for('admin_bp.admin_creators') }}">Creators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ url_for('auth.logout') }}">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="flex-grow-1 p-4">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_comments.html ---
+{% extends "admin_base.html" %}
+{% block title %}Manage Comments{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Manage Reported Comments</h2>
+    <div class="mb-3">
+        <select id="statusFilter" class="form-select">
+            <option value="">All</option>
+            <option value="pending">Pending</option>
+            <option value="resolved">Resolved</option>
+            <option value="ignored">Ignored</option>
+        </select>
+    </div>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Comment ID</th>
+                <th>Content</th>
+                <th>Username</th>
+                <th>Manga</th>
+                <th>Reason</th>
+                <th>Reports</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="commentTableBody">
+            {% for comment in comments.items %}
+            <tr>
+                <td>{{ comment.CommentId }}</td>
+                <td>
+                    {{ comment.Content[:100] }}{% if comment.Content|length > 100 %}... <a href="#"
+                        data-bs-toggle="modal" data-bs-target="#viewCommentModal{{ comment.CommentId }}">View Full</a>{%
+                    endif %}
+                </td>
+                <td><a href="{{ url_for('main.profile', user_id=comment.UserId) }}">{{ comment.Username }}</a></td>
+                <td><a href="{{ url_for('main.manga_detail', manga_id=comment.MangaId) }}">{{ comment.TitleEn }}</a>
+                </td>
+                <td>{{ comment.Reason }}</td>
+                <td>{{ comment.report_count }}</td>
+                <td>{{ comment.CreatedAt.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger"
+                        onclick="confirmAction('{{ comment.CommentId }}', 'delete')">Delete</button>
+                    <button class="btn btn-sm btn-warning"
+                        onclick="confirmAction('{{ comment.CommentId }}', 'ignore')">Ignore</button>
+                </td>
+            </tr>
+            <!-- View Comment Modal -->
+            <div class="modal fade" id="viewCommentModal{{ comment.CommentId }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Full Comment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{ comment.Content }}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- Pagination -->
+    <nav>
+        <ul class="pagination">
+            {% if comments.has_prev %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="{{ url_for('admin_bp.admin_comments', page=comments.prev_num, status=request.args.get('status', '')) }}">Previous</a>
+            </li>
+            {% endif %}
+            {% for page_num in comments.iter_pages() %}
+            <li class="page-item {% if page_num == comments.page %}active{% endif %}">
+                <a class="page-link"
+                    href="{{ url_for('admin_bp.admin_comments', page=page_num, status=request.args.get('status', '')) }}">{{
+                    page_num }}</a>
+            </li>
+            {% endfor %}
+            {% if comments.has_next %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="{{ url_for('admin_bp.admin_comments', page=comments.next_num, status=request.args.get('status', '')) }}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirm Action</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to <span id="actionText"></span> this comment?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmButton">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/admin_comments.js') }}"></script>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_creators.html ---
+{% extends "admin_base.html" %}
+{% block title %}Manage Creators{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Manage Creators</h2>
+    <p>This feature is under development.</p>
+</div>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_dashboard.html ---
+{% extends "admin_base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Admin Dashboard</h2>
+    <p>This feature is under development.</p>
+</div>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_manga.html ---
+{% extends "admin_base.html" %}
+{% block title %}Manage Manga{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Manage Manga</h2>
+    <p>This feature is under development.</p>
+</div>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_users.html ---
+{% extends "admin_base.html" %}
+{% block title %}Manage Users{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Manage Users</h2>
+    <div class="mb-3">
+        <input type="text" id="userSearch" class="form-control" placeholder="Search by username or email">
+    </div>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            {% for user in users.items %}
+            <tr>
+                <td>{{ user.UserId }}</td>
+                <td>{{ user.Username }}</td>
+                <td>{{ user.Email }}</td>
+                <td>{{ user.Role }}</td>
+                <td>
+                    <span class="badge bg-{{ 'success' if not user.IsLocked else 'danger' }}">
+                        {{ 'Active' if not user.IsLocked else 'Locked' }}
+                    </span>
+                </td>
+                <td>{{ user.CreatedAt.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                <td>
+                    <a href="{{ url_for('main.profile', user_id=user.UserId) }}" class="btn btn-sm btn-info">View</a>
+                    <button class="btn btn-sm btn-{{ 'danger' if not user.IsLocked else 'success' }}"
+                        onclick="confirmAction('{{ user.UserId }}', '{{ 'ban' if not user.IsLocked else 'unban' }}')">
+                        {{ 'Ban' if not user.IsLocked else 'Unban' }}
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- Pagination -->
+    <nav>
+        <ul class="pagination">
+            {% if users.has_prev %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="{{ url_for('admin_bp.admin_users', page=users.prev_num, q=request.args.get('q', '')) }}">Previous</a>
+            </li>
+            {% endif %}
+            {% for page_num in users.iter_pages() %}
+            <li class="page-item {% if page_num == users.page %}active{% endif %}">
+                <a class="page-link"
+                    href="{{ url_for('admin_bp.admin_users', page=page_num, q=request.args.get('q', '')) }}">{{ page_num
+                    }}</a>
+            </li>
+            {% endfor %}
+            {% if users.has_next %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="{{ url_for('admin_bp.admin_users', page=users.next_num, q=request.args.get('q', '')) }}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirm Action</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to <span id="actionText"></span> this user?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmButton">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/admin_users.js') }}"></script>
+{% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
 {% extends "base.html" %}
-
-{% block title %}Advanced Search | MangaDex Clone{% endblock %}
+{% block title %}Advanced Search{% endblock %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/advanced_search.css') }}">
+{% endblock %}
 
 {% block content %}
-<div class="text-center py-5 text-white">
-    <h1>Advanced Search</h1>
-    <p>No content available yet.</p>
+<div class="container-fluid p-4" data-auth="{{ current_user.is_authenticated }}">
+    <h2 class="text-white mb-4">Advanced Search</h2>
+    <form method="POST" id="search-form" class="advanced-search-form">
+        {{ form.hidden_tag() if form else "" }}
+        <div class="row">
+            <div class="col-lg-8 col-md-6 mb-3">
+                <label for="search-query" class="form-label">Search Query</label>
+                <input type="text" id="search-query" name="search_query" class="form-control"
+                    placeholder="Search manga by title..." value="{{ request.form.get('search_query', '') }}">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <label for="sort-by" class="form-label">Sort By</label>
+                <select id="sort-by" name="sort_by" class="form-select">
+                    <option value="None" {% if request.form.get('sort_by')=='None' %}selected{% endif %}>None</option>
+                    <option value="Title ASC" {% if request.form.get('sort_by')=='Title ASC' %}selected{% endif %}>Title
+                        ASC</option>
+                    <option value="Title DESC" {% if request.form.get('sort_by')=='Title DESC' %}selected{% endif %}>
+                        Title DESC</option>
+                    <option value="Year ASC" {% if request.form.get('sort_by')=='Year ASC' %}selected{% endif %}>Year
+                        ASC</option>
+                    <option value="Year DESC" {% if request.form.get('sort_by')=='Year DESC' %}selected{% endif %}>Year
+                        DESC</option>
+                    <option value="Rating DESC" {% if request.form.get('sort_by')=='Rating DESC' %}selected{% endif %}>
+                        Rating DESC</option>
+                    <option value="Follows DESC" {% if request.form.get('sort_by')=='Follows DESC' %}selected{% endif
+                        %}>Most Follows</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Include Tags</label>
+                <div id="include-tags" class="tag-checklist"></div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Exclude Tags</label>
+                <div id="exclude-tags" class="tag-checklist"></div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="content-rating" class="form-label">Content Rating</label>
+                <select id="content-rating" name="content_rating" multiple class="form-select" size="3">
+                    {% for rating in options.ratings %}
+                    <option value="{{ rating[0] }}" {% if rating[0] in request.form.getlist('content_rating')
+                        %}selected{% endif %}>{{ rating[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="demographic" class="form-label">Magazine Demographic</label>
+                <select id="demographic" name="demographic" multiple class="form-select" size="3">
+                    {% for demo in options.demographics %}
+                    <option value="{{ demo[0] }}" {% if demo[0] in request.form.getlist('demographic') %}selected{%
+                        endif %}>{{ demo[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="status" class="form-label">Publication Status</label>
+                <select id="status" name="status" multiple class="form-select" size="3">
+                    {% for stat in options.statuses %}
+                    <option value="{{ stat[0] }}" {% if stat[0] in request.form.getlist('status') %}selected{% endif %}>
+                        {{ stat[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-secondary" id="reset-filters">Reset Filters</button>
+        </div>
+    </form>
+
+    {% if mangas is not none %}
+    <h3 class="text-white mt-5">Search Results</h3>
+    {% if mangas %}
+    <div class="table-responsive">
+        <table class="table table-dark table-hover mt-2">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Score</th>
+                    <th>Your Score</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in mangas %}
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ item.cover_url }}" alt="{{ item.manga.TitleEn }}" class="img-thumbnail me-2"
+                                style="width: 50px; height: 70px; object-fit: cover;">
+                            <a href="{{ url_for('manga.manga_detail', manga_id=item.manga.MangaId) }}"
+                                class="text-decoration-none text-white">{{ item.manga.TitleEn }}</a>
+                        </div>
+                    </td>
+                    <td>{{ '{:.1f}'.format(item.stat.AverageRating) if item.stat and item.stat.AverageRating else 'N/A'
+                        }}</td>
+                    <td>{{ item.your_score }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary add-to-list" data-manga-id="{{ item.manga.MangaId }}">Add
+                            to List</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-white mt-4">No manga found matching your criteria.</p>
+    {% endif %}
+    {% endif %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/advanced_search.js') }}"></script>
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\art.html ---
 {% extends "manga_detail.html" %}
@@ -19453,6 +23499,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- Core theme CSS -->
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
 
     {% block styles %}{% endblock %}
 </head>
@@ -19802,6 +23849,12 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\dashboard.html ---
+{% for c in charts %}
+<div class="mb-5">
+    {{ c|safe }}
+</div>
+{% endfor %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\home.html ---
 {% extends "base.html" %}
 
@@ -20647,7 +24700,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             <!-- Username + Role -->
             <div>
-                <h2 class="text-white fw-bold">{{ user.Username }}</h2>
+                <h2 class="text-white fw-bold" style="color: black; -webkit-text-stroke: 1px black;">{{ user.Username }}
+                </h2>
                 <span class="badge bg-secondary">{{ user.Role }}</span>
             </div>
         </div>
@@ -20658,6 +24712,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="{{ url_for('main.follow', user_id=user.UserId) }}" class="btn btn-signin">Follow</a>
         <a href="{{ url_for('main.message', user_id=user.UserId) }}" class="btn btn-secondary">Message</a>
         <a href="{{ url_for('main.report', user_id=user.UserId) }}" class="btn btn-dark">Report</a>
+        <!-- NEW: Edit Profile -->
+        {% if current_user.is_authenticated and current_user.UserId == user.UserId %}
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+            Edit Profile
+        </button>
+        {% endif %}
     </div>
 
     <!-- Info Section -->
@@ -20686,7 +24746,53 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
+
+<!-- Modal Edit Profile -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="POST" action="{{ url_for('main.update_profile') }}">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" value="{{ user.Username }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" value="{{ user.Email }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">New Password</label>
+                        <input type="password" class="form-control" name="password"
+                            placeholder="Leave blank to keep current password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile_dashboard.html ---
+<!-- load plotly -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<div class="container my-5">
+    <h3 class="text-white">📊 Thống kê đọc truyện</h3>
+    <div class="chart my-4" id="chart1">{{ chart1|safe }}</div>
+    <div class="chart my-4" id="chart2">{{ chart2|safe }}</div>
+    <div class="chart my-4" id="chart3">{{ chart3|safe }}</div>
+    <div class="chart my-4" id="chart4">{{ chart4|safe }}</div>
+    <div class="chart my-4" id="chart5">{{ chart5|safe }}</div>
+    <div class="chart my-4" id="chart6">{{ chart6|safe }}</div>
+</div>
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\random.html ---
 {% extends "base.html" %}
 
@@ -21087,3 +25193,126 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
+=== Folder: Simulation ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\Simulation\single-user.py ---
+import pyodbc
+import uuid
+import random
+from datetime import datetime, timedelta
+import math
+
+# ===== Connection =====
+DRIVER = "ODBC Driver 17 for SQL Server"
+SERVER = "HEDI-SNOWY\SQLEXPRESS"
+DATABASE = "MangaLibrary"
+connection_string = f"DRIVER={{{DRIVER}}};SERVER={SERVER};DATABASE={DATABASE};Trusted_Connection=yes;"
+
+conn = pyodbc.connect(connection_string)
+cursor = conn.cursor()
+
+USER_ID = '351E4344-63A8-4E6B-9DFC-7FAA5EC9E6DB'
+
+# ===== Load data =====
+# Manga with chapters
+cursor.execute("""
+SELECT m.MangaId, s.Follows
+FROM Manga m
+LEFT JOIN MangaStatistics s ON m.MangaId = s.MangaId
+""")
+mangas = cursor.fetchall()
+
+# Chapters grouped by MangaId
+cursor.execute("SELECT MangaId, ChapterId FROM Chapter")
+chapter_rows = cursor.fetchall()
+chapter_dict = {}
+for row in chapter_rows:
+    chapter_dict.setdefault(row.MangaId, []).append(row.ChapterId)
+
+# Tags frequency
+cursor.execute("""
+SELECT mt.MangaId, t.TagId
+FROM MangaTag mt
+JOIN Tag t ON mt.TagId = t.TagId
+""")
+tag_rows = cursor.fetchall()
+tag_count = {}
+manga_tags = {}
+for m_id, t_id in tag_rows:
+    manga_tags.setdefault(m_id, []).append(t_id)
+    tag_count[t_id] = tag_count.get(t_id, 0) + 1
+
+# Top tags
+top_tags = set([tid for tid, _ in sorted(tag_count.items(), key=lambda x: x[1], reverse=True)[:10]])
+
+# ===== Prepare weighted manga list =====
+weighted_mangas = []
+for m in mangas:
+    m_id, follows = m.MangaId, m.Follows or 0
+    if m_id not in chapter_dict:  # skip manga with no chapters
+        continue
+    weight = 1 + math.log1p(follows)
+    if set(manga_tags.get(m_id, [])) & top_tags:
+        weight *= 1.5  # boost if has popular tag
+    weighted_mangas.append((m_id, weight))
+
+# Normalize weights
+total_weight = sum(w for _, w in weighted_mangas)
+weighted_probs = [w / total_weight for _, w in weighted_mangas]
+
+# ===== Simulation parameters =====
+TARGET_COUNT = 1000
+reading_history_rows = []
+rating_rows = []
+comment_rows = []
+
+read_mangas = set()
+
+while len(reading_history_rows) < TARGET_COUNT:
+    manga_id = random.choices([m for m, _ in weighted_mangas], weights=weighted_probs, k=1)[0]
+    if manga_id in read_mangas:
+        continue  # skip already read manga
+    read_mangas.add(manga_id)
+
+    chapter_id = random.choice(chapter_dict[manga_id])
+    history_id = str(uuid.uuid4())
+    last_page = random.randint(1, 30)
+    read_at = datetime.now() - timedelta(days=random.randint(0, 365))
+    reading_history_rows.append((history_id, USER_ID, manga_id, chapter_id, last_page, read_at))
+
+    # Rating
+    rating_id = str(uuid.uuid4())
+    score = random.randint(1, 10)
+    rating_rows.append((rating_id, USER_ID, manga_id, score))
+
+    # Comment 50% chance
+    if random.random() < 0.5:
+        comment_id = str(uuid.uuid4())
+        content = f"Comment on manga {manga_id[:8]} chapter {chapter_id[:8]}"
+        created_at = read_at + timedelta(minutes=random.randint(1, 120))
+        comment_rows.append((comment_id, USER_ID, manga_id, chapter_id, content, created_at, created_at, 0, random.randint(0,10), random.randint(0,5)))
+
+# ===== Insert into DB =====
+print("Inserting ReadingHistory...")
+cursor.fast_executemany = True
+cursor.executemany("""
+INSERT INTO ReadingHistory (HistoryId, UserId, MangaId, ChapterId, LastPageRead, ReadAt)
+VALUES (?, ?, ?, ?, ?, ?)
+""", reading_history_rows)
+
+print("Inserting Ratings...")
+cursor.executemany("""
+INSERT INTO Rating (RatingId, UserId, MangaId, Score)
+VALUES (?, ?, ?, ?)
+""", rating_rows)
+
+print("Inserting Comments...")
+cursor.executemany("""
+INSERT INTO Comment (CommentId, UserId, MangaId, ChapterId, Content, CreatedAt, UpdatedAt, IsDeleted, LikeCount, DislikeCount)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""", comment_rows)
+
+conn.commit()
+cursor.close()
+conn.close()
+print("Done! Inserted ≥1000 records per table.")

@@ -109,3 +109,28 @@ join  [MangaLibrary].[dbo].[CreatorRelationship] on Creator.CreatorId = CreatorR
   join [MangaLibrary].[dbo].Manga on CreatorRelationship.RelatedId = Manga.MangaId
   join [MangaLibrary].[dbo].MangaStatistics on Manga.MangaId = MangaStatistics.MangaId
   order by Creator.CreatorId
+
+-------------------
+
+USE [MangaLibrary]
+GO
+
+INSERT INTO [dbo].[User] (
+    UserId,
+    Username,
+    Email,
+    PasswordHash,
+    Role,
+    IsLocked,
+    CreatedAt
+)
+VALUES (
+    NEWID(),                           -- Tạo GUID mới cho UserId
+    'admin',                            -- Username
+    'admin@example.com',                -- Email
+    HASHBYTES('SHA2_256', 'Admin@123'), -- Password hash (hoặc dùng hash đã tạo sẵn từ app)
+    'Admin',                            -- Role
+    0,                                  -- IsLocked = false
+    GETDATE()                           -- CreatedAt = hiện tại
+);
+GO

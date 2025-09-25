@@ -12978,3 +12978,8 @@ a {
 .alert-container .alert {
   margin-bottom: 10px;
 }
+
+h2.text-white fw-bold {
+  color: black !important;
+  font-weight: 600 !important;
+}
