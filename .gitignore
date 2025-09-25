@@ -20,4 +20,4 @@ instance/
 .DS_Store
 Thumbs.db
 
-.joblib
+*.joblib
