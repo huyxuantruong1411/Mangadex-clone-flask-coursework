@@ -1,0 +1,23 @@
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 cột */
+    gap: 2rem;
+    /* khoảng cách giữa các chart */
+    padding: 2rem;
+}
+
+.dashboard-chart {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    /* chiều cao tối thiểu */
+}
+
+.dashboard-chart iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}

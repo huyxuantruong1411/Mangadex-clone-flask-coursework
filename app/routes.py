@@ -311,7 +311,9 @@ def require_login():
 @main.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html", title="Profile", user=current_user)
+    from app.dashboard_routes import build_user_charts
+    charts = build_user_charts(str(current_user.UserId))
+    return render_template("profile.html", title="Profile", user=current_user, **charts)
 
 @main.route('/advanced_search/options')
 def advanced_search_options():

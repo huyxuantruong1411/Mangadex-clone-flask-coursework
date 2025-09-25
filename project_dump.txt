@@ -4,6 +4,10 @@
   "type": "directory",
   "children": [
     {
+      "name": ".gitattributes",
+      "type": "file"
+    },
+    {
       "name": ".gitignore",
       "type": "file"
     },
@@ -368,10 +372,6 @@
       "type": "file"
     },
     {
-      "name": "search_index.joblib",
-      "type": "file"
-    },
-    {
       "name": "search_index.pkl",
       "type": "file"
     },
@@ -388,6 +388,7 @@
 
 === Project Tree (ASCII) ===
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
+├── .gitattributes
 ├── .gitignore
 ├── README.md
 ├── Simulation/
@@ -475,13 +476,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── project_dump.txt
 ├── requirements.txt
 ├── run.py
-├── search_index.joblib
 ├── search_index.pkl
 ├── test-api.py
 └── test-connection.py
 
 
 === Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitattributes ---
+search_index.joblib filter=lfs diff=lfs merge=lfs -text
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
 # Python
@@ -506,6 +509,7 @@ instance/
 .DS_Store
 Thumbs.db
 
+*.joblib
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\build_index.py ---
 # build_index.py
 import pickle
@@ -1733,6 +1737,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
   "type": "directory",
   "children": [
     {
+      "name": ".gitattributes",
+      "type": "file"
+    },
+    {
       "name": ".gitignore",
       "type": "file"
     },
@@ -2097,10 +2105,6 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
       "type": "file"
     },
     {
-      "name": "search_index.joblib",
-      "type": "file"
-    },
-    {
       "name": "search_index.pkl",
       "type": "file"
     },
@@ -2117,6 +2121,7 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
 
 === Project Tree (ASCII) ===
 D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
+├── .gitattributes
 ├── .gitignore
 ├── README.md
 ├── Simulation/
@@ -2204,13 +2209,15 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── project_dump.txt
 ├── requirements.txt
 ├── run.py
-├── search_index.joblib
 ├── search_index.pkl
 ├── test-api.py
 └── test-connection.py
 
 
 === Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitattributes ---
+search_index.joblib filter=lfs diff=lfs merge=lfs -text
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
 # Python
@@ -2235,6 +2242,7 @@ instance/
 .DS_Store
 Thumbs.db
 
+*.joblib
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\build_index.py ---
 # build_index.py
 import pickle
@@ -3468,9 +3476,6 @@ app = create_app()
 if __name__ == "__main__":
     app.run(debug=True)
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\search_index.joblib ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 0: invalid start byte]
-
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\search_index.pkl ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 0: invalid start byte]
 
@@ -3861,7 +3866,7 @@ def report_comment(comment_id):
     return jsonify({"success": True, "message": "Report submitted."})
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\dashboard_routes.py ---
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, jsonify
 from flask_login import login_required
 from . import db
 from .models import User, Manga, Tag, MangaTag, ReadingHistory, Rating, Creator, CreatorRelationship
@@ -3869,16 +3874,16 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sqlalchemy import func
 import pandas as pd
-from collections import defaultdict
 
 dashboard_bp = Blueprint("dashboard", __name__, template_folder="templates")
 
-@dashboard_bp.route("/dashboard/<user_id>")
-@login_required
-def user_dashboard(user_id):
-    """Render dashboard for a given user, returns charts as JSON"""
+def build_user_charts(user_id):
+    """Trả về dict {chart1..chart6}, logic y nguyên như user_dashboard"""
 
-    # 1️⃣ Top 5 tags user đọc nhiều nhất (Bar + Line)
+    # copy toàn bộ logic của bạn, chỉ khác return
+    # (mình bỏ đoạn jsonify ở cuối, thay bằng return dict)
+
+    # --- BẮT ĐẦU copy logic ---
     tag_counts = (
         db.session.query(Tag.NameEn, func.count().label("count"))
         .join(MangaTag, MangaTag.TagId == Tag.TagId)
@@ -3890,41 +3895,24 @@ def user_dashboard(user_id):
         .all()
     )
     tags, counts = zip(*tag_counts) if tag_counts else ([], [])
-    
     fig1 = go.Figure()
-    fig1.add_trace(go.Bar(
-        x=tags,
-        y=counts,
-        name="Số lần đọc",
-        marker_color="orange"
-    ))
-    fig1.add_trace(go.Scatter(
-        x=tags,
-        y=counts,
-        name="Xu hướng",
-        mode="lines+markers",
-        marker=dict(color="blue", size=8),
-        line=dict(color="blue", width=3),
-        yaxis="y2" # Sử dụng trục Y thứ 2
-    ))
-    fig1.update_layout(
-        title="Top 5 Tags được đọc nhiều nhất & Xu hướng",
-        xaxis_title="Tag",
-        yaxis_title="Số lần đọc",
-        yaxis2=dict(title="Số lần đọc (xu hướng)", overlaying="y", side="right"),
-        legend=dict(x=0, y=1.1, orientation="h"),
-        barmode="group",
-        template="plotly_dark"
-    )
+    fig1.add_trace(go.Bar(x=tags, y=counts, name="Số lần đọc", marker_color="orange"))
+    fig1.add_trace(go.Scatter(x=tags, y=counts, name="Xu hướng",
+                              mode="lines+markers",
+                              marker=dict(color="blue", size=8),
+                              line=dict(color="blue", width=3),
+                              yaxis="y2"))
+    fig1.update_layout(title="Top 5 Tags được đọc nhiều nhất & Xu hướng",
+                       xaxis_title="Tag", yaxis_title="Số lần đọc",
+                       yaxis2=dict(title="Số lần đọc (xu hướng)", overlaying="y", side="right"),
+                       legend=dict(x=0, y=1.1, orientation="h"),
+                       barmode="group", template="plotly_dark")
     chart1 = fig1.to_html(full_html=False)
 
-    # 2️⃣ Sunburst chart: Phân bổ manga đọc nhiều nhất theo tag
-    # Lấy top 5 manga và top 3 tags của từng manga
+    # 2️⃣ Sunburst chart
     manga_with_tags = (
         db.session.query(
-            Manga.TitleEn,
-            Tag.NameEn,
-            func.count(ReadingHistory.MangaId).label("read_count")
+            Manga.TitleEn, Tag.NameEn, func.count(ReadingHistory.MangaId).label("read_count")
         )
         .join(ReadingHistory, ReadingHistory.MangaId == Manga.MangaId)
         .join(MangaTag, MangaTag.MangaId == Manga.MangaId)
@@ -3932,89 +3920,63 @@ def user_dashboard(user_id):
         .filter(ReadingHistory.UserId == user_id)
         .group_by(Manga.TitleEn, Tag.NameEn)
         .order_by(func.count(ReadingHistory.MangaId).desc())
-        .limit(20) # Lấy nhiều hơn để đảm bảo có đủ dữ liệu
+        .limit(20)
         .all()
     )
-    
     df_sunburst = pd.DataFrame(manga_with_tags, columns=["manga", "tag", "count"])
     df_sunburst = df_sunburst.sort_values("count", ascending=False)
-    
-    data = []
     parent_map = {"Tổng": ""}
     value_map = {"Tổng": df_sunburst["count"].sum()}
-    
-    for i, row in df_sunburst.iterrows():
-        manga_name = row["manga"]
-        tag_name = row["tag"]
-        count = row["count"]
-
-        # Thêm manga vào vòng trong
+    for _, row in df_sunburst.iterrows():
+        manga_name, tag_name, count = row
         if manga_name not in parent_map:
             parent_map[manga_name] = "Tổng"
             value_map[manga_name] = 0
         value_map[manga_name] += count
-        
-        # Thêm tag vào vòng ngoài
         tag_key = f"{manga_name} - {tag_name}"
         parent_map[tag_key] = manga_name
         value_map[tag_key] = count
-    
     labels = list(value_map.keys())
     parents = [parent_map.get(l, "") for l in labels]
     values = [value_map[l] for l in labels]
-    
-    fig2 = go.Figure(go.Sunburst(
-        labels=labels,
-        parents=parents,
-        values=values,
-        branchvalues="total",
-        hovertemplate='<b>%{label}</b><br>Số lượt đọc: %{value}<br>Phần trăm: %{percentParent:.1%}'
-    ))
+    fig2 = go.Figure(go.Sunburst(labels=labels, parents=parents, values=values,
+                                 branchvalues="total",
+                                 hovertemplate='<b>%{label}</b><br>Số lượt đọc: %{value}<br>Phần trăm: %{percentParent:.1%}'))
     fig2.update_layout(title="Phân bổ lượt đọc của Manga theo Tag", template="plotly_dark")
     chart2 = fig2.to_html(full_html=False)
 
-    # 3️⃣ Lịch sử đọc trong 7 ngày qua (Area Chart)
+    # 3️⃣ Area chart 7 ngày
+    day_col = func.cast(ReadingHistory.ReadAt, db.Date)
     daily_counts = (
-        db.session.query(func.cast(ReadingHistory.ReadAt, db.Date).label("day"), func.count())
+        db.session.query(day_col.label("day"), func.count())
         .filter(ReadingHistory.UserId == user_id)
         .filter(ReadingHistory.ReadAt != None)
-        .group_by("day")
-        .order_by("day")
+        .group_by(day_col)   # dùng lại expression, không dùng alias
+        .order_by(day_col)
         .limit(7)
         .all()
     )
+    
     days, dcounts = zip(*daily_counts) if daily_counts else ([], [])
     fig3 = px.area(x=days, y=dcounts, title="Lịch sử đọc trong 7 ngày qua",
                    labels={"x": "Ngày", "y": "Số lần đọc"},
-                   line_shape="spline",
-                   template="plotly_dark")
+                   line_shape="spline", template="plotly_dark")
     fig3.update_traces(marker=dict(size=8, symbol='circle', line=dict(width=2, color='DarkSlateGrey')),
-                       mode='lines+markers',
-                       fill='tozeroy',
-                       fillcolor='rgba(135, 206, 235, 0.4)')
+                       mode='lines+markers', fill='tozeroy',
+                       fillcolor='rgba(135,206,235,0.4)')
     chart3 = fig3.to_html(full_html=False)
 
-    # 4️⃣ Phân bố điểm Rating của user (Violin Plot)
-    ratings = (
-        db.session.query(Rating.Score)
-        .filter(Rating.UserId == user_id)
-        .all()
-    )
+    # 4️⃣ Violin plot
+    ratings = db.session.query(Rating.Score).filter(Rating.UserId == user_id).all()
     scores = [r.Score for r in ratings]
-    fig4 = go.Figure(data=go.Violin(y=scores,
-                                    box_visible=True,
-                                    meanline_visible=True,
-                                    points="all",
-                                    line_color='green',
-                                    fillcolor='lightgreen',
-                                    opacity=0.6))
-    fig4.update_layout(title="Phân bố Rating của bạn (Violin Plot)",
-                       yaxis_title="Điểm Rating",
-                       xaxis_title="Phân bố",
-                       template="plotly_dark")
+    fig4 = go.Figure(data=go.Violin(y=scores, box_visible=True, meanline_visible=True,
+                                    points="all", line_color='green',
+                                    fillcolor='lightgreen', opacity=0.6))
+    fig4.update_layout(title="Phân bố Rating của bạn", yaxis_title="Điểm Rating",
+                       xaxis_title="Phân bố", template="plotly_dark")
     chart4 = fig4.to_html(full_html=False)
 
-    # 5️⃣ Creator có nhiều manga được đọc nhất (Horizontal Bar)
+    # 5️⃣ Horizontal bar
     creator_counts = (
         db.session.query(Creator.Name, func.count(ReadingHistory.MangaId).label("cnt"))
         .join(CreatorRelationship, Creator.CreatorId == CreatorRelationship.CreatorId)
@@ -4026,29 +3988,18 @@ def user_dashboard(user_id):
         .all()
     )
     cnames, ccnts = zip(*creator_counts) if creator_counts else ([], [])
-    
-    fig5 = go.Figure(data=[go.Bar(
-        y=cnames,
-        x=ccnts,
-        orientation='h',
-        marker_color='red',
-        text=ccnts,
-        textposition='outside'
-    )])
+    fig5 = go.Figure(data=[go.Bar(y=cnames, x=ccnts, orientation='h',
+                                  marker_color='red', text=ccnts, textposition='outside')])
     fig5.update_layout(title="Top 5 Tác giả bạn đọc nhiều nhất",
-                       xaxis_title="Số lượt đọc",
-                       yaxis_title="Tên tác giả",
-                       yaxis={'categoryorder':'total ascending'},
-                       template="plotly_dark")
+                       xaxis_title="Số lượt đọc", yaxis_title="Tên tác giả",
+                       yaxis={'categoryorder': 'total ascending'}, template="plotly_dark")
     chart5 = fig5.to_html(full_html=False)
 
-    # 6️⃣ Biểu đồ 3D kết hợp (Scatter3D với 2D Projection)
+    # 6️⃣ 3D scatter
     history_with_rating = (
-        db.session.query(
-            func.cast(ReadingHistory.ReadAt, db.Date).label("day"),
-            func.count(ReadingHistory.HistoryId).label("read_count"),
-            func.avg(Rating.Score).label("avg_rating")
-        )
+        db.session.query(func.cast(ReadingHistory.ReadAt, db.Date).label("day"),
+                         func.count(ReadingHistory.HistoryId).label("read_count"),
+                         func.avg(Rating.Score).label("avg_rating"))
         .join(Rating, ReadingHistory.MangaId == Rating.MangaId, isouter=True)
         .filter(ReadingHistory.UserId == user_id)
         .group_by(func.cast(ReadingHistory.ReadAt, db.Date))
@@ -4061,49 +4012,31 @@ def user_dashboard(user_id):
         rating3d = [r if r is not None else 0.0 for r in rating3d]
     else:
         days3d, reads3d, rating3d = ([], [], [])
-
     fig6 = go.Figure()
-
-    # Thêm biểu đồ 3D
-    fig6.add_trace(go.Scatter3d(
-        x=days3d,
-        y=reads3d,
-        z=rating3d,
-        mode="markers",
-        marker=dict(size=8, color=rating3d, colorscale="Viridis", opacity=0.8,
-                    colorbar=dict(title="Điểm Rating TB")),
-        name="Tương quan"
-    ))
-
-    # Thêm biểu đồ 2D projection lên mặt phẳng XY
-    fig6.add_trace(go.Scatter3d(
-        x=days3d,
-        y=reads3d,
-        z=[0] * len(days3d), # Đặt z = 0 để tạo projection
-        mode="lines",
-        name="Lượt đọc theo ngày (Projection)",
-        line=dict(color="lightblue", width=2)
-    ))
-
-    fig6.update_layout(
-        title="Tương quan giữa Lượt đọc và Rating theo Ngày",
-        scene=dict(
-            xaxis_title="Ngày",
-            yaxis_title="Lượt đọc",
-            zaxis_title="Điểm Rating TB"
-        ),
-        template="plotly_dark"
-    )
+    fig6.add_trace(go.Scatter3d(x=days3d, y=reads3d, z=rating3d, mode="markers",
+                                marker=dict(size=8, color=rating3d,
+                                            colorscale="Viridis", opacity=0.8,
+                                            colorbar=dict(title="Điểm Rating TB")),
+                                name="Tương quan"))
+    fig6.add_trace(go.Scatter3d(x=days3d, y=reads3d, z=[0]*len(days3d),
+                                mode="lines", line=dict(color="lightblue", width=2),
+                                name="Projection XY"))
+    fig6.update_layout(title="Tương quan giữa Lượt đọc và Rating theo Ngày",
+                       scene=dict(xaxis_title="Ngày", yaxis_title="Lượt đọc", zaxis_title="Rating TB"),
+                       template="plotly_dark")
     chart6 = fig6.to_html(full_html=False)
 
-    return jsonify({
-        "chart1": chart1,
-        "chart2": chart2,
-        "chart3": chart3,
-        "chart4": chart4,
-        "chart5": chart5,
-        "chart6": chart6
-    })
+    return {
+        "chart1": chart1, "chart2": chart2, "chart3": chart3,
+        "chart4": chart4, "chart5": chart5, "chart6": chart6
+    }
+    # --- HẾT copy logic ---
+
+@dashboard_bp.route("/dashboard/<user_id>")
+@login_required
+def user_dashboard(user_id):
+    charts = build_user_charts(user_id)
+    return jsonify(charts)
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\list_routes.py ---
 # mini-demo/app/list_routes.py
 from flask import Blueprint, request, jsonify, render_template, abort, url_for, current_app
@@ -5471,7 +5404,9 @@ def require_login():
 @main.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html", title="Profile", user=current_user)
+    from app.dashboard_routes import build_user_charts
+    charts = build_user_charts(str(current_user.UserId))
+    return render_template("profile.html", title="Profile", user=current_user, **charts)
 
 @main.route('/advanced_search/options')
 def advanced_search_options():
@@ -5549,6 +5484,11 @@ def advanced_search():
         if has_translated and translated_langs:
             query_ids = query_ids.join(Chapter).filter(Chapter.TranslatedLang.in_(translated_langs))
 
+        # Thêm biểu thức CASE vào SELECT để nó có thể được sử dụng trong ORDER BY với DISTINCT
+        if sort_by == 'Rating DESC' or sort_by == 'Follows DESC':
+            # Sử dụng label để có thể tham chiếu đến cột này trong ORDER BY
+            query_ids = query_ids.add_columns(case((MangaStatistics.Follows.is_(None), 1), else_=0).label('sort_helper'))
+
         # Sử dụng distinct() trên truy vấn ID
         query_ids = query_ids.distinct()
 
@@ -5562,15 +5502,11 @@ def advanced_search():
         elif sort_by == 'Year DESC':
             query_ids = query_ids.order_by(Manga.Year.desc())
         elif sort_by == 'Rating DESC':
-            query_ids = query_ids.order_by(
-                case((MangaStatistics.Follows.is_(None), 1), else_=0),
-                desc(MangaStatistics.AverageRating)
-            )
+            # Sắp xếp theo cột ảo 'sort_helper' rồi mới đến AverageRating
+            query_ids = query_ids.order_by('sort_helper', desc(MangaStatistics.AverageRating))
         elif sort_by == 'Follows DESC':
-            query_ids = query_ids.order_by(
-                case((MangaStatistics.Follows.is_(None), 1), else_=0),
-                desc(MangaStatistics.Follows)
-            )
+            # Sắp xếp theo cột ảo 'sort_helper' rồi mới đến Follows
+            query_ids = query_ids.order_by('sort_helper', desc(MangaStatistics.Follows))
         else: # Sắp xếp mặc định
             query_ids = query_ids.order_by(Manga.MangaId.asc())
 
@@ -5583,10 +5519,10 @@ def advanced_search():
         
         # Lấy danh sách ID đã được phân trang
         manga_ids_paginated = query_ids.offset((page - 1) * per_page).limit(per_page).all()
-        manga_ids = [item[0] for item in manga_ids_paginated]
+        # manga_ids là danh sách các ID của manga trên trang hiện tại
+        manga_ids = [item.MangaId for item in manga_ids_paginated]
 
         # BƯỚC 2: Tải lại các đối tượng đầy đủ dựa trên danh sách ID đã có
-        # Sắp xếp các ID theo thứ tự ban đầu để đảm bảo kết quả cuối cùng đúng thứ tự
         id_order = {id: index for index, id in enumerate(manga_ids)}
         
         mangas_paginated_full_data = db.session.query(Manga, MangaStatistics)\
@@ -5650,7 +5586,6 @@ def advanced_search():
         mangas = mangas_with_covers
 
         if current_user.is_authenticated:
-            from app.models import Rating
             ratings = db.session.query(Rating.MangaId, Rating.Score).filter_by(UserId=current_user.UserId).all()
             your_scores = dict(ratings)
 
@@ -6831,6 +6766,19 @@ def get_chapters(manga_id):
 
 .tag-checklist .tag-group:first-child .tag-group-label {
     margin-top: 0;
+}
+
+/* New styles for larger manga cover thumbnails in search results */
+.manga-cover-lg {
+    width: 90px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Adjust the table cell to align content nicely */
+.table-dark tbody td {
+    vertical-align: middle;
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\auth.css ---
 /* Background */
@@ -23443,8 +23391,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <tr>
                     <td>
                         <div class="d-flex align-items-center">
-                            <img src="{{ item.cover_url }}" alt="{{ item.manga.TitleEn }}" class="img-thumbnail me-2"
-                                style="width: 50px; height: 70px; object-fit: cover;">
+                            <img src="{{ item.cover_url }}" alt="{{ item.manga.TitleEn }}"
+                                class="img-thumbnail me-2 manga-cover-lg">
                             <a href="{{ url_for('manga.manga_detail', manga_id=item.manga.MangaId) }}"
                                 class="text-decoration-none text-white">{{ item.manga.TitleEn }}</a>
                         </div>
@@ -24779,6 +24727,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </form>
     </div>
 </div>
+
+{% include "profile_dashboard.html" %}
+
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile_dashboard.html ---
 <!-- load plotly -->

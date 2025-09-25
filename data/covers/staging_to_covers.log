@@ -45,3 +45,353 @@
 2025-09-22 20:55:08,955 - WARNING - Bỏ qua chèn cover_id 00026828-2aad-4f04-8eda-fff0755d34eb do lỗi tải ảnh.
 2025-09-22 20:55:09,252 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /covers/e3387f6e-2639-41af-9c44-1bd0863b74b1/dc12183c-a444-4277-9db0-6e1c30d58cd4.jpg
 2025-09-22 20:55:09,261 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /covers/dbce2608-1f31-4872-a8b8-bfc9c25a742e/83674e79-802b-4ca3-9e2d-38e4366058ac.png.jpg
+2025-09-25 21:29:33,676 - INFO - Kết nối database thành công.
+2025-09-25 21:29:33,686 - INFO - Kết nối database thành công.
+2025-09-25 21:29:33,705 - INFO - Trích xuất 1000 bản ghi từ staging (batch).
+2025-09-25 21:29:33,732 - ERROR - Lỗi chèn cover_id 0000be20-e1d0-4fd9-ae95-d6a14a0da05e: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,734 - ERROR - Lỗi chèn cover_id 007d48b7-7819-4020-9882-2934672fdccd: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,735 - ERROR - Lỗi chèn cover_id 00867566-234b-4f98-8bd1-f9b6c99c9e1f: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,736 - ERROR - Lỗi chèn cover_id 0094a79c-e89c-40ef-a409-025b3065c260: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,738 - ERROR - Lỗi chèn cover_id 00a7cf5f-40d6-4f80-a819-dbf38c66ae95: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,740 - INFO - Chèn thành công cover_id: 00ab4a49-551c-4e84-8ae6-7a3a840ef1b2
+2025-09-25 21:29:33,741 - ERROR - Lỗi chèn cover_id 00ac3c62-bd66-4f80-875f-f1174481b12d: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,741 - ERROR - Lỗi chèn cover_id 00acc8f7-dab1-4fca-bcfc-a1cb2e3b4f6a: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,743 - INFO - Chèn thành công cover_id: 00b5b86a-bb26-4fbc-86f2-e9bdcc5672ac
+2025-09-25 21:29:33,744 - ERROR - Lỗi chèn cover_id 00cc8059-16ac-496e-b553-fda0231ec032: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,745 - ERROR - Lỗi chèn cover_id 00cdacf2-4870-4f98-b57e-45319ab2d5fb: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,746 - ERROR - Lỗi chèn cover_id 00dd7137-a15c-4f9b-bc2d-0f380e645bff: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,747 - ERROR - Lỗi chèn cover_id 00eb08e5-301c-43eb-a8f5-e282916b9628: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,747 - ERROR - Lỗi chèn cover_id 00ee82f6-58a5-4f38-bfa6-d8e93b38d312: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,748 - ERROR - Lỗi chèn cover_id 00f6a048-596a-4034-81af-9c5fe0243274: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,749 - ERROR - Lỗi chèn cover_id 010274bf-67fc-4ab1-be1c-72c2ad929bf9: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,752 - INFO - Chèn thành công cover_id: 0112d48c-3629-47a8-be32-695fb58652a1
+2025-09-25 21:29:33,753 - ERROR - Lỗi chèn cover_id 0122672f-2a58-4d13-929f-127c8b4bad85: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,753 - ERROR - Lỗi chèn cover_id 01272e11-95de-441a-82c0-7316b1966880: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,754 - ERROR - Lỗi chèn cover_id 013b5acb-4821-4fa0-99d8-55263555408f: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,755 - INFO - Chèn thành công cover_id: 013ecd4f-02f9-4dfc-bb10-8cc9fb6dc93e
+2025-09-25 21:29:33,756 - ERROR - Lỗi chèn cover_id 0146fc56-989a-4f12-abb1-3e8d1ef1aaaf: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,756 - ERROR - Lỗi chèn cover_id 0148b5f1-dfd8-4f9b-be31-c8f4ae7af139: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,757 - ERROR - Lỗi chèn cover_id 01556eea-404e-4825-aaff-80e4bdc292fb: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,757 - ERROR - Lỗi chèn cover_id 0159ed89-e260-4f8b-91f0-05ec0914e6c6: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,758 - ERROR - Lỗi chèn cover_id 01660e88-5b7c-415c-b668-8cc6fa265e9a: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,758 - ERROR - Lỗi chèn cover_id 0172d1a5-566f-4672-8f12-c0ea2af76d69: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,759 - ERROR - Lỗi chèn cover_id 01743357-a519-4fed-b04b-2f54299724c5: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,759 - ERROR - Lỗi chèn cover_id 017b4942-1c09-4fc7-bcb1-3c6e2081ef20: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,760 - ERROR - Lỗi chèn cover_id 017bfbb5-6a55-48a7-a1a6-772c8c392663: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,762 - ERROR - Lỗi chèn cover_id 0183f26f-0b4f-4c5d-93a9-6a1d0cb274e2: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,763 - ERROR - Lỗi chèn cover_id 01840c4e-551f-4762-becd-43e571274292: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,764 - ERROR - Lỗi chèn cover_id 01941d59-8c32-4f5a-8276-18f6bf86555d: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,765 - ERROR - Lỗi chèn cover_id 0195b44c-90da-4f08-b6e2-f3c7b44acfe8: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,766 - ERROR - Lỗi chèn cover_id 019e8282-0b53-47ef-9bc0-827b54cd2143: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,767 - INFO - Chèn thành công cover_id: 01a164ee-4e6f-4c70-9bff-08dce113ed9f
+2025-09-25 21:29:33,768 - ERROR - Lỗi chèn cover_id 01a6e20a-9fd6-4f4b-92b7-5c7215efe5ca: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,769 - INFO - Chèn thành công cover_id: 01a8092e-b764-4d6d-8e43-3cd1d7d44681
+2025-09-25 21:29:33,769 - ERROR - Lỗi chèn cover_id 01a8f508-6214-49f5-823b-468892024e99: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,770 - ERROR - Lỗi chèn cover_id 01bdbd77-9d2f-4f97-98b7-fe08e82b689b: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,771 - ERROR - Lỗi chèn cover_id 01bf44f0-74b7-4074-801b-a17c06396516: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,771 - ERROR - Lỗi chèn cover_id 01c776ce-46b7-4303-bef3-9b054c1fc86b: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,773 - INFO - Chèn thành công cover_id: 01c91dfc-c305-4666-a4cd-c346684dc8da
+2025-09-25 21:29:33,773 - ERROR - Lỗi chèn cover_id 01ce2e3f-7b47-4f70-8710-58ecde323094: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,774 - ERROR - Lỗi chèn cover_id 01cfc26c-aa54-4d72-852e-9f1f5a656592: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,775 - ERROR - Lỗi chèn cover_id 01d62aa1-a0fc-4646-ae68-5b1e309ccf93: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,775 - ERROR - Lỗi chèn cover_id 01e0007e-05d4-4f29-905f-776cdff07976: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,776 - INFO - Chèn thành công cover_id: 01e0172c-d69d-4f1d-9765-a3f45ca9ed3f
+2025-09-25 21:29:33,778 - INFO - Chèn thành công cover_id: 01e30bb1-8dfd-4f39-888e-ade3e177b1f4
+2025-09-25 21:29:33,779 - ERROR - Lỗi chèn cover_id 01e8f49c-2640-4fc8-9ff0-ca5fe3b89636: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,780 - INFO - Chèn thành công cover_id: 01ed2d18-4936-43ff-8468-07b0e16d9cbb
+2025-09-25 21:29:33,781 - ERROR - Lỗi chèn cover_id 01ed66cd-fedc-41dd-b6df-60cf13638779: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,781 - ERROR - Lỗi chèn cover_id 01eeb38e-39fd-4f60-b744-6a5f00d66cf9: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,782 - ERROR - Lỗi chèn cover_id 01f9a9e2-3a0c-4fd5-87cd-643b60a7b7a1: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,783 - ERROR - Lỗi chèn cover_id 01face5c-2b80-4f86-afdd-79286589e751: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,784 - ERROR - Lỗi chèn cover_id 01fec82c-9051-4649-bccb-5b7997f42f39: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,785 - ERROR - Lỗi chèn cover_id 0213b56b-3fec-4fa6-aa4e-6184953c9e5e: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,786 - INFO - Chèn thành công cover_id: 0214824d-6655-4f85-8bf8-ca1e21257253
+2025-09-25 21:29:33,786 - ERROR - Lỗi chèn cover_id 0214d6c3-8095-4fa0-872a-9119e9b62a03: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,787 - ERROR - Lỗi chèn cover_id 0215991f-bf8f-47e4-849a-bbefa7ba2e93: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,787 - ERROR - Lỗi chèn cover_id 021b7fa5-0c14-4ea1-88c4-6f4acc1e5390: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,788 - ERROR - Lỗi chèn cover_id 021cf9c5-2df5-40a9-ad65-004e21c4514b: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,789 - ERROR - Lỗi chèn cover_id 0225a28a-dbbf-4b1c-82f0-6c3e3077f974: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,789 - ERROR - Lỗi chèn cover_id 0225a32c-ac0d-4391-ac18-d9db0fb94375: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,790 - ERROR - Lỗi chèn cover_id 022f5231-87f9-4429-b6eb-0cb516438663: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,791 - INFO - Chèn thành công cover_id: 023281d0-30f9-4fbd-917b-eec44fbcfdd6
+2025-09-25 21:29:33,791 - ERROR - Lỗi chèn cover_id 023fcc52-9e35-4f08-9032-a08fbdbc921c: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,792 - INFO - Chèn thành công cover_id: 0241442c-db6d-4ffe-9c8e-223b3400efcf
+2025-09-25 21:29:33,793 - ERROR - Lỗi chèn cover_id 02481a88-ccf6-4fbb-85b1-df0dbb0e444f: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,793 - ERROR - Lỗi chèn cover_id 02498637-e31d-4f51-b2ba-2e3cdb92863d: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,794 - ERROR - Lỗi chèn cover_id 0257afe8-9dcd-416b-9ef3-258eaeab60a8: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,795 - ERROR - Lỗi chèn cover_id 02645562-3a69-4f7b-8b6d-078791c7d3c4: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,796 - ERROR - Lỗi chèn cover_id 0265d03d-a9fa-4f62-ba17-faaed3b0daa1: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,796 - ERROR - Lỗi chèn cover_id 026d1790-136c-4f3d-9d4c-319b44bd32d2: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,797 - INFO - Chèn thành công cover_id: 026ee6c8-92a0-4f45-88d9-9ef37c4db7e4
+2025-09-25 21:29:33,799 - ERROR - Lỗi chèn cover_id 0282f956-1085-4f6a-8e8c-99cd3b36b5d5: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,800 - INFO - Chèn thành công cover_id: 0285d2aa-c11a-4f0e-99b8-313f29a51d41
+2025-09-25 21:29:33,801 - ERROR - Lỗi chèn cover_id 02894d72-cfaf-42a4-a006-caf3a403a168: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. (257) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-09-25 21:29:33,802 - INFO - Chèn thành công cover_id: 028dd9c9-9b99-4fbf-ab63-d049be8db4b4
+2025-09-25 21:29:33,802 - ERROR - Lỗi chèn cover_id 028eae79-6957-4a8e-a48d-852342894e1a: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,803 - ERROR - Lỗi chèn cover_id 02901bb2-0141-4f3a-b4f5-7028b7ea9c45: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,804 - ERROR - Lỗi chèn cover_id 029a9d3a-8641-4f43-bb77-b20c1a2f926d: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,804 - ERROR - Lỗi chèn cover_id 02ac3528-aa53-4665-9451-073627985a46: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,805 - ERROR - Lỗi chèn cover_id 02ad0827-31d4-4f80-ac36-2a868d720ff6: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,806 - ERROR - Lỗi chèn cover_id 02b1558a-ac88-4ffa-9729-b85978e7b81f: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,806 - ERROR - Lỗi chèn cover_id 02b37db7-9866-4043-bb1d-0984179f0ca9: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,807 - ERROR - Lỗi chèn cover_id 02c175d5-4d32-4f25-83c0-54a4462ac9bf: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,808 - ERROR - Lỗi chèn cover_id 02cd130a-37a4-4ee8-8a25-9e8c7059236c: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,809 - ERROR - Lỗi chèn cover_id 02dd52c8-5848-4f24-8319-f4851a11f58f: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,809 - ERROR - Lỗi chèn cover_id 02e336eb-b8e7-4b2a-862f-656e95aff747: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,810 - ERROR - Lỗi chèn cover_id 02e3f0ba-2a8f-4f70-9e80-f26290ff8974: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,811 - ERROR - Lỗi chèn cover_id 02eef344-4e95-4624-9c98-efcbff5b101e: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,812 - ERROR - Lỗi chèn cover_id 0300552a-cb16-4f28-bd77-46913f0f65da: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,813 - ERROR - Lỗi chèn cover_id 0301e6db-3d3e-4f17-a407-c74a04df1d1a: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2025-09-25 21:29:33,814 - INFO - Chèn thành công cover_id: 0304e09b-b104-4f52-8189-64be1f244f64
+2025-09-25 21:29:34,746 - INFO - Đóng kết nối database.
+2025-09-25 21:31:53,167 - INFO - Bắt đầu xử lý từ cover_id: Đầu tiên
+2025-09-25 21:31:53,182 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: Bắt đầu.
+2025-09-25 21:31:53,454 - INFO - Checkpoint được lưu: 03096775-f8bb-4570-8080-59751b36ae6f
+2025-09-25 21:31:53,455 - INFO - Hoàn thành batch. Đã chèn thành công 983 bản ghi. Tổng cộng đã chèn: 983
+2025-09-25 21:31:53,459 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 03096775-f8bb-4570-8080-59751b36ae6f.
+2025-09-25 21:31:53,724 - INFO - Checkpoint được lưu: 06252ba0-9319-4632-b7c8-a4d7fd6d2f3c
+2025-09-25 21:31:53,724 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 1983
+2025-09-25 21:31:53,728 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 06252ba0-9319-4632-b7c8-a4d7fd6d2f3c.
+2025-09-25 21:31:53,954 - INFO - Checkpoint được lưu: 093252ab-b88f-46f3-831b-a335f80e8631
+2025-09-25 21:31:53,954 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 2983
+2025-09-25 21:31:53,958 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 093252ab-b88f-46f3-831b-a335f80e8631.
+2025-09-25 21:31:54,197 - INFO - Checkpoint được lưu: 0c5f95b0-148f-4c3d-84ea-2b6e4a2ffd46
+2025-09-25 21:31:54,197 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 3983
+2025-09-25 21:31:54,201 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 0c5f95b0-148f-4c3d-84ea-2b6e4a2ffd46.
+2025-09-25 21:31:54,440 - INFO - Checkpoint được lưu: 0f6ef4aa-17eb-4f57-9243-f9556e69f522
+2025-09-25 21:31:54,440 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 4982
+2025-09-25 21:31:54,445 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 0f6ef4aa-17eb-4f57-9243-f9556e69f522.
+2025-09-25 21:31:54,687 - INFO - Checkpoint được lưu: 12907fe0-d1aa-4757-962e-1998360f0e2d
+2025-09-25 21:31:54,687 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 5981
+2025-09-25 21:31:54,692 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 12907fe0-d1aa-4757-962e-1998360f0e2d.
+2025-09-25 21:31:54,919 - INFO - Checkpoint được lưu: 15c30c89-7af7-4f8a-adb6-88866aea517f
+2025-09-25 21:31:54,919 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 6981
+2025-09-25 21:31:54,925 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 15c30c89-7af7-4f8a-adb6-88866aea517f.
+2025-09-25 21:31:55,154 - INFO - Checkpoint được lưu: 18db3c39-7e35-433c-aa97-68ec62961cd5
+2025-09-25 21:31:55,155 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 7981
+2025-09-25 21:31:55,161 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 18db3c39-7e35-433c-aa97-68ec62961cd5.
+2025-09-25 21:31:55,388 - INFO - Checkpoint được lưu: 1bf43439-fba4-4f1b-afaa-32ad8052b1fa
+2025-09-25 21:31:55,388 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 8981
+2025-09-25 21:31:55,395 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 1bf43439-fba4-4f1b-afaa-32ad8052b1fa.
+2025-09-25 21:31:55,621 - INFO - Checkpoint được lưu: 1f19c8f1-f4b6-4f37-af01-078611c8206a
+2025-09-25 21:31:55,621 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 9981
+2025-09-25 21:31:55,628 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 1f19c8f1-f4b6-4f37-af01-078611c8206a.
+2025-09-25 21:31:55,856 - INFO - Checkpoint được lưu: 2228e33e-29b6-42c7-bb3e-e685e93f9cbb
+2025-09-25 21:31:55,856 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 10981
+2025-09-25 21:31:55,865 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 2228e33e-29b6-42c7-bb3e-e685e93f9cbb.
+2025-09-25 21:31:56,092 - INFO - Checkpoint được lưu: 255eab23-639c-4763-9a90-f1cb1e879ac9
+2025-09-25 21:31:56,092 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 11981
+2025-09-25 21:31:56,100 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 255eab23-639c-4763-9a90-f1cb1e879ac9.
+2025-09-25 21:31:56,340 - INFO - Checkpoint được lưu: 287978c8-ce4c-4f43-9174-a5bd1794924e
+2025-09-25 21:31:56,340 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 12980
+2025-09-25 21:31:56,354 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 287978c8-ce4c-4f43-9174-a5bd1794924e.
+2025-09-25 21:31:56,584 - INFO - Checkpoint được lưu: 2b9b9b16-aa59-4fea-b562-4bf5197c6d6a
+2025-09-25 21:31:56,585 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 13979
+2025-09-25 21:31:56,593 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 2b9b9b16-aa59-4fea-b562-4bf5197c6d6a.
+2025-09-25 21:31:56,830 - INFO - Checkpoint được lưu: 2e934553-c301-40ab-9f76-bb3d0df75e3b
+2025-09-25 21:31:56,830 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 14979
+2025-09-25 21:31:56,840 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 2e934553-c301-40ab-9f76-bb3d0df75e3b.
+2025-09-25 21:31:57,087 - INFO - Checkpoint được lưu: 318a7bb1-461e-4fee-980a-c1e02df001b0
+2025-09-25 21:31:57,087 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 15978
+2025-09-25 21:31:57,096 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 318a7bb1-461e-4fee-980a-c1e02df001b0.
+2025-09-25 21:31:57,338 - INFO - Checkpoint được lưu: 34bda65e-b108-4f08-92f9-8c2f478e63c7
+2025-09-25 21:31:57,338 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 16978
+2025-09-25 21:31:57,349 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 34bda65e-b108-4f08-92f9-8c2f478e63c7.
+2025-09-25 21:31:57,584 - INFO - Checkpoint được lưu: 37e06f98-9063-4ffc-b57b-7a2c77c5f1a2
+2025-09-25 21:31:57,584 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 17978
+2025-09-25 21:31:57,594 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 37e06f98-9063-4ffc-b57b-7a2c77c5f1a2.
+2025-09-25 21:31:57,820 - INFO - Checkpoint được lưu: 3afe9799-632c-4f34-bc7f-9bb7e062e879
+2025-09-25 21:31:57,820 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 18978
+2025-09-25 21:31:57,831 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 3afe9799-632c-4f34-bc7f-9bb7e062e879.
+2025-09-25 21:31:58,081 - INFO - Checkpoint được lưu: 3dfd5f9d-8275-4f54-91b0-bd52623094d4
+2025-09-25 21:31:58,081 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 19978
+2025-09-25 21:31:58,092 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 3dfd5f9d-8275-4f54-91b0-bd52623094d4.
+2025-09-25 21:31:58,320 - INFO - Checkpoint được lưu: 411e2026-ff67-4a65-83ca-6b9db140f0a3
+2025-09-25 21:31:58,321 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 20978
+2025-09-25 21:31:58,333 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 411e2026-ff67-4a65-83ca-6b9db140f0a3.
+2025-09-25 21:31:58,569 - INFO - Checkpoint được lưu: 441de4a5-536a-4ab2-b433-6851d711c543
+2025-09-25 21:31:58,569 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 21978
+2025-09-25 21:31:58,582 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 441de4a5-536a-4ab2-b433-6851d711c543.
+2025-09-25 21:31:58,815 - INFO - Checkpoint được lưu: 4722270c-5ee0-474a-b6d1-60f8a69ee247
+2025-09-25 21:31:58,815 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 22977
+2025-09-25 21:31:58,830 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 4722270c-5ee0-474a-b6d1-60f8a69ee247.
+2025-09-25 21:31:59,076 - INFO - Checkpoint được lưu: 4a1f4b34-ef52-4e34-baa1-f45efd283e25
+2025-09-25 21:31:59,077 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 23977
+2025-09-25 21:31:59,095 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 4a1f4b34-ef52-4e34-baa1-f45efd283e25.
+2025-09-25 21:31:59,323 - INFO - Checkpoint được lưu: 4d2fcdb7-61ab-468a-bf90-269f76f6d17a
+2025-09-25 21:31:59,323 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 24977
+2025-09-25 21:31:59,337 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 4d2fcdb7-61ab-468a-bf90-269f76f6d17a.
+2025-09-25 21:31:59,562 - INFO - Checkpoint được lưu: 5043b295-a265-4977-b033-402836753860
+2025-09-25 21:31:59,563 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 25977
+2025-09-25 21:31:59,576 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 5043b295-a265-4977-b033-402836753860.
+2025-09-25 21:31:59,799 - INFO - Checkpoint được lưu: 537dce0a-07d1-46a2-a6e0-760667ee8c59
+2025-09-25 21:31:59,800 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 26976
+2025-09-25 21:31:59,814 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 537dce0a-07d1-46a2-a6e0-760667ee8c59.
+2025-09-25 21:32:00,054 - INFO - Checkpoint được lưu: 56bbdf6f-6ac0-4fcd-988c-e450790386d7
+2025-09-25 21:32:00,054 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 27976
+2025-09-25 21:32:00,070 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 56bbdf6f-6ac0-4fcd-988c-e450790386d7.
+2025-09-25 21:32:00,302 - INFO - Checkpoint được lưu: 59df65f4-01a1-41ba-a7b7-f14ee9101fa8
+2025-09-25 21:32:00,302 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 28976
+2025-09-25 21:32:00,317 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 59df65f4-01a1-41ba-a7b7-f14ee9101fa8.
+2025-09-25 21:32:00,577 - INFO - Checkpoint được lưu: 5cf1ad12-221e-4fae-9e18-f3693fda2da7
+2025-09-25 21:32:00,577 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 29976
+2025-09-25 21:32:00,592 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 5cf1ad12-221e-4fae-9e18-f3693fda2da7.
+2025-09-25 21:32:00,828 - INFO - Checkpoint được lưu: 5fef95be-a2db-40b8-a885-0681b87e8fea
+2025-09-25 21:32:00,828 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 30976
+2025-09-25 21:32:00,844 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 5fef95be-a2db-40b8-a885-0681b87e8fea.
+2025-09-25 21:32:01,073 - INFO - Checkpoint được lưu: 63177abf-348c-40b0-badd-c0f93898f4e0
+2025-09-25 21:32:01,073 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 31975
+2025-09-25 21:32:01,090 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 63177abf-348c-40b0-badd-c0f93898f4e0.
+2025-09-25 21:32:01,347 - INFO - Checkpoint được lưu: 66607b29-e79b-4cc8-91af-9620e4379c5a
+2025-09-25 21:32:01,347 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 32975
+2025-09-25 21:32:01,364 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 66607b29-e79b-4cc8-91af-9620e4379c5a.
+2025-09-25 21:32:01,600 - INFO - Checkpoint được lưu: 697b9cc9-a5f8-436d-a51e-c74f618dbddc
+2025-09-25 21:32:01,600 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 33974
+2025-09-25 21:32:01,617 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 697b9cc9-a5f8-436d-a51e-c74f618dbddc.
+2025-09-25 21:32:01,853 - INFO - Checkpoint được lưu: 6c8e8340-fc8e-4f8b-933e-c557d44fca37
+2025-09-25 21:32:01,853 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 34973
+2025-09-25 21:32:01,871 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 6c8e8340-fc8e-4f8b-933e-c557d44fca37.
+2025-09-25 21:32:02,101 - INFO - Checkpoint được lưu: 6fbe02b8-3968-46e7-8c68-bd3dc5c6c842
+2025-09-25 21:32:02,101 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 35972
+2025-09-25 21:32:02,119 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 6fbe02b8-3968-46e7-8c68-bd3dc5c6c842.
+2025-09-25 21:32:02,342 - INFO - Checkpoint được lưu: 73045efe-e13b-4e4e-aed4-a33d45e8fca7
+2025-09-25 21:32:02,342 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 36972
+2025-09-25 21:32:02,367 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 73045efe-e13b-4e4e-aed4-a33d45e8fca7.
+2025-09-25 21:32:02,596 - INFO - Checkpoint được lưu: 764bf997-2929-41fb-beb9-0a75bfb50b98
+2025-09-25 21:32:02,596 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 37972
+2025-09-25 21:32:02,615 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 764bf997-2929-41fb-beb9-0a75bfb50b98.
+2025-09-25 21:32:02,837 - INFO - Checkpoint được lưu: 79698191-a5c2-4fe8-b5c8-55b5b15aa321
+2025-09-25 21:32:02,837 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 38972
+2025-09-25 21:32:02,856 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 79698191-a5c2-4fe8-b5c8-55b5b15aa321.
+2025-09-25 21:32:03,092 - INFO - Checkpoint được lưu: 7c681f6d-a608-4f36-bffe-5a50e3455262
+2025-09-25 21:32:03,092 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 39972
+2025-09-25 21:32:03,113 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 7c681f6d-a608-4f36-bffe-5a50e3455262.
+2025-09-25 21:32:03,340 - INFO - Checkpoint được lưu: 7fa1d543-52ba-4b06-b625-366213ca36f5
+2025-09-25 21:32:03,340 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 40971
+2025-09-25 21:32:03,360 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 7fa1d543-52ba-4b06-b625-366213ca36f5.
+2025-09-25 21:32:03,590 - INFO - Checkpoint được lưu: 82ee63f0-8607-4a02-a3ee-cdee82a5e6bc
+2025-09-25 21:32:03,590 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 41971
+2025-09-25 21:32:03,611 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 82ee63f0-8607-4a02-a3ee-cdee82a5e6bc.
+2025-09-25 21:32:03,842 - INFO - Checkpoint được lưu: 85dd2c98-4d9a-476d-a32c-475f7815c6dd
+2025-09-25 21:32:03,842 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 42971
+2025-09-25 21:32:03,863 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 85dd2c98-4d9a-476d-a32c-475f7815c6dd.
+2025-09-25 21:32:04,087 - INFO - Checkpoint được lưu: 88f2910f-1a3f-4fb6-bf96-f0be1e9f77c5
+2025-09-25 21:32:04,087 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 43971
+2025-09-25 21:32:04,109 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 88f2910f-1a3f-4fb6-bf96-f0be1e9f77c5.
+2025-09-25 21:32:04,337 - INFO - Checkpoint được lưu: 8c13b4f7-e89a-4dec-a6c0-03c2d42fbd3a
+2025-09-25 21:32:04,338 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 44971
+2025-09-25 21:32:04,359 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 8c13b4f7-e89a-4dec-a6c0-03c2d42fbd3a.
+2025-09-25 21:32:04,588 - INFO - Checkpoint được lưu: 8f2de2b5-ef33-451b-a4c7-f09bcef455d1
+2025-09-25 21:32:04,588 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 45970
+2025-09-25 21:32:04,610 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 8f2de2b5-ef33-451b-a4c7-f09bcef455d1.
+2025-09-25 21:32:04,836 - INFO - Checkpoint được lưu: 9261b80b-8006-4f00-8fb5-bb556d61f7fe
+2025-09-25 21:32:04,836 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 46969
+2025-09-25 21:32:04,859 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 9261b80b-8006-4f00-8fb5-bb556d61f7fe.
+2025-09-25 21:32:05,086 - INFO - Checkpoint được lưu: 9599a25d-0561-4d84-8177-066ecefdcbd8
+2025-09-25 21:32:05,087 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 47969
+2025-09-25 21:32:05,109 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 9599a25d-0561-4d84-8177-066ecefdcbd8.
+2025-09-25 21:32:05,349 - INFO - Checkpoint được lưu: 98c28f16-262b-4f76-8b39-971e5c1e738b
+2025-09-25 21:32:05,349 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 48969
+2025-09-25 21:32:05,378 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 98c28f16-262b-4f76-8b39-971e5c1e738b.
+2025-09-25 21:32:05,607 - INFO - Checkpoint được lưu: 9bb9b90f-8aa8-4f2f-8417-b474bf91f408
+2025-09-25 21:32:05,607 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 49969
+2025-09-25 21:32:05,645 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 9bb9b90f-8aa8-4f2f-8417-b474bf91f408.
+2025-09-25 21:32:05,891 - INFO - Checkpoint được lưu: 9ec69f4d-c3ae-4f09-a82a-9f286f979f80
+2025-09-25 21:32:05,891 - INFO - Hoàn thành batch. Đã chèn thành công 998 bản ghi. Tổng cộng đã chèn: 50967
+2025-09-25 21:32:05,916 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: 9ec69f4d-c3ae-4f09-a82a-9f286f979f80.
+2025-09-25 21:32:06,142 - INFO - Checkpoint được lưu: a1fe514b-78e6-45be-be06-af8ad97d8742
+2025-09-25 21:32:06,142 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 51967
+2025-09-25 21:32:06,167 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: a1fe514b-78e6-45be-be06-af8ad97d8742.
+2025-09-25 21:32:06,421 - INFO - Checkpoint được lưu: a51b4669-120b-4fc7-9c39-1e87a253ecb3
+2025-09-25 21:32:06,421 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 52967
+2025-09-25 21:32:06,447 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: a51b4669-120b-4fc7-9c39-1e87a253ecb3.
+2025-09-25 21:32:06,682 - INFO - Checkpoint được lưu: a83ec06e-a23d-4f9f-b9cf-79f7e596cdcd
+2025-09-25 21:32:06,682 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 53967
+2025-09-25 21:32:06,707 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: a83ec06e-a23d-4f9f-b9cf-79f7e596cdcd.
+2025-09-25 21:32:06,937 - INFO - Checkpoint được lưu: ab56d260-8aed-465c-9721-e15710b22854
+2025-09-25 21:32:06,938 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 54966
+2025-09-25 21:32:06,964 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: ab56d260-8aed-465c-9721-e15710b22854.
+2025-09-25 21:32:07,196 - INFO - Checkpoint được lưu: ae9a9292-1b7e-4b87-a8e4-58c1f64dc89a
+2025-09-25 21:32:07,196 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 55965
+2025-09-25 21:32:07,223 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: ae9a9292-1b7e-4b87-a8e4-58c1f64dc89a.
+2025-09-25 21:32:07,458 - INFO - Checkpoint được lưu: b1dfe1eb-54b0-4fed-bbd6-6d137b56f680
+2025-09-25 21:32:07,458 - INFO - Hoàn thành batch. Đã chèn thành công 998 bản ghi. Tổng cộng đã chèn: 56963
+2025-09-25 21:32:07,486 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: b1dfe1eb-54b0-4fed-bbd6-6d137b56f680.
+2025-09-25 21:32:07,719 - INFO - Checkpoint được lưu: b520d478-56d6-4f64-9262-a5f7214efa1d
+2025-09-25 21:32:07,719 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 57963
+2025-09-25 21:32:07,747 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: b520d478-56d6-4f64-9262-a5f7214efa1d.
+2025-09-25 21:32:07,978 - INFO - Checkpoint được lưu: b820194b-460d-4dfe-a36a-5a6435253088
+2025-09-25 21:32:07,978 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 58963
+2025-09-25 21:32:08,006 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: b820194b-460d-4dfe-a36a-5a6435253088.
+2025-09-25 21:32:08,249 - INFO - Checkpoint được lưu: bb266b6c-c2ad-414b-9c94-72f20c61e327
+2025-09-25 21:32:08,249 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 59962
+2025-09-25 21:32:08,278 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: bb266b6c-c2ad-414b-9c94-72f20c61e327.
+2025-09-25 21:32:08,571 - INFO - Checkpoint được lưu: be7671ed-a2b7-4fe6-892d-110dba1cf959
+2025-09-25 21:32:08,572 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 60962
+2025-09-25 21:32:08,622 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: be7671ed-a2b7-4fe6-892d-110dba1cf959.
+2025-09-25 21:32:09,009 - INFO - Checkpoint được lưu: c19b0de1-3459-42a8-b2a7-d8933f67d1bd
+2025-09-25 21:32:09,009 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 61962
+2025-09-25 21:32:09,054 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: c19b0de1-3459-42a8-b2a7-d8933f67d1bd.
+2025-09-25 21:32:09,441 - INFO - Checkpoint được lưu: c4ae7e55-4ff5-4f3c-b551-680330f4f6d3
+2025-09-25 21:32:09,441 - INFO - Hoàn thành batch. Đã chèn thành công 999 bản ghi. Tổng cộng đã chèn: 62961
+2025-09-25 21:32:09,486 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: c4ae7e55-4ff5-4f3c-b551-680330f4f6d3.
+2025-09-25 21:32:09,918 - INFO - Checkpoint được lưu: c7acc982-058f-4f01-88f7-465d52cd0e13
+2025-09-25 21:32:09,918 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 63961
+2025-09-25 21:32:09,960 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: c7acc982-058f-4f01-88f7-465d52cd0e13.
+2025-09-25 21:32:10,370 - INFO - Checkpoint được lưu: cad31d98-f67d-4da3-a9d9-95f65eec4485
+2025-09-25 21:32:10,370 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 64961
+2025-09-25 21:32:10,417 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: cad31d98-f67d-4da3-a9d9-95f65eec4485.
+2025-09-25 21:32:10,814 - INFO - Checkpoint được lưu: cde030b0-191b-4986-bd47-6011b29e938b
+2025-09-25 21:32:10,815 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 65961
+2025-09-25 21:32:10,864 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: cde030b0-191b-4986-bd47-6011b29e938b.
+2025-09-25 21:32:11,274 - INFO - Checkpoint được lưu: d0f13088-13d8-4f3f-a021-075affd52a02
+2025-09-25 21:32:11,274 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 66961
+2025-09-25 21:32:11,315 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: d0f13088-13d8-4f3f-a021-075affd52a02.
+2025-09-25 21:32:11,641 - INFO - Checkpoint được lưu: d40d8b0a-feaa-453d-95c1-1bcc822dce8f
+2025-09-25 21:32:11,641 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 67961
+2025-09-25 21:32:11,676 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: d40d8b0a-feaa-453d-95c1-1bcc822dce8f.
+2025-09-25 21:32:11,968 - INFO - Checkpoint được lưu: d7171a02-c33e-418b-91c3-976e5bc023c3
+2025-09-25 21:32:11,968 - INFO - Hoàn thành batch. Đã chèn thành công 998 bản ghi. Tổng cộng đã chèn: 68959
+2025-09-25 21:32:12,004 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: d7171a02-c33e-418b-91c3-976e5bc023c3.
+2025-09-25 21:32:12,292 - INFO - Checkpoint được lưu: da27767b-b94b-4b33-a61e-8eceacbe1dbb
+2025-09-25 21:32:12,292 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 69959
+2025-09-25 21:32:12,327 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: da27767b-b94b-4b33-a61e-8eceacbe1dbb.
+2025-09-25 21:32:12,608 - INFO - Checkpoint được lưu: dd4022f8-5a98-4f68-b612-2dbf420073a7
+2025-09-25 21:32:12,609 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 70959
+2025-09-25 21:32:12,644 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: dd4022f8-5a98-4f68-b612-2dbf420073a7.
+2025-09-25 21:32:12,926 - INFO - Checkpoint được lưu: e059251d-c442-4fb1-a686-b68ae5909be3
+2025-09-25 21:32:12,926 - INFO - Hoàn thành batch. Đã chèn thành công 998 bản ghi. Tổng cộng đã chèn: 71957
+2025-09-25 21:32:12,999 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: e059251d-c442-4fb1-a686-b68ae5909be3.
+2025-09-25 21:32:13,285 - INFO - Checkpoint được lưu: e3711b16-6b5d-407c-83b7-baa41249a958
+2025-09-25 21:32:13,285 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 72957
+2025-09-25 21:32:13,323 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: e3711b16-6b5d-407c-83b7-baa41249a958.
+2025-09-25 21:32:13,659 - INFO - Checkpoint được lưu: e668bcdb-31ed-4f4e-a08d-cdaae41ebe40
+2025-09-25 21:32:13,659 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 73957
+2025-09-25 21:32:13,699 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: e668bcdb-31ed-4f4e-a08d-cdaae41ebe40.
+2025-09-25 21:32:13,991 - INFO - Checkpoint được lưu: e96dab72-c5b0-4fb1-acdd-474822f0f57c
+2025-09-25 21:32:13,991 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 74957
+2025-09-25 21:32:14,031 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: e96dab72-c5b0-4fb1-acdd-474822f0f57c.
+2025-09-25 21:32:14,325 - INFO - Checkpoint được lưu: ec63097a-49ed-4f18-b821-887d85efb912
+2025-09-25 21:32:14,325 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 75957
+2025-09-25 21:32:14,363 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: ec63097a-49ed-4f18-b821-887d85efb912.
+2025-09-25 21:32:14,649 - INFO - Checkpoint được lưu: efa6476f-e314-4965-b7fd-d56de74ad360
+2025-09-25 21:32:14,649 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 76957
+2025-09-25 21:32:14,689 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: efa6476f-e314-4965-b7fd-d56de74ad360.
+2025-09-25 21:32:14,965 - INFO - Checkpoint được lưu: f2e67d1f-9db6-49cc-94cb-b3e1b8c4617f
+2025-09-25 21:32:14,965 - INFO - Hoàn thành batch. Đã chèn thành công 998 bản ghi. Tổng cộng đã chèn: 77955
+2025-09-25 21:32:15,003 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: f2e67d1f-9db6-49cc-94cb-b3e1b8c4617f.
+2025-09-25 21:32:15,287 - INFO - Checkpoint được lưu: f60639e9-52c8-41b8-a5c4-0b89635d0f56
+2025-09-25 21:32:15,287 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 78955
+2025-09-25 21:32:15,327 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: f60639e9-52c8-41b8-a5c4-0b89635d0f56.
+2025-09-25 21:32:15,628 - INFO - Checkpoint được lưu: f8f72202-a837-450c-a317-f8f84e618972
+2025-09-25 21:32:15,628 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 79955
+2025-09-25 21:32:15,668 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: f8f72202-a837-450c-a317-f8f84e618972.
+2025-09-25 21:32:15,932 - INFO - Checkpoint được lưu: fc0000ff-d19d-452c-bfbb-6edbfc07a84e
+2025-09-25 21:32:15,932 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 80955
+2025-09-25 21:32:15,971 - INFO - Trích xuất 1000 bản ghi từ staging (batch), bắt đầu từ ID: fc0000ff-d19d-452c-bfbb-6edbfc07a84e.
+2025-09-25 21:32:16,246 - INFO - Checkpoint được lưu: ff4039a0-7429-4db2-90ac-27341af3342b
+2025-09-25 21:32:16,246 - INFO - Hoàn thành batch. Đã chèn thành công 1000 bản ghi. Tổng cộng đã chèn: 81955
+2025-09-25 21:32:16,288 - INFO - Trích xuất 244 bản ghi từ staging (batch), bắt đầu từ ID: ff4039a0-7429-4db2-90ac-27341af3342b.
+2025-09-25 21:32:16,367 - INFO - Checkpoint được lưu: ffff736d-c46b-4871-9bb7-392c796dda3c
+2025-09-25 21:32:16,367 - INFO - Hoàn thành batch. Đã chèn thành công 244 bản ghi. Tổng cộng đã chèn: 82199
+2025-09-25 21:32:16,367 - INFO - Đóng kết nối database staging.

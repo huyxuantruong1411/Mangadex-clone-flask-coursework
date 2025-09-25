@@ -1,5 +1,10 @@
-{% for c in charts %}
-<div class="mb-5">
-    {{ c|safe }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+<div class="dashboard-container">
+    <div class="dashboard-chart">{{ chart1|safe }}</div>
+    <div class="dashboard-chart">{{ chart2|safe }}</div>
+    <div class="dashboard-chart">{{ chart3|safe }}</div>
+    <div class="dashboard-chart">{{ chart4|safe }}</div>
+    <div class="dashboard-chart">{{ chart5|safe }}</div>
+    <div class="dashboard-chart">{{ chart6|safe }}</div>
 </div>
-{% endfor %}
