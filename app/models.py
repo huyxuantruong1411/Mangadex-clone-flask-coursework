@@ -20,7 +20,7 @@ class User(UserMixin, db.Model):
     Avatar = Column(Text)
     Role = Column(String(20), nullable=False)
     IsLocked = Column(Boolean)
-    CreatedAt = Column(DateTime)
+    CreatedAt = Column(DateTime, default=datetime.utcnow)
 
     # relationships
     comments = relationship("Comment", back_populates="user")

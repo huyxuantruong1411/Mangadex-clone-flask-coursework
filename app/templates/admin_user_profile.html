@@ -1,0 +1,18 @@
+{% extends "admin_base.html" %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Profile of {{ user.Username }}</h2>
+    <p><strong>Email:</strong> {{ user.Email }}</p>
+    <p><strong>Role:</strong> {{ user.Role }}</p>
+    <p><strong>Status:</strong> {{ 'Active' if not user.IsLocked else 'Locked' }}</p>
+    <p><strong>Created At:</strong> {{ user.CreatedAt }}</p>
+
+    <hr>
+    <h3>User Charts</h3>
+    <div>
+        {{ charts[0]|safe }}
+        {{ charts[1]|safe }}
+    </div>
+</div>
+{% endblock %}

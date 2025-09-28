@@ -57,8 +57,13 @@ def login():
             return redirect(url_for("auth.login"))
 
         login_user(user)
-        flash("Login successful!")
-        return redirect(url_for("main.profile"))
+
+        # BỎ flash("Login successful!") theo yêu cầu
+        # Điều hướng theo role
+        if (user.Role or "").lower() == "admin":
+            return redirect(url_for("admin_bp.admin_dashboard"))
+        else:
+            return redirect(url_for("main.home"))
 
     return render_template("login.html", title="Login")
 

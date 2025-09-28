@@ -1,3 +1,23 @@
+/* admin.css */
+
+/* ========== Layout & Text ========== */
+body {
+    background-color: #121212;
+    /* đồng bộ với base.html */
+    color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* ========== Sidebar (giữ nguyên, không đụng tới) ========== */
 .sidebar {
     width: 250px;
     min-height: 100vh;
@@ -18,11 +38,17 @@
     background-color: #007bff;
 }
 
+/* ========== Tables ========== */
 .table-dark th,
 .table-dark td {
     vertical-align: middle;
 }
 
+.table-hover tbody tr:hover {
+    background-color: #1e1e1e;
+}
+
+/* ========== Badge ========== */
 .badge.bg-success {
     background-color: #28a745 !important;
 }
@@ -35,6 +61,79 @@
     background-color: #ffc107 !important;
 }
 
+/* ========== Buttons ========== */
 .btn-sm {
     margin-right: 5px;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* ========== Pagination ========== */
+.pagination .page-link {
+    background-color: #1e1e1e;
+    border: none;
+    color: #f8f9fa;
+}
+
+.pagination .page-link:hover {
+    background-color: #333;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* ========== Modal ========== */
+.modal-content {
+    background-color: #1e1e1e;
+    color: #f8f9fa;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+/* ========== Form Inputs ========== */
+.form-control {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f8f9fa;
+}
+
+.form-control:focus {
+    background-color: #2c2c2c;
+    border-color: #555;
+    color: #fff;
+    box-shadow: none;
 }

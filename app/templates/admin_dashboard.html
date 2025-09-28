@@ -1,8 +1,113 @@
 {% extends "admin_base.html" %}
 {% block title %}Admin Dashboard{% endblock %}
+
 {% block content %}
 <div class="container-fluid">
     <h2>Admin Dashboard</h2>
-    <p>This feature is under development.</p>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <label for="startDate" class="form-label text-white">Start date (for charts 3 & 4)</label>
+            <input id="startDate" type="date" class="form-control" value="{{ start_date }}">
+        </div>
+        <div class="col-md-3">
+            <label for="endDate" class="form-label text-white">End date (for charts 3 & 4)</label>
+            <input id="endDate" type="date" class="form-control" value="{{ end_date }}">
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <button id="applyFilter" class="btn btn-primary">Apply</button>
+        </div>
+        <div class="col-md-4 d-flex align-items-end justify-content-end">
+            <small class="text-muted">Default window for charts 1 & 2: last 30 days</small>
+        </div>
+    </div>
+
+    <div class="row gy-4">
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>New users (last 30 days)</h5>
+                <div id="chart_new_users" style="height:360px;"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>User reading activity (last 30 days)</h5>
+                <div id="chart_reading_activity" style="height:360px;"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>Top manga by distinct users (date range)</h5>
+                <div id="chart_top_manga" style="height:420px;"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>Top tags by group (Format / Theme / Genre)</h5>
+                <div id="chart_top_tags" style="height:420px;"></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- EMBED JSON figures safely to avoid JS parser errors in editors -->
+<script type="application/json" id="fig-new-users">{{ fig_new_users | tojson }}</script>
+<script type="application/json" id="fig-reading">{{ fig_reading_activity | tojson }}</script>
+<script type="application/json" id="fig-top-manga">{{ fig_top_manga | tojson }}</script>
+<script type="application/json" id="fig-top-tags">{{ fig_top_tags | tojson }}</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+<script>
+    // helper to parse embedded JSON safely
+    function loadFigJSON(id) {
+        const el = document.getElementById(id);
+        if (!el) return null;
+        try {
+            return JSON.parse(el.textContent);
+        } catch (e) {
+            console.error('Failed to parse figure JSON', id, e);
+            return null;
+        }
+    }
+
+    const figNewUsers = loadFigJSON('fig-new-users');
+    const figReading = loadFigJSON('fig-reading');
+    const figTopManga = loadFigJSON('fig-top-manga');
+    const figTopTags = loadFigJSON('fig-top-tags');
+
+    if (figNewUsers) Plotly.newPlot('chart_new_users', figNewUsers.data, figNewUsers.layout, { responsive: true });
+    if (figReading) Plotly.newPlot('chart_reading_activity', figReading.data, figReading.layout, { responsive: true });
+    if (figTopManga) Plotly.newPlot('chart_top_manga', figTopManga.data, figTopManga.layout, { responsive: true });
+    if (figTopTags) Plotly.newPlot('chart_top_tags', figTopTags.data, figTopTags.layout, { responsive: true });
+
+    // Apply date filter (slicer)
+    document.getElementById('applyFilter').addEventListener('click', function () {
+        const start = document.getElementById('startDate').value;
+        const end = document.getElementById('endDate').value;
+        const params = new URLSearchParams(window.location.search);
+        if (start) params.set('start_date', start); else params.delete('start_date');
+        if (end) params.set('end_date', end); else params.delete('end_date');
+        // reload with params
+        window.location.search = params.toString();
+    });
+
+    // if template provided start/end, ensure inputs are filled (helps when editor cached)
+    (function initDateInputs() {
+        try {
+            const s = "{{ start_date }}";
+            const e = "{{ end_date }}";
+            const si = document.getElementById('startDate');
+            const ei = document.getElementById('endDate');
+            if (si && !si.value && s) si.value = s;
+            if (ei && !ei.value && e) ei.value = e;
+        } catch (err) {
+            // ignore
+        }
+    })();
+</script>
 {% endblock %}

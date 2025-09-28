@@ -2,42 +2,56 @@
 {% block title %}Manage Comments{% endblock %}
 {% block content %}
 <div class="container-fluid">
-    <h2>Manage Reported Comments</h2>
+    <h2 class="text-white mb-4">Manage Reported Comments</h2>
+
+    <!-- Filter -->
     <div class="mb-3">
-        <select id="statusFilter" class="form-select">
-            <option value="">All</option>
-            <option value="pending">Pending</option>
-            <option value="resolved">Resolved</option>
-            <option value="ignored">Ignored</option>
+        <select id="statusFilter" class="form-select w-auto d-inline-block">
+            <option value="" {% if not request.args.get('status') %}selected{% endif %}>All</option>
+            <option value="pending" {% if request.args.get('status')=='pending' %}selected{% endif %}>Pending</option>
+            <option value="resolved" {% if request.args.get('status')=='resolved' %}selected{% endif %}>Resolved
+            </option>
+            <option value="ignored" {% if request.args.get('status')=='ignored' %}selected{% endif %}>Ignored</option>
         </select>
     </div>
-    <table class="table table-dark table-hover">
+
+    <!-- Table -->
+    <table class="table table-dark table-hover align-middle">
         <thead>
             <tr>
-                <th>Comment ID</th>
-                <th>Content</th>
-                <th>Username</th>
-                <th>Manga</th>
-                <th>Reason</th>
-                <th>Reports</th>
-                <th>Created At</th>
-                <th>Actions</th>
+                <th width="12%">Comment ID</th>
+                <th width="25%">Content</th>
+                <th width="10%">User</th>
+                <th width="15%">Manga</th>
+                <th width="15%">Reason(s)</th>
+                <th width="5%">Reports</th>
+                <th width="10%">Created At</th>
+                <th width="8%">Actions</th>
             </tr>
         </thead>
         <tbody id="commentTableBody">
             {% for comment in comments.items %}
             <tr>
-                <td>{{ comment.CommentId }}</td>
+                <td class="small text-muted">{{ comment.CommentId }}</td>
                 <td>
-                    {{ comment.Content[:100] }}{% if comment.Content|length > 100 %}... <a href="#"
-                        data-bs-toggle="modal" data-bs-target="#viewCommentModal{{ comment.CommentId }}">View Full</a>{%
-                    endif %}
+                    {{ comment.Content[:100] }}
+                    {% if comment.Content|length > 100 %}
+                    ... <a href="#" data-bs-toggle="modal"
+                        data-bs-target="#viewCommentModal{{ comment.CommentId }}">View Full</a>
+                    {% endif %}
                 </td>
-                <td><a href="{{ url_for('main.profile', user_id=comment.UserId) }}">{{ comment.Username }}</a></td>
-                <td><a href="{{ url_for('main.manga_detail', manga_id=comment.MangaId) }}">{{ comment.TitleEn }}</a>
+                <td>
+                    <a href="{{ url_for('main.profile', user_id=comment.UserId) }}" class="text-info">
+                        {{ comment.Username }}
+                    </a>
                 </td>
-                <td>{{ comment.Reason }}</td>
-                <td>{{ comment.report_count }}</td>
+                <td>
+                    <a href="{{ url_for('main.manga_detail', manga_id=comment.MangaId) }}" class="text-warning">
+                        {{ comment.TitleEn }}
+                    </a>
+                </td>
+                <td>{{ comment.Reasons }}</td>
+                <td class="fw-bold text-danger">{{ comment.report_count }}</td>
                 <td>{{ comment.CreatedAt.strftime('%Y-%m-%d %H:%M:%S') }}</td>
                 <td>
                     <button class="btn btn-sm btn-danger"
@@ -46,18 +60,19 @@
                         onclick="confirmAction('{{ comment.CommentId }}', 'ignore')">Ignore</button>
                 </td>
             </tr>
+
             <!-- View Comment Modal -->
             <div class="modal fade" id="viewCommentModal{{ comment.CommentId }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
                             <h5 class="modal-title">Full Comment</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             {{ comment.Content }}
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer border-0">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -66,42 +81,48 @@
             {% endfor %}
         </tbody>
     </table>
+
     <!-- Pagination -->
-    <nav>
-        <ul class="pagination">
+    <nav aria-label="Comments pagination">
+        <ul class="pagination justify-content-center">
             {% if comments.has_prev %}
             <li class="page-item">
-                <a class="page-link"
+                <a class="page-link bg-dark text-white"
                     href="{{ url_for('admin_bp.admin_comments', page=comments.prev_num, status=request.args.get('status', '')) }}">Previous</a>
             </li>
             {% endif %}
             {% for page_num in comments.iter_pages() %}
+            {% if page_num %}
             <li class="page-item {% if page_num == comments.page %}active{% endif %}">
-                <a class="page-link"
+                <a class="page-link bg-dark text-white"
                     href="{{ url_for('admin_bp.admin_comments', page=page_num, status=request.args.get('status', '')) }}">{{
                     page_num }}</a>
             </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link bg-dark">...</span></li>
+            {% endif %}
             {% endfor %}
             {% if comments.has_next %}
             <li class="page-item">
-                <a class="page-link"
+                <a class="page-link bg-dark text-white"
                     href="{{ url_for('admin_bp.admin_comments', page=comments.next_num, status=request.args.get('status', '')) }}">Next</a>
             </li>
             {% endif %}
         </ul>
     </nav>
-    <!-- Modal -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModalLabel">Confirm Action</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+    <!-- Confirm Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Confirm Action</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     Are you sure you want to <span id="actionText"></span> this comment?
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary" id="confirmButton">Confirm</button>
                 </div>
