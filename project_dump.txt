@@ -24,6 +24,10 @@
           "type": "file"
         },
         {
+          "name": "multi-users.py",
+          "type": "file"
+        },
+        {
           "name": "single-user.py",
           "type": "file"
         }
@@ -252,6 +256,10 @@
               "type": "file"
             },
             {
+              "name": "admin_user_profile.html",
+              "type": "file"
+            },
+            {
               "name": "admin_users.html",
               "type": "file"
             },
@@ -405,6 +413,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── README.md
 ├── Simulation/
 │   ├── fix_invalid_ratings.py
+│   ├── multi-users.py
 │   └── single-user.py
 ├── add-admin.py
 ├── app/
@@ -459,6 +468,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── admin_creators.html
 │       ├── admin_dashboard.html
 │       ├── admin_manga.html
+│       ├── admin_user_profile.html
 │       ├── admin_users.html
 │       ├── advanced_search.html
 │       ├── art.html
@@ -1811,6 +1821,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
           "type": "file"
         },
         {
+          "name": "multi-users.py",
+          "type": "file"
+        },
+        {
           "name": "single-user.py",
           "type": "file"
         }
@@ -2039,6 +2053,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
               "type": "file"
             },
             {
+              "name": "admin_user_profile.html",
+              "type": "file"
+            },
+            {
               "name": "admin_users.html",
               "type": "file"
             },
@@ -2192,6 +2210,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 ├── README.md
 ├── Simulation/
 │   ├── fix_invalid_ratings.py
+│   ├── multi-users.py
 │   └── single-user.py
 ├── add-admin.py
 ├── app/
@@ -2246,6 +2265,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── admin_creators.html
 │       ├── admin_dashboard.html
 │       ├── admin_manga.html
+│       ├── admin_user_profile.html
 │       ├── admin_users.html
 │       ├── advanced_search.html
 │       ├── art.html
@@ -3613,12 +3633,22 @@ except Exception as e:
 from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
 from flask_login import current_user
 from app import db
-from app.models import User, Comment, Report, Manga
+from app.models import (
+    User, Comment, Report, Manga, ReadingHistory,
+    MangaTag, Tag
+)
 from functools import wraps
-from datetime import datetime
+from datetime import datetime, timedelta
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import json
 
 admin_bp = Blueprint('admin_bp', __name__)
 
+
+# ==========================
+# Middleware kiểm tra quyền
+# ==========================
 def admin_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -3629,11 +3659,206 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+
+# ==========================
+# Dashboard
+# ==========================
 @admin_bp.route('/admin/dashboard')
 @admin_required
 def admin_dashboard():
-    return render_template('admin_dashboard.html')
+    """
+    Tạo 4 biểu đồ:
+    1) New users last 30 days (bar)
+    2) Reading activity last 30 days (line)
+    3) Top manga by distinct users trong khoảng [start_date, end_date]
+    4) Top tags by group (Format / Theme / Genre) trong khoảng [start_date, end_date]
+    Query params: start_date=YYYY-MM-DD, end_date=YYYY-MM-DD (chỉ cho charts 3 & 4).
+    """
+    today = datetime.utcnow().date()
+    default_days = 30
+    window_start = today - timedelta(days=default_days - 1)
 
+    # -------------------------
+    # Parse query params
+    # -------------------------
+    start_date_str = request.args.get('start_date')
+    end_date_str = request.args.get('end_date')
+
+    try:
+        start_date = datetime.strptime(start_date_str, "%Y-%m-%d").date() if start_date_str else window_start
+    except Exception:
+        start_date = window_start
+
+    try:
+        end_date = datetime.strptime(end_date_str, "%Y-%m-%d").date() if end_date_str else today
+    except Exception:
+        end_date = today
+
+    # -------------------------
+    # 1) New users last 30 days
+    # -------------------------
+    users = User.query.filter(User.CreatedAt >= datetime.combine(window_start, datetime.min.time())).all()
+
+    dates = [(window_start + timedelta(days=i)) for i in range(default_days)]
+    date_strs = [d.strftime("%Y-%m-%d") for d in dates]
+    users_count_by_date = {s: 0 for s in date_strs}
+
+    for u in users:
+        if u.CreatedAt:
+            ds = u.CreatedAt.date().strftime("%Y-%m-%d")
+            if ds in users_count_by_date:
+                users_count_by_date[ds] += 1
+
+    fig_new_users = go.Figure()
+    fig_new_users.add_trace(go.Bar(x=date_strs, y=[users_count_by_date[d] for d in date_strs], name="New users"))
+    fig_new_users.update_layout(
+        template="plotly_dark",
+        margin=dict(l=30, r=10, t=30, b=40),
+        xaxis_title="Date",
+        yaxis_title="New users",
+        hovermode="x unified"
+    )
+
+    # -------------------------
+    # 2) Reading activity last 30 days
+    # -------------------------
+    histories = ReadingHistory.query.filter(ReadingHistory.ReadAt >= datetime.combine(window_start, datetime.min.time())).all()
+
+    activity_count_by_date = {s: 0 for s in date_strs}
+    for h in histories:
+        if h.ReadAt:
+            ds = h.ReadAt.date().strftime("%Y-%m-%d")
+            if ds in activity_count_by_date:
+                activity_count_by_date[ds] += 1
+
+    fig_reading = go.Figure()
+    fig_reading.add_trace(go.Scatter(
+        x=date_strs,
+        y=[activity_count_by_date[d] for d in date_strs],
+        mode="lines+markers",
+        name="Reads"
+    ))
+    fig_reading.update_layout(
+        template="plotly_dark",
+        margin=dict(l=30, r=10, t=30, b=40),
+        xaxis_title="Date",
+        yaxis_title="Read events",
+        hovermode="x unified"
+    )
+
+    # -------------------------
+    # 3) Top manga by distinct users (range filter)
+    # -------------------------
+    sd_dt = datetime.combine(start_date, datetime.min.time())
+    ed_dt = datetime.combine(end_date, datetime.max.time())
+
+    top_manga_query = (
+        db.session.query(
+            ReadingHistory.MangaId,
+            db.func.count(db.distinct(ReadingHistory.UserId)).label('user_count')
+        )
+        .filter(ReadingHistory.ReadAt >= sd_dt, ReadingHistory.ReadAt <= ed_dt)
+        .group_by(ReadingHistory.MangaId)
+        .order_by(db.desc('user_count'))
+        .limit(20)
+        .all()
+    )
+
+    manga_map = {
+        m.MangaId: (m.TitleEn or str(m.MangaId))
+        for m in Manga.query.filter(Manga.MangaId.in_([r.MangaId for r in top_manga_query])).all()
+    }
+    top_titles = [manga_map.get(r.MangaId, str(r.MangaId)) for r in top_manga_query]
+    top_counts = [r.user_count for r in top_manga_query]
+
+    fig_top_manga = go.Figure()
+    fig_top_manga.add_trace(go.Bar(x=top_counts[::-1], y=top_titles[::-1], orientation='h'))
+    fig_top_manga.update_layout(
+        template="plotly_dark",
+        margin=dict(l=120, r=20, t=30, b=40),
+        xaxis_title="Distinct users",
+        yaxis_title="Manga"
+    )
+
+    # -------------------------
+    # 4) Top tags by group (range filter)
+    # -------------------------
+    tag_q = (
+        db.session.query(
+            Tag.GroupName,
+            Tag.NameEn,
+            db.func.count(db.distinct(ReadingHistory.UserId)).label('user_count')
+        )
+        .join(MangaTag, MangaTag.TagId == Tag.TagId)
+        .join(Manga, Manga.MangaId == MangaTag.MangaId)
+        .join(ReadingHistory, ReadingHistory.MangaId == Manga.MangaId)
+        .filter(ReadingHistory.ReadAt >= sd_dt, ReadingHistory.ReadAt <= ed_dt)
+        .group_by(Tag.GroupName, Tag.NameEn)
+        .order_by(db.desc('user_count'))
+        .all()
+    )
+
+    groups = {}
+    for gname, name_en, cnt in tag_q:
+        key = (gname or "").strip()
+        groups.setdefault(key, []).append((name_en, cnt))
+
+    target_groups = ['format', 'theme', 'genre']
+    data_for_subplot = []
+    subplot_titles = []
+
+    for grp in target_groups:
+        matched_key = next((k for k in groups.keys() if k.lower() == grp), None)
+        items = groups.get(matched_key, [])[:10] if matched_key else []
+        labels = [i[0] for i in items][::-1]
+        values = [i[1] for i in items][::-1]
+        subplot_titles.append(grp.capitalize())
+        data_for_subplot.append((labels, values))
+
+    if not any(len(lbls) for lbls, _ in data_for_subplot):
+        # fallback: pick first 3 available groups
+        for idx, (key, arr) in enumerate(groups.items()):
+            if idx >= 3:
+                break
+            labels = [i[0] for i in arr][:10][::-1]
+            values = [i[1] for i in arr][:10][::-1]
+            data_for_subplot[idx] = (labels, values)
+            subplot_titles[idx] = key
+
+    fig_tags = make_subplots(rows=1, cols=3, subplot_titles=subplot_titles)
+    for i, (labels, values) in enumerate(data_for_subplot, start=1):
+        fig_tags.add_trace(go.Bar(x=values, y=labels, orientation='h', name=subplot_titles[i-1]), row=1, col=i)
+
+    fig_tags.update_layout(
+        template="plotly_dark",
+        margin=dict(l=50, r=30, t=40, b=40),
+        height=420,
+        showlegend=False
+    )
+
+    # -------------------------
+    # Serialize to JSON
+    # -------------------------
+    fig_new_users_json = json.loads(fig_new_users.to_json())
+    fig_reading_json = json.loads(fig_reading.to_json())
+    fig_top_manga_json = json.loads(fig_top_manga.to_json())
+    fig_top_tags_json = json.loads(fig_tags.to_json())
+
+    return render_template(
+        'admin_dashboard.html',
+        fig_new_users=fig_new_users_json,
+        fig_reading_activity=fig_reading_json,
+        fig_top_manga=fig_top_manga_json,
+        fig_top_tags=fig_top_tags_json,
+        start_date=start_date.isoformat(),
+        end_date=end_date.isoformat()
+    )
+
+
+
+# ==========================
+# Quản lý users
+# ==========================
 @admin_bp.route('/admin/users', methods=['GET', 'POST'])
 @admin_required
 def admin_users():
@@ -3656,7 +3881,7 @@ def admin_users():
             return jsonify({'success': False, 'message': 'Invalid action'}), 400
         db.session.commit()
         return jsonify({'success': True, 'message': 'Action completed'})
-    
+
     page = request.args.get('page', 1, type=int)
     query = request.args.get('q', '')
     users_query = User.query
@@ -3667,6 +3892,28 @@ def admin_users():
     users = users_query.order_by(User.CreatedAt.desc()).paginate(page=page, per_page=20)
     return render_template('admin_users.html', users=users)
 
+
+# ==========================
+# Xem chi tiết 1 user
+# ==========================
+@admin_bp.route('/admin/users/<uuid:user_id>')
+@admin_required
+def view_user(user_id):
+    user = User.query.get(user_id)
+    if not user:
+        flash("User not found", "danger")
+        return redirect(url_for("admin_bp.admin_users"))
+
+    # Gọi chart cho user này (không dùng current_user)
+    from app.dashboard_routes import build_user_charts
+    charts = build_user_charts(str(user.UserId))
+
+    return render_template("admin_user_profile.html", user=user, charts=charts)
+
+
+# ==========================
+# Quản lý comments
+# ==========================
 @admin_bp.route('/admin/comments', methods=['GET', 'POST'])
 @admin_required
 def admin_comments():
@@ -3689,26 +3936,62 @@ def admin_comments():
             return jsonify({'success': False, 'message': 'Invalid action'}), 400
         db.session.commit()
         return jsonify({'success': True, 'message': 'Action completed'})
-    
+
     page = request.args.get('page', 1, type=int)
     status = request.args.get('status', '')
+
+    # 🔹 Query chỉ lấy cột cần thiết, fix STRING_AGG bằng cast + literal_column
     query = db.session.query(
-        Comment, User.Username, Manga.TitleEn, Report.Reason, db.func.count(Report.ReportId).label('report_count')
-    ).join(Report, Report.CommentId == Comment.CommentId
-    ).join(User, Comment.UserId == User.UserId
-    ).join(Manga, Comment.MangaId == Manga.MangaId)
+        Comment.CommentId,
+        Comment.UserId,
+        Comment.MangaId,
+        Comment.Content,
+        Comment.CreatedAt,
+        User.Username,
+        Manga.TitleEn,
+        db.func.string_agg(
+            db.cast(Report.Reason, db.String(255)),   # ép nvarchar(max) → nvarchar(255)
+            db.literal_column("', '")                # separator literal
+        ).label('Reasons'),
+        db.func.count(Report.ReportId).label('report_count')
+    ).join(
+        Report, Report.CommentId == Comment.CommentId
+    ).join(
+        User, Comment.UserId == User.UserId
+    ).join(
+        Manga, Comment.MangaId == Manga.MangaId
+    )
+
     if status:
         query = query.filter(Report.Status == status)
-    query = query.group_by(Comment.CommentId, User.Username, Manga.TitleEn, Report.Reason
+
+    query = query.group_by(
+        Comment.CommentId,
+        Comment.UserId,
+        Comment.MangaId,
+        Comment.Content,
+        Comment.CreatedAt,
+        User.Username,
+        Manga.TitleEn
     ).order_by(Comment.CreatedAt.desc())
+
     comments = query.paginate(page=page, per_page=20)
     return render_template('admin_comments.html', comments=comments)
 
+
+
+# ==========================
+# Quản lý manga
+# ==========================
 @admin_bp.route('/admin/manga')
 @admin_required
 def admin_manga():
     return render_template('admin_manga.html')
 
+
+# ==========================
+# Quản lý creators
+# ==========================
 @admin_bp.route('/admin/creators')
 @admin_required
 def admin_creators():
@@ -3769,13 +4052,19 @@ def login():
             or_(User.Email == username_or_email, User.Username == username_or_email)
         ).first()
 
+        # Kiểm tra tồn tại + mật khẩu
         if not user or not check_password_hash(user.PasswordHash, password):
             flash("Invalid username/email or password.")
             return redirect(url_for("auth.login"))
 
+        # Kiểm tra nếu user bị ban (IsLocked=True)
+        if user.IsLocked:
+            flash("Your account has been banned. Please contact support.")
+            return redirect(url_for("auth.login"))
+
+        # Nếu hợp lệ thì login
         login_user(user)
 
-        # BỎ flash("Login successful!") theo yêu cầu
         # Điều hướng theo role
         if (user.Role or "").lower() == "admin":
             return redirect(url_for("admin_bp.admin_dashboard"))
@@ -4896,7 +5185,7 @@ class User(UserMixin, db.Model):
     Avatar = Column(Text)
     Role = Column(String(20), nullable=False)
     IsLocked = Column(Boolean)
-    CreatedAt = Column(DateTime)
+    CreatedAt = Column(DateTime, default=datetime.utcnow)
 
     # relationships
     comments = relationship("Comment", back_populates="user")
@@ -7036,6 +7325,26 @@ def get_chapters(manga_id):
     /* nền tối nhấn nhẹ */
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\admin.css ---
+/* admin.css */
+
+/* ========== Layout & Text ========== */
+body {
+    background-color: #121212;
+    /* đồng bộ với base.html */
+    color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* ========== Sidebar (giữ nguyên, không đụng tới) ========== */
 .sidebar {
     width: 250px;
     min-height: 100vh;
@@ -7056,11 +7365,17 @@ def get_chapters(manga_id):
     background-color: #007bff;
 }
 
+/* ========== Tables ========== */
 .table-dark th,
 .table-dark td {
     vertical-align: middle;
 }
 
+.table-hover tbody tr:hover {
+    background-color: #1e1e1e;
+}
+
+/* ========== Badge ========== */
 .badge.bg-success {
     background-color: #28a745 !important;
 }
@@ -7073,8 +7388,81 @@ def get_chapters(manga_id):
     background-color: #ffc107 !important;
 }
 
+/* ========== Buttons ========== */
 .btn-sm {
     margin-right: 5px;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* ========== Pagination ========== */
+.pagination .page-link {
+    background-color: #1e1e1e;
+    border: none;
+    color: #f8f9fa;
+}
+
+.pagination .page-link:hover {
+    background-color: #333;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* ========== Modal ========== */
+.modal-content {
+    background-color: #1e1e1e;
+    color: #f8f9fa;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+/* ========== Form Inputs ========== */
+.form-control {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f8f9fa;
+}
+
+.form-control:focus {
+    background-color: #2c2c2c;
+    border-color: #555;
+    color: #fff;
+    box-shadow: none;
 }
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\advanced_search.css ---
 .advanced-search-form {
@@ -23461,42 +23849,56 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block title %}Manage Comments{% endblock %}
 {% block content %}
 <div class="container-fluid">
-    <h2>Manage Reported Comments</h2>
+    <h2 class="text-white mb-4">Manage Reported Comments</h2>
+
+    <!-- Filter -->
     <div class="mb-3">
-        <select id="statusFilter" class="form-select">
-            <option value="">All</option>
-            <option value="pending">Pending</option>
-            <option value="resolved">Resolved</option>
-            <option value="ignored">Ignored</option>
+        <select id="statusFilter" class="form-select w-auto d-inline-block">
+            <option value="" {% if not request.args.get('status') %}selected{% endif %}>All</option>
+            <option value="pending" {% if request.args.get('status')=='pending' %}selected{% endif %}>Pending</option>
+            <option value="resolved" {% if request.args.get('status')=='resolved' %}selected{% endif %}>Resolved
+            </option>
+            <option value="ignored" {% if request.args.get('status')=='ignored' %}selected{% endif %}>Ignored</option>
         </select>
     </div>
-    <table class="table table-dark table-hover">
+
+    <!-- Table -->
+    <table class="table table-dark table-hover align-middle">
         <thead>
             <tr>
-                <th>Comment ID</th>
-                <th>Content</th>
-                <th>Username</th>
-                <th>Manga</th>
-                <th>Reason</th>
-                <th>Reports</th>
-                <th>Created At</th>
-                <th>Actions</th>
+                <th width="12%">Comment ID</th>
+                <th width="25%">Content</th>
+                <th width="10%">User</th>
+                <th width="15%">Manga</th>
+                <th width="15%">Reason(s)</th>
+                <th width="5%">Reports</th>
+                <th width="10%">Created At</th>
+                <th width="8%">Actions</th>
             </tr>
         </thead>
         <tbody id="commentTableBody">
             {% for comment in comments.items %}
             <tr>
-                <td>{{ comment.CommentId }}</td>
+                <td class="small text-muted">{{ comment.CommentId }}</td>
                 <td>
-                    {{ comment.Content[:100] }}{% if comment.Content|length > 100 %}... <a href="#"
-                        data-bs-toggle="modal" data-bs-target="#viewCommentModal{{ comment.CommentId }}">View Full</a>{%
-                    endif %}
+                    {{ comment.Content[:100] }}
+                    {% if comment.Content|length > 100 %}
+                    ... <a href="#" data-bs-toggle="modal"
+                        data-bs-target="#viewCommentModal{{ comment.CommentId }}">View Full</a>
+                    {% endif %}
                 </td>
-                <td><a href="{{ url_for('main.profile', user_id=comment.UserId) }}">{{ comment.Username }}</a></td>
-                <td><a href="{{ url_for('main.manga_detail', manga_id=comment.MangaId) }}">{{ comment.TitleEn }}</a>
+                <td>
+                    <a href="{{ url_for('main.profile', user_id=comment.UserId) }}" class="text-info">
+                        {{ comment.Username }}
+                    </a>
                 </td>
-                <td>{{ comment.Reason }}</td>
-                <td>{{ comment.report_count }}</td>
+                <td>
+                    <a href="{{ url_for('main.manga_detail', manga_id=comment.MangaId) }}" class="text-warning">
+                        {{ comment.TitleEn }}
+                    </a>
+                </td>
+                <td>{{ comment.Reasons }}</td>
+                <td class="fw-bold text-danger">{{ comment.report_count }}</td>
                 <td>{{ comment.CreatedAt.strftime('%Y-%m-%d %H:%M:%S') }}</td>
                 <td>
                     <button class="btn btn-sm btn-danger"
@@ -23505,18 +23907,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         onclick="confirmAction('{{ comment.CommentId }}', 'ignore')">Ignore</button>
                 </td>
             </tr>
+
             <!-- View Comment Modal -->
             <div class="modal fade" id="viewCommentModal{{ comment.CommentId }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
                             <h5 class="modal-title">Full Comment</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             {{ comment.Content }}
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer border-0">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -23525,42 +23928,48 @@ document.addEventListener('DOMContentLoaded', function () {
             {% endfor %}
         </tbody>
     </table>
+
     <!-- Pagination -->
-    <nav>
-        <ul class="pagination">
+    <nav aria-label="Comments pagination">
+        <ul class="pagination justify-content-center">
             {% if comments.has_prev %}
             <li class="page-item">
-                <a class="page-link"
+                <a class="page-link bg-dark text-white"
                     href="{{ url_for('admin_bp.admin_comments', page=comments.prev_num, status=request.args.get('status', '')) }}">Previous</a>
             </li>
             {% endif %}
             {% for page_num in comments.iter_pages() %}
+            {% if page_num %}
             <li class="page-item {% if page_num == comments.page %}active{% endif %}">
-                <a class="page-link"
+                <a class="page-link bg-dark text-white"
                     href="{{ url_for('admin_bp.admin_comments', page=page_num, status=request.args.get('status', '')) }}">{{
                     page_num }}</a>
             </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link bg-dark">...</span></li>
+            {% endif %}
             {% endfor %}
             {% if comments.has_next %}
             <li class="page-item">
-                <a class="page-link"
+                <a class="page-link bg-dark text-white"
                     href="{{ url_for('admin_bp.admin_comments', page=comments.next_num, status=request.args.get('status', '')) }}">Next</a>
             </li>
             {% endif %}
         </ul>
     </nav>
-    <!-- Modal -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModalLabel">Confirm Action</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+    <!-- Confirm Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Confirm Action</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     Are you sure you want to <span id="actionText"></span> this comment?
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary" id="confirmButton">Confirm</button>
                 </div>
@@ -23584,11 +23993,116 @@ document.addEventListener('DOMContentLoaded', function () {
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_dashboard.html ---
 {% extends "admin_base.html" %}
 {% block title %}Admin Dashboard{% endblock %}
+
 {% block content %}
 <div class="container-fluid">
     <h2>Admin Dashboard</h2>
-    <p>This feature is under development.</p>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <label for="startDate" class="form-label text-white">Start date (for charts 3 & 4)</label>
+            <input id="startDate" type="date" class="form-control" value="{{ start_date }}">
+        </div>
+        <div class="col-md-3">
+            <label for="endDate" class="form-label text-white">End date (for charts 3 & 4)</label>
+            <input id="endDate" type="date" class="form-control" value="{{ end_date }}">
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <button id="applyFilter" class="btn btn-primary">Apply</button>
+        </div>
+        <div class="col-md-4 d-flex align-items-end justify-content-end">
+            <small class="text-muted">Default window for charts 1 & 2: last 30 days</small>
+        </div>
+    </div>
+
+    <div class="row gy-4">
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>New users (last 30 days)</h5>
+                <div id="chart_new_users" style="height:360px;"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>User reading activity (last 30 days)</h5>
+                <div id="chart_reading_activity" style="height:360px;"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>Top manga by distinct users (date range)</h5>
+                <div id="chart_top_manga" style="height:420px;"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card bg-dark text-white p-3">
+                <h5>Top tags by group (Format / Theme / Genre)</h5>
+                <div id="chart_top_tags" style="height:420px;"></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- EMBED JSON figures safely to avoid JS parser errors in editors -->
+<script type="application/json" id="fig-new-users">{{ fig_new_users | tojson }}</script>
+<script type="application/json" id="fig-reading">{{ fig_reading_activity | tojson }}</script>
+<script type="application/json" id="fig-top-manga">{{ fig_top_manga | tojson }}</script>
+<script type="application/json" id="fig-top-tags">{{ fig_top_tags | tojson }}</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+<script>
+    // helper to parse embedded JSON safely
+    function loadFigJSON(id) {
+        const el = document.getElementById(id);
+        if (!el) return null;
+        try {
+            return JSON.parse(el.textContent);
+        } catch (e) {
+            console.error('Failed to parse figure JSON', id, e);
+            return null;
+        }
+    }
+
+    const figNewUsers = loadFigJSON('fig-new-users');
+    const figReading = loadFigJSON('fig-reading');
+    const figTopManga = loadFigJSON('fig-top-manga');
+    const figTopTags = loadFigJSON('fig-top-tags');
+
+    if (figNewUsers) Plotly.newPlot('chart_new_users', figNewUsers.data, figNewUsers.layout, { responsive: true });
+    if (figReading) Plotly.newPlot('chart_reading_activity', figReading.data, figReading.layout, { responsive: true });
+    if (figTopManga) Plotly.newPlot('chart_top_manga', figTopManga.data, figTopManga.layout, { responsive: true });
+    if (figTopTags) Plotly.newPlot('chart_top_tags', figTopTags.data, figTopTags.layout, { responsive: true });
+
+    // Apply date filter (slicer)
+    document.getElementById('applyFilter').addEventListener('click', function () {
+        const start = document.getElementById('startDate').value;
+        const end = document.getElementById('endDate').value;
+        const params = new URLSearchParams(window.location.search);
+        if (start) params.set('start_date', start); else params.delete('start_date');
+        if (end) params.set('end_date', end); else params.delete('end_date');
+        // reload with params
+        window.location.search = params.toString();
+    });
+
+    // if template provided start/end, ensure inputs are filled (helps when editor cached)
+    (function initDateInputs() {
+        try {
+            const s = "{{ start_date }}";
+            const e = "{{ end_date }}";
+            const si = document.getElementById('startDate');
+            const ei = document.getElementById('endDate');
+            if (si && !si.value && s) si.value = s;
+            if (ei && !ei.value && e) ei.value = e;
+        } catch (err) {
+            // ignore
+        }
+    })();
+</script>
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_manga.html ---
 {% extends "admin_base.html" %}
@@ -23632,42 +24146,64 @@ document.addEventListener('DOMContentLoaded', function () {
                         {{ 'Active' if not user.IsLocked else 'Locked' }}
                     </span>
                 </td>
-                <td>{{ user.CreatedAt.strftime('%Y-%m-%d %H:%M:%S') }}</td>
                 <td>
-                    <a href="{{ url_for('main.profile', user_id=user.UserId) }}" class="btn btn-sm btn-info">View</a>
-                    <button class="btn btn-sm btn-{{ 'danger' if not user.IsLocked else 'success' }}"
-                        onclick="confirmAction('{{ user.UserId }}', '{{ 'ban' if not user.IsLocked else 'unban' }}')">
-                        {{ 'Ban' if not user.IsLocked else 'Unban' }}
+                    {{ user.CreatedAt.strftime('%Y-%m-%d %H:%M:%S') if user.CreatedAt else 'N/A' }}
+                </td>
+                <td>
+                    <a href="{{ url_for('admin_bp.view_user', user_id=user.UserId) }}"
+                        class="btn btn-sm btn-info">View</a>
+
+                    {% if not user.IsLocked %}
+                    <!-- Nếu user đang active, hiển thị nút Ban -->
+                    <button class="btn btn-sm btn-danger" data-user-id="{{ user.UserId }}" data-action="ban"
+                        onclick="confirmAction(this.dataset.userId, this.dataset.action)">
+                        Ban
                     </button>
+                    {% else %}
+                    <!-- Nếu user đã locked, hiển thị nút Unban -->
+                    <button class="btn btn-sm btn-success" data-user-id="{{ user.UserId }}" data-action="unban"
+                        onclick="confirmAction(this.dataset.userId, this.dataset.action)">
+                        Unban
+                    </button>
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+
     <!-- Pagination -->
     <nav>
         <ul class="pagination">
             {% if users.has_prev %}
             <li class="page-item">
                 <a class="page-link"
-                    href="{{ url_for('admin_bp.admin_users', page=users.prev_num, q=request.args.get('q', '')) }}">Previous</a>
+                    href="{{ url_for('admin_bp.admin_users', page=users.prev_num, q=request.args.get('q', '')) }}">
+                    Previous
+                </a>
             </li>
             {% endif %}
+
             {% for page_num in users.iter_pages() %}
             <li class="page-item {% if page_num == users.page %}active{% endif %}">
                 <a class="page-link"
-                    href="{{ url_for('admin_bp.admin_users', page=page_num, q=request.args.get('q', '')) }}">{{ page_num
-                    }}</a>
+                    href="{{ url_for('admin_bp.admin_users', page=page_num, q=request.args.get('q', '')) }}">
+                    {{ page_num }}
+                </a>
             </li>
             {% endfor %}
+
             {% if users.has_next %}
             <li class="page-item">
                 <a class="page-link"
-                    href="{{ url_for('admin_bp.admin_users', page=users.next_num, q=request.args.get('q', '')) }}">Next</a>
+                    href="{{ url_for('admin_bp.admin_users', page=users.next_num, q=request.args.get('q', '')) }}">
+                    Next
+                </a>
             </li>
             {% endif %}
         </ul>
     </nav>
+
     <!-- Modal -->
     <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -23688,8 +24224,39 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
+
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/admin_users.js') }}"></script>
+{% endblock %}
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_user_profile.html ---
+{% extends "admin_base.html" %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Profile of {{ user.Username }}</h2>
+    <p><strong>Email:</strong> {{ user.Email }}</p>
+    <p><strong>Role:</strong> {{ user.Role }}</p>
+    <p><strong>Status:</strong> {{ 'Active' if not user.IsLocked else 'Locked' }}</p>
+    <p><strong>Created At:</strong> {{ user.CreatedAt }}</p>
+
+    <hr>
+    <h3>User Charts</h3>
+
+    {% if charts is mapping %}
+    {% set chart1 = charts.chart1 %}
+    {% set chart2 = charts.chart2 %}
+    {% set chart3 = charts.chart3 %}
+    {% set chart4 = charts.chart4 %}
+    {% set chart5 = charts.chart5 %}
+    {% set chart6 = charts.chart6 %}
+    {% include "profile_dashboard.html" %}
+    {% else %}
+    <div>
+        {{ charts[0]|safe if charts and charts|length > 0 else '' }}
+        {{ charts[1]|safe if charts and charts|length > 1 else '' }}
+    </div>
+    {% endif %}
+</div>
 {% endblock %}
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
 {% extends "base.html" %}
@@ -25596,6 +26163,155 @@ else:
 cursor.close()
 conn.close()
 print("Done.")
+
+--- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\Simulation\multi-users.py ---
+import pyodbc
+import uuid
+import random
+import math
+from datetime import datetime, timedelta
+
+# ===== Connection =====
+DRIVER = "ODBC Driver 17 for SQL Server"
+SERVER = "HEDI-SNOWY\\SQLEXPRESS"
+DATABASE = "MangaLibrary"
+connection_string = f"DRIVER={{{DRIVER}}};SERVER={SERVER};DATABASE={DATABASE};Trusted_Connection=yes;"
+
+conn = pyodbc.connect(connection_string)
+cursor = conn.cursor()
+
+# ===== Load manga & chapters =====
+print("Loading manga and related data...")
+
+cursor.execute("""
+SELECT m.MangaId, s.Follows
+FROM Manga m
+LEFT JOIN MangaStatistics s ON m.MangaId = s.MangaId
+""")
+mangas = cursor.fetchall()
+
+cursor.execute("SELECT MangaId, ChapterId FROM Chapter")
+chapter_rows = cursor.fetchall()
+chapter_dict = {}
+for row in chapter_rows:
+    chapter_dict.setdefault(row.MangaId, []).append(row.ChapterId)
+
+cursor.execute("""
+SELECT mt.MangaId, t.TagId
+FROM MangaTag mt
+JOIN Tag t ON mt.TagId = t.TagId
+""")
+tag_rows = cursor.fetchall()
+tag_count = {}
+manga_tags = {}
+for m_id, t_id in tag_rows:
+    manga_tags.setdefault(m_id, []).append(t_id)
+    tag_count[t_id] = tag_count.get(t_id, 0) + 1
+
+top_tags = set([tid for tid, _ in sorted(tag_count.items(), key=lambda x: x[1], reverse=True)[:10]])
+
+# ===== Prepare weighted manga list =====
+weighted_mangas = []
+for m in mangas:
+    m_id, follows = m.MangaId, m.Follows or 0
+    if m_id not in chapter_dict:
+        continue
+    weight = 1 + math.log1p(follows)
+    if set(manga_tags.get(m_id, [])) & top_tags:
+        weight *= 1.5
+    weighted_mangas.append((m_id, weight))
+
+if not weighted_mangas:
+    raise RuntimeError("No manga with chapters found!")
+
+total_weight = sum(w for _, w in weighted_mangas)
+weighted_probs = [w / total_weight for _, w in weighted_mangas]
+
+# ===== Simulation parameters =====
+USER_COUNT = 300
+users_rows = []
+reading_history_rows = []
+rating_rows = []
+comment_rows = []
+
+today = datetime.now()
+
+print("Generating users and behaviors...")
+
+for i in range(USER_COUNT):
+    user_id = str(uuid.uuid4())
+    username = f"user_{i+1}"
+    email = f"user{i+1}@example.com"
+    password_hash = "fakehash123"
+    created_at = today - timedelta(days=random.randint(0, 30))
+
+    users_rows.append((user_id, username, email, password_hash, "user", created_at))
+
+    # Each user reads 5–30 manga
+    manga_sample_count = random.randint(5, 30)
+    manga_ids = random.choices([m for m, _ in weighted_mangas], weights=weighted_probs, k=manga_sample_count)
+
+    for manga_id in set(manga_ids):  # avoid duplicate manga for same user
+        if manga_id not in chapter_dict:
+            continue
+        chapters = chapter_dict[manga_id]
+        # Random 2–10 chapters
+        chapter_sample = random.sample(chapters, min(len(chapters), random.randint(2, 10)))
+
+        # Insert ReadingHistory for each chapter
+        for chap in chapter_sample:
+            history_id = str(uuid.uuid4())
+            last_page = random.randint(1, 30)
+            read_at = today - timedelta(days=random.randint(0, 30), minutes=random.randint(0, 1440))
+            reading_history_rows.append((history_id, user_id, manga_id, chap, last_page, read_at))
+
+        # Insert Rating (1 per manga per user)
+        rating_id = str(uuid.uuid4())
+        score = max(1, min(10, int(random.normalvariate(7, 2))))
+        rating_rows.append((rating_id, user_id, manga_id, score))
+
+        # Insert Comment (40% chance)
+        if random.random() < 0.4:
+            comment_id = str(uuid.uuid4())
+            content = f"User {username} says something about {manga_id[:6]}"
+            created_at = today - timedelta(days=random.randint(0, 30), minutes=random.randint(0, 1440))
+            like_count = max(0, int(random.normalvariate(3, 2)))
+            dislike_count = max(0, int(random.normalvariate(1, 1)))
+            comment_rows.append((comment_id, user_id, manga_id, random.choice(chapters), content,
+                                 created_at, created_at, 0, like_count, dislike_count))
+
+# ===== Insert into DB =====
+cursor.fast_executemany = True
+
+print("Inserting Users...")
+cursor.executemany("""
+INSERT INTO [User] (UserId, Username, Email, PasswordHash, Role, CreatedAt)
+VALUES (?, ?, ?, ?, ?, ?)
+""", users_rows)
+
+print("Inserting ReadingHistory...")
+cursor.executemany("""
+INSERT INTO ReadingHistory (HistoryId, UserId, MangaId, ChapterId, LastPageRead, ReadAt)
+VALUES (?, ?, ?, ?, ?, ?)
+""", reading_history_rows)
+
+print("Inserting Ratings...")
+cursor.executemany("""
+INSERT INTO Rating (RatingId, UserId, MangaId, Score)
+VALUES (?, ?, ?, ?)
+""", rating_rows)
+
+print("Inserting Comments...")
+cursor.executemany("""
+INSERT INTO Comment (CommentId, UserId, MangaId, ChapterId, Content, CreatedAt, UpdatedAt, IsDeleted, LikeCount, DislikeCount)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""", comment_rows)
+
+conn.commit()
+cursor.close()
+conn.close()
+
+print(f"Done! Inserted {len(users_rows)} users, {len(reading_history_rows)} histories, {len(rating_rows)} ratings, {len(comment_rows)} comments.")
 
 --- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\Simulation\single-user.py ---
 import pyodbc

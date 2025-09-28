@@ -36,11 +36,20 @@
                 <td>
                     <a href="{{ url_for('admin_bp.view_user', user_id=user.UserId) }}"
                         class="btn btn-sm btn-info">View</a>
-                    <button class="btn btn-sm btn-{{ 'danger' if not user.IsLocked else 'success' }}"
-                        data-user-id="{{ user.UserId }}" data-action="{{ 'ban' if not user.IsLocked else 'unban' }}"
+
+                    {% if not user.IsLocked %}
+                    <!-- Nếu user đang active, hiển thị nút Ban -->
+                    <button class="btn btn-sm btn-danger" data-user-id="{{ user.UserId }}" data-action="ban"
                         onclick="confirmAction(this.dataset.userId, this.dataset.action)">
-                        {{ 'Ban' if not user.IsLocked else 'Unban' }}
+                        Ban
                     </button>
+                    {% else %}
+                    <!-- Nếu user đã locked, hiển thị nút Unban -->
+                    <button class="btn btn-sm btn-success" data-user-id="{{ user.UserId }}" data-action="unban"
+                        onclick="confirmAction(this.dataset.userId, this.dataset.action)">
+                        Unban
+                    </button>
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
@@ -53,20 +62,27 @@
             {% if users.has_prev %}
             <li class="page-item">
                 <a class="page-link"
-                    href="{{ url_for('admin_bp.admin_users', page=users.prev_num, q=request.args.get('q', '')) }}">Previous</a>
+                    href="{{ url_for('admin_bp.admin_users', page=users.prev_num, q=request.args.get('q', '')) }}">
+                    Previous
+                </a>
             </li>
             {% endif %}
+
             {% for page_num in users.iter_pages() %}
             <li class="page-item {% if page_num == users.page %}active{% endif %}">
                 <a class="page-link"
-                    href="{{ url_for('admin_bp.admin_users', page=page_num, q=request.args.get('q', '')) }}">{{ page_num
-                    }}</a>
+                    href="{{ url_for('admin_bp.admin_users', page=page_num, q=request.args.get('q', '')) }}">
+                    {{ page_num }}
+                </a>
             </li>
             {% endfor %}
+
             {% if users.has_next %}
             <li class="page-item">
                 <a class="page-link"
-                    href="{{ url_for('admin_bp.admin_users', page=users.next_num, q=request.args.get('q', '')) }}">Next</a>
+                    href="{{ url_for('admin_bp.admin_users', page=users.next_num, q=request.args.get('q', '')) }}">
+                    Next
+                </a>
             </li>
             {% endif %}
         </ul>
@@ -92,6 +108,7 @@
     </div>
 </div>
 {% endblock %}
+
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/admin_users.js') }}"></script>
 {% endblock %}

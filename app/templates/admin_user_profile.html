@@ -10,9 +10,20 @@
 
     <hr>
     <h3>User Charts</h3>
+
+    {% if charts is mapping %}
+    {% set chart1 = charts.chart1 %}
+    {% set chart2 = charts.chart2 %}
+    {% set chart3 = charts.chart3 %}
+    {% set chart4 = charts.chart4 %}
+    {% set chart5 = charts.chart5 %}
+    {% set chart6 = charts.chart6 %}
+    {% include "profile_dashboard.html" %}
+    {% else %}
     <div>
-        {{ charts[0]|safe }}
-        {{ charts[1]|safe }}
+        {{ charts[0]|safe if charts and charts|length > 0 else '' }}
+        {{ charts[1]|safe if charts and charts|length > 1 else '' }}
     </div>
+    {% endif %}
 </div>
 {% endblock %}

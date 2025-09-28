@@ -52,13 +52,19 @@ def login():
             or_(User.Email == username_or_email, User.Username == username_or_email)
         ).first()
 
+        # Kiểm tra tồn tại + mật khẩu
         if not user or not check_password_hash(user.PasswordHash, password):
             flash("Invalid username/email or password.")
             return redirect(url_for("auth.login"))
 
+        # Kiểm tra nếu user bị ban (IsLocked=True)
+        if user.IsLocked:
+            flash("Your account has been banned. Please contact support.")
+            return redirect(url_for("auth.login"))
+
+        # Nếu hợp lệ thì login
         login_user(user)
 
-        # BỎ flash("Login successful!") theo yêu cầu
         # Điều hướng theo role
         if (user.Role or "").lower() == "admin":
             return redirect(url_for("admin_bp.admin_dashboard"))
