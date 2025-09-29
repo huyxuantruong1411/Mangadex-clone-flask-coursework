@@ -1,8 +1,9 @@
 from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
-from flask_login import current_user
+from flask_login import current_user, login_required
 from app import db
+from app.mangadex_api import search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
 from app.models import (
-    User, Comment, Report, Manga, ReadingHistory,
+    Chapter, Cover, User, Comment, Report, Manga, ReadingHistory,
     MangaTag, Tag
 )
 from functools import wraps
@@ -10,6 +11,9 @@ from datetime import datetime, timedelta
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import json
+import pyodbc
+import requests  # Thêm import requests
+from config import Config
 
 admin_bp = Blueprint('admin_bp', __name__)
 
@@ -351,14 +355,96 @@ def admin_comments():
 # ==========================
 # Quản lý manga
 # ==========================
-@admin_bp.route('/admin/manga')
+@admin_bp.route('/manga', methods=['GET'])
+@login_required
 @admin_required
-def admin_manga():
+def manga():
     return render_template('admin_manga.html')
+
+@admin_bp.route('/manga/search', methods=['POST'])
+@login_required
+@admin_required
+def manga_search():
+    data = request.get_json()
+    mode = data.get('mode')
+    query = data.get('query')
+
+    if not mode or not query:
+        return jsonify({'error': 'Thiếu mode hoặc query'}), 400
+
+    try:
+        if mode == 'title':
+            mangas = search_manga(query)
+        elif mode == 'uuid':
+            response = request_api(f"/manga/{query.lower()}", params={"includes[]": ["cover_art", "author", "artist"]})
+            mangas = [response['data']] if response.get('data') else []
+        else:
+            return jsonify({'error': 'Mode không hợp lệ'}), 400
+
+        if not mangas:
+            return jsonify({'mangas': [], 'message': 'Không tìm thấy manga'})
+
+        results = []
+        for manga in mangas:
+            manga_id = str(manga['id']).upper()
+            manga_db = Manga.query.filter_by(MangaId=manga_id).first()
+            chapters_db = Chapter.query.filter_by(MangaId=manga_id).count()
+            covers_db = Cover.query.filter_by(manga_id=manga_id).count()
+            updated_at = manga_db.UpdatedAt.strftime('%Y-%m-%d %H:%M:%S') if manga_db and manga_db.UpdatedAt else None
+
+            chapters_api = len(fetch_chapters(manga_id))
+            covers_api = len(fetch_covers(manga_id))
+
+            results.append({
+                'manga_id': manga_id,
+                'title': manga['attributes']['title'].get('en', 'Unknown'),
+                'chapters_db': chapters_db,
+                'chapters_api': chapters_api,
+                'covers_db': covers_db,
+                'covers_api': covers_api,
+                'updated_at': updated_at,
+                'in_db': manga_db is not None
+            })
+
+        return jsonify({'mangas': results})
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': 'Lỗi khi gọi API MangaDex: ' + str(e)}), 503
+    except pyodbc.Error as e:
+        return jsonify({'error': 'Lỗi cơ sở dữ liệu: ' + str(e)}), 500
+    except Exception as e:
+        return jsonify({'error': 'Lỗi không xác định: ' + str(e)}), 500
+
+@admin_bp.route('/manga/action', methods=['POST'])
+@login_required
+@admin_required
+def manga_action():
+    data = request.get_json()
+    manga_id = data.get('manga_id')
+    action = data.get('action')
+
+    if not manga_id or not action:
+        return jsonify({'error': 'Thiếu manga_id hoặc action'}), 400
+
+    try:
+        manga_data = request_api(f"/manga/{manga_id.lower()}", params={"includes[]": ["cover_art", "author", "artist"]})
+        if not manga_data.get('data'):
+            return jsonify({'error': 'Manga không tồn tại trên MangaDex'}), 404
+        manga_data = manga_data['data']
+        stats_dict = fetch_statistics([manga_id])
+        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        map_manga_to_db(manga_data, stats_dict, conn)
+        conn.close()
+        return jsonify({'message': f'Manga {manga_id} {action} thành công'})
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': 'Lỗi khi gọi API MangaDex: ' + str(e)}), 503
+    except pyodbc.Error as e:
+        return jsonify({'error': 'Lỗi cơ sở dữ liệu: ' + str(e)}), 500
+    except Exception as e:
+        return jsonify({'error': 'Lỗi không xác định: ' + str(e)}), 500
 
 
 # ==========================
-# Quản lý creators
+# Quản lý Creators
 # ==========================
 @admin_bp.route('/admin/creators')
 @admin_required

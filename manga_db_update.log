@@ -1,0 +1,225 @@
+2025-09-30 01:55:16,822 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 01:55:16,822 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 01:55:16,825 - INFO -  * Restarting with stat
+2025-09-30 01:55:17,664 - WARNING -  * Debugger is active!
+2025-09-30 01:55:17,681 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 01:55:21,983 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:21] "GET / HTTP/1.1" 200 -
+2025-09-30 01:55:22,439 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:22,520 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:22,523 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:23,042 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:23] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-09-30 01:55:23,044 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:23] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-30 01:55:28,666 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:28] "[32mGET /admin/creators HTTP/1.1[0m" 302 -
+2025-09-30 01:55:29,590 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:29] "GET /home HTTP/1.1" 200 -
+2025-09-30 01:55:44,066 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 01:55:44,141 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:44,144 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 01:55:44,155 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 01:55:50,996 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:50] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 01:55:54,485 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+2025-09-30 01:55:54,661 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-30 01:55:54,694 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-30 01:55:54,762 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=2aNaIvYDmMo6HRoSOyZy HTTP/1.1" 200 -
+2025-09-30 01:55:54,787 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-09-30 02:00:02,856 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:00:02,918 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:02,921 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:02,924 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:03,175 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 02:00:05,648 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:00:05,703 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,708 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,710 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,717 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 02:00:27,504 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:27] "[33mPOST /admin/manga/search HTTP/1.1[0m" 404 -
+2025-09-30 02:03:43,945 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:43] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:03:44,004 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,009 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,012 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,066 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 02:03:51,888 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no hana
+2025-09-30 02:03:53,631 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:03:54,066 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,282 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,283 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,944 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no hana
+2025-09-30 02:03:57,067 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:03:57,109 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,257 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,261 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,369 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:04:00,157 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:04:01,386 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:04:01,655 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:04:01,657 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:04:01,761 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,017 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,019 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,049 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:04:05,769 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:04:05,771 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:04:05,886 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:07,716 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:04:07,802 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:07,805 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:09,810 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:04:10,940 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:04:11,115 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:04:12,331 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:04:12,559 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:04:13,861 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:04:13,921 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:04:15,188 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:04:15,335 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:04:16,753 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:04:17,125 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:04:17,692 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:04:17,784 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:17,785 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:17,789 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:18,595 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:04:19,096 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:04:19,766 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 02:04:19,836 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,845 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,851 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,859 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:20,377 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:04:20,915 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:04:21,601 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 02:04:21,679 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,694 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,698 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:22,099 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:04:22,598 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:04:23,267 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:04:23,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,330 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,334 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,337 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,386 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:04:24,798 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:04:24,963 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:24] "GET /admin/creators HTTP/1.1" 200 -
+2025-09-30 02:04:25,020 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,023 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,024 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,086 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:04:25,087 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:25,146 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:26,619 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-09-30 02:04:26,634 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 02:04:26,737 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:26,739 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 02:04:26,763 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 02:04:27,693 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:04:27,695 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:27,783 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:28,316 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:28,316 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,048 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,049 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,911 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:04:31,912 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,988 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:34,505 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:34] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 02:04:34,627 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:04:34,630 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:34,686 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:35,185 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:35,188 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,327 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:04:38,328 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,412 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:38,413 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:38,428 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:39,199 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:04:39,200 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:39,278 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,008 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,011 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,987 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:04:41,988 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:42,041 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:43,638 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 02:04:43,715 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,726 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,734 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,753 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,875 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:43,879 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:44,648 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:04:44,925 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:44] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 02:04:45,037 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,047 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,052 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,057 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:46,561 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:04:46,562 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:46,574 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:46] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:04:47,067 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:04:47,138 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,147 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,157 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,166 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,722 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:04:49,033 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:04:49,035 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:49,043 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:49] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:05:41,870 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 02:05:41,871 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 02:05:41,873 - INFO -  * Restarting with stat
+2025-09-30 02:05:42,910 - WARNING -  * Debugger is active!
+2025-09-30 02:05:42,913 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 02:05:44,142 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:05:44,322 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,324 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,326 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:50,897 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: aku no hana
+2025-09-30 02:05:52,305 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:05:52,740 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:54,152 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:54,154 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:57,449 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:05:58,816 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:05:59,757 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:05:59,758 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:59,806 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:00,585 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:00,586 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:02,154 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:06:03,028 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:06:03,885 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:06:05,241 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:06:06,291 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:06:07,488 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:06:08,585 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:06:09,498 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:06:10,717 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:06:11,598 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:06:13,258 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:06:13,259 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:13,304 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:14,684 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:14,685 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:16,153 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:06:16,155 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:16,215 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:17,577 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:17,578 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:19,333 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:06:19,335 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:19,408 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:20,089 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:20,089 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:22,438 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:06:23,685 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:06:23,686 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:23,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:06:23] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:20:01,346 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 02:20:02,628 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 02:20:02,646 - INFO - 127.0.0.1 - - [30/Sep/2025 02:20:02] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -

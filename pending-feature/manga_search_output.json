@@ -1,0 +1,441 @@
+[
+    {
+        "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+        "Type": "manga",
+        "TitleEn": "Ryuujin to Iinazuke no Akai Hanajirushi",
+        "OriginalLanguage": "ja",
+        "LastChapter": "",
+        "PublicationDemographic": "shoujo",
+        "Status": "ongoing",
+        "Year": 2023,
+        "ContentRating": "safe",
+        "CreatedAt": "2023-05-27T10:06:50+00:00",
+        "UpdatedAt": "2025-07-05T07:21:37+00:00",
+        "AltTitles": [
+            {
+                "ja": "龍神と許嫁の赤い花印"
+            }
+        ],
+        "Descriptions": {
+            "en": "The town of Ryuuka, a place that connects humans and the Dragon Gods that reside in the heavens. Mito, a girl born into the Hoshina clan, has the \"flower seal,\" the mark of a dragon god's mate, but is mistreated as an abomination.",
+            "ja": "手の甲に赤い椿の形のアザを持つ少女・ミト。本来であれば龍神の伴侶の証として祝福されるべきその証は、ミトが生まれ育った村では過去の因縁から凶兆として忌み嫌われていた。村人からは『忌み子』と呼ばれ、虐げられる日々を送っていたミト。彼女にとって唯一の救いは幼い頃から夢に現れる美しい男性・波琉と過ごす時間だった――。\n\n一方で、同じく夢でしか会えないミトが気になる波琉。実は彼は、天界の龍神たちの頂点に君臨する4人の龍神の一人『紫紺の王』と呼ばれる龍神で――？感情の起伏が少なく人間に興味を示さないはずの龍神だけど、何故かミトのことだけは忘れられず、会いたい気持ちを募らせていた波琉はついに天界を出て人間の世界にミトを迎えにいくことに！"
+        },
+        "Tags": [
+            {
+                "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+                "name": "Monsters"
+            },
+            {
+                "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                "name": "Romance"
+            },
+            {
+                "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                "name": "Drama"
+            },
+            {
+                "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                "name": "Fantasy"
+            },
+            {
+                "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+                "name": "Adaptation"
+            }
+        ],
+        "Creators": [
+            {
+                "CreatorId": "61f9be4b-219e-47a8-ae9e-54034d462b8c",
+                "Type": "author",
+                "Name": "Kureha"
+            },
+            {
+                "CreatorId": "fb47c689-da87-47de-b2bf-57e6665b96ad",
+                "Type": "artist",
+                "Name": "Nakano Mayaka"
+            }
+        ],
+        "CreatorRelationships": [
+            {
+                "CreatorId": "61f9be4b-219e-47a8-ae9e-54034d462b8c",
+                "RelatedId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+                "RelatedType": "manga"
+            },
+            {
+                "CreatorId": "fb47c689-da87-47de-b2bf-57e6665b96ad",
+                "RelatedId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+                "RelatedType": "manga"
+            }
+        ],
+        "Covers": [
+            {
+                "cover_id": "2ecb6914-e58f-4f10-8656-27770a7bad33",
+                "url": "https://uploads.mangadex.org/covers/4af41067-6c2c-4832-b784-a74a45461fe5/e1cbacda-25de-4a33-bd23-3fddf4480d8f.jpg",
+                "fileName": "e1cbacda-25de-4a33-bd23-3fddf4480d8f.jpg"
+            }
+        ]
+    },
+    {
+        "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+        "Type": "manga",
+        "TitleEn": "The Flowers of Evil",
+        "OriginalLanguage": "ja",
+        "LastChapter": "57",
+        "PublicationDemographic": "shounen",
+        "Status": "completed",
+        "Year": 2009,
+        "ContentRating": "suggestive",
+        "CreatedAt": "2018-01-27T00:52:40+00:00",
+        "UpdatedAt": "2024-10-22T06:47:36+00:00",
+        "AltTitles": [
+            {
+                "pt-br": "As Flores do Mal"
+            },
+            {
+                "vi": "Những Bông Hoa Ác"
+            },
+            {
+                "id": "Bunga-Bunga dari Kejahatan"
+            },
+            {
+                "de": "Die Blumen des Bösen"
+            },
+            {
+                "tr": "Kötülük Çiçekleri"
+            },
+            {
+                "es-la": "Las Flores Del Mal"
+            },
+            {
+                "fr": "Les Fleurs du mal"
+            },
+            {
+                "ja-ro": "Aku no Hana"
+            },
+            {
+                "uk": "Квіти Зла"
+            },
+            {
+                "ar": "زهور الشر"
+            },
+            {
+                "zh": "恶之华"
+            },
+            {
+                "ja": "惡の華"
+            },
+            {
+                "zh-hk": "惡之華"
+            },
+            {
+                "ko": "악의 꽃"
+            },
+            {
+                "id": "Aku no Hana: Kembang Jahanam"
+            }
+        ],
+        "Descriptions": {
+            "en": "Kasuga Takao is a boy who loves reading books, particularly Baudelaire's The Flowers of Evil. A girl at his school, Saeki Nanako, is his muse and his Venus, and he admires her from a distance. One day, he forgets his copy of The Flowers of Evil in the classroom and runs back alone to pick it up. In the classroom, he finds not only his book but Saeki's gym uniform. On a mad impulse, he steals it.  \n  \nNow everyone knows \"some pervert\" stole Saeki's uniform, and Kasuga is dying with shame and guilt. Furthermore, the weird, creepy, and friendless girl of the class, Nakamura, saw him take the uniform. Instead of revealing it was him, she recognizes his kindred deviant spirit and uses her knowledge to take control of his life. Will it be possible for Kasuga to get closer to Saeki, despite Nakamura's meddling and his dark secret? What exactly does Nakamura intend to do with him?\n\n\n---\nOfficial Release:\n- [Indonesian release](https://elexmedia.id/produk/serial/aku%20no%20hana-kembang%20jahanam) by Level Comics as **Aku no Hana: Kembang Jahanam** (2023)",
+            "uk": "Такао Касуга це простий школяр, який любить читати книжки, в особливості збірку поезій Бодлера \"Квіти Зла\". Він трохи зневажає своїх однокласників за те, що вони не читають книжки, а також таємно закоханий в прекрасну і милу відмінницю Нанако Саекі. Але з ними в класі вчиться повна протилежність до неї, Сава Накамура, груба і замкнена дівчина, яка зневажає і ненавидить усіх навколо неї.  \n  \nОдного дня у житті Такао відбувається епізод, який назавжди змінює його життя. Побачивши у Такао споріднену душу, Накамура намагається розкрити справжнє єство Такао, хоче він того, чи ні.",
+            "es-la": "Takao Kasuga es un niño solitario que pasa sus días inmerso en libros para escapar de su frustración con la vida. Su única fuente de alegría es la hermosa Saeki, a quien admira en secreto desde lejos. Sin embargo, la obsesión de Takao va demasiado lejos un día cuando, en un momento de locura emocional, él roba la ropa de gimnasio de la niña y se la lleva a casa con él. Peor aún, su terrible obra es vista por Sawa Nakamura, una misteriosa marginada que se sienta detrás de él en clase y amenaza con revelar el secreto del niño a menos que prometa celebrar un contrato con ella. Al principio, parece que Sawa solo quiere un poco de compañía, pero pronto queda claro que este \"contrato\" implica más que simples charlas por la tarde. De hecho, Takao está a punto de descubrir cuán peligroso es su vínculo con Sawa y cómo amenaza con destrozar todo, su vida, su amor e incluso su cordura, aparte.",
+            "pt-br": "Takao Kasuga é um estudante do ensino médio insociável que adora livros; em particular, Les Fleurs du Mal, de Charles Baudelaire. Ele também tem uma queda pelo ídolo de sua classe, a doce Nanako Saeki. Em forte contraste com ela, Sawa Nakamura é uma garota insolente e desagradável que não tem nenhuma preocupação com a escola. Um dia, Takao esquece de levar seu livro para casa. Ele volta à escola para recuperá-lo, mas fica parado quando encontra as roupas de ginástica recém-usadas de Nanako caídas no chão. Um desejo estranho consome Takao e, como um pervertido perverso, ele os rouba. Aku no Hana é uma história convincente de amadurecimento, centrada nos pensamentos, sentimentos e relacionamentos de Takao, enquanto ele tenta viver uma vida normal com a culpa de seu crime que pesa sobre ele. Sawa, no entanto, que testemunhou o roubo de Takao, tem outros planos para ele ..."
+        },
+        "Tags": [
+            {
+                "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+                "name": "Psychological"
+            },
+            {
+                "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                "name": "Romance"
+            },
+            {
+                "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
+                "name": "Philosophical"
+            },
+            {
+                "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                "name": "Drama"
+            },
+            {
+                "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+                "name": "School Life"
+            },
+            {
+                "id": "cdad7e68-1419-41dd-bdce-27753074a640",
+                "name": "Horror"
+            },
+            {
+                "id": "da2d50ca-3018-4cc0-ac7a-6b7d472a29ea",
+                "name": "Delinquents"
+            },
+            {
+                "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+                "name": "Slice of Life"
+            }
+        ],
+        "Creators": [
+            {
+                "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+                "Type": "author",
+                "Name": "Oshimi Shuuzou"
+            },
+            {
+                "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+                "Type": "artist",
+                "Name": "Oshimi Shuuzou"
+            }
+        ],
+        "CreatorRelationships": [
+            {
+                "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+                "RelatedId": "01882116-3e45-4d67-b932-34f60d360086",
+                "RelatedType": "manga"
+            },
+            {
+                "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+                "RelatedId": "01882116-3e45-4d67-b932-34f60d360086",
+                "RelatedType": "manga"
+            }
+        ],
+        "Covers": [
+            {
+                "cover_id": "abc139f2-c855-4db4-aed8-cf8081e90202",
+                "url": "https://uploads.mangadex.org/covers/01882116-3e45-4d67-b932-34f60d360086/17165396-4a7d-4466-ba9f-ddfe8708890d.jpg",
+                "fileName": "17165396-4a7d-4466-ba9f-ddfe8708890d.jpg"
+            }
+        ]
+    },
+    {
+        "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+        "Type": "manga",
+        "TitleEn": "That Time Me and My Friend Tried Raising Our Skirts 10cm Above the Knee",
+        "OriginalLanguage": "ja",
+        "LastChapter": "",
+        "PublicationDemographic": null,
+        "Status": "completed",
+        "Year": 2021,
+        "ContentRating": "suggestive",
+        "CreatedAt": "2021-11-26T12:28:30+00:00",
+        "UpdatedAt": "2023-04-03T16:21:30+00:00",
+        "AltTitles": [
+            {
+                "ja": "友達とスカート丈膝上10センチに挑戦した時の話"
+            },
+            {
+                "ja-ro": "Tomodachi to Sukaato Take Hizaue 10-senchi ni Chousen Shita Toki no Hanashi"
+            },
+            {
+                "id": "Waktu Aku dan Temanku Mencoba Menaikkan Rok Kami 10cm Di Atas Lutut"
+            }
+        ],
+        "Descriptions": {
+            "en": "Oneshot posted on twitter by Aweida."
+        },
+        "Tags": [
+            {
+                "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+                "name": "Oneshot"
+            },
+            {
+                "id": "a3c67850-4684-404e-9b7f-c69850ee5da6",
+                "name": "Girls' Love"
+            },
+            {
+                "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+                "name": "Web Comic"
+            },
+            {
+                "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+                "name": "Slice of Life"
+            }
+        ],
+        "Creators": [
+            {
+                "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+                "Type": "author",
+                "Name": "Aweida"
+            },
+            {
+                "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+                "Type": "artist",
+                "Name": "Aweida"
+            }
+        ],
+        "CreatorRelationships": [
+            {
+                "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+                "RelatedId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+                "RelatedType": "manga"
+            },
+            {
+                "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+                "RelatedId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+                "RelatedType": "manga"
+            }
+        ],
+        "Covers": [
+            {
+                "cover_id": "ff8a85d0-1c6a-4f0b-ac6d-8038f6d5f811",
+                "url": "https://uploads.mangadex.org/covers/f834e8bf-b8e5-4f70-93be-10990ab2f665/c2b8d7ff-8e35-4c0b-a5dd-9f033b3d5bec.jpg",
+                "fileName": "c2b8d7ff-8e35-4c0b-a5dd-9f033b3d5bec.jpg"
+            }
+        ]
+    },
+    {
+        "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+        "Type": "manga",
+        "TitleEn": "Akuma no Hanazono",
+        "OriginalLanguage": "ja",
+        "LastChapter": null,
+        "PublicationDemographic": "shoujo",
+        "Status": "completed",
+        "Year": 2016,
+        "ContentRating": "safe",
+        "CreatedAt": "2019-01-18T19:35:14+00:00",
+        "UpdatedAt": "2024-05-06T22:16:55+00:00",
+        "AltTitles": [
+            {
+                "en": "Devil's First Love"
+            },
+            {
+                "en": "Devil's Garden"
+            },
+            {
+                "en": "Devils First Love"
+            },
+            {
+                "ru": "Первая любовь дьявола"
+            },
+            {
+                "ja": "悪魔の花園"
+            }
+        ],
+        "Descriptions": {
+            "en": "He is the \"Devil\", who loves flowers. All girls feel loved when he's around. It was all the same for him until he saw a crying girl that ran into his garden. He thought she was like any other girl, but eventually, she was the prettiest flower he ever saw…",
+            "pt-br": "Ele é o \"demônio\" que ama as flores. Todas as garotas amam quando ele aparece. Era tudo o mesmo até ele ver uma garota chorando perto de seu jardim. Ele pensou que fosse como qualquer outra garota, ma eventualmente ela era a mais linda flor que ele já viu…"
+        },
+        "Tags": [
+            {
+                "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+                "name": "Oneshot"
+            },
+            {
+                "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                "name": "Romance"
+            },
+            {
+                "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+                "name": "School Life"
+            },
+            {
+                "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                "name": "Supernatural"
+            }
+        ],
+        "Creators": [
+            {
+                "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+                "Type": "author",
+                "Name": "Mitsuki Miko"
+            },
+            {
+                "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+                "Type": "artist",
+                "Name": "Mitsuki Miko"
+            }
+        ],
+        "CreatorRelationships": [
+            {
+                "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+                "RelatedId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+                "RelatedType": "manga"
+            },
+            {
+                "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+                "RelatedId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+                "RelatedType": "manga"
+            }
+        ],
+        "Covers": [
+            {
+                "cover_id": "23aac917-70bc-4f73-881d-092ba0cecc84",
+                "url": "https://uploads.mangadex.org/covers/3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f/cfda4a12-4c3a-4466-bf92-b602387f5a0c.jpg",
+                "fileName": "cfda4a12-4c3a-4466-bf92-b602387f5a0c.jpg"
+            }
+        ]
+    },
+    {
+        "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+        "Type": "manga",
+        "TitleEn": "Koukyuu no Renkinjutsuhi - Aku no Hana wa Ougon no Koi wo Yumemiru",
+        "OriginalLanguage": "ja",
+        "LastChapter": "",
+        "PublicationDemographic": "shoujo",
+        "Status": "ongoing",
+        "Year": 2022,
+        "ContentRating": "safe",
+        "CreatedAt": "2023-01-15T14:35:50+00:00",
+        "UpdatedAt": "2023-09-10T02:06:19+00:00",
+        "AltTitles": [
+            {
+                "ja": "後宮の錬金術妃 悪の華は黄金の恋を夢見る"
+            }
+        ],
+        "Descriptions": {
+            "en": "Is she a villainous woman, or something more? Facing perilous situations with the use of alchemy, a suspense story set in the Chinese imperial harem.\n\nByakuren (Bai Lian) is the Ryuu (Liu) family's eldest daughter. Feared by even the maids for her arrogant and cold demeanor, rumors of her bullying her half-sister Mokuran drift about the household. However, everything was an act to protect Mokuran. Though Byakuren enters into the inner palace as a concubine candidate and begins to move towards fulfilling her goal, the machinations of those around her immediately break apart Byakuren's written scenarios one after the other..."
+        },
+        "Tags": [
+            {
+                "id": "33771934-028e-4cb3-8744-691e866a923e",
+                "name": "Historical"
+            },
+            {
+                "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                "name": "Romance"
+            },
+            {
+                "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                "name": "Fantasy"
+            },
+            {
+                "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+                "name": "Mystery"
+            },
+            {
+                "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+                "name": "Adaptation"
+            }
+        ],
+        "Creators": [
+            {
+                "CreatorId": "a22a527e-122e-4784-a257-900d36e3c14f",
+                "Type": "author",
+                "Name": "Kigawa Arata"
+            },
+            {
+                "CreatorId": "dbb8c9b8-b213-45e3-bfb4-31313ca33297",
+                "Type": "artist",
+                "Name": "Makimoto Umemi"
+            }
+        ],
+        "CreatorRelationships": [
+            {
+                "CreatorId": "a22a527e-122e-4784-a257-900d36e3c14f",
+                "RelatedId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+                "RelatedType": "manga"
+            },
+            {
+                "CreatorId": "dbb8c9b8-b213-45e3-bfb4-31313ca33297",
+                "RelatedId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+                "RelatedType": "manga"
+            }
+        ],
+        "Covers": [
+            {
+                "cover_id": "310268a4-181b-47a2-ab94-93eb3ece2c95",
+                "url": "https://uploads.mangadex.org/covers/6c4ba5c9-5296-4dd2-a8ae-a1911d01f371/abef1294-d021-44a1-9434-47513014c77b.jpg",
+                "fileName": "abef1294-d021-44a1-9434-47513014c77b.jpg"
+            }
+        ]
+    }
+]

@@ -20,6 +20,10 @@
       "type": "directory",
       "children": [
         {
+          "name": "add-admin.py",
+          "type": "file"
+        },
+        {
           "name": "fix_invalid_ratings.py",
           "type": "file"
         },
@@ -32,10 +36,6 @@
           "type": "file"
         }
       ]
-    },
-    {
-      "name": "add-admin.py",
-      "type": "file"
     },
     {
       "name": "app",
@@ -76,6 +76,10 @@
           "type": "file"
         },
         {
+          "name": "mangadex_api.py",
+          "type": "file"
+        },
+        {
           "name": "models.py",
           "type": "file"
         },
@@ -85,10 +89,6 @@
         },
         {
           "name": "routes.py",
-          "type": "file"
-        },
-        {
-          "name": "search_index.py",
           "type": "file"
         },
         {
@@ -135,6 +135,10 @@
                 },
                 {
                   "name": "admin.css",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_manga.css",
                   "type": "file"
                 },
                 {
@@ -193,6 +197,10 @@
                 },
                 {
                   "name": "admin_comments.js",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_manga.js",
                   "type": "file"
                 },
                 {
@@ -364,10 +372,6 @@
       ]
     },
     {
-      "name": "build_index.py",
-      "type": "file"
-    },
-    {
       "name": "config.py",
       "type": "file"
     },
@@ -377,6 +381,10 @@
     },
     {
       "name": "log.txt",
+      "type": "file"
+    },
+    {
+      "name": "manga_db_update.log",
       "type": "file"
     },
     {
@@ -392,10 +400,6 @@
       "type": "file"
     },
     {
-      "name": "search_index.pkl",
-      "type": "file"
-    },
-    {
       "name": "test-api.py",
       "type": "file"
     },
@@ -407,15 +411,15 @@
 }
 
 === Project Tree (ASCII) ===
-D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
+D:\DACSN\coursework\mini-demo/
 ├── .gitattributes
 ├── .gitignore
 ├── README.md
 ├── Simulation/
+│   ├── add-admin.py
 │   ├── fix_invalid_ratings.py
 │   ├── multi-users.py
 │   └── single-user.py
-├── add-admin.py
 ├── app/
 │   ├── __init__.py
 │   ├── admin_bp.py
@@ -425,10 +429,10 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   ├── comment_routes.py
 │   ├── dashboard_routes.py
 │   ├── list_routes.py
+│   ├── mangadex_api.py
 │   ├── models.py
 │   ├── reader_controller.py
 │   ├── routes.py
-│   ├── search_index.py
 │   ├── static/
 │   │   ├── assets/
 │   │   │   ├── MD-logo.png
@@ -440,6 +444,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── css/
 │   │   │   ├── add_to_list.css
 │   │   │   ├── admin.css
+│   │   │   ├── admin_manga.css
 │   │   │   ├── advanced_search.css
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
@@ -454,6 +459,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   └── js/
 │   │       ├── add_to_list.js
 │   │       ├── admin_comments.js
+│   │       ├── admin_manga.js
 │   │       ├── admin_users.js
 │   │       ├── advanced_search.js
 │   │       ├── comments.js
@@ -494,24 +500,23 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── related.html
 │       ├── require_login.html
 │       └── updates.html
-├── build_index.py
 ├── config.py
 ├── dump.py
 ├── log.txt
+├── manga_db_update.log
 ├── project_dump.txt
 ├── requirements.txt
 ├── run.py
-├── search_index.pkl
 ├── test-api.py
 └── test-connection.py
 
 
-=== Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
+=== Folder: D:\DACSN\coursework\mini-demo ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitattributes ---
+--- File: D:\DACSN\coursework\mini-demo\.gitattributes ---
 search_index.joblib filter=lfs diff=lfs merge=lfs -text
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
+--- File: D:\DACSN\coursework\mini-demo\.gitignore ---
 # Python
 __pycache__/
 *.pyc
@@ -535,99 +540,14 @@ instance/
 Thumbs.db
 
 *.joblib
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\add-admin.py ---
-import uuid
-import pyodbc
-from werkzeug.security import generate_password_hash
-from datetime import datetime
-
-# ===== Cấu hình DB =====
-conn_str = (
-    "DRIVER={ODBC Driver 17 for SQL Server};"
-    "SERVER=HEDI-SNOWY\SQLEXPRESS;"           # sửa host hoặc host,port
-    "DATABASE=MangaLibrary;"
-    "Trusted_Connection=yes;"     # dùng Windows Auth; nếu dùng SQL Auth thì thay bằng UID=...;PWD=...
-)
-
-# ===== Thông tin admin =====
-user_id = str(uuid.uuid4())
-username = "admin"
-email = "admin@example.com"
-password = "1234"  # đổi mật khẩu tại đây
-password_hash = generate_password_hash(password)
-
-# ===== Thêm vào DB =====
-with pyodbc.connect(conn_str) as conn:
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO [dbo].[User] (
-            UserId, Username, Email, PasswordHash, Avatar, Role, IsLocked, CreatedAt
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        user_id, username, email, password_hash,
-        None, "Admin", 0, datetime.utcnow()
-    ))
-    conn.commit()
-
-print("✅ Admin user created successfully.")
-print(f"UserId: {user_id}")
-print(f"Username: {username}")
-print(f"Email: {email}")
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\build_index.py ---
-# build_index.py
-import pickle
-import re
-from unidecode import unidecode
-from sklearn.feature_extraction.text import TfidfVectorizer
-from app import db, create_app
-from app.models import Manga, MangaAltTitle
-
-def norm(s: str) -> str:
-    if not s:
-        return ""
-    s = s.lower()
-    s = unidecode(s)  # bỏ dấu
-    s = re.sub(r"[^0-9a-z\s]", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
-
-def build_index():
-    app = create_app()
-    with app.app_context():
-        mangas = db.session.query(Manga).all()
-        alt_titles = db.session.query(MangaAltTitle).all()
-
-        alt_map = {}
-        for alt in alt_titles:
-            alt_map.setdefault(str(alt.MangaId), []).append(alt.AltTitle)
-
-        docs, ids = [], []
-        for m in mangas:
-            texts = [m.TitleEn] + alt_map.get(str(m.MangaId), [])
-            text = " ".join([norm(t) for t in texts if t])
-            if text.strip():
-                docs.append(text)
-                ids.append(str(m.MangaId))
-
-        vectorizer = TfidfVectorizer()
-        tfidf_matrix = vectorizer.fit_transform(docs)
-
-        with open("search_index.pkl", "wb") as f:
-            pickle.dump((vectorizer, tfidf_matrix, ids), f)
-
-        print(f"Indexed {len(ids)} mangas")
-
-if __name__ == "__main__":
-    build_index()
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
+--- File: D:\DACSN\coursework\mini-demo\config.py ---
 import urllib
 
 class Config:
     SECRET_KEY = "secret_key_demo"
 
     DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = "HEDI-SNOWY\SQLEXPRESS"
+    SERVER = "DESKTOP-HKIPI1M"
     DATABASE = "MangaLibrary"
     connection_string = (
         f"DRIVER={{{DRIVER}}};"
@@ -639,7 +559,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\dump.py ---
+--- File: D:\DACSN\coursework\mini-demo\dump.py ---
 import os
 import json
 
@@ -647,7 +567,7 @@ OUTPUT_FILE = "project_dump.txt"
 
 def should_ignore_dir(dirname: str) -> bool:
     """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags"))
+    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags", ".gitignore", ".gitattributes", "pending-feature"))
 
 def build_tree_dict(root_dir: str) -> dict:
     """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
@@ -733,7 +653,7 @@ if __name__ == "__main__":
     dump_project(current_dir, OUTPUT_FILE)
     print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\log.txt ---
+--- File: D:\DACSN\coursework\mini-demo\log.txt ---
 Manga không có cột cover url.
 ----
 Cấu trúc db:
@@ -1794,7 +1714,231 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
 127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png&s=pg1z0Ua4BogeQ8Na2CDz HTTP/1.1" 200 -
 127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\project_dump.txt ---
+--- File: D:\DACSN\coursework\mini-demo\manga_db_update.log ---
+2025-09-30 01:55:16,822 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 01:55:16,822 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 01:55:16,825 - INFO -  * Restarting with stat
+2025-09-30 01:55:17,664 - WARNING -  * Debugger is active!
+2025-09-30 01:55:17,681 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 01:55:21,983 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:21] "GET / HTTP/1.1" 200 -
+2025-09-30 01:55:22,439 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:22,520 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:22,523 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:23,042 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:23] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-09-30 01:55:23,044 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:23] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-30 01:55:28,666 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:28] "[32mGET /admin/creators HTTP/1.1[0m" 302 -
+2025-09-30 01:55:29,590 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:29] "GET /home HTTP/1.1" 200 -
+2025-09-30 01:55:44,066 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 01:55:44,141 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:44,144 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 01:55:44,155 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 01:55:50,996 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:50] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 01:55:54,485 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+2025-09-30 01:55:54,661 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-30 01:55:54,694 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-30 01:55:54,762 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=2aNaIvYDmMo6HRoSOyZy HTTP/1.1" 200 -
+2025-09-30 01:55:54,787 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-09-30 02:00:02,856 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:00:02,918 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:02,921 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:02,924 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:03,175 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 02:00:05,648 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:00:05,703 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,708 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,710 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,717 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 02:00:27,504 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:27] "[33mPOST /admin/manga/search HTTP/1.1[0m" 404 -
+2025-09-30 02:03:43,945 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:43] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:03:44,004 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,009 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,012 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,066 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 02:03:51,888 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no hana
+2025-09-30 02:03:53,631 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:03:54,066 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,282 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,283 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,944 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no hana
+2025-09-30 02:03:57,067 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:03:57,109 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,257 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,261 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,369 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:04:00,157 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:04:01,386 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:04:01,655 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:04:01,657 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:04:01,761 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,017 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,019 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,049 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:04:05,769 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:04:05,771 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:04:05,886 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:07,716 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:04:07,802 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:07,805 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:09,810 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:04:10,940 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:04:11,115 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:04:12,331 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:04:12,559 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:04:13,861 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:04:13,921 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:04:15,188 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:04:15,335 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:04:16,753 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:04:17,125 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:04:17,692 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:04:17,784 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:17,785 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:17,789 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:18,595 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:04:19,096 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:04:19,766 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 02:04:19,836 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,845 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,851 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,859 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:20,377 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:04:20,915 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:04:21,601 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 02:04:21,679 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,694 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,698 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:22,099 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:04:22,598 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:04:23,267 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:04:23,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,330 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,334 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,337 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,386 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:04:24,798 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:04:24,963 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:24] "GET /admin/creators HTTP/1.1" 200 -
+2025-09-30 02:04:25,020 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,023 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,024 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,086 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:04:25,087 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:25,146 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:26,619 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-09-30 02:04:26,634 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 02:04:26,737 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:26,739 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 02:04:26,763 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 02:04:27,693 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:04:27,695 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:27,783 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:28,316 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:28,316 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,048 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,049 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,911 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:04:31,912 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,988 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:34,505 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:34] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 02:04:34,627 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:04:34,630 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:34,686 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:35,185 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:35,188 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,327 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:04:38,328 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,412 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:38,413 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:38,428 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:39,199 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:04:39,200 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:39,278 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,008 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,011 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,987 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:04:41,988 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:42,041 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:43,638 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 02:04:43,715 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,726 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,734 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,753 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,875 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:43,879 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:44,648 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:04:44,925 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:44] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 02:04:45,037 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,047 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,052 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,057 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:46,561 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:04:46,562 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:46,574 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:46] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:04:47,067 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:04:47,138 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,147 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,157 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,166 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,722 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:04:49,033 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:04:49,035 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:49,043 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:49] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:05:41,870 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 02:05:41,871 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 02:05:41,873 - INFO -  * Restarting with stat
+2025-09-30 02:05:42,910 - WARNING -  * Debugger is active!
+2025-09-30 02:05:42,913 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 02:05:44,142 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:05:44,322 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,324 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,326 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:50,897 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: aku no hana
+2025-09-30 02:05:52,305 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:05:52,740 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:54,152 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:54,154 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:57,449 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:05:58,816 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:05:59,757 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:05:59,758 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:59,806 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:00,585 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:00,586 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:02,154 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:06:03,028 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:06:03,885 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:06:05,241 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:06:06,291 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:06:07,488 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:06:08,585 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:06:09,498 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:06:10,717 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:06:11,598 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:06:13,258 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:06:13,259 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:13,304 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:14,684 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:14,685 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:16,153 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:06:16,155 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:16,215 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:17,577 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:17,578 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:19,333 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:06:19,335 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:19,408 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:20,089 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:20,089 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:22,438 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:06:23,685 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:06:23,686 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:23,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:06:23] "POST /manga/search HTTP/1.1" 200 -
+
+--- File: D:\DACSN\coursework\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
 {
   "name": "mini-demo",
@@ -1817,6 +1961,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
       "type": "directory",
       "children": [
         {
+          "name": "add-admin.py",
+          "type": "file"
+        },
+        {
           "name": "fix_invalid_ratings.py",
           "type": "file"
         },
@@ -1829,10 +1977,6 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
           "type": "file"
         }
       ]
-    },
-    {
-      "name": "add-admin.py",
-      "type": "file"
     },
     {
       "name": "app",
@@ -1873,6 +2017,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
           "type": "file"
         },
         {
+          "name": "mangadex_api.py",
+          "type": "file"
+        },
+        {
           "name": "models.py",
           "type": "file"
         },
@@ -1882,10 +2030,6 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
         },
         {
           "name": "routes.py",
-          "type": "file"
-        },
-        {
-          "name": "search_index.py",
           "type": "file"
         },
         {
@@ -1932,6 +2076,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
                 },
                 {
                   "name": "admin.css",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_manga.css",
                   "type": "file"
                 },
                 {
@@ -1990,6 +2138,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
                 },
                 {
                   "name": "admin_comments.js",
+                  "type": "file"
+                },
+                {
+                  "name": "admin_manga.js",
                   "type": "file"
                 },
                 {
@@ -2161,10 +2313,6 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
       ]
     },
     {
-      "name": "build_index.py",
-      "type": "file"
-    },
-    {
       "name": "config.py",
       "type": "file"
     },
@@ -2174,6 +2322,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
     },
     {
       "name": "log.txt",
+      "type": "file"
+    },
+    {
+      "name": "manga_db_update.log",
       "type": "file"
     },
     {
@@ -2189,10 +2341,6 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
       "type": "file"
     },
     {
-      "name": "search_index.pkl",
-      "type": "file"
-    },
-    {
       "name": "test-api.py",
       "type": "file"
     },
@@ -2204,15 +2352,15 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
 }
 
 === Project Tree (ASCII) ===
-D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
+D:\DACSN\coursework\mini-demo/
 ├── .gitattributes
 ├── .gitignore
 ├── README.md
 ├── Simulation/
+│   ├── add-admin.py
 │   ├── fix_invalid_ratings.py
 │   ├── multi-users.py
 │   └── single-user.py
-├── add-admin.py
 ├── app/
 │   ├── __init__.py
 │   ├── admin_bp.py
@@ -2222,10 +2370,10 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   ├── comment_routes.py
 │   ├── dashboard_routes.py
 │   ├── list_routes.py
+│   ├── mangadex_api.py
 │   ├── models.py
 │   ├── reader_controller.py
 │   ├── routes.py
-│   ├── search_index.py
 │   ├── static/
 │   │   ├── assets/
 │   │   │   ├── MD-logo.png
@@ -2237,6 +2385,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   ├── css/
 │   │   │   ├── add_to_list.css
 │   │   │   ├── admin.css
+│   │   │   ├── admin_manga.css
 │   │   │   ├── advanced_search.css
 │   │   │   ├── auth.css
 │   │   │   ├── comments.css
@@ -2251,6 +2400,7 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │   │   └── js/
 │   │       ├── add_to_list.js
 │   │       ├── admin_comments.js
+│   │       ├── admin_manga.js
 │   │       ├── admin_users.js
 │   │       ├── advanced_search.js
 │   │       ├── comments.js
@@ -2291,24 +2441,23 @@ D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo/
 │       ├── related.html
 │       ├── require_login.html
 │       └── updates.html
-├── build_index.py
 ├── config.py
 ├── dump.py
 ├── log.txt
+├── manga_db_update.log
 ├── project_dump.txt
 ├── requirements.txt
 ├── run.py
-├── search_index.pkl
 ├── test-api.py
 └── test-connection.py
 
 
-=== Folder: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo ===
+=== Folder: D:\DACSN\coursework\mini-demo ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitattributes ---
+--- File: D:\DACSN\coursework\mini-demo\.gitattributes ---
 search_index.joblib filter=lfs diff=lfs merge=lfs -text
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\.gitignore ---
+--- File: D:\DACSN\coursework\mini-demo\.gitignore ---
 # Python
 __pycache__/
 *.pyc
@@ -2332,99 +2481,14 @@ instance/
 Thumbs.db
 
 *.joblib
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\add-admin.py ---
-import uuid
-import pyodbc
-from werkzeug.security import generate_password_hash
-from datetime import datetime
-
-# ===== Cấu hình DB =====
-conn_str = (
-    "DRIVER={ODBC Driver 17 for SQL Server};"
-    "SERVER=HEDI-SNOWY\SQLEXPRESS;"           # sửa host hoặc host,port
-    "DATABASE=MangaLibrary;"
-    "Trusted_Connection=yes;"     # dùng Windows Auth; nếu dùng SQL Auth thì thay bằng UID=...;PWD=...
-)
-
-# ===== Thông tin admin =====
-user_id = str(uuid.uuid4())
-username = "admin"
-email = "admin@example.com"
-password = "1234"  # đổi mật khẩu tại đây
-password_hash = generate_password_hash(password)
-
-# ===== Thêm vào DB =====
-with pyodbc.connect(conn_str) as conn:
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO [dbo].[User] (
-            UserId, Username, Email, PasswordHash, Avatar, Role, IsLocked, CreatedAt
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        user_id, username, email, password_hash,
-        None, "Admin", 0, datetime.utcnow()
-    ))
-    conn.commit()
-
-print("✅ Admin user created successfully.")
-print(f"UserId: {user_id}")
-print(f"Username: {username}")
-print(f"Email: {email}")
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\build_index.py ---
-# build_index.py
-import pickle
-import re
-from unidecode import unidecode
-from sklearn.feature_extraction.text import TfidfVectorizer
-from app import db, create_app
-from app.models import Manga, MangaAltTitle
-
-def norm(s: str) -> str:
-    if not s:
-        return ""
-    s = s.lower()
-    s = unidecode(s)  # bỏ dấu
-    s = re.sub(r"[^0-9a-z\s]", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
-
-def build_index():
-    app = create_app()
-    with app.app_context():
-        mangas = db.session.query(Manga).all()
-        alt_titles = db.session.query(MangaAltTitle).all()
-
-        alt_map = {}
-        for alt in alt_titles:
-            alt_map.setdefault(str(alt.MangaId), []).append(alt.AltTitle)
-
-        docs, ids = [], []
-        for m in mangas:
-            texts = [m.TitleEn] + alt_map.get(str(m.MangaId), [])
-            text = " ".join([norm(t) for t in texts if t])
-            if text.strip():
-                docs.append(text)
-                ids.append(str(m.MangaId))
-
-        vectorizer = TfidfVectorizer()
-        tfidf_matrix = vectorizer.fit_transform(docs)
-
-        with open("search_index.pkl", "wb") as f:
-            pickle.dump((vectorizer, tfidf_matrix, ids), f)
-
-        print(f"Indexed {len(ids)} mangas")
-
-if __name__ == "__main__":
-    build_index()
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\config.py ---
+--- File: D:\DACSN\coursework\mini-demo\config.py ---
 import urllib
 
 class Config:
     SECRET_KEY = "secret_key_demo"
 
     DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = "HEDI-SNOWY\SQLEXPRESS"
+    SERVER = "DESKTOP-HKIPI1M"
     DATABASE = "MangaLibrary"
     connection_string = (
         f"DRIVER={{{DRIVER}}};"
@@ -2436,7 +2500,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\dump.py ---
+--- File: D:\DACSN\coursework\mini-demo\dump.py ---
 import os
 import json
 
@@ -2444,7 +2508,7 @@ OUTPUT_FILE = "project_dump.txt"
 
 def should_ignore_dir(dirname: str) -> bool:
     """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags"))
+    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags", ".gitignore", ".gitattributes", "pending-feature"))
 
 def build_tree_dict(root_dir: str) -> dict:
     """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""
@@ -2530,7 +2594,7 @@ if __name__ == "__main__":
     dump_project(current_dir, OUTPUT_FILE)
     print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\log.txt ---
+--- File: D:\DACSN\coursework\mini-demo\log.txt ---
 Manga không có cột cover url.
 ----
 Cấu trúc db:
@@ -3591,12 +3655,236 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
 127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png&s=pg1z0Ua4BogeQ8Na2CDz HTTP/1.1" 200 -
 127.0.0.1 - - [25/Sep/2025 17:09:17] "GET /advanced_search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\README.md ---
+--- File: D:\DACSN\coursework\mini-demo\manga_db_update.log ---
+2025-09-30 01:55:16,822 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 01:55:16,822 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 01:55:16,825 - INFO -  * Restarting with stat
+2025-09-30 01:55:17,664 - WARNING -  * Debugger is active!
+2025-09-30 01:55:17,681 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 01:55:21,983 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:21] "GET / HTTP/1.1" 200 -
+2025-09-30 01:55:22,439 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:22,520 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:22,523 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:22] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:23,042 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:23] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-09-30 01:55:23,044 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:23] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-30 01:55:28,666 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:28] "[32mGET /admin/creators HTTP/1.1[0m" 302 -
+2025-09-30 01:55:29,590 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:29] "GET /home HTTP/1.1" 200 -
+2025-09-30 01:55:44,066 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 01:55:44,141 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 01:55:44,144 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 01:55:44,155 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:44] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 01:55:50,996 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:50] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 01:55:54,485 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+2025-09-30 01:55:54,661 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-30 01:55:54,694 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-30 01:55:54,762 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=2aNaIvYDmMo6HRoSOyZy HTTP/1.1" 200 -
+2025-09-30 01:55:54,787 - INFO - 127.0.0.1 - - [30/Sep/2025 01:55:54] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-09-30 02:00:02,856 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:00:02,918 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:02,921 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:02,924 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:03,175 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 02:00:05,648 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:00:05,703 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,708 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,710 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:00:05,717 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:05] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 02:00:27,504 - INFO - 127.0.0.1 - - [30/Sep/2025 02:00:27] "[33mPOST /admin/manga/search HTTP/1.1[0m" 404 -
+2025-09-30 02:03:43,945 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:43] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:03:44,004 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,009 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,012 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:03:44,066 - INFO - 127.0.0.1 - - [30/Sep/2025 02:03:44] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 02:03:51,888 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no hana
+2025-09-30 02:03:53,631 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:03:54,066 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,282 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,283 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:55,944 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no hana
+2025-09-30 02:03:57,067 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:03:57,109 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,257 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,261 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:03:58,369 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:04:00,157 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:04:01,386 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:04:01,655 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:04:01,657 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:04:01,761 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,017 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,019 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:04,049 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:04:05,769 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:04:05,771 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:04:05,886 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:07,716 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:04:07,802 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:07,805 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:09,810 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:04:10,940 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:04:11,115 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:04:12,331 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:04:12,559 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:04:13,861 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:04:13,921 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:04:15,188 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:04:15,335 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:04:16,753 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:04:17,125 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:04:17,692 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:04:17,784 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:17,785 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:17,789 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:17] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:18,595 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:04:19,096 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:04:19,766 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 02:04:19,836 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,845 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,851 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:19,859 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:19] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:20,377 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:04:20,915 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:04:21,601 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 02:04:21,679 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,694 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:21,698 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:21] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:22,099 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:04:22,598 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:04:23,267 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:04:23,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,330 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,334 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,337 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:23] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:23,386 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:04:24,798 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:04:24,963 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:24] "GET /admin/creators HTTP/1.1" 200 -
+2025-09-30 02:04:25,020 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,023 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,024 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:25] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:25,086 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:04:25,087 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:25,146 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:26,619 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-09-30 02:04:26,634 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 02:04:26,737 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:26,739 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 02:04:26,763 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:26] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 02:04:27,693 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:04:27,695 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:04:27,783 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:28,316 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:28,316 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,048 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,049 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,911 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:04:31,912 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:31,988 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:34,505 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:34] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 02:04:34,627 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:04:34,630 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:04:34,686 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:35,185 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:35,188 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,327 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 02:04:38,328 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:38,412 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:38,413 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:38,428 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:38] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:39,199 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:04:39,200 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:39,278 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,008 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,011 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:41,987 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:04:41,988 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:04:42,041 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:43,638 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 02:04:43,715 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,726 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,734 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,753 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:43] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:43,875 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:43,879 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:44,648 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:04:44,925 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:44] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 02:04:45,037 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,047 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,052 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:45,057 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:45] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:46,561 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:04:46,562 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:46,574 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:46] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:04:47,067 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:04:47,138 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,147 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,157 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,166 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:47] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:04:47,722 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:04:49,033 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:04:49,035 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:04:49,043 - INFO - 127.0.0.1 - - [30/Sep/2025 02:04:49] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:05:41,870 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 02:05:41,871 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 02:05:41,873 - INFO -  * Restarting with stat
+2025-09-30 02:05:42,910 - WARNING -  * Debugger is active!
+2025-09-30 02:05:42,913 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 02:05:44,142 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "GET /manga HTTP/1.1" 200 -
+2025-09-30 02:05:44,322 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,324 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,326 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:44,327 - INFO - 127.0.0.1 - - [30/Sep/2025 02:05:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 02:05:50,897 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: aku no hana
+2025-09-30 02:05:52,305 - INFO - Tìm thấy 5 manga.
+2025-09-30 02:05:52,740 - INFO - Lấy danh sách chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:54,152 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:54,154 - INFO - Lấy toàn bộ cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:57,449 - INFO - Đã tải ảnh bìa cho cover ID: 2ECB6914-E58F-4F10-8656-27770A7BAD33, kích thước: 7528735 bytes
+2025-09-30 02:05:58,816 - INFO - Đã tải ảnh bìa cho cover ID: CA707F04-080D-4421-97A2-BE0E201D0172, kích thước: 6668570 bytes
+2025-09-30 02:05:59,757 - INFO - Đã tải ảnh bìa cho cover ID: A263B4A6-9D76-49DB-90CA-9A5B5BA9B75D, kích thước: 771554 bytes
+2025-09-30 02:05:59,758 - INFO - Tổng cộng lấy được 3 cover cho manga ID: 4AF41067-6C2C-4832-B784-A74A45461FE5
+2025-09-30 02:05:59,806 - INFO - Lấy danh sách chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:00,585 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:00,586 - INFO - Lấy toàn bộ cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:02,154 - INFO - Đã tải ảnh bìa cho cover ID: 75ED21B2-92FC-4E61-BF39-8A106A4AA438, kích thước: 401829 bytes
+2025-09-30 02:06:03,028 - INFO - Đã tải ảnh bìa cho cover ID: C9AAE18F-CAC1-4FCD-AF07-3B24E55D1312, kích thước: 444977 bytes
+2025-09-30 02:06:03,885 - INFO - Đã tải ảnh bìa cho cover ID: CAA72B31-BA29-4C54-8DAC-13B597B2BE18, kích thước: 379000 bytes
+2025-09-30 02:06:05,241 - INFO - Đã tải ảnh bìa cho cover ID: E770DC9F-FAF3-45FB-8B6F-EF2E3427D52A, kích thước: 407722 bytes
+2025-09-30 02:06:06,291 - INFO - Đã tải ảnh bìa cho cover ID: B92B0BC4-42E8-4C6F-A4F8-4960722AB224, kích thước: 221379 bytes
+2025-09-30 02:06:07,488 - INFO - Đã tải ảnh bìa cho cover ID: 6FA8F431-B76B-44BE-963D-E72528B643ED, kích thước: 788684 bytes
+2025-09-30 02:06:08,585 - INFO - Đã tải ảnh bìa cho cover ID: ABC139F2-C855-4DB4-AED8-CF8081E90202, kích thước: 500942 bytes
+2025-09-30 02:06:09,498 - INFO - Đã tải ảnh bìa cho cover ID: F628F6AC-2E4D-4205-92D8-C52DA5E4A205, kích thước: 378047 bytes
+2025-09-30 02:06:10,717 - INFO - Đã tải ảnh bìa cho cover ID: 8506533C-3B2F-466B-A72E-36D738711EC0, kích thước: 184139 bytes
+2025-09-30 02:06:11,598 - INFO - Đã tải ảnh bìa cho cover ID: 2BEC062B-799F-4AAD-8123-FE67A4290D0B, kích thước: 285274 bytes
+2025-09-30 02:06:13,258 - INFO - Đã tải ảnh bìa cho cover ID: 7C082132-F5AD-47B7-BD55-98990455085D, kích thước: 245224 bytes
+2025-09-30 02:06:13,259 - INFO - Tổng cộng lấy được 11 cover cho manga ID: 01882116-3E45-4D67-B932-34F60D360086
+2025-09-30 02:06:13,304 - INFO - Lấy danh sách chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:14,684 - INFO - Tổng cộng lấy được 1 chương cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:14,685 - INFO - Lấy toàn bộ cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:16,153 - INFO - Đã tải ảnh bìa cho cover ID: FF8A85D0-1C6A-4F0B-AC6D-8038F6D5F811, kích thước: 409601 bytes
+2025-09-30 02:06:16,155 - INFO - Tổng cộng lấy được 1 cover cho manga ID: F834E8BF-B8E5-4F70-93BE-10990AB2F665
+2025-09-30 02:06:16,215 - INFO - Lấy danh sách chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:17,577 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:17,578 - INFO - Lấy toàn bộ cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:19,333 - INFO - Đã tải ảnh bìa cho cover ID: 23AAC917-70BC-4F73-881D-092BA0CECC84, kích thước: 688493 bytes
+2025-09-30 02:06:19,335 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 3A9C9F2B-3BF7-4F7E-9F1D-6230399D9B7F
+2025-09-30 02:06:19,408 - INFO - Lấy danh sách chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:20,089 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:20,089 - INFO - Lấy toàn bộ cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:22,438 - INFO - Đã tải ảnh bìa cho cover ID: 310268A4-181B-47A2-AB94-93EB3ECE2C95, kích thước: 805505 bytes
+2025-09-30 02:06:23,685 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
+2025-09-30 02:06:23,686 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
+2025-09-30 02:06:23,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:06:23] "POST /manga/search HTTP/1.1" 200 -
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\requirements.txt ---
+--- File: D:\DACSN\coursework\mini-demo\README.md ---
+
+--- File: D:\DACSN\coursework\mini-demo\requirements.txt ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\run.py ---
+--- File: D:\DACSN\coursework\mini-demo\run.py ---
 from app import create_app
 
 app = create_app()
@@ -3604,15 +3892,12 @@ app = create_app()
 if __name__ == "__main__":
     app.run(debug=True)
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\search_index.pkl ---
-[Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 0: invalid start byte]
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\test-api.py ---
+--- File: D:\DACSN\coursework\mini-demo\test-api.py ---
 import requests
 resp = requests.get("https://api.mangadex.org/ping")
 print(resp)
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\test-connection.py ---
+--- File: D:\DACSN\coursework\mini-demo\test-connection.py ---
 import pyodbc
 
 conn_str = (
@@ -3629,12 +3914,13 @@ except Exception as e:
     print("Kết nối thất bại:", e)
 === Folder: app ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\admin_bp.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\admin_bp.py ---
 from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
-from flask_login import current_user
+from flask_login import current_user, login_required
 from app import db
+from app.mangadex_api import search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
 from app.models import (
-    User, Comment, Report, Manga, ReadingHistory,
+    Chapter, Cover, User, Comment, Report, Manga, ReadingHistory,
     MangaTag, Tag
 )
 from functools import wraps
@@ -3642,6 +3928,9 @@ from datetime import datetime, timedelta
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import json
+import pyodbc
+import requests  # Thêm import requests
+from config import Config
 
 admin_bp = Blueprint('admin_bp', __name__)
 
@@ -3983,21 +4272,103 @@ def admin_comments():
 # ==========================
 # Quản lý manga
 # ==========================
-@admin_bp.route('/admin/manga')
+@admin_bp.route('/manga', methods=['GET'])
+@login_required
 @admin_required
-def admin_manga():
+def manga():
     return render_template('admin_manga.html')
+
+@admin_bp.route('/manga/search', methods=['POST'])
+@login_required
+@admin_required
+def manga_search():
+    data = request.get_json()
+    mode = data.get('mode')
+    query = data.get('query')
+
+    if not mode or not query:
+        return jsonify({'error': 'Thiếu mode hoặc query'}), 400
+
+    try:
+        if mode == 'title':
+            mangas = search_manga(query)
+        elif mode == 'uuid':
+            response = request_api(f"/manga/{query.lower()}", params={"includes[]": ["cover_art", "author", "artist"]})
+            mangas = [response['data']] if response.get('data') else []
+        else:
+            return jsonify({'error': 'Mode không hợp lệ'}), 400
+
+        if not mangas:
+            return jsonify({'mangas': [], 'message': 'Không tìm thấy manga'})
+
+        results = []
+        for manga in mangas:
+            manga_id = str(manga['id']).upper()
+            manga_db = Manga.query.filter_by(MangaId=manga_id).first()
+            chapters_db = Chapter.query.filter_by(MangaId=manga_id).count()
+            covers_db = Cover.query.filter_by(manga_id=manga_id).count()
+            updated_at = manga_db.UpdatedAt.strftime('%Y-%m-%d %H:%M:%S') if manga_db and manga_db.UpdatedAt else None
+
+            chapters_api = len(fetch_chapters(manga_id))
+            covers_api = len(fetch_covers(manga_id))
+
+            results.append({
+                'manga_id': manga_id,
+                'title': manga['attributes']['title'].get('en', 'Unknown'),
+                'chapters_db': chapters_db,
+                'chapters_api': chapters_api,
+                'covers_db': covers_db,
+                'covers_api': covers_api,
+                'updated_at': updated_at,
+                'in_db': manga_db is not None
+            })
+
+        return jsonify({'mangas': results})
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': 'Lỗi khi gọi API MangaDex: ' + str(e)}), 503
+    except pyodbc.Error as e:
+        return jsonify({'error': 'Lỗi cơ sở dữ liệu: ' + str(e)}), 500
+    except Exception as e:
+        return jsonify({'error': 'Lỗi không xác định: ' + str(e)}), 500
+
+@admin_bp.route('/manga/action', methods=['POST'])
+@login_required
+@admin_required
+def manga_action():
+    data = request.get_json()
+    manga_id = data.get('manga_id')
+    action = data.get('action')
+
+    if not manga_id or not action:
+        return jsonify({'error': 'Thiếu manga_id hoặc action'}), 400
+
+    try:
+        manga_data = request_api(f"/manga/{manga_id.lower()}", params={"includes[]": ["cover_art", "author", "artist"]})
+        if not manga_data.get('data'):
+            return jsonify({'error': 'Manga không tồn tại trên MangaDex'}), 404
+        manga_data = manga_data['data']
+        stats_dict = fetch_statistics([manga_id])
+        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        map_manga_to_db(manga_data, stats_dict, conn)
+        conn.close()
+        return jsonify({'message': f'Manga {manga_id} {action} thành công'})
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': 'Lỗi khi gọi API MangaDex: ' + str(e)}), 503
+    except pyodbc.Error as e:
+        return jsonify({'error': 'Lỗi cơ sở dữ liệu: ' + str(e)}), 500
+    except Exception as e:
+        return jsonify({'error': 'Lỗi không xác định: ' + str(e)}), 500
 
 
 # ==========================
-# Quản lý creators
+# Quản lý Creators
 # ==========================
 @admin_bp.route('/admin/creators')
 @admin_required
 def admin_creators():
     return render_template('admin_creators.html')
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\auth.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\auth.py ---
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -4082,7 +4453,7 @@ def logout():
     flash("You have been logged out.")
     return redirect(url_for("auth.login"))
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\comment_routes.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\comment_routes.py ---
 # app/comment_routes.py
 import uuid
 from datetime import datetime
@@ -4269,7 +4640,7 @@ def report_comment(comment_id):
     db.session.commit()
     return jsonify({"success": True, "message": "Report submitted."})
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\dashboard_routes.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\dashboard_routes.py ---
 from flask import Blueprint, jsonify
 from flask_login import login_required
 from . import db
@@ -4701,7 +5072,7 @@ def user_dashboard(user_id):
     charts = build_user_charts(user_id)
     return jsonify(charts)
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\list_routes.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\list_routes.py ---
 # mini-demo/app/list_routes.py
 from flask import Blueprint, request, jsonify, render_template, abort, url_for, current_app
 from flask_login import login_required, current_user
@@ -5162,7 +5533,887 @@ def search_manga():
         })
     return jsonify({"results": out})
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\models.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\mangadex_api.py ---
+from flask import config
+import pyodbc
+import requests
+import json
+import datetime
+import time
+import uuid
+import logging
+from urllib3.util.retry import Retry
+from requests.adapters import HTTPAdapter
+from config import Config
+
+# Cấu hình logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("manga_db_update.log", encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Thông số
+BASE_URL = "https://api.mangadex.org"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Referer": "https://mangadex.org/"
+}
+MAX_RETRIES = 5
+MIN_DELAY = 0.25
+LANG_PRIORITY = ["vi", "en"]
+
+# Kết nối DB
+def connect_db():
+    logger.info("Khởi tạo kết nối đến cơ sở dữ liệu.")
+    try:
+        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        logger.info("Đã kết nối đến cơ sở dữ liệu.")
+        return conn
+    except pyodbc.Error as e:
+        logger.error(f"Lỗi kết nối cơ sở dữ liệu: {e}")
+        raise 
+
+# Hàm gọi API
+def request_api(endpoint, params=None):
+    logger.debug(f"Yêu cầu API: {BASE_URL + endpoint} với params: {params}")
+    session = requests.Session()
+    retries = Retry(total=MAX_RETRIES, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504])
+    session.mount('https://', HTTPAdapter(max_retries=retries))
+    try:
+        time.sleep(MIN_DELAY)
+        resp = session.get(BASE_URL + endpoint, params=params, headers=HEADERS, timeout=15)
+        if resp.status_code == 429:
+            retry_after = int(resp.headers.get('Retry-After', 60))
+            logger.warning(f"Rate limited. Chờ {retry_after} giây.")
+            time.sleep(retry_after)
+            return request_api(endpoint, params)
+        resp.raise_for_status()
+        logger.debug(f"Yêu cầu API thành công: {endpoint}")
+        return resp.json()
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Lỗi yêu cầu API {endpoint}: {e}")
+        raise
+    finally:
+        session.close()
+        logger.debug("Đã đóng session API.")
+
+# Hàm parse datetime
+def parse_dt(s):
+    logger.debug(f"Phân tích datetime: {s}")
+    if not s:
+        return None
+    try:
+        dt = datetime.datetime.fromisoformat(s.replace("Z", "+00:00"))
+        logger.debug(f"Đã phân tích datetime thành: {dt}")
+        return dt
+    except Exception as e:
+        logger.error(f"Lỗi phân tích datetime {s}: {e}")
+        return None
+
+# Hàm tạo URL cho MangaLink
+def create_manga_link_url(provider, value):
+    logger.debug(f"Tạo URL cho provider: {provider}, value: {value}")
+    link_formats = {
+        "al": f"https://anilist.co/manga/{value}",
+        "ap": f"https://www.anime-planet.com/manga/{value}",
+        "bw": f"https://bookwalker.jp/{value}",
+        "mu": f"https://www.mangaupdates.com/series.html?id={value}",
+        "nu": f"https://www.novelupdates.com/series/{value}",
+        "kt": f"https://kitsu.io/api/edge/manga/{value}" if value.isdigit() else f"https://kitsu.io/api/edge/manga?filter[slug]={value}",
+        "amz": value,
+        "ebj": value,
+        "mal": f"https://myanimelist.net/manga/{value}",
+        "cdj": value,
+        "raw": value,
+        "engtl": value
+    }
+    url = link_formats.get(provider, value)
+    logger.debug(f"URL được tạo: {url}")
+    return url
+
+# Hàm upsert các bảng
+def upsert_manga(conn, manga_list):
+    cursor = conn.cursor()
+    for manga in manga_list:
+        manga_id_upper = str(manga['MangaId']).upper()
+        logger.info(f"Xử lý upsert manga ID: {manga_id_upper}")
+        try:
+            cursor.execute("""
+                MERGE INTO [dbo].[Manga] AS target
+                USING (VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)) 
+                AS source (MangaId, Type, TitleEn, ChapterNumbersResetOnNewVolume, ContentRating, CreatedAt, UpdatedAt, IsLocked, LastChapter, LastVolume, LatestUploadedChapter, OriginalLanguage, PublicationDemographic, State, Status, Year, OfficialLinks)
+                ON target.MangaId = source.MangaId
+                WHEN MATCHED AND (
+                    target.Type != source.Type OR
+                    target.TitleEn != source.TitleEn OR
+                    target.ChapterNumbersResetOnNewVolume != source.ChapterNumbersResetOnNewVolume OR
+                    target.ContentRating != source.ContentRating OR
+                    target.CreatedAt != source.CreatedAt OR
+                    target.UpdatedAt != source.UpdatedAt OR
+                    target.IsLocked != source.IsLocked OR
+                    target.LastChapter != source.LastChapter OR
+                    target.LastVolume != source.LastVolume OR
+                    target.LatestUploadedChapter != source.LatestUploadedChapter OR
+                    target.OriginalLanguage != source.OriginalLanguage OR
+                    target.PublicationDemographic != source.PublicationDemographic OR
+                    target.State != source.State OR
+                    target.Status != source.Status OR
+                    target.Year != source.Year OR
+                    target.OfficialLinks != source.OfficialLinks
+                ) THEN
+                    UPDATE SET 
+                        Type = source.Type,
+                        TitleEn = source.TitleEn,
+                        ChapterNumbersResetOnNewVolume = source.ChapterNumbersResetOnNewVolume,
+                        ContentRating = source.ContentRating,
+                        CreatedAt = source.CreatedAt,
+                        UpdatedAt = source.UpdatedAt,
+                        IsLocked = source.IsLocked,
+                        LastChapter = source.LastChapter,
+                        LastVolume = source.LastVolume,
+                        LatestUploadedChapter = source.LatestUploadedChapter,
+                        OriginalLanguage = source.OriginalLanguage,
+                        PublicationDemographic = source.PublicationDemographic,
+                        State = source.State,
+                        Status = source.Status,
+                        Year = source.Year,
+                        OfficialLinks = source.OfficialLinks
+                WHEN NOT MATCHED THEN
+                    INSERT (MangaId, Type, TitleEn, ChapterNumbersResetOnNewVolume, ContentRating, CreatedAt, UpdatedAt, IsLocked, LastChapter, LastVolume, LatestUploadedChapter, OriginalLanguage, PublicationDemographic, State, Status, Year, OfficialLinks)
+                    VALUES (source.MangaId, source.Type, source.TitleEn, source.ChapterNumbersResetOnNewVolume, source.ContentRating, source.CreatedAt, source.UpdatedAt, source.IsLocked, source.LastChapter, source.LastVolume, source.LatestUploadedChapter, source.OriginalLanguage, source.PublicationDemographic, source.State, source.Status, source.Year, source.OfficialLinks);
+            """, (
+                manga_id_upper, manga['Type'], manga['TitleEn'], manga['ChapterNumbersResetOnNewVolume'],
+                manga['ContentRating'], manga['CreatedAt'], manga['UpdatedAt'], manga['IsLocked'],
+                manga['LastChapter'], manga['LastVolume'], manga['LatestUploadedChapter'], manga['OriginalLanguage'],
+                manga['PublicationDemographic'], manga['State'], manga['Status'], manga['Year'], manga['OfficialLinks']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert Manga: {manga['TitleEn']}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert Manga ID {manga_id_upper}: {e}")
+            raise
+
+def upsert_manga_alt_title(conn, alt_titles):
+    cursor = conn.cursor()
+    for alt in alt_titles:
+        manga_id_upper = str(alt['MangaId']).upper()
+        logger.info(f"Xử lý upsert MangaAltTitle cho MangaId: {manga_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaAltTitle] WHERE MangaId = ? AND LangCode = ?)
+                INSERT INTO [dbo].[MangaAltTitle] (MangaId, LangCode, AltTitle)
+                VALUES (?, ?, ?)
+            """, (
+                manga_id_upper, alt['LangCode'], alt['AltTitle'],
+                manga_id_upper, alt['LangCode'], alt['AltTitle']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaAltTitle cho MangaId: {manga_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaAltTitle cho MangaId {manga_id_upper}: {e}")
+            raise
+
+def upsert_manga_description(conn, descriptions):
+    cursor = conn.cursor()
+    for desc in descriptions:
+        manga_id_upper = str(desc['MangaId']).upper()
+        logger.info(f"Xử lý upsert MangaDescription cho MangaId: {manga_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaDescription] WHERE MangaId = ? AND LangCode = ?)
+                INSERT INTO [dbo].[MangaDescription] (MangaId, LangCode, Description)
+                VALUES (?, ?, ?)
+            """, (
+                manga_id_upper, desc['LangCode'], desc['Description'],
+                manga_id_upper, desc['LangCode'], desc['Description']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaDescription cho MangaId: {manga_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaDescription cho MangaId {manga_id_upper}: {e}")
+            raise
+
+def upsert_manga_available_language(conn, languages):
+    cursor = conn.cursor()
+    for lang in languages:
+        manga_id_upper = str(lang['MangaId']).upper()
+        logger.info(f"Xử lý upsert MangaAvailableLanguage cho MangaId: {manga_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaAvailableLanguage] WHERE MangaId = ? AND LangCode = ?)
+                INSERT INTO [dbo].[MangaAvailableLanguage] (MangaId, LangCode)
+                VALUES (?, ?)
+            """, (
+                manga_id_upper, lang['LangCode'],
+                manga_id_upper, lang['LangCode']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaAvailableLanguage cho MangaId: {manga_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaAvailableLanguage cho MangaId {manga_id_upper}: {e}")
+            raise
+
+def upsert_manga_link(conn, links):
+    cursor = conn.cursor()
+    for link in links:
+        manga_id_upper = str(link['MangaId']).upper()
+        logger.info(f"Xử lý upsert MangaLink cho MangaId: {manga_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaLink] WHERE MangaId = ? AND Provider = ?)
+                INSERT INTO [dbo].[MangaLink] (MangaId, Provider, Url)
+                VALUES (?, ?, ?)
+            """, (
+                manga_id_upper, link['Provider'], link['Url'],
+                manga_id_upper, link['Provider'], link['Url']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaLink cho MangaId: {manga_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaLink cho MangaId {manga_id_upper}: {e}")
+            raise
+
+def upsert_manga_statistics(conn, statistics):
+    cursor = conn.cursor()
+    for stat in statistics:
+        statistic_id_upper = str(stat['StatisticId']).upper()
+        manga_id_upper = str(stat['MangaId']).upper()
+        logger.info(f"Xử lý upsert MangaStatistics cho MangaId: {manga_id_upper}")
+        try:
+            cursor.execute("""
+                MERGE INTO [dbo].[MangaStatistics] AS target
+                USING (VALUES (?, ?, ?, ?, ?, ?, ?, ?)) 
+                AS source (StatisticId, MangaId, Source, Follows, AverageRating, BayesianRating, UnavailableChapters, FetchedAt)
+                ON target.StatisticId = source.StatisticId
+                WHEN MATCHED AND (
+                    target.MangaId != source.MangaId OR
+                    target.Source != source.Source OR
+                    target.Follows != source.Follows OR
+                    target.AverageRating != source.AverageRating OR
+                    target.BayesianRating != source.BayesianRating OR
+                    target.UnavailableChapters != source.UnavailableChapters OR
+                    target.FetchedAt != source.FetchedAt
+                ) THEN
+                    UPDATE SET 
+                        MangaId = source.MangaId,
+                        Source = source.Source,
+                        Follows = source.Follows,
+                        AverageRating = source.AverageRating,
+                        BayesianRating = source.BayesianRating,
+                        UnavailableChapters = source.UnavailableChapters,
+                        FetchedAt = source.FetchedAt
+                WHEN NOT MATCHED THEN
+                    INSERT (StatisticId, MangaId, Source, Follows, AverageRating, BayesianRating, UnavailableChapters, FetchedAt)
+                    VALUES (source.StatisticId, source.MangaId, source.Source, source.Follows, source.AverageRating, source.BayesianRating, source.UnavailableChapters, source.FetchedAt);
+            """, (
+                statistic_id_upper, manga_id_upper, stat['Source'], stat['Follows'], stat['AverageRating'],
+                stat['BayesianRating'], stat['UnavailableChapters'], stat['FetchedAt']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaStatistics cho MangaId: {manga_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaStatistics cho MangaId {manga_id_upper}: {e}")
+            raise
+
+def upsert_manga_tag(conn, manga_tags):
+    cursor = conn.cursor()
+    for tag in manga_tags:
+        manga_id_upper = str(tag['MangaId']).upper()
+        tag_id_upper = str(tag['TagId']).upper()
+        logger.info(f"Xử lý upsert MangaTag cho MangaId: {manga_id_upper}, TagId: {tag_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaTag] WHERE MangaId = ? AND TagId = ?)
+                INSERT INTO [dbo].[MangaTag] (MangaId, TagId)
+                VALUES (?, ?)
+            """, (
+                manga_id_upper, tag_id_upper,
+                manga_id_upper, tag_id_upper
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaTag cho MangaId: {manga_id_upper}, TagId: {tag_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaTag cho MangaId {manga_id_upper}, TagId {tag_id_upper}: {e}")
+            raise
+
+def upsert_chapter(conn, chapters):
+    cursor = conn.cursor()
+    for chapter in chapters:
+        chapter_id_upper = str(chapter['ChapterId']).upper()
+        manga_id_upper = str(chapter['MangaId']).upper()
+        logger.info(f"Xử lý upsert Chapter cho ChapterId: {chapter_id_upper}")
+        try:
+            cursor.execute("""
+                MERGE INTO [dbo].[Chapter] AS target
+                USING (VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)) 
+                AS source (ChapterId, MangaId, Type, Volume, ChapterNumber, Title, TranslatedLang, Pages, PublishAt, ReadableAt, IsUnavailable, CreatedAt, UpdatedAt)
+                ON target.ChapterId = source.ChapterId
+                WHEN MATCHED AND (
+                    target.Type != source.Type OR
+                    target.Volume != source.Volume OR
+                    target.ChapterNumber != source.ChapterNumber OR
+                    target.Title != source.Title OR
+                    target.TranslatedLang != source.TranslatedLang OR
+                    target.Pages != source.Pages OR
+                    target.PublishAt != source.PublishAt OR
+                    target.ReadableAt != source.ReadableAt OR
+                    target.IsUnavailable != source.IsUnavailable OR
+                    target.CreatedAt != source.CreatedAt OR
+                    target.UpdatedAt != source.UpdatedAt
+                ) THEN
+                    UPDATE SET 
+                        Type = source.Type,
+                        Volume = source.Volume,
+                        ChapterNumber = source.ChapterNumber,
+                        Title = source.Title,
+                        TranslatedLang = source.TranslatedLang,
+                        Pages = source.Pages,
+                        PublishAt = source.PublishAt,
+                        ReadableAt = source.ReadableAt,
+                        IsUnavailable = source.IsUnavailable,
+                        CreatedAt = source.CreatedAt,
+                        UpdatedAt = source.UpdatedAt
+                WHEN NOT MATCHED THEN
+                    INSERT (ChapterId, MangaId, Type, Volume, ChapterNumber, Title, TranslatedLang, Pages, PublishAt, ReadableAt, IsUnavailable, CreatedAt, UpdatedAt)
+                    VALUES (source.ChapterId, source.MangaId, source.Type, source.Volume, source.ChapterNumber, source.Title, source.TranslatedLang, source.Pages, source.PublishAt, source.ReadableAt, source.IsUnavailable, source.CreatedAt, source.UpdatedAt);
+            """, (
+                chapter_id_upper, manga_id_upper, chapter['Type'], chapter['Volume'], chapter['ChapterNumber'],
+                chapter['Title'], chapter['TranslatedLang'], chapter['Pages'], chapter['PublishAt'], chapter['ReadableAt'],
+                chapter['IsUnavailable'], chapter['CreatedAt'], chapter['UpdatedAt']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert Chapter cho ChapterId: {chapter_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert Chapter cho ChapterId {chapter_id_upper}: {e}")
+            raise
+
+def upsert_covers(conn, covers):
+    cursor = conn.cursor()
+    for cover in covers:
+        cover_id_upper = str(cover['cover_id']).upper()
+        manga_id_upper = str(cover['manga_id']).upper()
+        logger.info(f"Xử lý upsert Covers cho cover_id: {cover_id_upper}")
+        try:
+            cursor.execute("""
+                MERGE INTO [dbo].[Covers] AS target
+                USING (VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)) 
+                AS source (cover_id, manga_id, type, description, volume, fileName, locale, createdAt, updatedAt, version, rel_user_id, url, image_data)
+                ON target.cover_id = source.cover_id
+                WHEN MATCHED AND (
+                    target.manga_id != source.manga_id OR
+                    target.type != source.type OR
+                    target.description != source.description OR
+                    target.volume != source.volume OR
+                    target.fileName != source.fileName OR
+                    target.locale != source.locale OR
+                    target.createdAt != source.createdAt OR
+                    target.updatedAt != source.updatedAt OR
+                    target.version != source.version OR
+                    target.rel_user_id != source.rel_user_id OR
+                    target.url != source.url OR
+                    (target.image_data IS NULL AND source.image_data IS NOT NULL)
+                ) THEN
+                    UPDATE SET 
+                        manga_id = source.manga_id,
+                        type = source.type,
+                        description = source.description,
+                        volume = source.volume,
+                        fileName = source.fileName,
+                        locale = source.locale,
+                        createdAt = source.createdAt,
+                        updatedAt = source.updatedAt,
+                        version = source.version,
+                        rel_user_id = source.rel_user_id,
+                        url = source.url,
+                        image_data = source.image_data
+                WHEN NOT MATCHED THEN
+                    INSERT (cover_id, manga_id, type, description, volume, fileName, locale, createdAt, updatedAt, version, rel_user_id, url, image_data)
+                    VALUES (source.cover_id, source.manga_id, source.type, source.description, source.volume, source.fileName, source.locale, source.createdAt, source.updatedAt, source.version, source.rel_user_id, source.url, source.image_data);
+            """, (
+                cover_id_upper, manga_id_upper, cover['type'], cover['description'], cover['volume'],
+                cover['fileName'], cover['locale'], cover['createdAt'], cover['updatedAt'], cover['version'],
+                cover['rel_user_id'] if cover['rel_user_id'] else None, cover['url'], cover['image_data']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert Covers cho cover_id: {cover_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert Covers cho cover_id {cover_id_upper}: {e}")
+            raise
+
+def upsert_creator(conn, creators):
+    cursor = conn.cursor()
+    for creator in creators:
+        creator_id_upper = str(creator['CreatorId']).upper()
+        logger.info(f"Xử lý upsert Creator cho CreatorId: {creator_id_upper}")
+        try:
+            cursor.execute("""
+                MERGE INTO [dbo].[Creator] AS target
+                USING (VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)) 
+                AS source (CreatorId, Type, Name, ImageUrl, BiographyEn, BiographyJa, BiographyPtBr, CreatedAt, UpdatedAt)
+                ON target.CreatorId = source.CreatorId
+                WHEN MATCHED AND (
+                    target.Type != source.Type OR
+                    target.Name != source.Name OR
+                    target.ImageUrl != source.ImageUrl OR
+                    target.BiographyEn != source.BiographyEn OR
+                    target.BiographyJa != source.BiographyJa OR
+                    target.BiographyPtBr != source.BiographyPtBr OR
+                    target.CreatedAt != source.CreatedAt OR
+                    target.UpdatedAt != source.UpdatedAt
+                ) THEN
+                    UPDATE SET 
+                        Type = source.Type,
+                        Name = source.Name,
+                        ImageUrl = source.ImageUrl,
+                        BiographyEn = source.BiographyEn,
+                        BiographyJa = source.BiographyJa,
+                        BiographyPtBr = source.BiographyPtBr,
+                        CreatedAt = source.CreatedAt,
+                        UpdatedAt = source.UpdatedAt
+                WHEN NOT MATCHED THEN
+                    INSERT (CreatorId, Type, Name, ImageUrl, BiographyEn, BiographyJa, BiographyPtBr, CreatedAt, UpdatedAt)
+                    VALUES (source.CreatorId, source.Type, source.Name, source.ImageUrl, source.BiographyEn, source.BiographyJa, source.BiographyPtBr, source.CreatedAt, source.UpdatedAt);
+            """, (
+                creator_id_upper, creator['Type'], creator['Name'], creator['ImageUrl'], creator['BiographyEn'],
+                creator['BiographyJa'], creator['BiographyPtBr'], creator['CreatedAt'], creator['UpdatedAt']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert Creator cho CreatorId: {creator_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert Creator cho CreatorId {creator_id_upper}: {e}")
+            raise
+
+def upsert_creator_relationship(conn, relationships):
+    cursor = conn.cursor()
+    for rel in relationships:
+        creator_id_upper = str(rel['CreatorId']).upper()
+        related_id_upper = str(rel['RelatedId']).upper()
+        logger.info(f"Xử lý upsert CreatorRelationship cho CreatorId: {creator_id_upper}, RelatedId: {related_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[CreatorRelationship] WHERE CreatorId = ? AND RelatedId = ? AND RelatedType = ?)
+                INSERT INTO [dbo].[CreatorRelationship] (CreatorId, RelatedId, RelatedType)
+                VALUES (?, ?, ?)
+            """, (
+                creator_id_upper, related_id_upper, rel['RelatedType'],
+                creator_id_upper, related_id_upper, rel['RelatedType']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert CreatorRelationship cho CreatorId: {creator_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert CreatorRelationship cho CreatorId {creator_id_upper}: {e}")
+            raise
+
+def upsert_manga_related(conn, related):
+    cursor = conn.cursor()
+    for rel in related:
+        manga_id_upper = str(rel['MangaId']).upper()
+        related_id_upper = str(rel['RelatedId']).upper()
+        logger.info(f"Xử lý upsert MangaRelated cho MangaId: {manga_id_upper}, RelatedId: {related_id_upper}")
+        try:
+            cursor.execute("""
+                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaRelated] WHERE MangaId = ? AND RelatedId = ? AND Type = ?)
+                INSERT INTO [dbo].[MangaRelated] (MangaId, RelatedId, Type, Related, FetchedAt)
+                VALUES (?, ?, ?, ?, ?)
+            """, (
+                manga_id_upper, related_id_upper, rel['Type'], rel['Related'], rel['FetchedAt'],
+                manga_id_upper, related_id_upper, rel['Type'], rel['Related'], rel['FetchedAt']
+            ))
+            conn.commit()
+            logger.debug(f"Hoàn thành upsert MangaRelated cho MangaId: {manga_id_upper}")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert MangaRelated cho MangaId {manga_id_upper}: {e}")
+            raise
+
+# Hàm fetch dữ liệu từ API
+def search_manga(title):
+    logger.info(f"Bắt đầu tìm kiếm manga với tiêu đề: {title}")
+    params = {
+        "title": title,
+        "limit": 5,
+        "includes[]": ["cover_art", "author", "artist"]
+    }
+    data = request_api("/manga", params=params)
+    mangas = data.get("data", [])
+    logger.info(f"Tìm thấy {len(mangas)} manga.")
+    return mangas
+
+def fetch_statistics(manga_ids):
+    logger.info(f"Lấy thống kê cho {len(manga_ids)} manga.")
+    stats = {}
+    batch_size = 100
+    for i in range(0, len(manga_ids), batch_size):
+        ids = [str(mid).upper() for mid in manga_ids[i:i+batch_size]]
+        logger.debug(f"Lấy thống kê cho batch: {ids}")
+        params = [("manga[]", mid.lower()) for mid in ids]
+        data = request_api("/statistics/manga", params=params)
+        stats.update(data.get("statistics", {}))
+    logger.info(f"Hoàn thành lấy thống kê.")
+    return stats
+
+def fetch_chapters(manga_id):
+    manga_id_upper = str(manga_id).upper()
+    logger.info(f"Lấy danh sách chương cho manga ID: {manga_id_upper}")
+    chapters = []
+    offset = 0
+    while True:
+        params = {
+            "limit": 100,
+            "offset": offset,
+            "translatedLanguage[]": LANG_PRIORITY,
+            "manga": manga_id.lower(),
+            "order[chapter]": "desc"
+        }
+        data = request_api("/chapter", params=params)
+        chaps = data.get("data", [])
+        if not chaps:
+            break
+        logger.debug(f"Tìm thấy {len(chaps)} chương tại offset {offset}.")
+        for chap in chaps:
+            attr = chap.get("attributes", {})
+            chapters.append({
+                "ChapterId": str(chap.get("id")).upper(),
+                "MangaId": manga_id_upper,
+                "Type": "chapter" if attr.get("chapter") else "oneshot",
+                "Volume": attr.get("volume"),
+                "ChapterNumber": attr.get("chapter"),
+                "Title": attr.get("title"),
+                "TranslatedLang": attr.get("translatedLanguage"),
+                "Pages": attr.get("pages"),
+                "PublishAt": parse_dt(attr.get("publishAt")),
+                "ReadableAt": parse_dt(attr.get("readableAt")),
+                "IsUnavailable": attr.get("isUnavailable", False),
+                "CreatedAt": parse_dt(attr.get("createdAt")),
+                "UpdatedAt": parse_dt(attr.get("updatedAt"))
+            })
+        offset += 100
+    logger.info(f"Tổng cộng lấy được {len(chapters)} chương cho manga ID: {manga_id_upper}")
+    return chapters
+
+def fetch_covers(manga_id):
+    manga_id_lower = str(manga_id).lower()
+    manga_id_upper = str(manga_id).upper()
+    logger.info(f"Lấy toàn bộ cover cho manga ID: {manga_id_upper}")
+    covers = []
+    offset = 0
+    limit = 10
+    while True:
+        params = {
+            "manga[]": manga_id_lower,
+            "limit": limit,
+            "offset": offset
+        }
+        try:
+            data = request_api("/cover", params=params)
+            cover_list = data.get("data", [])
+            if not cover_list:
+                break
+            logger.debug(f"Tìm thấy {len(cover_list)} cover tại offset {offset}.")
+            for cover in cover_list:
+                cover_id_upper = str(cover.get("id")).upper()
+                attr = cover.get("attributes", {})
+                file_name = attr.get("fileName", "")
+                if not file_name:
+                    logger.warning(f"Không tìm thấy fileName cho cover ID: {cover_id_upper}")
+                    continue
+                cover_url = f"https://uploads.mangadex.org/covers/{manga_id_lower}/{file_name}"
+                logger.debug(f"URL ảnh bìa: {cover_url}")
+                image_data = None
+                try:
+                    session = requests.Session()
+                    retries = Retry(total=7, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504])
+                    session.mount('https://', HTTPAdapter(max_retries=retries))
+                    time.sleep(MIN_DELAY)
+                    resp = session.get(cover_url, headers=HEADERS, timeout=30)
+                    if resp.status_code == 429:
+                        retry_after = int(resp.headers.get('Retry-After', 60))
+                        logger.warning(f"Rate limited khi tải ảnh bìa. Chờ {retry_after} giây.")
+                        time.sleep(retry_after)
+                        resp = session.get(cover_url, headers=HEADERS, timeout=30)
+                    if resp.status_code == 404:
+                        logger.warning(f"Ảnh bìa không tồn tại (404) cho cover ID: {cover_id_upper}")
+                        continue
+                    resp.raise_for_status()
+                    content_type = resp.headers.get('Content-Type', '')
+                    if content_type not in ['image/jpeg', 'image/png']:
+                        logger.warning(f"Định dạng ảnh không hợp lệ cho cover ID: {cover_id_upper} ({content_type})")
+                        continue
+                    content_length = int(resp.headers.get('Content-Length', 0))
+                    if content_length > 10 * 1024 * 1024:
+                        logger.warning(f"Ảnh bìa quá lớn ({content_length} bytes) cho cover ID: {cover_id_upper}")
+                        continue
+                    image_data = resp.content
+                    logger.info(f"Đã tải ảnh bìa cho cover ID: {cover_id_upper}, kích thước: {len(image_data)} bytes")
+                except requests.exceptions.RequestException as e:
+                    logger.error(f"Lỗi khi tải ảnh bìa cho cover ID {cover_id_upper}: {e}")
+                    continue
+                finally:
+                    session.close()
+                    logger.debug("Đã đóng session tải ảnh.")
+                rel_user_id = None
+                for rel in cover.get("relationships", []):
+                    if rel["type"] == "user":
+                        rel_user_id = str(rel["id"]).upper()
+                        break
+                cover_data = {
+                    "cover_id": cover_id_upper,
+                    "manga_id": manga_id_upper,
+                    "type": "cover_art",
+                    "description": attr.get("description"),
+                    "volume": attr.get("volume"),
+                    "fileName": file_name,
+                    "locale": attr.get("locale"),
+                    "createdAt": parse_dt(attr.get("createdAt")),
+                    "updatedAt": parse_dt(attr.get("updatedAt")),
+                    "version": attr.get("version"),
+                    "rel_user_id": rel_user_id,
+                    "url": cover_url,
+                    "image_data": image_data
+                }
+                covers.append(cover_data)
+            offset += limit
+            if offset >= data.get("total", 0):
+                break
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Lỗi khi lấy danh sách cover cho manga ID {manga_id_upper}: {e}")
+            break
+    logger.info(f"Tổng cộng lấy được {len(covers)} cover cho manga ID: {manga_id_upper}")
+    return covers
+
+def fetch_creator(creator_id):
+    creator_id_lower = str(creator_id).lower()
+    creator_id_upper = str(creator_id).upper()
+    logger.info(f"Lấy thông tin creator ID: {creator_id_upper}")
+    data = request_api(f"/author/{creator_id_lower}")
+    attr = data.get("data", {}).get("attributes", {})
+    creator_data = {
+        "CreatorId": creator_id_upper,
+        "Type": None,
+        "Name": attr.get("name", "Unknown"),
+        "ImageUrl": attr.get("imageUrl"),
+        "BiographyEn": attr.get("biography", {}).get("en"),
+        "BiographyJa": attr.get("biography", {}).get("ja"),
+        "BiographyPtBr": attr.get("biography", {}).get("pt-br"),
+        "CreatedAt": parse_dt(attr.get("createdAt")),
+        "UpdatedAt": parse_dt(attr.get("updatedAt"))
+    }
+    logger.debug(f"Hoàn thành lấy thông tin creator: {creator_data['Name']}")
+    return creator_data
+
+def fetch_related(manga_id, manga_data):
+    manga_id_upper = str(manga_id).upper()
+    logger.info(f"Lấy manga liên quan cho manga ID: {manga_id_upper}")
+    related = []
+    for rel in manga_data.get("relationships", []):
+        if rel["type"] == "manga":
+            logger.debug(f"Đã tìm thấy manga liên quan: {rel['id']}")
+            related.append({
+                "MangaId": manga_id_upper,
+                "RelatedId": str(rel["id"]).upper(),
+                "Type": rel.get("attributes", {}).get("relation", "unknown"),
+                "Related": rel.get("attributes", {}).get("relation", "unknown"),
+                "FetchedAt": parse_dt(datetime.datetime.now().isoformat())
+            })
+    logger.info(f"Tìm thấy {len(related)} manga liên quan.")
+    return related
+
+def fetch_and_upsert_tags(conn, tag_ids, manga_id):
+    cursor = conn.cursor()
+    for tag_id in tag_ids:
+        tag_id_upper = str(tag_id).upper()
+        logger.info(f"Xử lý tag ID: {tag_id_upper} cho manga ID: {manga_id}")
+        try:
+            cursor.execute("SELECT 1 FROM [dbo].[Tag] WHERE TagId = ?", (tag_id_upper,))
+            if not cursor.fetchone():
+                logger.debug(f"Gửi yêu cầu API để lấy thông tin tag ID: {tag_id_upper}")
+                data = request_api(f"/manga/{manga_id}")
+                tags = [t for t in data.get("data", {}).get("attributes", {}).get("tags", []) if t["id"] == tag_id]
+                if not tags:
+                    logger.warning(f"Không tìm thấy tag ID {tag_id_upper} trong dữ liệu manga.")
+                    continue
+                tag = tags[0]
+                attr = tag.get("attributes", {})
+                tag_data = {
+                    "TagId": tag_id_upper,
+                    "NameEn": attr.get("name", {}).get("en", "Unknown"),
+                    "GroupName": attr.get("group", "unknown")
+                }
+                cursor.execute("""
+                    MERGE INTO [dbo].[Tag] AS target
+                    USING (VALUES (?, ?, ?))
+                    AS source (TagId, NameEn, GroupName)
+                    ON target.TagId = source.TagId
+                    WHEN MATCHED AND (
+                        target.NameEn != source.NameEn OR
+                        target.GroupName != source.GroupName
+                    ) THEN
+                        UPDATE SET
+                            NameEn = source.NameEn,
+                            GroupName = source.GroupName
+                    WHEN NOT MATCHED THEN
+                        INSERT (TagId, NameEn, GroupName)
+                        VALUES (source.TagId, source.NameEn, source.GroupName);
+                """, (
+                    tag_data['TagId'], tag_data['NameEn'], tag_data['GroupName']
+                ))
+                conn.commit()
+                logger.info(f"Đã upsert tag: {tag_data['NameEn']} (ID: {tag_id_upper})")
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Lỗi upsert tag ID {tag_id_upper} cho manga ID {manga_id}: {e}")
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Lỗi khi lấy thông tin tag ID {tag_id_upper}: {e}")
+
+# Hàm chính để map và upsert manga
+def map_manga_to_db(manga, stats_dict, conn):
+    manga_id = manga.get("id")
+    manga_id_upper = str(manga_id).upper()
+    logger.info(f"Bắt đầu mapping và upsert manga ID: {manga_id_upper}")
+    attr = manga.get("attributes", {})
+    
+    # Manga table
+    manga_db = {
+        "MangaId": manga_id_upper,
+        "Type": manga.get("type"),
+        "TitleEn": attr.get("title", {}).get("en") or list(attr.get("title", {}).values())[0] if attr.get("title") else "Unknown",
+        "ChapterNumbersResetOnNewVolume": attr.get("chapterNumbersResetOnNewVolume", False),
+        "ContentRating": attr.get("contentRating"),
+        "CreatedAt": parse_dt(attr.get("createdAt")),
+        "UpdatedAt": parse_dt(attr.get("updatedAt")),
+        "IsLocked": attr.get("isLocked", False),
+        "LastChapter": attr.get("lastChapter"),
+        "LastVolume": attr.get("lastVolume"),
+        "LatestUploadedChapter": str(attr.get("latestUploadedChapter", "")).upper() if attr.get("latestUploadedChapter") else None,
+        "OriginalLanguage": attr.get("originalLanguage"),
+        "PublicationDemographic": attr.get("publicationDemographic"),
+        "State": attr.get("state"),
+        "Status": attr.get("status"),
+        "Year": attr.get("year"),
+        "OfficialLinks": json.dumps(attr.get("links", {})) if attr.get("links") else None
+    }
+    upsert_manga(conn, [manga_db])
+    manga_id = manga.get("id")
+    manga_id_upper = str(manga_id).upper()
+    logger.info(f"Bắt đầu mapping và upsert manga ID: {manga_id_upper}")
+    attr = manga.get("attributes", {})
+
+    # Manga table
+    manga_db = {
+        "MangaId": manga_id_upper,
+        "Type": manga.get("type"),
+        "TitleEn": attr.get("title", {}).get("en") or list(attr.get("title", {}).values())[0] if attr.get("title") else "Unknown",
+        "ChapterNumbersResetOnNewVolume": attr.get("chapterNumbersResetOnNewVolume", False),
+        "ContentRating": attr.get("contentRating"),
+        "CreatedAt": parse_dt(attr.get("createdAt")),
+        "UpdatedAt": parse_dt(attr.get("updatedAt")),
+        "IsLocked": attr.get("isLocked", False),
+        "LastChapter": attr.get("lastChapter"),
+        "LastVolume": attr.get("lastVolume"),
+        "LatestUploadedChapter": str(attr.get("latestUploadedChapter", "")).upper() if attr.get("latestUploadedChapter") else None,
+        "OriginalLanguage": attr.get("originalLanguage"),
+        "PublicationDemographic": attr.get("publicationDemographic"),
+        "State": attr.get("state"),
+        "Status": attr.get("status"),
+        "Year": attr.get("year"),
+        "OfficialLinks": json.dumps(attr.get("links", {})) if attr.get("links") else None
+    }
+    upsert_manga(conn, [manga_db])
+    logger.debug(f"Đã upsert Manga: {manga_db['TitleEn']}")
+
+    # MangaAltTitle
+    alt_titles = [{"MangaId": manga_id_upper, "LangCode": lang, "AltTitle": title} for alt in attr.get("altTitles", []) for lang, title in alt.items()]
+    upsert_manga_alt_title(conn, alt_titles)
+    logger.debug(f"Đã upsert {len(alt_titles)} tiêu đề thay thế.")
+
+    # MangaDescription
+    descriptions = [{"MangaId": manga_id_upper, "LangCode": lang, "Description": desc} for lang, desc in attr.get("description", {}).items()]
+    upsert_manga_description(conn, descriptions)
+    logger.debug(f"Đã upsert {len(descriptions)} mô tả.")
+
+    # MangaAvailableLanguage
+    available_languages = [{"MangaId": manga_id_upper, "LangCode": lang} for lang in attr.get("availableTranslatedLanguages", [])]
+    upsert_manga_available_language(conn, available_languages)
+    logger.debug(f"Đã upsert {len(available_languages)} ngôn ngữ có sẵn.")
+
+    # MangaLink
+    links = [{"MangaId": manga_id_upper, "Provider": provider, "Url": create_manga_link_url(provider, url)} for provider, url in attr.get("links", {}).items()]
+    upsert_manga_link(conn, links)
+    logger.debug(f"Đã upsert {len(links)} liên kết.")
+
+    # MangaRelated
+    related = fetch_related(manga_id, manga)
+    upsert_manga_related(conn, related)
+
+    # MangaStatistics
+    stat = stats_dict.get(manga_id, {})
+    rating = stat.get("rating", {})
+    statistics_db = {
+        "StatisticId": str(uuid.uuid4()).upper(),
+        "MangaId": manga_id_upper,
+        "Source": "Mangadex",
+        "Follows": stat.get("follows"),
+        "AverageRating": rating.get("average"),
+        "BayesianRating": rating.get("bayesian"),
+        "UnavailableChapters": stat.get("unavailableChaptersCount", 0),
+        "FetchedAt": parse_dt(datetime.datetime.now().isoformat())
+    }
+    upsert_manga_statistics(conn, [statistics_db])
+    logger.debug(f"Đã upsert thống kê: Follows={statistics_db['Follows']}")
+
+    # MangaTag
+    tag_ids = [t["id"] for t in attr.get("tags", [])]
+    fetch_and_upsert_tags(conn, tag_ids, manga_id_upper)
+    manga_tags = [{"MangaId": manga_id_upper, "TagId": str(t["id"]).upper()} for t in attr.get("tags", [])]
+    upsert_manga_tag(conn, manga_tags)
+    logger.debug(f"Đã upsert {len(manga_tags)} liên kết MangaTag.")
+
+    # Chapter
+    chapters = fetch_chapters(manga_id)
+    upsert_chapter(conn, chapters)
+
+    # Covers and Creators
+    covers_db = fetch_covers(manga_id)
+    creators_db = []
+    creator_rels = []
+    creator_ids = set()
+    for rel in manga.get("relationships", []):
+        rtype = rel.get("type")
+        rid = str(rel.get("id")).upper()
+        if rtype in ["author", "artist"]:
+            if rid not in creator_ids:
+                creator_full = fetch_creator(rel["id"])
+                creator_full["Type"] = rtype
+                creators_db.append(creator_full)
+                creator_ids.add(rid)
+            creator_rels.append({
+                "CreatorId": rid,
+                "RelatedId": manga_id_upper,
+                "RelatedType": "manga"
+            })
+    upsert_creator(conn, creators_db)
+    upsert_creator_relationship(conn, creator_rels)
+    upsert_covers(conn, covers_db)
+    logger.debug(f"Đã upsert {len(covers_db)} cover, {len(creators_db)} creator.")
+
+    logger.info(f"Hoàn thành mapping và upsert manga ID: {manga_id_upper}")
+--- File: D:\DACSN\coursework\mini-demo\app\models.py ---
 from datetime import datetime
 import uuid
 from flask_login import UserMixin
@@ -5545,7 +6796,7 @@ class Cover(db.Model):
     rel_user_id = db.Column(db.String(36))
     url = db.Column(db.String(500))
     image_data = db.Column(db.LargeBinary)  # lưu binary ảnh
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\reader_controller.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\reader_controller.py ---
 from . import db
 from .models import Chapter, ReadingHistory, Manga
 from sqlalchemy import func
@@ -5754,7 +7005,7 @@ def save_reading_history(user_id, manga_id, chapter_id, last_page):
     db.session.commit()
 
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\routes.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\routes.py ---
 import base64
 from io import BytesIO
 import shutil
@@ -6915,116 +8166,7 @@ def report(user_id):
     return f"Report user {user_id}"
 
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\search_index.py ---
-# app/search_index.py
-import os
-import re
-import joblib
-from unidecode import unidecode
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-from app import create_app, db   # dùng create_app để lấy context
-from app.models import Manga, MangaAltTitle
-
-# mặc định file index
-INDEX_PATH_DEFAULT = os.path.join(
-    os.path.dirname(__file__), "..", "search_index.joblib"
-)
-
-
-def norm(s: str) -> str:
-    """Chuẩn hoá text: remove diacritics, punctuation -> lowercase + collapse spaces."""
-    if not s:
-        return ""
-    s = s.lower()
-    s = unidecode(s)
-    # remove most punctuation, keep letters/numbers/space
-    s = re.sub(r"[^0-9a-z\s]", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
-
-
-def build_index(
-    out_path: str = INDEX_PATH_DEFAULT,
-    ngram_range=(3, 5),
-    max_features: int = 50000,
-):
-    """
-    Build TF-IDF index from Manga + MangaAltTitle.
-    Save a dict {'vectorizer','tfidf_matrix','ids','titles'} via joblib to out_path.
-    """
-    docs = []
-    ids = []
-    titles = []
-
-    mangas = Manga.query.all()
-    for m in mangas:
-        parts = []
-        if getattr(m, "TitleEn", None):
-            parts.append(m.TitleEn)
-        # lấy alt titles
-        alts = MangaAltTitle.query.filter_by(MangaId=m.MangaId).all()
-        for a in alts:
-            if getattr(a, "AltTitle", None):
-                parts.append(a.AltTitle)
-
-        if not parts:
-            continue
-
-        doc = " ".join(parts).strip()
-        docs.append(norm(doc))
-        ids.append(str(m.MangaId))
-        titles.append(m.TitleEn or "")
-
-    vectorizer = TfidfVectorizer(
-        analyzer="char_wb",
-        ngram_range=ngram_range,
-        max_features=max_features,
-        sublinear_tf=True,
-    )
-    tfidf_matrix = vectorizer.fit_transform(docs)  # sparse matrix
-
-    payload = {
-        "vectorizer": vectorizer,
-        "tfidf_matrix": tfidf_matrix,
-        "ids": ids,
-        "titles": titles,
-    }
-
-    joblib.dump(payload, out_path)
-    return out_path
-
-
-def load_index(path: str = INDEX_PATH_DEFAULT):
-    """Return (vectorizer, tfidf_matrix, ids, titles) or (None, None, [], [])."""
-    try:
-        payload = joblib.load(path)
-        return (
-            payload.get("vectorizer"),
-            payload.get("tfidf_matrix"),
-            payload.get("ids", []),
-            payload.get("titles", []),
-        )
-    except Exception as e:
-        print(f"[search_index] load failed: {e}")
-        return None, None, [], []
-
-
-if __name__ == "__main__":
-    # chính: chạy trong root project: python -m app.search_index
-    try:
-        from app import create_app, db
-    except Exception as e:
-        print("Import failed:", e)
-        raise
-
-    flask_app = create_app()
-
-    with flask_app.app_context():
-        out = build_index()
-        print("✅ Index built ->", out)
-
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\__init__.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\__init__.py ---
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -7067,7 +8209,7 @@ def create_app():
     return app
 === Folder: app\blueprints ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\blueprints\reader.py ---
+--- File: D:\DACSN\coursework\mini-demo\app\blueprints\reader.py ---
 from flask import Blueprint, render_template, redirect, url_for, request, jsonify, flash
 from flask_login import login_required, current_user
 from ..reader_controller import get_chapter, get_first_chapter, get_next_chapter, get_prev_chapter, save_reading_history, get_available_langs, get_continue_chapter, get_chapter_list
@@ -7186,27 +8328,27 @@ def get_chapters(manga_id):
 
 === Folder: app\static\assets ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\auth_thmb.png ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\auth_thmb.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x80 in position 4: invalid start byte]
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_avatar.png ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\default_avatar.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_banner.png ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\default_banner.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\default_cover.png ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\default_cover.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\favicon.ico ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\favicon.ico ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\assets\MD-logo.png ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\MD-logo.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
 
 === Folder: app\static\css ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\add_to_list.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\add_to_list.css ---
 /* Dark theme modal for Add To List */
 #addToListModal .modal-content {
     background-color: #1e1e1e;
@@ -7324,7 +8466,7 @@ def get_chapters(manga_id):
     background-color: #2a2a2a;
     /* nền tối nhấn nhẹ */
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\admin.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\admin.css ---
 /* admin.css */
 
 /* ========== Layout & Text ========== */
@@ -7464,7 +8606,26 @@ h5 {
     color: #fff;
     box-shadow: none;
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\advanced_search.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\admin_manga.css ---
+.table-dark th,
+.table-dark td {
+    vertical-align: middle;
+}
+.table-dark .action-btn {
+    font-size: 0.9em;
+    padding: 0.3em 0.6em;
+}
+.card-body {
+    padding: 1.5rem;
+}
+.form-select, .form-control {
+    border: 1px solid #444;
+}
+.form-select:focus, .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\advanced_search.css ---
 .advanced-search-form {
     background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
@@ -7543,7 +8704,7 @@ h5 {
 .table-dark tbody td {
     vertical-align: middle;
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\auth.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\auth.css ---
 /* Background */
 .auth-body {
     margin: 0;
@@ -7741,7 +8902,7 @@ h5 {
 .comment-actions .btn {
     margin-left: 5px;
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\comments.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\comments.css ---
 /* Comment section styles */
 .comment-form {
     background-color: #2a2a2a;
@@ -7795,7 +8956,7 @@ h5 {
         padding: 5px;
     }
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\creator_detail.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\creator_detail.css ---
 body {
     background-color: #1a1a1a;
     color: #f0f0f0;
@@ -7936,7 +9097,7 @@ body {
         font-size: 2rem;
     }
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\dashboard.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\dashboard.css ---
 .dashboard-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -7960,7 +9121,7 @@ body {
     height: 100% !important;
     border: none;
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\library.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\library.css ---
 /* ==== Library page custom theme ==== */
 
 body {
@@ -8103,7 +9264,7 @@ body {
 #deleteListModal .btn-danger {
     width: 100%;
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\list.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\list.css ---
 /* list.css — dark theme for list detail page */
 
 .container.py-4 {
@@ -8244,7 +9405,7 @@ a.text-decoration-none.text-reset .card {
     color: #d1d1d1;
     /* trắng xám, dễ đọc trên nền tối */
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\manga_detail.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\manga_detail.css ---
 .manga-detail-container {
     max-width: 90%;
     margin: 0 auto;
@@ -8671,7 +9832,7 @@ a.text-decoration-none.text-reset .card {
     color: #dc3545;
     /* Red for unread chapters */
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\modal.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\modal.css ---
 /* modal.css */
 
 /* Overlay nền tối khi popup bật */
@@ -8817,7 +9978,7 @@ a.text-decoration-none.text-reset .card {
 .modal-body .form-control::placeholder {
     color: rgba(255, 255, 255, 0.6) !important;
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\reader.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\reader.css ---
 .reader-container {
     max-width: 1200px;
     /* Tăng từ 900px lên 1200px để rộng hơn */
@@ -8863,7 +10024,7 @@ a.text-decoration-none.text-reset .card {
     font-size: 1.1rem;
     /* Tăng cỡ chữ nút */
 }
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\css\styles.css ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\styles.css ---
 @charset "UTF-8";
 
 /*!
@@ -21851,7 +23012,7 @@ h2.text-white fw-bold {
 }
 === Folder: app\static\js ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\add_to_list.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\add_to_list.js ---
 // mini-demo/app/static/js/add_to_list.js
 (function () {
     // Utility: small alert helper (use existing flash/toast if you have one)
@@ -22094,7 +23255,7 @@ h2.text-white fw-bold {
 
 })();
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\admin_comments.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\admin_comments.js ---
 function confirmAction(commentId, action) {
     const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
     document.getElementById('actionText').textContent = action;
@@ -22124,7 +23285,106 @@ document.getElementById('statusFilter').addEventListener('change', function (e) 
     const status = e.target.value;
     window.location.href = `/admin/comments?status=${status}`;
 });
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\admin_users.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\admin_manga.js ---
+document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('manga-search-form');
+    const searchInput = document.getElementById('search-input');
+    const searchMode = document.getElementById('search-mode');
+    const mangaTableBody = document.getElementById('manga-table-body');
+    const actionModal = new bootstrap.Modal(document.getElementById('action-modal'));
+    const modalLabel = document.getElementById('modalLabel');
+    const modalBody = document.getElementById('modal-body');
+    const confirmActionBtn = document.getElementById('confirm-action');
+
+    // Xử lý tìm kiếm
+    searchForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const query = searchInput.value.trim();
+        const mode = searchMode.value;
+
+        if (!query) {
+            alert('Vui lòng nhập từ khóa tìm kiếm.');
+            return;
+        }
+
+        try {
+            const response = await fetch('/manga/search', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ mode, query })
+            });
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Lỗi khi tìm kiếm manga.');
+            }
+
+            // Xóa bảng hiện tại
+            mangaTableBody.innerHTML = '';
+
+            // Hiển thị kết quả
+            data.mangas.forEach(manga => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${manga.manga_id}</td>
+                    <td>${manga.title}</td>
+                    <td>${manga.chapters_db}/${manga.chapters_api}</td>
+                    <td>${manga.covers_db}/${manga.covers_api}</td>
+                    <td>${manga.updated_at || 'N/A'}</td>
+                    <td>
+                        <button class="btn btn-primary action-btn" 
+                                data-manga-id="${manga.manga_id}" 
+                                data-action="${manga.in_db ? 'update' : 'download'}">
+                            ${manga.in_db ? 'Update' : 'Download'}
+                        </button>
+                    </td>
+                `;
+                mangaTableBody.appendChild(row);
+            });
+
+            // Gắn sự kiện cho các nút hành động
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const mangaId = btn.dataset.mangaId;
+                    const action = btn.dataset.action;
+                    modalLabel.textContent = action === 'download' ? 'Tải Manga' : 'Cập nhật Manga';
+                    modalBody.textContent = `Bạn có chắc chắn muốn ${action === 'download' ? 'tải' : 'cập nhật'} manga ID: ${mangaId}?`;
+                    confirmActionBtn.dataset.mangaId = mangaId;
+                    confirmActionBtn.dataset.action = action;
+                    actionModal.show();
+                });
+            });
+        } catch (error) {
+            alert(`Lỗi: ${error.message}`);
+        }
+    });
+
+    // Xử lý xác nhận hành động
+    confirmActionBtn.addEventListener('click', async () => {
+        const mangaId = confirmActionBtn.dataset.mangaId;
+        const action = confirmActionBtn.dataset.action;
+
+        try {
+            const response = await fetch('/manga/action', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ manga_id: mangaId, action })
+            });
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Lỗi khi thực hiện hành động.');
+            }
+
+            alert(`Manga ID: ${mangaId} đã được ${action === 'download' ? 'tải' : 'cập nhật'} thành công!`);
+            actionModal.hide();
+            searchForm.dispatchEvent(new Event('submit')); // Refresh bảng
+        } catch (error) {
+            alert(`Lỗi: ${error.message}`);
+        }
+    });
+});
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\admin_users.js ---
 function confirmAction(userId, action) {
     const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
     document.getElementById('actionText').textContent = action;
@@ -22159,7 +23419,7 @@ document.getElementById('userSearch').addEventListener('input', function (e) {
         row.style.display = (username.includes(query) || email.includes(query)) ? '' : 'none';
     });
 });
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\advanced_search.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\advanced_search.js ---
 document.addEventListener('DOMContentLoaded', () => {
     function populateTags(data) {
         const includeContainer = document.getElementById('include-tags');
@@ -22246,7 +23506,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\comments.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\comments.js ---
 // app/static/js/comments.js
 $(document).ready(function () {
     // Spoiler toggle: click to reveal
@@ -22501,7 +23761,7 @@ $(document).ready(function () {
             .replace(/\n/g, '<br>');
     }
 });
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\library.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\library.js ---
 document.addEventListener("DOMContentLoaded", function () {
     const myListsContainer = document.getElementById("myListsContainer");
     const followedListsContainer = document.getElementById("followedListsContainer");
@@ -22663,7 +23923,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadLists();
 });
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\list_public.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\list_public.js ---
 // list_public.js — handles list detail page behaviour
 (() => {
     const ctx = window._LIST_CONTEXT || {};
@@ -22962,7 +24222,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })();
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\manga_detail.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\manga_detail.js ---
 document.addEventListener('DOMContentLoaded', function () {
     // Header background
     const header = document.querySelector('.manga-detail-header');
@@ -23247,7 +24507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadChapters('asc');
     }
 });
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\reader.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\reader.js ---
 document.addEventListener('DOMContentLoaded', () => {
     const data = JSON.parse(document.getElementById('reader-data').textContent);
     const longStrip = document.getElementById('long-strip');
@@ -23302,7 +24562,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\static\js\scripts.js ---
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\scripts.js ---
 /*!
 * MangaDex Clone - Custom Scripts
 * Dựa trên Start Bootstrap - Simple Sidebar
@@ -23774,7 +25034,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 === Folder: app\templates ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_base.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_base.html ---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23810,7 +25070,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == '/admin/manga' %}active{% endif %}"
-                            href="{{ url_for('admin_bp.admin_manga') }}">Manga</a>
+                            href="{{ url_for('admin_bp.manga') }}">Manga</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == '/admin/creators' %}active{% endif %}"
@@ -23844,7 +25104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_comments.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_comments.html ---
 {% extends "admin_base.html" %}
 {% block title %}Manage Comments{% endblock %}
 {% block content %}
@@ -23981,7 +25241,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/admin_comments.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_creators.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_creators.html ---
 {% extends "admin_base.html" %}
 {% block title %}Manage Creators{% endblock %}
 {% block content %}
@@ -23990,7 +25250,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>This feature is under development.</p>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_dashboard.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_dashboard.html ---
 {% extends "admin_base.html" %}
 {% block title %}Admin Dashboard{% endblock %}
 
@@ -24104,16 +25364,79 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
 </script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_manga.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_manga.html ---
 {% extends "admin_base.html" %}
-{% block title %}Manage Manga{% endblock %}
+
 {% block content %}
-<div class="container-fluid">
-    <h2>Manage Manga</h2>
-    <p>This feature is under development.</p>
+<div class="container mt-4">
+    <h2 class="text-white mb-4">Quản lý Manga</h2>
+
+    <!-- Search Bar -->
+    <div class="card bg-dark text-white mb-4">
+        <div class="card-body">
+            <form id="manga-search-form">
+                <div class="row">
+                    <div class="col-md-3">
+                        <select class="form-select bg-dark text-white" id="search-mode">
+                            <option value="title">Tìm kiếm theo tên</option>
+                            <option value="uuid">Tìm kiếm theo UUID</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control bg-dark text-white" id="search-input" placeholder="Nhập tên manga hoặc UUID">
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="card bg-dark text-white">
+        <div class="card-body">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Manga ID</th>
+                        <th>Tiêu đề</th>
+                        <th>Số chương (DB/API)</th>
+                        <th>Số ảnh bìa (DB/API)</th>
+                        <th>Cập nhật gần nhất</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="manga-table-body">
+                    <!-- Kết quả tìm kiếm sẽ được thêm động bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal for Download/Update Confirmation -->
+    <div class="modal fade" id="action-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Nội dung động từ JS -->
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" id="confirm-action">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="{{ url_for('static', filename='js/admin_manga.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_users.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_users.html ---
 {% extends "admin_base.html" %}
 {% block title %}Manage Users{% endblock %}
 {% block content %}
@@ -24228,7 +25551,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/admin_users.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\admin_user_profile.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\admin_user_profile.html ---
 {% extends "admin_base.html" %}
 {% block title %}User Profile{% endblock %}
 {% block content %}
@@ -24258,7 +25581,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {% endif %}
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\advanced_search.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\advanced_search.html ---
 {% extends "base.html" %}
 {% block title %}Advanced Search{% endblock %}
 {% block styles %}
@@ -24386,7 +25709,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {{ super() }}
 <script src="{{ url_for('static', filename='js/advanced_search.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\art.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\art.html ---
 {% extends "manga_detail.html" %}
 
 {% block tab_content %}
@@ -24394,7 +25717,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p class="text-center text-gray">No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\base.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\base.html ---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24562,7 +25885,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\chapters.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\chapters.html ---
 <!-- app/templates/chapters.html -->
 <div class="tab-pane active" id="chapters">
     <h2>Chapters</h2>
@@ -24572,7 +25895,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {% endfor %}
     </ul>
 </div>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\comments.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\comments.html ---
 {% set mid = manga.MangaId if manga is defined else (manga_id if manga_id is defined else None) %}
 
 <div class="comments-section container-fluid py-3">
@@ -24712,7 +26035,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </nav>
     {% endif %}
 </div>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\creator_detail.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\creator_detail.html ---
 {% extends "base.html" %}
 
 {% block title %}{{ creator.Name }} | MangaDex Clone{% endblock %}
@@ -24763,7 +26086,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\dashboard.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\dashboard.html ---
 <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 
 <div class="dashboard-container">
@@ -24774,7 +26097,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="dashboard-chart">{{ chart5|safe }}</div>
     <div class="dashboard-chart">{{ chart6|safe }}</div>
 </div>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\home.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\home.html ---
 {% extends "base.html" %}
 
 {% block title %}Home | MangaDex Clone{% endblock %}
@@ -24880,7 +26203,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\latest_updates.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\latest_updates.html ---
 {% extends "base.html" %}
 
 {% block title %}Latest Updates | MangaDex Clone{% endblock %}
@@ -24989,7 +26312,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\library.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\library.html ---
 {% extends "base.html" %}
 
 {% block title %}Library | MangaDex Clone{% endblock %}
@@ -25114,7 +26437,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/library.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\list_public.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\list_public.html ---
 {% extends "base.html" %}
 
 {% block title %}{{ list.Name }} | MDList{% endblock %}
@@ -25240,7 +26563,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <script src="{{ url_for('static', filename='js/list_public.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\login.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\login.html ---
 <!DOCTYPE html>
 <html lang="en" class="login-pf">
 
@@ -25296,7 +26619,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\manga_art.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\manga_art.html ---
 <!-- manga_art.html -->
 <div>
     <!-- Locale filter -->
@@ -25327,7 +26650,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {% endfor %}
     </div>
 </div>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\manga_detail.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\manga_detail.html ---
 {# app/templates/manga_detail.html #}
 {% extends "base.html" %}
 
@@ -25602,7 +26925,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
 <script src="{{ url_for('static', filename='js/add_to_list.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\profile.html ---
 {% extends "base.html" %}
 
 {% block title %}Profile | MangaDex Clone{% endblock %}
@@ -25702,7 +27025,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% include "profile_dashboard.html" %}
 
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\profile_dashboard.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\profile_dashboard.html ---
 <!-- load plotly -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -25715,7 +27038,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="chart my-4" id="chart5">{{ chart5|safe }}</div>
     <div class="chart my-4" id="chart6">{{ chart6|safe }}</div>
 </div>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\random.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\random.html ---
 {% extends "base.html" %}
 
 {% block title %}Random | MangaDex Clone{% endblock %}
@@ -25726,7 +27049,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\reader.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\reader.html ---
 {% extends "base.html" %}
 
 {% block title %}{{ chapter.Title }} | {{ manga.TitleEn }} | MangaDex Clone{% endblock %}
@@ -25785,7 +27108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/reader.js') }}"></script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\reading_history.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\reading_history.html ---
 {% extends "base.html" %}
 
 {% block title %}Reading History | MangaDex Clone{% endblock %}
@@ -25796,7 +27119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\recently_added.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\recently_added.html ---
 {% extends "base.html" %}
 
 {% block title %}Recently Added | MangaDex Clone{% endblock %}
@@ -25905,7 +27228,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\register.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\register.html ---
 <!DOCTYPE html>
 <html lang="en" class="login-pf">
 
@@ -25968,7 +27291,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\related.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\related.html ---
 {% extends "manga_detail.html" %}
 
 {% block tab_content %}
@@ -25976,7 +27299,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p class="text-center text-gray">No content available yet.</p>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\require_login.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\require_login.html ---
 {% extends "base.html" %}
 
 {% block title %}{{ title }} | MangaDex Clone{% endblock %}
@@ -26007,7 +27330,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 {% endblock %}
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\app\templates\updates.html ---
+--- File: D:\DACSN\coursework\mini-demo\app\templates\updates.html ---
 {% extends "base.html" %}
 
 {% block title %}Updates | MangaDex Clone{% endblock %}
@@ -26117,7 +27440,46 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endblock %}
 === Folder: Simulation ===
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\Simulation\fix_invalid_ratings.py ---
+--- File: D:\DACSN\coursework\mini-demo\Simulation\add-admin.py ---
+import uuid
+import pyodbc
+from werkzeug.security import generate_password_hash
+from datetime import datetime
+
+# ===== Cấu hình DB =====
+conn_str = (
+    "DRIVER={ODBC Driver 17 for SQL Server};"
+    "SERVER=HEDI-SNOWY\SQLEXPRESS;"           # sửa host hoặc host,port
+    "DATABASE=MangaLibrary;"
+    "Trusted_Connection=yes;"     # dùng Windows Auth; nếu dùng SQL Auth thì thay bằng UID=...;PWD=...
+)
+
+# ===== Thông tin admin =====
+user_id = str(uuid.uuid4())
+username = "admin"
+email = "admin@example.com"
+password = "1234"  # đổi mật khẩu tại đây
+password_hash = generate_password_hash(password)
+
+# ===== Thêm vào DB =====
+with pyodbc.connect(conn_str) as conn:
+    cur = conn.cursor()
+    cur.execute("""
+        INSERT INTO [dbo].[User] (
+            UserId, Username, Email, PasswordHash, Avatar, Role, IsLocked, CreatedAt
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        user_id, username, email, password_hash,
+        None, "Admin", 0, datetime.utcnow()
+    ))
+    conn.commit()
+
+print("✅ Admin user created successfully.")
+print(f"UserId: {user_id}")
+print(f"Username: {username}")
+print(f"Email: {email}")
+
+--- File: D:\DACSN\coursework\mini-demo\Simulation\fix_invalid_ratings.py ---
 import pyodbc
 import random
 
@@ -26164,7 +27526,7 @@ cursor.close()
 conn.close()
 print("Done.")
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\Simulation\multi-users.py ---
+--- File: D:\DACSN\coursework\mini-demo\Simulation\multi-users.py ---
 import pyodbc
 import uuid
 import random
@@ -26313,7 +27675,7 @@ conn.close()
 
 print(f"Done! Inserted {len(users_rows)} users, {len(reading_history_rows)} histories, {len(rating_rows)} ratings, {len(comment_rows)} comments.")
 
---- File: D:\TDMU\2025-2026\HKI_2025-2026\DACSN\coursework\Demo\mini-demo\Simulation\single-user.py ---
+--- File: D:\DACSN\coursework\mini-demo\Simulation\single-user.py ---
 import pyodbc
 import uuid
 import random

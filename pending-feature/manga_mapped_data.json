@@ -1,0 +1,902 @@
+{
+    "Manga": [
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Type": "manga",
+            "TitleEn": "Ryuujin to Iinazuke no Akai Hanajirushi",
+            "ChapterNumbersResetOnNewVolume": false,
+            "ContentRating": "safe",
+            "CreatedAt": "2023-05-27T10:06:50+00:00",
+            "UpdatedAt": "2025-07-05T07:21:37+00:00",
+            "IsLocked": false,
+            "LastChapter": "",
+            "LastVolume": "",
+            "LatestUploadedChapter": "49077eeb-85f1-4ead-a59c-37d247593588",
+            "OriginalLanguage": "ja",
+            "PublicationDemographic": "shoujo",
+            "State": "published",
+            "Status": "ongoing",
+            "Year": 2023,
+            "OfficialLinks": "{\"al\": \"175355\", \"ap\": \"the-dragon-god-and-his-brides-red-flower-seal\", \"bw\": \"series/464161/list\", \"kt\": \"71333\", \"mu\": \"az9n3ii\", \"amz\": \"https://www.amazon.co.jp/dp/B0CW179R3S\", \"ebj\": \"https://ebookjapan.yahoo.co.jp/books/819813\", \"raw\": \"https://www.no-ichigo.jp/comic/noicomi/book/n260/n1\"}"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Type": "manga",
+            "TitleEn": "The Flowers of Evil",
+            "ChapterNumbersResetOnNewVolume": false,
+            "ContentRating": "suggestive",
+            "CreatedAt": "2018-01-27T00:52:40+00:00",
+            "UpdatedAt": "2024-10-22T06:47:36+00:00",
+            "IsLocked": false,
+            "LastChapter": "57",
+            "LastVolume": "11",
+            "LatestUploadedChapter": "9ce6f013-5192-46b2-9cbf-645b6e4bbc16",
+            "OriginalLanguage": "ja",
+            "PublicationDemographic": "shounen",
+            "State": "published",
+            "Status": "completed",
+            "Year": 2009,
+            "OfficialLinks": "{\"al\": \"54705\", \"ap\": \"the-flowers-of-evil\", \"bw\": \"series/4325/list\", \"kt\": \"17216\", \"mu\": \"47462\", \"amz\": \"https://www.amazon.co.jp/dp/B074CJYMRS\", \"ebj\": \"https://ebookjapan.yahoo.co.jp/books/125675/\", \"mal\": \"24705\", \"raw\": \"https://pocket.shonenmagazine.com/episode/10834108156640562401\", \"engtl\": \"https://comics.inkr.com/title/802-the-flowers-of-evil?utm_source=mgd\"}"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "Type": "manga",
+            "TitleEn": "That Time Me and My Friend Tried Raising Our Skirts 10cm Above the Knee",
+            "ChapterNumbersResetOnNewVolume": false,
+            "ContentRating": "suggestive",
+            "CreatedAt": "2021-11-26T12:28:30+00:00",
+            "UpdatedAt": "2023-04-03T16:21:30+00:00",
+            "IsLocked": false,
+            "LastChapter": "",
+            "LastVolume": "",
+            "LatestUploadedChapter": "2ff2e3f7-5177-4124-b1b5-239e5bbeffb2",
+            "OriginalLanguage": "ja",
+            "PublicationDemographic": null,
+            "State": "published",
+            "Status": "completed",
+            "Year": 2021,
+            "OfficialLinks": "{\"mu\": \"184769\", \"raw\": \"https://twitter.com/Kntaid/status/1411301384813613056\"}"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Type": "manga",
+            "TitleEn": "Akuma no Hanazono",
+            "ChapterNumbersResetOnNewVolume": false,
+            "ContentRating": "safe",
+            "CreatedAt": "2019-01-18T19:35:14+00:00",
+            "UpdatedAt": "2024-05-06T22:16:55+00:00",
+            "IsLocked": false,
+            "LastChapter": null,
+            "LastVolume": null,
+            "LatestUploadedChapter": "9a1f37be-dda7-471f-b3a3-ebb78af06b57",
+            "OriginalLanguage": "ja",
+            "PublicationDemographic": "shoujo",
+            "State": "published",
+            "Status": "completed",
+            "Year": 2016,
+            "OfficialLinks": "{\"al\": \"106636\", \"kt\": \"46564\", \"mu\": \"136441\", \"mal\": \"102076\"}"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Type": "manga",
+            "TitleEn": "Koukyuu no Renkinjutsuhi - Aku no Hana wa Ougon no Koi wo Yumemiru",
+            "ChapterNumbersResetOnNewVolume": false,
+            "ContentRating": "safe",
+            "CreatedAt": "2023-01-15T14:35:50+00:00",
+            "UpdatedAt": "2023-09-10T02:06:19+00:00",
+            "IsLocked": false,
+            "LastChapter": "",
+            "LastVolume": "",
+            "LatestUploadedChapter": null,
+            "OriginalLanguage": "ja",
+            "PublicationDemographic": "shoujo",
+            "State": "published",
+            "Status": "ongoing",
+            "Year": 2022,
+            "OfficialLinks": "{\"bw\": \"series/379333\", \"mu\": \"n6lqrz5\", \"amz\": \"https://www.amazon.co.jp/dp/B0BJTWXSSF\", \"ebj\": \"https://ebookjapan.yahoo.co.jp/books/725042/\", \"raw\": \"https://comic-walker.com/contents/detail/KDCW_FL00202951010000_68/\"}"
+        }
+    ],
+    "MangaAltTitle": [
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "LangCode": "ja",
+            "AltTitle": "龍神と許嫁の赤い花印"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "pt-br",
+            "AltTitle": "As Flores do Mal"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "vi",
+            "AltTitle": "Những Bông Hoa Ác"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "id",
+            "AltTitle": "Bunga-Bunga dari Kejahatan"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "de",
+            "AltTitle": "Die Blumen des Bösen"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "tr",
+            "AltTitle": "Kötülük Çiçekleri"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "es-la",
+            "AltTitle": "Las Flores Del Mal"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "fr",
+            "AltTitle": "Les Fleurs du mal"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "ja-ro",
+            "AltTitle": "Aku no Hana"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "uk",
+            "AltTitle": "Квіти Зла"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "ar",
+            "AltTitle": "زهور الشر"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "zh",
+            "AltTitle": "恶之华"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "ja",
+            "AltTitle": "惡の華"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "zh-hk",
+            "AltTitle": "惡之華"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "ko",
+            "AltTitle": "악의 꽃"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "id",
+            "AltTitle": "Aku no Hana: Kembang Jahanam"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "LangCode": "ja",
+            "AltTitle": "友達とスカート丈膝上10センチに挑戦した時の話"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "LangCode": "ja-ro",
+            "AltTitle": "Tomodachi to Sukaato Take Hizaue 10-senchi ni Chousen Shita Toki no Hanashi"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "LangCode": "id",
+            "AltTitle": "Waktu Aku dan Temanku Mencoba Menaikkan Rok Kami 10cm Di Atas Lutut"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "en",
+            "AltTitle": "Devil's First Love"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "en",
+            "AltTitle": "Devil's Garden"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "en",
+            "AltTitle": "Devils First Love"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "ru",
+            "AltTitle": "Первая любовь дьявола"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "ja",
+            "AltTitle": "悪魔の花園"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "LangCode": "ja",
+            "AltTitle": "後宮の錬金術妃 悪の華は黄金の恋を夢見る"
+        }
+    ],
+    "MangaDescription": [
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "LangCode": "en",
+            "Description": "The town of Ryuuka, a place that connects humans and the Dragon Gods that reside in the heavens. Mito, a girl born into the Hoshina clan, has the \"flower seal,\" the mark of a dragon god's mate, but is mistreated as an abomination."
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "LangCode": "ja",
+            "Description": "手の甲に赤い椿の形のアザを持つ少女・ミト。本来であれば龍神の伴侶の証として祝福されるべきその証は、ミトが生まれ育った村では過去の因縁から凶兆として忌み嫌われていた。村人からは『忌み子』と呼ばれ、虐げられる日々を送っていたミト。彼女にとって唯一の救いは幼い頃から夢に現れる美しい男性・波琉と過ごす時間だった――。\n\n一方で、同じく夢でしか会えないミトが気になる波琉。実は彼は、天界の龍神たちの頂点に君臨する4人の龍神の一人『紫紺の王』と呼ばれる龍神で――？感情の起伏が少なく人間に興味を示さないはずの龍神だけど、何故かミトのことだけは忘れられず、会いたい気持ちを募らせていた波琉はついに天界を出て人間の世界にミトを迎えにいくことに！"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "en",
+            "Description": "Kasuga Takao is a boy who loves reading books, particularly Baudelaire's The Flowers of Evil. A girl at his school, Saeki Nanako, is his muse and his Venus, and he admires her from a distance. One day, he forgets his copy of The Flowers of Evil in the classroom and runs back alone to pick it up. In the classroom, he finds not only his book but Saeki's gym uniform. On a mad impulse, he steals it.  \n  \nNow everyone knows \"some pervert\" stole Saeki's uniform, and Kasuga is dying with shame and guilt. Furthermore, the weird, creepy, and friendless girl of the class, Nakamura, saw him take the uniform. Instead of revealing it was him, she recognizes his kindred deviant spirit and uses her knowledge to take control of his life. Will it be possible for Kasuga to get closer to Saeki, despite Nakamura's meddling and his dark secret? What exactly does Nakamura intend to do with him?\n\n\n---\nOfficial Release:\n- [Indonesian release](https://elexmedia.id/produk/serial/aku%20no%20hana-kembang%20jahanam) by Level Comics as **Aku no Hana: Kembang Jahanam** (2023)"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "uk",
+            "Description": "Такао Касуга це простий школяр, який любить читати книжки, в особливості збірку поезій Бодлера \"Квіти Зла\". Він трохи зневажає своїх однокласників за те, що вони не читають книжки, а також таємно закоханий в прекрасну і милу відмінницю Нанако Саекі. Але з ними в класі вчиться повна протилежність до неї, Сава Накамура, груба і замкнена дівчина, яка зневажає і ненавидить усіх навколо неї.  \n  \nОдного дня у житті Такао відбувається епізод, який назавжди змінює його життя. Побачивши у Такао споріднену душу, Накамура намагається розкрити справжнє єство Такао, хоче він того, чи ні."
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "es-la",
+            "Description": "Takao Kasuga es un niño solitario que pasa sus días inmerso en libros para escapar de su frustración con la vida. Su única fuente de alegría es la hermosa Saeki, a quien admira en secreto desde lejos. Sin embargo, la obsesión de Takao va demasiado lejos un día cuando, en un momento de locura emocional, él roba la ropa de gimnasio de la niña y se la lleva a casa con él. Peor aún, su terrible obra es vista por Sawa Nakamura, una misteriosa marginada que se sienta detrás de él en clase y amenaza con revelar el secreto del niño a menos que prometa celebrar un contrato con ella. Al principio, parece que Sawa solo quiere un poco de compañía, pero pronto queda claro que este \"contrato\" implica más que simples charlas por la tarde. De hecho, Takao está a punto de descubrir cuán peligroso es su vínculo con Sawa y cómo amenaza con destrozar todo, su vida, su amor e incluso su cordura, aparte."
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "pt-br",
+            "Description": "Takao Kasuga é um estudante do ensino médio insociável que adora livros; em particular, Les Fleurs du Mal, de Charles Baudelaire. Ele também tem uma queda pelo ídolo de sua classe, a doce Nanako Saeki. Em forte contraste com ela, Sawa Nakamura é uma garota insolente e desagradável que não tem nenhuma preocupação com a escola. Um dia, Takao esquece de levar seu livro para casa. Ele volta à escola para recuperá-lo, mas fica parado quando encontra as roupas de ginástica recém-usadas de Nanako caídas no chão. Um desejo estranho consome Takao e, como um pervertido perverso, ele os rouba. Aku no Hana é uma história convincente de amadurecimento, centrada nos pensamentos, sentimentos e relacionamentos de Takao, enquanto ele tenta viver uma vida normal com a culpa de seu crime que pesa sobre ele. Sawa, no entanto, que testemunhou o roubo de Takao, tem outros planos para ele ..."
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "LangCode": "en",
+            "Description": "Oneshot posted on twitter by Aweida."
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "en",
+            "Description": "He is the \"Devil\", who loves flowers. All girls feel loved when he's around. It was all the same for him until he saw a crying girl that ran into his garden. He thought she was like any other girl, but eventually, she was the prettiest flower he ever saw…"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "pt-br",
+            "Description": "Ele é o \"demônio\" que ama as flores. Todas as garotas amam quando ele aparece. Era tudo o mesmo até ele ver uma garota chorando perto de seu jardim. Ele pensou que fosse como qualquer outra garota, ma eventualmente ela era a mais linda flor que ele já viu…"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "LangCode": "en",
+            "Description": "Is she a villainous woman, or something more? Facing perilous situations with the use of alchemy, a suspense story set in the Chinese imperial harem.\n\nByakuren (Bai Lian) is the Ryuu (Liu) family's eldest daughter. Feared by even the maids for her arrogant and cold demeanor, rumors of her bullying her half-sister Mokuran drift about the household. However, everything was an act to protect Mokuran. Though Byakuren enters into the inner palace as a concubine candidate and begins to move towards fulfilling her goal, the machinations of those around her immediately break apart Byakuren's written scenarios one after the other..."
+        }
+    ],
+    "MangaAvailableLanguage": [
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "LangCode": "zh-hk"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "LangCode": "pt-br"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "pt-br"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "ar"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "ru"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "es-la"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "pl"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "vi"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "de"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "en"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "uk"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "it"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "LangCode": "el"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "LangCode": "id"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "LangCode": "en"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "en"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "pt-br"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "hu"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "LangCode": "pl"
+        }
+    ],
+    "MangaLink": [
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "al",
+            "Url": "https://anilist.co/manga/175355"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "ap",
+            "Url": "https://www.anime-planet.com/manga/the-dragon-god-and-his-brides-red-flower-seal"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "bw",
+            "Url": "https://bookwalker.jp/series/464161/list"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "kt",
+            "Url": "https://kitsu.io/api/edge/manga/71333"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "mu",
+            "Url": "https://www.mangaupdates.com/series.html?id=az9n3ii"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "amz",
+            "Url": "https://www.amazon.co.jp/dp/B0CW179R3S"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "ebj",
+            "Url": "https://ebookjapan.yahoo.co.jp/books/819813"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Provider": "raw",
+            "Url": "https://www.no-ichigo.jp/comic/noicomi/book/n260/n1"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "al",
+            "Url": "https://anilist.co/manga/54705"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "ap",
+            "Url": "https://www.anime-planet.com/manga/the-flowers-of-evil"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "bw",
+            "Url": "https://bookwalker.jp/series/4325/list"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "kt",
+            "Url": "https://kitsu.io/api/edge/manga/17216"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "mu",
+            "Url": "https://www.mangaupdates.com/series.html?id=47462"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "amz",
+            "Url": "https://www.amazon.co.jp/dp/B074CJYMRS"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "ebj",
+            "Url": "https://ebookjapan.yahoo.co.jp/books/125675/"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "mal",
+            "Url": "https://myanimelist.net/manga/24705"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "raw",
+            "Url": "https://pocket.shonenmagazine.com/episode/10834108156640562401"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Provider": "engtl",
+            "Url": "https://comics.inkr.com/title/802-the-flowers-of-evil?utm_source=mgd"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "Provider": "mu",
+            "Url": "https://www.mangaupdates.com/series.html?id=184769"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "Provider": "raw",
+            "Url": "https://twitter.com/Kntaid/status/1411301384813613056"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Provider": "al",
+            "Url": "https://anilist.co/manga/106636"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Provider": "kt",
+            "Url": "https://kitsu.io/api/edge/manga/46564"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Provider": "mu",
+            "Url": "https://www.mangaupdates.com/series.html?id=136441"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Provider": "mal",
+            "Url": "https://myanimelist.net/manga/102076"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Provider": "bw",
+            "Url": "https://bookwalker.jp/series/379333"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Provider": "mu",
+            "Url": "https://www.mangaupdates.com/series.html?id=n6lqrz5"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Provider": "amz",
+            "Url": "https://www.amazon.co.jp/dp/B0BJTWXSSF"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Provider": "ebj",
+            "Url": "https://ebookjapan.yahoo.co.jp/books/725042/"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Provider": "raw",
+            "Url": "https://comic-walker.com/contents/detail/KDCW_FL00202951010000_68/"
+        }
+    ],
+    "MangaRelated": [],
+    "MangaStatistics": [
+        {
+            "StatisticId": "2272cfa5-f7eb-4bf3-bd84-be7c4641e022",
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "Source": "Mangadex",
+            "Follows": 250,
+            "AverageRating": 9.3333,
+            "BayesianRating": 8.23845406231673,
+            "UnavailableChapters": 0,
+            "FetchedAt": "2025-09-29T13:27:28.899951"
+        },
+        {
+            "StatisticId": "3fa97fdd-4738-4de3-a8b0-31c125e46c94",
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "Source": "Mangadex",
+            "Follows": 17910,
+            "AverageRating": 8.833,
+            "BayesianRating": 8.811416557598209,
+            "UnavailableChapters": 532,
+            "FetchedAt": "2025-09-29T13:27:32.516047"
+        },
+        {
+            "StatisticId": "29c2670c-1776-41c3-a615-7f6c244d48f7",
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "Source": "Mangadex",
+            "Follows": 1048,
+            "AverageRating": 7.3354,
+            "BayesianRating": 7.696602283700058,
+            "UnavailableChapters": 0,
+            "FetchedAt": "2025-09-29T13:27:35.105103"
+        },
+        {
+            "StatisticId": "7381b1dd-882a-4960-b384-cd21b87d9424",
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Source": "Mangadex",
+            "Follows": 192,
+            "AverageRating": 7.1176,
+            "BayesianRating": 7.931825166104414,
+            "UnavailableChapters": 0,
+            "FetchedAt": "2025-09-29T13:27:38.685488"
+        },
+        {
+            "StatisticId": "6338c66c-c243-49cb-b99c-0b83a38a637f",
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "Source": "Mangadex",
+            "Follows": 280,
+            "AverageRating": 9,
+            "BayesianRating": 8.170539107338392,
+            "UnavailableChapters": 0,
+            "FetchedAt": "2025-09-29T13:27:42.065455"
+        }
+    ],
+    "MangaTag": [
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "TagId": "36fd93ea-e8b8-445e-b836-358f02b3d33d"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "TagId": "423e2eae-a7a2-4a8b-ac03-a8351462d71d"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "TagId": "b9af3a63-f058-46de-a9a0-e0c13906197a"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "TagId": "cdc58593-87dd-415e-bbc0-2ec27bf404cc"
+        },
+        {
+            "MangaId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "TagId": "f4122d1c-3b44-44d0-9936-ff7502c39ad3"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "3b60b75c-a2d7-4860-ab56-05f391bb889c"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "423e2eae-a7a2-4a8b-ac03-a8351462d71d"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "b9af3a63-f058-46de-a9a0-e0c13906197a"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "caaa44eb-cd40-4177-b930-79d3ef2afe87"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "cdad7e68-1419-41dd-bdce-27753074a640"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "da2d50ca-3018-4cc0-ac7a-6b7d472a29ea"
+        },
+        {
+            "MangaId": "01882116-3e45-4d67-b932-34f60d360086",
+            "TagId": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "TagId": "0234a31e-a729-4e28-9d6a-3f87c4966b9e"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "TagId": "a3c67850-4684-404e-9b7f-c69850ee5da6"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "TagId": "e197df38-d0e7-43b5-9b09-2842d0c326dd"
+        },
+        {
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "TagId": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "TagId": "0234a31e-a729-4e28-9d6a-3f87c4966b9e"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "TagId": "423e2eae-a7a2-4a8b-ac03-a8351462d71d"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "TagId": "caaa44eb-cd40-4177-b930-79d3ef2afe87"
+        },
+        {
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "TagId": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "TagId": "33771934-028e-4cb3-8744-691e866a923e"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "TagId": "423e2eae-a7a2-4a8b-ac03-a8351462d71d"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "TagId": "cdc58593-87dd-415e-bbc0-2ec27bf404cc"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "TagId": "ee968100-4191-4968-93d3-f82d72be7e46"
+        },
+        {
+            "MangaId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "TagId": "f4122d1c-3b44-44d0-9936-ff7502c39ad3"
+        }
+    ],
+    "Chapter": [
+        {
+            "ChapterId": "4de306ad-c8a6-4f3b-a38b-5b31e8cec66a",
+            "MangaId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "Type": "oneshot",
+            "Volume": null,
+            "ChapterNumber": null,
+            "Title": null,
+            "TranslatedLang": "en",
+            "Pages": 4,
+            "PublishAt": "2021-11-26T12:29:23+00:00",
+            "ReadableAt": "2021-11-26T12:29:23+00:00",
+            "IsUnavailable": false,
+            "CreatedAt": "2021-11-26T12:29:22+00:00",
+            "UpdatedAt": "2021-11-26T12:29:28+00:00"
+        },
+        {
+            "ChapterId": "1efe0c94-41db-4533-b7df-6f21ee83c21e",
+            "MangaId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "Type": "oneshot",
+            "Volume": null,
+            "ChapterNumber": null,
+            "Title": "",
+            "TranslatedLang": "en",
+            "Pages": 36,
+            "PublishAt": "2018-04-21T03:01:11+00:00",
+            "ReadableAt": "2018-04-21T03:01:11+00:00",
+            "IsUnavailable": false,
+            "CreatedAt": "2018-04-21T03:01:11+00:00",
+            "UpdatedAt": "2024-05-06T22:44:38+00:00"
+        }
+    ],
+    "Covers": [
+        {
+            "cover_id": "2ecb6914-e58f-4f10-8656-27770a7bad33",
+            "manga_id": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "type": "cover_art",
+            "description": "",
+            "volume": "3",
+            "fileName": "e1cbacda-25de-4a33-bd23-3fddf4480d8f.jpg",
+            "locale": "ja",
+            "createdAt": "2025-05-12T11:34:50+00:00",
+            "updatedAt": "2025-05-12T11:34:50+00:00",
+            "version": 1,
+            "rel_user_id": "f73d34f6-f678-4f8b-9dff-5c759d5fc767",
+            "url": "https://uploads.mangadex.org/covers/4af41067-6c2c-4832-b784-a74a45461fe5/e1cbacda-25de-4a33-bd23-3fddf4480d8f.jpg",
+            "image_data": null
+        },
+        {
+            "cover_id": "abc139f2-c855-4db4-aed8-cf8081e90202",
+            "manga_id": "01882116-3e45-4d67-b932-34f60d360086",
+            "type": "cover_art",
+            "description": "Volume 11 Cover from BookWalker",
+            "volume": "11",
+            "fileName": "17165396-4a7d-4466-ba9f-ddfe8708890d.jpg",
+            "locale": "ja",
+            "createdAt": "2024-04-22T17:34:08+00:00",
+            "updatedAt": "2024-04-22T17:34:08+00:00",
+            "version": 1,
+            "rel_user_id": "29069e0a-5525-468c-a3d6-b138bf16afba",
+            "url": "https://uploads.mangadex.org/covers/01882116-3e45-4d67-b932-34f60d360086/17165396-4a7d-4466-ba9f-ddfe8708890d.jpg",
+            "image_data": null
+        },
+        {
+            "cover_id": "ff8a85d0-1c6a-4f0b-ac6d-8038f6d5f811",
+            "manga_id": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "type": "cover_art",
+            "description": "",
+            "volume": null,
+            "fileName": "c2b8d7ff-8e35-4c0b-a5dd-9f033b3d5bec.jpg",
+            "locale": "ja",
+            "createdAt": "2021-11-26T12:28:32+00:00",
+            "updatedAt": "2021-11-26T12:28:32+00:00",
+            "version": 1,
+            "rel_user_id": "68d62155-85fa-4851-94af-37402bf16252",
+            "url": "https://uploads.mangadex.org/covers/f834e8bf-b8e5-4f70-93be-10990ab2f665/c2b8d7ff-8e35-4c0b-a5dd-9f033b3d5bec.jpg",
+            "image_data": null
+        },
+        {
+            "cover_id": "23aac917-70bc-4f73-881d-092ba0cecc84",
+            "manga_id": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "type": "cover_art",
+            "description": "",
+            "volume": null,
+            "fileName": "cfda4a12-4c3a-4466-bf92-b602387f5a0c.jpg",
+            "locale": "ja",
+            "createdAt": "2021-05-24T16:58:18+00:00",
+            "updatedAt": "2021-05-24T16:58:18+00:00",
+            "version": 1,
+            "rel_user_id": "f8cc4f8a-e596-4618-ab05-ef6572980bbf",
+            "url": "https://uploads.mangadex.org/covers/3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f/cfda4a12-4c3a-4466-bf92-b602387f5a0c.jpg",
+            "image_data": null
+        },
+        {
+            "cover_id": "310268a4-181b-47a2-ab94-93eb3ece2c95",
+            "manga_id": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "type": "cover_art",
+            "description": "",
+            "volume": "2",
+            "fileName": "abef1294-d021-44a1-9434-47513014c77b.jpg",
+            "locale": "ja",
+            "createdAt": "2023-09-10T02:06:18+00:00",
+            "updatedAt": "2023-09-10T02:06:18+00:00",
+            "version": 1,
+            "rel_user_id": "27bde0e8-71b0-4bf2-8e25-2902a7b2dd4b",
+            "url": "https://uploads.mangadex.org/covers/6c4ba5c9-5296-4dd2-a8ae-a1911d01f371/abef1294-d021-44a1-9434-47513014c77b.jpg",
+            "image_data": null
+        }
+    ],
+    "Creator": [
+        {
+            "CreatorId": "61f9be4b-219e-47a8-ae9e-54034d462b8c",
+            "Type": "author",
+            "Name": "Kureha",
+            "ImageUrl": null,
+            "BiographyEn": "* [Alphapolis](https://www.alphapolis.co.jp/author/detail/167343795)\n* [Novema](https://novema.jp/member/n258289)\n* [Syosetu](https://mypage.syosetu.com/236735/)",
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2025-08-07T12:58:18+00:00"
+        },
+        {
+            "CreatorId": "fb47c689-da87-47de-b2bf-57e6665b96ad",
+            "Type": "artist",
+            "Name": "Nakano Mayaka",
+            "ImageUrl": null,
+            "BiographyEn": null,
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2021-04-19T21:59:45+00:00"
+        },
+        {
+            "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+            "Type": "author",
+            "Name": "Oshimi Shuuzou",
+            "ImageUrl": null,
+            "BiographyEn": "**Name In Native Language:** 押見修造\n\nWorked as an assistant for [Muraoka Yuu](https://mangadex.org/author/66ee6210-719a-4c17-9971-b0e774464efc).",
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2025-05-04T15:45:54+00:00"
+        },
+        {
+            "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+            "Type": "author",
+            "Name": "Aweida",
+            "ImageUrl": null,
+            "BiographyEn": "Native name: アウェイ田",
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2023-04-03T16:14:06+00:00"
+        },
+        {
+            "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+            "Type": "author",
+            "Name": "Mitsuki Miko",
+            "ImageUrl": null,
+            "BiographyEn": "**Name** (in native language)\n蜜樹みこ",
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2024-02-18T03:06:54+00:00"
+        },
+        {
+            "CreatorId": "a22a527e-122e-4784-a257-900d36e3c14f",
+            "Type": "author",
+            "Name": "Kigawa Arata",
+            "ImageUrl": null,
+            "BiographyEn": null,
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2021-04-19T21:59:45+00:00"
+        },
+        {
+            "CreatorId": "dbb8c9b8-b213-45e3-bfb4-31313ca33297",
+            "Type": "artist",
+            "Name": "Makimoto Umemi",
+            "ImageUrl": null,
+            "BiographyEn": null,
+            "BiographyJa": null,
+            "BiographyPtBr": null,
+            "CreatedAt": "2021-04-19T21:59:45+00:00",
+            "UpdatedAt": "2023-01-16T08:55:50+00:00"
+        }
+    ],
+    "CreatorRelationship": [
+        {
+            "CreatorId": "61f9be4b-219e-47a8-ae9e-54034d462b8c",
+            "RelatedId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "fb47c689-da87-47de-b2bf-57e6665b96ad",
+            "RelatedId": "4af41067-6c2c-4832-b784-a74a45461fe5",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+            "RelatedId": "01882116-3e45-4d67-b932-34f60d360086",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "ac27ae52-3ed1-4784-9885-f2985b6a602f",
+            "RelatedId": "01882116-3e45-4d67-b932-34f60d360086",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+            "RelatedId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "361d74fb-d10b-4a34-b54f-3c71df43bee2",
+            "RelatedId": "f834e8bf-b8e5-4f70-93be-10990ab2f665",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+            "RelatedId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "f2311808-d365-4d8d-81f6-9baa8a232118",
+            "RelatedId": "3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "a22a527e-122e-4784-a257-900d36e3c14f",
+            "RelatedId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "RelatedType": "manga"
+        },
+        {
+            "CreatorId": "dbb8c9b8-b213-45e3-bfb4-31313ca33297",
+            "RelatedId": "6c4ba5c9-5296-4dd2-a8ae-a1911d01f371",
+            "RelatedType": "manga"
+        }
+    ]
+}

@@ -5,7 +5,7 @@ OUTPUT_FILE = "project_dump.txt"
 
 def should_ignore_dir(dirname: str) -> bool:
     """Bỏ qua thư mục venv (dù tên kiểu gì)."""
-    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags"))
+    return dirname.lower().startswith(("venv", ".venv", "__pycache__", "Data", "data", ".git", "flags", ".gitignore", ".gitattributes", "pending-feature"))
 
 def build_tree_dict(root_dir: str) -> dict:
     """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""

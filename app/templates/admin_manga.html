@@ -1,8 +1,71 @@
 {% extends "admin_base.html" %}
-{% block title %}Manage Manga{% endblock %}
+
 {% block content %}
-<div class="container-fluid">
-    <h2>Manage Manga</h2>
-    <p>This feature is under development.</p>
+<div class="container mt-4">
+    <h2 class="text-white mb-4">Quản lý Manga</h2>
+
+    <!-- Search Bar -->
+    <div class="card bg-dark text-white mb-4">
+        <div class="card-body">
+            <form id="manga-search-form">
+                <div class="row">
+                    <div class="col-md-3">
+                        <select class="form-select bg-dark text-white" id="search-mode">
+                            <option value="title">Tìm kiếm theo tên</option>
+                            <option value="uuid">Tìm kiếm theo UUID</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control bg-dark text-white" id="search-input" placeholder="Nhập tên manga hoặc UUID">
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="card bg-dark text-white">
+        <div class="card-body">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Manga ID</th>
+                        <th>Tiêu đề</th>
+                        <th>Số chương (DB/API)</th>
+                        <th>Số ảnh bìa (DB/API)</th>
+                        <th>Cập nhật gần nhất</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="manga-table-body">
+                    <!-- Kết quả tìm kiếm sẽ được thêm động bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal for Download/Update Confirmation -->
+    <div class="modal fade" id="action-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Nội dung động từ JS -->
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" id="confirm-action">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="{{ url_for('static', filename='js/admin_manga.js') }}"></script>
 {% endblock %}

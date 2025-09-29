@@ -1,0 +1,180 @@
+2025-09-29 11:43:14,088 - INFO - Bắt đầu chạy script.
+2025-09-29 11:43:14,088 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no Hana
+2025-09-29 11:43:15,181 - INFO - Tìm thấy 5 manga.
+2025-09-29 11:43:15,183 - INFO - Lấy thống kê cho 5 manga.
+2025-09-29 11:43:16,810 - INFO - Hoàn thành lấy thống kê.
+2025-09-29 11:43:16,810 - INFO - Xử lý manga 1/5: ID 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 11:43:16,811 - INFO - Bắt đầu mapping manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 11:43:16,812 - INFO - Lấy manga liên quan cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 11:43:16,812 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 11:43:16,825 - INFO - Lấy danh sách chương cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 11:43:17,834 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 11:43:17,835 - INFO - Lấy thông tin creator ID: 61f9be4b-219e-47a8-ae9e-54034d462b8c
+2025-09-29 11:43:18,737 - INFO - Lấy thông tin creator ID: fb47c689-da87-47de-b2bf-57e6665b96ad
+2025-09-29 11:43:19,500 - INFO - Lấy thông tin cover ID: 2ecb6914-e58f-4f10-8656-27770a7bad33
+2025-09-29 11:43:20,596 - INFO - Hoàn thành mapping manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 11:43:20,597 - INFO - Hoàn thành xử lý manga 1/5.
+2025-09-29 11:43:20,598 - INFO - Xử lý manga 2/5: ID 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 11:43:20,598 - INFO - Bắt đầu mapping manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 11:43:20,598 - INFO - Lấy manga liên quan cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 11:43:20,599 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 11:43:20,599 - INFO - Lấy danh sách chương cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 11:43:21,517 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 11:43:21,517 - INFO - Lấy thông tin creator ID: ac27ae52-3ed1-4784-9885-f2985b6a602f
+2025-09-29 11:43:22,872 - INFO - Lấy thông tin cover ID: abc139f2-c855-4db4-aed8-cf8081e90202
+2025-09-29 11:43:24,165 - INFO - Hoàn thành mapping manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 11:43:24,165 - INFO - Hoàn thành xử lý manga 2/5.
+2025-09-29 11:43:24,166 - INFO - Xử lý manga 3/5: ID f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 11:43:24,167 - INFO - Bắt đầu mapping manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 11:43:24,167 - INFO - Lấy manga liên quan cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 11:43:24,168 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 11:43:24,168 - INFO - Lấy danh sách chương cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 11:43:26,332 - INFO - Tổng cộng lấy được 1 chương cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 11:43:26,333 - INFO - Lấy thông tin creator ID: 361d74fb-d10b-4a34-b54f-3c71df43bee2
+2025-09-29 11:43:27,344 - INFO - Lấy thông tin cover ID: ff8a85d0-1c6a-4f0b-ac6d-8038f6d5f811
+2025-09-29 11:43:28,277 - INFO - Hoàn thành mapping manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 11:43:28,278 - INFO - Hoàn thành xử lý manga 3/5.
+2025-09-29 11:43:28,279 - INFO - Xử lý manga 4/5: ID 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 11:43:28,279 - INFO - Bắt đầu mapping manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 11:43:28,280 - INFO - Lấy manga liên quan cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 11:43:28,280 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 11:43:28,281 - INFO - Lấy danh sách chương cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 11:43:31,043 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 11:43:31,044 - INFO - Lấy thông tin creator ID: f2311808-d365-4d8d-81f6-9baa8a232118
+2025-09-29 11:43:31,840 - INFO - Lấy thông tin cover ID: 23aac917-70bc-4f73-881d-092ba0cecc84
+2025-09-29 11:43:32,820 - INFO - Hoàn thành mapping manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 11:43:32,821 - INFO - Hoàn thành xử lý manga 4/5.
+2025-09-29 11:43:32,822 - INFO - Xử lý manga 5/5: ID 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 11:43:32,822 - INFO - Bắt đầu mapping manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 11:43:32,823 - INFO - Lấy manga liên quan cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 11:43:32,823 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 11:43:32,824 - INFO - Lấy danh sách chương cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 11:43:34,081 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 11:43:34,082 - INFO - Lấy thông tin creator ID: a22a527e-122e-4784-a257-900d36e3c14f
+2025-09-29 11:43:34,996 - INFO - Lấy thông tin creator ID: dbb8c9b8-b213-45e3-bfb4-31313ca33297
+2025-09-29 11:43:36,264 - INFO - Lấy thông tin cover ID: 310268a4-181b-47a2-ab94-93eb3ece2c95
+2025-09-29 11:43:37,184 - INFO - Hoàn thành mapping manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 11:43:37,185 - INFO - Hoàn thành xử lý manga 5/5.
+2025-09-29 11:43:37,185 - INFO - Deduplicate dữ liệu.
+2025-09-29 11:43:37,185 - INFO - Ghi dữ liệu ra file: manga_mapped_data.json
+2025-09-29 11:43:37,189 - INFO - Hoàn thành! Dữ liệu đã được ghi vào file: manga_mapped_data.json
+2025-09-29 13:01:44,251 - INFO - Bắt đầu chạy script.
+2025-09-29 13:01:44,252 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no Hana
+2025-09-29 13:01:45,338 - INFO - Tìm thấy 5 manga.
+2025-09-29 13:01:45,338 - INFO - Lấy thống kê cho 5 manga.
+2025-09-29 13:01:46,476 - INFO - Hoàn thành lấy thống kê.
+2025-09-29 13:01:46,476 - INFO - Xử lý manga 1/5: ID 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:01:46,477 - INFO - Bắt đầu mapping manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:01:46,477 - INFO - Lấy manga liên quan cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:01:46,477 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:01:46,478 - INFO - Lấy danh sách chương cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:01:47,403 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:01:47,404 - INFO - Lấy thông tin creator ID: 61f9be4b-219e-47a8-ae9e-54034d462b8c
+2025-09-29 13:01:48,164 - INFO - Lấy thông tin creator ID: fb47c689-da87-47de-b2bf-57e6665b96ad
+2025-09-29 13:01:49,015 - INFO - Lấy thông tin cover ID: 2ecb6914-e58f-4f10-8656-27770a7bad33
+2025-09-29 13:01:49,860 - INFO - Hoàn thành mapping manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:01:49,861 - INFO - Hoàn thành xử lý manga 1/5.
+2025-09-29 13:01:49,862 - INFO - Xử lý manga 2/5: ID 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:01:49,862 - INFO - Bắt đầu mapping manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:01:49,863 - INFO - Lấy manga liên quan cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:01:49,863 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:01:49,864 - INFO - Lấy danh sách chương cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:01:50,793 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:01:50,794 - INFO - Lấy thông tin creator ID: ac27ae52-3ed1-4784-9885-f2985b6a602f
+2025-09-29 13:01:51,704 - INFO - Lấy thông tin cover ID: abc139f2-c855-4db4-aed8-cf8081e90202
+2025-09-29 13:01:52,507 - INFO - Hoàn thành mapping manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:01:52,508 - INFO - Hoàn thành xử lý manga 2/5.
+2025-09-29 13:01:52,510 - INFO - Xử lý manga 3/5: ID f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:01:52,512 - INFO - Bắt đầu mapping manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:01:52,513 - INFO - Lấy manga liên quan cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:01:52,514 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:01:52,515 - INFO - Lấy danh sách chương cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:01:54,267 - INFO - Tổng cộng lấy được 1 chương cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:01:54,268 - INFO - Lấy thông tin creator ID: 361d74fb-d10b-4a34-b54f-3c71df43bee2
+2025-09-29 13:01:55,121 - INFO - Lấy thông tin cover ID: ff8a85d0-1c6a-4f0b-ac6d-8038f6d5f811
+2025-09-29 13:01:55,990 - INFO - Hoàn thành mapping manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:01:55,991 - INFO - Hoàn thành xử lý manga 3/5.
+2025-09-29 13:01:55,993 - INFO - Xử lý manga 4/5: ID 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:01:55,994 - INFO - Bắt đầu mapping manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:01:55,995 - INFO - Lấy manga liên quan cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:01:55,996 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:01:55,997 - INFO - Lấy danh sách chương cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:01:57,786 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:01:57,786 - INFO - Lấy thông tin creator ID: f2311808-d365-4d8d-81f6-9baa8a232118
+2025-09-29 13:01:58,564 - INFO - Lấy thông tin cover ID: 23aac917-70bc-4f73-881d-092ba0cecc84
+2025-09-29 13:01:59,395 - INFO - Hoàn thành mapping manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:01:59,396 - INFO - Hoàn thành xử lý manga 4/5.
+2025-09-29 13:01:59,397 - INFO - Xử lý manga 5/5: ID 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:01:59,398 - INFO - Bắt đầu mapping manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:01:59,399 - INFO - Lấy manga liên quan cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:01:59,399 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:01:59,401 - INFO - Lấy danh sách chương cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:02:00,453 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:02:00,453 - INFO - Lấy thông tin creator ID: a22a527e-122e-4784-a257-900d36e3c14f
+2025-09-29 13:02:01,358 - INFO - Lấy thông tin creator ID: dbb8c9b8-b213-45e3-bfb4-31313ca33297
+2025-09-29 13:02:02,194 - INFO - Lấy thông tin cover ID: 310268a4-181b-47a2-ab94-93eb3ece2c95
+2025-09-29 13:02:03,035 - INFO - Hoàn thành mapping manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:02:03,036 - INFO - Hoàn thành xử lý manga 5/5.
+2025-09-29 13:02:03,036 - INFO - Deduplicate dữ liệu.
+2025-09-29 13:02:03,037 - INFO - Ghi dữ liệu ra file: manga_mapped_data.json
+2025-09-29 13:02:03,038 - INFO - Hoàn thành! Dữ liệu đã được ghi vào file: manga_mapped_data.json
+2025-09-29 13:27:26,707 - INFO - Bắt đầu chạy script.
+2025-09-29 13:27:26,707 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Aku no Hana
+2025-09-29 13:27:27,810 - INFO - Tìm thấy 5 manga.
+2025-09-29 13:27:27,812 - INFO - Lấy thống kê cho 5 manga.
+2025-09-29 13:27:28,896 - INFO - Hoàn thành lấy thống kê.
+2025-09-29 13:27:28,896 - INFO - Xử lý manga 1/5: ID 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:27:28,896 - INFO - Bắt đầu mapping manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:27:28,897 - INFO - Lấy manga liên quan cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:27:28,898 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:27:28,900 - INFO - Lấy danh sách chương cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:27:29,861 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:27:29,862 - INFO - Lấy thông tin creator ID: 61f9be4b-219e-47a8-ae9e-54034d462b8c
+2025-09-29 13:27:30,695 - INFO - Lấy thông tin creator ID: fb47c689-da87-47de-b2bf-57e6665b96ad
+2025-09-29 13:27:31,627 - INFO - Lấy thông tin cover ID: 2ecb6914-e58f-4f10-8656-27770a7bad33
+2025-09-29 13:27:32,510 - INFO - Hoàn thành mapping manga ID: 4af41067-6c2c-4832-b784-a74a45461fe5
+2025-09-29 13:27:32,511 - INFO - Hoàn thành xử lý manga 1/5.
+2025-09-29 13:27:32,512 - INFO - Xử lý manga 2/5: ID 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:27:32,513 - INFO - Bắt đầu mapping manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:27:32,514 - INFO - Lấy manga liên quan cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:27:32,515 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:27:32,516 - INFO - Lấy danh sách chương cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:27:33,486 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:27:33,487 - INFO - Lấy thông tin creator ID: ac27ae52-3ed1-4784-9885-f2985b6a602f
+2025-09-29 13:27:34,318 - INFO - Lấy thông tin cover ID: abc139f2-c855-4db4-aed8-cf8081e90202
+2025-09-29 13:27:35,101 - INFO - Hoàn thành mapping manga ID: 01882116-3e45-4d67-b932-34f60d360086
+2025-09-29 13:27:35,102 - INFO - Hoàn thành xử lý manga 2/5.
+2025-09-29 13:27:35,103 - INFO - Xử lý manga 3/5: ID f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:27:35,104 - INFO - Bắt đầu mapping manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:27:35,104 - INFO - Lấy manga liên quan cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:27:35,104 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:27:35,105 - INFO - Lấy danh sách chương cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:27:36,861 - INFO - Tổng cộng lấy được 1 chương cho manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:27:36,863 - INFO - Lấy thông tin creator ID: 361d74fb-d10b-4a34-b54f-3c71df43bee2
+2025-09-29 13:27:37,746 - INFO - Lấy thông tin cover ID: ff8a85d0-1c6a-4f0b-ac6d-8038f6d5f811
+2025-09-29 13:27:38,683 - INFO - Hoàn thành mapping manga ID: f834e8bf-b8e5-4f70-93be-10990ab2f665
+2025-09-29 13:27:38,684 - INFO - Hoàn thành xử lý manga 3/5.
+2025-09-29 13:27:38,684 - INFO - Xử lý manga 4/5: ID 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:27:38,684 - INFO - Bắt đầu mapping manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:27:38,684 - INFO - Lấy manga liên quan cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:27:38,685 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:27:38,685 - INFO - Lấy danh sách chương cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:27:40,396 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:27:40,398 - INFO - Lấy thông tin creator ID: f2311808-d365-4d8d-81f6-9baa8a232118
+2025-09-29 13:27:41,289 - INFO - Lấy thông tin cover ID: 23aac917-70bc-4f73-881d-092ba0cecc84
+2025-09-29 13:27:42,064 - INFO - Hoàn thành mapping manga ID: 3a9c9f2b-3bf7-4f7e-9f1d-6230399d9b7f
+2025-09-29 13:27:42,064 - INFO - Hoàn thành xử lý manga 4/5.
+2025-09-29 13:27:42,064 - INFO - Xử lý manga 5/5: ID 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:27:42,064 - INFO - Bắt đầu mapping manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:27:42,065 - INFO - Lấy manga liên quan cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:27:42,065 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-29 13:27:42,065 - INFO - Lấy danh sách chương cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:27:42,952 - INFO - Tổng cộng lấy được 0 chương cho manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:27:42,953 - INFO - Lấy thông tin creator ID: a22a527e-122e-4784-a257-900d36e3c14f
+2025-09-29 13:27:43,806 - INFO - Lấy thông tin creator ID: dbb8c9b8-b213-45e3-bfb4-31313ca33297
+2025-09-29 13:27:44,652 - INFO - Lấy thông tin cover ID: 310268a4-181b-47a2-ab94-93eb3ece2c95
+2025-09-29 13:27:45,449 - INFO - Hoàn thành mapping manga ID: 6c4ba5c9-5296-4dd2-a8ae-a1911d01f371
+2025-09-29 13:27:45,449 - INFO - Hoàn thành xử lý manga 5/5.
+2025-09-29 13:27:45,449 - INFO - Deduplicate dữ liệu.
+2025-09-29 13:27:45,449 - INFO - Ghi dữ liệu ra file: manga_mapped_data.json
+2025-09-29 13:27:45,451 - INFO - Hoàn thành! Dữ liệu đã được ghi vào file: manga_mapped_data.json
