@@ -7,7 +7,7 @@ class Config:
     SERVER = "DESKTOP-HKIPI1M"
     DATABASE = "MangaLibrary"
     connection_string = (
-        f"DRIVER={{{DRIVER}}};"
+        f"DRIVER={{ODBC Driver 17 for SQL Server}};"  # Sử dụng {{}} để escape
         f"SERVER={SERVER};"
         f"DATABASE={DATABASE};"
         f"Trusted_Connection=yes;"

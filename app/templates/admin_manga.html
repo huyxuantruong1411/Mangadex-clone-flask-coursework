@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2 class="text-white mb-4">Quản lý Manga</h2>
+    <h2 class="text-white mb-4">Manga Management</h2>
 
     <!-- Search Bar -->
     <div class="card bg-dark text-white mb-4">
@@ -11,15 +11,15 @@
                 <div class="row">
                     <div class="col-md-3">
                         <select class="form-select bg-dark text-white" id="search-mode">
-                            <option value="title">Tìm kiếm theo tên</option>
-                            <option value="uuid">Tìm kiếm theo UUID</option>
+                            <option value="title">Search by title</option>
+                            <option value="uuid">Search by UUID</option>
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control bg-dark text-white" id="search-input" placeholder="Nhập tên manga hoặc UUID">
+                        <input type="text" class="form-control bg-dark text-white" id="search-input" placeholder="Enter manga title or UUID">
                     </div>
                     <div class="col-md-3">
-                        <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+                        <button type="submit" class="btn btn-primary w-100" id="search-btn">Search</button>
                     </div>
                 </div>
             </form>
@@ -33,15 +33,15 @@
                 <thead>
                     <tr>
                         <th>Manga ID</th>
-                        <th>Tiêu đề</th>
-                        <th>Số chương (DB/API)</th>
-                        <th>Số ảnh bìa (DB/API)</th>
-                        <th>Cập nhật gần nhất</th>
-                        <th>Hành động</th>
+                        <th>Title</th>
+                        <th>Chapters (DB/API)</th>
+                        <th>Covers (DB/API)</th>
+                        <th>Last Updated</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="manga-table-body">
-                    <!-- Kết quả tìm kiếm sẽ được thêm động bằng JavaScript -->
+                    <!-- Search results will be dynamically added by JavaScript -->
                 </tbody>
             </table>
         </div>
@@ -56,11 +56,17 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modal-body">
-                    <!-- Nội dung động từ JS -->
+                    <!-- Dynamic content from JS -->
+                    <div id="loading-spinner" class="d-none text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p>Processing, please wait...</p>
+                    </div>
                 </div>
                 <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                    <button type="button" class="btn btn-primary" id="confirm-action">Xác nhận</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirm-action">Confirm</button>
                 </div>
             </div>
         </div>

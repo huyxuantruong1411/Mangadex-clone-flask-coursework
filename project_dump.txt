@@ -120,6 +120,10 @@
                   "type": "file"
                 },
                 {
+                  "name": "evernight_dance.gif",
+                  "type": "file"
+                },
+                {
                   "name": "favicon.ico",
                   "type": "file"
                 }
@@ -440,6 +444,7 @@ D:\DACSN\coursework\mini-demo/
 │   │   │   ├── default_avatar.png
 │   │   │   ├── default_banner.png
 │   │   │   ├── default_cover.png
+│   │   │   ├── evernight_dance.gif
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── add_to_list.css
@@ -550,7 +555,7 @@ class Config:
     SERVER = "DESKTOP-HKIPI1M"
     DATABASE = "MangaLibrary"
     connection_string = (
-        f"DRIVER={{{DRIVER}}};"
+        f"DRIVER={{ODBC Driver 17 for SQL Server}};"  # Sử dụng {{}} để escape
         f"SERVER={SERVER};"
         f"DATABASE={DATABASE};"
         f"Trusted_Connection=yes;"
@@ -558,7 +563,6 @@ class Config:
 
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
 --- File: D:\DACSN\coursework\mini-demo\dump.py ---
 import os
 import json
@@ -1937,6 +1941,180 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
 2025-09-30 02:06:23,685 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
 2025-09-30 02:06:23,686 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
 2025-09-30 02:06:23,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:06:23] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:20:01,346 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 02:20:02,628 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 02:20:02,646 - INFO - 127.0.0.1 - - [30/Sep/2025 02:20:02] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:23:21,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:23:21,081 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:23:21,083 - INFO -  * Restarting with stat
+2025-09-30 08:23:21,752 - WARNING -  * Debugger is active!
+2025-09-30 08:23:21,756 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:23:27,995 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:27] "GET / HTTP/1.1" 200 -
+2025-09-30 08:23:28,113 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,115 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,116 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,402 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,403 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,028 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 08:23:39,106 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,106 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,126 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 08:23:45,740 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:45] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 08:23:48,825 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 08:23:48,878 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:48,883 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:48,896 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:49,080 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 08:23:59,136 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 08:23:59,184 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,193 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,194 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,223 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,152 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:24:02,187 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,189 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,190 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,220 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,096 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:24:03,138 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,142 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,144 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,187 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 08:26:13,933 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:13] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:26:14,006 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,006 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,009 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,010 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,713 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 08:26:14,767 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,772 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,778 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,779 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,738 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:26:15,781 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,786 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,792 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,792 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,259 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:26:17,294 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,298 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,304 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,301 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,816 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:28:39,847 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,852 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,855 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,856 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:36,591 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:35:36,591 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:35:36,592 - INFO -  * Restarting with stat
+2025-09-30 08:35:37,234 - WARNING -  * Debugger is active!
+2025-09-30 08:35:37,236 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:35:39,857 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:35:39,990 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:39,995 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:39,996 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:40,035 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:40] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 08:36:01,596 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:03,279 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:03,280 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:05,389 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:36:05,389 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:05,392 - INFO - 127.0.0.1 - - [30/Sep/2025 08:36:05] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:38:09,077 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:38:10,333 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:38:10,352 - INFO - 127.0.0.1 - - [30/Sep/2025 08:38:10] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:51:22,176 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 08:51:22,331 - INFO -  * Restarting with stat
+2025-09-30 08:51:23,438 - WARNING -  * Debugger is active!
+2025-09-30 08:51:23,441 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:51:44,820 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:51:45,628 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:51:45,631 - INFO - 127.0.0.1 - - [30/Sep/2025 08:51:45] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:51:57,497 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:51:57,497 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:51:57,498 - INFO -  * Restarting with stat
+2025-09-30 08:51:58,125 - WARNING -  * Debugger is active!
+2025-09-30 08:51:58,127 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:52:07,626 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:10,567 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:10,570 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:14,931 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:52:14,948 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:14,954 - INFO - 127.0.0.1 - - [30/Sep/2025 08:52:14] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:52:23,238 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:52:24,435 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:52:24,448 - INFO - 127.0.0.1 - - [30/Sep/2025 08:52:24] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:54:46,786 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\test-connection.py', reloading
+2025-09-30 08:54:46,925 - INFO -  * Restarting with stat
+2025-09-30 08:54:47,949 - WARNING -  * Debugger is active!
+2025-09-30 08:54:47,951 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:55:23,168 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 08:55:23,297 - INFO -  * Restarting with stat
+2025-09-30 08:55:24,055 - WARNING -  * Debugger is active!
+2025-09-30 08:55:24,058 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:57:11,435 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:57:11,435 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:57:11,436 - INFO -  * Restarting with stat
+2025-09-30 08:57:12,120 - WARNING -  * Debugger is active!
+2025-09-30 08:57:12,122 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:57:15,946 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:15] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:57:16,064 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,078 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,081 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,082 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:57:22,570 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:25,466 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:25,472 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:30,641 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:57:30,642 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:30,655 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:30] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:57:38,943 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:57:40,162 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:57:40,166 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:40] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 09:00:33,978 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config.py', reloading
+2025-09-30 09:00:34,249 - INFO -  * Restarting with stat
+2025-09-30 09:00:35,119 - WARNING -  * Debugger is active!
+2025-09-30 09:00:35,122 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:14,572 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-09-30 09:01:14,724 - INFO -  * Restarting with stat
+2025-09-30 09:01:15,653 - WARNING -  * Debugger is active!
+2025-09-30 09:01:15,656 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:21,750 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-09-30 09:01:21,871 - INFO -  * Restarting with stat
+2025-09-30 09:01:22,540 - WARNING -  * Debugger is active!
+2025-09-30 09:01:22,542 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:26,704 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 09:01:26,704 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:01:26,705 - INFO -  * Restarting with stat
+2025-09-30 09:01:27,327 - WARNING -  * Debugger is active!
+2025-09-30 09:01:27,330 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:38,552 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "GET /manga HTTP/1.1" 200 -
+2025-09-30 09:01:38,850 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,874 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,885 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,898 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:44,843 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:47,890 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:47,892 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:53,519 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:01:53,521 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:53,544 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:53] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:02:00,258 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 09:02:01,652 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 09:02:01,689 - INFO - Đã kết nối đến cơ sở dữ liệu.
+2025-09-30 09:02:01,695 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,698 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,799 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,805 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,821 - INFO - Xử lý upsert MangaDescription cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,822 - ERROR - Lỗi upsert MangaDescription cho MangaId DBA4094B-CD65-4FEB-B6BB-30789E661CE9: ('The SQL contains 5 parameter markers, but 6 parameters were supplied', 'HY000')
+2025-09-30 09:02:01,826 - INFO - 127.0.0.1 - - [30/Sep/2025 09:02:01] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
 
 --- File: D:\DACSN\coursework\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
@@ -2061,6 +2239,10 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
                   "type": "file"
                 },
                 {
+                  "name": "evernight_dance.gif",
+                  "type": "file"
+                },
+                {
                   "name": "favicon.ico",
                   "type": "file"
                 }
@@ -2381,6 +2563,7 @@ D:\DACSN\coursework\mini-demo/
 │   │   │   ├── default_avatar.png
 │   │   │   ├── default_banner.png
 │   │   │   ├── default_cover.png
+│   │   │   ├── evernight_dance.gif
 │   │   │   └── favicon.ico
 │   │   ├── css/
 │   │   │   ├── add_to_list.css
@@ -2491,7 +2674,7 @@ class Config:
     SERVER = "DESKTOP-HKIPI1M"
     DATABASE = "MangaLibrary"
     connection_string = (
-        f"DRIVER={{{DRIVER}}};"
+        f"DRIVER={{ODBC Driver 17 for SQL Server}};"  # Sử dụng {{}} để escape
         f"SERVER={SERVER};"
         f"DATABASE={DATABASE};"
         f"Trusted_Connection=yes;"
@@ -2499,7 +2682,6 @@ class Config:
 
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
 --- File: D:\DACSN\coursework\mini-demo\dump.py ---
 import os
 import json
@@ -3878,6 +4060,180 @@ jinja2.exceptions.UndefinedError: 'flask_paginate.Pagination object' has no attr
 2025-09-30 02:06:23,685 - INFO - Đã tải ảnh bìa cho cover ID: CBC8F0F8-4986-4520-B86D-C0B74E6A8410, kích thước: 823263 bytes
 2025-09-30 02:06:23,686 - INFO - Tổng cộng lấy được 2 cover cho manga ID: 6C4BA5C9-5296-4DD2-A8AE-A1911D01F371
 2025-09-30 02:06:23,689 - INFO - 127.0.0.1 - - [30/Sep/2025 02:06:23] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 02:20:01,346 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 02:20:02,628 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 02:20:02,646 - INFO - 127.0.0.1 - - [30/Sep/2025 02:20:02] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:23:21,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:23:21,081 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:23:21,083 - INFO -  * Restarting with stat
+2025-09-30 08:23:21,752 - WARNING -  * Debugger is active!
+2025-09-30 08:23:21,756 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:23:27,995 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:27] "GET / HTTP/1.1" 200 -
+2025-09-30 08:23:28,113 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,115 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,116 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,402 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,403 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,028 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 08:23:39,106 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,106 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,126 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 08:23:45,740 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:45] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 08:23:48,825 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 08:23:48,878 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:48,883 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:48,896 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:49,080 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 08:23:59,136 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 08:23:59,184 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,193 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,194 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,223 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,152 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:24:02,187 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,189 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,190 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,220 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,096 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:24:03,138 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,142 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,144 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,187 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 08:26:13,933 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:13] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:26:14,006 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,006 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,009 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,010 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,713 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 08:26:14,767 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,772 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,778 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,779 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,738 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:26:15,781 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,786 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,792 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,792 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,259 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:26:17,294 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,298 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,304 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,301 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,816 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:28:39,847 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,852 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,855 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,856 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:36,591 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:35:36,591 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:35:36,592 - INFO -  * Restarting with stat
+2025-09-30 08:35:37,234 - WARNING -  * Debugger is active!
+2025-09-30 08:35:37,236 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:35:39,857 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:35:39,990 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:39,995 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:39,996 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:40,035 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:40] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 08:36:01,596 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:03,279 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:03,280 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:05,389 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:36:05,389 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:05,392 - INFO - 127.0.0.1 - - [30/Sep/2025 08:36:05] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:38:09,077 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:38:10,333 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:38:10,352 - INFO - 127.0.0.1 - - [30/Sep/2025 08:38:10] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:51:22,176 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 08:51:22,331 - INFO -  * Restarting with stat
+2025-09-30 08:51:23,438 - WARNING -  * Debugger is active!
+2025-09-30 08:51:23,441 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:51:44,820 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:51:45,628 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:51:45,631 - INFO - 127.0.0.1 - - [30/Sep/2025 08:51:45] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:51:57,497 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:51:57,497 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:51:57,498 - INFO -  * Restarting with stat
+2025-09-30 08:51:58,125 - WARNING -  * Debugger is active!
+2025-09-30 08:51:58,127 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:52:07,626 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:10,567 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:10,570 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:14,931 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:52:14,948 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:14,954 - INFO - 127.0.0.1 - - [30/Sep/2025 08:52:14] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:52:23,238 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:52:24,435 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:52:24,448 - INFO - 127.0.0.1 - - [30/Sep/2025 08:52:24] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:54:46,786 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\test-connection.py', reloading
+2025-09-30 08:54:46,925 - INFO -  * Restarting with stat
+2025-09-30 08:54:47,949 - WARNING -  * Debugger is active!
+2025-09-30 08:54:47,951 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:55:23,168 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 08:55:23,297 - INFO -  * Restarting with stat
+2025-09-30 08:55:24,055 - WARNING -  * Debugger is active!
+2025-09-30 08:55:24,058 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:57:11,435 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:57:11,435 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:57:11,436 - INFO -  * Restarting with stat
+2025-09-30 08:57:12,120 - WARNING -  * Debugger is active!
+2025-09-30 08:57:12,122 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:57:15,946 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:15] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:57:16,064 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,078 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,081 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,082 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:57:22,570 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:25,466 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:25,472 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:30,641 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:57:30,642 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:30,655 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:30] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:57:38,943 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:57:40,162 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:57:40,166 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:40] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 09:00:33,978 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config.py', reloading
+2025-09-30 09:00:34,249 - INFO -  * Restarting with stat
+2025-09-30 09:00:35,119 - WARNING -  * Debugger is active!
+2025-09-30 09:00:35,122 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:14,572 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-09-30 09:01:14,724 - INFO -  * Restarting with stat
+2025-09-30 09:01:15,653 - WARNING -  * Debugger is active!
+2025-09-30 09:01:15,656 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:21,750 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-09-30 09:01:21,871 - INFO -  * Restarting with stat
+2025-09-30 09:01:22,540 - WARNING -  * Debugger is active!
+2025-09-30 09:01:22,542 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:26,704 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 09:01:26,704 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:01:26,705 - INFO -  * Restarting with stat
+2025-09-30 09:01:27,327 - WARNING -  * Debugger is active!
+2025-09-30 09:01:27,330 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:38,552 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "GET /manga HTTP/1.1" 200 -
+2025-09-30 09:01:38,850 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,874 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,885 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,898 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:44,843 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:47,890 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:47,892 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:53,519 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:01:53,521 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:53,544 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:53] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:02:00,258 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 09:02:01,652 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 09:02:01,689 - INFO - Đã kết nối đến cơ sở dữ liệu.
+2025-09-30 09:02:01,695 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,698 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,799 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,805 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,821 - INFO - Xử lý upsert MangaDescription cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,822 - ERROR - Lỗi upsert MangaDescription cho MangaId DBA4094B-CD65-4FEB-B6BB-30789E661CE9: ('The SQL contains 5 parameter markers, but 6 parameters were supplied', 'HY000')
+2025-09-30 09:02:01,826 - INFO - 127.0.0.1 - - [30/Sep/2025 09:02:01] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
 
 --- File: D:\DACSN\coursework\mini-demo\README.md ---
 
@@ -3903,7 +4259,7 @@ import pyodbc
 conn_str = (
     r"DRIVER={ODBC Driver 17 for SQL Server};"
     r"SERVER=DESKTOP-HKIPI1M;"
-    r"DATABASE=master;"
+    r"DATABASE=MangaLibrary;"
     r"Trusted_Connection=yes;"
 )
 
@@ -3918,7 +4274,7 @@ except Exception as e:
 from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
 from flask_login import current_user, login_required
 from app import db
-from app.mangadex_api import search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
+from app.mangadex_api import connect_db, search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
 from app.models import (
     Chapter, Cover, User, Comment, Report, Manga, ReadingHistory,
     MangaTag, Tag
@@ -4348,7 +4704,7 @@ def manga_action():
             return jsonify({'error': 'Manga không tồn tại trên MangaDex'}), 404
         manga_data = manga_data['data']
         stats_dict = fetch_statistics([manga_id])
-        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        conn = connect_db()
         map_manga_to_db(manga_data, stats_dict, conn)
         conn.close()
         return jsonify({'message': f'Manga {manga_id} {action} thành công'})
@@ -5569,14 +5925,19 @@ LANG_PRIORITY = ["vi", "en"]
 
 # Kết nối DB
 def connect_db():
-    logger.info("Khởi tạo kết nối đến cơ sở dữ liệu.")
+    conn_str = (
+        r"DRIVER={ODBC Driver 17 for SQL Server};"
+        r"SERVER=DESKTOP-HKIPI1M;"
+        r"DATABASE=MangaLibrary;"
+        r"Trusted_Connection=yes;"
+    )
     try:
-        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        conn = pyodbc.connect(conn_str)
         logger.info("Đã kết nối đến cơ sở dữ liệu.")
         return conn
     except pyodbc.Error as e:
         logger.error(f"Lỗi kết nối cơ sở dữ liệu: {e}")
-        raise 
+        raise
 
 # Hàm gọi API
 def request_api(endpoint, params=None):
@@ -8339,6 +8700,9 @@ def get_chapters(manga_id):
 
 --- File: D:\DACSN\coursework\mini-demo\app\static\assets\default_cover.png ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
+
+--- File: D:\DACSN\coursework\mini-demo\app\static\assets\evernight_dance.gif ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x87 in position 10: invalid start byte]
 
 --- File: D:\DACSN\coursework\mini-demo\app\static\assets\favicon.ico ---
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte]
@@ -23306,6 +23670,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Vui lòng nhập từ khóa tìm kiếm.');
             return;
         }
+
+        mangaTableBody.innerHTML = `<tr><td colspan="6">Đang tìm kiếm, vui lòng chờ...</td></tr>`;
 
         try {
             const response = await fetch('/manga/search', {

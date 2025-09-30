@@ -2,24 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('manga-search-form');
     const searchInput = document.getElementById('search-input');
     const searchMode = document.getElementById('search-mode');
+    const searchBtn = document.getElementById('search-btn');
     const mangaTableBody = document.getElementById('manga-table-body');
     const actionModal = new bootstrap.Modal(document.getElementById('action-modal'));
     const modalLabel = document.getElementById('modalLabel');
     const modalBody = document.getElementById('modal-body');
     const confirmActionBtn = document.getElementById('confirm-action');
+    const loadingSpinner = document.getElementById('loading-spinner');
 
-    // Xử lý tìm kiếm
+    // Function to lock/unlock buttons
+    function lockButtons(lock) {
+        searchBtn.disabled = lock;
+        document.querySelectorAll('.action-btn').forEach(btn => btn.disabled = lock);
+        confirmActionBtn.disabled = lock;
+    }
+
+    // Handle search
     searchForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const query = searchInput.value.trim();
         const mode = searchMode.value;
 
         if (!query) {
-            alert('Vui lòng nhập từ khóa tìm kiếm.');
+            alert('Please enter a search keyword.');
             return;
         }
 
-        tableBody.innerHTML = `<tr><td colspan="6">Đang tìm kiếm, vui lòng chờ...</td></tr>`;
+        mangaTableBody.innerHTML = `<tr><td colspan="6">Searching, please wait...</td></tr>`;
+        lockButtons(true); // Lock search button during processing
 
         try {
             const response = await fetch('/manga/search', {
@@ -30,13 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.error || 'Lỗi khi tìm kiếm manga.');
+                throw new Error(data.error || 'Error while searching for manga.');
             }
 
-            // Xóa bảng hiện tại
             mangaTableBody.innerHTML = '';
 
-            // Hiển thị kết quả
             data.mangas.forEach(manga => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -56,27 +64,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 mangaTableBody.appendChild(row);
             });
 
-            // Gắn sự kiện cho các nút hành động
             document.querySelectorAll('.action-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const mangaId = btn.dataset.mangaId;
                     const action = btn.dataset.action;
-                    modalLabel.textContent = action === 'download' ? 'Tải Manga' : 'Cập nhật Manga';
-                    modalBody.textContent = `Bạn có chắc chắn muốn ${action === 'download' ? 'tải' : 'cập nhật'} manga ID: ${mangaId}?`;
+                    modalLabel.textContent = action === 'download' ? 'Download Manga' : 'Update Manga';
+                    modalBody.textContent = `Are you sure you want to ${action === 'download' ? 'download' : 'update'} manga ID: ${mangaId}?`;
                     confirmActionBtn.dataset.mangaId = mangaId;
                     confirmActionBtn.dataset.action = action;
                     actionModal.show();
                 });
             });
         } catch (error) {
-            alert(`Lỗi: ${error.message}`);
+            alert(`Error: ${error.message}`);
+        } finally {
+            lockButtons(false); // Unlock button after completion
         }
     });
 
-    // Xử lý xác nhận hành động
+    // Handle action confirmation
     confirmActionBtn.addEventListener('click', async () => {
         const mangaId = confirmActionBtn.dataset.mangaId;
         const action = confirmActionBtn.dataset.action;
+
+        modalBody.textContent = ''; // Clear previous content
+        loadingSpinner.classList.remove('d-none'); // Show loading spinner
+        lockButtons(true); // Lock all buttons during processing
 
         try {
             const response = await fetch('/manga/action', {
@@ -87,14 +100,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.error || 'Lỗi khi thực hiện hành động.');
+                throw new Error(data.error || 'Error while performing the action.');
             }
 
-            alert(`Manga ID: ${mangaId} đã được ${action === 'download' ? 'tải' : 'cập nhật'} thành công!`);
+            alert(`Manga ID: ${mangaId} has been ${action === 'download' ? 'downloaded' : 'updated'} successfully!`);
             actionModal.hide();
-            searchForm.dispatchEvent(new Event('submit')); // Refresh bảng
+            searchForm.dispatchEvent(new Event('submit')); // Refresh table
         } catch (error) {
-            alert(`Lỗi: ${error.message}`);
+            alert(`Error: ${error.message}`);
+        } finally {
+            loadingSpinner.classList.add('d-none'); // Hide loading spinner
+            lockButtons(false); // Unlock buttons after completion
         }
     });
 });

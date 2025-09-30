@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
 from flask_login import current_user, login_required
 from app import db
-from app.mangadex_api import search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
+from app.mangadex_api import connect_db, search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
 from app.models import (
     Chapter, Cover, User, Comment, Report, Manga, ReadingHistory,
     MangaTag, Tag
@@ -431,7 +431,7 @@ def manga_action():
             return jsonify({'error': 'Manga không tồn tại trên MangaDex'}), 404
         manga_data = manga_data['data']
         stats_dict = fetch_statistics([manga_id])
-        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        conn = connect_db()
         map_manga_to_db(manga_data, stats_dict, conn)
         conn.close()
         return jsonify({'message': f'Manga {manga_id} {action} thành công'})

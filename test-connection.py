@@ -3,7 +3,7 @@ import pyodbc
 conn_str = (
     r"DRIVER={ODBC Driver 17 for SQL Server};"
     r"SERVER=DESKTOP-HKIPI1M;"
-    r"DATABASE=master;"
+    r"DATABASE=MangaLibrary;"
     r"Trusted_Connection=yes;"
 )
 

@@ -33,14 +33,19 @@ LANG_PRIORITY = ["vi", "en"]
 
 # Kết nối DB
 def connect_db():
-    logger.info("Khởi tạo kết nối đến cơ sở dữ liệu.")
+    conn_str = (
+        r"DRIVER={ODBC Driver 17 for SQL Server};"
+        r"SERVER=DESKTOP-HKIPI1M;"
+        r"DATABASE=MangaLibrary;"
+        r"Trusted_Connection=yes;"
+    )
     try:
-        conn = pyodbc.connect(Config.SQLALCHEMY_DATABASE_URI.split('mssql+pyodbc:///?odbc_connect=')[1])
+        conn = pyodbc.connect(conn_str)
         logger.info("Đã kết nối đến cơ sở dữ liệu.")
         return conn
     except pyodbc.Error as e:
         logger.error(f"Lỗi kết nối cơ sở dữ liệu: {e}")
-        raise 
+        raise
 
 # Hàm gọi API
 def request_api(endpoint, params=None):
@@ -170,13 +175,14 @@ def upsert_manga_alt_title(conn, alt_titles):
         logger.info(f"Xử lý upsert MangaAltTitle cho MangaId: {manga_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaAltTitle] WHERE MangaId = ? AND LangCode = ?)
-                INSERT INTO [dbo].[MangaAltTitle] (MangaId, LangCode, AltTitle)
-                VALUES (?, ?, ?)
-            """, (
-                manga_id_upper, alt['LangCode'], alt['AltTitle'],
-                manga_id_upper, alt['LangCode'], alt['AltTitle']
-            ))
+                SELECT 1 FROM [dbo].[MangaAltTitle] WHERE MangaId = ? AND LangCode = ?
+            """, (manga_id_upper, alt['LangCode']))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[MangaAltTitle] (MangaId, LangCode, AltTitle)
+                    VALUES (?, ?, ?)
+                """, (manga_id_upper, alt['LangCode'], alt['AltTitle']))
             conn.commit()
             logger.debug(f"Hoàn thành upsert MangaAltTitle cho MangaId: {manga_id_upper}")
         except pyodbc.Error as e:
@@ -191,13 +197,14 @@ def upsert_manga_description(conn, descriptions):
         logger.info(f"Xử lý upsert MangaDescription cho MangaId: {manga_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaDescription] WHERE MangaId = ? AND LangCode = ?)
-                INSERT INTO [dbo].[MangaDescription] (MangaId, LangCode, Description)
-                VALUES (?, ?, ?)
-            """, (
-                manga_id_upper, desc['LangCode'], desc['Description'],
-                manga_id_upper, desc['LangCode'], desc['Description']
-            ))
+                SELECT 1 FROM [dbo].[MangaDescription] WHERE MangaId = ? AND LangCode = ?
+            """, (manga_id_upper, desc['LangCode']))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[MangaDescription] (MangaId, LangCode, Description)
+                    VALUES (?, ?, ?)
+                """, (manga_id_upper, desc['LangCode'], desc['Description']))
             conn.commit()
             logger.debug(f"Hoàn thành upsert MangaDescription cho MangaId: {manga_id_upper}")
         except pyodbc.Error as e:
@@ -212,13 +219,14 @@ def upsert_manga_available_language(conn, languages):
         logger.info(f"Xử lý upsert MangaAvailableLanguage cho MangaId: {manga_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaAvailableLanguage] WHERE MangaId = ? AND LangCode = ?)
-                INSERT INTO [dbo].[MangaAvailableLanguage] (MangaId, LangCode)
-                VALUES (?, ?)
-            """, (
-                manga_id_upper, lang['LangCode'],
-                manga_id_upper, lang['LangCode']
-            ))
+                SELECT 1 FROM [dbo].[MangaAvailableLanguage] WHERE MangaId = ? AND LangCode = ?
+            """, (manga_id_upper, lang['LangCode']))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[MangaAvailableLanguage] (MangaId, LangCode)
+                    VALUES (?, ?)
+                """, (manga_id_upper, lang['LangCode']))
             conn.commit()
             logger.debug(f"Hoàn thành upsert MangaAvailableLanguage cho MangaId: {manga_id_upper}")
         except pyodbc.Error as e:
@@ -233,13 +241,14 @@ def upsert_manga_link(conn, links):
         logger.info(f"Xử lý upsert MangaLink cho MangaId: {manga_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaLink] WHERE MangaId = ? AND Provider = ?)
-                INSERT INTO [dbo].[MangaLink] (MangaId, Provider, Url)
-                VALUES (?, ?, ?)
-            """, (
-                manga_id_upper, link['Provider'], link['Url'],
-                manga_id_upper, link['Provider'], link['Url']
-            ))
+                SELECT 1 FROM [dbo].[MangaLink] WHERE MangaId = ? AND Provider = ?
+            """, (manga_id_upper, link['Provider']))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[MangaLink] (MangaId, Provider, Url)
+                    VALUES (?, ?, ?)
+                """, (manga_id_upper, link['Provider'], link['Url']))
             conn.commit()
             logger.debug(f"Hoàn thành upsert MangaLink cho MangaId: {manga_id_upper}")
         except pyodbc.Error as e:
@@ -298,13 +307,14 @@ def upsert_manga_tag(conn, manga_tags):
         logger.info(f"Xử lý upsert MangaTag cho MangaId: {manga_id_upper}, TagId: {tag_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaTag] WHERE MangaId = ? AND TagId = ?)
-                INSERT INTO [dbo].[MangaTag] (MangaId, TagId)
-                VALUES (?, ?)
-            """, (
-                manga_id_upper, tag_id_upper,
-                manga_id_upper, tag_id_upper
-            ))
+                SELECT 1 FROM [dbo].[MangaTag] WHERE MangaId = ? AND TagId = ?
+            """, (manga_id_upper, tag_id_upper))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[MangaTag] (MangaId, TagId)
+                    VALUES (?, ?)
+                """, (manga_id_upper, tag_id_upper))
             conn.commit()
             logger.debug(f"Hoàn thành upsert MangaTag cho MangaId: {manga_id_upper}, TagId: {tag_id_upper}")
         except pyodbc.Error as e:
@@ -470,13 +480,14 @@ def upsert_creator_relationship(conn, relationships):
         logger.info(f"Xử lý upsert CreatorRelationship cho CreatorId: {creator_id_upper}, RelatedId: {related_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[CreatorRelationship] WHERE CreatorId = ? AND RelatedId = ? AND RelatedType = ?)
-                INSERT INTO [dbo].[CreatorRelationship] (CreatorId, RelatedId, RelatedType)
-                VALUES (?, ?, ?)
-            """, (
-                creator_id_upper, related_id_upper, rel['RelatedType'],
-                creator_id_upper, related_id_upper, rel['RelatedType']
-            ))
+                SELECT 1 FROM [dbo].[CreatorRelationship] WHERE CreatorId = ? AND RelatedId = ? AND RelatedType = ?
+            """, (creator_id_upper, related_id_upper, rel['RelatedType']))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[CreatorRelationship] (CreatorId, RelatedId, RelatedType)
+                    VALUES (?, ?, ?)
+                """, (creator_id_upper, related_id_upper, rel['RelatedType']))
             conn.commit()
             logger.debug(f"Hoàn thành upsert CreatorRelationship cho CreatorId: {creator_id_upper}")
         except pyodbc.Error as e:
@@ -492,13 +503,14 @@ def upsert_manga_related(conn, related):
         logger.info(f"Xử lý upsert MangaRelated cho MangaId: {manga_id_upper}, RelatedId: {related_id_upper}")
         try:
             cursor.execute("""
-                IF NOT EXISTS (SELECT 1 FROM [dbo].[MangaRelated] WHERE MangaId = ? AND RelatedId = ? AND Type = ?)
-                INSERT INTO [dbo].[MangaRelated] (MangaId, RelatedId, Type, Related, FetchedAt)
-                VALUES (?, ?, ?, ?, ?)
-            """, (
-                manga_id_upper, related_id_upper, rel['Type'], rel['Related'], rel['FetchedAt'],
-                manga_id_upper, related_id_upper, rel['Type'], rel['Related'], rel['FetchedAt']
-            ))
+                SELECT 1 FROM [dbo].[MangaRelated] WHERE MangaId = ? AND RelatedId = ? AND Type = ?
+            """, (manga_id_upper, related_id_upper, rel['Type']))
+            exists = cursor.fetchone()
+            if not exists:
+                cursor.execute("""
+                    INSERT INTO [dbo].[MangaRelated] (MangaId, RelatedId, Type, Related, FetchedAt)
+                    VALUES (?, ?, ?, ?, ?)
+                """, (manga_id_upper, related_id_upper, rel['Type'], rel['Related'], rel['FetchedAt']))
             conn.commit()
             logger.debug(f"Hoàn thành upsert MangaRelated cho MangaId: {manga_id_upper}")
         except pyodbc.Error as e:
@@ -752,32 +764,6 @@ def map_manga_to_db(manga, stats_dict, conn):
     logger.info(f"Bắt đầu mapping và upsert manga ID: {manga_id_upper}")
     attr = manga.get("attributes", {})
     
-    # Manga table
-    manga_db = {
-        "MangaId": manga_id_upper,
-        "Type": manga.get("type"),
-        "TitleEn": attr.get("title", {}).get("en") or list(attr.get("title", {}).values())[0] if attr.get("title") else "Unknown",
-        "ChapterNumbersResetOnNewVolume": attr.get("chapterNumbersResetOnNewVolume", False),
-        "ContentRating": attr.get("contentRating"),
-        "CreatedAt": parse_dt(attr.get("createdAt")),
-        "UpdatedAt": parse_dt(attr.get("updatedAt")),
-        "IsLocked": attr.get("isLocked", False),
-        "LastChapter": attr.get("lastChapter"),
-        "LastVolume": attr.get("lastVolume"),
-        "LatestUploadedChapter": str(attr.get("latestUploadedChapter", "")).upper() if attr.get("latestUploadedChapter") else None,
-        "OriginalLanguage": attr.get("originalLanguage"),
-        "PublicationDemographic": attr.get("publicationDemographic"),
-        "State": attr.get("state"),
-        "Status": attr.get("status"),
-        "Year": attr.get("year"),
-        "OfficialLinks": json.dumps(attr.get("links", {})) if attr.get("links") else None
-    }
-    upsert_manga(conn, [manga_db])
-    manga_id = manga.get("id")
-    manga_id_upper = str(manga_id).upper()
-    logger.info(f"Bắt đầu mapping và upsert manga ID: {manga_id_upper}")
-    attr = manga.get("attributes", {})
-
     # Manga table
     manga_db = {
         "MangaId": manga_id_upper,

@@ -223,3 +223,355 @@
 2025-09-30 02:20:01,346 - INFO - Lấy thống kê cho 1 manga.
 2025-09-30 02:20:02,628 - INFO - Hoàn thành lấy thống kê.
 2025-09-30 02:20:02,646 - INFO - 127.0.0.1 - - [30/Sep/2025 02:20:02] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:23:21,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:23:21,081 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:23:21,083 - INFO -  * Restarting with stat
+2025-09-30 08:23:21,752 - WARNING -  * Debugger is active!
+2025-09-30 08:23:21,756 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:23:27,995 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:27] "GET / HTTP/1.1" 200 -
+2025-09-30 08:23:28,113 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,115 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,116 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,402 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-09-30 08:23:28,403 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,028 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "GET /auth/login HTTP/1.1" 200 -
+2025-09-30 08:23:39,106 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,106 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:39,126 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:39] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-09-30 08:23:45,740 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:45] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-09-30 08:23:48,825 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-09-30 08:23:48,878 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:48,883 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:48,896 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:48] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:49,080 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 08:23:59,136 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 08:23:59,184 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,193 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,194 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:23:59,223 - INFO - 127.0.0.1 - - [30/Sep/2025 08:23:59] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,152 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:24:02,187 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,189 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,190 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:02,220 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:02] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,096 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:24:03,138 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,142 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,144 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:24:03,187 - INFO - 127.0.0.1 - - [30/Sep/2025 08:24:03] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 08:26:13,933 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:13] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:26:14,006 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,006 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,009 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,010 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,713 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "GET /admin/users HTTP/1.1" 200 -
+2025-09-30 08:26:14,767 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,772 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,778 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:14,779 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:14] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,738 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "GET /admin/comments HTTP/1.1" 200 -
+2025-09-30 08:26:15,781 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,786 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,792 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:15,792 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:15] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,259 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:26:17,294 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,298 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,304 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:26:17,301 - INFO - 127.0.0.1 - - [30/Sep/2025 08:26:17] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,816 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:28:39,847 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,852 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,855 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:28:39,856 - INFO - 127.0.0.1 - - [30/Sep/2025 08:28:39] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:36,591 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:35:36,591 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:35:36,592 - INFO -  * Restarting with stat
+2025-09-30 08:35:37,234 - WARNING -  * Debugger is active!
+2025-09-30 08:35:37,236 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:35:39,857 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:35:39,990 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:39,995 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:39,996 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:35:40,035 - INFO - 127.0.0.1 - - [30/Sep/2025 08:35:40] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 08:36:01,596 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:03,279 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:03,280 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:05,389 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:36:05,389 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:36:05,392 - INFO - 127.0.0.1 - - [30/Sep/2025 08:36:05] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:38:09,077 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:38:10,333 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:38:10,352 - INFO - 127.0.0.1 - - [30/Sep/2025 08:38:10] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:51:22,176 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 08:51:22,331 - INFO -  * Restarting with stat
+2025-09-30 08:51:23,438 - WARNING -  * Debugger is active!
+2025-09-30 08:51:23,441 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:51:44,820 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:51:45,628 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:51:45,631 - INFO - 127.0.0.1 - - [30/Sep/2025 08:51:45] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:51:57,497 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:51:57,497 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:51:57,498 - INFO -  * Restarting with stat
+2025-09-30 08:51:58,125 - WARNING -  * Debugger is active!
+2025-09-30 08:51:58,127 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:52:07,626 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:10,567 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:10,570 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:14,931 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:52:14,948 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:52:14,954 - INFO - 127.0.0.1 - - [30/Sep/2025 08:52:14] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:52:23,238 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:52:24,435 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:52:24,448 - INFO - 127.0.0.1 - - [30/Sep/2025 08:52:24] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 08:54:46,786 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\test-connection.py', reloading
+2025-09-30 08:54:46,925 - INFO -  * Restarting with stat
+2025-09-30 08:54:47,949 - WARNING -  * Debugger is active!
+2025-09-30 08:54:47,951 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:55:23,168 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 08:55:23,297 - INFO -  * Restarting with stat
+2025-09-30 08:55:24,055 - WARNING -  * Debugger is active!
+2025-09-30 08:55:24,058 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:57:11,435 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 08:57:11,435 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 08:57:11,436 - INFO -  * Restarting with stat
+2025-09-30 08:57:12,120 - WARNING -  * Debugger is active!
+2025-09-30 08:57:12,122 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 08:57:15,946 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:15] "GET /manga HTTP/1.1" 200 -
+2025-09-30 08:57:16,064 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,078 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,081 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 08:57:16,082 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:16] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 08:57:22,570 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:25,466 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:25,472 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:30,641 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 08:57:30,642 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 08:57:30,655 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:30] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 08:57:38,943 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 08:57:40,162 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 08:57:40,166 - INFO - 127.0.0.1 - - [30/Sep/2025 08:57:40] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 09:00:33,978 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config.py', reloading
+2025-09-30 09:00:34,249 - INFO -  * Restarting with stat
+2025-09-30 09:00:35,119 - WARNING -  * Debugger is active!
+2025-09-30 09:00:35,122 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:14,572 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-09-30 09:01:14,724 - INFO -  * Restarting with stat
+2025-09-30 09:01:15,653 - WARNING -  * Debugger is active!
+2025-09-30 09:01:15,656 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:21,750 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-09-30 09:01:21,871 - INFO -  * Restarting with stat
+2025-09-30 09:01:22,540 - WARNING -  * Debugger is active!
+2025-09-30 09:01:22,542 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:26,704 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 09:01:26,704 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:01:26,705 - INFO -  * Restarting with stat
+2025-09-30 09:01:27,327 - WARNING -  * Debugger is active!
+2025-09-30 09:01:27,330 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:01:38,552 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "GET /manga HTTP/1.1" 200 -
+2025-09-30 09:01:38,850 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,874 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,885 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:38,898 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 09:01:44,843 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:47,890 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:47,892 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:53,519 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:01:53,521 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:01:53,544 - INFO - 127.0.0.1 - - [30/Sep/2025 09:01:53] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:02:00,258 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 09:02:01,652 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 09:02:01,689 - INFO - Đã kết nối đến cơ sở dữ liệu.
+2025-09-30 09:02:01,695 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,698 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,799 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,805 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,821 - INFO - Xử lý upsert MangaDescription cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:02:01,822 - ERROR - Lỗi upsert MangaDescription cho MangaId DBA4094B-CD65-4FEB-B6BB-30789E661CE9: ('The SQL contains 5 parameter markers, but 6 parameters were supplied', 'HY000')
+2025-09-30 09:02:01,826 - INFO - 127.0.0.1 - - [30/Sep/2025 09:02:01] "[35m[1mPOST /manga/action HTTP/1.1[0m" 500 -
+2025-09-30 09:05:15,683 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\dump.py', reloading
+2025-09-30 09:05:15,812 - INFO -  * Restarting with stat
+2025-09-30 09:05:16,611 - WARNING -  * Debugger is active!
+2025-09-30 09:05:16,614 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:05:24,758 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\dump.py', reloading
+2025-09-30 09:05:24,925 - INFO -  * Restarting with stat
+2025-09-30 09:05:25,604 - WARNING -  * Debugger is active!
+2025-09-30 09:05:25,607 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:09:17,716 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-09-30 09:09:18,035 - INFO -  * Restarting with stat
+2025-09-30 09:09:18,998 - WARNING -  * Debugger is active!
+2025-09-30 09:09:19,001 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:09:25,592 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 09:09:25,593 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:09:25,595 - INFO -  * Restarting with stat
+2025-09-30 09:09:26,323 - WARNING -  * Debugger is active!
+2025-09-30 09:09:26,325 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:09:33,110 - INFO - 127.0.0.1 - - [30/Sep/2025 09:09:33] "GET /manga HTTP/1.1" 200 -
+2025-09-30 09:09:33,341 - INFO - 127.0.0.1 - - [30/Sep/2025 09:09:33] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 09:09:33,360 - INFO - 127.0.0.1 - - [30/Sep/2025 09:09:33] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 09:09:33,367 - INFO - 127.0.0.1 - - [30/Sep/2025 09:09:33] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-09-30 09:09:33,381 - INFO - 127.0.0.1 - - [30/Sep/2025 09:09:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 09:09:39,359 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:43,050 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:43,053 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:46,749 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:09:46,751 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:46,761 - INFO - 127.0.0.1 - - [30/Sep/2025 09:09:46] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:09:53,502 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 09:09:54,645 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 09:09:54,682 - INFO - Đã kết nối đến cơ sở dữ liệu.
+2025-09-30 09:09:54,693 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:54,693 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:54,745 - INFO - Xử lý upsert MangaDescription cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:55,039 - INFO - Xử lý upsert MangaAvailableLanguage cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:55,089 - INFO - Xử lý upsert MangaAvailableLanguage cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:55,122 - INFO - Xử lý upsert MangaLink cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:55,286 - INFO - Lấy manga liên quan cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:55,287 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-30 09:09:55,288 - INFO - Xử lý upsert MangaStatistics cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:55,310 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:57,739 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:09:57,742 - INFO - Xử lý upsert Chapter cho ChapterId: 5AD033F3-BE48-4A34-9C83-DAA60C527C46
+2025-09-30 09:09:57,787 - INFO - Xử lý upsert Chapter cho ChapterId: 1A0B7A6E-E210-46BA-817F-2F35C0385199
+2025-09-30 09:09:57,816 - INFO - Xử lý upsert Chapter cho ChapterId: 63066351-2E95-48CC-A357-9A577D6783C0
+2025-09-30 09:09:57,859 - INFO - Xử lý upsert Chapter cho ChapterId: 300E1ACF-9562-4DB4-B271-3DE71CD6AE25
+2025-09-30 09:09:57,882 - INFO - Xử lý upsert Chapter cho ChapterId: 00E0FC5F-81CD-4F3C-9E5F-3AEF51C18CE5
+2025-09-30 09:09:57,904 - INFO - Xử lý upsert Chapter cho ChapterId: 50DAC8CB-3736-4BF5-BEE0-C3F48E1DA3D9
+2025-09-30 09:09:57,930 - INFO - Xử lý upsert Chapter cho ChapterId: FA90612A-FA12-4BBC-B4C3-56D52E4AFA49
+2025-09-30 09:09:57,953 - INFO - Xử lý upsert Chapter cho ChapterId: FF4300A8-EFAD-4705-B096-8CD2F8F3C52A
+2025-09-30 09:09:57,982 - INFO - Xử lý upsert Chapter cho ChapterId: 2F691073-3D8D-4CDC-96FE-7BA04C5DBDF9
+2025-09-30 09:09:58,004 - INFO - Xử lý upsert Chapter cho ChapterId: AF70D0B3-448F-4C47-8FC7-B5943B561B23
+2025-09-30 09:09:58,027 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:02,283 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:10:02,286 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:02,307 - INFO - Lấy thông tin creator ID: 1804A16A-84ED-42BE-A9C8-D477078F2D68
+2025-09-30 09:10:03,502 - INFO - Xử lý upsert Creator cho CreatorId: 1804A16A-84ED-42BE-A9C8-D477078F2D68
+2025-09-30 09:10:03,529 - INFO - Xử lý upsert CreatorRelationship cho CreatorId: 1804A16A-84ED-42BE-A9C8-D477078F2D68, RelatedId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:03,577 - INFO - Xử lý upsert CreatorRelationship cho CreatorId: 1804A16A-84ED-42BE-A9C8-D477078F2D68, RelatedId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:03,610 - INFO - Xử lý upsert Covers cho cover_id: C8DD50C3-47B7-4E4C-A698-8478AB716DAA
+2025-09-30 09:10:03,647 - INFO - Hoàn thành mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:03,650 - INFO - 127.0.0.1 - - [30/Sep/2025 09:10:03] "POST /manga/action HTTP/1.1" 200 -
+2025-09-30 09:10:09,094 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:10,567 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:10,574 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:16,229 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:10:16,231 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:10:16,254 - INFO - 127.0.0.1 - - [30/Sep/2025 09:10:16] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:15:23,673 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-30 09:15:23,673 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:15:23,674 - INFO -  * Restarting with stat
+2025-09-30 09:15:24,258 - WARNING -  * Debugger is active!
+2025-09-30 09:15:24,261 - INFO -  * Debugger PIN: 128-007-526
+2025-09-30 09:16:12,323 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:12] "GET /manga HTTP/1.1" 200 -
+2025-09-30 09:16:12,440 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-30 09:16:12,445 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:12] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-09-30 09:16:12,445 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:12] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-09-30 09:16:12,446 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:12] "GET /static/js/admin_manga.js HTTP/1.1" 200 -
+2025-09-30 09:16:20,093 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:22,791 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:22,793 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:32,347 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:16:32,348 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:32,356 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:32] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:16:36,845 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 09:16:38,294 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 09:16:38,329 - INFO - Đã kết nối đến cơ sở dữ liệu.
+2025-09-30 09:16:38,333 - INFO - Bắt đầu mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,334 - INFO - Xử lý upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,414 - INFO - Xử lý upsert MangaDescription cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,604 - INFO - Xử lý upsert MangaAvailableLanguage cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,642 - INFO - Xử lý upsert MangaAvailableLanguage cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,665 - INFO - Xử lý upsert MangaLink cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,892 - INFO - Lấy manga liên quan cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,894 - INFO - Tìm thấy 0 manga liên quan.
+2025-09-30 09:16:38,895 - INFO - Xử lý upsert MangaStatistics cho MangaId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:38,908 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:41,930 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:41,934 - INFO - Xử lý upsert Chapter cho ChapterId: 5AD033F3-BE48-4A34-9C83-DAA60C527C46
+2025-09-30 09:16:41,975 - INFO - Xử lý upsert Chapter cho ChapterId: 1A0B7A6E-E210-46BA-817F-2F35C0385199
+2025-09-30 09:16:42,010 - INFO - Xử lý upsert Chapter cho ChapterId: 63066351-2E95-48CC-A357-9A577D6783C0
+2025-09-30 09:16:42,034 - INFO - Xử lý upsert Chapter cho ChapterId: 300E1ACF-9562-4DB4-B271-3DE71CD6AE25
+2025-09-30 09:16:42,053 - INFO - Xử lý upsert Chapter cho ChapterId: 00E0FC5F-81CD-4F3C-9E5F-3AEF51C18CE5
+2025-09-30 09:16:42,070 - INFO - Xử lý upsert Chapter cho ChapterId: 50DAC8CB-3736-4BF5-BEE0-C3F48E1DA3D9
+2025-09-30 09:16:42,086 - INFO - Xử lý upsert Chapter cho ChapterId: FA90612A-FA12-4BBC-B4C3-56D52E4AFA49
+2025-09-30 09:16:42,099 - INFO - Xử lý upsert Chapter cho ChapterId: FF4300A8-EFAD-4705-B096-8CD2F8F3C52A
+2025-09-30 09:16:42,112 - INFO - Xử lý upsert Chapter cho ChapterId: 2F691073-3D8D-4CDC-96FE-7BA04C5DBDF9
+2025-09-30 09:16:42,127 - INFO - Xử lý upsert Chapter cho ChapterId: AF70D0B3-448F-4C47-8FC7-B5943B561B23
+2025-09-30 09:16:42,139 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:45,840 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:16:45,842 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:45,850 - INFO - Lấy thông tin creator ID: 1804A16A-84ED-42BE-A9C8-D477078F2D68
+2025-09-30 09:16:47,120 - INFO - Xử lý upsert Creator cho CreatorId: 1804A16A-84ED-42BE-A9C8-D477078F2D68
+2025-09-30 09:16:47,160 - INFO - Xử lý upsert CreatorRelationship cho CreatorId: 1804A16A-84ED-42BE-A9C8-D477078F2D68, RelatedId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:47,197 - INFO - Xử lý upsert CreatorRelationship cho CreatorId: 1804A16A-84ED-42BE-A9C8-D477078F2D68, RelatedId: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:47,218 - INFO - Xử lý upsert Covers cho cover_id: C8DD50C3-47B7-4E4C-A698-8478AB716DAA
+2025-09-30 09:16:47,239 - INFO - Hoàn thành mapping và upsert manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:47,240 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:47] "POST /manga/action HTTP/1.1" 200 -
+2025-09-30 09:16:51,745 - INFO - Lấy danh sách chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:53,202 - INFO - Tổng cộng lấy được 10 chương cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:53,203 - INFO - Lấy toàn bộ cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:56,277 - INFO - Đã tải ảnh bìa cho cover ID: C8DD50C3-47B7-4E4C-A698-8478AB716DAA, kích thước: 427455 bytes
+2025-09-30 09:16:56,278 - INFO - Tổng cộng lấy được 1 cover cho manga ID: DBA4094B-CD65-4FEB-B6BB-30789E661CE9
+2025-09-30 09:16:56,281 - INFO - 127.0.0.1 - - [30/Sep/2025 09:16:56] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:17:46,700 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Bitter x Sweet
+2025-09-30 09:17:48,260 - INFO - Tìm thấy 1 manga.
+2025-09-30 09:17:48,378 - INFO - Lấy danh sách chương cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:17:51,191 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:17:51,196 - INFO - Lấy toàn bộ cover cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:17:55,025 - INFO - Đã tải ảnh bìa cho cover ID: F4612740-0473-463E-9EE3-2D23B62B04EE, kích thước: 326804 bytes
+2025-09-30 09:17:55,027 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:17:55,033 - INFO - 127.0.0.1 - - [30/Sep/2025 09:17:55] "POST /manga/search HTTP/1.1" 200 -
+2025-09-30 09:18:05,757 - INFO - Lấy thống kê cho 1 manga.
+2025-09-30 09:18:07,274 - INFO - Hoàn thành lấy thống kê.
+2025-09-30 09:18:07,297 - INFO - Đã kết nối đến cơ sở dữ liệu.
+2025-09-30 09:18:07,298 - INFO - Bắt đầu mapping và upsert manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,298 - INFO - Xử lý upsert manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,343 - INFO - Xử lý upsert MangaAltTitle cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,513 - INFO - Xử lý upsert MangaDescription cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,621 - INFO - Xử lý upsert MangaAvailableLanguage cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,672 - INFO - Xử lý upsert MangaLink cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,827 - INFO - Xử lý upsert MangaLink cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,924 - INFO - Lấy manga liên quan cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,924 - INFO - Tìm thấy 1 manga liên quan.
+2025-09-30 09:18:07,924 - INFO - Xử lý upsert MangaRelated cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, RelatedId: 9269132F-5EEB-43DB-9705-41ABB4007BEC
+2025-09-30 09:18:07,935 - INFO - Xử lý upsert MangaStatistics cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,961 - INFO - Xử lý tag ID: 423E2EAE-A7A2-4A8B-AC03-A8351462D71D cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,968 - INFO - Xử lý tag ID: 5920B825-4181-4A17-BEEB-9918B0FF7A30 cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,970 - INFO - Xử lý tag ID: 92D6D951-CA5E-429C-AC78-451071CBF064 cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,975 - INFO - Xử lý tag ID: B9AF3A63-F058-46DE-A9A0-E0C13906197A cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,978 - INFO - Xử lý tag ID: CAAA44EB-CD40-4177-B930-79D3EF2AFE87 cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,982 - INFO - Xử lý tag ID: E5301A23-EBD9-49DD-A0CB-2ADD944C7FE9 cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:07,985 - INFO - Xử lý upsert MangaTag cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, TagId: 423E2EAE-A7A2-4A8B-AC03-A8351462D71D
+2025-09-30 09:18:08,002 - INFO - Xử lý upsert MangaTag cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, TagId: 5920B825-4181-4A17-BEEB-9918B0FF7A30
+2025-09-30 09:18:08,005 - INFO - Xử lý upsert MangaTag cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, TagId: 92D6D951-CA5E-429C-AC78-451071CBF064
+2025-09-30 09:18:08,008 - INFO - Xử lý upsert MangaTag cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, TagId: B9AF3A63-F058-46DE-A9A0-E0C13906197A
+2025-09-30 09:18:08,012 - INFO - Xử lý upsert MangaTag cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, TagId: CAAA44EB-CD40-4177-B930-79D3EF2AFE87
+2025-09-30 09:18:08,017 - INFO - Xử lý upsert MangaTag cho MangaId: 82504A41-92B3-47E6-9A3E-810C4B54E273, TagId: E5301A23-EBD9-49DD-A0CB-2ADD944C7FE9
+2025-09-30 09:18:08,022 - INFO - Lấy danh sách chương cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:10,958 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:10,960 - INFO - Xử lý upsert Chapter cho ChapterId: 288C62CE-7E3D-4084-B0D7-C3266D4C2A57
+2025-09-30 09:18:11,013 - INFO - Lấy toàn bộ cover cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:14,358 - INFO - Đã tải ảnh bìa cho cover ID: F4612740-0473-463E-9EE3-2D23B62B04EE, kích thước: 326804 bytes
+2025-09-30 09:18:14,363 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:14,369 - INFO - Lấy thông tin creator ID: 8E5E393F-064C-4DBA-A692-F7A50B393EBE
+2025-09-30 09:18:16,149 - INFO - Xử lý upsert Creator cho CreatorId: 8E5E393F-064C-4DBA-A692-F7A50B393EBE
+2025-09-30 09:18:16,189 - INFO - Xử lý upsert CreatorRelationship cho CreatorId: 8E5E393F-064C-4DBA-A692-F7A50B393EBE, RelatedId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:16,228 - INFO - Xử lý upsert CreatorRelationship cho CreatorId: 8E5E393F-064C-4DBA-A692-F7A50B393EBE, RelatedId: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:16,255 - INFO - Xử lý upsert Covers cho cover_id: F4612740-0473-463E-9EE3-2D23B62B04EE
+2025-09-30 09:18:16,277 - INFO - Hoàn thành mapping và upsert manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:16,279 - INFO - 127.0.0.1 - - [30/Sep/2025 09:18:16] "POST /manga/action HTTP/1.1" 200 -
+2025-09-30 09:18:19,465 - INFO - Bắt đầu tìm kiếm manga với tiêu đề: Bitter x Sweet
+2025-09-30 09:18:20,746 - INFO - Tìm thấy 1 manga.
+2025-09-30 09:18:20,836 - INFO - Lấy danh sách chương cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:23,372 - INFO - Tổng cộng lấy được 1 chương cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:23,373 - INFO - Lấy toàn bộ cover cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:26,929 - INFO - Đã tải ảnh bìa cho cover ID: F4612740-0473-463E-9EE3-2D23B62B04EE, kích thước: 326804 bytes
+2025-09-30 09:18:26,932 - INFO - Tổng cộng lấy được 1 cover cho manga ID: 82504A41-92B3-47E6-9A3E-810C4B54E273
+2025-09-30 09:18:26,936 - INFO - 127.0.0.1 - - [30/Sep/2025 09:18:26] "POST /manga/search HTTP/1.1" 200 -
