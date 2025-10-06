@@ -8,7 +8,6 @@ import uuid
 import logging
 from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
-from config import Config
 
 # Cấu hình logging
 logging.basicConfig(
@@ -255,7 +254,8 @@ def upsert_manga_link(conn, links):
             conn.rollback()
             logger.error(f"Lỗi upsert MangaLink cho MangaId {manga_id_upper}: {e}")
             raise
-        
+
+
 def upsert_manga_statistics(conn, statistics):
     cursor = conn.cursor()
     for stat in statistics:
@@ -819,7 +819,7 @@ def map_manga_to_db(manga, stats_dict, conn):
     stat = stats_dict.get(manga_id, {})
     rating = stat.get("rating", {})
     statistics_db = {
-        "StatisticId": str(uuid.uuid4()).upper(),
+        "StatisticId": str(uuid.uuid4()).upper(),  # UUID mới cho StatisticId
         "MangaId": manga_id_upper,
         "Source": "Mangadex",
         "Follows": stat.get("follows"),
@@ -867,3 +867,35 @@ def map_manga_to_db(manga, stats_dict, conn):
     logger.debug(f"Đã upsert {len(covers_db)} cover, {len(creators_db)} creator.")
 
     logger.info(f"Hoàn thành mapping và upsert manga ID: {manga_id_upper}")
+
+# Hàm test để chạy trực tiếp với UUID cụ thể (manga_id)
+def test_run_with_manga_id(manga_id):
+    logger.info(f"Bắt đầu test chạy với manga ID: {manga_id}")
+    try:
+        # Kết nối DB
+        conn = connect_db()
+        
+        # Fetch manga data từ API bằng ID (lower case cho API)
+        manga_data = request_api(f"/manga/{manga_id.lower()}")
+        if 'data' not in manga_data or not manga_data['data']:
+            raise ValueError(f"Không tìm thấy manga với ID: {manga_id}")
+        manga = manga_data['data']
+        
+        # Fetch statistics cho manga ID
+        stats_dict = fetch_statistics([manga_id])
+        
+        # Gọi hàm chính để upsert
+        map_manga_to_db(manga, stats_dict, conn)
+        
+        # Đóng kết nối
+        conn.close()
+        logger.info("Hoàn thành test và đóng kết nối DB.")
+    except Exception as e:
+        logger.error(f"Lỗi khi chạy test với manga ID {manga_id}: {e}")
+        if 'conn' in locals():
+            conn.close()
+
+# Chạy test nếu file được chạy trực tiếp
+if __name__ == "__main__":
+    test_manga_id = "dba4094b-cd65-4feb-b6bb-30789e661ce9"  # UUID bạn cung cấp
+    test_run_with_manga_id(test_manga_id)

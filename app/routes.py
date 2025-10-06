@@ -556,8 +556,14 @@ def recently_added():
                         ImageData=image_data,
                         DownloadDate=datetime.utcnow()
                     )
-                    db.session.add(new_cover)
-                    db.session.commit()
+                    existing = MangaCover.query.filter_by(
+                        MangaId=manga_id_str,
+                        CoverId=cover_id_str,
+                        FileName=file_name_str
+                    ).first()
+                    if not existing:
+                        db.session.add(new_cover)
+                        db.session.commit()
                     image_data_b64 = base64.b64encode(image_data).decode('utf-8')
                     cover_url = f"data:image/jpeg;base64,{image_data_b64}"
                 except Exception as e:
