@@ -15,7 +15,7 @@ def should_ignore_dir(dirname: str) -> bool:
                                        ".gitignore", 
                                        ".gitattributes", 
                                        "pending-feature",
-                                       "Simulation"))
+                                       "simulation"))
 
 def build_tree_dict(root_dir: str) -> dict:
     """Trả về cây thư mục dưới dạng dict (chỉ bỏ qua venv)."""

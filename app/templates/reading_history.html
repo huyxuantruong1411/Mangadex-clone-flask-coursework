@@ -3,8 +3,96 @@
 {% block title %}Reading History | MangaDex Clone{% endblock %}
 
 {% block content %}
-<div class="text-center py-5 text-white">
-    <h1>Reading History</h1>
-    <p>No content available yet.</p>
+<div class="container mt-4 text-white">
+    <h1 class="mb-4">{{ title }}</h1>
+
+    {% if history_items %}
+    <div class="list-group">
+        {% for item in history_items %}
+        <div class="list-group-item d-flex align-items-center mb-3 p-3 shadow-sm border border-secondary bg-dark text-white rounded">
+            
+            <img src="{{ item.cover_url }}" 
+                 alt="{{ item.manga.TitleEn }}" 
+                 class="me-3 rounded" 
+                 style="width: 80px; height: 100px; object-fit: cover; flex-shrink: 0;">
+            
+            <div class="flex-grow-1">
+                <h5 class="mb-1">
+                    <a href="{{ url_for('manga.manga_detail', manga_id=item.manga.MangaId) }}" class="text-decoration-none text-info">
+                        {{ item.manga.TitleEn }}
+                    </a>
+                </h5>
+                
+                <p class="mb-1 text-muted small">
+                    Last Read: 
+                    {% if item.last_chapter %}
+                        **Chapter {{ item.last_chapter.ChapterNumber }}** {% if item.last_chapter.Title %}({{ item.last_chapter.Title }}){% endif %}
+                        <br>
+                        Stopped at: Page **{{ item.history.LastPageRead }}**
+                    {% else %}
+                        Chapter details unavailable.
+                    {% endif %}
+                </p>
+                <small class="text-secondary">Time: {{ item.history.ReadAt.strftime('%Y-%m-%d %H:%M') }}</small>
+            </div>
+            
+            <!-- Điều chỉnh chính: Thiết lập chiều rộng cố định (min-w-[150px] hoặc tương đương) cho container nút -->
+            <!-- Ở đây mình dùng d-flex và flex-column để căn nút ở giữa theo chiều dọc nếu có thêm nội dung, 
+                 và sử dụng inline style cho min-width để đảm bảo độ đồng nhất. -->
+            <div class="ms-auto d-flex flex-column justify-content-center" style="min-width: 170px;"> 
+                {% if item.history.ChapterId %}
+                <a href="{{ url_for('reader.read_chapter', manga_id=item.manga.MangaId, chapter_id=item.history.ChapterId) }}" 
+                   class="btn btn-primary w-100">
+                    <i class="bi bi-book-half me-1"></i> Continue Reading
+                </a>
+                {% else %}
+                <button class="btn btn-secondary w-100" disabled>No Chapter Info</button>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+            {% if pagination.has_prev %}
+            <li class="page-item">
+                <a class="page-link bg-dark text-info border-secondary" href="{{ url_for('main.reading_history', page=pagination.prev_num) }}">Previous</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link bg-dark text-muted border-secondary">Previous</span></li>
+            {% endif %}
+
+            {# Display up to 5 pages #}
+            {% for p in pagination.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=3) %}
+                {% if p %}
+                    <li class="page-item {% if p == pagination.page %}active{% endif %}">
+                        <a class="page-link {% if p == pagination.page %}bg-info text-dark{% else %}bg-dark text-info{% endif %} border-secondary" 
+                           href="{{ url_for('main.reading_history', page=p) }}">{{ p }}</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><span class="page-link bg-dark text-muted border-secondary">...</span></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if pagination.has_next %}
+            <li class="page-item">
+                <a class="page-link bg-dark text-info border-secondary" href="{{ url_for('main.reading_history', page=pagination.next_num) }}">Next</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled"><span class="page-link bg-dark text-muted border-secondary">Next</span></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% else %}
+    <div class="text-center py-5 text-white">
+        <p class="text-muted">You have no reading history. Start reading a manga! 📚</p>
+    </div>
+    {% endif %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='js/manga_detail.js') }}"></script>
 {% endblock %}

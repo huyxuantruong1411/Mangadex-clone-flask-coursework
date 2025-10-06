@@ -183,25 +183,42 @@ def get_prev_chapter(manga_id, current_num, lang):
     return prev_chap
 
 def save_reading_history(user_id, manga_id, chapter_id, last_page):
+    """
+    Cập nhật hoặc tạo mới lịch sử đọc. 
+    Chỉ giữ lại MỘT bản ghi cho mỗi manga/user, đại diện cho tiến trình đọc mới nhất.
+    Điều này đảm bảo trang Reading History (Continue Reading) luôn hiển thị chương mới nhất.
+    """
     manga_id_str = str(manga_id)
+    
+    # Lọc chỉ theo UserId và MangaId, sau đó sắp xếp theo thời gian để lấy bản ghi mới nhất (nếu có nhiều)
     history = db.session.query(ReadingHistory).filter(
         ReadingHistory.UserId == user_id,
-        ReadingHistory.MangaId == manga_id_str,
-        ReadingHistory.ChapterId == chapter_id
-    ).first()
-    now = datetime.utcnow()
-    if history:
-        history.LastPageRead = last_page
-        history.ReadAt = now
-    else:
-        history = ReadingHistory(
-            HistoryId=uuid4(),
-            UserId=user_id,
-            MangaId=manga_id_str,
-            ChapterId=chapter_id,
-            LastPageRead=last_page,
-            ReadAt=now
-        )
-        db.session.add(history)
-    db.session.commit()
+        ReadingHistory.MangaId == manga_id_str
+    ).order_by(ReadingHistory.ReadAt.desc()).first() 
 
+    now = datetime.utcnow()
+    
+    try:
+        if history:
+            # Cập nhật bản ghi gần nhất với thông tin mới
+            history.ChapterId = chapter_id
+            history.LastPageRead = last_page
+            history.ReadAt = now
+            print(f"DEBUG: Updated reading history for MangaId={manga_id_str}, ChapterId={chapter_id}, Page={last_page}")
+        else:
+            # Tạo bản ghi mới
+            new_history = ReadingHistory(
+                HistoryId=str(uuid4()),
+                UserId=user_id,
+                MangaId=manga_id_str,
+                ChapterId=chapter_id,
+                LastPageRead=last_page,
+                ReadAt=now
+            )
+            db.session.add(new_history)
+            print(f"DEBUG: Created new reading history for MangaId={manga_id_str}, ChapterId={chapter_id}, Page={last_page}")
+
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        print(f"ERROR: Failed to save reading history: {e}")

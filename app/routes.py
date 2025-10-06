@@ -5,6 +5,7 @@ from flask import Blueprint, abort, flash, jsonify, redirect, render_template, r
 from flask_login import current_user, login_required
 from datetime import datetime
 from dateutil.relativedelta import relativedelta  # Sử dụng relativedelta để tính chính xác hơn timedelta(months=4)
+from sqlalchemy.orm import joinedload
 import requests
 from sqlalchemy import case, desc, func, or_
 from flask_paginate import Pagination
@@ -13,7 +14,7 @@ from werkzeug.security import generate_password_hash
 
 from app.comment_routes import now
 from app.reader_controller import get_available_langs
-from .models import Chapter, Cover, Creator, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, Report, Tag, Comment
+from .models import Chapter, Cover, Creator, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, ReadingHistory, Report, Tag, Comment
 from . import db
 import os
 import uuid
@@ -79,6 +80,20 @@ def fetch_and_store_covers(manga_id):
         offset += limit
         if offset >= data["total"]:
             break
+
+
+# Helper function để lấy Cover URL (tái sử dụng logic từ home route)
+def get_cover_url_for_manga(manga_id):
+    """Lấy URL base64 của ảnh bìa từ DB."""
+    # MangaCover model được định nghĩa trong models.py
+    # Logic lấy cover từ home route trong routes.py
+    cover = MangaCover.query.filter_by(MangaId=manga_id).order_by(MangaCover.DownloadDate.desc()).first()
+    if cover and cover.ImageData:
+        image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+        return f"data:image/jpeg;base64,{image_data}"
+    
+    # Nếu không tìm thấy, dùng default placeholder (Logic download mới đã có ở home route)
+    return url_for('static', filename='assets/default_cover.png')
 
 # ======================
 # Provider mapping
@@ -728,10 +743,70 @@ def library():
 
 
 @main.route("/reading-history")
+@login_required # Đảm bảo người dùng phải đăng nhập
 def reading_history():
+    """
+    Truy vấn lịch sử đọc của người dùng, sắp xếp theo thời gian đọc gần nhất.
+    Chỉ lấy bản ghi lịch sử đọc gần nhất cho mỗi bộ manga.
+    """
+    # Mặc dù có @login_required, giữ lại kiểm tra này để đảm bảo template yêu cầu đăng nhập được render
     if not current_user.is_authenticated:
         return render_template("require_login.html", title="Reading History")
-    return render_template("reading_history.html", title="Reading History")
+
+    page = request.args.get('page', 1, type=int)
+    per_page = 10 
+
+    # 1. Subquery: Tìm thời điểm ReadAt gần nhất (MAX) cho mỗi MangaId của người dùng hiện tại
+    # Sử dụng func.max và group_by
+    latest_reads = db.session.query(
+        ReadingHistory.MangaId,
+        func.max(ReadingHistory.ReadAt).label('LastReadAt')
+    ).filter(
+        ReadingHistory.UserId == current_user.UserId
+    ).group_by(
+        ReadingHistory.MangaId
+    ).subquery()
+
+    # 2. Main query: Join subquery với ReadingHistory và Manga
+    # Join ReadingHistory với Subquery để chỉ chọn bản ghi khớp cả MangaId và thời gian gần nhất
+    query = db.session.query(
+        ReadingHistory, 
+        Manga
+    ).join(
+        latest_reads,
+        (latest_reads.c.MangaId == ReadingHistory.MangaId) & 
+        (latest_reads.c.LastReadAt == ReadingHistory.ReadAt)
+    ).join(
+        Manga,
+        Manga.MangaId == ReadingHistory.MangaId
+    ).options(
+        # Eager load thông tin Chapter để truy cập item.last_chapter mà không bị N+1 query
+        joinedload(ReadingHistory.chapter) 
+    ).order_by(
+        ReadingHistory.ReadAt.desc() # Sắp xếp theo thời gian đọc gần nhất
+    )
+    
+    # Thực hiện truy vấn với phân trang
+    pagination = query.paginate(page=page, per_page=per_page, error_out=False)
+    
+    history_items = []
+    for history_record, manga in pagination.items:
+        # Lấy cover URL
+        cover_url = get_cover_url_for_manga(manga.MangaId)
+
+        history_items.append({
+            'manga': manga,
+            'history': history_record,
+            'last_chapter': history_record.chapter, # Relationship Chapter đã được eager load
+            'cover_url': cover_url,
+            # URL "Continue Reading" (Giả định reader route là /read/<manga_id>/<chapter_id>?page=<last_page>)
+            'continue_url': f"/read/{str(manga.MangaId)}/{str(history_record.ChapterId)}?page={history_record.LastPageRead}",
+        })
+        
+    return render_template("reading_history.html", 
+                           title="Reading History", 
+                           history_items=history_items, 
+                           pagination=pagination)
 
 @main.route("/login", endpoint="login")
 def login():
