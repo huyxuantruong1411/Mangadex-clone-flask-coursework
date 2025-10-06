@@ -1,254 +1,207 @@
-// app/static/js/comments.js
-$(document).ready(function () {
-    // Spoiler toggle: click to reveal
-    $(document).on('click', '.comment-content.spoiler', function () {
-        $(this).toggleClass('revealed');
-    });
+/* comments.js - Quản lý giao diện và tương tác bình luận phía client */
+document.addEventListener('DOMContentLoaded', () => {
+    const currentUserId = document.querySelector('#comment-form')?.dataset.currentUserId || '';
 
-    // Submit new comment (AJAX) - Dùng click trên button thay vì form submit
-    $(document).on('click', '#btn-submit-comment', function (e) {
-        const form = $('#comment-add-form');
-        const content = $('#comment-content-input').val().trim();
-        const is_spoiler_raw = $('#is-spoiler').is(':checked') ? '1' : '0';
-        const action = form.attr('action');
-
-        if (!content || content.length < 5) {
-            alert('Comment is too short (minimum 5 characters).');
-            return;
-        }
-
-        console.log('Posting comment...'); // Debug: kiểm tra console
-
-        $.ajax({
-            url: action,
-            method: 'POST',
-            data: {
-                content: content,
-                is_spoiler: is_spoiler_raw
-            },
-            dataType: 'json',
-            success: function (data) {
-                console.log('Success:', data); // Debug
-                if (data.success) {
-                    const c = data.comment;
-                    const newHtml = buildCommentHtml(c);
-                    $('#comments-list').prepend(newHtml);
-                    $('#comment-content-input').val('');
-                    $('#is-spoiler').prop('checked', false);
-                    window.location.href = action.replace('/comments', '') + '#comments';
-                } else {
-                    alert(data.message || 'Error adding comment.');
-                }
-            },
-            error: function (xhr) {
-                console.error('Error:', xhr.responseText); // Debug
-                let msg = 'Error adding comment.';
-                try {
-                    msg = JSON.parse(xhr.responseText).message || msg;
-                } catch (e) { }
-                alert(msg);
-            }
-        });
-    });
-
-    // Sort comments: change window.location to include sort param
-    $('#sort-select').change(function () {
-        const sort = $(this).val();
-        const params = new URLSearchParams(window.location.search);
-        params.set('sort', sort);
-        params.set('page', '1');
-        window.location.search = params.toString();
-    });
-
-    // Search comments client-side
-    $('#search-comments').on('input', function () {
-        const q = $(this).val().toLowerCase();
-        $('.comment').each(function () {
-            const text = $(this).find('.comment-content').text().toLowerCase();
-            $(this).toggle(text.indexOf(q) !== -1);
-        });
-    });
-
-    // Like/Dislike
-    $(document).on('click', '.comment-like, .comment-dislike', function () {
-        const btn = $(this);
-        const commentId = btn.data('comment-id');
-        const isLike = btn.hasClass('comment-like');
-        const url = isLike ? `/comment/${commentId}/like` : `/comment/${commentId}/dislike`;
-
-        $.post(url, function (data) {
-            if (data.success) {
-                const parent = $(`[data-comment-id="${commentId}"]`);
-                parent.find('.comment-like span').text(data.like_count);
-                parent.find('.comment-dislike span').text(data.dislike_count);
-            } else {
-                alert(data.message || 'Error processing reaction.');
-            }
-        }).fail(function (xhr) {
-            let m = 'Error processing reaction.';
+    // Xử lý gửi bình luận
+    const form = document.getElementById('comment-form');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const mangaId = form.dataset.mangaId;
             try {
-                m = JSON.parse(xhr.responseText).message || m;
-            } catch (e) { }
-            alert(m);
-        });
-    });
-
-    // Edit comment (convert content area into form)
-    $(document).on('click', '.comment-edit', function () {
-        const commentId = $(this).data('comment-id');
-        const container = $(`[data-comment-id="${commentId}"]`);
-        const contentEl = container.find('.comment-content');
-        const oldContent = contentEl.text().trim();
-
-        const formHtml = `
-            <form class="edit-comment-form">
-                <textarea class="form-control mb-2" rows="4">${escapeHtml(oldContent)}</textarea>
-                <div class="d-flex">
-                    <button class="btn btn-sm btn-primary me-2 save-edit" type="submit">Save</button>
-                    <button class="btn btn-sm btn-secondary cancel-edit" type="button">Cancel</button>
-                </div>
-            </form>
-        `;
-        contentEl.data('orig', oldContent);
-        contentEl.html(formHtml);
-    });
-
-    // Cancel edit
-    $(document).on('click', '.cancel-edit', function () {
-        const container = $(this).closest('.comment');
-        const contentEl = container.find('.comment-content');
-        const orig = contentEl.data('orig') || '';
-        contentEl.html(orig);
-    });
-
-    // Save edit (AJAX PUT)
-    $(document).on('submit', '.edit-comment-form', function (e) {
-        e.preventDefault();
-        const form = $(this);
-        const newContent = form.find('textarea').val().trim();
-        const container = form.closest('.comment');
-        const commentId = container.data('comment-id');
-        if (!newContent || newContent.length < 5) {
-            alert('Comment is too short (min 5 chars).');
-            return;
-        }
-        $.ajax({
-            url: `/comment/${commentId}`,
-            method: 'PUT',
-            contentType: 'application/json',
-            data: JSON.stringify({
-                content: newContent
-            }),
-            success: function (data) {
+                const response = await fetch(`/comment/manga/${mangaId}/comments`, {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
                 if (data.success) {
-                    container.find('.comment-content').html(escapeHtml(newContent));
+                    appendComment(data.comment);
+                    form.reset();
                 } else {
-                    alert(data.message || 'Error updating comment.');
+                    alert(data.message || 'Error posting comment.');
                 }
-            },
-            error: function (xhr) {
-                let m = 'Error updating comment.';
-                try {
-                    m = JSON.parse(xhr.responseText).message || m;
-                } catch (e) { }
-                alert(m);
+            } catch (err) {
+                console.error('Post comment error:', err);
+                alert('Network error posting comment.');
             }
         });
-    });
+    }
 
-    // Delete comment (AJAX DELETE)
-    $(document).on('click', '.comment-delete', function () {
-        if (!confirm('Are you sure you want to delete this comment?')) return;
-        const commentId = $(this).data('comment-id');
-        $.ajax({
-            url: `/comment/${commentId}`,
-            method: 'DELETE',
-            success: function (data) {
-                if (data.success) {
-                    const container = $(`[data-comment-id="${commentId}"]`);
-                    container.find('.comment-content').html('<p class="text-muted">[Deleted]</p>');
-                    container.find('.comment-actions').empty();
+    // Xử lý tìm kiếm bình luận phía client
+    const searchInput = document.getElementById('search-comments');
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase();
+            document.querySelectorAll('.comment-item').forEach(item => {
+                const content = item.querySelector('p').textContent.toLowerCase();
+                item.style.display = content.includes(query) ? '' : 'none';
+            });
+        });
+    }
+
+    // Xử lý sắp xếp bình luận
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', () => {
+            const sort = sortSelect.value;
+            const params = new URLSearchParams(window.location.search);
+            params.set('sort', sort);
+            params.set('page', '1');
+            window.location.search = params.toString();
+        });
+    }
+
+    // Xử lý chuyển đổi hiển thị spoiler
+    const commentList = document.getElementById('comment-list');
+    if (commentList) {
+        commentList.addEventListener('click', async (e) => {
+            const target = e.target;
+            const item = target.closest('.comment-item');
+            if (!item) return;
+            const id = item.dataset.id;
+
+            // Chuyển đổi spoiler
+            if (target.classList.contains('spoiler')) {
+                target.classList.toggle('revealed');
+                return;
+            }
+
+            // Xử lý các hành động khác
+            if (target.classList.contains('like-btn')) {
+                await handleReaction(id, 'like', item);
+            } else if (target.classList.contains('dislike-btn')) {
+                await handleReaction(id, 'dislike', item);
+            } else if (target.classList.contains('edit-btn')) {
+                const contentElem = item.querySelector('p');
+                const oldContent = contentElem.textContent;
+                const newContent = prompt('Edit comment:', oldContent);
+                if (newContent && newContent !== oldContent) {
+                    await updateComment(id, newContent, contentElem);
+                }
+            } else if (target.classList.contains('delete-btn')) {
+                if (confirm('Delete this comment?')) {
+                    await deleteComment(id, item);
+                }
+            } else if (target.classList.contains('report-btn')) {
+                const reason = prompt('Reason for report:');
+                if (reason && reason.trim().length >= 5) {
+                    await reportComment(id, reason.trim());
                 } else {
-                    alert(data.message || 'Error deleting comment.');
+                    alert('Report reason must be at least 5 characters.');
                 }
-            },
-            error: function (xhr) {
-                let m = 'Error deleting comment.';
-                try {
-                    m = JSON.parse(xhr.responseText).message || m;
-                } catch (e) { }
-                alert(m);
             }
         });
-    });
+    }
 
-    // Report comment (open prompt -> send reason)
-    $(document).on('click', '.comment-report', function () {
-        const commentId = $(this).data('comment-id');
-        const reason = prompt('Please enter the reason for reporting this comment:');
-        if (!reason || reason.trim().length < 5) {
-            alert('Report reason must be at least 5 characters.');
-            return;
-        }
-        $.post(`/comment/${commentId}/report`, {
-            reason: reason.trim()
-        }, function (data) {
-            if (data.success) {
-                alert('Report submitted. Thank you.');
-            } else {
-                alert(data.message || 'Error submitting report.');
-            }
-        }).fail(function (xhr) {
-            let m = 'Error submitting report.';
-            try {
-                m = JSON.parse(xhr.responseText).message || m;
-            } catch (e) { }
-            alert(m);
-        });
-    });
-
-    // Helper: build comment HTML from returned JSON (for prepend after create)
-    function buildCommentHtml(c) {
-        const spoilerClass = c.IsSpoiler ? 'spoiler' : '';
-        const avatar = c.Avatar ? c.Avatar : '/static/assets/default_avatar.png';
-        const created = c.CreatedAt ? new Date(c.CreatedAt).toLocaleString() : '';
-        const html = `
-        <div class="comment card mb-2" data-comment-id="${c.CommentId}">
-            <div class="card-body d-flex">
-                <div class="me-3">
-                    <img src="${avatar}" class="comment-avatar rounded-circle" width="48" height="48">
-                </div>
-                <div class="flex-fill">
-                    <div class="d-flex align-items-start">
-                        <div>
-                            <span class="fw-bold">${escapeHtml(c.Username)}</span>
-                            <div class="text-muted small">${escapeHtml(created)}</div>
-                        </div>
-                        <div class="ms-auto comment-actions">
-                            <button class="btn btn-sm btn-outline-success comment-like" data-comment-id="${c.CommentId}">👍 <span>${c.LikeCount}</span></button>
-                            <button class="btn btn-sm btn-outline-danger comment-dislike" data-comment-id="${c.CommentId}">👎 <span>${c.DislikeCount}</span></button>
-                            <button class="btn btn-sm btn-outline-warning comment-report" data-comment-id="${c.CommentId}">Report</button>
-                        </div>
+    // Thêm bình luận mới vào danh sách
+    function appendComment(comment) {
+        const list = document.getElementById('comment-list');
+        const item = document.createElement('div');
+        item.className = 'comment-item mb-3 border-bottom pb-3' + (comment.IsSpoiler ? ' spoiler' : '');
+        item.dataset.id = comment.CommentId;
+        item.innerHTML = `
+            <div class="d-flex">
+                <img src="${comment.Avatar || '/static/assets/default_avatar.png'}" alt="Avatar" class="avatar me-3 rounded-circle" style="width:40px;height:40px;">
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong>${escapeHtml(comment.Username)}</strong>
+                        <small class="text-muted">${new Date(comment.CreatedAt).toLocaleString()}</small>
                     </div>
-                    <div class="comment-content mt-2 ${spoilerClass}">
-                        ${escapeHtml(c.Content)}
+                    <p class="mb-1 ${comment.IsSpoiler ? 'spoiler' : ''}">${escapeHtml(comment.Content)}</p>
+                    ${comment.IsSpoiler ? '<span class="badge bg-warning text-dark">Spoiler</span>' : ''}
+                    <div class="comment-actions d-flex gap-2">
+                        <button class="btn btn-sm btn-link p-0 like-btn" data-id="${comment.CommentId}">Like (${comment.LikeCount})</button>
+                        <button class="btn btn-sm btn-link p-0 dislike-btn" data-id="${comment.CommentId}">Dislike (${comment.DislikeCount})</button>
+                        ${comment.UserId === currentUserId ? `<button class="btn btn-sm btn-link p-0 edit-btn" data-id="${comment.CommentId}">Edit</button>` : ''}
+                        ${comment.UserId === currentUserId ? `<button class="btn btn-sm btn-link p-0 delete-btn" data-id="${comment.CommentId}">Delete</button>` : ''}
+                        <button class="btn btn-sm btn-link p-0 report-btn" data-id="${comment.CommentId}">Report</button>
                     </div>
                 </div>
             </div>
-        </div>
         `;
-        return html;
+        list.prepend(item);
     }
 
-    // Utility: escape HTML
+    // Xử lý thích/không thích
+    async function handleReaction(id, type, item) {
+        try {
+            const response = await fetch(`/comment/${id}/${type}`, { method: 'POST' });
+            if (response.ok) {
+                const data = await response.json();
+                item.querySelector('.like-btn').textContent = `Like (${data.like_count})`;
+                item.querySelector('.dislike-btn').textContent = `Dislike (${data.dislike_count})`;
+            } else {
+                alert('Error processing reaction.');
+            }
+        } catch (err) {
+            console.error('Reaction error:', err);
+            alert('Network error processing reaction.');
+        }
+    }
+
+    // Cập nhật bình luận
+    async function updateComment(id, content, contentElem) {
+        try {
+            const response = await fetch(`/comment/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content })
+            });
+            if (response.ok) {
+                const data = await response.json();
+                contentElem.textContent = data.content;
+            } else {
+                alert('Error updating comment.');
+            }
+        } catch (err) {
+            console.error('Update error:', err);
+            alert('Network error updating comment.');
+        }
+    }
+
+    // Xóa bình luận
+    async function deleteComment(id, item) {
+        try {
+            const response = await fetch(`/comment/${id}`, { method: 'DELETE' });
+            if (response.ok) {
+                item.remove();
+            } else {
+                alert('Error deleting comment.');
+            }
+        } catch (err) {
+            console.error('Delete error:', err);
+            alert('Network error deleting comment.');
+        }
+    }
+
+    // Báo cáo bình luận
+    async function reportComment(id, reason) {
+        try {
+            const response = await fetch(`/comment/${id}/report`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ reason })
+            });
+            if (response.ok) {
+                alert('Report submitted successfully.');
+            } else {
+                alert('Error submitting report.');
+            }
+        } catch (err) {
+            console.error('Report error:', err);
+            alert('Network error submitting report.');
+        }
+    }
+
+    // Thoát chuỗi HTML để bảo mật
     function escapeHtml(str) {
-        if (!str) return '';
-        return String(str)
+        return str
             .replace(/&/g, '&amp;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
             .replace(/\n/g, '<br>');
     }
 });

@@ -1,112 +1,78 @@
-{% set mid = manga.MangaId if manga is defined else (manga_id if manga_id is defined else None) %}
-
+<!-- comments.html - Display comment list and comment input form -->
 <div class="comments-section container-fluid py-3">
-
-    <!-- Debug info -->
-    <div class="debug-info mb-3 text-muted">
-        <p>Authenticated: {{ is_authenticated }}</p>
-        <p>Current User ID: {{ current_user.get_id() if is_authenticated else 'N/A' }}</p>
-    </div>
-
     <!-- Comment form -->
-    <div class="comment-form mb-3">
-        {% if is_authenticated %}
-        <form id="comment-add-form" method="post" action="{{ url_for('comment_bp.add_comment', manga_id=mid) }}">
-            <div class="d-flex">
-                <div class="me-2">
-                    <img src="{{ current_user.Avatar if current_user and current_user.Avatar else url_for('static', filename='assets/default_avatar.png') }}"
-                        class="comment-avatar" alt="avatar" width="48" height="48">
-                </div>
-                <div class="flex-fill">
-                    <textarea name="content" id="comment-content-input" class="form-control mb-2" rows="4"
-                        placeholder="Write your comment..."></textarea>
-                    <div class="d-flex align-items-center">
-                        <label class="me-3"><input type="checkbox" name="is_spoiler" id="is-spoiler"> Mark as
-                            spoiler</label>
-                        <button type="button" class="btn btn-primary btn-sm ms-auto" id="btn-submit-comment">Post
-                            Comment</button>
-                    </div>
-                    <small class="text-muted">Minimum 5 characters.</small>
-                </div>
+    {% if current_user.is_authenticated %}
+    <form id="comment-form" method="POST" data-manga-id="{{ manga.MangaId }}" data-current-user-id="{{ current_user.get_id() }}">
+        <div class="d-flex">
+            <div class="me-2">
+                <img src="{{ current_user.Avatar if current_user.Avatar else url_for('static', filename='assets/default_avatar.png') }}"
+                    class="comment-avatar rounded-circle" alt="Avatar" width="48" height="48">
             </div>
-        </form>
-        {% else %}
-        <div class="text-center py-3">
-            <p>You must <a href="{{ url_for('auth.login') }}">Sign in</a> to post a comment.</p>
+            <div class="flex-fill">
+                <textarea name="content" id="comment-content-input" class="form-control mb-2" rows="4" placeholder="Write your comment..." required minlength="5"></textarea>
+                <div class="d-flex align-items-center">
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" name="is_spoiler" id="is-spoiler">
+                        <label class="form-check-label text-muted" for="is-spoiler">Mark as spoiler</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm ms-auto">Post Comment</button>
+                </div>
+                <small class="text-muted">Minimum 5 characters.</small>
+            </div>
         </div>
-        {% endif %}
+    </form>
+    {% else %}
+    <div class="text-center py-3">
+        <p>You must <a href="{{ url_for('auth.login') }}">Sign in</a> to post a comment.</p>
     </div>
+    {% endif %}
 
     <!-- Sort / Search -->
     <div class="d-flex mb-3 align-items-center">
         <div>
             <select id="sort-select" class="form-select form-select-sm">
-                <option value="newest" {% if comments_sort=='newest' %}selected{% endif %}>Newest</option>
-                <option value="oldest" {% if comments_sort=='oldest' %}selected{% endif %}>Oldest</option>
-                <option value="most_liked" {% if comments_sort=='most_liked' %}selected{% endif %}>Most liked</option>
+                <option value="newest" {% if comments_sort == 'newest' %}selected{% endif %}>Newest</option>
+                <option value="oldest" {% if comments_sort == 'oldest' %}selected{% endif %}>Oldest</option>
+                <option value="most_liked" {% if comments_sort == 'most_liked' %}selected{% endif %}>Most liked</option>
             </select>
         </div>
         <div class="ms-3 flex-grow-1">
-            <input type="text" id="search-comments" class="form-control form-control-sm"
-                placeholder="Search comments...">
+            <input type="text" id="search-comments" class="form-control form-control-sm" placeholder="Search comments...">
         </div>
     </div>
 
-    <!-- Comments list -->
-    <div id="comments-list">
-        {% if comments %}
-        {% for c in comments %}
-        <div class="comment card mb-2" data-comment-id="{{ c.CommentId }}">
-            <div class="card-body d-flex">
-                <div class="me-3">
-                    {% if c.user and c.user.Avatar %}
-                    <img src="{{ c.user.Avatar }}" class="comment-avatar rounded-circle" width="48" height="48">
-                    {% else %}
-                    <img src="{{ url_for('static', filename='assets/default_avatar.png') }}"
-                        class="comment-avatar rounded-circle" width="48" height="48">
-                    {% endif %}
+    <!-- Comment list -->
+    <div id="comment-list">
+    {% if comments %}
+    {% for comment in comments %}
+    <div class="comment-item mb-3 border-bottom pb-3 {% if comment.IsSpoiler %}spoiler{% endif %}" data-id="{{ comment.CommentId }}">
+        <div class="d-flex">
+            <img src="{{ comment.user.Avatar or url_for('static', filename='assets/default_avatar.png') }}" alt="Avatar" class="avatar me-3 rounded-circle" style="width:40px;height:40px;">
+            <div class="flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong>{{ comment.user.Username }}</strong>
+                    <small class="text-muted">{{ comment.CreatedAt.strftime('%Y-%m-%d %H:%M') }}</small>
                 </div>
-                <div class="flex-fill">
-                    <div class="d-flex align-items-start">
-                        <div>
-                            <a href="{{ url_for('main.profile') if c.user is none else url_for('main.profile') }}"
-                                class="fw-bold">{{ c.user.Username if c.user else 'Unknown' }}</a>
-                            <div class="text-muted small">{{ c.CreatedAt.strftime('%Y-%m-%d %H:%M') if c.CreatedAt else
-                                '' }}</div>
-                            <!-- Debug UserId -->
-                            <div class="text-muted small">Comment UserId: {{ c.UserId }}</div>
-                            <div class="text-muted small">Condition: {{ 'True' if is_authenticated and
-                                (current_user.get_id()|lower == (c.UserId|string)|lower) else 'False' }}</div>
-                        </div>
-                        <div class="ms-auto comment-actions">
-                            <button class="btn btn-sm btn-outline-success comment-like"
-                                data-comment-id="{{ c.CommentId }}">
-                                👍 <span>{{ c.LikeCount or 0 }}</span>
-                            </button>
-                            <button class="btn btn-sm btn-outline-danger comment-dislike"
-                                data-comment-id="{{ c.CommentId }}">
-                                👎 <span>{{ c.DislikeCount or 0 }}</span>
-                            </button>
-                            {% if is_authenticated and (current_user.get_id()|lower == (c.UserId|string)|lower) %}
-                            <button class="btn btn-sm btn-outline-secondary comment-edit"
-                                data-comment-id="{{ c.CommentId }}">Edit</button>
-                            <button class="btn btn-sm btn-outline-dark comment-delete"
-                                data-comment-id="{{ c.CommentId }}">Delete</button>
-                            {% endif %}
-                            <button class="btn btn-sm btn-outline-warning comment-report"
-                                data-comment-id="{{ c.CommentId }}">Report</button>
-                        </div>
-                    </div>
-                    <div class="comment-content mt-2 {% if c.IsSpoiler %}spoiler{% endif %}">
-                        {{ c.Content | e | replace('\n', '<br>') | safe }}
-                    </div>
+                <p class="mb-1 {% if comment.IsSpoiler %}spoiler{% endif %}">{{ comment.Content | replace('\n', '<br>') | safe }}</p>
+                {% if comment.IsSpoiler %}<span class="badge bg-warning text-dark">Spoiler</span>{% endif %}
+                <div class="comment-actions d-flex gap-2">
+                    <button class="btn btn-sm btn-link p-0 like-btn" data-id="{{ comment.CommentId }}">Like ({{ comment.LikeCount or 0 }})</button>
+                    <button class="btn btn-sm btn-link p-0 dislike-btn" data-id="{{ comment.CommentId }}">Dislike ({{ comment.DislikeCount or 0 }})</button>
+                    
+                    {% if current_user.is_authenticated and comment.UserId|string == current_user.get_id() %}
+                    <button class="btn btn-sm btn-link p-0 edit-btn" data-id="{{ comment.CommentId }}">Edit</button>
+                    <button class="btn btn-sm btn-link p-0 delete-btn" data-id="{{ comment.CommentId }}">Delete</button>
+                    {% endif %}
+                    
+                    <button class="btn btn-sm btn-link p-0 report-btn" data-id="{{ comment.CommentId }}">Report</button>
                 </div>
             </div>
         </div>
-        {% endfor %}
-        {% else %}
-        <p class="text-center text-muted">No comments yet. Be the first to comment!</p>
-        {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="text-center text-muted">No comments yet. Be the first to comment!</p>
+    {% endif %}
     </div>
 
     <!-- Pagination -->
@@ -115,20 +81,15 @@
         <ul class="pagination pagination-sm">
             {% if comments_pagination.has_prev %}
             <li class="page-item">
-                <a class="page-link"
-                    href="{{ url_for('manga.manga_detail', manga_id=mid, page=comments_pagination.prev_num, sort=comments_sort) }}">&laquo;
-                    Prev</a>
+                <a class="page-link" href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId, page=comments_pagination.prev_num, sort=comments_sort) }}">&laquo; Prev</a>
             </li>
             {% else %}
             <li class="page-item disabled"><span class="page-link">&laquo; Prev</span></li>
             {% endif %}
-            <li class="page-item disabled"><span class="page-link">Page {{ comments_pagination.page }} / {{
-                    comments_pagination.pages }}</span></li>
+            <li class="page-item disabled"><span class="page-link">Page {{ comments_pagination.page }} / {{ comments_pagination.pages }}</span></li>
             {% if comments_pagination.has_next %}
             <li class="page-item">
-                <a class="page-link"
-                    href="{{ url_for('manga.manga_detail', manga_id=mid, page=comments_pagination.next_num, sort=comments_sort) }}">Next
-                    &raquo;</a>
+                <a class="page-link" href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId, page=comments_pagination.next_num, sort=comments_sort) }}">Next &raquo;</a>
             </li>
             {% else %}
             <li class="page-item disabled"><span class="page-link">Next &raquo;</span></li>

@@ -28,6 +28,7 @@ class User(UserMixin, db.Model):
     lists = relationship("List", back_populates="user")
     histories = relationship("ReadingHistory", back_populates="user")
     reports = relationship("Report", back_populates="user")
+    reactions = relationship("CommentReaction", back_populates="user")
 
     def get_id(self):
         return str(self.UserId)
@@ -99,26 +100,47 @@ class Chapter(db.Model):
 # ------------------------
 # COMMENT
 # ------------------------
+# Mới: Sử dụng UNIQUEIDENTIFIER
 class Comment(db.Model):
     __tablename__ = 'Comment'
     __table_args__ = {'schema': 'dbo'}
-    CommentId = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    UserId = db.Column(db.String(36), db.ForeignKey('dbo.User.UserId'), nullable=False)
-    MangaId = db.Column(db.String(36), db.ForeignKey('dbo.Manga.MangaId'), nullable=False)
-    ChapterId = db.Column(db.String(36), db.ForeignKey('dbo.Chapter.ChapterId'), nullable=True)
-    Content = db.Column(db.Text, nullable=False)
-    CreatedAt = db.Column(db.DateTime, default=datetime.utcnow)
-    UpdatedAt = db.Column(db.DateTime, default=datetime.utcnow)
-    IsDeleted = db.Column(db.Boolean, default=False)
-    IsSpoiler = db.Column(db.Boolean, default=False)
-    LikeCount = db.Column(db.Integer, default=0)
-    DislikeCount = db.Column(db.Integer, default=0)
+
+    # Thay đổi tất cả các cột ID thành UNIQUEIDENTIFIER
+    CommentId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey('dbo.User.UserId'), nullable=False)
+    MangaId = Column(UNIQUEIDENTIFIER, ForeignKey('dbo.Manga.MangaId'), nullable=False)
+    # Rất quan trọng: ChapterId phải là UNIQUEIDENTIFIER và nullable=True
+    ChapterId = Column(UNIQUEIDENTIFIER, ForeignKey('dbo.Chapter.ChapterId'), nullable=True) 
+
+    Content = Column(Text, nullable=False)
+    CreatedAt = Column(DateTime, default=datetime.utcnow)
+    UpdatedAt = Column(DateTime, default=datetime.utcnow)
+    IsDeleted = Column(Boolean, default=False)
+    IsSpoiler = Column(Boolean, default=False)
+    LikeCount = Column(Integer, default=0)
+    DislikeCount = Column(Integer, default=0)
 
     user = relationship("User", back_populates="comments")
     manga = relationship("Manga", back_populates="comments")
     chapter = relationship("Chapter", back_populates="comments")
     reports = relationship("Report", back_populates="comment")
+    reactions = relationship("CommentReaction", back_populates="comment")
 
+# ------------------------
+# COMMENT REACTION (new)
+# ------------------------
+class CommentReaction(db.Model):
+    __tablename__ = 'CommentReaction'
+    __table_args__ = {'schema': 'dbo'}
+
+    ReactionId = Column(UNIQUEIDENTIFIER, primary_key=True, default=uuid.uuid4)
+    CommentId = Column(UNIQUEIDENTIFIER, ForeignKey('dbo.Comment.CommentId'), nullable=False)
+    UserId = Column(UNIQUEIDENTIFIER, ForeignKey('dbo.User.UserId'), nullable=False)
+    Type = Column(String(10), nullable=False)  # 'like' or 'dislike'
+    CreatedAt = Column(DateTime, default=datetime.utcnow)
+
+    comment = relationship("Comment", back_populates="reactions")
+    user = relationship("User", back_populates="reactions")
 
 # ------------------------
 # CREATOR
