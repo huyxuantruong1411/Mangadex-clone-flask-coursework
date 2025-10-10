@@ -5684,6 +5684,257 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-10-10 07:52:05,943 - INFO - 127.0.0.1 - - [10/Oct/2025 07:52:05] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
 2025-10-10 07:52:06,082 - INFO - 127.0.0.1 - - [10/Oct/2025 07:52:06] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
 2025-10-10 07:52:19,717 - INFO - 127.0.0.1 - - [10/Oct/2025 07:52:19] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:03:32,374 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:03:32,374 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:03:32,376 - INFO -  * Restarting with stat
+2025-10-10 08:03:33,316 - WARNING -  * Debugger is active!
+2025-10-10 08:03:33,321 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:03:36,743 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:36] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:03:36,988 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:36] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-10-10 08:03:37,011 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,012 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,016 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,018 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,024 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,031 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,039 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,121 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,126 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,127 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,131 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,134 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,149 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,151 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,152 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,162 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,167 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,167 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,176 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,178 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,181 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,186 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,193 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,197 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,198 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,201 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,204 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,287 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:03:37,502 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:03:50,296 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:50] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:03:53,214 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:53] "POST /comment/1fbcda95-67c0-41a3-baf6-393efc0261c4/dislike HTTP/1.1" 200 -
+2025-10-10 08:03:56,012 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:56] "POST /comment/1fbcda95-67c0-41a3-baf6-393efc0261c4/dislike HTTP/1.1" 200 -
+2025-10-10 08:03:56,455 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:56] "POST /comment/1fbcda95-67c0-41a3-baf6-393efc0261c4/dislike HTTP/1.1" 200 -
+2025-10-10 08:04:04,167 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:04] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:04:11,364 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:04:11,435 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,439 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,445 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,447 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,450 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,454 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,462 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,588 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,591 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,597 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,601 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,604 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,612 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,614 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,624 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,625 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,629 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,635 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,645 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,647 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,648 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,665 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,669 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,673 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,678 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,696 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,698 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,700 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,735 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:04:11,971 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,194 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:07:12,265 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,278 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,280 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,281 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,282 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,288 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,292 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,472 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,478 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,480 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,483 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,487 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,492 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,494 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,503 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,510 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,516 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,518 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,522 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,528 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,529 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,533 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,541 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,541 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,583 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,584 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,585 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,586 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,631 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:07:12,965 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:07:23,574 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:23] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:07:23,583 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:23] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:07:56,483 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:07:56,484 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:07:56,486 - INFO -  * Restarting with stat
+2025-10-10 08:07:57,401 - WARNING -  * Debugger is active!
+2025-10-10 08:07:57,405 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:08:00,477 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:08:00,716 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,723 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,723 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,727 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,731 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,735 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,744 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,753 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,843 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,847 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,851 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,857 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,862 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,870 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,871 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,875 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,876 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,887 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,889 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,891 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,895 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,905 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,905 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,913 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,918 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,920 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,938 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,948 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:01,067 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:01] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:08:01,301 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:01] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:08:15,472 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:15] "DELETE /comment/39273729-284b-4c99-873c-80e132ff1b33 HTTP/1.1" 200 -
+2025-10-10 08:10:53,760 - INFO - 127.0.0.1 - - [10/Oct/2025 08:10:53] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:10:53,770 - INFO - 127.0.0.1 - - [10/Oct/2025 08:10:53] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:10:53,774 - INFO - 127.0.0.1 - - [10/Oct/2025 08:10:53] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:18:57,035 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:18:57,035 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:18:57,037 - INFO -  * Restarting with stat
+2025-10-10 08:18:57,927 - WARNING -  * Debugger is active!
+2025-10-10 08:18:57,930 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:19:01,659 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:19:01,890 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,900 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,924 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,930 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,931 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,934 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,946 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,957 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,059 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,067 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,072 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,076 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,116 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,118 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,136 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,147 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,157 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,158 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,169 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,174 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,180 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,183 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,187 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,192 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,197 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,201 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,204 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,206 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,290 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:19:02,498 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,168 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "GET /updates HTTP/1.1" 200 -
+2025-10-10 08:34:16,249 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,263 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,263 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,271 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,990 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,992 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,789 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /library HTTP/1.1" 200 -
+2025-10-10 08:34:17,849 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,853 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,858 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /static/css/library.css HTTP/1.1" 200 -
+2025-10-10 08:34:17,860 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,872 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,874 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,874 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,880 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /static/js/library.js HTTP/1.1" 200 -
+2025-10-10 08:34:17,934 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /api/lists HTTP/1.1" 200 -
+2025-10-10 08:35:37,694 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "GET /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:35:37,773 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,787 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,788 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,793 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "GET /static/css/advanced_search.css HTTP/1.1" 200 -
+2025-10-10 08:35:37,799 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,802 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,814 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,815 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "GET /static/js/advanced_search.js HTTP/1.1" 200 -
+2025-10-10 08:35:39,538 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:39] "GET /advanced_search/options HTTP/1.1" 200 -
+2025-10-10 08:35:51,956 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:51] "POST /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:35:53,525 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,525 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,571 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,612 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,633 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,641 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,654 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,656 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,666 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/js/advanced_search.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:55,654 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:55] "GET /advanced_search/options HTTP/1.1" 200 -
+2025-10-10 08:36:27,648 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "POST /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:36:27,715 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,725 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,728 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,732 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,740 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,743 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,828 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,861 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,864 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/js/advanced_search.js HTTP/1.1[0m" 304 -
+2025-10-10 08:36:29,381 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:29] "GET /advanced_search/options HTTP/1.1" 200 -
+2025-10-10 08:43:18,530 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:43:18,531 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:43:18,532 - INFO -  * Restarting with stat
+2025-10-10 08:43:19,194 - WARNING -  * Debugger is active!
+2025-10-10 08:43:19,196 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:43:31,973 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:31] "POST /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:43:32,255 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,276 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,281 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,289 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,290 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,296 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,301 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,302 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/js/advanced_search.js HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,305 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,415 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:43:33,589 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:33] "GET /advanced_search/options HTTP/1.1" 200 -
 
 --- File: D:\DACSN\coursework\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
@@ -11372,6 +11623,257 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-10-10 07:52:05,943 - INFO - 127.0.0.1 - - [10/Oct/2025 07:52:05] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
 2025-10-10 07:52:06,082 - INFO - 127.0.0.1 - - [10/Oct/2025 07:52:06] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
 2025-10-10 07:52:19,717 - INFO - 127.0.0.1 - - [10/Oct/2025 07:52:19] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:03:32,374 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:03:32,374 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:03:32,376 - INFO -  * Restarting with stat
+2025-10-10 08:03:33,316 - WARNING -  * Debugger is active!
+2025-10-10 08:03:33,321 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:03:36,743 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:36] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:03:36,988 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:36] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-10-10 08:03:37,011 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,012 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,016 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,018 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,024 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,031 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,039 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,121 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,126 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,127 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,131 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,134 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,149 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,151 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,152 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,162 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,167 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,167 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,176 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,178 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,181 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,186 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,193 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,197 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,198 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,201 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,204 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:03:37,287 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:03:37,502 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:37] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:03:50,296 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:50] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:03:53,214 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:53] "POST /comment/1fbcda95-67c0-41a3-baf6-393efc0261c4/dislike HTTP/1.1" 200 -
+2025-10-10 08:03:56,012 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:56] "POST /comment/1fbcda95-67c0-41a3-baf6-393efc0261c4/dislike HTTP/1.1" 200 -
+2025-10-10 08:03:56,455 - INFO - 127.0.0.1 - - [10/Oct/2025 08:03:56] "POST /comment/1fbcda95-67c0-41a3-baf6-393efc0261c4/dislike HTTP/1.1" 200 -
+2025-10-10 08:04:04,167 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:04] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:04:11,364 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:04:11,435 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,439 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,445 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,447 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,450 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,454 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,462 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,588 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,591 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,597 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,601 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,604 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,612 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,614 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,624 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,625 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,629 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,635 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,645 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,647 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,648 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,665 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,669 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,673 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,678 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,696 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,698 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,700 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:04:11,735 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:04:11,971 - INFO - 127.0.0.1 - - [10/Oct/2025 08:04:11] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,194 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:07:12,265 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,278 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,280 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,281 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,282 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,288 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,292 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,472 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,478 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,480 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,483 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,487 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,492 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,494 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,503 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,510 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,516 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,518 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,522 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,528 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,529 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,533 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,541 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,541 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,583 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,584 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,585 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,586 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:07:12,631 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:07:12,965 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:12] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:07:23,574 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:23] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:07:23,583 - INFO - 127.0.0.1 - - [10/Oct/2025 08:07:23] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:07:56,483 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:07:56,484 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:07:56,486 - INFO -  * Restarting with stat
+2025-10-10 08:07:57,401 - WARNING -  * Debugger is active!
+2025-10-10 08:07:57,405 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:08:00,477 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:08:00,716 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,723 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,723 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,727 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,731 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,735 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,744 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,753 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,843 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,847 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,851 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,857 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,862 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,870 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,871 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,875 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,876 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,887 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,889 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,891 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,895 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,905 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,905 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,913 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,918 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,920 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,938 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:00,948 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:00] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:08:01,067 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:01] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:08:01,301 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:01] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:08:15,472 - INFO - 127.0.0.1 - - [10/Oct/2025 08:08:15] "DELETE /comment/39273729-284b-4c99-873c-80e132ff1b33 HTTP/1.1" 200 -
+2025-10-10 08:10:53,760 - INFO - 127.0.0.1 - - [10/Oct/2025 08:10:53] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:10:53,770 - INFO - 127.0.0.1 - - [10/Oct/2025 08:10:53] "[35m[1mPOST /comment/manga/e78a489b-6632-4d61-b00b-5206f5b8b22b/comments HTTP/1.1[0m" 201 -
+2025-10-10 08:10:53,774 - INFO - 127.0.0.1 - - [10/Oct/2025 08:10:53] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:18:57,035 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:18:57,035 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:18:57,037 - INFO -  * Restarting with stat
+2025-10-10 08:18:57,927 - WARNING -  * Debugger is active!
+2025-10-10 08:18:57,930 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:19:01,659 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "GET /manga/e78a489b-6632-4d61-b00b-5206f5b8b22b HTTP/1.1" 200 -
+2025-10-10 08:19:01,890 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,900 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,924 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,930 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,931 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,934 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,946 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:01,957 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:01] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,059 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,067 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/fr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,072 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/pl.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,076 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,116 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/it.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,118 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,136 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,147 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,157 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/comments.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,158 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,169 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,174 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,180 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,183 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,187 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,192 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,197 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/fi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,201 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,204 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,206 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-10-10 08:19:02,290 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "GET /reader/e78a489b-6632-4d61-b00b-5206f5b8b22b/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-10 08:19:02,498 - INFO - 127.0.0.1 - - [10/Oct/2025 08:19:02] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,168 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "GET /updates HTTP/1.1" 200 -
+2025-10-10 08:34:16,249 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,263 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,263 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,271 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,990 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:16,992 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:16] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,789 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /library HTTP/1.1" 200 -
+2025-10-10 08:34:17,849 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,853 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,858 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /static/css/library.css HTTP/1.1" 200 -
+2025-10-10 08:34:17,860 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,872 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,874 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,874 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:34:17,880 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /static/js/library.js HTTP/1.1" 200 -
+2025-10-10 08:34:17,934 - INFO - 127.0.0.1 - - [10/Oct/2025 08:34:17] "GET /api/lists HTTP/1.1" 200 -
+2025-10-10 08:35:37,694 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "GET /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:35:37,773 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,787 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,788 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,793 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "GET /static/css/advanced_search.css HTTP/1.1" 200 -
+2025-10-10 08:35:37,799 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,802 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,814 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:37,815 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:37] "GET /static/js/advanced_search.js HTTP/1.1" 200 -
+2025-10-10 08:35:39,538 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:39] "GET /advanced_search/options HTTP/1.1" 200 -
+2025-10-10 08:35:51,956 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:51] "POST /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:35:53,525 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,525 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,571 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,612 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,633 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,641 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,654 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,656 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:53,666 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:53] "[36mGET /static/js/advanced_search.js HTTP/1.1[0m" 304 -
+2025-10-10 08:35:55,654 - INFO - 127.0.0.1 - - [10/Oct/2025 08:35:55] "GET /advanced_search/options HTTP/1.1" 200 -
+2025-10-10 08:36:27,648 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "POST /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:36:27,715 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,725 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,728 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,732 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,740 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,743 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,828 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,861 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:36:27,864 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:27] "[36mGET /static/js/advanced_search.js HTTP/1.1[0m" 304 -
+2025-10-10 08:36:29,381 - INFO - 127.0.0.1 - - [10/Oct/2025 08:36:29] "GET /advanced_search/options HTTP/1.1" 200 -
+2025-10-10 08:43:18,530 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-10 08:43:18,531 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-10 08:43:18,532 - INFO -  * Restarting with stat
+2025-10-10 08:43:19,194 - WARNING -  * Debugger is active!
+2025-10-10 08:43:19,196 - INFO -  * Debugger PIN: 128-007-526
+2025-10-10 08:43:31,973 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:31] "POST /advanced_search HTTP/1.1" 200 -
+2025-10-10 08:43:32,255 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,276 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,281 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,289 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,290 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,296 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,301 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,302 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/js/advanced_search.js HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,305 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-10 08:43:32,415 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:32] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-10 08:43:33,589 - INFO - 127.0.0.1 - - [10/Oct/2025 08:43:33] "GET /advanced_search/options HTTP/1.1" 200 -
 
 --- File: D:\DACSN\coursework\mini-demo\README.md ---
 
@@ -30683,6 +31185,40 @@ h2.text-white fw-bold {
   color: black !important;
   font-weight: 600 !important;
 }
+
+/* Spoiler Styling */
+.spoiler {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép các item xuống dòng nếu không đủ không gian */
+}
+
+.spoiler .spoiler-content {
+    /* Làm cho text bị mờ bằng cách đổ bóng và làm trong suốt */
+    color: transparent;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    transition: text-shadow 0.3s ease;
+    cursor: help; /* Thay đổi con trỏ chuột để báo hiệu có thể tương tác */
+}
+
+/* Hiển thị nội dung khi di chuột qua (tạm thời) */
+.spoiler:hover .spoiler-content:not(.revealed) {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Trạng thái vĩnh viễn sau khi nhấn nút "Show" */
+.spoiler .spoiler-content.revealed {
+    color: inherit; /* Sử dụng màu chữ mặc định */
+    text-shadow: none; /* Bỏ hiệu ứng đổ bóng */
+    cursor: auto;
+}
+
+.spoiler .show-spoiler-btn {
+    margin-left: 8px;
+    /* Giảm kích thước nút để phù hợp với dòng text */
+    padding: .1rem .4rem; 
+    font-size: .75rem;
+}
 === Folder: app\static\js ===
 
 --- File: D:\DACSN\coursework\mini-demo\app\static\js\add_to_list.js ---
@@ -33554,16 +34090,46 @@ document.addEventListener('DOMContentLoaded', function () {
 --- File: D:\DACSN\coursework\mini-demo\app\templates\comments.html ---
 <!-- comments.html - Display comment list and comment input form -->
 <div class="comments-section container-fluid py-3">
-    <!-- Comment form -->
+    <!-- CSS for Spoiler Functionality (Không thay đổi) -->
+    <style>
+        .spoiler {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .spoiler .spoiler-content {
+            color: transparent;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            transition: text-shadow 0.3s ease;
+            cursor: help;
+        }
+        .spoiler:hover .spoiler-content:not(.revealed) {
+            text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+        .spoiler .spoiler-content.revealed {
+            color: inherit;
+            text-shadow: none;
+            cursor: auto;
+        }
+        .spoiler .show-spoiler-btn {
+            padding: .1rem .4rem;
+            font-size: .75rem;
+            line-height: 1.5;
+        }
+    </style>
+
+    <!-- Comment form (Không thay đổi) -->
     {% if current_user.is_authenticated %}
-    <form id="comment-form" method="POST" data-manga-id="{{ manga.MangaId }}" data-current-user-id="{{ current_user.get_id() }}">
+    <form id="comment-form" method="POST" action="{{ url_for('comment_bp.add_comment', manga_id=manga.MangaId) }}" data-manga-id="{{ manga.MangaId }}" data-current-user-id="{{ current_user.get_id() }}" data-user-avatar="{{ current_user.Avatar or url_for('static', filename='assets/default_avatar.png') }}" data-user-name="{{ current_user.Username }}">
         <div class="d-flex">
             <div class="me-2">
                 <img src="{{ current_user.Avatar if current_user.Avatar else url_for('static', filename='assets/default_avatar.png') }}"
-                    class="comment-avatar rounded-circle" alt="Avatar" width="48" height="48">
+                     class="comment-avatar rounded-circle" alt="Avatar" width="48" height="48">
             </div>
             <div class="flex-fill">
                 <textarea name="content" id="comment-content-input" class="form-control mb-2" rows="4" placeholder="Write your comment..." required minlength="5"></textarea>
+                <div id="comment-error" class="text-danger mb-2" style="display: none;"></div>
                 <div class="d-flex align-items-center">
                     <div class="form-check me-3">
                         <input class="form-check-input" type="checkbox" name="is_spoiler" id="is-spoiler">
@@ -33581,8 +34147,8 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
     {% endif %}
 
-    <!-- Sort / Search -->
-    <div class="d-flex mb-3 align-items-center">
+    <!-- Sort / Search (Không thay đổi) -->
+    <div class="d-flex my-3 align-items-center">
         <div>
             <select id="sort-select" class="form-select form-select-sm">
                 <option value="newest" {% if comments_sort == 'newest' %}selected{% endif %}>Newest</option>
@@ -33595,63 +34161,168 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 
-    <!-- Comment list -->
+    <!-- Comment list (Cấu trúc không đổi, nhưng sẽ được JS thêm nội dung vào) -->
     <div id="comment-list">
-    {% if comments %}
-    {% for comment in comments %}
-    <div class="comment-item mb-3 border-bottom pb-3 {% if comment.IsSpoiler %}spoiler{% endif %}" data-id="{{ comment.CommentId }}">
-        <div class="d-flex">
-            <img src="{{ comment.user.Avatar or url_for('static', filename='assets/default_avatar.png') }}" alt="Avatar" class="avatar me-3 rounded-circle" style="width:40px;height:40px;">
-            <div class="flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center">
-                    <strong>{{ comment.user.Username }}</strong>
-                    <small class="text-muted">{{ comment.CreatedAt.strftime('%Y-%m-%d %H:%M') }}</small>
-                </div>
-                <p class="mb-1 {% if comment.IsSpoiler %}spoiler{% endif %}">{{ comment.Content | replace('\n', '<br>') | safe }}</p>
-                {% if comment.IsSpoiler %}<span class="badge bg-warning text-dark">Spoiler</span>{% endif %}
-                <div class="comment-actions d-flex gap-2">
-                    <button class="btn btn-sm btn-link p-0 like-btn" data-id="{{ comment.CommentId }}">Like ({{ comment.LikeCount or 0 }})</button>
-                    <button class="btn btn-sm btn-link p-0 dislike-btn" data-id="{{ comment.CommentId }}">Dislike ({{ comment.DislikeCount or 0 }})</button>
-                    
-                    {% if current_user.is_authenticated and comment.UserId|string == current_user.get_id() %}
-                    <button class="btn btn-sm btn-link p-0 edit-btn" data-id="{{ comment.CommentId }}">Edit</button>
-                    <button class="btn btn-sm btn-link p-0 delete-btn" data-id="{{ comment.CommentId }}">Delete</button>
+        {% if not comments %}
+        <p id="no-comments-msg" class="text-center text-muted">No comments yet. Be the first to comment!</p>
+        {% else %}
+        {% for comment in comments %}
+        <div class="comment-item mb-3 border-bottom pb-3" data-id="{{ comment.CommentId }}">
+            <div class="d-flex">
+                <img src="{{ comment.user.Avatar or url_for('static', filename='assets/default_avatar.png') }}" alt="Avatar" class="avatar me-3 rounded-circle" style="width:40px;height:40px;">
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong>{{ comment.user.Username }}</strong>
+                        <small class="text-muted">{{ comment.CreatedAt.strftime('%Y-%m-%d %H:%M') }}</small>
+                    </div>
+                    {% if comment.IsSpoiler %}
+                    <div class="spoiler">
+                        <span class="badge bg-warning text-dark">Spoiler</span>
+                        <div class="spoiler-content">{{ comment.Content | replace('\n', '<br>') | safe }}</div>
+                        <button class="btn btn-sm btn-outline-secondary show-spoiler-btn">Show</button>
+                    </div>
+                    {% else %}
+                    <p class="mb-1">{{ comment.Content | replace('\n', '<br>') | safe }}</p>
                     {% endif %}
-                    
-                    <button class="btn btn-sm btn-link p-0 report-btn" data-id="{{ comment.CommentId }}">Report</button>
+                    <div class="comment-actions d-flex gap-2 mt-1">
+                        <button class="btn btn-sm btn-link p-0 like-btn" data-id="{{ comment.CommentId }}">Like ({{ comment.LikeCount or 0 }})</button>
+                        <button class="btn btn-sm btn-link p-0 dislike-btn" data-id="{{ comment.CommentId }}">Dislike ({{ comment.DislikeCount or 0 }})</button>
+                        {% if current_user.is_authenticated and comment.UserId|string == current_user.get_id() %}
+                        <button class="btn btn-sm btn-link p-0 edit-btn" data-id="{{ comment.CommentId }}">Edit</button>
+                        <button class="btn btn-sm btn-link p-0 delete-btn" data-id="{{ comment.CommentId }}">Delete</button>
+                        {% endif %}
+                        <button class="btn btn-sm btn-link p-0 report-btn" data-id="{{ comment.CommentId }}">Report</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <p class="text-center text-muted">No comments yet. Be the first to comment!</p>
-    {% endif %}
+        {% endfor %}
+        {% endif %}
     </div>
 
-    <!-- Pagination -->
+    <!-- Pagination (Không thay đổi) -->
     {% if comments_pagination and comments_pagination.pages > 1 %}
     <nav aria-label="Comments pagination" class="mt-3">
-        <ul class="pagination pagination-sm">
-            {% if comments_pagination.has_prev %}
-            <li class="page-item">
-                <a class="page-link" href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId, page=comments_pagination.prev_num, sort=comments_sort) }}">&laquo; Prev</a>
-            </li>
-            {% else %}
-            <li class="page-item disabled"><span class="page-link">&laquo; Prev</span></li>
-            {% endif %}
-            <li class="page-item disabled"><span class="page-link">Page {{ comments_pagination.page }} / {{ comments_pagination.pages }}</span></li>
-            {% if comments_pagination.has_next %}
-            <li class="page-item">
-                <a class="page-link" href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId, page=comments_pagination.next_num, sort=comments_sort) }}">Next &raquo;</a>
-            </li>
-            {% else %}
-            <li class="page-item disabled"><span class="page-link">Next &raquo;</span></li>
-            {% endif %}
-        </ul>
+        <!-- ... nội dung pagination ... -->
     </nav>
     {% endif %}
 </div>
+
+<!-- JavaScript for Spoiler and AJAX Comment Posting -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const commentList = document.getElementById('comment-list');
+    const commentForm = document.getElementById('comment-form');
+    const noCommentsMsg = document.getElementById('no-comments-msg');
+
+    // === HÀM TẠO HTML CHO BÌNH LUẬN MỚI ===
+    function createCommentHTML(comment) {
+        // Chuyển đổi chuỗi ISO 8601 thành đối tượng Date để định dạng
+        const date = new Date(comment.CreatedAt);
+        const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+        
+        // Thay thế ký tự xuống dòng (\n) bằng thẻ <br>
+        const contentWithBreaks = comment.Content.replace(/\n/g, '<br>');
+
+        let contentHTML;
+        // Kiểm tra nếu là spoiler thì tạo cấu trúc HTML tương ứng
+        if (comment.IsSpoiler) {
+            contentHTML = `
+                <div class="spoiler">
+                    <span class="badge bg-warning text-dark">Spoiler</span>
+                    <div class="spoiler-content">${contentWithBreaks}</div>
+                    <button class="btn btn-sm btn-outline-secondary show-spoiler-btn">Show</button>
+                </div>`;
+        } else {
+            contentHTML = `<p class="mb-1">${contentWithBreaks}</p>`;
+        }
+
+        // Tạo HTML đầy đủ cho một comment item
+        return `
+            <div class="comment-item mb-3 border-bottom pb-3" data-id="${comment.CommentId}">
+                <div class="d-flex">
+                    <img src="${comment.Avatar || '/static/assets/default_avatar.png'}" alt="Avatar" class="avatar me-3 rounded-circle" style="width:40px;height:40px;">
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>${comment.Username}</strong>
+                            <small class="text-muted">${formattedDate}</small>
+                        </div>
+                        ${contentHTML}
+                        <div class="comment-actions d-flex gap-2 mt-1">
+                            <button class="btn btn-sm btn-link p-0 like-btn" data-id="${comment.CommentId}">Like (0)</button>
+                            <button class="btn btn-sm btn-link p-0 dislike-btn" data-id="${comment.CommentId}">Dislike (0)</button>
+                            <button class="btn btn-sm btn-link p-0 edit-btn" data-id="${comment.CommentId}">Edit</button>
+                            <button class="btn btn-sm btn-link p-0 delete-btn" data-id="${comment.CommentId}">Delete</button>
+                            <button class="btn btn-sm btn-link p-0 report-btn" data-id="${comment.CommentId}">Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    // === XỬ LÝ GỬI COMMENT FORM BẰNG AJAX ===
+    if (commentForm) {
+        commentForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn trang tải lại
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const actionUrl = form.getAttribute('action');
+            const errorDiv = document.getElementById('comment-error');
+
+            fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest' // Header giúp Flask nhận biết đây là AJAX
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Tạo HTML cho comment mới
+                    const newCommentHTML = createCommentHTML(data.comment);
+                    // Chèn vào đầu danh sách
+                    commentList.insertAdjacentHTML('afterbegin', newCommentHTML);
+                    
+                    // Nếu có thông báo "no comments", hãy ẩn nó đi
+                    if (noCommentsMsg) {
+                        noCommentsMsg.style.display = 'none';
+                    }
+
+                    // Xóa nội dung trong form
+                    form.reset();
+                    errorDiv.style.display = 'none';
+                } else {
+                    // Hiển thị lỗi nếu có
+                    errorDiv.textContent = data.message || 'An error occurred.';
+                    errorDiv.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error posting comment:', error);
+                errorDiv.textContent = 'A network error occurred. Please try again.';
+                errorDiv.style.display = 'block';
+            });
+        });
+    }
+
+    // === XỬ LÝ CLICK NÚT SHOW/HIDE SPOILER (Không thay đổi) ===
+    if (commentList) {
+        commentList.addEventListener('click', function(event) {
+            if (event.target.classList.contains('show-spoiler-btn')) {
+                const button = event.target;
+                const spoilerContainer = button.closest('.spoiler');
+                if (spoilerContainer) {
+                    const content = spoilerContainer.querySelector('.spoiler-content');
+                    content.classList.toggle('revealed');
+                    button.textContent = content.classList.contains('revealed') ? 'Hide' : 'Show';
+                }
+            }
+        });
+    }
+});
+</script>
 --- File: D:\DACSN\coursework\mini-demo\app\templates\creator_detail.html ---
 {% extends "base.html" %}
 

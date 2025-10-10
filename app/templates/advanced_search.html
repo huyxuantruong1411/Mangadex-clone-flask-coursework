@@ -3,119 +3,493 @@
 {% block styles %}
 {{ super() }}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/advanced_search.css') }}">
+<style>
+    .filter-section {
+        background: rgba(33, 37, 41, 0.8);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .filter-section h4 {
+        color: #17a2b8;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .filter-section h4:hover {
+        color: #1fc8e3;
+    }
+    
+    .filter-section h4 .collapse-icon {
+        margin-left: auto;
+        transition: transform 0.3s;
+    }
+    
+    .filter-section h4[aria-expanded="false"] .collapse-icon {
+        transform: rotate(-90deg);
+    }
+    
+    .tag-dropdown-wrapper {
+        position: relative;
+    }
+    
+    .tag-dropdown-button {
+        width: 100%;
+        text-align: left;
+        background: #212529;
+        border: 1px solid #495057;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .tag-dropdown-button:hover {
+        background: #2c3034;
+        border-color: #6c757d;
+    }
+    
+    .tag-dropdown-button .badge {
+        margin-left: 0.5rem;
+    }
+    
+    .tag-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #212529;
+        border: 1px solid #495057;
+        border-radius: 4px;
+        max-height: 400px;
+        overflow-y: auto;
+        z-index: 1000;
+        display: none;
+        margin-top: 0.25rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .tag-dropdown-menu.show {
+        display: block;
+    }
+    
+    .tag-group {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .tag-group:last-child {
+        border-bottom: none;
+    }
+    
+    .tag-group h5 {
+        color: #17a2b8;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .tag-group .form-check {
+        padding-left: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .tag-group .form-check-label {
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+    
+    .selected-tags {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .tag-pill {
+        background: #17a2b8;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .tag-pill.exclude {
+        background: #dc3545;
+    }
+    
+    .tag-pill .remove-tag {
+        cursor: pointer;
+        font-weight: bold;
+        opacity: 0.8;
+    }
+    
+    .tag-pill .remove-tag:hover {
+        opacity: 1;
+    }
+    
+    .search-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .search-header h2 {
+        margin: 0;
+        color: white;
+        font-weight: 600;
+    }
+    
+    .form-label {
+        color: #adb5bd;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    
+    .form-control, .form-select {
+        background: #212529;
+        border: 1px solid #495057;
+        color: #fff;
+    }
+    
+    .form-control:focus, .form-select:focus {
+        background: #2c3034;
+        border-color: #17a2b8;
+        color: #fff;
+        box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+    }
+    
+    .btn-search {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        padding: 0.6rem 2rem;
+        font-weight: 500;
+    }
+    
+    .btn-search:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-reset {
+        background: #6c757d;
+        border: none;
+        padding: 0.6rem 2rem;
+    }
+    
+    .btn-reset:hover {
+        background: #5a6268;
+    }
+    
+    .manga-cover-lg {
+        width: 60px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    
+    .results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #17a2b8;
+    }
+    
+    .results-count {
+        color: #17a2b8;
+        font-weight: 600;
+    }
+</style>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid p-4" data-auth="{{ current_user.is_authenticated }}">
-    <h2 class="text-white mb-4">Advanced Search</h2>
+    <div class="search-header">
+        <h2>🔍 Advanced Search</h2>
+        <p class="mb-0 mt-2" style="color: rgba(255, 255, 255, 0.9);">Find your next favorite manga with powerful filters</p>
+    </div>
+
     <form method="POST" id="search-form" class="advanced-search-form">
         {{ form.hidden_tag() if form else "" }}
-        <div class="row">
-            <div class="col-lg-8 col-md-6 mb-3">
-                <label for="search-query" class="form-label">Search Query</label>
-                <input type="text" id="search-query" name="search_query" class="form-control"
-                    placeholder="Search manga by title..." value="{{ request.form.get('search_query', '') }}">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-3">
-                <label for="sort-by" class="form-label">Sort By</label>
-                <select id="sort-by" name="sort_by" class="form-select">
-                    <option value="None" {% if request.form.get('sort_by')=='None' %}selected{% endif %}>None</option>
-                    <option value="Title ASC" {% if request.form.get('sort_by')=='Title ASC' %}selected{% endif %}>Title
-                        ASC</option>
-                    <option value="Title DESC" {% if request.form.get('sort_by')=='Title DESC' %}selected{% endif %}>
-                        Title DESC</option>
-                    <option value="Year ASC" {% if request.form.get('sort_by')=='Year ASC' %}selected{% endif %}>Year
-                        ASC</option>
-                    <option value="Year DESC" {% if request.form.get('sort_by')=='Year DESC' %}selected{% endif %}>Year
-                        DESC</option>
-                    <option value="Rating DESC" {% if request.form.get('sort_by')=='Rating DESC' %}selected{% endif %}>
-                        Rating DESC</option>
-                    <option value="Follows DESC" {% if request.form.get('sort_by')=='Follows DESC' %}selected{% endif
-                        %}>Most Follows</option>
-                </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Include Tags</label>
-                <div id="include-tags" class="tag-checklist"></div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Exclude Tags</label>
-                <div id="exclude-tags" class="tag-checklist"></div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-3">
-                <label for="content-rating" class="form-label">Content Rating</label>
-                <select id="content-rating" name="content_rating" multiple class="form-select" size="3">
-                    {% for rating in options.ratings %}
-                    <option value="{{ rating[0] }}" {% if rating[0] in request.form.getlist('content_rating')
-                        %}selected{% endif %}>{{ rating[0] }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <label for="demographic" class="form-label">Magazine Demographic</label>
-                <select id="demographic" name="demographic" multiple class="form-select" size="3">
-                    {% for demo in options.demographics %}
-                    <option value="{{ demo[0] }}" {% if demo[0] in request.form.getlist('demographic') %}selected{%
-                        endif %}>{{ demo[0] }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <label for="status" class="form-label">Publication Status</label>
-                <select id="status" name="status" multiple class="form-select" size="3">
-                    {% for stat in options.statuses %}
-                    <option value="{{ stat[0] }}" {% if stat[0] in request.form.getlist('status') %}selected{% endif %}>
-                        {{ stat[0] }}</option>
-                    {% endfor %}
-                </select>
+        
+        <!-- Basic Search Section -->
+        <div class="filter-section">
+            <h4 data-bs-toggle="collapse" data-bs-target="#basic-filters" aria-expanded="true">
+                📝 Basic Search
+                <span class="collapse-icon">▼</span>
+            </h4>
+            <div id="basic-filters" class="collapse show">
+                <div class="row">
+                    <div class="col-lg-8 mb-3">
+                        <label for="search-query" class="form-label">Search Query</label>
+                        <input type="text" id="search-query" name="search_query" class="form-control"
+                            placeholder="Enter manga title..." value="{{ request.form.get('search_query', '') }}">
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <label for="sort-by" class="form-label">Sort By</label>
+                        <select id="sort-by" name="sort_by" class="form-select">
+                            <option value="None">Relevance</option>
+                            <option value="Title ASC">Title (A-Z)</option>
+                            <option value="Title DESC">Title (Z-A)</option>
+                            <option value="Year ASC">Year (Oldest)</option>
+                            <option value="Year DESC">Year (Newest)</option>
+                            <option value="Rating DESC">Highest Rated</option>
+                            <option value="Follows DESC">Most Followed</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="d-flex gap-2 mt-3">
-            <button type="submit" class="btn btn-primary">Search</button>
-            <button type="button" class="btn btn-secondary" id="reset-filters">Reset Filters</button>
+
+        <!-- Tags Section -->
+        <div class="filter-section">
+            <h4 data-bs-toggle="collapse" data-bs-target="#tag-filters" aria-expanded="true">
+                🏷️ Tags
+                <span class="collapse-icon">▼</span>
+            </h4>
+            <div id="tag-filters" class="collapse show">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Include Tags</label>
+                        <div class="tag-dropdown-wrapper">
+                            <button type="button" class="tag-dropdown-button" id="include-tags-button">
+                                <span>Select tags to include</span>
+                                <span>
+                                    <span class="badge bg-info" id="include-count">0</span>
+                                    <span>▼</span>
+                                </span>
+                            </button>
+                            <div class="tag-dropdown-menu" id="include-tags-menu">
+                                <div id="include-tags" class="tag-checklist"></div>
+                            </div>
+                        </div>
+                        <div id="include-tags-display" class="selected-tags"></div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Exclude Tags</label>
+                        <div class="tag-dropdown-wrapper">
+                            <button type="button" class="tag-dropdown-button" id="exclude-tags-button">
+                                <span>Select tags to exclude</span>
+                                <span>
+                                    <span class="badge bg-danger" id="exclude-count">0</span>
+                                    <span>▼</span>
+                                </span>
+                            </button>
+                            <div class="tag-dropdown-menu" id="exclude-tags-menu">
+                                <div id="exclude-tags" class="tag-checklist"></div>
+                            </div>
+                        </div>
+                        <div id="exclude-tags-display" class="selected-tags"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Filters -->
+        <div class="filter-section">
+            <h4 data-bs-toggle="collapse" data-bs-target="#content-filters" aria-expanded="false">
+                🎯 Content Filters
+                <span class="collapse-icon">▼</span>
+            </h4>
+            <div id="content-filters" class="collapse">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="content-rating" class="form-label">Content Rating</label>
+                        <select id="content-rating" name="content_rating" multiple class="form-select" size="4">
+                            {% for rating in options.ratings %}
+                            <option value="{{ rating[0] }}">{{ rating[0] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="demographic" class="form-label">Demographic</label>
+                        <select id="demographic" name="demographic" multiple class="form-select" size="4">
+                            {% for demo in options.demographics %}
+                            <option value="{{ demo[0] }}">{{ demo[0] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="status" class="form-label">Publication Status</label>
+                        <select id="status" name="status" multiple class="form-select" size="4">
+                            {% for stat in options.statuses %}
+                            <option value="{{ stat[0] }}">{{ stat[0] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Filters -->
+        <div class="filter-section">
+            <h4 data-bs-toggle="collapse" data-bs-target="#advanced-filters" aria-expanded="false">
+                ⚙️ Advanced Filters
+                <span class="collapse-icon">▼</span>
+            </h4>
+            <div id="advanced-filters" class="collapse">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="authors" class="form-label">Authors</label>
+                        <input type="text" id="authors" name="authors" class="form-control"
+                            placeholder="Enter author names (comma-separated)">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="artists" class="form-label">Artists</label>
+                        <input type="text" id="artists" name="artists" class="form-control"
+                            placeholder="Enter artist names (comma-separated)">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="original-langs" class="form-label">Original Language</label>
+                        <select id="original-langs" name="original_langs" multiple class="form-select" size="3">
+                            {% for lang in options.original_langs %}
+                            <option value="{{ lang[0] }}">{{ lang[0] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="year-from" class="form-label">Year Range</label>
+                        <div class="input-group">
+                            <input type="number" id="year-from" name="year_from" class="form-control" placeholder="From">
+                            <span class="input-group-text bg-dark text-white">-</span>
+                            <input type="number" id="year-to" name="year_to" class="form-control" placeholder="To">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="translated-langs" class="form-label">Translations</label>
+                        <select id="translated-langs" name="translated_langs" multiple class="form-select" size="3">
+                            {% for lang in options.translated_langs %}
+                            <option value="{{ lang[0] }}">{{ lang[0] }}</option>
+                            {% endfor %}
+                        </select>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" name="has_translated" id="has-translated">
+                            <label class="form-check-label text-white" for="has-translated">Has translations</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex gap-3 mt-4">
+            <button type="submit" class="btn btn-primary btn-search">
+                🔍 Search Manga
+            </button>
+            <button type="button" class="btn btn-secondary btn-reset" id="reset-filters">
+                ↺ Reset All Filters
+            </button>
         </div>
     </form>
 
     {% if mangas is not none %}
-    <h3 class="text-white mt-5">Search Results</h3>
+    <div class="results-header">
+        <h3 class="text-white mb-0">Search Results</h3>
+        <span class="results-count">{{ pagination.total if pagination else 0 }} manga found</span>
+    </div>
+    
     {% if mangas %}
     <div class="table-responsive">
-        <table class="table table-dark table-hover mt-2">
+        <table class="table table-dark table-hover">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Score</th>
-                    <th>Your Score</th>
-                    <th>Action</th>
+                    <th style="width: 50%;">Title</th>
+                    <th style="width: 15%;">Rating</th>
+                    <th style="width: 15%;">Your Score</th>
+                    <th style="width: 20%;">Action</th>
                 </tr>
             </thead>
             <tbody>
                 {% for item in mangas %}
                 <tr>
                     <td>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center gap-3">
                             <img src="{{ item.cover_url }}" alt="{{ item.manga.TitleEn }}"
-                                class="img-thumbnail me-2 manga-cover-lg">
+                                class="manga-cover-lg">
                             <a href="{{ url_for('manga.manga_detail', manga_id=item.manga.MangaId) }}"
-                                class="text-decoration-none text-white">{{ item.manga.TitleEn }}</a>
+                                class="text-decoration-none text-white">
+                                {{ item.manga.TitleEn }}
+                            </a>
                         </div>
                     </td>
-                    <td>{{ '{:.1f}'.format(item.stat.AverageRating) if item.stat and item.stat.AverageRating else 'N/A'
-                        }}</td>
-                    <td>{{ item.your_score }}</td>
                     <td>
-                        <button class="btn btn-sm btn-primary add-to-list" data-manga-id="{{ item.manga.MangaId }}">Add
-                            to List</button>
+                        <span class="badge bg-warning text-dark">
+                            {{ '⭐ %.1f'|format(item.stat.AverageRating) if item.stat and item.stat.AverageRating else 'N/A' }}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="badge bg-info">
+                            {{ item.your_score if item.your_score != 'N/A' else 'Not Rated' }}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-primary add-to-list" data-manga-id="{{ item.manga.MangaId }}">
+                            + Add to List
+                        </button>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+
+    <!-- Pagination -->
+    {% if pagination %}
+    <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+            {% if pagination.has_prev %}
+            <li class="page-item">
+                <a class="page-link text-white bg-dark" href="{{ url_for('main.advanced_search', page=pagination.page - 1, **search_params) }}">Previous</a>
+            </li>
+            {% endif %}
+
+            {% set total_pages = (pagination.total + pagination.per_page - 1) // pagination.per_page %}
+            {% for p in range(1, total_pages + 1) %}
+                {% if p == pagination.page %}
+                <li class="page-item active">
+                    <span class="page-link bg-info text-dark">{{ p }}</span>
+                </li>
+                {% elif p == 1 or p == total_pages or (p >= pagination.page - 2 and p <= pagination.page + 2) %}
+                <li class="page-item">
+                    <a class="page-link text-white bg-dark" href="{{ url_for('main.advanced_search', page=p, **search_params) }}">{{ p }}</a>
+                </li>
+                {% elif p == pagination.page - 3 or p == pagination.page + 3 %}
+                <li class="page-item disabled">
+                    <span class="page-link bg-dark">...</span>
+                </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if pagination.has_next %}
+            <li class="page-item">
+                <a class="page-link text-white bg-dark" href="{{ url_for('main.advanced_search', page=pagination.page + 1, **search_params) }}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
     {% else %}
-    <p class="text-white mt-4">No manga found matching your criteria.</p>
+    <div class="alert alert-info mt-4" role="alert">
+        <h5>No manga found</h5>
+        <p class="mb-0">Try adjusting your search filters to find more results.</p>
+    </div>
     {% endif %}
     {% endif %}
 </div>
@@ -124,4 +498,21 @@
 {% block scripts %}
 {{ super() }}
 <script src="{{ url_for('static', filename='js/advanced_search.js') }}"></script>
+<script>
+    // Collapsible sections
+    document.querySelectorAll('.section-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.collapse-icon');
+            content.classList.toggle('collapsed');
+            icon.classList.toggle('collapsed');
+        });
+    });
+
+    // Restore sort_by selection
+    const sortBy = "{{ request.form.get('sort_by', request.args.get('sort_by', 'None')) }}";
+    if (sortBy) {
+        document.getElementById('sort-by').value = sortBy;
+    }
+</script>
 {% endblock %}
