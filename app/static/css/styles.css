@@ -12983,3 +12983,37 @@ h2.text-white fw-bold {
   color: black !important;
   font-weight: 600 !important;
 }
+
+/* Spoiler Styling */
+.spoiler {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép các item xuống dòng nếu không đủ không gian */
+}
+
+.spoiler .spoiler-content {
+    /* Làm cho text bị mờ bằng cách đổ bóng và làm trong suốt */
+    color: transparent;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    transition: text-shadow 0.3s ease;
+    cursor: help; /* Thay đổi con trỏ chuột để báo hiệu có thể tương tác */
+}
+
+/* Hiển thị nội dung khi di chuột qua (tạm thời) */
+.spoiler:hover .spoiler-content:not(.revealed) {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Trạng thái vĩnh viễn sau khi nhấn nút "Show" */
+.spoiler .spoiler-content.revealed {
+    color: inherit; /* Sử dụng màu chữ mặc định */
+    text-shadow: none; /* Bỏ hiệu ứng đổ bóng */
+    cursor: auto;
+}
+
+.spoiler .show-spoiler-btn {
+    margin-left: 8px;
+    /* Giảm kích thước nút để phù hợp với dòng text */
+    padding: .1rem .4rem; 
+    font-size: .75rem;
+}

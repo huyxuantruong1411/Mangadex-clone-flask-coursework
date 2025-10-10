@@ -41,12 +41,12 @@
                     {% endif %}
                 </td>
                 <td>
-                    <a href="{{ url_for('main.profile', user_id=comment.UserId) }}" class="text-info">
-                        {{ comment.Username }}
+                    <a href="{{ url_for('admin_bp.view_user', user_id=comment.UserId) }}" class="text-info">
+                    {{ comment.Username }}
                     </a>
                 </td>
                 <td>
-                    <a href="{{ url_for('main.manga_detail', manga_id=comment.MangaId) }}" class="text-warning">
+                    <a href="{{ url_for('manga.manga_detail', manga_id=comment.MangaId) }}" class="text-warning">
                         {{ comment.TitleEn }}
                     </a>
                 </td>
