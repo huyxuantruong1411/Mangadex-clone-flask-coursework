@@ -1,0 +1,55 @@
+.member-card {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-img-top-wrapper {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+.member-card .card-img-top {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.member-card .card-body {
+    padding: 1.5rem;
+}
+
+.member-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.member-card .role {
+    font-size: 1.1rem;
+    color: #00aaff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.social-links .social-icon {
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.social-links .social-icon:hover {
+    color: #fff;
+}

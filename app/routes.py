@@ -1218,7 +1218,9 @@ def update_profile():
     flash("Profile updated successfully!", "success")
     return redirect(url_for("main.profile", user_id=current_user.UserId))
 
-
+@main.route('/about-us')
+def about_us():
+    return render_template('about_us.html')
 
 @main.route("/follow/<uuid:user_id>")
 def follow(user_id):
