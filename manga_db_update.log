@@ -11381,3 +11381,544 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-10-31 08:16:45,133 - INFO - 127.0.0.1 - - [31/Oct/2025 08:16:45] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
 2025-10-31 08:16:45,344 - INFO - 127.0.0.1 - - [31/Oct/2025 08:16:45] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
 2025-10-31 08:16:45,347 - INFO - 127.0.0.1 - - [31/Oct/2025 08:16:45] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-10-31 09:46:23,771 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 09:46:24,008 - INFO -  * Restarting with stat
+2025-10-31 09:46:26,239 - WARNING -  * Debugger is active!
+2025-10-31 09:46:26,245 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 09:46:28,404 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 09:46:28,524 - INFO -  * Restarting with stat
+2025-10-31 09:46:29,633 - WARNING -  * Debugger is active!
+2025-10-31 09:46:29,637 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 09:46:30,701 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 09:46:30,862 - INFO -  * Restarting with stat
+2025-10-31 09:46:32,111 - WARNING -  * Debugger is active!
+2025-10-31 09:46:32,115 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 09:46:46,443 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 09:46:46,580 - INFO -  * Restarting with stat
+2025-10-31 09:46:47,743 - WARNING -  * Debugger is active!
+2025-10-31 09:46:47,746 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 09:46:50,859 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 09:46:51,005 - INFO -  * Restarting with stat
+2025-10-31 09:46:52,203 - WARNING -  * Debugger is active!
+2025-10-31 09:46:52,207 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 09:47:36,995 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:36] "GET /home HTTP/1.1" 200 -
+2025-10-31 09:47:37,206 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:37,219 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:37] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:37,220 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:37,221 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:37,228 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-31 09:47:37,588 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:37] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-31 09:47:38,015 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:38] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-31 09:47:38,018 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:38] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-31 09:47:38,020 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:38] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-10-31 09:47:38,496 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:38] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-10-31 09:47:39,814 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:39] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-31 09:47:39,827 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:39] "GET /auth/login HTTP/1.1" 200 -
+2025-10-31 09:47:39,890 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:39] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:39,891 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:39] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-10-31 09:47:39,911 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:39] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-10-31 09:47:44,711 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:44] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-31 09:47:45,728 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:45] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-10-31 09:47:45,789 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:45,805 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:45] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:45,808 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:45] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:47,856 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:47] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 09:47:47,933 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:47] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-31 09:47:47,974 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:47] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-31 09:47:48,029 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:48] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=4mEFpfo6C7NOZZT55YSI HTTP/1.1" 200 -
+2025-10-31 09:47:48,052 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:48] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-31 09:47:52,611 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:52] "GET /manga HTTP/1.1" 200 -
+2025-10-31 09:47:52,673 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:52,682 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:52] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:52,686 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:52] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 09:47:52,687 - INFO - 127.0.0.1 - - [31/Oct/2025 09:47:52] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-10-31 09:48:36,437 - INFO - 127.0.0.1 - - [31/Oct/2025 09:48:36] "GET /manga HTTP/1.1" 200 -
+2025-10-31 09:48:36,503 - INFO - 127.0.0.1 - - [31/Oct/2025 09:48:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 09:48:36,505 - INFO - 127.0.0.1 - - [31/Oct/2025 09:48:36] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 09:48:36,510 - INFO - 127.0.0.1 - - [31/Oct/2025 09:48:36] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 09:48:36,517 - INFO - 127.0.0.1 - - [31/Oct/2025 09:48:36] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-10-31 09:48:37,867 - INFO - 127.0.0.1 - - [31/Oct/2025 09:48:37] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 09:49:09,479 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 09:49:09,737 - INFO -  * Restarting with stat
+2025-10-31 09:57:06,122 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 09:57:06,124 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 09:57:06,126 - INFO -  * Restarting with stat
+2025-10-31 09:57:07,095 - WARNING -  * Debugger is active!
+2025-10-31 09:57:07,098 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 09:57:09,380 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:09] "GET /manga HTTP/1.1" 200 -
+2025-10-31 09:57:09,593 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 09:57:09,594 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:09] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-10-31 09:57:09,597 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:09] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 09:57:09,598 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:09] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 09:57:11,989 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:11] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 09:57:12,045 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:12] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 09:57:12,048 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:12] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 09:57:12,070 - INFO - 127.0.0.1 - - [31/Oct/2025 09:57:12] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=JT9YNbXMzv0tUMsxOkUG HTTP/1.1" 200 -
+2025-10-31 10:01:13,362 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:01:13,552 - INFO -  * Restarting with stat
+2025-10-31 10:01:14,812 - WARNING -  * Debugger is active!
+2025-10-31 10:01:14,816 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:01:21,242 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:01:21,242 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:01:21,245 - INFO -  * Restarting with stat
+2025-10-31 10:01:22,430 - WARNING -  * Debugger is active!
+2025-10-31 10:01:22,434 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:01:24,161 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:24] "GET /manga HTTP/1.1" 200 -
+2025-10-31 10:01:24,339 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:01:24,341 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:24] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:01:24,343 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:24] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-10-31 10:01:24,345 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:24] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:01:26,547 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:26] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:01:26,607 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:01:26,610 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:26] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:01:26,616 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:26] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:01:26,617 - INFO - 127.0.0.1 - - [31/Oct/2025 10:01:26] "GET /static/js/admin_manga_management.js HTTP/1.1" 200 -
+2025-10-31 10:02:24,091 - INFO - 127.0.0.1 - - [31/Oct/2025 10:02:24] "POST /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:02:24,164 - INFO - 127.0.0.1 - - [31/Oct/2025 10:02:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:02:24,171 - INFO - 127.0.0.1 - - [31/Oct/2025 10:02:24] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:02:24,178 - INFO - 127.0.0.1 - - [31/Oct/2025 10:02:24] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:02:24,179 - INFO - 127.0.0.1 - - [31/Oct/2025 10:02:24] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:09:55,807 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-10-31 10:09:55,996 - INFO -  * Restarting with stat
+2025-10-31 10:09:57,186 - WARNING -  * Debugger is active!
+2025-10-31 10:09:57,190 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:10:01,312 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\mangadex_api.py', reloading
+2025-10-31 10:10:01,482 - INFO -  * Restarting with stat
+2025-10-31 10:14:12,295 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:14:12,295 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:14:12,299 - INFO -  * Restarting with stat
+2025-10-31 10:14:13,442 - WARNING -  * Debugger is active!
+2025-10-31 10:14:13,446 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:14:15,726 - INFO - 127.0.0.1 - - [31/Oct/2025 10:14:15] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:14:16,728 - INFO - 127.0.0.1 - - [31/Oct/2025 10:14:16] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 10:14:16,888 - INFO - 127.0.0.1 - - [31/Oct/2025 10:14:16] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 10:14:16,889 - INFO - 127.0.0.1 - - [31/Oct/2025 10:14:16] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 10:14:16,914 - INFO - 127.0.0.1 - - [31/Oct/2025 10:14:16] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=ZOwIZvfwmHHv8N9ZORz0 HTTP/1.1" 200 -
+2025-10-31 10:14:16,947 - INFO - 127.0.0.1 - - [31/Oct/2025 10:14:16] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-31 10:14:57,807 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:14:58,006 - INFO -  * Restarting with stat
+2025-10-31 10:15:04,556 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:15:04,557 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:15:04,559 - INFO -  * Restarting with stat
+2025-10-31 10:15:05,638 - WARNING -  * Debugger is active!
+2025-10-31 10:15:05,641 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:15:19,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:15:19,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:15:19,193 - INFO -  * Restarting with stat
+2025-10-31 10:15:20,199 - WARNING -  * Debugger is active!
+2025-10-31 10:15:20,202 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:15:24,232 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:24] "GET /manga HTTP/1.1" 200 -
+2025-10-31 10:15:27,894 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:27] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:15:28,189 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:28] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:15:28,190 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:28] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:15:28,192 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:28] "GET /static/js/admin_manga_management.js HTTP/1.1" 200 -
+2025-10-31 10:15:28,199 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:15:34,972 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:34] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:15:36,017 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:36] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:15:36,078 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:36] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:15:36,080 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:15:36,081 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:36] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:15:36,088 - INFO - 127.0.0.1 - - [31/Oct/2025 10:15:36] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:16:17,782 - INFO - 127.0.0.1 - - [31/Oct/2025 10:16:17] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:16:18,004 - INFO - 127.0.0.1 - - [31/Oct/2025 10:16:18] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 10:16:18,070 - INFO - 127.0.0.1 - - [31/Oct/2025 10:16:18] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 10:16:18,072 - INFO - 127.0.0.1 - - [31/Oct/2025 10:16:18] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 10:16:18,096 - INFO - 127.0.0.1 - - [31/Oct/2025 10:16:18] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=hNDidqbUmPYIxwD5SmN4 HTTP/1.1" 200 -
+2025-10-31 10:26:34,035 - INFO - 127.0.0.1 - - [31/Oct/2025 10:26:34] "GET /manga HTTP/1.1" 200 -
+2025-10-31 10:27:27,604 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:27:27,832 - INFO -  * Restarting with stat
+2025-10-31 10:27:29,411 - WARNING -  * Debugger is active!
+2025-10-31 10:27:29,414 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:27:47,835 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:27:47,982 - INFO -  * Restarting with stat
+2025-10-31 10:27:49,177 - WARNING -  * Debugger is active!
+2025-10-31 10:27:49,179 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:28:32,600 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:28:32,772 - INFO -  * Restarting with stat
+2025-10-31 10:28:34,036 - WARNING -  * Debugger is active!
+2025-10-31 10:28:34,040 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:29:05,436 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:29:05,437 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:29:05,441 - INFO -  * Restarting with stat
+2025-10-31 10:29:06,661 - WARNING -  * Debugger is active!
+2025-10-31 10:29:06,664 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:29:07,127 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:07] "GET /manga HTTP/1.1" 200 -
+2025-10-31 10:29:07,331 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:29:07,347 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:07] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:29:07,350 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:07] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-10-31 10:29:07,353 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:07] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:29:08,987 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:08] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 10:29:09,044 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:09] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 10:29:09,047 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:09] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 10:29:09,071 - INFO - 127.0.0.1 - - [31/Oct/2025 10:29:09] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=1lwdPoWoZSzmwIG6H8FT HTTP/1.1" 200 -
+2025-10-31 10:32:26,072 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:32:26,263 - INFO -  * Restarting with stat
+2025-10-31 10:32:27,601 - WARNING -  * Debugger is active!
+2025-10-31 10:32:27,605 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:32:29,708 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:32:29,930 - INFO -  * Restarting with stat
+2025-10-31 10:32:31,276 - WARNING -  * Debugger is active!
+2025-10-31 10:32:31,279 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:32:52,163 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:32:52,164 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:32:52,168 - INFO -  * Restarting with stat
+2025-10-31 10:32:53,280 - WARNING -  * Debugger is active!
+2025-10-31 10:32:53,285 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:32:55,163 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:55] "GET /manga HTTP/1.1" 200 -
+2025-10-31 10:32:55,346 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:55] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-10-31 10:32:55,347 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:55] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:32:55,351 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:32:55,351 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:55] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:32:56,874 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:56] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:32:56,933 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:32:56,940 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:56] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:32:56,942 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:56] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:32:57,010 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:57] "GET /static/js/admin_manga_management.js HTTP/1.1" 200 -
+2025-10-31 10:32:58,429 - INFO - 127.0.0.1 - - [31/Oct/2025 10:32:58] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:33:44,108 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:44] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:33:44,302 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:44] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:33:44,369 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:33:44,371 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:33:44,374 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:33:44,379 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:44] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:33:45,701 - INFO - 127.0.0.1 - - [31/Oct/2025 10:33:45] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:40:06,464 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:40:06,768 - INFO -  * Restarting with stat
+2025-10-31 10:40:08,231 - WARNING -  * Debugger is active!
+2025-10-31 10:40:08,234 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:41:45,836 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:41:45,837 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:41:45,838 - INFO -  * Restarting with stat
+2025-10-31 10:41:47,054 - WARNING -  * Debugger is active!
+2025-10-31 10:41:47,057 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:41:47,817 - INFO - 127.0.0.1 - - [31/Oct/2025 10:41:47] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:41:48,033 - INFO - 127.0.0.1 - - [31/Oct/2025 10:41:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:41:48,047 - INFO - 127.0.0.1 - - [31/Oct/2025 10:41:48] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:41:48,051 - INFO - 127.0.0.1 - - [31/Oct/2025 10:41:48] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:41:48,103 - INFO - 127.0.0.1 - - [31/Oct/2025 10:41:48] "GET /static/js/admin_manga_management.js HTTP/1.1" 200 -
+2025-10-31 10:41:49,333 - INFO - 127.0.0.1 - - [31/Oct/2025 10:41:49] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:42:11,287 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:11] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:42:12,612 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:12] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:42:12,668 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:12,672 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:12] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:12,675 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:12] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:12,678 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:12] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:42:13,899 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:13] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:42:40,537 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:40] "GET /admin/manga_management?page=2 HTTP/1.1" 200 -
+2025-10-31 10:42:40,594 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:40,606 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:40] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:40,608 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:40] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:40,610 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:40] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:42:41,884 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:41] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:42:43,442 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:43] "GET /admin/manga_management?page=4 HTTP/1.1" 200 -
+2025-10-31 10:42:43,501 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:43,512 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:43] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:43,529 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:43] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:43,536 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:43] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:42:44,919 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:44] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:42:48,308 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:48] "GET /admin/manga_management?page=1846 HTTP/1.1" 200 -
+2025-10-31 10:42:48,366 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:48,369 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:48] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:48,377 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:48] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:48,380 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:48] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:42:49,780 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:49] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:42:52,130 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:52] "GET /admin/manga_management?page=1 HTTP/1.1" 200 -
+2025-10-31 10:42:52,219 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:52,232 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:52] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:52,239 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:52] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:42:52,240 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:52] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:42:53,693 - INFO - 127.0.0.1 - - [31/Oct/2025 10:42:53] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:43:10,183 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:10] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:43:10,360 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:10] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:43:10,420 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:10,424 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:10] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:10,428 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:10] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:10,430 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:10] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:43:11,804 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:11] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:43:17,884 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:17] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:43:19,713 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:19] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:43:19,769 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:19] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:19,769 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:19] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:19,773 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:19,774 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:19] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:43:21,704 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:21] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:43:24,925 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:24] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:43:25,681 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:25] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:43:25,739 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:25,743 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:25] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:25,749 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:25] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:25,750 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:25] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:43:27,273 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:27] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:43:29,099 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:29] "GET /admin/manga_management?page=3474 HTTP/1.1" 200 -
+2025-10-31 10:43:29,167 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:29,175 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:29] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:29,180 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:29] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:43:29,185 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:29] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:43:30,614 - INFO - 127.0.0.1 - - [31/Oct/2025 10:43:30] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:45:07,717 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:45:07,942 - INFO -  * Restarting with stat
+2025-10-31 10:45:09,534 - WARNING -  * Debugger is active!
+2025-10-31 10:45:09,540 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:45:21,874 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:45:22,033 - INFO -  * Restarting with stat
+2025-10-31 10:45:23,064 - WARNING -  * Debugger is active!
+2025-10-31 10:45:23,068 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:46:11,240 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:46:11,240 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:46:11,243 - INFO -  * Restarting with stat
+2025-10-31 10:46:12,427 - WARNING -  * Debugger is active!
+2025-10-31 10:46:12,431 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:46:13,999 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:13] "GET /admin/manga_management?page=3474 HTTP/1.1" 200 -
+2025-10-31 10:46:14,205 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:46:14,213 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:46:14,214 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:14] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:46:14,215 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:46:15,532 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:15] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:46:20,360 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:20] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:46:20,556 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:20] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 10:46:20,615 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:20] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 10:46:20,618 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:20] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 10:46:20,646 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:20] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=LNvmhCzCBCD97ZA9p699 HTTP/1.1" 200 -
+2025-10-31 10:46:20,676 - INFO - 127.0.0.1 - - [31/Oct/2025 10:46:20] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-31 10:49:01,892 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:49:02,119 - INFO -  * Restarting with stat
+2025-10-31 10:49:03,553 - WARNING -  * Debugger is active!
+2025-10-31 10:49:03,558 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:49:05,641 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:49:05,865 - INFO -  * Restarting with stat
+2025-10-31 10:49:15,372 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:49:15,372 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:49:15,374 - INFO -  * Restarting with stat
+2025-10-31 10:49:16,519 - WARNING -  * Debugger is active!
+2025-10-31 10:49:16,522 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:49:17,063 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:17] "[35m[1mGET /admin/manga_management?page=3474 HTTP/1.1[0m" 500 -
+2025-10-31 10:49:17,235 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:17] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=kqFDsbxBJDRjFDKjWgDH HTTP/1.1" 200 -
+2025-10-31 10:49:19,347 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:19] "[35m[1mGET /admin/manga_management?page=1 HTTP/1.1[0m" 500 -
+2025-10-31 10:49:20,033 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:20] "[35m[1mGET /admin/manga_management?page=1846 HTTP/1.1[0m" 500 -
+2025-10-31 10:49:23,574 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:23] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+2025-10-31 10:49:35,778 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:49:35,779 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:49:35,782 - INFO -  * Restarting with stat
+2025-10-31 10:49:36,868 - WARNING -  * Debugger is active!
+2025-10-31 10:49:36,871 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:49:39,202 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "GET / HTTP/1.1" 200 -
+2025-10-31 10:49:39,403 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:39,416 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:39,419 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:39,421 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:39,431 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-31 10:49:39,833 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:39] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-10-31 10:49:40,431 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:40] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-31 10:49:40,434 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:40] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-31 10:49:40,436 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:40] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-10-31 10:49:44,318 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:44] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-31 10:49:44,333 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:44] "GET /auth/login HTTP/1.1" 200 -
+2025-10-31 10:49:44,401 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:44] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:44,402 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:44] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-10-31 10:49:44,414 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:44] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-10-31 10:49:44,444 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:44] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-10-31 10:49:48,621 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:48] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-31 10:49:49,353 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:49] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-10-31 10:49:49,427 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:49,430 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:49] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:49,432 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:49] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:50,788 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:50] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 10:49:50,845 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:50] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 10:49:50,848 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:50] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 10:49:50,898 - INFO - 127.0.0.1 - - [31/Oct/2025 10:49:50] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=mFtj0Fhi3lRBG4y9xqvR HTTP/1.1" 200 -
+2025-10-31 10:54:00,285 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:54:00,587 - INFO -  * Restarting with stat
+2025-10-31 10:54:02,714 - WARNING -  * Debugger is active!
+2025-10-31 10:54:02,718 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:54:03,829 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 10:54:04,031 - INFO -  * Restarting with stat
+2025-10-31 10:54:06,232 - WARNING -  * Debugger is active!
+2025-10-31 10:54:06,236 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:54:10,347 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:54:10,347 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:54:10,350 - INFO -  * Restarting with stat
+2025-10-31 10:54:11,990 - WARNING -  * Debugger is active!
+2025-10-31 10:54:11,993 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:54:14,378 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:14] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:54:14,650 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:14,652 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:14,652 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:14] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:54:14,654 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:16,959 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:16] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:54:27,969 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:27] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:54:28,428 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:28] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:54:28,484 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:28,488 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:28] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:28,491 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:28] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:28,496 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:28] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:54:30,389 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:30] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:54:32,220 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:32] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 10:54:34,812 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:34] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 10:54:35,019 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:35,029 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:35] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:35,057 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:35] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 10:54:35,062 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:35] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 10:54:37,144 - INFO - 127.0.0.1 - - [31/Oct/2025 10:54:37] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 10:59:49,795 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 10:59:49,795 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 10:59:49,797 - INFO -  * Restarting with stat
+2025-10-31 10:59:51,484 - WARNING -  * Debugger is active!
+2025-10-31 10:59:51,490 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 10:59:54,204 - INFO - 127.0.0.1 - - [31/Oct/2025 10:59:54] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 10:59:54,450 - INFO - 127.0.0.1 - - [31/Oct/2025 10:59:54] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 10:59:54,451 - INFO - 127.0.0.1 - - [31/Oct/2025 10:59:54] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 10:59:54,474 - INFO - 127.0.0.1 - - [31/Oct/2025 10:59:54] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=gg6k516SJD15JHJMf0Y6 HTTP/1.1" 200 -
+2025-10-31 10:59:54,513 - INFO - 127.0.0.1 - - [31/Oct/2025 10:59:54] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:06,624 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 11:00:06,625 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 11:00:06,630 - INFO -  * Restarting with stat
+2025-10-31 11:00:08,708 - WARNING -  * Debugger is active!
+2025-10-31 11:00:08,716 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 11:00:12,060 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:12] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 11:00:12,333 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:12] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:12,334 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:12,336 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:12] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:12,341 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:12] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:14,626 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:14] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:00:24,984 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:24] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 11:00:34,487 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:34] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 11:00:34,709 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:34] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:34,710 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:34,716 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:34] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:34,724 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:34] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:37,107 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:37] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:00:46,073 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:46] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 11:00:46,635 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:46] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 11:00:46,691 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:46,695 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:46] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:46,697 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:46] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:46,703 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:46] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:49,469 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:49] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:00:56,399 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "GET /manga/d8a959f7-648e-4c8d-8f23-f1f3f8e129f3 HTTP/1.1" 200 -
+2025-10-31 11:00:56,477 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,485 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,490 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,493 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,493 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,501 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,508 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,514 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,523 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,525 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,529 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,534 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,542 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,544 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,552 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,561 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,565 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,571 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/fa.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,578 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,584 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,586 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/zh.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,588 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/ne.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,597 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,607 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/th.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,612 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/he.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,619 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/kk.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,621 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/de.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,625 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/pt-br.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,631 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/uk.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,634 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "[36mGET /static/flags/es.png HTTP/1.1[0m" 304 -
+2025-10-31 11:00:56,782 - INFO - 127.0.0.1 - - [31/Oct/2025 11:00:56] "GET /reader/d8a959f7-648e-4c8d-8f23-f1f3f8e129f3/chapters?sort=asc HTTP/1.1" 200 -
+2025-10-31 11:04:21,049 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 11:04:21,049 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 11:04:21,051 - INFO -  * Restarting with stat
+2025-10-31 11:04:22,780 - WARNING -  * Debugger is active!
+2025-10-31 11:04:22,786 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 11:04:24,092 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:24] "[35m[1mGET /admin/manga_management HTTP/1.1[0m" 500 -
+2025-10-31 11:04:24,328 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:24] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 11:04:24,329 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:24] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 11:04:24,363 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:24] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=CngXjKog1NOdnvkeMaWt HTTP/1.1" 200 -
+2025-10-31 11:04:24,405 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:24] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-31 11:04:44,415 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 11:04:44,416 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 11:04:44,418 - INFO -  * Restarting with stat
+2025-10-31 11:04:46,486 - WARNING -  * Debugger is active!
+2025-10-31 11:04:46,490 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 11:04:49,510 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:49] "GET /admin/manga_management HTTP/1.1" 200 -
+2025-10-31 11:04:49,718 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:04:49,722 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:49] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:04:49,727 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:49] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:04:49,777 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:49] "GET /static/js/admin_manga_management.js HTTP/1.1" 200 -
+2025-10-31 11:04:52,166 - INFO - 127.0.0.1 - - [31/Oct/2025 11:04:52] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:05:02,061 - INFO - 127.0.0.1 - - [31/Oct/2025 11:05:02] "GET /admin/manga_management?page=60 HTTP/1.1" 200 -
+2025-10-31 11:05:02,120 - INFO - 127.0.0.1 - - [31/Oct/2025 11:05:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:05:02,126 - INFO - 127.0.0.1 - - [31/Oct/2025 11:05:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:05:02,129 - INFO - 127.0.0.1 - - [31/Oct/2025 11:05:02] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:05:02,131 - INFO - 127.0.0.1 - - [31/Oct/2025 11:05:02] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:05:04,653 - INFO - 127.0.0.1 - - [31/Oct/2025 11:05:04] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:09:18,963 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\admin_bp.py', reloading
+2025-10-31 11:09:19,263 - INFO -  * Restarting with stat
+2025-10-31 11:14:57,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 11:14:57,696 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 11:14:57,699 - INFO -  * Restarting with stat
+2025-10-31 11:14:59,543 - WARNING -  * Debugger is active!
+2025-10-31 11:14:59,554 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 11:15:01,099 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:01] "[35m[1mGET /admin/manga_management?page=60 HTTP/1.1[0m" 500 -
+2025-10-31 11:15:01,261 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:01] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:01,263 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:01] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-31 11:15:01,285 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:01] "GET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png&s=YLBXaHusSl2HWj84RBa2 HTTP/1.1" 200 -
+2025-10-31 11:15:01,304 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:01] "[36mGET /admin/manga_management?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-31 11:15:21,425 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-31 11:15:21,425 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 11:15:21,427 - INFO -  * Restarting with stat
+2025-10-31 11:15:23,365 - WARNING -  * Debugger is active!
+2025-10-31 11:15:23,374 - INFO -  * Debugger PIN: 128-007-526
+2025-10-31 11:15:24,454 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:24] "GET /admin/manga_management?page=60 HTTP/1.1" 200 -
+2025-10-31 11:15:24,728 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:24,731 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:24] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:24,738 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:24] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:24,814 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:24] "GET /static/js/admin_manga_management.js HTTP/1.1" 200 -
+2025-10-31 11:15:27,266 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:27] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:15:29,825 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:29] "GET /admin/manga_management?page=60 HTTP/1.1" 200 -
+2025-10-31 11:15:29,900 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:29,907 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:29] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:29,909 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:29] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:29,912 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:29] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:15:32,296 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:32] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:15:39,513 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:39] "GET /admin/manga_management/all_ids HTTP/1.1" 200 -
+2025-10-31 11:15:48,569 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:48] "GET /admin/manga_management?page=59 HTTP/1.1" 200 -
+2025-10-31 11:15:48,642 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:48] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:48,644 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:48,647 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:48] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:48,653 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:48] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:15:50,824 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:50] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:15:51,918 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:51] "GET /admin/manga_management/all_ids HTTP/1.1" 200 -
+2025-10-31 11:15:59,430 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:59] "[32mPOST /admin/manga_management HTTP/1.1[0m" 302 -
+2025-10-31 11:15:59,863 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:59] "GET /admin/manga_management?page=1 HTTP/1.1" 200 -
+2025-10-31 11:15:59,926 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:59,930 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:59] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:59,933 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:59] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:15:59,935 - INFO - 127.0.0.1 - - [31/Oct/2025 11:15:59] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:16:01,899 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:01] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:16:06,709 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:06] "GET /admin/manga_management?page=20 HTTP/1.1" 200 -
+2025-10-31 11:16:06,806 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-31 11:16:06,810 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:06] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-10-31 11:16:06,815 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:06] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-10-31 11:16:06,816 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:06] "[36mGET /static/js/admin_manga_management.js HTTP/1.1[0m" 304 -
+2025-10-31 11:16:08,979 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:08] "GET /admin/manga/options HTTP/1.1" 200 -
+2025-10-31 11:16:30,510 - INFO - 127.0.0.1 - - [31/Oct/2025 11:16:30] "GET /admin/manga_management/all_ids HTTP/1.1" 200 -

@@ -1,9 +1,10 @@
-from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
+from flask import Blueprint, render_template, request, flash, jsonify, redirect, session, url_for
 from flask_login import current_user, login_required
+from sqlalchemy import desc, func, or_
 from app import db
 from app.mangadex_api import connect_db, search_manga, fetch_statistics, fetch_chapters, fetch_covers, map_manga_to_db, request_api
 from app.models import (
-    Chapter, Cover, User, Comment, Report, Manga, ReadingHistory,
+    Chapter, Cover, MangaAltTitle, MangaStatistics, User, Comment, Report, Manga, ReadingHistory,
     MangaTag, Tag
 )
 from functools import wraps
@@ -443,10 +444,128 @@ def manga_action():
         return jsonify({'error': 'Lỗi không xác định: ' + str(e)}), 500
 
 
+from .mangadex_api import update_manga_from_mangadex_by_id
 # ==========================
-# Quản lý Creators
+# Quản lý Manga
 # ==========================
-@admin_bp.route('/admin/creators')
+
+def load_admin_options():
+    """Tải các tùy chọn cho bộ lọc từ CSDL."""
+    return {
+        'tags': [(tag.TagId, tag.GroupName, tag.NameEn) for tag in db.session.query(Tag.TagId, Tag.GroupName, Tag.NameEn).order_by(Tag.GroupName, Tag.NameEn).all()],
+        'ratings': [r[0] for r in db.session.query(Manga.ContentRating).distinct().all() if r[0]],
+        'demographics': [d[0] for d in db.session.query(Manga.PublicationDemographic).distinct().all() if d[0]],
+        'original_langs': [l[0] for l in db.session.query(Manga.OriginalLanguage).distinct().all() if l[0]],
+        'translated_langs': [l[0] for l in db.session.query(Chapter.TranslatedLang).distinct().all() if l[0]],
+        'statuses': [s[0] for s in db.session.query(Manga.Status).distinct().all() if s[0]]
+    }
+
+@admin_bp.route('/admin/manga/options')
 @admin_required
-def admin_creators():
-    return render_template('admin_creators.html')
+def admin_manga_options():
+    """Endpoint cung cấp dữ liệu JSON cho bộ lọc phía client."""
+    return jsonify(load_admin_options())
+
+
+def build_manga_query(filters):
+    """Hàm trợ giúp: Xây dựng câu truy vấn dựa trên các bộ lọc được cung cấp."""
+    # Chỉ chọn ra MangaId để tối ưu hóa truy vấn con
+    query = db.session.query(Manga.MangaId)
+
+    if filters:
+        search_query = filters.get('search_query', [''])[0]
+        if search_query:
+            query = query.filter(Manga.TitleEn.ilike(f'%{search_query}%'))
+
+        include_tags = filters.get('include_tags[]', [])
+        if include_tags:
+            query = query.join(Manga.tags).filter(Tag.TagId.in_(include_tags))
+
+        exclude_tags = filters.get('exclude_tags[]', [])
+        if exclude_tags:
+            exclude_subquery = db.session.query(MangaTag.MangaId).filter(MangaTag.TagId.in_(exclude_tags))
+            query = query.filter(Manga.MangaId.notin_(exclude_subquery))
+        
+        statuses = filters.get('status', [])
+        if statuses: query = query.filter(Manga.Status.in_(statuses))
+        
+        demographics = filters.get('demographic', [])
+        if demographics: query = query.filter(Manga.PublicationDemographic.in_(demographics))
+
+        year_from = filters.get('year_from', [''])[0]
+        if year_from.isdigit(): query = query.filter(Manga.Year >= int(year_from))
+
+        year_to = filters.get('year_to', [''])[0]
+        if year_to.isdigit(): query = query.filter(Manga.Year <= int(year_to))
+        
+    return query.distinct()
+
+@admin_bp.route('/admin/manga_management', methods=['GET', 'POST'])
+@admin_required
+def admin_manga_management():
+    if request.method == 'POST':
+        session['manga_filters'] = request.form.to_dict(flat=False)
+        return redirect(url_for('admin_bp.admin_manga_management', page=1))
+
+    search_params = session.get('manga_filters', {})
+    page = request.args.get('page', 1, type=int)
+    per_page = int(search_params.get('per_page', ['25'])[0])
+    
+    # Xây dựng truy vấn con để lấy ID
+    subquery = build_manga_query(search_params).subquery()
+    
+    # Xây dựng truy vấn chính để lấy đối tượng Manga
+    query = Manga.query.join(subquery, Manga.MangaId == subquery.c.MangaId).outerjoin(MangaStatistics)
+
+    # Sắp xếp
+    sort_by = search_params.get('sort_by', ['Title ASC'])[0]
+    if sort_by == 'Title DESC': query = query.order_by(Manga.TitleEn.desc())
+    elif sort_by == 'Year ASC': query = query.order_by(Manga.Year.asc())
+    elif sort_by == 'Year DESC': query = query.order_by(Manga.Year.desc())
+    elif sort_by == 'Follows DESC': query = query.order_by(desc(func.coalesce(MangaStatistics.Follows, 0)))
+    else: query = query.order_by(Manga.TitleEn.asc())
+        
+    mangas = query.paginate(page=page, per_page=per_page, error_out=False)
+    
+    return render_template('admin_manga_management.html', 
+                           mangas=mangas,
+                           form_data=search_params)
+
+@admin_bp.route('/admin/manga_management/all_ids', methods=['GET'])
+@admin_required
+def get_all_filtered_manga_ids():
+    """Endpoint trả về tất cả ID của manga đã được lọc."""
+    search_params = session.get('manga_filters', {})
+    # Dùng lại hàm build_manga_query để lấy query chỉ chứa ID
+    id_query = build_manga_query(search_params)
+    all_manga_ids = [item[0] for item in id_query.all()]
+    return jsonify(ids=all_manga_ids)
+
+@admin_bp.route('/admin/manga_management/clear_filters', methods=['POST'])
+@admin_required
+def clear_manga_filters():
+    session.pop('manga_filters', None)
+    return jsonify({'success': True})
+
+@admin_bp.route('/admin/manga/bulk-update', methods=['POST'])
+@admin_required
+def bulk_update_manga():
+    data = request.get_json()
+    manga_ids = data.get('manga_ids')
+    if not manga_ids:
+        return jsonify({'success': False, 'message': 'No manga selected'}), 400
+
+    updated_count = 0
+    failed_ids = []
+    for manga_id in manga_ids:
+        if not update_manga_from_mangadex_by_id(manga_id):
+            failed_ids.append(manga_id)
+        else:
+            updated_count += 1
+
+    message = f'Successfully updated {updated_count} of {len(manga_ids)} manga.'
+    if failed_ids:
+        flash(f'Failed to update manga IDs: {", ".join(failed_ids)}.', 'danger')
+    
+    flash(message, 'success')
+    return jsonify({'success': True, 'message': message})

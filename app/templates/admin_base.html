@@ -33,11 +33,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == '/admin/manga' %}active{% endif %}"
-                            href="{{ url_for('admin_bp.manga') }}">Manga</a>
+                            href="{{ url_for('admin_bp.manga') }}">Mangadex</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == '/admin/creators' %}active{% endif %}"
-                            href="{{ url_for('admin_bp.admin_creators') }}">Creators</a>
+                            href="{{ url_for('admin_bp.admin_manga_management') }}">Manga</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ url_for('auth.logout') }}">Log Out</a>

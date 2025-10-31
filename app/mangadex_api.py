@@ -867,3 +867,50 @@ def map_manga_to_db(manga, stats_dict, conn):
     logger.debug(f"Đã upsert {len(covers_db)} cover, {len(creators_db)} creator.")
 
     logger.info(f"Hoàn thành mapping và upsert manga ID: {manga_id_upper}")
+
+
+def update_manga_from_mangadex_by_id(manga_id: str) -> bool:
+    """
+    Lấy dữ liệu đầy đủ cho một manga từ MangaDex bằng ID và cập nhật vào CSDL.
+    Sử dụng các hàm đã có trong file này.
+
+    Args:
+        manga_id: ID của manga cần cập nhật.
+
+    Returns:
+        True nếu cập nhật thành công, False nếu có lỗi.
+    """
+    logger.info(f"Bắt đầu quy trình cập nhật cho Manga ID: {manga_id}")
+    conn = None
+    try:
+        conn = connect_db()
+        if not conn:
+            logger.error(f"Không thể kết nối CSDL để cập nhật Manga ID: {manga_id}")
+            return False
+
+        params = { "includes[]": ["cover_art", "author", "artist"] }
+        endpoint = f"/manga/{manga_id}"
+        
+        response_json = request_api(endpoint, params=params)
+        manga_data = response_json.get("data")
+        
+        # SỬA LỖI: Kiểm tra xem manga_data có tồn tại không
+        if not manga_data:
+            logger.error(f"Không tìm thấy dữ liệu trên MangaDex cho Manga ID: {manga_id}. Phản hồi API: {response_json}")
+            return False
+
+        stats_dict = fetch_statistics([manga_id])
+        map_manga_to_db(manga_data, stats_dict, conn)
+
+        logger.info(f"Cập nhật thành công cho Manga ID: {manga_id}")
+        return True
+
+    except Exception as e:
+        logger.error(f"Đã xảy ra lỗi nghiêm trọng trong quá trình cập nhật Manga ID {manga_id}: {e}", exc_info=True)
+        if conn:
+            conn.rollback()
+        return False
+    finally:
+        if conn:
+            conn.close()
+            logger.info(f"Đã đóng kết nối CSDL cho Manga ID: {manga_id}")
