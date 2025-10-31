@@ -1,0 +1,187 @@
+/* static/css/banner.css */
+
+.banner-container {
+    width: 100%;
+    aspect-ratio: 16 / 4.5;
+    min-height: 280px;
+    max-height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    z-index: 1;
+}
+
+.banner-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.banner-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) brightness(0.35);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+.banner-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+    gap: 3rem;
+    color: #fff;
+}
+
+.banner-cover-art {
+    height: 90%;
+    max-height: 320px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.banner-info {
+    text-align: left;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Khoảng cách giữa các item */
+}
+
+.banner-info h2 a {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+.banner-info h2 a:hover {
+    color: #ddd;
+}
+
+.creators {
+    font-size: 1rem;
+    color: #d1d1d1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.creators strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+.meta-tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0.25rem;
+}
+
+/* XÓA CSS CHO NÚT READ NOW */
+/* .banner-actions, .btn-read-now ... */
+
+/* THÊM CSS CHO MŨI TÊN */
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 50px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    opacity: 0; /* Ẩn ban đầu */
+    transition: opacity 0.3s ease, background-color 0.2s ease;
+}
+
+.banner-container:hover .banner-arrow {
+    opacity: 1; /* Hiện ra khi hover vào banner */
+}
+
+.banner-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner-arrow.left {
+    left: 15px;
+}
+
+.banner-arrow.right {
+    right: 15px;
+}
+
+/* Điều hướng bằng dấu chấm */
+.banner-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+
+.banner-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.banner-dot.active {
+    background-color: #fff;
+}

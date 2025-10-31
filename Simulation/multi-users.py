@@ -10,138 +10,148 @@ SERVER = "HEDI-SNOWY\\SQLEXPRESS"
 DATABASE = "MangaLibrary"
 connection_string = f"DRIVER={{{DRIVER}}};SERVER={SERVER};DATABASE={DATABASE};Trusted_Connection=yes;"
 
-conn = pyodbc.connect(connection_string)
-cursor = conn.cursor()
+try:
+    conn = pyodbc.connect(connection_string)
+    cursor = conn.cursor()
 
-# ===== Load manga & chapters =====
-print("Loading manga and related data...")
+    # ======================== SỬA ĐỔI 1: LẤY SỐ USER HIỆN TẠI ========================
+    print("Checking for existing users...")
+    cursor.execute("SELECT COUNT(*) FROM [User]")
+    initial_user_count = cursor.fetchone()[0]
+    print(f"Found {initial_user_count} existing users in the database.")
+    # ==============================================================================
 
-cursor.execute("""
-SELECT m.MangaId, s.Follows
-FROM Manga m
-LEFT JOIN MangaStatistics s ON m.MangaId = s.MangaId
-""")
-mangas = cursor.fetchall()
+    # ===== Load manga & chapters =====
+    print("Loading manga and related data...")
+    # (Phần này giữ nguyên)
+    cursor.execute("""
+    SELECT m.MangaId, s.Follows
+    FROM Manga m
+    LEFT JOIN MangaStatistics s ON m.MangaId = s.MangaId
+    """)
+    mangas = cursor.fetchall()
 
-cursor.execute("SELECT MangaId, ChapterId FROM Chapter")
-chapter_rows = cursor.fetchall()
-chapter_dict = {}
-for row in chapter_rows:
-    chapter_dict.setdefault(row.MangaId, []).append(row.ChapterId)
+    cursor.execute("SELECT MangaId, ChapterId FROM Chapter")
+    chapter_rows = cursor.fetchall()
+    chapter_dict = {}
+    for row in chapter_rows:
+        chapter_dict.setdefault(row.MangaId, []).append(row.ChapterId)
 
-cursor.execute("""
-SELECT mt.MangaId, t.TagId
-FROM MangaTag mt
-JOIN Tag t ON mt.TagId = t.TagId
-""")
-tag_rows = cursor.fetchall()
-tag_count = {}
-manga_tags = {}
-for m_id, t_id in tag_rows:
-    manga_tags.setdefault(m_id, []).append(t_id)
-    tag_count[t_id] = tag_count.get(t_id, 0) + 1
+    cursor.execute("""
+    SELECT mt.MangaId, t.TagId
+    FROM MangaTag mt
+    JOIN Tag t ON mt.TagId = t.TagId
+    """)
+    tag_rows = cursor.fetchall()
+    tag_count = {}
+    manga_tags = {}
+    for m_id, t_id in tag_rows:
+        manga_tags.setdefault(m_id, []).append(t_id)
+        tag_count[t_id] = tag_count.get(t_id, 0) + 1
 
-top_tags = set([tid for tid, _ in sorted(tag_count.items(), key=lambda x: x[1], reverse=True)[:10]])
+    top_tags = set([tid for tid, _ in sorted(tag_count.items(), key=lambda x: x[1], reverse=True)[:10]])
 
-# ===== Prepare weighted manga list =====
-weighted_mangas = []
-for m in mangas:
-    m_id, follows = m.MangaId, m.Follows or 0
-    if m_id not in chapter_dict:
-        continue
-    weight = 1 + math.log1p(follows)
-    if set(manga_tags.get(m_id, [])) & top_tags:
-        weight *= 1.5
-    weighted_mangas.append((m_id, weight))
-
-if not weighted_mangas:
-    raise RuntimeError("No manga with chapters found!")
-
-total_weight = sum(w for _, w in weighted_mangas)
-weighted_probs = [w / total_weight for _, w in weighted_mangas]
-
-# ===== Simulation parameters =====
-USER_COUNT = 300
-users_rows = []
-reading_history_rows = []
-rating_rows = []
-comment_rows = []
-
-today = datetime.now()
-
-print("Generating users and behaviors...")
-
-for i in range(USER_COUNT):
-    user_id = str(uuid.uuid4())
-    username = f"user_{i+1}"
-    email = f"user{i+1}@example.com"
-    password_hash = "fakehash123"
-    created_at = today - timedelta(days=random.randint(0, 30))
-
-    users_rows.append((user_id, username, email, password_hash, "user", created_at))
-
-    # Each user reads 5–30 manga
-    manga_sample_count = random.randint(5, 30)
-    manga_ids = random.choices([m for m, _ in weighted_mangas], weights=weighted_probs, k=manga_sample_count)
-
-    for manga_id in set(manga_ids):  # avoid duplicate manga for same user
-        if manga_id not in chapter_dict:
+    # ===== Prepare weighted manga list =====
+    weighted_mangas = []
+    for m in mangas:
+        m_id, follows = m.MangaId, m.Follows or 0
+        if m_id not in chapter_dict:
             continue
-        chapters = chapter_dict[manga_id]
-        # Random 2–10 chapters
-        chapter_sample = random.sample(chapters, min(len(chapters), random.randint(2, 10)))
+        weight = 1 + math.log1p(follows)
+        if set(manga_tags.get(m_id, [])) & top_tags:
+            weight *= 1.5
+        weighted_mangas.append((m_id, weight))
 
-        # Insert ReadingHistory for each chapter
-        for chap in chapter_sample:
-            history_id = str(uuid.uuid4())
-            last_page = random.randint(1, 30)
-            read_at = today - timedelta(days=random.randint(0, 30), minutes=random.randint(0, 1440))
-            reading_history_rows.append((history_id, user_id, manga_id, chap, last_page, read_at))
+    if not weighted_mangas:
+        raise RuntimeError("No manga with chapters found!")
 
-        # Insert Rating (1 per manga per user)
-        rating_id = str(uuid.uuid4())
-        score = max(1, min(10, int(random.normalvariate(7, 2))))
-        rating_rows.append((rating_id, user_id, manga_id, score))
+    total_weight = sum(w for _, w in weighted_mangas)
+    weighted_probs = [w / total_weight for _, w in weighted_mangas]
 
-        # Insert Comment (40% chance)
-        if random.random() < 0.4:
-            comment_id = str(uuid.uuid4())
-            content = f"User {username} says something about {manga_id[:6]}"
-            created_at = today - timedelta(days=random.randint(0, 30), minutes=random.randint(0, 1440))
-            like_count = max(0, int(random.normalvariate(3, 2)))
-            dislike_count = max(0, int(random.normalvariate(1, 1)))
-            comment_rows.append((comment_id, user_id, manga_id, random.choice(chapters), content,
-                                 created_at, created_at, 0, like_count, dislike_count))
+    # ===== Simulation parameters =====
+    USER_COUNT = 300  # Số lượng user MỚI cần tạo
+    users_rows = []
+    reading_history_rows = []
+    rating_rows = []
+    comment_rows = []
 
-# ===== Insert into DB =====
-cursor.fast_executemany = True
+    today = datetime.now()
 
-print("Inserting Users...")
-cursor.executemany("""
-INSERT INTO [User] (UserId, Username, Email, PasswordHash, Role, CreatedAt)
-VALUES (?, ?, ?, ?, ?, ?)
-""", users_rows)
+    print(f"Generating {USER_COUNT} new users and their behaviors...")
 
-print("Inserting ReadingHistory...")
-cursor.executemany("""
-INSERT INTO ReadingHistory (HistoryId, UserId, MangaId, ChapterId, LastPageRead, ReadAt)
-VALUES (?, ?, ?, ?, ?, ?)
-""", reading_history_rows)
+    for i in range(USER_COUNT):
+        user_id = str(uuid.uuid4())
+        
+        # ======================== SỬA ĐỔI 2: ĐÁNH SỐ USER TIẾP NỐI =======================
+        # Bắt đầu đánh số từ (tổng số user hiện tại + 1)
+        user_number = initial_user_count + i + 1
+        username = f"user_{user_number}"
+        email = f"user{user_number}@example.com"
+        # ==============================================================================
+        
+        password_hash = "fakehash123" # Sử dụng một giá trị hash giả lập
+        created_at = today - timedelta(days=random.randint(0, 30))
 
-print("Inserting Ratings...")
-cursor.executemany("""
-INSERT INTO Rating (RatingId, UserId, MangaId, Score)
-VALUES (?, ?, ?, ?)
-""", rating_rows)
+        users_rows.append((user_id, username, email, password_hash, "user", created_at))
 
-print("Inserting Comments...")
-cursor.executemany("""
-INSERT INTO Comment (CommentId, UserId, MangaId, ChapterId, Content, CreatedAt, UpdatedAt, IsDeleted, LikeCount, DislikeCount)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-""", comment_rows)
+        # (Phần logic tạo hành vi người dùng còn lại giữ nguyên)
+        manga_sample_count = random.randint(5, 30)
+        manga_ids = random.choices([m for m, _ in weighted_mangas], weights=weighted_probs, k=manga_sample_count)
 
-conn.commit()
-cursor.close()
-conn.close()
+        for manga_id in set(manga_ids):
+            if manga_id not in chapter_dict:
+                continue
+            chapters = chapter_dict[manga_id]
+            chapter_sample = random.sample(chapters, min(len(chapters), random.randint(2, 10)))
 
-print(f"Done! Inserted {len(users_rows)} users, {len(reading_history_rows)} histories, {len(rating_rows)} ratings, {len(comment_rows)} comments.")
+            for chap in chapter_sample:
+                history_id = str(uuid.uuid4())
+                last_page = random.randint(1, 30)
+                read_at = today - timedelta(days=random.randint(0, 30), minutes=random.randint(0, 1440))
+                reading_history_rows.append((history_id, user_id, manga_id, chap, last_page, read_at))
+
+            rating_id = str(uuid.uuid4())
+            score = max(1, min(10, int(random.normalvariate(7, 2))))
+            rating_rows.append((rating_id, user_id, manga_id, score))
+
+            if random.random() < 0.4:
+                comment_id = str(uuid.uuid4())
+                content = f"User {username} says something about {manga_id[:6]}"
+                comment_created_at = today - timedelta(days=random.randint(0, 30), minutes=random.randint(0, 1440))
+                like_count = max(0, int(random.normalvariate(3, 2)))
+                dislike_count = max(0, int(random.normalvariate(1, 1)))
+                comment_rows.append((comment_id, user_id, manga_id, random.choice(chapters), content,
+                                     comment_created_at, comment_created_at, 0, False, like_count, dislike_count))
+
+    # ===== Insert into DB =====
+    cursor.fast_executemany = True
+
+    print("Inserting Users...")
+    cursor.executemany("INSERT INTO [User] (UserId, Username, Email, PasswordHash, Role, CreatedAt) VALUES (?, ?, ?, ?, ?, ?)", users_rows)
+
+    print("Inserting ReadingHistory...")
+    cursor.executemany("INSERT INTO ReadingHistory (HistoryId, UserId, MangaId, ChapterId, LastPageRead, ReadAt) VALUES (?, ?, ?, ?, ?, ?)", reading_history_rows)
+
+    print("Inserting Ratings...")
+    cursor.executemany("INSERT INTO Rating (RatingId, UserId, MangaId, Score) VALUES (?, ?, ?, ?)", rating_rows)
+
+    print("Inserting Comments...")
+    # Chú ý: Cần đảm bảo số lượng tham số khớp với bảng Comment của bạn
+    # Dựa theo schema, IsSpoiler đứng trước LikeCount
+    cursor.executemany("INSERT INTO Comment (CommentId, UserId, MangaId, ChapterId, Content, CreatedAt, UpdatedAt, IsDeleted, IsSpoiler, LikeCount, DislikeCount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", comment_rows)
+
+
+    conn.commit()
+
+except pyodbc.Error as ex:
+    sqlstate = ex.args[0]
+    print(f"Database Error: {sqlstate}")
+    print(ex)
+finally:
+    if 'cursor' in locals():
+        cursor.close()
+    if 'conn' in locals():
+        conn.close()
+    print("Connection closed.")
+
+print(f"Done! Inserted {len(users_rows)} new users, {len(reading_history_rows)} histories, {len(rating_rows)} ratings, {len(comment_rows)} comments.")

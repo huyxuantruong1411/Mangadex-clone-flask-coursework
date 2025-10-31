@@ -197,8 +197,8 @@ class List(db.Model):
     # relationships
 
     user = relationship("User", back_populates="lists")
-    mangas = relationship("ListManga", back_populates="list")
-    followers = relationship("ListFollower", back_populates="list")
+    mangas = relationship("ListManga", back_populates="list", cascade="all, delete-orphan")
+    followers = relationship("ListFollower", back_populates="list", cascade="all, delete-orphan")
 
 
 class ListManga(db.Model):

@@ -128,15 +128,22 @@ def get_first_chapter(manga_id, lang):
     return chap
 
 def get_continue_chapter(user_id, manga_id):
-    manga_id_str = str(manga_id)
     history = db.session.query(ReadingHistory).filter(
         ReadingHistory.UserId == user_id,
-        ReadingHistory.MangaId == manga_id_str
+        ReadingHistory.MangaId == str(manga_id)
     ).order_by(ReadingHistory.ReadAt.desc()).first()
+
     if history:
-        chap = db.session.get(Chapter, history.ChapterId)
-        return chap, chap.TranslatedLang if chap else (None, None)
-    return get_first_chapter(manga_id_str, 'en') or get_first_chapter(manga_id_str, 'vi'), 'en'
+        chap = db.session.query(Chapter).filter_by(
+            ChapterId=history.ChapterId,
+            IsUnavailable=False
+        ).first()
+        if chap:
+            return chap, chap.TranslatedLang
+
+    first_chap = get_first_chapter(manga_id, 'en') or get_first_chapter(manga_id, 'vi')
+    return (first_chap, first_chap.TranslatedLang) if first_chap else (None, None)
+
 
 def get_chapter(manga_id, chapter_id):
     manga_id_str = str(manga_id)
@@ -201,22 +208,22 @@ def save_reading_history(user_id, manga_id, chapter_id, last_page):
     try:
         if history:
             # Cập nhật bản ghi gần nhất với thông tin mới
-            history.ChapterId = chapter_id
+            history.ChapterId = str(chapter_id)  # FIXED: Convert UUID to str
             history.LastPageRead = last_page
             history.ReadAt = now
-            print(f"DEBUG: Updated reading history for MangaId={manga_id_str}, ChapterId={chapter_id}, Page={last_page}")
+            print(f"DEBUG: Updated reading history for MangaId={manga_id_str}, ChapterId={str(chapter_id)}, Page={last_page}")
         else:
             # Tạo bản ghi mới
             new_history = ReadingHistory(
                 HistoryId=str(uuid4()),
                 UserId=user_id,
                 MangaId=manga_id_str,
-                ChapterId=chapter_id,
+                ChapterId=str(chapter_id),  # FIXED: Convert UUID to str
                 LastPageRead=last_page,
                 ReadAt=now
             )
             db.session.add(new_history)
-            print(f"DEBUG: Created new reading history for MangaId={manga_id_str}, ChapterId={chapter_id}, Page={last_page}")
+            print(f"DEBUG: Created new reading history for MangaId={manga_id_str}, ChapterId={str(chapter_id)}, Page={last_page}")
 
         db.session.commit()
     except Exception as e:

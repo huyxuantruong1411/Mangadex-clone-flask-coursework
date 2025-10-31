@@ -28,14 +28,8 @@ def continue_reading(manga_id):
     chapter, lang = get_continue_chapter(current_user.UserId, manga_id)
     if not chapter:
         flash('No reading history. Starting from beginning.')
-        return redirect(url_for('reader.start_reading', manga_id=manga_id))
-    history = db.session.query(ReadingHistory).filter(
-        ReadingHistory.UserId == current_user.UserId,
-        ReadingHistory.MangaId == manga_id,
-        ReadingHistory.ChapterId == chapter.ChapterId
-    ).first()
-    last_page = history.LastPageRead if history else 0
-    return redirect(url_for('reader.read_chapter', manga_id=manga_id, chapter_id=chapter.ChapterId, page=last_page))
+        return start_reading(manga_id)
+    return jsonify({'chapter_id': str(chapter.ChapterId), 'lang': lang})
 
 @reader.route('/<uuid:manga_id>/<uuid:chapter_id>', methods=['GET'])
 @login_required

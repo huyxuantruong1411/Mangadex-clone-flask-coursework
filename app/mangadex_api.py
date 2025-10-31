@@ -157,7 +157,7 @@ def upsert_manga(conn, manga_list):
                     VALUES (source.MangaId, source.Type, source.TitleEn, source.ChapterNumbersResetOnNewVolume, source.ContentRating, source.CreatedAt, source.UpdatedAt, source.IsLocked, source.LastChapter, source.LastVolume, source.LatestUploadedChapter, source.OriginalLanguage, source.PublicationDemographic, source.State, source.Status, source.Year, source.OfficialLinks);
             """, (
                 manga_id_upper, manga['Type'], manga['TitleEn'], manga['ChapterNumbersResetOnNewVolume'],
-                manga['ContentRating'], manga['CreatedAt'], manga['UpdatedAt'], manga['IsLocked'],
+                manga['ContentRating'], manga['CreatedAt'], datetime.datetime.now(), manga['IsLocked'], #manga['UpdatedAt']
                 manga['LastChapter'], manga['LastVolume'], manga['LatestUploadedChapter'], manga['OriginalLanguage'],
                 manga['PublicationDemographic'], manga['State'], manga['Status'], manga['Year'], manga['OfficialLinks']
             ))

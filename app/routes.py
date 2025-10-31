@@ -139,6 +139,70 @@ def resolve_manga_links(manga_id):
     return resolved_links
 
 
+@main.context_processor
+def inject_top_manga():
+    # Sử dụng joinedload để tối ưu query, lấy sẵn các relationship cần thiết
+    top_mangas_query = (
+        db.session.query(Manga)
+        .join(MangaStatistics)
+        .options(
+            joinedload(Manga.stats),
+            joinedload(Manga.descriptions)
+        )
+        .order_by(desc(MangaStatistics.Follows))
+        .limit(10)
+        .all()
+    )
+    
+    top_manga_data = []
+    for manga in top_mangas_query:
+        # Lấy cover
+        cover = MangaCover.query.filter_by(MangaId=manga.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
+        cover_url = url_for('static', filename='assets/default_cover.png')
+        if cover and cover.ImageData:
+            image_data = base64.b64encode(cover.ImageData).decode('utf-8')
+            cover_url = f"data:image/jpeg;base64,{image_data}"
+
+        # Lấy tác giả (author) và họa sĩ (artist)
+        authors = []
+        artists = []
+        creator_rels = (
+            db.session.query(Creator.Name, CreatorRelationship.RelatedType)
+            .join(CreatorRelationship, Creator.CreatorId == CreatorRelationship.CreatorId)
+            .filter(CreatorRelationship.RelatedId == manga.MangaId)
+            .all()
+        )
+        for name, rel_type in creator_rels:
+            if rel_type == 'author' and name not in authors:
+                authors.append(name)
+            if rel_type == 'artist' and name not in artists:
+                artists.append(name)
+        
+        # Lấy mô tả tiếng Anh
+        description_obj = next((d for d in manga.descriptions if d.LangCode == 'en'), None)
+        description = description_obj.Description if description_obj else "No description available."
+
+        # Lấy chapter đầu tiên để tạo link "Read Now"
+        first_chapter = Chapter.query.filter_by(MangaId=manga.MangaId, IsUnavailable=False).order_by(Chapter.Volume.asc(), Chapter.ChapterNumber.asc()).first()
+        first_chapter_url = None
+        if first_chapter:
+            first_chapter_url = url_for('reader.read_chapter', manga_id=manga.MangaId, chapter_id=first_chapter.ChapterId)
+
+        top_manga_data.append({
+            'manga_id': manga.MangaId,
+            'title': manga.TitleEn,
+            'cover_url': cover_url,
+            'stats': manga.stats[0] if manga.stats else None,
+            'authors': authors,
+            'artists': artists,
+            'description': description,
+            'demographic': manga.PublicationDemographic,
+            'status': manga.Status,
+            'first_chapter_url': first_chapter_url
+        })
+        
+    return dict(top_mangas=top_manga_data)
+
 @main.route('/')
 @main.route('/home')
 def home():
@@ -249,10 +313,11 @@ def search():
 
     results = []
     for m in mangas:
-        # --- BẮT ĐẦU THAY ĐỔI TẠI ĐÂY ---
+        cover_url = url_for('static', filename='assets/default_cover.png') # Default
+        
         # Logic lấy ảnh bìa, nếu không có thì tải về
         cover = MangaCover.query.filter_by(MangaId=m.MangaId).order_by(MangaCover.DownloadDate.desc()).first()
-        if cover:
+        if cover and cover.ImageData:
             image_data_b64 = base64.b64encode(cover.ImageData).decode('utf-8')
             cover_url = f"data:image/jpeg;base64,{image_data_b64}"
         else:
@@ -261,28 +326,44 @@ def search():
                 manga_id_str = cover_info['manga_id']
                 cover_id_str = cover_info['cover_id']
                 file_name_str = cover_info['file_name']
-                image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                
                 try:
-                    response = requests.get(image_url, stream=True)
-                    response.raise_for_status()
-                    image_data = response.content
-                    new_cover = MangaCover(
-                        MangaId=m.MangaId,
-                        CoverId=uuid.UUID(cover_id_str),
-                        FileName=file_name_str,
-                        ImageData=image_data
-                    )
-                    db.session.add(new_cover)
-                    db.session.commit()
-                    image_data_b64 = base64.b64encode(image_data).decode('utf-8')
-                    cover_url = f"data:image/jpeg;base64,{image_data_b64}"
-                except Exception as e:
-                    print(f"Error downloading cover for {manga_id_str}: {e}")
-                    cover_url = url_for('static', filename='assets/default_cover.png')
-            else:
-                cover_url = url_for('static', filename='assets/default_cover.png')
-        # --- KẾT THÚC THAY ĐỔI ---
+                    cover_id_uuid = uuid.UUID(cover_id_str)
 
+                    # SỬA Ở ĐÂY: Kiểm tra xem ảnh bìa đã tồn tại trong DB chưa
+                    existing_cover = MangaCover.query.filter_by(
+                        MangaId=m.MangaId,
+                        CoverId=cover_id_uuid,
+                        FileName=file_name_str
+                    ).first()
+
+                    # Nếu chưa có, mới tiến hành tải và lưu
+                    if not existing_cover:
+                        image_url = f"https://uploads.mangadex.org/covers/{manga_id_str}/{file_name_str}"
+                        response = requests.get(image_url, stream=True)
+                        response.raise_for_status()
+                        image_data = response.content
+                        
+                        new_cover = MangaCover(
+                            MangaId=m.MangaId,
+                            CoverId=cover_id_uuid,
+                            FileName=file_name_str,
+                            ImageData=image_data,
+                            DownloadDate=datetime.utcnow() # Thêm DownloadDate
+                        )
+                        db.session.add(new_cover)
+                        db.session.commit()
+                        
+                        image_data_b64 = base64.b64encode(image_data).decode('utf-8')
+                        cover_url = f"data:image/jpeg;base64,{image_data_b64}"
+
+                except Exception as e:
+                    db.session.rollback() # Quan trọng: rollback session nếu có lỗi xảy ra
+                    print(f"Error downloading or saving cover for {manga_id_str}: {e}")
+                    # cover_url vẫn là ảnh mặc định
+        
+        # Truy vấn stats sau khi xử lý cover xong
+        # để đảm bảo session không bị lỗi từ trước
         stats = MangaStatistics.query.filter_by(MangaId=m.MangaId).first()
         rating = stats.AverageRating if stats and stats.AverageRating else stats.BayesianRating if stats else 0
         follows = stats.Follows if stats else 0

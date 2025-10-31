@@ -217,6 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(data => {
                     if (data.chapter_id) {
                         window.location.href = `/reader/${mangaId}/${data.chapter_id}`;
+                    } else {
+                        alert('No reading history found');
                     }
                 });
         });
