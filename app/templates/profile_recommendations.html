@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile_recommendations.css') }}">
+
+<script>
+    window.DEFAULT_COVER = "{{ url_for('static', filename='assets/default_cover.png') }}";
+</script>
+
+<div class="recommendations-container">
+
+    {% if recommendations is none %}
+        <div class="empty-rec">
+            <i class="bi bi-journal-text"></i>
+            <h5>Not enough reading history</h5>
+            <p>Start reading manga to unlock personalized recommendations!</p>
+        </div>
+    {% elif not recommendations %}
+        <div class="empty-rec">
+            <i class="bi bi-search-heart"></i>
+            <h5>No matching recommendations</h5>
+            <p>Try reading more manga with similar tags!</p>
+        </div>
+    {% else %}
+        <h4 class="text-white mb-3">Recommended for You</h4>
+        <div class="rec-grid" id="recGrid">
+            {% for rec in recommendations %}
+            <div class="rec-card">
+                <img src="{{ rec.cover_url or window.DEFAULT_COVER }}" 
+                     alt="{{ rec.title }}" 
+                     onerror="this.src = window.DEFAULT_COVER;">
+                <div class="rec-card-body">
+                    <div class="rec-card-title">{{ rec.title }}</div>
+                    <div class="rec-card-desc">{{ rec.description or "No description..." }}</div>
+                    <div class="rec-stats">
+                        <span>Rating: {{ rec.average_rating|default('N/A') }}</span>
+                        <span>Follows: {{ rec.follows|default('N/A') }}</span>
+                    </div>
+                    <a href="{{ url_for('manga.manga_detail', manga_id=rec.manga_id) }}" 
+                       class="rec-btn">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/profile_recommendations.js') }}"></script>

@@ -14,7 +14,7 @@ from werkzeug.security import generate_password_hash
 
 from app.comment_routes import now
 from app.reader_controller import get_available_langs
-from .models import Chapter, Cover, Creator, CreatorRelationship, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, ReadingHistory, Report, Tag, Comment
+from .models import Chapter, Cover, Creator, CreatorRelationship, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, ReadingHistory, Report, Tag, Comment, User
 from . import db
 import os
 import uuid
@@ -402,14 +402,6 @@ def get_cover_info(manga_id):
 @main.route("/require-login")
 def require_login():
     return render_template("require_login.html", title="Restricted")
-
-
-@main.route("/profile")
-@login_required
-def profile():
-    from app.dashboard_routes import build_user_charts
-    charts = build_user_charts(str(current_user.UserId))
-    return render_template("profile.html", title="Profile", user=current_user, **charts)
 
 @main.route('/advanced_search/options')
 def advanced_search_options():
@@ -1298,6 +1290,118 @@ def update_profile():
     db.session.commit()
     flash("Profile updated successfully!", "success")
     return redirect(url_for("main.profile", user_id=current_user.UserId))
+
+@main.route("/profile")
+@login_required
+def profile():
+    from app.dashboard_routes import build_user_charts
+    charts = build_user_charts(str(current_user.UserId))
+
+    try:
+        recommendations = get_recommendations(current_user.UserId)
+    except Exception as e:
+        print(f"Error in recommendations: {e}")
+        recommendations = []
+
+    return render_template(
+        "profile.html",
+        title="Profile",
+        user=current_user,
+        recommendations=recommendations,
+        **charts
+    )
+
+from collections import Counter
+from sqlalchemy import func, desc
+from app.models import ReadingHistory, MangaTag, Manga, MangaStatistics, MangaDescription
+from flask import url_for
+
+def get_recommendations(user_id, max_recent=5, max_recs=20):
+    """
+    Luôn trả về danh sách gợi ý dựa vào tag từ các manga user từng đọc.
+    Ưu tiên các manga có nhiều tag trùng với tập tag tổng hợp từ 5 manga gần nhất.
+    """
+
+    # 1️⃣ Lấy tối đa 5 manga gần nhất (1 bản đọc mới nhất / manga)
+    recent_histories = (
+        db.session.query(ReadingHistory.MangaId, func.max(ReadingHistory.ReadAt).label('last_read'))
+        .filter_by(UserId=user_id)
+        .group_by(ReadingHistory.MangaId)
+        .order_by(desc('last_read'))
+        .limit(max_recent)
+        .all()
+    )
+
+    if not recent_histories:
+        return None  # User chưa đọc gì
+
+    recent_manga_ids = [r.MangaId for r in recent_histories]
+
+    # 2️⃣ Lấy toàn bộ tag của những manga này
+    tag_counts = Counter()
+    for mid in recent_manga_ids:
+        tag_ids = [r.TagId for r in db.session.query(MangaTag.TagId).filter_by(MangaId=mid).all()]
+        tag_counts.update(tag_ids)
+
+    if not tag_counts:
+        return []  # Manga đã đọc không có tag nào
+
+    # 3️⃣ Chọn tối đa 10 tag phổ biến nhất
+    top_tags = [tid for tid, _ in tag_counts.most_common(10)]
+
+    # 4️⃣ Lấy tất cả manga có ít nhất 1 tag trong top_tags
+    subq = (
+        db.session.query(
+            MangaTag.MangaId,
+            func.count(func.distinct(MangaTag.TagId)).label('match_count')
+        )
+        .filter(MangaTag.TagId.in_(top_tags))
+        .filter(~MangaTag.MangaId.in_(recent_manga_ids))  # loại manga user đã đọc
+        .group_by(MangaTag.MangaId)
+        .subquery()
+    )
+
+    # 5️⃣ Join với Manga và MangaStatistics
+    query = (
+        db.session.query(Manga, MangaStatistics, subq.c.match_count)
+        .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
+        .join(subq, subq.c.MangaId == Manga.MangaId)
+        .order_by(desc(subq.c.match_count), desc(MangaStatistics.Follows))
+        .limit(max_recs)
+    )
+
+    results = query.all()
+    if not results:
+        return []
+
+    # 6️⃣ Format kết quả
+    default_cover = url_for('static', filename='assets/default_cover.png')
+    recommendations = []
+    for manga, stats, match_count in results:
+        try:
+            cover_url = get_cover_url_for_manga(manga.MangaId)
+        except Exception:
+            cover_url = default_cover
+
+        if not cover_url:
+            cover_url = default_cover
+
+        desc_obj = MangaDescription.query.filter_by(MangaId=manga.MangaId, LangCode='en').first()
+        description = (desc_obj.Description or "No description...")[:140] if desc_obj else "No description..."
+        if len(description) >= 140:
+            description += "..."
+
+        recommendations.append({
+            "manga_id": manga.MangaId,
+            "title": manga.TitleEn or "Unknown Title",
+            "cover_url": cover_url,
+            "description": description,
+            "average_rating": round(stats.AverageRating, 1) if stats and stats.AverageRating else None,
+            "follows": stats.Follows or 0,
+            "match_count": int(match_count)
+        })
+
+    return recommendations
 
 @main.route('/about-us')
 def about_us():

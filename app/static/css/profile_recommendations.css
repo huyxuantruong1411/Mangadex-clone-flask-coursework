@@ -1,0 +1,129 @@
+/* static/css/profile_recommendations.css */
+.recommendations-container {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-height: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.rec-card {
+    background: #1e1e2e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rec-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,123,255,0.2);
+    border-color: #007bff;
+}
+
+.rec-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.rec-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.rec-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+    line-clamp: 2; /* Standard property */
+}
+
+.rec-card-desc {
+    font-size: 0.82rem;
+    color: #aaa;
+    flex-grow: 1;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-clamp: 3; /* Standard property */
+}
+
+.rec-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: #00d4ff;
+    margin-bottom: 0.75rem;
+}
+
+.rec-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.rec-btn:hover {
+    background: #0056b3;
+    transform: scale(1.03);
+}
+
+.empty-rec {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #777;
+}
+
+.empty-rec i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.empty-rec h5 {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rec-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .rec-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rec-grid {
+        grid-template-columns: 1fr;
+    }
+}

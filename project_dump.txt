@@ -180,6 +180,14 @@
                   "type": "file"
                 },
                 {
+                  "name": "profile.css",
+                  "type": "file"
+                },
+                {
+                  "name": "profile_recommendations.css",
+                  "type": "file"
+                },
+                {
                   "name": "reader.css",
                   "type": "file"
                 },
@@ -235,6 +243,10 @@
                 },
                 {
                   "name": "manga_detail.js",
+                  "type": "file"
+                },
+                {
+                  "name": "profile_recommendations.js",
                   "type": "file"
                 },
                 {
@@ -351,6 +363,10 @@
             },
             {
               "name": "profile_dashboard.html",
+              "type": "file"
+            },
+            {
+              "name": "profile_recommendations.html",
               "type": "file"
             },
             {
@@ -473,6 +489,8 @@ D:\DACSN\coursework\mini-demo/
 │   │   │   ├── list.css
 │   │   │   ├── manga_detail.css
 │   │   │   ├── modal.css
+│   │   │   ├── profile.css
+│   │   │   ├── profile_recommendations.css
 │   │   │   ├── reader.css
 │   │   │   └── styles.css
 │   │   └── js/
@@ -487,6 +505,7 @@ D:\DACSN\coursework\mini-demo/
 │   │       ├── library.js
 │   │       ├── list_public.js
 │   │       ├── manga_detail.js
+│   │       ├── profile_recommendations.js
 │   │       ├── reader.js
 │   │       └── scripts.js
 │   └── templates/
@@ -515,6 +534,7 @@ D:\DACSN\coursework\mini-demo/
 │       ├── manga_detail.html
 │       ├── profile.html
 │       ├── profile_dashboard.html
+│       ├── profile_recommendations.html
 │       ├── random.html
 │       ├── reader.html
 │       ├── reading_history.html
@@ -14609,6 +14629,157 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-03 14:35:58,941 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
 2025-11-03 14:35:58,942 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
 2025-11-03 14:35:58,945 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 14:37:59,388 - INFO - 127.0.0.1 - - [03/Nov/2025 14:37:59] "POST /manga/search HTTP/1.1" 200 -
+2025-11-03 14:51:42,761 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "GET /profile HTTP/1.1" 200 -
+2025-11-03 14:51:42,808 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,810 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,815 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,819 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,822 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,824 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,840 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "GET /static/assets/default_banner.png HTTP/1.1" 200 -
+2025-11-03 14:51:42,912 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,916 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,917 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:10:39,407 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:10:39,741 - INFO -  * Restarting with stat
+2025-11-03 15:26:21,447 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:26:21,448 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:26:21,449 - INFO -  * Restarting with stat
+2025-11-03 15:26:22,073 - WARNING -  * Debugger is active!
+2025-11-03 15:26:22,076 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:26:24,142 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:24] "[33mGET /profile HTTP/1.1[0m" 404 -
+2025-11-03 15:26:29,247 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+2025-11-03 15:26:29,489 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:26:29,493 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:26:29,533 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=console.png&s=nxm20Qc8aFyyyLNCm4oD HTTP/1.1" 200 -
+2025-11-03 15:26:29,546 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:26:33,232 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-03 15:26:33,260 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:26:33,262 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:26:33,276 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=nxm20Qc8aFyyyLNCm4oD HTTP/1.1" 200 -
+2025-11-03 15:26:33,293 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:28:42,358 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:28:42,509 - INFO -  * Restarting with stat
+2025-11-03 15:32:27,264 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:32:27,264 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:32:27,265 - INFO -  * Restarting with stat
+2025-11-03 15:32:28,005 - WARNING -  * Debugger is active!
+2025-11-03 15:32:28,007 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:32:31,919 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:31] "GET / HTTP/1.1" 200 -
+2025-11-03 15:32:32,074 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,076 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,077 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,080 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,080 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,309 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,626 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,628 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,628 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,644 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:32:38,836 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "[35m[1mGET /profile HTTP/1.1[0m" 500 -
+2025-11-03 15:32:38,898 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:32:38,902 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:32:38,933 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=egXOTVEpC1Ci9r1ZG6il HTTP/1.1" 200 -
+2025-11-03 15:32:38,955 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:35:54,637 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:35:54,915 - INFO -  * Restarting with stat
+2025-11-03 15:35:55,882 - WARNING -  * Debugger is active!
+2025-11-03 15:35:55,885 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:35:59,326 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:35:59,327 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:35:59,327 - INFO -  * Restarting with stat
+2025-11-03 15:35:59,949 - WARNING -  * Debugger is active!
+2025-11-03 15:35:59,951 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:36:04,799 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:04] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:36:05,098 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,104 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "GET /static/css/profile_recommendations.css HTTP/1.1" 200 -
+2025-11-03 15:36:05,112 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "GET /static/js/profile_recommendations.js HTTP/1.1" 200 -
+2025-11-03 15:36:05,115 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,121 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,127 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,128 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,129 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,130 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,132 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,149 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,233 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:36:08,310 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:08] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:42:23,105 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:42:23,395 - INFO -  * Restarting with stat
+2025-11-03 15:42:24,464 - WARNING -  * Debugger is active!
+2025-11-03 15:42:24,467 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:43:02,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:43:02,299 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:43:02,300 - INFO -  * Restarting with stat
+2025-11-03 15:43:02,945 - WARNING -  * Debugger is active!
+2025-11-03 15:43:02,947 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:43:08,828 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:43:08,992 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:08,998 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,002 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,007 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,008 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,015 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,016 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,016 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,019 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,022 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,036 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,059 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:12,051 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:12] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,696 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "GET /reading-history HTTP/1.1" 200 -
+2025-11-03 15:43:22,745 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,750 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,751 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,754 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,758 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,772 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,839 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,869 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,870 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,872 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,144 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:43:31,183 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,186 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,190 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,194 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,198 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,201 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,225 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,119 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,186 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,192 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,194 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,202 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:44:51,968 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:44:52,309 - INFO -  * Restarting with stat
+2025-11-03 15:44:53,284 - WARNING -  * Debugger is active!
+2025-11-03 15:44:53,287 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:47:28,487 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:47:28,487 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:47:28,489 - INFO -  * Restarting with stat
+2025-11-03 15:47:29,113 - WARNING -  * Debugger is active!
+2025-11-03 15:47:29,116 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:47:37,682 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:47:37,845 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,850 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,854 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,859 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,864 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,868 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,868 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,870 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,872 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,873 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,884 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,889 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:47:40,977 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:40] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
 
 --- File: D:\DACSN\coursework\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
@@ -14793,6 +14964,14 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
                   "type": "file"
                 },
                 {
+                  "name": "profile.css",
+                  "type": "file"
+                },
+                {
+                  "name": "profile_recommendations.css",
+                  "type": "file"
+                },
+                {
                   "name": "reader.css",
                   "type": "file"
                 },
@@ -14848,6 +15027,10 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
                 },
                 {
                   "name": "manga_detail.js",
+                  "type": "file"
+                },
+                {
+                  "name": "profile_recommendations.js",
                   "type": "file"
                 },
                 {
@@ -14964,6 +15147,10 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
             },
             {
               "name": "profile_dashboard.html",
+              "type": "file"
+            },
+            {
+              "name": "profile_recommendations.html",
               "type": "file"
             },
             {
@@ -15086,6 +15273,8 @@ D:\DACSN\coursework\mini-demo/
 │   │   │   ├── list.css
 │   │   │   ├── manga_detail.css
 │   │   │   ├── modal.css
+│   │   │   ├── profile.css
+│   │   │   ├── profile_recommendations.css
 │   │   │   ├── reader.css
 │   │   │   └── styles.css
 │   │   └── js/
@@ -15100,6 +15289,7 @@ D:\DACSN\coursework\mini-demo/
 │   │       ├── library.js
 │   │       ├── list_public.js
 │   │       ├── manga_detail.js
+│   │       ├── profile_recommendations.js
 │   │       ├── reader.js
 │   │       └── scripts.js
 │   └── templates/
@@ -15128,6 +15318,7 @@ D:\DACSN\coursework\mini-demo/
 │       ├── manga_detail.html
 │       ├── profile.html
 │       ├── profile_dashboard.html
+│       ├── profile_recommendations.html
 │       ├── random.html
 │       ├── reader.html
 │       ├── reading_history.html
@@ -29222,6 +29413,157 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-03 14:35:58,941 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
 2025-11-03 14:35:58,942 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
 2025-11-03 14:35:58,945 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 14:37:59,388 - INFO - 127.0.0.1 - - [03/Nov/2025 14:37:59] "POST /manga/search HTTP/1.1" 200 -
+2025-11-03 14:51:42,761 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "GET /profile HTTP/1.1" 200 -
+2025-11-03 14:51:42,808 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,810 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,815 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,819 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,822 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,824 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,840 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "GET /static/assets/default_banner.png HTTP/1.1" 200 -
+2025-11-03 14:51:42,912 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,916 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,917 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:10:39,407 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:10:39,741 - INFO -  * Restarting with stat
+2025-11-03 15:26:21,447 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:26:21,448 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:26:21,449 - INFO -  * Restarting with stat
+2025-11-03 15:26:22,073 - WARNING -  * Debugger is active!
+2025-11-03 15:26:22,076 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:26:24,142 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:24] "[33mGET /profile HTTP/1.1[0m" 404 -
+2025-11-03 15:26:29,247 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+2025-11-03 15:26:29,489 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:26:29,493 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:26:29,533 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=console.png&s=nxm20Qc8aFyyyLNCm4oD HTTP/1.1" 200 -
+2025-11-03 15:26:29,546 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:26:33,232 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-03 15:26:33,260 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:26:33,262 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:26:33,276 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=nxm20Qc8aFyyyLNCm4oD HTTP/1.1" 200 -
+2025-11-03 15:26:33,293 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:28:42,358 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:28:42,509 - INFO -  * Restarting with stat
+2025-11-03 15:32:27,264 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:32:27,264 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:32:27,265 - INFO -  * Restarting with stat
+2025-11-03 15:32:28,005 - WARNING -  * Debugger is active!
+2025-11-03 15:32:28,007 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:32:31,919 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:31] "GET / HTTP/1.1" 200 -
+2025-11-03 15:32:32,074 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,076 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,077 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,080 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,080 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,309 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,626 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,628 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,628 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,644 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:32:38,836 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "[35m[1mGET /profile HTTP/1.1[0m" 500 -
+2025-11-03 15:32:38,898 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:32:38,902 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:32:38,933 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=egXOTVEpC1Ci9r1ZG6il HTTP/1.1" 200 -
+2025-11-03 15:32:38,955 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:35:54,637 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:35:54,915 - INFO -  * Restarting with stat
+2025-11-03 15:35:55,882 - WARNING -  * Debugger is active!
+2025-11-03 15:35:55,885 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:35:59,326 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:35:59,327 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:35:59,327 - INFO -  * Restarting with stat
+2025-11-03 15:35:59,949 - WARNING -  * Debugger is active!
+2025-11-03 15:35:59,951 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:36:04,799 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:04] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:36:05,098 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,104 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "GET /static/css/profile_recommendations.css HTTP/1.1" 200 -
+2025-11-03 15:36:05,112 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "GET /static/js/profile_recommendations.js HTTP/1.1" 200 -
+2025-11-03 15:36:05,115 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,121 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,127 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,128 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,129 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,130 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,132 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,149 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,233 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:36:08,310 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:08] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:42:23,105 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:42:23,395 - INFO -  * Restarting with stat
+2025-11-03 15:42:24,464 - WARNING -  * Debugger is active!
+2025-11-03 15:42:24,467 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:43:02,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:43:02,299 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:43:02,300 - INFO -  * Restarting with stat
+2025-11-03 15:43:02,945 - WARNING -  * Debugger is active!
+2025-11-03 15:43:02,947 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:43:08,828 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:43:08,992 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:08,998 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,002 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,007 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,008 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,015 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,016 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,016 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,019 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,022 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,036 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,059 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:12,051 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:12] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,696 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "GET /reading-history HTTP/1.1" 200 -
+2025-11-03 15:43:22,745 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,750 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,751 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,754 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,758 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,772 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,839 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,869 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,870 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,872 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,144 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:43:31,183 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,186 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,190 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,194 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,198 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,201 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,225 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,119 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,186 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,192 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,194 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,202 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:44:51,968 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:44:52,309 - INFO -  * Restarting with stat
+2025-11-03 15:44:53,284 - WARNING -  * Debugger is active!
+2025-11-03 15:44:53,287 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:47:28,487 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:47:28,487 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:47:28,489 - INFO -  * Restarting with stat
+2025-11-03 15:47:29,113 - WARNING -  * Debugger is active!
+2025-11-03 15:47:29,116 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:47:37,682 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:47:37,845 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,850 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,854 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,859 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,864 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,868 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,868 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,870 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,872 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,873 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,884 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,889 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:47:40,977 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:40] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
 
 --- File: D:\DACSN\coursework\mini-demo\README.md ---
 
@@ -32660,7 +33002,7 @@ from werkzeug.security import generate_password_hash
 
 from app.comment_routes import now
 from app.reader_controller import get_available_langs
-from .models import Chapter, Cover, Creator, CreatorRelationship, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, ReadingHistory, Report, Tag, Comment
+from .models import Chapter, Cover, Creator, CreatorRelationship, List, Manga, MangaAltTitle, MangaCover, MangaDescription, MangaLink, MangaRelated, MangaStatistics, MangaTag, Rating, ReadingHistory, Report, Tag, Comment, User
 from . import db
 import os
 import uuid
@@ -33944,6 +34286,87 @@ def update_profile():
     db.session.commit()
     flash("Profile updated successfully!", "success")
     return redirect(url_for("main.profile", user_id=current_user.UserId))
+
+from sqlalchemy import desc, func, and_
+from app.models import ReadingHistory, MangaTag, Manga, MangaStatistics, MangaDescription
+
+def get_recommendations(user_id):
+    # Bước 1: Lấy 5 manga gần nhất
+    recent_histories = (
+        db.session.query(ReadingHistory.MangaId, func.max(ReadingHistory.ReadAt).label('max_read_at'))
+        .filter_by(UserId=user_id)
+        .group_by(ReadingHistory.MangaId)
+        .order_by(desc('max_read_at'))
+        .limit(5)
+        .all()
+    )
+
+    if not recent_histories:
+        return None
+
+    recent_manga_ids = [h.MangaId for h in recent_histories]
+
+    # Bước 2: Lấy tag phổ biến nhất từ 5 manga
+    tag_counts = (
+        db.session.query(MangaTag.TagId, func.count(MangaTag.TagId).label('cnt'))
+        .filter(MangaTag.MangaId.in_(recent_manga_ids))
+        .group_by(MangaTag.TagId)
+        .order_by(desc('cnt'))
+        .limit(3)  # Dùng 3 tag phổ biến nhất
+        .all()
+    )
+
+    if not tag_counts:
+        return []
+
+    # Dùng tag đầu tiên (phổ biến nhất)
+    primary_tag_id = tag_counts[0].TagId
+
+    # Bước 3: Tìm manga có tag đó, loại trừ 5 manga đã đọc
+    query = (
+        db.session.query(Manga, MangaStatistics)
+        .join(MangaStatistics, Manga.MangaId == MangaStatistics.MangaId)
+        .join(MangaTag, Manga.MangaId == MangaTag.MangaId)
+        .filter(MangaTag.TagId == primary_tag_id)
+        .filter(Manga.MangaId.notin_(recent_manga_ids))
+        .order_by(desc(MangaStatistics.Follows))
+        .limit(10)
+    )
+
+    rec_results = query.all()
+
+    # Bước 4: Enrich – DÙNG ẢNH MẶC ĐỊNH NẾU LỖI
+    recommendations = []
+    default_cover = url_for('static', filename='assets/default_cover.png')
+
+    for manga, stats in rec_results:
+        try:
+            cover_url = get_cover_url_for_manga(manga.MangaId)
+        except:
+            cover_url = default_cover
+
+        if not cover_url or 'data:image' not in cover_url:
+            cover_url = default_cover
+
+        # Mô tả
+        try:
+            desc_obj = MangaDescription.query.filter_by(MangaId=manga.MangaId, LangCode='en').first()
+            description = (desc_obj.Description or "No description available.")[:140]
+            if len(desc_obj.Description or "") > 140:
+                description += "..."
+        except:
+            description = "No description available."
+
+        recommendations.append({
+            'manga_id': manga.MangaId,
+            'title': manga.TitleEn or "Unknown Title",
+            'cover_url': cover_url,
+            'description': description,
+            'average_rating': round(stats.AverageRating, 1) if stats.AverageRating else None,
+            'follows': stats.Follows or 0
+        })
+
+    return recommendations if recommendations else []
 
 @main.route('/about-us')
 def about_us():
@@ -36071,6 +36494,154 @@ a.text-decoration-none.text-reset .card {
 /* Placeholder */
 .modal-body .form-control::placeholder {
     color: rgba(255, 255, 255, 0.6) !important;
+}
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\profile.css ---
+/* Add to profile.css or inline */
+.nav-tabs .nav-link {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #444;
+}
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #495057;
+    border-color: #007bff;
+}
+.card {
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+--- File: D:\DACSN\coursework\mini-demo\app\static\css\profile_recommendations.css ---
+/* static/css/profile_recommendations.css */
+.recommendations-container {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-height: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.rec-card {
+    background: #1e1e2e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rec-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,123,255,0.2);
+    border-color: #007bff;
+}
+
+.rec-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.rec-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.rec-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+    line-clamp: 2; /* Standard property */
+}
+
+.rec-card-desc {
+    font-size: 0.82rem;
+    color: #aaa;
+    flex-grow: 1;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-clamp: 3; /* Standard property */
+}
+
+.rec-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: #00d4ff;
+    margin-bottom: 0.75rem;
+}
+
+.rec-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.rec-btn:hover {
+    background: #0056b3;
+    transform: scale(1.03);
+}
+
+.empty-rec {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #777;
+}
+
+.empty-rec i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.empty-rec h5 {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rec-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .rec-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rec-grid {
+        grid-template-columns: 1fr;
+    }
 }
 --- File: D:\DACSN\coursework\mini-demo\app\static\css\reader.css ---
 .reader-container {
@@ -51420,6 +51991,27 @@ document.addEventListener('DOMContentLoaded', () => {
         loadChapters('asc');
     }
 });
+--- File: D:\DACSN\coursework\mini-demo\app\static\js\profile_recommendations.js ---
+// static/js/profile_recommendations.js
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.rec-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.4s ease ${index * 0.1}s`;
+        observer.observe(card);
+    });
+});
 --- File: D:\DACSN\coursework\mini-demo\app\static\js\reader.js ---
 document.addEventListener('DOMContentLoaded', () => {
     const data = JSON.parse(document.getElementById('reader-data').textContent);
@@ -54819,8 +55411,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             <!-- Username + Role -->
             <div>
-                <h2 class="text-white fw-bold" style="color: black; -webkit-text-stroke: 1px black;">{{ user.Username }}
-                </h2>
+                <h2 class="text-white fw-bold" style="color: black; -webkit-text-stroke: 1px black;">{{ user.Username }}</h2>
                 <span class="badge bg-secondary">{{ user.Role }}</span>
             </div>
         </div>
@@ -54831,7 +55422,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="{{ url_for('main.follow', user_id=user.UserId) }}" class="btn btn-signin">Follow</a>
         <a href="{{ url_for('main.message', user_id=user.UserId) }}" class="btn btn-secondary">Message</a>
         <a href="{{ url_for('main.report', user_id=user.UserId) }}" class="btn btn-dark">Report</a>
-        <!-- NEW: Edit Profile -->
         {% if current_user.is_authenticated and current_user.UserId == user.UserId %}
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
             Edit Profile
@@ -54862,6 +55452,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="text-success">Active</span>
                 {% endif %}
             </span>
+        </div>
+    </div>
+
+    <!-- === TABS === -->
+    <ul class="nav nav-tabs mt-4 px-4" id="profileTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab"
+                    data-bs-target="#dashboard" type="button" role="tab">
+                Dashboard
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="recommendations-tab" data-bs-toggle="tab"
+                    data-bs-target="#recommendations" type="button" role="tab">
+                Recommendations
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-3 px-4" id="profileTabContent">
+        <!-- Dashboard -->
+        <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+            {% include "profile_dashboard.html" %}
+        </div>
+
+        <!-- Recommendations -->
+        <div class="tab-pane fade" id="recommendations" role="tabpanel">
+            {% include "profile_recommendations.html" %}
         </div>
     </div>
 </div>
@@ -54899,8 +55517,6 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 
-{% include "profile_dashboard.html" %}
-
 {% endblock %}
 --- File: D:\DACSN\coursework\mini-demo\app\templates\profile_dashboard.html ---
 <!-- load plotly -->
@@ -54915,6 +55531,51 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="chart my-4" id="chart5">{{ chart5|safe }}</div>
     <div class="chart my-4" id="chart6">{{ chart6|safe }}</div>
 </div>
+--- File: D:\DACSN\coursework\mini-demo\app\templates\profile_recommendations.html ---
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile_recommendations.css') }}">
+
+<!-- THÊM DÒNG NÀY Ở ĐẦU (trước recommendations-container) -->
+<script>
+    window.DEFAULT_COVER = "{{ url_for('static', filename='assets/default_cover.png') }}";
+</script>
+
+<div class="recommendations-container">
+    {% if recommendations is none %}
+        <div class="empty-rec">
+            <i class="bi bi-journal-text"></i>
+            <h5>Not enough reading history</h5>
+            <p>Start reading manga to unlock personalized recommendations!</p>
+        </div>
+    {% elif not recommendations %}
+        <div class="empty-rec">
+            <i class="bi bi-search-heart"></i>
+            <h5>No matching recommendations</h5>
+            <p>Try reading more manga with similar tags!</p>
+        </div>
+    {% else %}
+        <h4 class="text-white mb-3">Recommended for You</h4>
+        <div class="rec-grid">
+            {% for rec in recommendations %}
+            <div class="rec-card">
+                <img src="{{ rec.cover_url }}" 
+                     alt="{{ rec.title }}" 
+                     onerror="this.src = window.DEFAULT_COVER;">
+                <div class="rec-card-body">
+                    <div class="rec-card-title">{{ rec.title }}</div>
+                    <div class="rec-card-desc">{{ rec.description }}</div>
+                    <div class="rec-stats">
+                        <span>Rating: {{ rec.average_rating|default('N/A') }}</span>
+                        <span>Follows: {{ rec.follows|default('N/A') }}</span>
+                    </div>
+                    <a href="{{ url_for('manga.manga_detail', manga_id=rec.manga_id) }}" class="rec-btn">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/profile_recommendations.js') }}"></script>
 --- File: D:\DACSN\coursework\mini-demo\app\templates\random.html ---
 {% extends "base.html" %}
 

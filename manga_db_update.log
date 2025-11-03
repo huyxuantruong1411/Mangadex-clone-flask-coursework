@@ -12857,3 +12857,284 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-03 14:35:58,941 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
 2025-11-03 14:35:58,942 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
 2025-11-03 14:35:58,945 - INFO - 127.0.0.1 - - [03/Nov/2025 14:35:58] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 14:37:59,388 - INFO - 127.0.0.1 - - [03/Nov/2025 14:37:59] "POST /manga/search HTTP/1.1" 200 -
+2025-11-03 14:51:42,761 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "GET /profile HTTP/1.1" 200 -
+2025-11-03 14:51:42,808 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,810 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,815 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,819 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,822 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,824 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,840 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "GET /static/assets/default_banner.png HTTP/1.1" 200 -
+2025-11-03 14:51:42,912 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,916 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 14:51:42,917 - INFO - 127.0.0.1 - - [03/Nov/2025 14:51:42] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:10:39,407 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:10:39,741 - INFO -  * Restarting with stat
+2025-11-03 15:26:21,447 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:26:21,448 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:26:21,449 - INFO -  * Restarting with stat
+2025-11-03 15:26:22,073 - WARNING -  * Debugger is active!
+2025-11-03 15:26:22,076 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:26:24,142 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:24] "[33mGET /profile HTTP/1.1[0m" 404 -
+2025-11-03 15:26:29,247 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+2025-11-03 15:26:29,489 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:26:29,493 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:26:29,533 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=console.png&s=nxm20Qc8aFyyyLNCm4oD HTTP/1.1" 200 -
+2025-11-03 15:26:29,546 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:29] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:26:33,232 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-03 15:26:33,260 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:26:33,262 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:26:33,276 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=nxm20Qc8aFyyyLNCm4oD HTTP/1.1" 200 -
+2025-11-03 15:26:33,293 - INFO - 127.0.0.1 - - [03/Nov/2025 15:26:33] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:28:42,358 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:28:42,509 - INFO -  * Restarting with stat
+2025-11-03 15:32:27,264 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:32:27,264 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:32:27,265 - INFO -  * Restarting with stat
+2025-11-03 15:32:28,005 - WARNING -  * Debugger is active!
+2025-11-03 15:32:28,007 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:32:31,919 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:31] "GET / HTTP/1.1" 200 -
+2025-11-03 15:32:32,074 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,076 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,077 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,080 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,080 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,309 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,626 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,628 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,628 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:32:32,644 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:32] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:32:38,836 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "[35m[1mGET /profile HTTP/1.1[0m" 500 -
+2025-11-03 15:32:38,898 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-03 15:32:38,902 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-03 15:32:38,933 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=egXOTVEpC1Ci9r1ZG6il HTTP/1.1" 200 -
+2025-11-03 15:32:38,955 - INFO - 127.0.0.1 - - [03/Nov/2025 15:32:38] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-03 15:35:54,637 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:35:54,915 - INFO -  * Restarting with stat
+2025-11-03 15:35:55,882 - WARNING -  * Debugger is active!
+2025-11-03 15:35:55,885 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:35:59,326 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:35:59,327 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:35:59,327 - INFO -  * Restarting with stat
+2025-11-03 15:35:59,949 - WARNING -  * Debugger is active!
+2025-11-03 15:35:59,951 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:36:04,799 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:04] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:36:05,098 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,104 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "GET /static/css/profile_recommendations.css HTTP/1.1" 200 -
+2025-11-03 15:36:05,112 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "GET /static/js/profile_recommendations.js HTTP/1.1" 200 -
+2025-11-03 15:36:05,115 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,121 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,127 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,128 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,129 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,130 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,132 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,149 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:36:05,233 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:05] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:36:08,310 - INFO - 127.0.0.1 - - [03/Nov/2025 15:36:08] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:42:23,105 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:42:23,395 - INFO -  * Restarting with stat
+2025-11-03 15:42:24,464 - WARNING -  * Debugger is active!
+2025-11-03 15:42:24,467 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:43:02,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:43:02,299 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:43:02,300 - INFO -  * Restarting with stat
+2025-11-03 15:43:02,945 - WARNING -  * Debugger is active!
+2025-11-03 15:43:02,947 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:43:08,828 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:43:08,992 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:08,998 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:08] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,002 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,007 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,008 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,015 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,016 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,016 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,019 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,022 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,036 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:09,059 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:09] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:12,051 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:12] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,696 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "GET /reading-history HTTP/1.1" 200 -
+2025-11-03 15:43:22,745 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,750 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,751 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,754 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,758 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,772 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,839 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,869 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,870 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:22,872 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:22] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,144 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:43:31,183 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,186 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,190 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,194 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,198 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,201 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:31,225 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:31] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,119 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,186 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,192 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,194 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:43:32,202 - INFO - 127.0.0.1 - - [03/Nov/2025 15:43:32] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:44:51,968 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:44:52,309 - INFO -  * Restarting with stat
+2025-11-03 15:44:53,284 - WARNING -  * Debugger is active!
+2025-11-03 15:44:53,287 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:47:28,487 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 15:47:28,487 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 15:47:28,489 - INFO -  * Restarting with stat
+2025-11-03 15:47:29,113 - WARNING -  * Debugger is active!
+2025-11-03 15:47:29,116 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:47:37,682 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "GET /profile HTTP/1.1" 200 -
+2025-11-03 15:47:37,845 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,850 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,854 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,859 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,864 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,868 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,868 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,870 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,872 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,873 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,884 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 15:47:37,889 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:37] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 15:47:40,977 - INFO - 127.0.0.1 - - [03/Nov/2025 15:47:40] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 15:59:09,373 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:59:09,745 - INFO -  * Restarting with stat
+2025-11-03 15:59:11,343 - WARNING -  * Debugger is active!
+2025-11-03 15:59:11,347 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:59:24,620 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:59:24,794 - INFO -  * Restarting with stat
+2025-11-03 15:59:26,082 - WARNING -  * Debugger is active!
+2025-11-03 15:59:26,087 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 15:59:59,239 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 15:59:59,447 - INFO -  * Restarting with stat
+2025-11-03 16:00:00,784 - WARNING -  * Debugger is active!
+2025-11-03 16:00:00,787 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:00:10,005 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:00:10,206 - INFO -  * Restarting with stat
+2025-11-03 16:00:11,510 - WARNING -  * Debugger is active!
+2025-11-03 16:00:11,513 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:00:16,647 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:00:16,809 - INFO -  * Restarting with stat
+2025-11-03 16:00:18,099 - WARNING -  * Debugger is active!
+2025-11-03 16:00:18,103 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:00:21,160 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:00:21,385 - INFO -  * Restarting with stat
+2025-11-03 16:00:22,649 - WARNING -  * Debugger is active!
+2025-11-03 16:00:22,653 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:01:22,556 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 16:01:22,557 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 16:01:22,559 - INFO -  * Restarting with stat
+2025-11-03 16:01:23,625 - WARNING -  * Debugger is active!
+2025-11-03 16:01:23,642 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:01:27,256 - INFO - 127.0.0.1 - - [03/Nov/2025 16:01:27] "[35m[1mGET /profile HTTP/1.1[0m" 500 -
+2025-11-03 16:01:27,430 - INFO - 127.0.0.1 - - [03/Nov/2025 16:01:27] "[36mGET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-11-03 16:01:27,431 - INFO - 127.0.0.1 - - [03/Nov/2025 16:01:27] "[36mGET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-11-03 16:01:27,457 - INFO - 127.0.0.1 - - [03/Nov/2025 16:01:27] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=8n6dZDjsimKypir7wUsv HTTP/1.1" 200 -
+2025-11-03 16:01:27,487 - INFO - 127.0.0.1 - - [03/Nov/2025 16:01:27] "[36mGET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-03 16:01:51,543 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:01:51,930 - INFO -  * Restarting with stat
+2025-11-03 16:01:53,045 - WARNING -  * Debugger is active!
+2025-11-03 16:01:53,049 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:02:01,822 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:01] "GET /profile HTTP/1.1" 200 -
+2025-11-03 16:02:02,628 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,650 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,652 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,650 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,664 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,680 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,700 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,702 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,711 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,728 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,741 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 16:02:02,795 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:02] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 16:02:08,145 - INFO - 127.0.0.1 - - [03/Nov/2025 16:02:08] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 16:03:29,174 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:03:29,502 - INFO -  * Restarting with stat
+2025-11-03 16:03:30,944 - WARNING -  * Debugger is active!
+2025-11-03 16:03:30,947 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:03:41,282 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:03:41,546 - INFO -  * Restarting with stat
+2025-11-03 16:03:42,681 - WARNING -  * Debugger is active!
+2025-11-03 16:03:42,686 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:03:49,402 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:49] "GET /profile HTTP/1.1" 200 -
+2025-11-03 16:03:50,206 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,221 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,263 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,271 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,276 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,279 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,279 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,302 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,303 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,318 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,327 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 16:03:50,337 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:50] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 16:03:52,002 - INFO - 127.0.0.1 - - [03/Nov/2025 16:03:52] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 16:06:08,325 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:06:08,648 - INFO -  * Restarting with stat
+2025-11-03 16:06:09,964 - WARNING -  * Debugger is active!
+2025-11-03 16:06:09,970 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:06:17,127 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:06:17,295 - INFO -  * Restarting with stat
+2025-11-03 16:06:18,796 - WARNING -  * Debugger is active!
+2025-11-03 16:06:18,799 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:07:57,882 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:07:58,042 - INFO -  * Restarting with stat
+2025-11-03 16:07:59,315 - WARNING -  * Debugger is active!
+2025-11-03 16:07:59,319 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:08:11,555 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\app\\routes.py', reloading
+2025-11-03 16:08:11,711 - INFO -  * Restarting with stat
+2025-11-03 16:08:12,747 - WARNING -  * Debugger is active!
+2025-11-03 16:08:12,751 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:08:43,370 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 16:08:43,371 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-03 16:08:43,372 - INFO -  * Restarting with stat
+2025-11-03 16:08:44,583 - WARNING -  * Debugger is active!
+2025-11-03 16:08:44,586 - INFO -  * Debugger PIN: 128-007-526
+2025-11-03 16:08:52,516 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:52] "GET /profile HTTP/1.1" 200 -
+2025-11-03 16:08:53,284 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,314 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/css/profile_recommendations.css HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,373 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,375 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,375 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,380 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,428 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,430 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,431 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/js/profile_recommendations.js HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,447 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,453 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,460 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 16:08:53,472 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:53] "[36mGET /static/assets/default_banner.png HTTP/1.1[0m" 304 -
+2025-11-03 16:08:57,769 - INFO - 127.0.0.1 - - [03/Nov/2025 16:08:57] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,824 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "GET /manga/4af2a8ae-6d71-44b1-95d7-9fb30a436e7b HTTP/1.1" 200 -
+2025-11-03 16:09:27,902 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,906 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,909 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,914 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,922 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,925 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,934 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,936 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,946 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,948 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,957 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,960 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,961 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,966 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-11-03 16:09:27,969 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:27] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-11-03 16:09:28,050 - INFO - 127.0.0.1 - - [03/Nov/2025 16:09:28] "GET /reader/4af2a8ae-6d71-44b1-95d7-9fb30a436e7b/chapters?sort=asc HTTP/1.1" 200 -
+2025-11-03 16:10:21,449 - INFO - 127.0.0.1 - - [03/Nov/2025 16:10:21] "GET /profile HTTP/1.1" 200 -

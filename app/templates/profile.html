@@ -4,29 +4,29 @@
 
 {% block content %}
 <div class="profile-page py-5">
+
     <!-- Banner -->
     <div class="profile-banner">
         <div class="profile-header d-flex align-items-end p-4">
             <!-- Avatar -->
             <img src="{{ user.Avatar or url_for('static', filename='assets/default_avatar.png') }}"
-                alt="Avatar of {{ user.Username }}" class="profile-avatar me-3 img-fluid"
-                style="width: 100px; height: 100px; object-fit: cover;">
+                 alt="Avatar of {{ user.Username }}"
+                 class="profile-avatar me-3 img-fluid"
+                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
 
             <!-- Username + Role -->
             <div>
-                <h2 class="text-white fw-bold" style="color: black; -webkit-text-stroke: 1px black;">{{ user.Username }}
-                </h2>
+                <h2 class="text-white fw-bold" style="-webkit-text-stroke: 1px black;">{{ user.Username }}</h2>
                 <span class="badge bg-secondary">{{ user.Role }}</span>
             </div>
         </div>
     </div>
 
     <!-- Actions -->
-    <div class="profile-actions d-flex gap-3 mt-4 px-4">
+    <div class="profile-actions d-flex gap-3 mt-4 px-4 flex-wrap">
         <a href="{{ url_for('main.follow', user_id=user.UserId) }}" class="btn btn-signin">Follow</a>
         <a href="{{ url_for('main.message', user_id=user.UserId) }}" class="btn btn-secondary">Message</a>
         <a href="{{ url_for('main.report', user_id=user.UserId) }}" class="btn btn-dark">Report</a>
-        <!-- NEW: Edit Profile -->
         {% if current_user.is_authenticated and current_user.UserId == user.UserId %}
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
             Edit Profile
@@ -36,15 +36,15 @@
 
     <!-- Info Section -->
     <div class="profile-info mt-4 px-4">
-        <div class="info-item d-flex justify-content-between py-2">
+        <div class="info-item d-flex justify-content-between py-2 border-bottom border-dark">
             <span class="text-muted">User ID</span>
             <span class="text-white">{{ user.UserId }}</span>
         </div>
-        <div class="info-item d-flex justify-content-between py-2">
+        <div class="info-item d-flex justify-content-between py-2 border-bottom border-dark">
             <span class="text-muted">Email</span>
             <span class="text-white">{{ user.Email }}</span>
         </div>
-        <div class="info-item d-flex justify-content-between py-2">
+        <div class="info-item d-flex justify-content-between py-2 border-bottom border-dark">
             <span class="text-muted">Created At</span>
             <span class="text-white">{{ user.CreatedAt.strftime("%B %d, %Y") if user.CreatedAt else "N/A" }}</span>
         </div>
@@ -57,6 +57,34 @@
                 <span class="text-success">Active</span>
                 {% endif %}
             </span>
+        </div>
+    </div>
+
+    <!-- === TABS === -->
+    <ul class="nav nav-tabs mt-4 px-4" id="profileTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab"
+                    data-bs-target="#dashboard" type="button" role="tab">
+                Dashboard
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="recommendations-tab" data-bs-toggle="tab"
+                    data-bs-target="#recommendations" type="button" role="tab">
+                Recommendations
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-3 px-4" id="profileTabContent">
+        <!-- Dashboard -->
+        <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+            {% include "profile_dashboard.html" %}
+        </div>
+
+        <!-- Recommendations -->
+        <div class="tab-pane fade" id="recommendations" role="tabpanel">
+            {% include "profile_recommendations.html" %}
         </div>
     </div>
 </div>
@@ -93,7 +121,4 @@
         </form>
     </div>
 </div>
-
-{% include "profile_dashboard.html" %}
-
 {% endblock %}
