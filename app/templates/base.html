@@ -121,57 +121,6 @@
                 </div>
             </nav>
 
-            {% if top_mangas %}
-            <div class="banner-container">
-                {% for manga in top_mangas %}
-                <div class="banner-slide {% if loop.first %}active{% endif %}" style="--bg-image: url('{{ manga.cover_url }}')">
-                    <div class="banner-content-wrapper">
-                        <a href="{{ url_for('manga.manga_detail', manga_id=manga.manga_id) }}">
-                            <img src="{{ manga.cover_url }}" alt="{{ manga.title }}" class="banner-cover-art">
-                        </a>
-                        <div class="banner-info">
-                            <h2><a href="{{ url_for('manga.manga_detail', manga_id=manga.manga_id) }}">{{ manga.title }}</a></h2>
-                            
-                            <div class="creators">
-                                {% if manga.authors == manga.artists and manga.authors %}
-                                    <span>Story & Art by <strong>{{ manga.authors|join(', ') }}</strong></span>
-                                {% else %}
-                                    {% if manga.authors %}
-                                        <span>Story by <strong>{{ manga.authors|join(', ') }}</strong></span>
-                                    {% endif %}
-                                    {% if manga.artists %}
-                                        <span>Art by <strong>{{ manga.artists|join(', ') }}</strong></span>
-                                    {% endif %}
-                                {% endif %}
-                            </div>
-                        
-                            <div class="banner-meta">
-                                {% if manga.demographic %}
-                                    <span class="meta-tag demographic-tag">{{ manga.demographic }}</span>
-                                {% endif %}
-                                {% if manga.status %}
-                                    <span class="meta-tag status-tag">{{ manga.status }}</span>
-                                {% endif %}
-                            </div>
-                        
-                            <p class="description">{{ manga.description }}</p>
-                            
-                            </div>
-                    </div>
-                </div>
-                {% endfor %}
-                
-                <div class="banner-arrow left" id="banner-arrow-left"><i class="bi bi-chevron-left"></i></div>
-                <div class="banner-arrow right" id="banner-arrow-right"><i class="bi bi-chevron-right"></i></div>           
-
-                <div class="banner-dots">
-                    {% for manga in top_mangas %}
-                    <span class="banner-dot {% if loop.first %}active{% endif %}"></span>
-                    {% endfor %}
-                </div>
-            </div>
-            {% endif %}
-
             <!-- Page content-->
             <div class="container-fluid">
                 {% block content %}

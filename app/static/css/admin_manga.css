@@ -16,3 +16,36 @@
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+.pagination .page-link {
+    background-color: #343a40;
+    color: #fff;
+    border: 1px solid #444;
+}
+.pagination .page-link:hover {
+    background-color: #495057;
+}
+.pagination .active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.tag-checkbox-container label {
+    display: block;
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+.tag-checkbox-container .form-check {
+    margin: 2px 0;
+}
+.tag-checkbox-container .tag-group {
+    font-weight: bold;
+    color: #ffc107;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+.tag-checkbox-container .tag-item {
+    margin-left: 16px;
+    font-weight: normal;
+    color: #ddd;
+}

@@ -354,7 +354,7 @@ def admin_comments():
 
 
 # ==========================
-# Quản lý manga
+# Query manga từ API
 # ==========================
 @admin_bp.route('/manga', methods=['GET'])
 @login_required
@@ -362,28 +362,67 @@ def admin_comments():
 def manga():
     return render_template('admin_manga.html')
 
+# Helper function to fetch manga tags from Mangadex API
+def fetch_mangadex_tags():
+    try:
+        response = request_api("/manga/tag")
+        return response.get('data', [])
+    except Exception as e:
+        flash(f'Error fetching tags from Mangadex: {str(e)}', 'danger')
+        return []
+
+# Helper function to fetch manga demographics, content ratings, statuses (hardcoded or from API if needed)
+def fetch_mangadex_options():
+    demographics = ["shounen", "shoujo", "seinen", "josei", "none"]
+    content_ratings = ["safe", "suggestive", "erotica", "pornographic"]
+    statuses = ["ongoing", "completed", "hiatus", "cancelled"]
+    return demographics, content_ratings, statuses
+
+@admin_bp.route('/manga/options', methods=['GET'])
+@login_required
+@admin_required
+def manga_options():
+    tags = fetch_mangadex_tags()
+    demographics, content_ratings, statuses = fetch_mangadex_options()
+    return jsonify({
+        'tags': tags,
+        'demographics': demographics,
+        'content_ratings': content_ratings,
+        'statuses': statuses
+    })
+
 @admin_bp.route('/manga/search', methods=['POST'])
 @login_required
 @admin_required
 def manga_search():
     data = request.get_json()
-    mode = data.get('mode')
-    query = data.get('query')
+    params = {
+        "limit": data.get('limit', 100),
+        "offset": data.get('offset', 0),
+        "title": data.get('title'),
+        "includedTags[]": data.get('include_tags', []),
+        "excludedTags[]": data.get('exclude_tags', []),
+        "publicationDemographic[]": data.get('demographics', []),
+        "contentRating[]": data.get('content_ratings', []),
+        "status[]": data.get('statuses', []),
+        "year": data.get('year'),
+        "includes[]": ["cover_art", "author", "artist"]
+    }
+    # Clean up None or empty params
+    params = {k: v for k, v in params.items() if v}
 
-    if not mode or not query:
-        return jsonify({'error': 'Thiếu mode hoặc query'}), 400
+    # Handle order
+    order = data.get('order', {})
+    for key, value in order.items():
+        params[f"order[{key}]"] = value
 
     try:
-        if mode == 'title':
-            mangas = search_manga(query)
-        elif mode == 'uuid':
-            response = request_api(f"/manga/{query.lower()}", params={"includes[]": ["cover_art", "author", "artist"]})
-            mangas = [response['data']] if response.get('data') else []
-        else:
-            return jsonify({'error': 'Mode không hợp lệ'}), 400
+        response = request_api("/manga", params=params)
+        mangas = response.get('data', [])
+        total = response.get('total', 0)
 
         if not mangas:
-            return jsonify({'mangas': [], 'message': 'Không tìm thấy manga'})
+            return jsonify({'mangas': [], 'total': 0, 'message': 'Không tìm thấy manga'})
 
         results = []
         for manga in mangas:
@@ -393,21 +432,24 @@ def manga_search():
             covers_db = Cover.query.filter_by(manga_id=manga_id).count()
             updated_at = manga_db.UpdatedAt.strftime('%Y-%m-%d %H:%M:%S') if manga_db and manga_db.UpdatedAt else None
 
-            chapters_api = len(fetch_chapters(manga_id))
-            covers_api = len(fetch_covers(manga_id))
+            # Optimize: Chỉ count chapters và covers từ API mà không fetch full data
+            chapters_api_params = {"manga": manga_id.lower(), "limit": 1}
+            chapters_api_count = request_api("/chapter", params=chapters_api_params).get('total', 0)
+            covers_api_params = {"manga[]": manga_id.lower(), "limit": 1}
+            covers_api_count = request_api("/cover", params=covers_api_params).get('total', 0)
 
             results.append({
                 'manga_id': manga_id,
                 'title': manga['attributes']['title'].get('en', 'Unknown'),
                 'chapters_db': chapters_db,
-                'chapters_api': chapters_api,
+                'chapters_api': chapters_api_count,
                 'covers_db': covers_db,
-                'covers_api': covers_api,
+                'covers_api': covers_api_count,
                 'updated_at': updated_at,
                 'in_db': manga_db is not None
             })
 
-        return jsonify({'mangas': results})
+        return jsonify({'mangas': results, 'total': total})
     except requests.exceptions.RequestException as e:
         return jsonify({'error': 'Lỗi khi gọi API MangaDex: ' + str(e)}), 503
     except pyodbc.Error as e:
@@ -446,7 +488,7 @@ def manga_action():
 
 from .mangadex_api import update_manga_from_mangadex_by_id
 # ==========================
-# Quản lý Manga
+# Quản lý Manga trong DB
 # ==========================
 
 def load_admin_options():

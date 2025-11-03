@@ -4,22 +4,74 @@
 <div class="container mt-4">
     <h2 class="text-white mb-4">Manga Management</h2>
 
-    <!-- Search Bar -->
+    <!-- Advanced Search Form -->
     <div class="card bg-dark text-white mb-4">
         <div class="card-body">
             <form id="manga-search-form">
-                <div class="row">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="title-input">Title</label>
+                        <input type="text" class="form-control bg-dark text-white" id="title-input" placeholder="Enter manga title">
+                    </div>
                     <div class="col-md-3">
-                        <select class="form-select bg-dark text-white" id="search-mode">
-                            <option value="title">Search by title</option>
-                            <option value="uuid">Search by UUID</option>
+                        <label for="year-input">Year</label>
+                        <input type="number" class="form-control bg-dark text-white" id="year-input" placeholder="e.g., 2023">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="order-select">Order By</label>
+                        <select class="form-select bg-dark text-white" id="order-select">
+                            <option value="">Default (Latest Uploaded)</option>
+                            <option value="rating.desc">Rating Desc</option>
+                            <option value="followedCount.desc">Follows Desc</option>
+                            <option value="year.desc">Year Desc</option>
+                            <option value="title.asc">Title Asc</option>
                         </select>
                     </div>
+                </div>
+
+                <!-- Include & Exclude Tags (Checkbox) -->
+                <div class="row mb-3">
                     <div class="col-md-6">
-                        <input type="text" class="form-control bg-dark text-white" id="search-input" placeholder="Enter manga title or UUID">
+                        <label>Include Tags</label>
+                        <div class="tag-checkbox-container border rounded p-3" style="max-height: 200px; overflow-y: auto;">
+                            <input type="text" class="form-control form-control-sm mb-2" placeholder="Search tags..." id="include-search">
+                            <div id="include-tags-list"></div>
+                            <div class="text-end mt-2">
+                                <small><a href="#" class="text-warning" id="clear-include">Clear all</a></small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <button type="submit" class="btn btn-primary w-100" id="search-btn">Search</button>
+                    <div class="col-md-6">
+                        <label>Exclude Tags</label>
+                        <div class="tag-checkbox-container border rounded p-3" style="max-height: 200px; overflow-y: auto;">
+                            <input type="text" class="form-control form-control-sm mb-2" placeholder="Search tags..." id="exclude-search">
+                            <div id="exclude-tags-list"></div>
+                            <div class="text-end mt-2">
+                                <small><a href="#" class="text-warning" id="clear-exclude">Clear all</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Filters -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label>Demographics</label>
+                        <select class="form-select bg-dark text-white" id="demographics" multiple></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Content Ratings</label>
+                        <select class="form-select bg-dark text-white" id="content-ratings" multiple></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Statuses</label>
+                        <select class="form-select bg-dark text-white" id="statuses" multiple></select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary w-100 w-md-auto" id="search-btn">Search</button>
                     </div>
                 </div>
             </form>
@@ -41,13 +93,18 @@
                     </tr>
                 </thead>
                 <tbody id="manga-table-body">
-                    <!-- Search results will be dynamically added by JavaScript -->
+                    <!-- Results loaded here -->
                 </tbody>
             </table>
+
+            <!-- Pagination -->
+            <nav aria-label="Pagination">
+                <ul class="pagination justify-content-center" id="pagination-controls"></ul>
+            </nav>
         </div>
     </div>
 
-    <!-- Modal for Download/Update Confirmation -->
+    <!-- Action Confirmation Modal -->
     <div class="modal fade" id="action-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
@@ -56,7 +113,6 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modal-body">
-                    <!-- Dynamic content from JS -->
                     <div id="loading-spinner" class="d-none text-center">
                         <div class="spinner-border text-primary" role="status">
                             <span class="visually-hidden">Loading...</span>
@@ -72,6 +128,34 @@
         </div>
     </div>
 </div>
+
+<!-- CSS for Tags -->
+<style>
+    .tag-checkbox-container label {
+        display: block;
+        margin: 4px 0;
+        font-size: 0.9rem;
+    }
+    .tag-checkbox-container .form-check {
+        margin: 2px 0;
+    }
+    .tag-checkbox-container .tag-group {
+        font-weight: bold;
+        color: #ffc107;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+    }
+    .tag-checkbox-container .tag-item {
+        margin-left: 16px;
+        font-weight: normal;
+        color: #ddd;
+    }
+    .tag-checkbox-container .form-check-input:checked {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+</style>
 
 <script src="{{ url_for('static', filename='js/admin_manga.js') }}"></script>
 {% endblock %}
