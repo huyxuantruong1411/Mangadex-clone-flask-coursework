@@ -13872,3 +13872,5 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-06 21:07:41,251 - INFO -  * Debugger PIN: 128-007-526
 2025-11-06 21:27:02,530 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config.py', reloading
 2025-11-06 21:27:02,662 - INFO -  * Restarting with stat
+2025-11-06 21:27:03,562 - WARNING -  * Debugger is active!
+2025-11-06 21:27:03,565 - INFO -  * Debugger PIN: 128-007-526

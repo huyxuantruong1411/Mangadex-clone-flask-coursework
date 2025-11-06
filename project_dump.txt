@@ -424,6 +424,10 @@
       "type": "file"
     },
     {
+      "name": "config_deploy.py",
+      "type": "file"
+    },
+    {
       "name": "docker-compose.yml",
       "type": "file"
     },
@@ -434,12 +438,11 @@
     {
       "name": "init-db",
       "type": "directory",
-      "children": [
-        {
-          "name": "init.sql",
-          "type": "file"
-        }
-      ]
+      "children": []
+    },
+    {
+      "name": "init-db.sql",
+      "type": "file"
     },
     {
       "name": "manga_db_update.log",
@@ -571,10 +574,11 @@ D:\DACSN\coursework\mini-demo/
 ├── backup/
 │   └── MangaLibrary.bak
 ├── config.py
+├── config_deploy.py
 ├── docker-compose.yml
 ├── dump.py
 ├── init-db/
-│   └── init.sql
+├── init-db.sql
 ├── manga_db_update.log
 ├── project_dump.txt
 ├── requirements.txt
@@ -602,6 +606,8 @@ config.py
 *.pickle
 *.bak
 
+pending-features/
+
 # Virtual environment
 venv/
 .env/
@@ -619,19 +625,59 @@ Thumbs.db
 
 *.joblib
 --- File: D:\DACSN\coursework\mini-demo\config.py ---
+import os
 import urllib
 
 class Config:
-    SECRET_KEY = "secret_key_demo"
+    # Lấy SECRET_KEY từ biến môi trường
+    SECRET_KEY = os.environ.get("SECRET_KEY", "day_la_secret_key_mac_dinh_cho_dev")
 
-    DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = "DESKTOP-HKIPI1M"
-    DATABASE = "MangaLibrary"
+    # Lấy thông tin database từ biến môi trường
+    # Các giá trị mặc định (sau dấu phẩy) chỉ dùng khi chạy local
+    DRIVER = os.environ.get("SQL_DRIVER", "ODBC Driver 18 for SQL Server")
+    SERVER = os.environ.get("SQL_SERVER") # Sẽ được Render cung cấp
+    DATABASE = os.environ.get("SQL_DATABASE", "MangaLibrary")
+    USERNAME = os.environ.get("SQL_USERNAME", "sa")
+    PASSWORD = os.environ.get("SQL_PASSWORD") # Sẽ được set trên Render
+
+    # Tạo connection string mới, sử dụng SQL Server Authentication (Username/Password)
+    # Bỏ 'Trusted_Connection=yes'
     connection_string = (
-        f"DRIVER={{ODBC Driver 17 for SQL Server}};"  # Sử dụng {{}} để escape
+        f"DRIVER={{{DRIVER}}};"
         f"SERVER={SERVER};"
         f"DATABASE={DATABASE};"
-        f"Trusted_Connection=yes;"
+        f"UID={USERNAME};"
+        f"PWD={PASSWORD};"
+        f"TrustServerCertificate=yes;" # Nên thêm dòng này khi deploy
+    )
+
+    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+--- File: D:\DACSN\coursework\mini-demo\config_deploy.py ---
+import os
+import urllib
+
+class Config:
+    # Lấy SECRET_KEY từ biến môi trường
+    SECRET_KEY = os.environ.get("SECRET_KEY", "day_la_secret_key_mac_dinh_cho_dev")
+
+    # Lấy thông tin database từ biến môi trường
+    # Các giá trị mặc định (sau dấu phẩy) chỉ dùng khi chạy local
+    DRIVER = os.environ.get("SQL_DRIVER", "ODBC Driver 18 for SQL Server")
+    SERVER = os.environ.get("SQL_SERVER") # Sẽ được Render cung cấp
+    DATABASE = os.environ.get("SQL_DATABASE", "MangaLibrary")
+    USERNAME = os.environ.get("SQL_USERNAME", "sa")
+    PASSWORD = os.environ.get("SQL_PASSWORD") # Sẽ được set trên Render
+
+    # Tạo connection string mới, sử dụng SQL Server Authentication (Username/Password)
+    # Bỏ 'Trusted_Connection=yes'
+    connection_string = (
+        f"DRIVER={{{DRIVER}}};"
+        f"SERVER={SERVER};"
+        f"DATABASE={DATABASE};"
+        f"UID={USERNAME};"
+        f"PWD={PASSWORD};"
+        f"TrustServerCertificate=yes;" # Nên thêm dòng này khi deploy
     )
 
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
@@ -809,6 +855,8 @@ if __name__ == "__main__":
     current_dir = os.getcwd()
     dump_project(current_dir, OUTPUT_FILE)
     print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
+
+--- File: D:\DACSN\coursework\mini-demo\init-db.sql ---
 
 --- File: D:\DACSN\coursework\mini-demo\manga_db_update.log ---
 2025-09-30 01:55:16,822 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
@@ -14678,6 +14726,15 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-06 20:53:30,640 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
 2025-11-06 20:53:30,708 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
 2025-11-06 20:53:32,093 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:32] "GET /manga/options HTTP/1.1" 200 -
+2025-11-06 20:58:19,626 - INFO - 127.0.0.1 - - [06/Nov/2025 20:58:19] "POST /manga/search HTTP/1.1" 200 -
+2025-11-06 21:07:38,799 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config_deploy.py', reloading
+2025-11-06 21:07:38,991 - INFO -  * Restarting with stat
+2025-11-06 21:07:41,249 - WARNING -  * Debugger is active!
+2025-11-06 21:07:41,251 - INFO -  * Debugger PIN: 128-007-526
+2025-11-06 21:27:02,530 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config.py', reloading
+2025-11-06 21:27:02,662 - INFO -  * Restarting with stat
+2025-11-06 21:27:03,562 - WARNING -  * Debugger is active!
+2025-11-06 21:27:03,565 - INFO -  * Debugger PIN: 128-007-526
 
 --- File: D:\DACSN\coursework\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
@@ -15106,6 +15163,10 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
       "type": "file"
     },
     {
+      "name": "config_deploy.py",
+      "type": "file"
+    },
+    {
       "name": "docker-compose.yml",
       "type": "file"
     },
@@ -15116,12 +15177,11 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
     {
       "name": "init-db",
       "type": "directory",
-      "children": [
-        {
-          "name": "init.sql",
-          "type": "file"
-        }
-      ]
+      "children": []
+    },
+    {
+      "name": "init-db.sql",
+      "type": "file"
     },
     {
       "name": "manga_db_update.log",
@@ -15253,10 +15313,11 @@ D:\DACSN\coursework\mini-demo/
 ├── backup/
 │   └── MangaLibrary.bak
 ├── config.py
+├── config_deploy.py
 ├── docker-compose.yml
 ├── dump.py
 ├── init-db/
-│   └── init.sql
+├── init-db.sql
 ├── manga_db_update.log
 ├── project_dump.txt
 ├── requirements.txt
@@ -15284,6 +15345,8 @@ config.py
 *.pickle
 *.bak
 
+pending-features/
+
 # Virtual environment
 venv/
 .env/
@@ -15301,19 +15364,59 @@ Thumbs.db
 
 *.joblib
 --- File: D:\DACSN\coursework\mini-demo\config.py ---
+import os
 import urllib
 
 class Config:
-    SECRET_KEY = "secret_key_demo"
+    # Lấy SECRET_KEY từ biến môi trường
+    SECRET_KEY = os.environ.get("SECRET_KEY", "day_la_secret_key_mac_dinh_cho_dev")
 
-    DRIVER = "ODBC Driver 17 for SQL Server"
-    SERVER = "DESKTOP-HKIPI1M"
-    DATABASE = "MangaLibrary"
+    # Lấy thông tin database từ biến môi trường
+    # Các giá trị mặc định (sau dấu phẩy) chỉ dùng khi chạy local
+    DRIVER = os.environ.get("SQL_DRIVER", "ODBC Driver 18 for SQL Server")
+    SERVER = os.environ.get("SQL_SERVER") # Sẽ được Render cung cấp
+    DATABASE = os.environ.get("SQL_DATABASE", "MangaLibrary")
+    USERNAME = os.environ.get("SQL_USERNAME", "sa")
+    PASSWORD = os.environ.get("SQL_PASSWORD") # Sẽ được set trên Render
+
+    # Tạo connection string mới, sử dụng SQL Server Authentication (Username/Password)
+    # Bỏ 'Trusted_Connection=yes'
     connection_string = (
-        f"DRIVER={{ODBC Driver 17 for SQL Server}};"  # Sử dụng {{}} để escape
+        f"DRIVER={{{DRIVER}}};"
         f"SERVER={SERVER};"
         f"DATABASE={DATABASE};"
-        f"Trusted_Connection=yes;"
+        f"UID={USERNAME};"
+        f"PWD={PASSWORD};"
+        f"TrustServerCertificate=yes;" # Nên thêm dòng này khi deploy
+    )
+
+    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+--- File: D:\DACSN\coursework\mini-demo\config_deploy.py ---
+import os
+import urllib
+
+class Config:
+    # Lấy SECRET_KEY từ biến môi trường
+    SECRET_KEY = os.environ.get("SECRET_KEY", "day_la_secret_key_mac_dinh_cho_dev")
+
+    # Lấy thông tin database từ biến môi trường
+    # Các giá trị mặc định (sau dấu phẩy) chỉ dùng khi chạy local
+    DRIVER = os.environ.get("SQL_DRIVER", "ODBC Driver 18 for SQL Server")
+    SERVER = os.environ.get("SQL_SERVER") # Sẽ được Render cung cấp
+    DATABASE = os.environ.get("SQL_DATABASE", "MangaLibrary")
+    USERNAME = os.environ.get("SQL_USERNAME", "sa")
+    PASSWORD = os.environ.get("SQL_PASSWORD") # Sẽ được set trên Render
+
+    # Tạo connection string mới, sử dụng SQL Server Authentication (Username/Password)
+    # Bỏ 'Trusted_Connection=yes'
+    connection_string = (
+        f"DRIVER={{{DRIVER}}};"
+        f"SERVER={SERVER};"
+        f"DATABASE={DATABASE};"
+        f"UID={USERNAME};"
+        f"PWD={PASSWORD};"
+        f"TrustServerCertificate=yes;" # Nên thêm dòng này khi deploy
     )
 
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
@@ -15491,6 +15594,8 @@ if __name__ == "__main__":
     current_dir = os.getcwd()
     dump_project(current_dir, OUTPUT_FILE)
     print(f"✅ Đã xuất toàn bộ file (trừ venv) + cây thư mục JSON/ASCII vào {OUTPUT_FILE}")
+
+--- File: D:\DACSN\coursework\mini-demo\init-db.sql ---
 
 --- File: D:\DACSN\coursework\mini-demo\manga_db_update.log ---
 2025-09-30 01:55:16,822 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
@@ -29360,6 +29465,15 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-06 20:53:30,640 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
 2025-11-06 20:53:30,708 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
 2025-11-06 20:53:32,093 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:32] "GET /manga/options HTTP/1.1" 200 -
+2025-11-06 20:58:19,626 - INFO - 127.0.0.1 - - [06/Nov/2025 20:58:19] "POST /manga/search HTTP/1.1" 200 -
+2025-11-06 21:07:38,799 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config_deploy.py', reloading
+2025-11-06 21:07:38,991 - INFO -  * Restarting with stat
+2025-11-06 21:07:41,249 - WARNING -  * Debugger is active!
+2025-11-06 21:07:41,251 - INFO -  * Debugger PIN: 128-007-526
+2025-11-06 21:27:02,530 - INFO -  * Detected change in 'D:\\DACSN\\coursework\\mini-demo\\config.py', reloading
+2025-11-06 21:27:02,662 - INFO -  * Restarting with stat
+2025-11-06 21:27:03,562 - WARNING -  * Debugger is active!
+2025-11-06 21:27:03,565 - INFO -  * Debugger PIN: 128-007-526
 
 --- File: D:\DACSN\coursework\mini-demo\README.md ---
 # MangaDex Clone
@@ -56468,20 +56582,3 @@ document.addEventListener('DOMContentLoaded', function () {
 [Lỗi đọc file: 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte]
 
 === Folder: init-db ===
-
---- File: D:\DACSN\coursework\mini-demo\init-db\init.sql ---
-IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'MangaLibrary')
-BEGIN
-    CREATE DATABASE MangaLibrary;
-    PRINT 'Database MangaLibrary created.';
-END
-GO
-
-RESTORE DATABASE MangaLibrary
-FROM DISK = '/var/opt/mssql/backup/MangaLibrary.bak'
-WITH MOVE 'MangaLibrary' TO '/var/opt/mssql/data/MangaLibrary.mdf',
-     MOVE 'MangaLibrary_log' TO '/var/opt/mssql/data/MangaLibrary_log.ldf',
-     REPLACE;
-GO
-
-PRINT 'Restore MangaLibrary completed!';
