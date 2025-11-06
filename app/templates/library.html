@@ -5,14 +5,12 @@
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/library.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_to_list.css') }}">
-
 {% endblock %}
 
 {% block content %}
 <div class="container py-4 text-white">
     <h1 class="mb-4">Your Library</h1>
 
-    <!-- Tabs -->
     <ul class="nav nav-tabs" id="libraryTabs" role="tablist">
         <li class="nav-item">
             <button class="nav-link active" id="my-lists-tab" data-bs-toggle="tab" data-bs-target="#my-lists"
@@ -22,6 +20,10 @@
             <button class="nav-link" id="followed-lists-tab" data-bs-toggle="tab" data-bs-target="#followed-lists"
                 type="button" role="tab">Followed MDLists</button>
         </li>
+        <li class="nav-item">
+            <button class="nav-link" id="discover-tab" data-bs-toggle="tab" data-bs-target="#discover-lists"
+                type="button" role="tab">Discover</button>
+        </li>
     </ul>
 
     <div class="tab-content mt-3" id="libraryTabsContent">
@@ -29,8 +31,46 @@
             <button class="btn btn-primary mb-3" id="newListBtn">+ New MDList</button>
             <div id="myListsContainer" class="row g-3"></div>
         </div>
+        
         <div class="tab-pane fade" id="followed-lists" role="tabpanel">
             <div id="followedListsContainer" class="row g-3"></div>
+        </div>
+
+        <div class="tab-pane fade" id="discover-lists" role="tabpanel">
+            <div class="row mb-3 g-2">
+                <div class="col-md-6">
+                    <form id="discoverSearchForm">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Search public lists..." id="discoverSearchInput">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select bg-dark text-white border-secondary" id="discoverSortSelect">
+                        <option value="followers_desc">Most Followed</option>
+                        <option value="followers_asc">Least Followed</option>
+                        <option value="items_desc">Most Items</option>
+                        <option value="items_asc">Fewest Items</option>
+                        <option value="updated_desc" selected>Recently Updated</option>
+                        <option value="updated_asc">Oldest Updated</option>
+                        <option value="name_asc">Name: A to Z</option>
+                        <option value="name_desc">Name: Z to A</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <form id="discoverLimitForm" class="input-group" title="Set items per page">
+                        <input type="number" class="form-control bg-dark text-white border-secondary" id="discoverLimitInput" value="12" min="1" max="100" aria-label="Items per page">
+                        <button type="submit" class="btn btn-primary">Set</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="discoverListsContainer" class="row g-3">
+                </div>
+
+            <nav id="discoverPaginationContainer" class="mt-4" aria-label="Discover lists pagination">
+                </nav>
         </div>
     </div>
 </div>

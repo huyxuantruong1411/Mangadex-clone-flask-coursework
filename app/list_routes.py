@@ -4,7 +4,8 @@ from flask_login import login_required, current_user
 from app import db
 from app.models import List, ListManga, ListFollower, Manga, User, MangaCover
 from datetime import datetime
-from sqlalchemy import or_, func
+from sqlalchemy import asc, desc, or_, func
+from sqlalchemy.orm import joinedload
 import uuid
 import base64
 import requests
@@ -131,6 +132,110 @@ def get_lists():
 
     return jsonify({"my_lists": my_lists_serialized, "followed_lists": followed_serialized})
 
+
+# -------------------------
+# GET /api/lists/public (UPDATED FOR NEW FEATURES)
+# -------------------------
+@list_bp.route("/lists/public", methods=["GET"])
+@login_required
+def search_public_lists():
+    """
+    Endpoint mới để tìm kiếm, sắp xếp và phân trang qua tất cả các public lists
+    của những user khác.
+    """
+    try:
+        page = request.args.get("page", 1, type=int)
+        
+        # YÊU CẦU 2: Cho phép input limit, giới hạn từ 1-100
+        limit = request.args.get("limit", 12, type=int)
+        limit = max(1, min(limit, 100))  # Đảm bảo limit trong khoảng (1, 100)
+
+        sort = request.args.get("sort", "updated_desc")
+        search_query = request.args.get("q", "").strip()
+
+        # Base query: public lists, không phải của user hiện tại
+        base_q = (
+            db.session.query(List)
+            .join(User, User.UserId == List.UserId)
+            .options(joinedload(List.user))
+            .filter(
+                List.Visibility == "public",
+                List.UserId != current_user.UserId
+            )
+        )
+
+        # Filter theo search query (tên list hoặc mô tả)
+        if search_query:
+            like_term = f"%{search_query}%"
+            base_q = base_q.filter(
+                or_(
+                    List.Name.ilike(like_term),
+                    List.Description.ilike(like_term)
+                )
+            )
+
+        # Sắp xếp đầy đủ với hỗ trợ asc/desc
+        if '_' in sort:
+            field, direction = sort.rsplit('_', 1)
+            desc_mode = direction == 'desc'
+        else:
+            field, desc_mode = sort, True
+
+        order_func = desc if desc_mode else asc
+
+        if field == "followers":
+            base_q = base_q.order_by(order_func(List.FollowerCount))
+        elif field == "items":
+            base_q = base_q.order_by(order_func(List.ItemCount))
+        elif field == "name":
+            base_q = base_q.order_by(order_func(func.lower(List.Name)))
+        else:  # Default to updated
+            base_q = base_q.order_by(order_func(List.UpdatedAt))
+
+        # Phân trang
+        pagination = base_q.paginate(page=page, per_page=limit, error_out=False)
+        lists = pagination.items
+
+        # Lấy ID của các list mà user này đã follow để check 'is_following'
+        followed_list_ids = {
+            f.ListId
+            for f in ListFollower.query.filter_by(UserId=current_user.UserId).all()
+        }
+
+        # Serialize results
+        results = []
+        for l in lists:
+            owner_username = l.user.Username if l.user else "Unknown"
+
+            results.append({
+                "id": str(l.ListId),
+                "name": l.Name,
+                "description": l.Description,
+                # YÊU CẦU 1: Thêm 'slug' để JS tạo link
+                "slug": l.Slug,
+                "visibility": l.Visibility,
+                "item_count": l.ItemCount or 0,
+                "follower_count": l.FollowerCount or 0,
+                "updated_at": l.UpdatedAt.isoformat() if l.UpdatedAt else None,
+                "owner_username": owner_username,
+                "owner_id": str(l.UserId),
+                "is_following": l.ListId in followed_list_ids,
+            })
+
+        return jsonify({
+            "lists": results,
+            "pagination": {
+                "page": pagination.page,
+                "per_page": pagination.per_page,
+                "total_pages": pagination.pages,
+                "total_items": pagination.total,
+                "has_next": pagination.has_next,
+                "has_prev": pagination.has_prev,
+            },
+        })
+    except Exception as e:
+        current_app.logger.error(f"Error fetching public lists: {e}", exc_info=True)
+        return jsonify({"error": "An internal error occurred."}), 500
 
 # -------------------------
 # POST /api/lists

@@ -140,3 +140,35 @@ body {
 #deleteListModal .btn-danger {
     width: 100%;
 }
+
+/* Card hover effect */
+.discover-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.discover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 105, 0, 0.2);
+    border-color: #ff6a00 !important;
+}
+
+/* Follow button */
+.follow-toggle-btn {
+    min-width: 110px;
+    font-size: 0.875rem;
+}
+
+/* Loading state */
+#discoverLoading {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* No results */
+#discoverNoResults i {
+    font-size: 4rem;
+    opacity: 0.3;
+}

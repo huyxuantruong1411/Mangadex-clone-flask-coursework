@@ -187,7 +187,7 @@ class List(db.Model):
     Description = Column(Text)
     IsPublic = Column(Boolean)
 
-    Slug = Column(String(20))
+    Slug = Column(String(255))
     Visibility = Column(String(20))
     CreatedAt = Column(DateTime)
     UpdatedAt = Column(DateTime)
