@@ -6,6 +6,13 @@ __pycache__/
 config.py
 *.csv
 
+*.joblib
+*.pkl
+*.pickle
+*.bak
+
+pending-features/
+
 # Virtual environment
 venv/
 .env/

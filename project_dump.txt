@@ -12,6 +12,10 @@
       "type": "file"
     },
     {
+      "name": "Dockerfile",
+      "type": "file"
+    },
+    {
       "name": "README.md",
       "type": "file"
     },
@@ -406,12 +410,36 @@
       ]
     },
     {
+      "name": "backup",
+      "type": "directory",
+      "children": [
+        {
+          "name": "MangaLibrary.bak",
+          "type": "file"
+        }
+      ]
+    },
+    {
       "name": "config.py",
+      "type": "file"
+    },
+    {
+      "name": "docker-compose.yml",
       "type": "file"
     },
     {
       "name": "dump.py",
       "type": "file"
+    },
+    {
+      "name": "init-db",
+      "type": "directory",
+      "children": [
+        {
+          "name": "init.sql",
+          "type": "file"
+        }
+      ]
     },
     {
       "name": "manga_db_update.log",
@@ -444,6 +472,7 @@
 D:\DACSN\coursework\mini-demo/
 ├── .gitattributes
 ├── .gitignore
+├── Dockerfile
 ├── README.md
 ├── app/
 │   ├── __init__.py
@@ -539,8 +568,13 @@ D:\DACSN\coursework\mini-demo/
 │       ├── related.html
 │       ├── require_login.html
 │       └── updates.html
+├── backup/
+│   └── MangaLibrary.bak
 ├── config.py
+├── docker-compose.yml
 ├── dump.py
+├── init-db/
+│   └── init.sql
 ├── manga_db_update.log
 ├── project_dump.txt
 ├── requirements.txt
@@ -562,6 +596,11 @@ __pycache__/
 *.pyd
 config.py
 *.csv
+
+*.joblib
+*.pkl
+*.pickle
+*.bak
 
 # Virtual environment
 venv/
@@ -597,6 +636,73 @@ class Config:
 
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+--- File: D:\DACSN\coursework\mini-demo\docker-compose.yml ---
+# docker-compose.yml
+version: '3.9'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongP@ssw0rd!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql/data
+      - ./backup:/var/opt/mssql/backup
+      - ./init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-U", "sa", "-P", "YourStrongP@ssw0rd!", "-Q", "SELECT 1"]
+      interval: 10s
+      retries: 5
+      start_period: 10s
+
+  web:
+    build: .
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - SQL_SERVER=db
+      - SQL_DATABASE=MangaLibrary
+      - SQL_USERNAME=sa
+      - SQL_PASSWORD=YourStrongP@ssw0rd!
+      - SQL_DRIVER=ODBC Driver 18 for SQL Server
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+
+volumes:
+  mssql-data:
+
+networks:
+  app-network:
+    driver: bridge
+--- File: D:\DACSN\coursework\mini-demo\Dockerfile ---
+# Dockerfile
+FROM python:3.12-slim
+
+# Cài ODBC Driver 18
+RUN apt-get update && apt-get install -y \
+    gnupg2 curl unixodbc-dev \
+    && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
+    && curl https://packages.microsoft.com/config/debian/12/prod.list > /etc/apt/sources.list.d/mssql-release.list \
+    && apt-get update \
+    && ACCEPT_EULA=Y apt-get install -y msodbcsql18 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+EXPOSE 5000
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "run:app"]
 --- File: D:\DACSN\coursework\mini-demo\dump.py ---
 import os
 import json
@@ -14357,6 +14463,221 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-06 14:10:36,856 - INFO - 127.0.0.1 - - [06/Nov/2025 14:10:36] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
 2025-11-06 14:10:36,859 - INFO - 127.0.0.1 - - [06/Nov/2025 14:10:36] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
 2025-11-06 14:10:36,874 - INFO - 127.0.0.1 - - [06/Nov/2025 14:10:36] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 20:38:29,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-06 20:38:29,776 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 20:38:29,779 - INFO -  * Restarting with stat
+2025-11-06 20:38:30,726 - WARNING -  * Debugger is active!
+2025-11-06 20:38:30,731 - INFO -  * Debugger PIN: 128-007-526
+2025-11-06 20:38:38,258 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "GET / HTTP/1.1" 200 -
+2025-11-06 20:38:38,560 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,561 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,561 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,567 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,573 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,163 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,743 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,746 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,752 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,213 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "GET /library HTTP/1.1" 200 -
+2025-11-06 20:38:59,272 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,274 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,286 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,289 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,291 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,299 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,305 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,306 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:01,199 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "GET /auth/login HTTP/1.1" 200 -
+2025-11-06 20:39:01,303 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:01,314 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:01,351 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:03,189 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:03] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-11-06 20:39:07,071 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "GET /home HTTP/1.1" 200 -
+2025-11-06 20:39:07,194 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,198 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,201 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,214 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,223 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,625 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,834 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:08,042 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:08] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:08,052 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:08] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,483 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "GET /reading-history HTTP/1.1" 200 -
+2025-11-06 20:39:24,546 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,559 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,559 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,561 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,562 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,584 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,692 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,761 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,761 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,813 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,560 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "GET /manga/d7230907-4a0a-4eff-bc18-d0cd1d117288 HTTP/1.1" 200 -
+2025-11-06 20:39:30,627 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,643 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,644 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,644 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,648 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,649 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,659 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,667 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,676 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,684 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,687 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,696 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,700 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,702 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,704 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,715 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,731 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,742 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,749 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/zh.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,760 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,765 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,776 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,777 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,835 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/chapters?sort=asc HTTP/1.1" 200 -
+2025-11-06 20:39:32,665 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:32] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/continue HTTP/1.1" 200 -
+2025-11-06 20:39:32,685 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:32] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/continue HTTP/1.1" 200 -
+2025-11-06 20:39:34,205 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/21c90656-f0e6-44b2-92cb-d1295d50969b HTTP/1.1" 200 -
+2025-11-06 20:39:34,235 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/21c90656-f0e6-44b2-92cb-d1295d50969b HTTP/1.1" 200 -
+2025-11-06 20:39:34,301 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,305 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,308 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,311 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,322 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/reader.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,323 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,325 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,332 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,336 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,345 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/reader.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:39,828 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:39] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/next/21c90656-f0e6-44b2-92cb-d1295d50969b?lang=vi HTTP/1.1" 200 -
+2025-11-06 20:39:40,838 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/a199587f-0e4d-4fa8-a49e-95ce422c3f8d HTTP/1.1" 200 -
+2025-11-06 20:39:40,900 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,904 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,909 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,915 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,916 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/reader.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,924 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,926 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,931 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,941 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,942 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/reader.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,287 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "GET /reading-history HTTP/1.1" 200 -
+2025-11-06 20:39:45,343 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,349 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,349 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,360 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,361 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,388 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,474 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,517 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,518 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,519 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:26,108 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-11-06 20:41:26,134 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "GET /auth/login HTTP/1.1" 200 -
+2025-11-06 20:41:26,278 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:26,284 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:41:26,324 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-11-06 20:41:31,774 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:31] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-11-06 20:41:33,025 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-11-06 20:41:33,084 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:33,095 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:33,114 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:33,351 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-06 20:41:40,798 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "GET /admin/users HTTP/1.1" 200 -
+2025-11-06 20:41:40,867 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:40,878 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:40,886 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:40,939 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,873 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "GET /admin/comments HTTP/1.1" 200 -
+2025-11-06 20:41:44,924 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,933 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,934 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,979 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,189 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "GET /admin/comments?status=resolved HTTP/1.1" 200 -
+2025-11-06 20:41:53,238 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,243 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,247 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,249 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,303 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "GET /admin/comments?status=pending HTTP/1.1" 200 -
+2025-11-06 20:41:55,360 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,363 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,367 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,372 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:04,964 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:04] "POST /admin/comments HTTP/1.1" 200 -
+2025-11-06 20:42:04,994 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:04] "GET /admin/comments?status=pending HTTP/1.1" 200 -
+2025-11-06 20:42:05,043 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:05,048 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:05,053 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:05,054 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,861 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "GET /manga/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b HTTP/1.1" 200 -
+2025-11-06 20:42:09,926 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,931 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,935 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,945 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,946 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,951 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,955 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,960 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,970 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,973 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,984 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,987 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,998 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,003 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,011 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,019 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/zh.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,020 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/uk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,025 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,065 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,066 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/kk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,233 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "GET /reader/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/chapters?sort=asc HTTP/1.1" 200 -
+2025-11-06 20:42:22,310 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "GET /manga HTTP/1.1" 200 -
+2025-11-06 20:42:22,375 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:22,379 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:22,382 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:22,435 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:23,575 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:23] "GET /manga/options HTTP/1.1" 200 -
+2025-11-06 20:52:58,307 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-06 20:52:58,307 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 20:52:58,309 - INFO -  * Restarting with stat
+2025-11-06 20:52:59,098 - WARNING -  * Debugger is active!
+2025-11-06 20:52:59,101 - INFO -  * Debugger PIN: 128-007-526
+2025-11-06 20:53:01,473 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "[32mGET /manga HTTP/1.1[0m" 302 -
+2025-11-06 20:53:01,499 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "GET /auth/login?next=/manga HTTP/1.1" 200 -
+2025-11-06 20:53:01,596 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:53:01,596 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:04,403 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "GET /auth/login?next=/manga HTTP/1.1" 200 -
+2025-11-06 20:53:04,436 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "GET /static/css/auth.css HTTP/1.1" 200 -
+2025-11-06 20:53:04,442 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "GET /static/assets/MD-logo.png HTTP/1.1" 200 -
+2025-11-06 20:53:04,507 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-11-06 20:53:04,530 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:53:12,349 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:12] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-11-06 20:53:14,208 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-11-06 20:53:14,271 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:14,273 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:14,274 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:14,450 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-06 20:53:16,579 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "GET /admin/comments HTTP/1.1" 200 -
+2025-11-06 20:53:16,633 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:16,640 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:16,642 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:16,666 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,729 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "GET /admin/comments?status=pending HTTP/1.1" 200 -
+2025-11-06 20:53:22,770 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,771 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,775 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,778 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,599 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "GET /manga HTTP/1.1" 200 -
+2025-11-06 20:53:30,630 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,635 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,640 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,708 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-11-06 20:53:32,093 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:32] "GET /manga/options HTTP/1.1" 200 -
 
 --- File: D:\DACSN\coursework\mini-demo\project_dump.txt ---
 === Project Tree (JSON) ===
@@ -14373,6 +14694,10 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
       "type": "file"
     },
     {
+      "name": "Dockerfile",
+      "type": "file"
+    },
+    {
       "name": "README.md",
       "type": "file"
     },
@@ -14767,12 +15092,36 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
       ]
     },
     {
+      "name": "backup",
+      "type": "directory",
+      "children": [
+        {
+          "name": "MangaLibrary.bak",
+          "type": "file"
+        }
+      ]
+    },
+    {
       "name": "config.py",
+      "type": "file"
+    },
+    {
+      "name": "docker-compose.yml",
       "type": "file"
     },
     {
       "name": "dump.py",
       "type": "file"
+    },
+    {
+      "name": "init-db",
+      "type": "directory",
+      "children": [
+        {
+          "name": "init.sql",
+          "type": "file"
+        }
+      ]
     },
     {
       "name": "manga_db_update.log",
@@ -14805,6 +15154,7 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 D:\DACSN\coursework\mini-demo/
 ├── .gitattributes
 ├── .gitignore
+├── Dockerfile
 ├── README.md
 ├── app/
 │   ├── __init__.py
@@ -14900,8 +15250,13 @@ D:\DACSN\coursework\mini-demo/
 │       ├── related.html
 │       ├── require_login.html
 │       └── updates.html
+├── backup/
+│   └── MangaLibrary.bak
 ├── config.py
+├── docker-compose.yml
 ├── dump.py
+├── init-db/
+│   └── init.sql
 ├── manga_db_update.log
 ├── project_dump.txt
 ├── requirements.txt
@@ -14923,6 +15278,11 @@ __pycache__/
 *.pyd
 config.py
 *.csv
+
+*.joblib
+*.pkl
+*.pickle
+*.bak
 
 # Virtual environment
 venv/
@@ -14958,6 +15318,73 @@ class Config:
 
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(connection_string)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+--- File: D:\DACSN\coursework\mini-demo\docker-compose.yml ---
+# docker-compose.yml
+version: '3.9'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongP@ssw0rd!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql/data
+      - ./backup:/var/opt/mssql/backup
+      - ./init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-U", "sa", "-P", "YourStrongP@ssw0rd!", "-Q", "SELECT 1"]
+      interval: 10s
+      retries: 5
+      start_period: 10s
+
+  web:
+    build: .
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - SQL_SERVER=db
+      - SQL_DATABASE=MangaLibrary
+      - SQL_USERNAME=sa
+      - SQL_PASSWORD=YourStrongP@ssw0rd!
+      - SQL_DRIVER=ODBC Driver 18 for SQL Server
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+
+volumes:
+  mssql-data:
+
+networks:
+  app-network:
+    driver: bridge
+--- File: D:\DACSN\coursework\mini-demo\Dockerfile ---
+# Dockerfile
+FROM python:3.12-slim
+
+# Cài ODBC Driver 18
+RUN apt-get update && apt-get install -y \
+    gnupg2 curl unixodbc-dev \
+    && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
+    && curl https://packages.microsoft.com/config/debian/12/prod.list > /etc/apt/sources.list.d/mssql-release.list \
+    && apt-get update \
+    && ACCEPT_EULA=Y apt-get install -y msodbcsql18 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+EXPOSE 5000
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "run:app"]
 --- File: D:\DACSN\coursework\mini-demo\dump.py ---
 import os
 import json
@@ -28718,10 +29145,321 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='uploads.mangadex.
 2025-11-06 14:10:36,856 - INFO - 127.0.0.1 - - [06/Nov/2025 14:10:36] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
 2025-11-06 14:10:36,859 - INFO - 127.0.0.1 - - [06/Nov/2025 14:10:36] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
 2025-11-06 14:10:36,874 - INFO - 127.0.0.1 - - [06/Nov/2025 14:10:36] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 20:38:29,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-06 20:38:29,776 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 20:38:29,779 - INFO -  * Restarting with stat
+2025-11-06 20:38:30,726 - WARNING -  * Debugger is active!
+2025-11-06 20:38:30,731 - INFO -  * Debugger PIN: 128-007-526
+2025-11-06 20:38:38,258 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "GET / HTTP/1.1" 200 -
+2025-11-06 20:38:38,560 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,561 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,561 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,567 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:38:38,573 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,163 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,743 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,746 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:39,752 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:39] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,213 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "GET /library HTTP/1.1" 200 -
+2025-11-06 20:38:59,272 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,274 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,286 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,289 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,291 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,299 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,305 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:38:59,306 - INFO - 127.0.0.1 - - [06/Nov/2025 20:38:59] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:01,199 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "GET /auth/login HTTP/1.1" 200 -
+2025-11-06 20:39:01,303 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:01,314 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:01,351 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:01] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:03,189 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:03] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-11-06 20:39:07,071 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "GET /home HTTP/1.1" 200 -
+2025-11-06 20:39:07,194 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,198 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,201 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,214 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,223 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,625 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:07,834 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:07] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:08,042 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:08] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:08,052 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:08] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,483 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "GET /reading-history HTTP/1.1" 200 -
+2025-11-06 20:39:24,546 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,559 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,559 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,561 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,562 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,584 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,692 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,761 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,761 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:24,813 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:24] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,560 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "GET /manga/d7230907-4a0a-4eff-bc18-d0cd1d117288 HTTP/1.1" 200 -
+2025-11-06 20:39:30,627 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,643 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,644 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,644 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,648 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,649 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,659 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,667 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,676 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ja-ro.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,684 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,687 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/vi.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,696 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,700 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,702 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,704 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/es-la.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,715 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,731 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,742 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,749 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/zh.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,760 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ko.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,765 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/en.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,776 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,777 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "[36mGET /static/flags/ar.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:30,835 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:30] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/chapters?sort=asc HTTP/1.1" 200 -
+2025-11-06 20:39:32,665 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:32] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/continue HTTP/1.1" 200 -
+2025-11-06 20:39:32,685 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:32] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/continue HTTP/1.1" 200 -
+2025-11-06 20:39:34,205 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/21c90656-f0e6-44b2-92cb-d1295d50969b HTTP/1.1" 200 -
+2025-11-06 20:39:34,235 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/21c90656-f0e6-44b2-92cb-d1295d50969b HTTP/1.1" 200 -
+2025-11-06 20:39:34,301 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,305 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,308 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,311 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,322 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/css/reader.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,323 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,325 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,332 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,336 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:34,345 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:34] "[36mGET /static/js/reader.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:39,828 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:39] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/next/21c90656-f0e6-44b2-92cb-d1295d50969b?lang=vi HTTP/1.1" 200 -
+2025-11-06 20:39:40,838 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "GET /reader/d7230907-4a0a-4eff-bc18-d0cd1d117288/a199587f-0e4d-4fa8-a49e-95ce422c3f8d HTTP/1.1" 200 -
+2025-11-06 20:39:40,900 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,904 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,909 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,915 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,916 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/css/reader.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,924 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,926 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,931 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,941 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:40,942 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:40] "[36mGET /static/js/reader.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,287 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "GET /reading-history HTTP/1.1" 200 -
+2025-11-06 20:39:45,343 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,349 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,349 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,360 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,361 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,388 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/assets/default_cover.png HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,474 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,517 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,518 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:39:45,519 - INFO - 127.0.0.1 - - [06/Nov/2025 20:39:45] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:26,108 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-11-06 20:41:26,134 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "GET /auth/login HTTP/1.1" 200 -
+2025-11-06 20:41:26,278 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:26,284 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:41:26,324 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:26] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-11-06 20:41:31,774 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:31] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-11-06 20:41:33,025 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-11-06 20:41:33,084 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:33,095 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:33,114 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:33,351 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-06 20:41:40,798 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "GET /admin/users HTTP/1.1" 200 -
+2025-11-06 20:41:40,867 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:40,878 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:40,886 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:40,939 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:40] "[36mGET /static/js/admin_users.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,873 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "GET /admin/comments HTTP/1.1" 200 -
+2025-11-06 20:41:44,924 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,933 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,934 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:44,979 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:44] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,189 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "GET /admin/comments?status=resolved HTTP/1.1" 200 -
+2025-11-06 20:41:53,238 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,243 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,247 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:53,249 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:53] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,303 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "GET /admin/comments?status=pending HTTP/1.1" 200 -
+2025-11-06 20:41:55,360 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,363 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,367 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:41:55,372 - INFO - 127.0.0.1 - - [06/Nov/2025 20:41:55] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:04,964 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:04] "POST /admin/comments HTTP/1.1" 200 -
+2025-11-06 20:42:04,994 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:04] "GET /admin/comments?status=pending HTTP/1.1" 200 -
+2025-11-06 20:42:05,043 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:05,048 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:05,053 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:05,054 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:05] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,861 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "GET /manga/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b HTTP/1.1" 200 -
+2025-11-06 20:42:09,926 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,931 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/add_to_list.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,935 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,945 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/banner.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,946 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/manga_detail.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,951 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/comments.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,955 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,960 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/assets/evernight_dance.gif HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,970 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/flags/ru.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,973 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/flags/ja.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,984 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,987 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/js/add_to_list.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:09,998 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:09] "[36mGET /static/js/banner.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,003 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/js/manga_detail.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,011 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/assets/default_avatar.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,019 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/zh.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,020 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/uk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,025 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/zh-hk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,065 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/tr.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,066 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "[36mGET /static/flags/kk.png HTTP/1.1[0m" 304 -
+2025-11-06 20:42:10,233 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:10] "GET /reader/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/chapters?sort=asc HTTP/1.1" 200 -
+2025-11-06 20:42:22,310 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "GET /manga HTTP/1.1" 200 -
+2025-11-06 20:42:22,375 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:22,379 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:22,382 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:42:22,435 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:22] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-11-06 20:42:23,575 - INFO - 127.0.0.1 - - [06/Nov/2025 20:42:23] "GET /manga/options HTTP/1.1" 200 -
+2025-11-06 20:52:58,307 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-06 20:52:58,307 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 20:52:58,309 - INFO -  * Restarting with stat
+2025-11-06 20:52:59,098 - WARNING -  * Debugger is active!
+2025-11-06 20:52:59,101 - INFO -  * Debugger PIN: 128-007-526
+2025-11-06 20:53:01,473 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "[32mGET /manga HTTP/1.1[0m" 302 -
+2025-11-06 20:53:01,499 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "GET /auth/login?next=/manga HTTP/1.1" 200 -
+2025-11-06 20:53:01,596 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:53:01,596 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:01] "[36mGET /static/css/auth.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:04,403 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "GET /auth/login?next=/manga HTTP/1.1" 200 -
+2025-11-06 20:53:04,436 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "GET /static/css/auth.css HTTP/1.1" 200 -
+2025-11-06 20:53:04,442 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "GET /static/assets/MD-logo.png HTTP/1.1" 200 -
+2025-11-06 20:53:04,507 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "[36mGET /static/assets/auth_thmb.png HTTP/1.1[0m" 304 -
+2025-11-06 20:53:04,530 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:04] "[36mGET /static/assets/MD-logo.png HTTP/1.1[0m" 304 -
+2025-11-06 20:53:12,349 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:12] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-11-06 20:53:14,208 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-11-06 20:53:14,271 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:14,273 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:14,274 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:14,450 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-06 20:53:16,579 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "GET /admin/comments HTTP/1.1" 200 -
+2025-11-06 20:53:16,633 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:16,640 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:16,642 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:16,666 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:16] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,729 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "GET /admin/comments?status=pending HTTP/1.1" 200 -
+2025-11-06 20:53:22,770 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,771 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,775 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:22,778 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:22] "[36mGET /static/js/admin_comments.js HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,599 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "GET /manga HTTP/1.1" 200 -
+2025-11-06 20:53:30,630 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,635 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/modal.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,640 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/css/admin.css HTTP/1.1[0m" 304 -
+2025-11-06 20:53:30,708 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:30] "[36mGET /static/js/admin_manga.js HTTP/1.1[0m" 304 -
+2025-11-06 20:53:32,093 - INFO - 127.0.0.1 - - [06/Nov/2025 20:53:32] "GET /manga/options HTTP/1.1" 200 -
 
 --- File: D:\DACSN\coursework\mini-demo\README.md ---
+# MangaDex Clone
 
+This is a web application that clones core features of MangaDex, a popular manga reading platform. Built with Flask, it allows users to browse, search, and manage manga titles, create reading lists, comment on series, and more. The project includes user authentication, an admin panel, and integration with the MangaDex API for fetching manga data.
+
+## Features
+
+- **User Authentication**: Register, login, and profile management.
+- **Manga Browsing**: Home page with recently added, popular, and seasonal manga.
+- **Advanced Search**: Filter manga by tags, genres, demographics, and more.
+- **Manga Details**: View chapters, covers, ratings, and related content.
+- **Reading Lists (MDLists)**: Create public/private lists, follow others' lists, add/remove manga.
+- **Comments**: Post and manage comments on manga pages.
+- **Admin Panel**: Manage users, manga, creators, and comments (for admins).
+- **Reader Mode**: Basic manga chapter reader.
+- **Dashboard**: User-specific updates and recommendations.
+- **API Integration**: Fetches data from MangaDex API for covers and details.
+
+## Tech Stack
+
+- **Backend**: Python 3, Flask, SQLAlchemy (for ORM and database management).
+- **Database**: SQLite (default; can be configured for PostgreSQL/MySQL).
+- **Frontend**: Jinja2 templates, Bootstrap 5, custom CSS/JS for UI.
+- **Other**: Flask-Login for auth, Requests for API calls, UUID for IDs.
+
+## Prerequisites
+
+- Python 3.8+
+- Virtualenv (recommended)
+- A MangaDex API key (optional for full features; set in config).
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/mini-demo.git
+   cd mini-demo
+   ```
+
+2. Create and activate a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies (create `requirements.txt` if not present):
+   ```
+   pip install flask flask-login flask-sqlalchemy requests uuid base64
+   ```
+
+4. Set up the database:
+   - Run `flask db init` if using Flask-Migrate (optional).
+   - Or manually create tables via `models.py`.
+
+5. Configure environment variables (in `.env` or directly in `__init__.py`):
+   - `SECRET_KEY=your_secret_key`
+   - `SQLALCHEMY_DATABASE_URI=sqlite:///site.db`
+
+## Running the Application
+
+1. Start the server:
+   ```
+   python run.py
+   ```
+
+2. Open in browser: http://127.0.0.1:5000
+
+- Default admin credentials: Check `auth.py` or seed script.
+- Register a new user to explore features.
+
+## Project Structure
+
+- `app/`: Core application code.
+  - `__init__.py`: App initialization, blueprints, DB config.
+  - `models.py`: SQLAlchemy models (User, Manga, List, etc.).
+  - `routes.py`: Main routes (home, search, etc.).
+  - `list_routes.py`: MDList management API.
+  - `templates/`: Jinja2 HTML files (base.html, manga_detail.html, etc.).
+  - `static/`: CSS, JS, assets (images, icons).
+- `run.py`: Entry point to run the app.
+
+## Contributing
+
+- Fork the repo.
+- Create a feature branch: `git checkout -b feature/new-feature`.
+- Commit changes: `git commit -m 'Add new feature'`.
+- Push: `git push origin feature/new-feature`.
+- Open a Pull Request.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+
+- Inspired by MangaDex.
+- Uses MangaDex API for data fetching (respect rate limits).
 --- File: D:\DACSN\coursework\mini-demo\requirements.txt ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
 
 --- File: D:\DACSN\coursework\mini-demo\run.py ---
 from app import create_app
@@ -55724,3 +56462,26 @@ document.addEventListener('DOMContentLoaded', function () {
     window.isAuthenticated = JSON.parse(document.querySelector('[data-auth]').dataset.auth);
 </script>
 {% endblock %}
+=== Folder: backup ===
+
+--- File: D:\DACSN\coursework\mini-demo\backup\MangaLibrary.bak ---
+[Lỗi đọc file: 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte]
+
+=== Folder: init-db ===
+
+--- File: D:\DACSN\coursework\mini-demo\init-db\init.sql ---
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'MangaLibrary')
+BEGIN
+    CREATE DATABASE MangaLibrary;
+    PRINT 'Database MangaLibrary created.';
+END
+GO
+
+RESTORE DATABASE MangaLibrary
+FROM DISK = '/var/opt/mssql/backup/MangaLibrary.bak'
+WITH MOVE 'MangaLibrary' TO '/var/opt/mssql/data/MangaLibrary.mdf',
+     MOVE 'MangaLibrary_log' TO '/var/opt/mssql/data/MangaLibrary_log.ldf',
+     REPLACE;
+GO
+
+PRINT 'Restore MangaLibrary completed!';

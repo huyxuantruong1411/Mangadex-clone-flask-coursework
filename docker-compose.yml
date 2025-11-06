@@ -1,0 +1,46 @@
+# docker-compose.yml
+version: '3.9'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongP@ssw0rd!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql/data
+      - ./backup:/var/opt/mssql/backup
+      - ./init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-U", "sa", "-P", "YourStrongP@ssw0rd!", "-Q", "SELECT 1"]
+      interval: 10s
+      retries: 5
+      start_period: 10s
+
+  web:
+    build: .
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - SQL_SERVER=db
+      - SQL_DATABASE=MangaLibrary
+      - SQL_USERNAME=sa
+      - SQL_PASSWORD=YourStrongP@ssw0rd!
+      - SQL_DRIVER=ODBC Driver 18 for SQL Server
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+
+volumes:
+  mssql-data:
+
+networks:
+  app-network:
+    driver: bridge

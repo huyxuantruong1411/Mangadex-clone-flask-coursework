@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # ===== Connection =====
 DRIVER = "ODBC Driver 17 for SQL Server"
-SERVER = "HEDI-SNOWY\\SQLEXPRESS"
+SERVER = "DESKTOP-HKIPI1M"
 DATABASE = "MangaLibrary"
 connection_string = f"DRIVER={{{DRIVER}}};SERVER={SERVER};DATABASE={DATABASE};Trusted_Connection=yes;"
 
