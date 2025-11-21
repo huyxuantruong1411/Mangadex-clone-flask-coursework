@@ -69,7 +69,7 @@ try:
     weighted_probs = [w / total_weight for _, w in weighted_mangas]
 
     # ===== Simulation parameters =====
-    USER_COUNT = 300  # Số lượng user MỚI cần tạo
+    USER_COUNT = 100  # Số lượng user MỚI cần tạo
     users_rows = []
     reading_history_rows = []
     rating_rows = []
