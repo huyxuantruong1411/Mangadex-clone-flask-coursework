@@ -1,58 +1,165 @@
 {% extends "base.html" %}
 
-{% block title %}{{ chapter.Title }} | {{ manga.TitleEn }} | MangaDex Clone{% endblock %}
+{% block title %}{{ chapter.Title or 'Untitled' }} | {{ manga.TitleEn }}{% endblock %}
 
 {% block styles %}
+<meta name="referrer" content="no-referrer">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/reader.css') }}">
 {% endblock %}
 
 {% block content %}
-<div class="reader-container py-4 text-white">
-    <div class="reader-header mb-3">
-        <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}" class="btn btn-outline-light me-2">← Back
-            to Manga</a>
-        <h2 class="d-inline">{{ manga.TitleEn }} - Vol. {{ chapter.Volume or 'N/A' }} Ch. {{ chapter.ChapterNumber }}:
-            {{ chapter.Title or 'Untitled' }}</h2>
+<div id="reader-wrapper" class="reader-wrapper user-select-none"
+     data-config='{{ {
+        "mangaId": manga.MangaId,
+        "chapterId": chapter.ChapterId,
+        "totalPages": image_urls|length,
+        "lang": chapter.TranslatedLang, 
+        "isAuthenticated": current_user.is_authenticated,
+        "hasPrev": has_prev,
+        "hasNext": has_next
+     } | tojson | safe }}'>
+    
+    <div class="click-zone zone-left" id="zone-left"></div>
+    <div class="click-zone zone-center" id="zone-center"></div>
+    <div class="click-zone zone-right" id="zone-right"></div>
+
+    <div class="reader-ui reader-header" id="reader-header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <a href="{{ url_for('manga.manga_detail', manga_id=manga.MangaId) }}" class="btn btn-link text-white text-decoration-none">
+                    <i class="bi bi-arrow-left"></i> Back
+                </a>
+                <div class="d-flex flex-column">
+                    <span class="fw-bold">{{ manga.TitleEn }}</span>
+                    <small class="text-muted">
+                        Vol. {{ chapter.Volume or '?' }} Ch. {{ chapter.ChapterNumber }} - {{ chapter.Title or '' }}
+                    </small>
+                </div>
+            </div>
+            <button class="btn btn-icon text-white" id="btn-settings">
+                <i class="bi bi-gear-fill"></i> Settings
+            </button>
+        </div>
     </div>
 
-    <div id="long-strip" class="long-strip overflow-auto bg-dark p-3 rounded" style="height: 90vh;">
-        <div id="loading-spinner" class="text-center py-5">
-            <div class="spinner-border text-primary" role="status"></div>
-            <p>Loading chapter...</p>
+    <div class="reader-sidebar" id="reader-sidebar">
+        <div class="sidebar-content p-3">
+            <h5 class="mb-3 border-bottom pb-2">Reader Settings</h5>
+            <div class="mb-4">
+                <label class="form-label text-muted text-uppercase small fw-bold">Reading Mode</label>
+                <div class="btn-group w-100" role="group">
+                    <input type="radio" class="btn-check" name="mode" id="mode-long" value="long" checked>
+                    <label class="btn btn-outline-secondary" for="mode-long"><i class="bi bi-arrows-vertical"></i> Long</label>
+
+                    <input type="radio" class="btn-check" name="mode" id="mode-single" value="single">
+                    <label class="btn btn-outline-secondary" for="mode-single"><i class="bi bi-file-earmark"></i> 1</label>
+
+                    <input type="radio" class="btn-check" name="mode" id="mode-double" value="double">
+                    <label class="btn btn-outline-secondary" for="mode-double"><i class="bi bi-book"></i> 2</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="form-label text-muted text-uppercase small fw-bold">Fit Image</label>
+                <div class="btn-group w-100" role="group">
+                    <input type="radio" class="btn-check" name="fit" id="fit-width" value="width" checked>
+                    <label class="btn btn-outline-secondary" for="fit-width">Width</label>
+
+                    <input type="radio" class="btn-check" name="fit" id="fit-height" value="height">
+                    <label class="btn btn-outline-secondary" for="fit-height">Height</label>
+                    
+                    <input type="radio" class="btn-check" name="fit" id="fit-original" value="original">
+                    <label class="btn btn-outline-secondary" for="fit-original">1:1</label>
+                </div>
+            </div>
+            <div class="mt-auto pt-3 border-top">
+                <p class="small text-muted">Shortcuts:</p>
+                <ul class="small text-muted ps-3">
+                    <li>Arrow Left/Right: Prev/Next Page</li>
+                    <li>Arrow Up/Down: Scroll</li>
+                    <li>Click Center: Toggle UI</li>
+                </ul>
+            </div>
         </div>
-        <div id="chapter-images" class="d-none">
+    </div>
+
+    <div id="reader-container" class="reader-content mode-long fit-width">
+        <div id="pages-container" class="pages-container">
             {% if image_urls %}
-            {% for url in image_urls %}
-            <img src="{{ url }}" alt="Page" class="chapter-page img-fluid mx-auto d-block mb-3" loading="lazy">
-            {% endfor %}
+                {% for url in image_urls %}
+<div class="page-wrapper" data-index="{{ loop.index0 }}">
+    <img src="{{ url }}" 
+         class="reader-page" 
+         loading="lazy" 
+         alt="Page {{ loop.index }}"
+         referrerpolicy="no-referrer"> <div class="page-number-overlay">Page {{ loop.index }}</div>
+</div>
+{% endfor %}
             {% else %}
-            <p class="text-danger text-center">Failed to load chapter images. Please try again.</p>
+                <div class="text-center py-5 text-danger">
+                    <h3>Error loading images</h3>
+                    <p>Please refresh or try another source.</p>
+                </div>
             {% endif %}
         </div>
     </div>
 
-    <div class="reader-footer mt-3 d-flex justify-content-between align-items-center">
-        <button id="prev-chapter" class="btn btn-secondary" {% if not has_prev %}disabled{% endif %}>Previous
-            Chapter</button>
-        <div class="progress w-50" style="height: 8px;">
-            <div id="read-progress" class="progress-bar bg-primary" role="progressbar" style="width: 0%;"></div>
+    <div class="reader-ui reader-footer" id="reader-footer">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center gap-3 mb-2">
+                <span class="small" id="current-page-display">1</span>
+                <input type="range" class="form-range reader-slider" id="page-slider" min="1" max="{{ image_urls|length }}" value="1">
+                <span class="small">{{ image_urls|length }}</span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button id="prev-chapter-btn" class="btn btn-sm btn-secondary" {% if not has_prev %}disabled{% endif %}>
+                    <i class="bi bi-chevron-left"></i> Prev Chapter
+                </button>
+                <div class="dropdown dropup"> <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Ch. {{ chapter.ChapterNumber }}
+    </button>
+    
+    <ul class="dropdown-menu dropdown-menu-dark shadow" style="max-height: 50vh; overflow-y: auto;">
+        <li><h6 class="dropdown-header">Select Chapter</h6></li>
+        
+        {% if all_chapters %}
+            {% for ch in all_chapters %}
+            <li>
+                <a class="dropdown-item d-flex justify-content-between align-items-center {{ 'active' if ch.ChapterId == chapter.ChapterId else '' }}" 
+   href="{{ url_for('reader.read_chapter', manga_id=manga.MangaId, chapter_id=ch.ChapterId) }}">
+                    <span>
+                        <span class="fw-bold">Ch. {{ ch.ChapterNumber }}</span>
+                        {% if ch.Title %}
+                        <span class="small text-muted ms-2">- {{ ch.Title[:20] }}{{ '...' if ch.Title|length > 20 }}</span>
+                        {% endif %}
+                    </span>
+                    {% if ch.ChapterId == chapter.ChapterId %}
+                        <i class="bi bi-check-lg"></i>
+                    {% endif %}
+                </a>
+            </li>
+            {% endfor %}
+        {% else %}
+            <li><span class="dropdown-item disabled">No other chapters</span></li>
+        {% endif %}
+    </ul>
+</div>
+                <button id="next-chapter-btn" class="btn btn-sm btn-primary" {% if not has_next %}disabled{% endif %}>
+                    Next Chapter <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
         </div>
-        <button id="next-chapter" class="btn btn-primary" {% if not has_next %}disabled{% endif %}>Next Chapter</button>
     </div>
 </div>
 
-<script id="reader-data" type="application/json">
-    {{ {
-        "manga_id": manga.MangaId,
-        "chapter_id": chapter.ChapterId,
-        "lang": chapter.TranslatedLang,
-        "has_prev": has_prev,
-        "has_next": has_next,
-        "is_authenticated": current_user.is_authenticated
-    } | tojson }}
-</script>
 {% endblock %}
 
 {% block scripts %}
+<script>
+    const readerWrapper = document.getElementById('reader-wrapper');
+    if (readerWrapper) {
+        // Parse JSON từ data attribute giống như bạn làm ở trang Home
+        window.READER_CONFIG = JSON.parse(readerWrapper.dataset.config);
+    }
+</script>
 <script src="{{ url_for('static', filename='js/reader.js') }}"></script>
 {% endblock %}

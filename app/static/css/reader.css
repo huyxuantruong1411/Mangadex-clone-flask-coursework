@@ -43,3 +43,212 @@
     font-size: 1.1rem;
     /* Tăng cỡ chữ nút */
 }
+
+/* Reset & Base */
+html, body {
+    height: 100%;
+    overflow: hidden; /* Reader handles its own scrolling */
+    background-color: #121212; /* Deep dark background */
+}
+
+.reader-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 56px); /* Adjust if you keep the main navbar visible, else 100vh */
+    height: 100vh; /* Fullscreen mode prefered */
+    overflow: hidden;
+    background-color: #121212;
+    color: #eee;
+}
+
+/* --- Content Area --- */
+.reader-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Scroll for long strip */
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+    scroll-behavior: smooth;
+}
+
+.pages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+}
+
+.page-wrapper {
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.reader-page {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.1s ease;
+}
+
+/* Page Number Overlay on Hover (optional) */
+.page-number-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+.page-wrapper:hover .page-number-overlay {
+    opacity: 1;
+}
+
+/* --- Modes Specifics --- */
+
+/* Long Strip Mode */
+.mode-long .page-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.mode-long.fit-width .reader-page { width: 100%; height: auto; max-width: 1000px; /* limit max width for readability */ }
+.mode-long.fit-height .reader-page { height: 100vh; width: auto; }
+.mode-long.fit-original .reader-page { width: auto; height: auto; }
+
+/* Single Page Mode */
+.mode-single {
+    overflow: hidden; /* No scroll */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mode-single .pages-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: row; /* Although we show one, structure supports flex */
+}
+.mode-single .page-wrapper {
+    display: none; /* Hide all */
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.mode-single .page-wrapper.active {
+    display: flex;
+}
+.mode-single.fit-width .reader-page { width: 100%; height: auto; object-fit: contain; max-height: 100vh; }
+.mode-single.fit-height .reader-page { height: 100vh; width: auto; object-fit: contain; }
+
+/* Double Page Mode */
+.mode-double .pages-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.mode-double .page-wrapper {
+    display: none;
+}
+.mode-double .page-wrapper.active {
+    display: flex;
+    width: 50%; /* Each page takes half */
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end; /* Right page aligns left to center seam */
+}
+.mode-double .page-wrapper.active:first-child {
+    justify-content: flex-start;
+}
+.mode-double .reader-page {
+    max-height: 100vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* --- UI Overlay (Header/Footer) --- */
+.reader-ui {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    padding: 10px 20px;
+}
+
+.reader-header {
+    top: 0;
+    border-bottom: 1px solid #333;
+}
+
+.reader-footer {
+    bottom: 0;
+    border-top: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+/* Hidden State for UI */
+.reader-wrapper.ui-hidden .reader-header {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.reader-wrapper.ui-hidden .reader-footer {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* --- Sidebar Settings --- */
+.reader-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #1a1a1a;
+    z-index: 1050;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-left: 1px solid #333;
+}
+.reader-sidebar.open {
+    transform: translateX(0);
+}
+
+/* --- Click Zones --- */
+.click-zone {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 500;
+    /* background: rgba(255,0,0,0.1); Debugging */ 
+}
+.zone-left { left: 0; width: 30%; cursor: w-resize; }
+.zone-right { right: 0; width: 30%; cursor: e-resize; }
+.zone-center { left: 30%; width: 40%; cursor: pointer; }
+
+/* Override for Long strip: center zone is full width usually, or just disable paging clicks */
+.mode-long .zone-left, .mode-long .zone-right {
+    display: none;
+}
+.mode-long .zone-center {
+    width: 100%;
+    left: 0;
+}
+
+/* --- Fix Scroll Issue --- */
+/* Khi ở chế độ Long Strip, ẩn các click-zone đi để chuột tương tác được với thanh cuộn */
+.mode-long .click-zone {
+    display: none !important;
+}
+
+/* Đảm bảo container chính có thể cuộn mượt mà */
+.mode-long {
+    cursor: pointer; /* Báo hiệu có thể click để hiện menu */
+    -webkit-overflow-scrolling: touch;
+}

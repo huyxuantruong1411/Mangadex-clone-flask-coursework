@@ -1,123 +1,151 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
+from flask import Blueprint, render_template, request, jsonify, url_for, flash, redirect
 from flask_login import login_required, current_user
-from ..reader_controller import get_chapter, get_first_chapter, get_next_chapter, get_prev_chapter, save_reading_history, get_available_langs, get_continue_chapter, get_chapter_list
-from ..models import Chapter, ReadingHistory, Manga
-from uuid import UUID
-import requests
-from .. import db
+from app.models import db, Manga, Chapter, ReadingHistory 
+from sqlalchemy import cast, Float, func # <-- [QUAN TRỌNG] Thêm import này
+import requests 
 
-reader = Blueprint('reader', __name__, template_folder='../templates')
+reader = Blueprint('reader', __name__)
 
-@reader.route('/<uuid:manga_id>/available-langs', methods=['GET'])
-def available_langs(manga_id):
-    langs = get_available_langs(manga_id)
-    return jsonify({'langs': langs})
-
-@reader.route('/<uuid:manga_id>/start', methods=['GET'])
-def start_reading(manga_id):
-    lang = request.args.get('lang', 'en')
-    chapter = get_first_chapter(manga_id, lang)
-    if not chapter:
-        flash('No chapters available.')
-        return redirect(url_for('main.manga_detail', manga_id=manga_id))
-    return redirect(url_for('reader.read_chapter', manga_id=manga_id, chapter_id=chapter.ChapterId, page=0))
-
-@reader.route('/<uuid:manga_id>/continue', methods=['GET'])
-@login_required
-def continue_reading(manga_id):
-    chapter, lang = get_continue_chapter(current_user.UserId, manga_id)
-    if not chapter:
-        flash('No reading history. Starting from beginning.')
-        return start_reading(manga_id)
-    return jsonify({'chapter_id': str(chapter.ChapterId), 'lang': lang})
-
-@reader.route('/<uuid:manga_id>/<uuid:chapter_id>', methods=['GET'])
+# ==============================================================================
+# 1. ROUTE CHÍNH: READER VIEW
+# ==============================================================================
+@reader.route('/<uuid:manga_id>/<uuid:chapter_id>') 
 @login_required
 def read_chapter(manga_id, chapter_id):
-    manga = db.session.get(Manga, manga_id)
-    if not manga:
-        flash('Manga not found.')
+    str_manga_id = str(manga_id)
+    str_chapter_id = str(chapter_id)
+
+    manga = db.session.get(Manga, str_manga_id)
+    chapter = db.session.get(Chapter, str_chapter_id)
+
+    if not manga or not chapter:
+        flash('Chapter not found.')
         return redirect(url_for('main.home'))
+
+    current_lang = chapter.TranslatedLang 
+
+    # --- [SỬA LOGIC SẮP XẾP] ---
+    # Ép kiểu Volume và ChapterNumber sang Float để sắp xếp đúng thứ tự số học
+    # Logic: Ưu tiên Volume lớn nhất -> Chapter lớn nhất (Mới nhất lên đầu)
     
-    chapter = get_chapter(manga_id, chapter_id)
-    if not chapter or chapter.IsUnavailable or chapter.TranslatedLang not in ['en', 'vi']:
-        flash('Chapter not available.')
-        return redirect(url_for('main.manga_detail', manga_id=manga_id))
-    
-    # Lấy page từ query string
-    page = request.args.get('page', 0, type=int)
-    
-    # Call MangaDex API
+    all_chapters = Chapter.query.filter(
+        Chapter.MangaId == str_manga_id,
+        Chapter.TranslatedLang == current_lang
+    ).order_by(
+        # Dùng cast để chuyển String -> Float khi sắp xếp
+        # Nếu cột Volume của bạn có thể null hoặc rỗng, cần cẩn thận. 
+        # Ở đây ưu tiên sort theo ChapterNumber trước cho an toàn.
+        cast(Chapter.ChapterNumber, Float).desc() 
+    ).all()
+
+    # --- [SỬA LOGIC NEXT/PREV] ---
+    # Tìm Next: Là chương có số LỚN hơn chương hiện tại (nhưng nhỏ nhất trong đám lớn hơn)
+    next_chapter = Chapter.query.filter(
+        Chapter.MangaId == str_manga_id,
+        Chapter.TranslatedLang == current_lang,
+        cast(Chapter.ChapterNumber, Float) > float(chapter.ChapterNumber) # So sánh dạng số
+    ).order_by(cast(Chapter.ChapterNumber, Float).asc()).first() # Lấy thằng nhỏ nhất trong đám lớn hơn (liền kề)
+
+    # Tìm Prev: Là chương có số NHỎ hơn chương hiện tại (nhưng lớn nhất trong đám nhỏ hơn)
+    prev_chapter = Chapter.query.filter(
+        Chapter.MangaId == str_manga_id,
+        Chapter.TranslatedLang == current_lang,
+        cast(Chapter.ChapterNumber, Float) < float(chapter.ChapterNumber) # So sánh dạng số
+    ).order_by(cast(Chapter.ChapterNumber, Float).desc()).first() # Lấy thằng lớn nhất trong đám nhỏ hơn
+
+    # --- Lấy ảnh (Giữ nguyên) ---
+    image_urls = []
     try:
-        response = requests.get(f"https://api.mangadex.org/at-home/server/{str(chapter_id)}")
-        response.raise_for_status()
-        data = response.json()
-        base_url = data['baseUrl']
-        hash_val = data['chapter']['hash']
-        filenames = data['chapter']['data']
-        image_urls = [f"{base_url}/data/{hash_val}/{f}" for f in filenames]
+        response = requests.get(f"https://api.mangadex.org/at-home/server/{str_chapter_id}")
+        if response.status_code == 200:
+            data = response.json()
+            base_url = data['baseUrl']
+            hash_val = data['chapter']['hash']
+            filenames = data['chapter']['data']
+            # Thêm timestamp để bypass cache như đã bàn
+            import time
+            ts = int(time.time())
+            image_urls = [f"{base_url}/data/{hash_val}/{f}?t={ts}" for f in filenames]
+        else:
+            flash('Failed to load images from source.')
     except Exception as e:
-        print(f"[ERROR] Failed to load chapter images for {chapter_id}: {e}")
-        flash('Failed to load chapter images.')
+        print(f"[ERROR] Exception: {e}")
         image_urls = []
-    
-    # Check prev/next
-    lang = chapter.TranslatedLang
-    has_next = get_next_chapter(manga_id, chapter.ChapterNumber, lang) is not None
-    has_prev = get_prev_chapter(manga_id, chapter.ChapterNumber, lang) is not None
-    
-    # Save history
-    save_reading_history(current_user.UserId, manga_id, chapter_id, page)
-    
-    return render_template('reader.html', 
-                          manga=manga, 
-                          chapter=chapter, 
-                          image_urls=image_urls, 
-                          has_prev=has_prev, 
-                          has_next=has_next,
-                          current_page=page)
 
-@reader.route('/<uuid:manga_id>/next/<uuid:current_id>', methods=['GET'])
+    return render_template(
+        'reader.html',
+        manga=manga,
+        chapter=chapter,
+        image_urls=image_urls,
+        all_chapters=all_chapters, 
+        has_next=bool(next_chapter),
+        has_prev=bool(prev_chapter)
+    )
+
+# ==============================================================================
+# 2. API: NEXT (SỬA LOGIC SỐ HỌC)
+# ==============================================================================
+@reader.route('/<uuid:manga_id>/next/<uuid:current_id>')
 def next_chapter(manga_id, current_id):
-    lang = request.args.get('lang', 'en')
-    current_chapter = db.session.get(Chapter, current_id)
-    if not current_chapter:
-        return jsonify({'end': True})
-    next_chap = get_next_chapter(manga_id, current_chapter.ChapterNumber, lang)
+    str_manga_id = str(manga_id)
+    current_chap = db.session.get(Chapter, str(current_id))
+    
+    if not current_chap: return jsonify({'chapter_id': None})
+
+    try:
+        current_num = float(current_chap.ChapterNumber)
+    except:
+        current_num = 0 # Fallback nếu chapter number bị lỗi text
+
+    next_chap = Chapter.query.filter(
+        Chapter.MangaId == str_manga_id,
+        Chapter.TranslatedLang == current_chap.TranslatedLang,
+        cast(Chapter.ChapterNumber, Float) > current_num
+    ).order_by(cast(Chapter.ChapterNumber, Float).asc()).first()
+
     if next_chap:
-        return jsonify({'chapter_id': str(next_chap.ChapterId)})
-    return jsonify({'end': True})
+        return jsonify({'chapter_id': next_chap.ChapterId})
+    else:
+        return jsonify({'chapter_id': None, 'message': 'End of manga'})
 
-@reader.route('/<uuid:manga_id>/prev/<uuid:current_id>', methods=['GET'])
+# ==============================================================================
+# 3. API: PREV (SỬA LOGIC SỐ HỌC)
+# ==============================================================================
+@reader.route('/<uuid:manga_id>/prev/<uuid:current_id>')
 def prev_chapter(manga_id, current_id):
-    lang = request.args.get('lang', 'en')
-    current_chapter = db.session.get(Chapter, current_id)
-    if not current_chapter:
-        return jsonify({'end': True})
-    prev_chap = get_prev_chapter(manga_id, current_chapter.ChapterNumber, lang)
-    if prev_chap:
-        return jsonify({'chapter_id': str(prev_chap.ChapterId)})
-    return jsonify({'end': True})
+    str_manga_id = str(manga_id)
+    current_chap = db.session.get(Chapter, str(current_id))
+    
+    if not current_chap: return jsonify({'chapter_id': None})
 
-@reader.route('/<uuid:manga_id>/chapters', methods=['GET'])
-def get_chapters(manga_id):
-    sort_order = request.args.get('sort', 'asc')
-    chapters = get_chapter_list(manga_id, sort_order)
-    has_chapters = len(chapters) > 0
-    user_id = current_user.UserId if current_user.is_authenticated else None
-    read_chapters = set()
-    if user_id:
-        read_chapters = set(r.ChapterId for r in db.session.query(ReadingHistory.ChapterId).filter_by(UserId=user_id, MangaId=manga_id).all())
+    try:
+        current_num = float(current_chap.ChapterNumber)
+    except:
+        current_num = 0
+
+    prev_chap = Chapter.query.filter(
+        Chapter.MangaId == str_manga_id,
+        Chapter.TranslatedLang == current_chap.TranslatedLang,
+        cast(Chapter.ChapterNumber, Float) < current_num
+    ).order_by(cast(Chapter.ChapterNumber, Float).desc()).first()
+
+    if prev_chap:
+        return jsonify({'chapter_id': prev_chap.ChapterId})
+    else:
+        return jsonify({'chapter_id': None, 'message': 'First chapter'})
+
+# --- Giữ nguyên API save-history ---
+@reader.route('/save-history', methods=['POST'])
+@login_required
+def save_history():
+    data = request.get_json()
+    manga_id = data.get('manga_id')
+    chapter_id = data.get('chapter_id')
+    if not manga_id or not chapter_id: return jsonify({'status': 'error'}), 400
     
-    chapter_data = []
-    for chapter_num, chapters_by_num in chapters.items():
-        translations = []
-        for chapter in chapters_by_num:
-            translations.append({
-                "lang": chapter.TranslatedLang,
-                "chapter_id": str(chapter.ChapterId),
-                "read": chapter.ChapterId in read_chapters
-            })
-        chapter_data.append({"chapter_number": chapter_num, "translations": translations})
-    
-    return jsonify({"chapters": chapter_data, "has_chapters": has_chapters})
+    history = ReadingHistory.query.filter_by(UserId=current_user.UserId, MangaId=str(manga_id)).first()
+    if history: history.ChapterId = str(chapter_id)
+    else:
+        db.session.add(ReadingHistory(UserId=current_user.UserId, MangaId=str(manga_id), ChapterId=str(chapter_id)))
+    try: db.session.commit(); return jsonify({'status': 'success'})
+    except: db.session.rollback(); return jsonify({'status': 'error'}), 500
